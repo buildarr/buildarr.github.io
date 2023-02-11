@@ -357,8 +357,8 @@ After this initial run, Buildarr will wake up at the scheduled times to periodic
 </ul>
 <h2 id="contributions">Contributions<a class="headerlink" href="#contributions" title="Permanent link">#</a></h2>
 <p>Buildarr is still early in development, and even currently implemented features still require testing and fixing. There are so many possible configurations to cover that I simply cannot feasibly test every feature at this time.</p>
-<p>If you encounter an issue or error while using Buildarr, please do a Buildarr ad-hoc run with verbose log output by executing <code>buildarr run --log-level DEBUG</code> and making an issue on <a href="https://github.com/buildarr/buildarr/issues/new">our GitHub repository</a> explaining the issue and attaching the output. (Please ensure that any API keys or other sensitive information are obfuscated before submitting.)</p>
-<pre class="highlight"><code class="language-bash">$ docker run -d --name buildarr -v $(pwd):/config -e PUID=$(id -u) -e PGID=$(id -g) callum027/buildarr:latest run --log-level DEBUG</code></pre>
+<p>If you encounter an issue or error while using Buildarr, please do a Buildarr ad-hoc run with verbose log output by executing <code>buildarr --log-level DEBUG run</code> and making an issue on <a href="https://github.com/buildarr/buildarr/issues/new">our GitHub repository</a> explaining the issue and attaching the output. (Please ensure that any API keys or other sensitive information are obfuscated before submitting.)</p>
+<pre class="highlight"><code class="language-bash">$ docker run -d --name buildarr -v $(pwd):/config -e PUID=$(id -u) -e PGID=$(id -g) callum027/buildarr:latest --log-level DEBUG run</code></pre>
 <p>For developers looking to make a contribution to this project, thank you! Documentation of the internal APIs is still in the works, so for now, the best way to learn how Buildarr works is to clone the project and have a look at the comments and docstrings.</p>
 <p>Pre-commit hooks are configured for this project. In this pre-commit hook, <code>black</code>, <code>flake8</code>, <code>isort</code> and <code>mypy</code> are run to automatically format source files, ensure grammatical correctness and variable type consistency.</p>
 <p>To enable them, ensure the <code>pre-commit</code> Python package is installed in your local environment and run the following command:</p>
@@ -467,5 +467,5 @@ buildarr.plugins =
 
 <!--
 MkDocs version : 1.4.2
-Build Date UTC : 2023-02-11 07:41:25.700692+00:00
+Build Date UTC : 2023-02-11 11:03:51.671466+00:00
 -->
