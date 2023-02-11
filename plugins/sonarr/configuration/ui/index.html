@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../../img/favicon.ico">
+        <title>UI - Buildarr</title>
+        <link href="../../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link href="../../../../assets/_mkdocstrings.css" rel="stylesheet">
+
+        <script src="../../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../../..">Buildarr</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../installation/" class="nav-link">Installation</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../configuration/" class="nav-link">Configuration</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Plugins <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../" class="dropdown-item">Introduction</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">buildarr-sonarr</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../" class="dropdown-item">Introduction</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Configuration</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../host/" class="dropdown-item">Host Configuration</a>
+</li>
+            
+<li>
+    <a href="../media-management/" class="dropdown-item">Media Management</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Profiles</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../profiles/quality/" class="dropdown-item">Quality Profiles</a>
+</li>
+            
+<li>
+    <a href="../profiles/language/" class="dropdown-item">Language Profiles</a>
+</li>
+            
+<li>
+    <a href="../profiles/delay/" class="dropdown-item">Delay Profiles</a>
+</li>
+            
+<li>
+    <a href="../profiles/release/" class="dropdown-item">Release Profiles</a>
+</li>
+    </ul>
+  </li>
+            
+<li>
+    <a href="../quality/" class="dropdown-item">Quality</a>
+</li>
+            
+<li>
+    <a href="../indexers/" class="dropdown-item">Indexers</a>
+</li>
+            
+<li>
+    <a href="../download-clients/" class="dropdown-item">Download Clients</a>
+</li>
+            
+<li>
+    <a href="../import-lists/" class="dropdown-item">Import Lists</a>
+</li>
+            
+<li>
+    <a href="../connect/" class="dropdown-item">Connect</a>
+</li>
+            
+<li>
+    <a href="../metadata/" class="dropdown-item">Metadata</a>
+</li>
+            
+<li>
+    <a href="../tags/" class="dropdown-item">Tags</a>
+</li>
+            
+<li>
+    <a href="../general/" class="dropdown-item">General</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active">UI</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../usage/" class="nav-link">Usage</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../general/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../../../usage/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#ui" class="nav-link">UI</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="ui">UI<a class="headerlink" href="#ui" title="Permanent link">#</a></h1>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.ui.SonarrUISettingsConfig"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.config.ConfigBase">ConfigBase</span></code></p>
+
+  
+      <p>Sonarr user interface configuration can also be set directly from Buildarr.</p>
+<pre class="highlight"><code class="language-yaml">sonarr:
+  settings:
+    ui:
+      first_day_of_week: "monday"
+      week_column_header: "day-first"
+      short_date_format: "word-month-second"
+      long_date_format: "day-first"
+      time_format: "twentyfour-hour"
+      show_relative_dates: true
+      enable_color_impaired_mode: false</code></pre>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.ui.SonarrUISettingsConfig.first_day_of_week" class="doc doc-heading">
+<code class="highlight language-python">first_day_of_week: FirstDayOfWeek = FirstDayOfWeek.sunday</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.ui.SonarrUISettingsConfig.first_day_of_week" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The first day of the week that Sonarr will show in the calendar.</p>
+<p>Values:</p>
+<ul>
+<li><code>sunday</code> - Sunday</li>
+<li><code>monday</code> - Monday</li>
+</ul>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.ui.SonarrUISettingsConfig.week_column_header" class="doc doc-heading">
+<code class="highlight language-python">week_column_header: WeekColumnHeader = WeekColumnHeader.month_first</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.ui.SonarrUISettingsConfig.week_column_header" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The format of the date in columns when "Week" is the active view in the calendar.</p>
+<p>Values:</p>
+<ul>
+<li><code>month-first</code> - Print month first (e.g. Tue 3/25)</li>
+<li><code>month-first-padded</code> - Print month first with padded numbers (e.g. Tue 03/25)</li>
+<li><code>day-first</code> - Print day first with padded numbers (e.g. Tue 25/3)</li>
+<li><code>day-first-padded</code> - Print day first with padded numbers (e.g. Tue 25/03)</li>
+</ul>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.ui.SonarrUISettingsConfig.short_date_format" class="doc doc-heading">
+<code class="highlight language-python">short_date_format: ShortDateFormat = ShortDateFormat.word_month_first</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.ui.SonarrUISettingsConfig.short_date_format" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The format of short dates in the user interface.</p>
+<p>Values:</p>
+<ul>
+<li><code>word-month-first</code> - Month as word, print month first (e.g. Mar 4 2014)</li>
+<li><code>word-month-second</code> - Month as word, print month second (e.g. 4 Mar 2014)</li>
+<li><code>slash-month-first</code> - Slash-separated date, print month first (e.g. 03/4/2014)</li>
+<li><code>slash-month-first-padded</code> - Slash-separated date, print month first (e.g. 03/04/2014)</li>
+<li><code>slash-day-first</code> - Slash-separated date, print day first (e.g. 04/03/2014)</li>
+<li><code>iso8601</code> - ISO-8601 date (e.g. 2014-03-04)</li>
+</ul>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.ui.SonarrUISettingsConfig.long_date_format" class="doc doc-heading">
+<code class="highlight language-python">long_date_format: LongDateFormat = LongDateFormat.month_first</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.ui.SonarrUISettingsConfig.long_date_format" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The format of long dates in the user interface.</p>
+<p>Values:</p>
+<ul>
+<li><code>month-first</code> - Print month first (e.g. Tuesday, March 4 2014)</li>
+<li><code>day-first</code> - Print day first (e.g. Tuesday, 4 March 2014)</li>
+</ul>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.ui.SonarrUISettingsConfig.time_format" class="doc doc-heading">
+<code class="highlight language-python">time_format: TimeFormat = TimeFormat.twelve_hour</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.ui.SonarrUISettingsConfig.time_format" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The format of time in the user information.</p>
+<p>Values:</p>
+<ul>
+<li><code>twelve-hour</code> - 12-hour time (e.g. 5pm/5:30pm)</li>
+<li><code>twentyfour-hour</code> - 24-hour time (e.g. 17:00/17:30)</li>
+</ul>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.ui.SonarrUISettingsConfig.show_relative_dates" class="doc doc-heading">
+<code class="highlight language-python">show_relative_dates: bool = True</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.ui.SonarrUISettingsConfig.show_relative_dates" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>When set to <code>True</code>, Sonarr will show relative dates (e.g. today, yesterday)
+instead of absolute dates (e.g. Monday, Tuesday ...).</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.ui.SonarrUISettingsConfig.enable_color_impaired_mode" class="doc doc-heading">
+<code class="highlight language-python">enable_color_impaired_mode: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.ui.SonarrUISettingsConfig.enable_color_impaired_mode" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Enable an altered view style to allow colour-impaired users to better distinguish
+colour-coded information.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../js/base.js" defer></script>
+        <script src="../../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

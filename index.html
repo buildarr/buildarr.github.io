@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="None">
+        
+        
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <title>Buildarr</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link href="assets/_mkdocstrings.css" rel="stylesheet">
+
+        <script src="js/jquery-1.10.2.min.js" defer></script>
+        <script src="js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body class="homepage">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href=".">Buildarr</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem active">
+                                <a href="." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="installation/" class="nav-link">Installation</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="configuration/" class="nav-link">Configuration</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Plugins <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="plugins/" class="dropdown-item">Introduction</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">buildarr-sonarr</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="plugins/sonarr/" class="dropdown-item">Introduction</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Configuration</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="plugins/sonarr/configuration/host/" class="dropdown-item">Host Configuration</a>
+</li>
+            
+<li>
+    <a href="plugins/sonarr/configuration/media-management/" class="dropdown-item">Media Management</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Profiles</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="plugins/sonarr/configuration/profiles/quality/" class="dropdown-item">Quality Profiles</a>
+</li>
+            
+<li>
+    <a href="plugins/sonarr/configuration/profiles/language/" class="dropdown-item">Language Profiles</a>
+</li>
+            
+<li>
+    <a href="plugins/sonarr/configuration/profiles/delay/" class="dropdown-item">Delay Profiles</a>
+</li>
+            
+<li>
+    <a href="plugins/sonarr/configuration/profiles/release/" class="dropdown-item">Release Profiles</a>
+</li>
+    </ul>
+  </li>
+            
+<li>
+    <a href="plugins/sonarr/configuration/quality/" class="dropdown-item">Quality</a>
+</li>
+            
+<li>
+    <a href="plugins/sonarr/configuration/indexers/" class="dropdown-item">Indexers</a>
+</li>
+            
+<li>
+    <a href="plugins/sonarr/configuration/download-clients/" class="dropdown-item">Download Clients</a>
+</li>
+            
+<li>
+    <a href="plugins/sonarr/configuration/import-lists/" class="dropdown-item">Import Lists</a>
+</li>
+            
+<li>
+    <a href="plugins/sonarr/configuration/connect/" class="dropdown-item">Connect</a>
+</li>
+            
+<li>
+    <a href="plugins/sonarr/configuration/metadata/" class="dropdown-item">Metadata</a>
+</li>
+            
+<li>
+    <a href="plugins/sonarr/configuration/tags/" class="dropdown-item">Tags</a>
+</li>
+            
+<li>
+    <a href="plugins/sonarr/configuration/general/" class="dropdown-item">General</a>
+</li>
+            
+<li>
+    <a href="plugins/sonarr/configuration/ui/" class="dropdown-item">UI</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="usage/" class="nav-link">Usage</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" class="nav-link disabled">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="installation/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#welcome-to-buildarr" class="nav-link">Welcome to Buildarr!</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#similar-projects" class="nav-link">Similar projects</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#installation" class="nav-link">Installation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#plugins" class="nav-link">Plugins</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#configuration" class="nav-link">Configuration</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#running-buildarr" class="nav-link">Running Buildarr</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#to-do-list" class="nav-link">To-do list</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#contributions" class="nav-link">Contributions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="welcome-to-buildarr">Welcome to Buildarr!<a class="headerlink" href="#welcome-to-buildarr" title="Permanent link">#</a></h1>
+<p><a href="https://hub.docker.com/callum027/buildarr"><img alt="Docker Version" src="https://img.shields.io/docker/v/callum027/buildarr?sort=semver" /></a> <a href="https://pypi.org/project/buildarr"><img alt="PyPI" src="https://img.shields.io/pypi/v/buildarr" /></a> <img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/buildarr" />  <a href="https://github.com/buildarr/buildarr/blob/main/LICENSE"><img alt="GitHub" src="https://img.shields.io/github/license/buildarr/buildarr" /></a> <img alt="Pre-commit hooks" src="https://github.com/buildarr/buildarr/actions/workflows/pre-commit.yml/badge.svg" /> <a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg" /></a></p>
+<p>This is Buildarr, a solution to automating deployment and configuration of your *Arr stack.</p>
+<p>Have you spent many hours getting your setup for one or more linked Sonarr/Radarr/Prowlarr instances just right, only to have no way to reproduce this setup apart from UI screenshots and database backups?</p>
+<p>Buildarr aims to alleviate those concerns by using a static configuration file to store settings for all your *Arr applications, and automatically configure them as defined. It can just once using an ad-hoc user command, or as a service to keep your application configurations up to date. Buildarr runs idempotently, only making changes to your instance if they are required.</p>
+<p>It can also automatically retrieve optimal configuration values from TRaSH-Guides for many things such as quality definitions and release profiles, so not only is there no need to manually input them into your configuration, Buildarr will also continually keep them up to date for you.</p>
+<h2 id="similar-projects">Similar projects<a class="headerlink" href="#similar-projects" title="Permanent link">#</a></h2>
+<p>Buildarr attempts to fulfill some of the needs of users of the following projects.</p>
+<ul>
+<li><a href="https://github.com/iam4x/bobarr">Bobarr</a> - An all-in-one package containing Sonarr, Radarr, Jackett etc<ul>
+<li>Still requires manual configuration of many components, and there is no way to store the configuration as code.</li>
+</ul>
+</li>
+<li><a href="https://github.com/Flemmarr/Flemmarr">Flemmarr</a> - Uses API parameters stored in YAML configuration files to push configuration changes to Sonarr, Radarr, Lidarr etc<ul>
+<li>Requires users to comprehensively learn how the APIs of each application work, going through often poor documentation.</li>
+<li>Since the values are machine-oriented, configuration files are difficult to write and understand.</li>
+<li>Does not support idempotent updates (<a href="https://github.com/Flemmarr/Flemmarr/pull/14">at this time</a>).</li>
+</ul>
+</li>
+<li><a href="https://github.com/recyclarr/recyclarr">Recyclarr</a> - Automatically syncs recommended TRaSH-Guides settings to Sonarr/Radarr instances<ul>
+<li>Buildarr has support for this built-in, and in the case of Sonarr release profiles, supports the same filtering syntax.</li>
+</ul>
+</li>
+</ul>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">#</a></h2>
+<p>Buildarr is available on Docker Hub as a Docker image.</p>
+<pre class="highlight"><code class="language-bash">$ docker pull callum027/buildarr:latest</code></pre>
+<p>Buildarr can also be installed using <code>pip</code>. Python 3.8 or later is required. Windows is natively supported.</p>
+<pre class="highlight"><code class="language-bash">$ python3 -m venv buildarr-venv
+$ . buildarr-venv/bin/activate
+$ python3 -m pip install buildarr</code></pre>
+<p>You can deploy Buildarr as a service within a <a href="https://docs.docker.com/compose">Docker Compose</a> environment, or use configuration management tools such as <a href="https://www.ansible.com">Ansible</a> to automatically deploy it.</p>
+<p>For more information, check the <a href="installation/">installation instructions</a>.</p>
+<h2 id="plugins">Plugins<a class="headerlink" href="#plugins" title="Permanent link">#</a></h2>
+<p>Buildarr supports external plugins to allow additional applications to be supported. To allow for rapid development of both the plugin and the API, however, the one currently existing plugin, <code>buildarr-sonarr</code>, is vendored in as <code>buildarr.plugins.sonarr</code>.</p>
+<p>At the time of this release the following plugins are available:</p>
+<ul>
+<li><code>buildarr-sonarr</code> - <a href="https://sonarr.tv">Sonarr</a> PVR for TV shows (V3 only for now)</li>
+</ul>
+<p>For more information on installing plugins and configuring the vendored plugins, check the <a href="plugins/">plugin documentation</a>.</p>
+<h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">#</a></h2>
+<p>Buildarr uses YAML as its configuration file format. By default, Buildarr looks for <code>buildarr.yml</code> in the current directory.</p>
+<p>It contains not only the settings for Buildarr itself, but also the application instances to be managed. Multiple instances of the same application type can be defined (for example, a common use case would be separate Sonarr instances for HD TV shows, 4K TV shows, and anime).</p>
+<p>Any configuration on the remote instance not explicitly defined in the Buildarr configuration is not modified.</p>
+<p>For more information on how Buildarr uses configuration and how to configure Buildarr itself, check the <a href="configuration/">configuration documentation</a>.</p>
+<p>Here is an example of a simple Buildarr configuration that changes some settings on a Sonarr instance:</p>
+<pre class="highlight"><code class="language-yaml">---
+# buildarr.yml
+# Buildarr example configuration file.
+
+# Buildarr configuration (all settings have sane default values)
+buildarr:
+  watch_config: true
+  update_days:
+    - "monday"
+    - "tuesday"
+    - "wednesday"
+    - "thursday"
+    - "friday"
+    - "saturday"
+    - "sunday"
+  update_times:
+    - "03:00"
+
+# Sonarr instance configuration
+sonarr:
+  hostname: "localhost"
+  port: 8989
+  use_ssl: false
+  settings:
+    # General settings (all options supported except for changing the API key)
+    general:
+      host:
+        instance_name: "Sonarr (Buildarr Example)"</code></pre>
+<p>If you have an already configured application instance, its configuration can be dumped. For example, to get the configuration of a Sonarr instance, this can be done using the following command (Buildarr will prompt for your API key):</p>
+<pre class="highlight"><code class="language-bash">$ docker run -it --rm callum027/buildarr:latest sonarr dump-config http://sonarr.example.com:8989</code></pre>
+<p>Once you have this configuration, you can insert it into <code>buildarr.yml</code> and ensure this configuration is maintained.</p>
+<h2 id="running-buildarr">Running Buildarr<a class="headerlink" href="#running-buildarr" title="Permanent link">#</a></h2>
+<p>Once you have a valid configuration file, you can try Buildarr on your local machine using the Docker image.</p>
+<p>The following command will mount the current folder into the Docker container so <code>buildarr.yml</code> can be read, and start Buildarr in daemon mode.</p>
+<pre class="highlight"><code class="language-bash">$ docker run -d --name buildarr -v ./:/config -e PUID=$UID -e PGID=$GID callum027/buildarr:latest</code></pre>
+<p>If installed using <code>pip</code>, simply run the <code>buildarr</code> CLI command.</p>
+<pre class="highlight"><code class="language-bash">$ buildarr daemon</code></pre>
+<p>On startup, Buildarr daemon will do an initial sync with the defined instances, updating their configuration immediately.
+After this initial run, Buildarr will wake up at the scheduled times to periodically run updates as required.</p>
+<pre class="highlight"><code class="language-txt">2023-02-11 13:43:48,890 buildarr:4308 buildarr.main [INFO] Buildarr version 0.1.0 (log level: INFO)
+2023-02-11 13:43:48,891 buildarr:4308 buildarr.main [INFO] Loading configuration file '/config/buildarr.yml'
+2023-02-11 13:43:48,898 buildarr:4308 buildarr.main [INFO] Finished loading configuration file
+2023-02-11 13:43:48,900 buildarr:4308 buildarr.main [INFO] Daemon configuration:
+2023-02-11 13:43:48,900 buildarr:4308 buildarr.main [INFO]  - Watch configuration files: Yes
+2023-02-11 13:43:48,900 buildarr:4308 buildarr.main [INFO]  - Configuration files to watch:
+2023-02-11 13:43:48,900 buildarr:4308 buildarr.main [INFO]    - /config/buildarr.yml
+2023-02-11 13:43:48,901 buildarr:4308 buildarr.main [INFO]  - Update at:
+2023-02-11 13:43:48,901 buildarr:4308 buildarr.main [INFO]    - Monday 03:00
+2023-02-11 13:43:48,901 buildarr:4308 buildarr.main [INFO]    - Tuesday 03:00
+2023-02-11 13:43:48,901 buildarr:4308 buildarr.main [INFO]    - Wednesday 03:00
+2023-02-11 13:43:48,901 buildarr:4308 buildarr.main [INFO]    - Thursday 03:00
+2023-02-11 13:43:48,901 buildarr:4308 buildarr.main [INFO]    - Friday 03:00
+2023-02-11 13:43:48,901 buildarr:4308 buildarr.main [INFO]    - Saturday 03:00
+2023-02-11 13:43:48,902 buildarr:4308 buildarr.main [INFO]    - Sunday 03:00
+2023-02-11 13:43:48,902 buildarr:4308 buildarr.main [INFO] Applying initial configuration
+2023-02-11 13:43:48,904 buildarr:4308 buildarr.main [INFO] Plugins loaded: sonarr
+2023-02-11 13:43:48,906 buildarr:4308 buildarr.main [INFO] Using plugins: sonarr
+2023-02-11 13:43:48,907 buildarr:4308 buildarr.main [INFO] Loading secrets file from 'secrets.json'
+2023-02-11 13:43:48,909 buildarr:4308 buildarr.main [INFO] Finished loading secrets file
+2023-02-11 13:43:48,910 buildarr:4308 buildarr.plugins.sonarr default [INFO] Checking and fetching secrets
+2023-02-11 13:43:48,910 buildarr:4308 buildarr.plugins.sonarr default [INFO] Finished checking and fetching secrets
+2023-02-11 13:43:48,910 buildarr:4308 buildarr.main [INFO] Saving updated secrets file to 'secrets.json'
+2023-02-11 13:43:48,911 buildarr:4308 buildarr.main [INFO] Finished saving updated secrets file
+2023-02-11 13:43:48,914 buildarr:4308 buildarr.plugins.sonarr default [INFO] Getting remote configuration
+2023-02-11 13:43:49,870 buildarr:4308 buildarr.plugins.sonarr default [INFO] Finished getting remote configuration
+2023-02-11 13:43:49,914 buildarr:4308 buildarr.plugins.sonarr default [INFO] Updating remote configuration
+2023-02-11 13:43:49,954 buildarr:4308 buildarr.plugins.sonarr default [INFO] sonarr.settings.general.host.instance_name: 'Sonarr' -&gt; 'Sonarr (Buildarr Example)'
+2023-02-11 13:43:50,177 buildarr:4308 buildarr.plugins.sonarr default [INFO] Remote configuration successfully updated
+2023-02-11 13:43:50,177 buildarr:4308 buildarr.plugins.sonarr default [INFO] Finished updating remote configuration
+2023-02-11 13:43:50,178 buildarr:4308 buildarr.main [INFO] Finished applying initial configuration
+2023-02-11 13:43:50,179 buildarr:4308 buildarr.main [INFO] Scheduling update jobs
+2023-02-11 13:43:50,180 buildarr:4308 buildarr.main [INFO] Finished scheduling update jobs
+2023-02-11 13:43:50,180 buildarr:4308 buildarr.main [INFO] The next run will be at 2023-02-12 03:00
+2023-02-11 13:43:50,181 buildarr:4308 buildarr.main [INFO] Setting up config file monitoring
+2023-02-11 13:43:50,183 buildarr:4308 buildarr.main [INFO] Finished setting up config file monitoring
+2023-02-11 13:43:50,183 buildarr:4308 buildarr.main [INFO] Setting up signal handlers
+2023-02-11 13:43:50,183 buildarr:4308 buildarr.main [INFO] Finished setting up signal handlers
+2023-02-11 13:43:50,184 buildarr:4308 buildarr.main [INFO] Buildarr ready.</code></pre>
+<p>For more information on how to interfact with Buildarr, check the <a href="usage/">usage documentation</a>.</p>
+<h2 id="to-do-list">To-do list<a class="headerlink" href="#to-do-list" title="Permanent link">#</a></h2>
+<ul>
+<li>Add a dry-run mode for testing configurations</li>
+<li>Test updates for all available attributes in the existing Sonarr plugin</li>
+<li>Unit tests and code coverage</li>
+<li>Split Sonarr plugin to its own repository</li>
+<li>Create plugins for the following applications:</li>
+<li>Sonarr V4</li>
+<li>Radarr</li>
+<li>Prowlarr</li>
+<li>Bazarr</li>
+<li>FlareSolverr</li>
+<li>Unmanic</li>
+<li>Tdarr (maybe)</li>
+<li>Unpackerr</li>
+<li>Lidarr</li>
+<li>Instance linking (e.g. Prowlarr-to-Sonarr/Radarr) and dependency resolution</li>
+<li>Stable plugin API between major versions</li>
+<li>Auto-generation of Docker Compose environment files reflecting the Buildarr configuration</li>
+</ul>
+<h2 id="contributions">Contributions<a class="headerlink" href="#contributions" title="Permanent link">#</a></h2>
+<p>Buildarr is still early in development, and even currently implemented features still require testing and fixing. There are so many possible configurations to cover that I simply cannot feasibly test every feature at this time.</p>
+<p>If you encounter an issue or error while using Buildarr, please do a Buildarr ad-hoc run with verbose log output by executing <code>buildarr run --log-level DEBUG</code> and making an issue on <a href="https://github.com/buildarr/buildarr/issues/new">our GitHub repository</a> explaining the issue and attaching the output. (Please ensure that any API keys or other sensitive information are obfuscated before submitting.)</p>
+<pre class="highlight"><code class="language-bash">$ docker run -d --name buildarr -v ./:/config -e PUID=$UID -e PGID=$GID callum027/buildarr:latest run --log-level DEBUG</code></pre>
+<p>For developers looking to make a contribution to this project, thank you! Documentation of the internal APIs is still in the works, so for now, the best way to learn how Buildarr works is to clone the project and have a look at the comments and docstrings.</p>
+<p>Pre-commit hooks are configured for this project. In this pre-commit hook, <code>black</code>, <code>flake8</code>, <code>isort</code> and <code>mypy</code> are run to automatically format source files, ensure grammatical correctness and variable type consistency.</p>
+<p>To enable them, ensure the <code>pre-commit</code> Python package is installed in your local environment and run the following command:</p>
+<pre class="highlight"><code class="language-bash">$ pre-commit install</code></pre>
+<p>Poetry is used to manage the Python package definition and dependencies in this project.</p>
+<p>Pull requests for Buildarr itself and the currently vendored plugins are welcome.</p>
+<p>If you're looking to develop a new plugin for adding support for a new application, please develop it as a new package and configure entry points in your Python package definitions to allow Buildarr to load your plugin.</p>
+<p>Setuptools <code>setup.py</code> entry point definition example:
+<pre class="highlight"><code class="language-python">from setuptools import setup
+
+setup(
+    # ...,
+    entry_points={
+        "buildarr.plugins": [
+            "example = buildarr_example.plugin:ExamplePlugin",
+        ],
+    },
+)</code></pre></p>
+<p>Setuptools <code>setup.cfg</code> entry point definition example:
+<pre class="highlight"><code class="language-ini">[options.entry_points]
+buildarr.plugins =
+    example = buildarr_example.plugin:ExamplePlugin</code></pre></p>
+<p>Setuptools <code>pyproject.toml</code> entry point definition example:
+<pre class="highlight"><code class="language-toml">[project.entry-points."buildarr.plugins"]
+"example" = "buildarr_example.plugin:ExamplePlugin"</code></pre></p>
+<p>Poetry plugin definition example:
+<pre class="highlight"><code class="language-toml">[tool.poetry.plugins."buildarr.plugins"]
+"example" = "buildarr_example.plugin:ExamplePlugin"</code></pre></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = ".",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="js/base.js" defer></script>
+        <script src="search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
+
+<!--
+MkDocs version : 1.4.2
+Build Date UTC : 2023-02-11 05:29:59.537586+00:00
+-->

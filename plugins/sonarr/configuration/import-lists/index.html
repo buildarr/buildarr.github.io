@@ -1,0 +1,1392 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../../img/favicon.ico">
+        <title>Import Lists - Buildarr</title>
+        <link href="../../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link href="../../../../assets/_mkdocstrings.css" rel="stylesheet">
+
+        <script src="../../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../../..">Buildarr</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../installation/" class="nav-link">Installation</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../configuration/" class="nav-link">Configuration</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Plugins <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../" class="dropdown-item">Introduction</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">buildarr-sonarr</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../" class="dropdown-item">Introduction</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Configuration</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../host/" class="dropdown-item">Host Configuration</a>
+</li>
+            
+<li>
+    <a href="../media-management/" class="dropdown-item">Media Management</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Profiles</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../profiles/quality/" class="dropdown-item">Quality Profiles</a>
+</li>
+            
+<li>
+    <a href="../profiles/language/" class="dropdown-item">Language Profiles</a>
+</li>
+            
+<li>
+    <a href="../profiles/delay/" class="dropdown-item">Delay Profiles</a>
+</li>
+            
+<li>
+    <a href="../profiles/release/" class="dropdown-item">Release Profiles</a>
+</li>
+    </ul>
+  </li>
+            
+<li>
+    <a href="../quality/" class="dropdown-item">Quality</a>
+</li>
+            
+<li>
+    <a href="../indexers/" class="dropdown-item">Indexers</a>
+</li>
+            
+<li>
+    <a href="../download-clients/" class="dropdown-item">Download Clients</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active">Import Lists</a>
+</li>
+            
+<li>
+    <a href="../connect/" class="dropdown-item">Connect</a>
+</li>
+            
+<li>
+    <a href="../metadata/" class="dropdown-item">Metadata</a>
+</li>
+            
+<li>
+    <a href="../tags/" class="dropdown-item">Tags</a>
+</li>
+            
+<li>
+    <a href="../general/" class="dropdown-item">General</a>
+</li>
+            
+<li>
+    <a href="../ui/" class="dropdown-item">UI</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../usage/" class="nav-link">Usage</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../download-clients/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../connect/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#import-lists" class="nav-link">Import Lists</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#configuring-import-lists" class="nav-link">Configuring import lists</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#sonarr" class="nav-link">Sonarr</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#plex" class="nav-link">Plex</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#trakt" class="nav-link">Trakt</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="import-lists">Import Lists<a class="headerlink" href="#import-lists" title="Permanent link">#</a></h1>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.import_lists.SonarrImportListsSettingsConfig"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.config.ConfigBase">ConfigBase</span></code></p>
+
+  
+      <p>Using import lists, Sonarr can monitor and import episodes from external sources.</p>
+<pre class="highlight"><code class="language-yaml">sonarr:
+  settings:
+    import_lists:
+      delete_unmanaged: False # Default is `false`
+      delete_unmanaged_exclusions: true # Default is `false`
+      definitions:
+        Plex: # Name of import list definition
+          type: "plex-watchlist" # Type of import list to use
+          # Attributes common to all watch list types
+          enable_automatic_add: true
+          monitor: "all-episodes"
+          series_type: "standard"
+          season_folder: true
+          tags:
+            - "example"
+          # Plex-specific attributes
+          access_token: "..."
+        # Add more import lists here.
+      exclusions:
+        72662: "Teletubbies" # TVDB ID is key, set an artibrary title as value</code></pre>
+<p>Media can be queued on the source, and Sonarr will automatically import them,
+look for suitable releases, and download them.</p>
+<p>Media that you don't want to import can be ignored using the <code>exclusions</code>
+attribute.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.import_lists.SonarrImportListsSettingsConfig.delete_unmanaged" class="doc doc-heading">
+<code class="highlight language-python">delete_unmanaged: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.import_lists.SonarrImportListsSettingsConfig.delete_unmanaged" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Automatically delete import lists not defined in Buildarr.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.import_lists.SonarrImportListsSettingsConfig.delete_unmanaged_exclusions" class="doc doc-heading">
+<code class="highlight language-python">delete_unmanaged_exclusions: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.import_lists.SonarrImportListsSettingsConfig.delete_unmanaged_exclusions" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Automatically delete import list excusions not defined in Buildarr.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.import_lists.SonarrImportListsSettingsConfig.definitions" class="doc doc-heading">
+<code class="highlight language-python">definitions: Dict[str, Union[SonarrImportList, PlexWatchlistImportList, TraktListImportList, TraktPopularlistImportList, TraktUserImportList]] = {}</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.import_lists.SonarrImportListsSettingsConfig.definitions" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Import list definitions go here.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.import_lists.SonarrImportListsSettingsConfig.exclusions" class="doc doc-heading">
+<code class="highlight language-python">exclusions: Dict[PositiveInt, NonEmptyStr] = {}</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.import_lists.SonarrImportListsSettingsConfig.exclusions" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Dictionary of TV series that should be excluded from being imported.</p>
+<p>The key is the TVDB ID of the series to exclude, the value is
+a title to give the series in the Sonarr UI.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="configuring-import-lists">Configuring import lists<a class="headerlink" href="#configuring-import-lists" title="Permanent link">#</a></h2>
+<p>The following</p>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.import_lists.ImportList"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.config.ConfigBase">ConfigBase</span></code></p>
+
+  
+      <p>For more information on how an import list should be setup,
+refer to this guide on <a href="https://wiki.servarr.com/en/sonarr/settings#import-lists">WikiArr</a>.</p>
+<p>All import list types can have the following attributes configured.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.import_lists.ImportList.enable_automatic_add" class="doc doc-heading">
+<code class="highlight language-python">enable_automatic_add: bool = True</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.import_lists.ImportList.enable_automatic_add" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Automatically add series to Sonarr upon syncing.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.import_lists.ImportList.monitor" class="doc doc-heading">
+<code class="highlight language-python">monitor: Monitor = Monitor.all_episodes</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.import_lists.ImportList.monitor" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Define how Sonarr should monitor existing and new episodes of series.</p>
+<p>Values:</p>
+<ul>
+<li><code>all-episodes</code> - Monitor all episodes except specials</li>
+<li><code>future-episodes</code> - Monitor episodes that have not aired yet</li>
+<li><code>missing-episodes</code> - Monitor episodes that do not have files or have not aired yet</li>
+<li><code>existing-episodes</code> - Monitor episodes that have files or have not aired yet</li>
+<li><code>pilot-episode</code> - Monitor only the pilot episode of a series</li>
+<li><code>first-season</code> - Monitor all episodes of the first season (all other seasons will be ignored)</li>
+<li><code>only-latest-season</code> - Monitor all episodes of the latest season and future seasons</li>
+<li><code>none</code> - No episodes will be monitored</li>
+</ul>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.import_lists.ImportList.root_folder" class="doc doc-heading">
+<code class="highlight language-python">root_folder: Optional[str] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.import_lists.ImportList.root_folder" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Add list items to the specified root folder.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.import_lists.ImportList.quality_profile" class="doc doc-heading">
+<code class="highlight language-python">quality_profile: Optional[str] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.import_lists.ImportList.quality_profile" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The name of the quality profile list items will be added with.</p>
+<p>If unset, blank or set to <code>None</code>, use any quality profile.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.import_lists.ImportList.language_profile" class="doc doc-heading">
+<code class="highlight language-python">language_profile: Optional[str] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.import_lists.ImportList.language_profile" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The name of the language profile list items will be added with.</p>
+<p>If unset, blank or set to <code>None</code>, use any language profile.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.import_lists.ImportList.series_type" class="doc doc-heading">
+<code class="highlight language-python">series_type: SeriesType = SeriesType.standard</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.import_lists.ImportList.series_type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The type of series that get imported from this import list.
+This option affects how Sonarr handles the media, such as renaming.</p>
+<p>Values:</p>
+<ul>
+<li><code>standard</code> - Episodes released with an <code>SxxEyy</code> pattern</li>
+<li><code>daily</code> - Episodes released daily or less frequently that use year-month-day (2017-05-25)</li>
+<li><code>anime</code> - Episodes released using an absolute episode number</li>
+</ul>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.import_lists.ImportList.season_folder" class="doc doc-heading">
+<code class="highlight language-python">season_folder: bool = True</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.import_lists.ImportList.season_folder" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Use a season folder for series imported from this import list.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.import_lists.ImportList.tags" class="doc doc-heading">
+<code class="highlight language-python">tags: Set[NonEmptyStr] = set()</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.import_lists.ImportList.tags" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Tags to assign to items imported from this import list.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="sonarr">Sonarr<a class="headerlink" href="#sonarr" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.import_lists.SonarrImportList"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.plugins.sonarr.config.import_lists.ProgramImportList">ProgramImportList</span></code></p>
+
+  
+      <p>Import items from another Sonarr instance.</p>
+<p>The Sonarr instance preferably should be the same version as this Sonarr instance.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.import_lists.SonarrImportList.type" class="doc doc-heading">
+<code class="highlight language-python">type: Literal['sonarr'] = 'sonarr'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.import_lists.SonarrImportList.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of import list.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.import_lists.SonarrImportList.full_url" class="doc doc-heading">
+<code class="highlight language-python">full_url: HttpUrl</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.import_lists.SonarrImportList.full_url" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>URL that this Sonarr instance will use to connect to the source Sonarr instance.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.import_lists.SonarrImportList.api_key" class="doc doc-heading">
+<code class="highlight language-python">api_key: Password</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.import_lists.SonarrImportList.api_key" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>API key used to access the remote instance.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.import_lists.SonarrImportList.source_quality_profile_ids" class="doc doc-heading">
+<code class="highlight language-python">source_quality_profile_ids: Set[PositiveInt] = set()</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.import_lists.SonarrImportList.source_quality_profile_ids" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>IDs of the Quality Profiles from the source instance to import from.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.import_lists.SonarrImportList.source_language_profile_ids" class="doc doc-heading">
+<code class="highlight language-python">source_language_profile_ids: Set[PositiveInt] = set()</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.import_lists.SonarrImportList.source_language_profile_ids" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>IDs of the Language Profiles from the source instance to import from.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.import_lists.SonarrImportList.source_tag_ids" class="doc doc-heading">
+<code class="highlight language-python">source_tag_ids: Set[PositiveInt] = set()</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.import_lists.SonarrImportList.source_tag_ids" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>IDs of the tags from the source instance to import from.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="plex">Plex<a class="headerlink" href="#plex" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.import_lists.PlexWatchlistImportList"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.plugins.sonarr.config.import_lists.PlexImportList">PlexImportList</span></code></p>
+
+  
+      <p>Import items from a Plex watchlist.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.import_lists.PlexWatchlistImportList.type" class="doc doc-heading">
+<code class="highlight language-python">type: Literal['plex-watchlist'] = 'plex-watchlist'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.import_lists.PlexWatchlistImportList.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of import list.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.import_lists.PlexWatchlistImportList.access_token" class="doc doc-heading">
+<code class="highlight language-python">access_token: Password</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.import_lists.PlexWatchlistImportList.access_token" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Plex authentication token.</p>
+<p>If unsure on where to find this token,
+<a href="https://support.plex.tv/articles/204059436-finding-an-authentication-token-x-plex-token">follow this guide from Plex.tv</a>.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="trakt">Trakt<a class="headerlink" href="#trakt" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.import_lists.TraktImportList"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><a class="autorefs autorefs-internal" title="buildarr.plugins.sonarr.config.import_lists.ImportList" href="#buildarr.plugins.sonarr.config.import_lists.ImportList">ImportList</a></code></p>
+
+  
+      <p>Import added media from a list on the Trakt media tracker.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Sonarr directly authenticates with Trakt to generate tokens for it to use.
+At the moment, the easiest way to generate the tokens for Buildarr
+is to do it using the GUI within Sonarr, and use the following
+shell command to retrieve the generated configuration.</p>
+<pre class="highlight"><code class="language-bash">$ curl -X "GET" "&lt;sonarr-url&gt;/api/v3/notification" -H "X-Api-Key: &lt;api-key&gt;"</code></pre>
+</div>
+<p>The following parameters are common to all Trakt import list types.
+The authenticated-related parameters (<code>access_token</code>, <code>refresh_token</code>, <code>expires</code>, <code>auth_user</code>)
+are required.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.import_lists.TraktImportList.access_token" class="doc doc-heading">
+<code class="highlight language-python">access_token: Password</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.import_lists.TraktImportList.access_token" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Access token for Sonarr from Trakt.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.import_lists.TraktImportList.refresh_token" class="doc doc-heading">
+<code class="highlight language-python">refresh_token: Password</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.import_lists.TraktImportList.refresh_token" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Refresh token for Sonarr from Trakt.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.import_lists.TraktImportList.expires" class="doc doc-heading">
+<code class="highlight language-python">expires: datetime</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.import_lists.TraktImportList.expires" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Expiry date-time of the access token, preferably in ISO-8601 format and in UTC.</p>
+<p>Example: <code>2023-05-10T15:34:08.117451Z</code></p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.import_lists.TraktImportList.auth_user" class="doc doc-heading">
+<code class="highlight language-python">auth_user: TraktAuthUser</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.import_lists.TraktImportList.auth_user" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The username being authenticated in Trakt.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.import_lists.TraktImportList.rating" class="doc doc-heading">
+<code class="highlight language-python">rating: NonEmptyStr = '0-100'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.import_lists.TraktImportList.rating" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Filter series by rating range, with a maximum range of 0-100.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.import_lists.TraktImportList.username" class="doc doc-heading">
+<code class="highlight language-python">username: Optional[str] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.import_lists.TraktImportList.username" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Username for the list to import from.</p>
+<p>Leave undefined, empty or set to <code>None</code> to use the auth user.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.import_lists.TraktImportList.genres" class="doc doc-heading">
+<code class="highlight language-python">genres: Set[NonEmptyStr] = set()</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.import_lists.TraktImportList.genres" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Filter series by Trakt genre slug.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.import_lists.TraktImportList.years" class="doc doc-heading">
+<code class="highlight language-python">years: Optional[YearRange] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.import_lists.TraktImportList.years" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Filter series by year or year range. (e.g. <code>2009</code> or <code>2009-2015</code>)</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.import_lists.TraktImportList.limit" class="doc doc-heading">
+<code class="highlight language-python">limit: PositiveInt = 100</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.import_lists.TraktImportList.limit" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Limit the number of series to get.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.import_lists.TraktImportList.trakt_additional_parameters" class="doc doc-heading">
+<code class="highlight language-python">trakt_additional_parameters: Optional[str] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.import_lists.TraktImportList.trakt_additional_parameters" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Additional parameters to send to the Trakt API.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h3 id="list">List<a class="headerlink" href="#list" title="Permanent link">#</a></h3>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.import_lists.TraktListImportList"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><a class="autorefs autorefs-internal" title="buildarr.plugins.sonarr.config.import_lists.TraktImportList" href="#buildarr.plugins.sonarr.config.import_lists.TraktImportList">TraktImportList</a></code></p>
+
+  
+      <p>Import an arbitrary list from Trakt into Sonarr.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.import_lists.TraktListImportList.type" class="doc doc-heading">
+<code class="highlight language-python">type: Literal['trakt-list'] = 'trakt-list'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.import_lists.TraktListImportList.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of import list.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.import_lists.TraktListImportList.list_name" class="doc doc-heading">
+<code class="highlight language-python">list_name: NonEmptyStr</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.import_lists.TraktListImportList.list_name" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Name of the list to import.</p>
+<p>The list must be public, or you must have access to the list.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h3 id="popular-list">Popular List<a class="headerlink" href="#popular-list" title="Permanent link">#</a></h3>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.import_lists.TraktPopularlistImportList"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><a class="autorefs autorefs-internal" title="buildarr.plugins.sonarr.config.import_lists.TraktImportList" href="#buildarr.plugins.sonarr.config.import_lists.TraktImportList">TraktImportList</a></code></p>
+
+  
+      <p>Import media according to popularity-based lists on Trakt.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.import_lists.TraktPopularlistImportList.type" class="doc doc-heading">
+<code class="highlight language-python">type: Literal['trakt-popularlist'] = 'trakt-popularlist'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.import_lists.TraktPopularlistImportList.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of import list.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.import_lists.TraktPopularlistImportList.list_type" class="doc doc-heading">
+<code class="highlight language-python">list_type: TraktPopularListType = TraktPopularListType.popular</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.import_lists.TraktPopularlistImportList.list_type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Popularity-based list to import.</p>
+<p>Values:</p>
+<ul>
+<li><code>trending</code></li>
+<li><code>popular</code></li>
+<li><code>anticipated</code></li>
+<li><code>top_watched_by_week</code></li>
+<li><code>top_watched_by_month</code></li>
+<li><code>top_watched_by_year</code></li>
+<li><code>top_watched_by_alltime</code></li>
+<li><code>recommended_by_week</code></li>
+<li><code>recommended_by_month</code></li>
+<li><code>recommended_by_year</code></li>
+<li><code>recommended_by_alltime</code></li>
+</ul>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h3 id="user">User<a class="headerlink" href="#user" title="Permanent link">#</a></h3>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.import_lists.TraktUserImportList"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><a class="autorefs autorefs-internal" title="buildarr.plugins.sonarr.config.import_lists.TraktImportList" href="#buildarr.plugins.sonarr.config.import_lists.TraktImportList">TraktImportList</a></code></p>
+
+  
+      <p>Import a user-level list from Trakt.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.import_lists.TraktUserImportList.type" class="doc doc-heading">
+<code class="highlight language-python">type: Literal['trakt-user'] = 'trakt-user'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.import_lists.TraktUserImportList.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of import list.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.import_lists.TraktUserImportList.list_type" class="doc doc-heading">
+<code class="highlight language-python">list_type: TraktUserListType = TraktUserListType.user_watch_list</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.import_lists.TraktUserImportList.list_type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>User list type to import.</p>
+<p>Values:</p>
+<ul>
+<li><code>user_watch_list</code></li>
+<li><code>user_watched_list</code></li>
+<li><code>user_collection_list</code></li>
+</ul>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../js/base.js" defer></script>
+        <script src="../../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

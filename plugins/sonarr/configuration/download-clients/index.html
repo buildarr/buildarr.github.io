@@ -1,0 +1,4193 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../../img/favicon.ico">
+        <title>Download Clients - Buildarr</title>
+        <link href="../../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link href="../../../../assets/_mkdocstrings.css" rel="stylesheet">
+
+        <script src="../../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../../..">Buildarr</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../installation/" class="nav-link">Installation</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../configuration/" class="nav-link">Configuration</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Plugins <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../" class="dropdown-item">Introduction</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">buildarr-sonarr</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../" class="dropdown-item">Introduction</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Configuration</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../host/" class="dropdown-item">Host Configuration</a>
+</li>
+            
+<li>
+    <a href="../media-management/" class="dropdown-item">Media Management</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Profiles</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../profiles/quality/" class="dropdown-item">Quality Profiles</a>
+</li>
+            
+<li>
+    <a href="../profiles/language/" class="dropdown-item">Language Profiles</a>
+</li>
+            
+<li>
+    <a href="../profiles/delay/" class="dropdown-item">Delay Profiles</a>
+</li>
+            
+<li>
+    <a href="../profiles/release/" class="dropdown-item">Release Profiles</a>
+</li>
+    </ul>
+  </li>
+            
+<li>
+    <a href="../quality/" class="dropdown-item">Quality</a>
+</li>
+            
+<li>
+    <a href="../indexers/" class="dropdown-item">Indexers</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active">Download Clients</a>
+</li>
+            
+<li>
+    <a href="../import-lists/" class="dropdown-item">Import Lists</a>
+</li>
+            
+<li>
+    <a href="../connect/" class="dropdown-item">Connect</a>
+</li>
+            
+<li>
+    <a href="../metadata/" class="dropdown-item">Metadata</a>
+</li>
+            
+<li>
+    <a href="../tags/" class="dropdown-item">Tags</a>
+</li>
+            
+<li>
+    <a href="../general/" class="dropdown-item">General</a>
+</li>
+            
+<li>
+    <a href="../ui/" class="dropdown-item">UI</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../usage/" class="nav-link">Usage</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../indexers/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../import-lists/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#download-clients" class="nav-link">Download Clients</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#configuring-download-clients" class="nav-link">Configuring download clients</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#usenet-download-clients" class="nav-link">Usenet download clients</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#download-station" class="nav-link">Download Station</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#nzbget" class="nav-link">NZBGet</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#nzbvortex" class="nav-link">NZBVortex</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#pneumatic" class="nav-link">Pneumatic</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#sabnzbd" class="nav-link">SABnzbd</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#usenet-blackhole" class="nav-link">Usenet Blackhole</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#torrent-download-clients" class="nav-link">Torrent download clients</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#aria2" class="nav-link">Aria2</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#deluge" class="nav-link">Deluge</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#download-station_1" class="nav-link">Download Station</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#flood" class="nav-link">Flood</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#hadouken" class="nav-link">Hadouken</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#qbittorrent" class="nav-link">qBittorrent</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#rtorrent-rutorrent" class="nav-link">RTorrent (ruTorrent)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#torrent-blackhole" class="nav-link">Torrent Blackhole</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#transmissionvuze" class="nav-link">Transmission/Vuze</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#configuring-remote-path-mappings" class="nav-link">Configuring remote path mappings</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="download-clients">Download Clients<a class="headerlink" href="#download-clients" title="Permanent link">#</a></h1>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.download_clients.SonarrDownloadClientsSettingsConfig"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.config.ConfigBase">ConfigBase</span></code></p>
+
+  
+      <p>Download clients retrieve media files being tracked by Sonarr,
+and store them in a location Sonarr can access to manage the
+downloaded files.</p>
+<p>Download clients that use Usenet or BitTorrent can be configured,
+as well as remote path mappings and other related options.</p>
+<pre class="highlight"><code class="language-yaml">---
+
+sonarr:
+  settings:
+    download_clients:
+      enable_completed_download_handling: true
+      redownload_failed: true
+      delete_unmanaged: true
+      definitions:
+        Transmission:
+          type: "transmission"
+          host: "transmission"
+          port: 9091
+        ...
+      remote_path_mappings:
+        definitions:
+          - host: "transmission"
+            remote_path: "/remote/path"
+            local_path: "/local/path"
+          ...</code></pre>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.SonarrDownloadClientsSettingsConfig.enable_completed_download_handling" class="doc doc-heading">
+<code class="highlight language-python">enable_completed_download_handling: bool = True</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.SonarrDownloadClientsSettingsConfig.enable_completed_download_handling" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Automatically import completed downloads from download clients.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.SonarrDownloadClientsSettingsConfig.redownload_failed" class="doc doc-heading">
+<code class="highlight language-python">redownload_failed: bool = True</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.SonarrDownloadClientsSettingsConfig.redownload_failed" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Automatically search for and attempt to download a different release.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.SonarrDownloadClientsSettingsConfig.delete_unmanaged" class="doc doc-heading">
+<code class="highlight language-python">delete_unmanaged: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.SonarrDownloadClientsSettingsConfig.delete_unmanaged" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Automatically delete download clients not defined in Buildarr.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.SonarrDownloadClientsSettingsConfig.definitions" class="doc doc-heading">
+<code class="highlight language-python">definitions: DownloadClientDefinitions = {}</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.SonarrDownloadClientsSettingsConfig.definitions" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Download client definitions, for connecting with external media downloaders.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.SonarrDownloadClientsSettingsConfig.remote_path_mappings" class="doc doc-heading">
+<code class="highlight language-python">remote_path_mappings = SonarrRemotePathMappingsSettingsConfig()</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.SonarrDownloadClientsSettingsConfig.remote_path_mappings" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Configuration for mapping paths on download client hosts to their counterparts
+on this Sonarr instance.</p>
+<p>For more information, refer to "Configuring remote path mappings".</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Before Sonarr can send requests to download clients, at least one Usenet or
+torrent <a href="../indexers/">indexer</a> will need to be configured.
+Sonarr will then send download requests to a compatible client,
+or the download client the indexer has been assigned to.</p>
+</div>
+<h2 id="configuring-download-clients">Configuring download clients<a class="headerlink" href="#configuring-download-clients" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.download_clients.download_clients.DownloadClient"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.config.ConfigBase">ConfigBase</span></code></p>
+
+  
+      <p>Download clients are defined using the following format.
+Here is an example of a Transmission download client being configured.</p>
+<pre class="highlight"><code class="language-yaml">---
+
+sonarr:
+  settings:
+    download_clients:
+      definitions:
+        Transmission: # Name of the download client
+          type: "transmission" # Type of download client
+          enable: true # Enable the download client in Sonarr
+          host: "transmission"
+          port: 9091
+          category: "sonarr"
+          # Define any other type-specific or global
+          # download client attributes as needed.</code></pre>
+<p>Every download client definition must have the correct <code>type</code> value defined,
+to tell Buildarr what type of download client to configure.
+The name of the download client definition is just a name, and has no meaning.</p>
+<p><code>enable</code> can be set to <code>False</code> to keep the download client configured on Sonarr,
+but disabled so that it is inactive.</p>
+<p>The below attributes can be defined on any type of download client.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.DownloadClient.enable" class="doc doc-heading">
+<code class="highlight language-python">enable: bool = True</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.DownloadClient.enable" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>When <code>True</code>, this download client is active and Sonarr is able to send requests to it.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.DownloadClient.priority" class="doc doc-heading">
+<code class="highlight language-python">priority: int = 1</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.DownloadClient.priority" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Download client priority.</p>
+<p>Clients with a lower value are prioritised.
+Round-robin is used for clients with the same priority.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.DownloadClient.remove_completed_downloads" class="doc doc-heading">
+<code class="highlight language-python">remove_completed_downloads: bool = True</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.DownloadClient.remove_completed_downloads" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Remove completed downloads from the download client history.</p>
+<p>For torrents, this happens once seeding is complete.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.DownloadClient.remove_failed_downloads" class="doc doc-heading">
+<code class="highlight language-python">remove_failed_downloads: bool = True</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.DownloadClient.remove_failed_downloads" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Remove failed downloads from the download client history. (Usenet clients only)</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.DownloadClient.tags" class="doc doc-heading">
+<code class="highlight language-python">tags: Set[NonEmptyStr] = set()</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.DownloadClient.tags" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Sonarr tags to assign to the download clients.
+Only media under those tags will be assigned to this client.</p>
+<p>If no tags are assigned, all media can use the client.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="usenet-download-clients">Usenet download clients<a class="headerlink" href="#usenet-download-clients" title="Permanent link">#</a></h2>
+<p>These download clients retrieve media using the popular <a href="https://en.wikipedia.org/wiki/Usenet">Usenet</a> discussion and content delivery system.</p>
+<h2 id="download-station">Download Station<a class="headerlink" href="#download-station" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.download_clients.download_clients.DownloadstationUsenetDownloadClient"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.plugins.sonarr.config.download_clients.download_clients.UsenetDownloadClient">UsenetDownloadClient</span></code></p>
+
+  
+      <p>Download client which uses Usenet via Download Station.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.DownloadstationUsenetDownloadClient.type" class="doc doc-heading">
+<code class="highlight language-python">type: Literal['downloadstation-usenet'] = 'downloadstation-usenet'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.DownloadstationUsenetDownloadClient.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.DownloadstationUsenetDownloadClient.host" class="doc doc-heading">
+<code class="highlight language-python">host: NonEmptyStr</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.DownloadstationUsenetDownloadClient.host" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Download Station host name.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.DownloadstationUsenetDownloadClient.port" class="doc doc-heading">
+<code class="highlight language-python">port: Port = 5000</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.DownloadstationUsenetDownloadClient.port" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Download client access port.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.DownloadstationUsenetDownloadClient.use_ssl" class="doc doc-heading">
+<code class="highlight language-python">use_ssl: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.DownloadstationUsenetDownloadClient.use_ssl" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Use a secure connection when connecting to the download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.DownloadstationUsenetDownloadClient.username" class="doc doc-heading">
+<code class="highlight language-python">username: NonEmptyStr</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.DownloadstationUsenetDownloadClient.username" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>User name to use when authenticating with the download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.DownloadstationUsenetDownloadClient.password" class="doc doc-heading">
+<code class="highlight language-python">password: Password</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.DownloadstationUsenetDownloadClient.password" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Password to use to authenticate the download client user.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.DownloadstationUsenetDownloadClient.category" class="doc doc-heading">
+<code class="highlight language-python">category: Optional[str] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.DownloadstationUsenetDownloadClient.category" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Associate media from Sonarr with a category.
+Creates a <code>[category]</code> subdirectory in the output directory.</p>
+<p>Adding a category specific to Sonarr avoids conflicts with unrelated non-Sonarr downloads.
+Using a category is optional, but strongly recommended.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.DownloadstationUsenetDownloadClient.directory" class="doc doc-heading">
+<code class="highlight language-python">directory: Optional[str] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.DownloadstationUsenetDownloadClient.directory" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Optional shared folder to put downloads into.</p>
+<p>Leave blank, set to <code>null</code> or undefined to use the default download client location.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="nzbget">NZBGet<a class="headerlink" href="#nzbget" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.download_clients.download_clients.NzbgetDownloadClient"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.plugins.sonarr.config.download_clients.download_clients.UsenetDownloadClient">UsenetDownloadClient</span></code></p>
+
+  
+      <p>NZBGet download client.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.NzbgetDownloadClient.type" class="doc doc-heading">
+<code class="highlight language-python">type: Literal['nzbget'] = 'nzbget'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.NzbgetDownloadClient.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.NzbgetDownloadClient.host" class="doc doc-heading">
+<code class="highlight language-python">host: NonEmptyStr</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.NzbgetDownloadClient.host" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>NZBGet host name.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.NzbgetDownloadClient.port" class="doc doc-heading">
+<code class="highlight language-python">port: Port = 5000</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.NzbgetDownloadClient.port" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Download client access port.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.NzbgetDownloadClient.use_ssl" class="doc doc-heading">
+<code class="highlight language-python">use_ssl: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.NzbgetDownloadClient.use_ssl" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Use a secure connection when connecting to the download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.NzbgetDownloadClient.url_base" class="doc doc-heading">
+<code class="highlight language-python">url_base: Optional[str] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.NzbgetDownloadClient.url_base" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Adds a prefix to the NZBGet url, e.g. <code>http://[host]:[port]/[url_base]/jsonrpc</code>.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.NzbgetDownloadClient.username" class="doc doc-heading">
+<code class="highlight language-python">username: NonEmptyStr</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.NzbgetDownloadClient.username" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>User name to use when authenticating with the download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.NzbgetDownloadClient.password" class="doc doc-heading">
+<code class="highlight language-python">password: Password</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.NzbgetDownloadClient.password" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Password to use to authenticate the download client user.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.NzbgetDownloadClient.category" class="doc doc-heading">
+<code class="highlight language-python">category: Optional[str] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.NzbgetDownloadClient.category" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Associate media from Sonarr with a category.</p>
+<p>Adding a category specific to Sonarr avoids conflicts with unrelated non-Sonarr downloads.
+Using a category is optional, but strongly recommended.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.NzbgetDownloadClient.recent_priority" class="doc doc-heading">
+<code class="highlight language-python">recent_priority: NzbgetPriority = NzbgetPriority.normal</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.NzbgetDownloadClient.recent_priority" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Priority to use when grabbing episodes that aired within the last 14 days.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.NzbgetDownloadClient.older_priority" class="doc doc-heading">
+<code class="highlight language-python">older_priority: NzbgetPriority = NzbgetPriority.normal</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.NzbgetDownloadClient.older_priority" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Priority to use when grabbing episodes that aired over 14 days ago.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.NzbgetDownloadClient.add_paused" class="doc doc-heading">
+<code class="highlight language-python">add_paused: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.NzbgetDownloadClient.add_paused" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Add media to the download client in the paused state.</p>
+<p>This option requires NZBGet version 16.0 or later.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="nzbvortex">NZBVortex<a class="headerlink" href="#nzbvortex" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.download_clients.download_clients.NzbvortexDownloadClient"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.plugins.sonarr.config.download_clients.download_clients.UsenetDownloadClient">UsenetDownloadClient</span></code></p>
+
+  
+      <p>NZBVortex download client.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.NzbvortexDownloadClient.type" class="doc doc-heading">
+<code class="highlight language-python">type: Literal['nzbvortex'] = 'nzbvortex'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.NzbvortexDownloadClient.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.NzbvortexDownloadClient.host" class="doc doc-heading">
+<code class="highlight language-python">host: NonEmptyStr</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.NzbvortexDownloadClient.host" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>NZBVortex host name.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.NzbvortexDownloadClient.port" class="doc doc-heading">
+<code class="highlight language-python">port: Port = 4321</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.NzbvortexDownloadClient.port" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Download client access port.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.NzbvortexDownloadClient.use_ssl" class="doc doc-heading">
+<code class="highlight language-python">use_ssl: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.NzbvortexDownloadClient.use_ssl" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Use a secure connection when connecting to the download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.NzbvortexDownloadClient.url_base" class="doc doc-heading">
+<code class="highlight language-python">url_base: Optional[str] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.NzbvortexDownloadClient.url_base" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Adds a prefix to the NZBVortex url, e.g. <code>http://[host]:[port]/[url_base]/api</code>.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.NzbvortexDownloadClient.api_key" class="doc doc-heading">
+<code class="highlight language-python">api_key: Password</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.NzbvortexDownloadClient.api_key" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>API key to use to authenticate with the download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.NzbvortexDownloadClient.category" class="doc doc-heading">
+<code class="highlight language-python">category: Optional[str] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.NzbvortexDownloadClient.category" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Associate media from Sonarr with a category.</p>
+<p>Adding a category specific to Sonarr avoids conflicts with unrelated non-Sonarr downloads.
+Using a category is optional, but strongly recommended.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.NzbvortexDownloadClient.recent_priority" class="doc doc-heading">
+<code class="highlight language-python">recent_priority: NzbvortexPriority = NzbvortexPriority.normal</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.NzbvortexDownloadClient.recent_priority" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Priority to use when grabbing episodes that aired within the last 14 days.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.NzbvortexDownloadClient.older_priority" class="doc doc-heading">
+<code class="highlight language-python">older_priority: NzbvortexPriority = NzbvortexPriority.normal</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.NzbvortexDownloadClient.older_priority" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Priority to use when grabbing episodes that aired over 14 days ago.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="pneumatic">Pneumatic<a class="headerlink" href="#pneumatic" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.download_clients.download_clients.PneumaticDownloadClient"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.plugins.sonarr.config.download_clients.download_clients.UsenetDownloadClient">UsenetDownloadClient</span></code></p>
+
+  
+      <p>Download client for the Pneumatic NZB add-on for Kodi/XMBC.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.PneumaticDownloadClient.type" class="doc doc-heading">
+<code class="highlight language-python">type: Literal['pneumatic'] = 'pneumatic'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.PneumaticDownloadClient.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.PneumaticDownloadClient.nzb_folder" class="doc doc-heading">
+<code class="highlight language-python">nzb_folder: NonEmptyStr</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.PneumaticDownloadClient.nzb_folder" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Folder in which Sonarr will store <code>.nzb</code> files.</p>
+<p>This folder will need to be reachable from Kodi/XMBC.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.PneumaticDownloadClient.strm_folder" class="doc doc-heading">
+<code class="highlight language-python">strm_folder: NonEmptyStr</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.PneumaticDownloadClient.strm_folder" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Folder from which <code>.strm</code> files will be imported by Drone.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="sabnzbd">SABnzbd<a class="headerlink" href="#sabnzbd" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.download_clients.download_clients.SabnzbdDownloadClient"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.plugins.sonarr.config.download_clients.download_clients.UsenetDownloadClient">UsenetDownloadClient</span></code></p>
+
+  
+      <p>SABnzbd download client.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.SabnzbdDownloadClient.type" class="doc doc-heading">
+<code class="highlight language-python">type: Literal['sabnzbd'] = 'sabnzbd'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.SabnzbdDownloadClient.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.SabnzbdDownloadClient.host" class="doc doc-heading">
+<code class="highlight language-python">host: NonEmptyStr</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.SabnzbdDownloadClient.host" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>SABnzbd host name.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.SabnzbdDownloadClient.port" class="doc doc-heading">
+<code class="highlight language-python">port: Port = 4321</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.SabnzbdDownloadClient.port" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Download client access port.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.SabnzbdDownloadClient.use_ssl" class="doc doc-heading">
+<code class="highlight language-python">use_ssl: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.SabnzbdDownloadClient.use_ssl" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Use a secure connection when connecting to the download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.SabnzbdDownloadClient.url_base" class="doc doc-heading">
+<code class="highlight language-python">url_base: Optional[str] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.SabnzbdDownloadClient.url_base" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Adds a prefix to the SABnzbd URL, e.g. <code>http://[host]:[port]/[url_base]/api/</code>.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.SabnzbdDownloadClient.api_key" class="doc doc-heading">
+<code class="highlight language-python">api_key: Password</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.SabnzbdDownloadClient.api_key" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>API key to use to authenticate with the download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.SabnzbdDownloadClient.category" class="doc doc-heading">
+<code class="highlight language-python">category: Optional[str] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.SabnzbdDownloadClient.category" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Associate media from Sonarr with a category.</p>
+<p>Adding a category specific to Sonarr avoids conflicts with unrelated non-Sonarr downloads.
+Using a category is optional, but strongly recommended.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.SabnzbdDownloadClient.recent_priority" class="doc doc-heading">
+<code class="highlight language-python">recent_priority: SabnzbdPriority = SabnzbdPriority.default</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.SabnzbdDownloadClient.recent_priority" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Priority to use when grabbing episodes that aired within the last 14 days.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.SabnzbdDownloadClient.older_priority" class="doc doc-heading">
+<code class="highlight language-python">older_priority: SabnzbdPriority = SabnzbdPriority.default</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.SabnzbdDownloadClient.older_priority" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Priority to use when grabbing episodes that aired over 14 days ago.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="usenet-blackhole">Usenet Blackhole<a class="headerlink" href="#usenet-blackhole" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.download_clients.download_clients.UsenetBlackholeDownloadClient"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.plugins.sonarr.config.download_clients.download_clients.UsenetDownloadClient">UsenetDownloadClient</span></code></p>
+
+  
+      <p>Usenet Blackhole download client.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.UsenetBlackholeDownloadClient.type" class="doc doc-heading">
+<code class="highlight language-python">type: Literal['usenet-blackhole'] = 'usenet-blackhole'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.UsenetBlackholeDownloadClient.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.UsenetBlackholeDownloadClient.nzb_folder" class="doc doc-heading">
+<code class="highlight language-python">nzb_folder: NonEmptyStr</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.UsenetBlackholeDownloadClient.nzb_folder" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Folder in which Sonarr will store <code>.nzb</code> files.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.UsenetBlackholeDownloadClient.watch_folder" class="doc doc-heading">
+<code class="highlight language-python">watch_folder: NonEmptyStr</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.UsenetBlackholeDownloadClient.watch_folder" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Folder from which Sonarr should import completed downloads.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="torrent-download-clients">Torrent download clients<a class="headerlink" href="#torrent-download-clients" title="Permanent link">#</a></h2>
+<p>These download clients use the <a href="https://en.wikipedia.org/wiki/BitTorrent">BitTorrent</a>
+peer-to-peer file sharing protocol to retrieve media files.</p>
+<h2 id="aria2">Aria2<a class="headerlink" href="#aria2" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.download_clients.download_clients.Aria2DownloadClient"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.plugins.sonarr.config.download_clients.download_clients.TorrentDownloadClient">TorrentDownloadClient</span></code></p>
+
+  
+      <p>Aria2 download client.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.Aria2DownloadClient.type" class="doc doc-heading">
+<code class="highlight language-python">type: Literal['aria2'] = 'aria2'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.Aria2DownloadClient.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.Aria2DownloadClient.host" class="doc doc-heading">
+<code class="highlight language-python">host: NonEmptyStr</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.Aria2DownloadClient.host" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Aria2 host name.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.Aria2DownloadClient.port" class="doc doc-heading">
+<code class="highlight language-python">port: Port = 6800</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.Aria2DownloadClient.port" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Download client access port.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.Aria2DownloadClient.use_ssl" class="doc doc-heading">
+<code class="highlight language-python">use_ssl: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.Aria2DownloadClient.use_ssl" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Use a secure connection when connecting to the download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.Aria2DownloadClient.rpc_path" class="doc doc-heading">
+<code class="highlight language-python">rpc_path: NonEmptyStr = '/rpc'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.Aria2DownloadClient.rpc_path" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>XML RPC path in the Aria2 client URL.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.Aria2DownloadClient.secret_token" class="doc doc-heading">
+<code class="highlight language-python">secret_token: Password</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.Aria2DownloadClient.secret_token" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Secret token to use to authenticate with the download client.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="deluge">Deluge<a class="headerlink" href="#deluge" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.download_clients.download_clients.DelugeDownloadClient"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.plugins.sonarr.config.download_clients.download_clients.TorrentDownloadClient">TorrentDownloadClient</span></code></p>
+
+  
+      <p>Deluge download client.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.DelugeDownloadClient.type" class="doc doc-heading">
+<code class="highlight language-python">type: Literal['deluge'] = 'deluge'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.DelugeDownloadClient.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.DelugeDownloadClient.host" class="doc doc-heading">
+<code class="highlight language-python">host: NonEmptyStr</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.DelugeDownloadClient.host" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Deluge host name.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.DelugeDownloadClient.port" class="doc doc-heading">
+<code class="highlight language-python">port: Port = 8112</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.DelugeDownloadClient.port" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Download client access port.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.DelugeDownloadClient.use_ssl" class="doc doc-heading">
+<code class="highlight language-python">use_ssl: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.DelugeDownloadClient.use_ssl" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Use a secure connection when connecting to the download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.DelugeDownloadClient.url_base" class="doc doc-heading">
+<code class="highlight language-python">url_base: Optional[str] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.DelugeDownloadClient.url_base" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Adds a prefix to the Deluge JSON URL, e.g. <code>http://[host]:[port]/[url_base]/json</code>.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.DelugeDownloadClient.password" class="doc doc-heading">
+<code class="highlight language-python">password: Password</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.DelugeDownloadClient.password" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Password to use to authenticate the download client user.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.DelugeDownloadClient.category" class="doc doc-heading">
+<code class="highlight language-python">category: Optional[str] = 'tv-sonarr'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.DelugeDownloadClient.category" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Associate media from Sonarr with a category.</p>
+<p>Adding a category specific to Sonarr avoids conflicts with unrelated non-Sonarr downloads.
+Using a category is optional, but strongly recommended.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.DelugeDownloadClient.postimport_category" class="doc doc-heading">
+<code class="highlight language-python">postimport_category: Optional[str] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.DelugeDownloadClient.postimport_category" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Category for Sonarr to set after it has imported the download.</p>
+<p>Sonarr will not remove torrents in that category even if seeding has finished.
+Leave blank, set to <code>null</code> or undefined to keep the same category.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.DelugeDownloadClient.recent_priority" class="doc doc-heading">
+<code class="highlight language-python">recent_priority: DelugePriority = DelugePriority.last</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.DelugeDownloadClient.recent_priority" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Priority to use when grabbing episodes that aired within the last 14 days.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.DelugeDownloadClient.older_priority" class="doc doc-heading">
+<code class="highlight language-python">older_priority: DelugePriority = DelugePriority.last</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.DelugeDownloadClient.older_priority" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Priority to use when grabbing episodes that aired over 14 days ago.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="download-station_1">Download Station<a class="headerlink" href="#download-station_1" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.download_clients.download_clients.DownloadstationTorrentDownloadClient"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.plugins.sonarr.config.download_clients.download_clients.TorrentDownloadClient">TorrentDownloadClient</span></code></p>
+
+  
+      <p>Download client which uses torrents via Download Station.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.DownloadstationTorrentDownloadClient.type" class="doc doc-heading">
+<code class="highlight language-python">type: Literal['downloadstation-torrent'] = 'downloadstation-torrent'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.DownloadstationTorrentDownloadClient.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.DownloadstationTorrentDownloadClient.host" class="doc doc-heading">
+<code class="highlight language-python">host: NonEmptyStr</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.DownloadstationTorrentDownloadClient.host" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Download Station host name.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.DownloadstationTorrentDownloadClient.port" class="doc doc-heading">
+<code class="highlight language-python">port: Port = 5000</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.DownloadstationTorrentDownloadClient.port" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Download client access port.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.DownloadstationTorrentDownloadClient.use_ssl" class="doc doc-heading">
+<code class="highlight language-python">use_ssl: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.DownloadstationTorrentDownloadClient.use_ssl" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Use a secure connection when connecting to the download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.DownloadstationTorrentDownloadClient.username" class="doc doc-heading">
+<code class="highlight language-python">username: NonEmptyStr</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.DownloadstationTorrentDownloadClient.username" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>User name to use when authenticating with the download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.DownloadstationTorrentDownloadClient.password" class="doc doc-heading">
+<code class="highlight language-python">password: Password</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.DownloadstationTorrentDownloadClient.password" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Password to use to authenticate the download client user.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.DownloadstationTorrentDownloadClient.category" class="doc doc-heading">
+<code class="highlight language-python">category: Optional[str] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.DownloadstationTorrentDownloadClient.category" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Associate media from Sonarr with a category.
+Creates a <code>[category]</code> subdirectory in the output directory.</p>
+<p>Adding a category specific to Sonarr avoids conflicts with unrelated non-Sonarr downloads.
+Using a category is optional, but strongly recommended.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.DownloadstationTorrentDownloadClient.directory" class="doc doc-heading">
+<code class="highlight language-python">directory: Optional[str] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.DownloadstationTorrentDownloadClient.directory" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Optional shared folder to put downloads into.</p>
+<p>Leave blank, set to <code>null</code> or undefined to use the default download client location.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="flood">Flood<a class="headerlink" href="#flood" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.download_clients.download_clients.FloodDownloadClient"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.plugins.sonarr.config.download_clients.download_clients.TorrentDownloadClient">TorrentDownloadClient</span></code></p>
+
+  
+      <p>Flood download client.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.FloodDownloadClient.type" class="doc doc-heading">
+<code class="highlight language-python">type: Literal['flood'] = 'flood'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.FloodDownloadClient.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.FloodDownloadClient.host" class="doc doc-heading">
+<code class="highlight language-python">host: NonEmptyStr</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.FloodDownloadClient.host" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Flood host name.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.FloodDownloadClient.port" class="doc doc-heading">
+<code class="highlight language-python">port: Port = 3000</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.FloodDownloadClient.port" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Download client access port.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.FloodDownloadClient.use_ssl" class="doc doc-heading">
+<code class="highlight language-python">use_ssl: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.FloodDownloadClient.use_ssl" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Use a secure connection when connecting to the download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.FloodDownloadClient.url_base" class="doc doc-heading">
+<code class="highlight language-python">url_base: Optional[str] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.FloodDownloadClient.url_base" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Optionally adds a prefix to Flood API, such as <code>[protocol]://[host]:[port]/[url_base]api</code>.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.FloodDownloadClient.username" class="doc doc-heading">
+<code class="highlight language-python">username: NonEmptyStr</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.FloodDownloadClient.username" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>User name to use when authenticating with the download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.FloodDownloadClient.password" class="doc doc-heading">
+<code class="highlight language-python">password: Password</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.FloodDownloadClient.password" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Password to use to authenticate the download client user.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.FloodDownloadClient.destination" class="doc doc-heading">
+<code class="highlight language-python">destination: Optional[str] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.FloodDownloadClient.destination" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Manually specified download destination.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.FloodDownloadClient.flood_tags" class="doc doc-heading">
+<code class="highlight language-python">flood_tags: Set[NonEmptyStr] = {'sonarr'}</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.FloodDownloadClient.flood_tags" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Initial tags of a download within Flood.</p>
+<p>To be recognized, a download must have all initial tags.
+This avoids conflicts with unrelated downloads.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.FloodDownloadClient.postimport_tags" class="doc doc-heading">
+<code class="highlight language-python">postimport_tags: Set[NonEmptyStr] = set()</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.FloodDownloadClient.postimport_tags" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Tags to append within Flood after a download has been imported into Sonarr.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.FloodDownloadClient.additional_tags" class="doc doc-heading">
+<code class="highlight language-python">additional_tags: Set[FloodMediaTag] = set()</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.FloodDownloadClient.additional_tags" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Adds properties of media as tags within Flood.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.FloodDownloadClient.start_on_add" class="doc doc-heading">
+<code class="highlight language-python">start_on_add: bool = True</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.FloodDownloadClient.start_on_add" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Immediately start download once the media has been added to the client.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="hadouken">Hadouken<a class="headerlink" href="#hadouken" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.download_clients.download_clients.HadoukenDownloadClient"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.plugins.sonarr.config.download_clients.download_clients.TorrentDownloadClient">TorrentDownloadClient</span></code></p>
+
+  
+      <p>Hadouken download client.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.HadoukenDownloadClient.type" class="doc doc-heading">
+<code class="highlight language-python">type: Literal['hadouken'] = 'hadouken'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.HadoukenDownloadClient.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.HadoukenDownloadClient.host" class="doc doc-heading">
+<code class="highlight language-python">host: NonEmptyStr</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.HadoukenDownloadClient.host" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Hadouken host name.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.HadoukenDownloadClient.port" class="doc doc-heading">
+<code class="highlight language-python">port: Port = 7070</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.HadoukenDownloadClient.port" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Download client access port.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.HadoukenDownloadClient.use_ssl" class="doc doc-heading">
+<code class="highlight language-python">use_ssl: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.HadoukenDownloadClient.use_ssl" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Use a secure connection when connecting to the download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.HadoukenDownloadClient.url_base" class="doc doc-heading">
+<code class="highlight language-python">url_base: Optional[str] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.HadoukenDownloadClient.url_base" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Adds a prefix to the Hadouken url, e.g. <code>http://[host]:[port]/[url_base]/api</code>.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.HadoukenDownloadClient.username" class="doc doc-heading">
+<code class="highlight language-python">username: NonEmptyStr</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.HadoukenDownloadClient.username" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>User name to use when authenticating with the download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.HadoukenDownloadClient.password" class="doc doc-heading">
+<code class="highlight language-python">password: Password</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.HadoukenDownloadClient.password" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Password to use to authenticate the download client user.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.HadoukenDownloadClient.category" class="doc doc-heading">
+<code class="highlight language-python">category: NonEmptyStr = 'sonarr-tv'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.HadoukenDownloadClient.category" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Associate media from Sonarr with a category.</p>
+<p>Adding a category specific to Sonarr avoids conflicts with unrelated non-Sonarr downloads.
+Using a category is optional, but strongly recommended.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="qbittorrent">qBittorrent<a class="headerlink" href="#qbittorrent" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.download_clients.download_clients.QbittorrentDownloadClient"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.plugins.sonarr.config.download_clients.download_clients.TorrentDownloadClient">TorrentDownloadClient</span></code></p>
+
+  
+      <p>qBittorrent download client.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.type" class="doc doc-heading">
+<code class="highlight language-python">type: Literal['qbittorrent'] = 'qbittorrent'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.host" class="doc doc-heading">
+<code class="highlight language-python">host: NonEmptyStr</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.host" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>qBittorrent host name.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.port" class="doc doc-heading">
+<code class="highlight language-python">port: Port = 8080</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.port" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Download client access port.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.use_ssl" class="doc doc-heading">
+<code class="highlight language-python">use_ssl: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.use_ssl" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Use a secure connection when connecting to the download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.url_base" class="doc doc-heading">
+<code class="highlight language-python">url_base: Optional[str] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.url_base" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Adds a prefix to the qBittorrent URL, e.g. <code>http://[host]:[port]/[url_base]/api</code>.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.username" class="doc doc-heading">
+<code class="highlight language-python">username: NonEmptyStr</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.username" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>User name to use when authenticating with the download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.password" class="doc doc-heading">
+<code class="highlight language-python">password: Password</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.password" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Password to use to authenticate the download client user.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.category" class="doc doc-heading">
+<code class="highlight language-python">category: Optional[str] = 'tv-sonarr'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.category" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Associate media from Sonarr with a category.</p>
+<p>Adding a category specific to Sonarr avoids conflicts with unrelated non-Sonarr downloads.
+Using a category is optional, but strongly recommended.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.postimport_category" class="doc doc-heading">
+<code class="highlight language-python">postimport_category: Optional[str] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.postimport_category" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Category for Sonarr to set after it has imported the download.</p>
+<p>Sonarr will not remove torrents in that category even if seeding has finished.
+Leave blank, set to <code>null</code> or undefined to keep the same category.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.recent_priority" class="doc doc-heading">
+<code class="highlight language-python">recent_priority: QbittorrentPriority = QbittorrentPriority.last</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.recent_priority" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Priority to use when grabbing episodes that aired within the last 14 days.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.older_priority" class="doc doc-heading">
+<code class="highlight language-python">older_priority: QbittorrentPriority = QbittorrentPriority.last</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.older_priority" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Priority to use when grabbing episodes that aired over 14 days ago.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.initial_state" class="doc doc-heading">
+<code class="highlight language-python">initial_state: QbittorrentState = QbittorrentState.start</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.initial_state" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Initial state for torrents added to qBittorrent.</p>
+<p>Note that forced torrents do not abide by seed restrictions.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.sequential_order" class="doc doc-heading">
+<code class="highlight language-python">sequential_order: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.sequential_order" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Download files in sequential order.</p>
+<p>This option requires qBittorrent version 4.1.0 or later.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.first_and_last_first" class="doc doc-heading">
+<code class="highlight language-python">first_and_last_first: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.first_and_last_first" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Download first and last pieces of a file first.</p>
+<p>This option requires qBittorrent version 4.1.0 or later.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="rtorrent-rutorrent">RTorrent (ruTorrent)<a class="headerlink" href="#rtorrent-rutorrent" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.download_clients.download_clients.RtorrentDownloadClient"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.plugins.sonarr.config.download_clients.download_clients.TorrentDownloadClient">TorrentDownloadClient</span></code></p>
+
+  
+      <p>RTorrent (ruTorrent) download client.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.RtorrentDownloadClient.type" class="doc doc-heading">
+<code class="highlight language-python">type: Literal['rtorrent', 'rutorrent'] = 'rtorrent'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.RtorrentDownloadClient.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.RtorrentDownloadClient.host" class="doc doc-heading">
+<code class="highlight language-python">host: NonEmptyStr</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.RtorrentDownloadClient.host" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>RTorrent host name.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.RtorrentDownloadClient.port" class="doc doc-heading">
+<code class="highlight language-python">port: Port = 8080</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.RtorrentDownloadClient.port" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Download client access port.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.RtorrentDownloadClient.use_ssl" class="doc doc-heading">
+<code class="highlight language-python">use_ssl: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.RtorrentDownloadClient.use_ssl" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Use a secure connection when connecting to the download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.RtorrentDownloadClient.url_base" class="doc doc-heading">
+<code class="highlight language-python">url_base: NonEmptyStr = 'RPC2'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.RtorrentDownloadClient.url_base" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Path to the XMLRPC endpoint, e.g. <code>http(s)://[host]:[port]/[url_base]</code>.</p>
+<p>When using RTorrent this usually is <code>RPC2</code> or <code>plugins/rpc/rpc.php</code>.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.RtorrentDownloadClient.username" class="doc doc-heading">
+<code class="highlight language-python">username: NonEmptyStr</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.RtorrentDownloadClient.username" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>User name to use when authenticating with the download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.RtorrentDownloadClient.password" class="doc doc-heading">
+<code class="highlight language-python">password: Password</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.RtorrentDownloadClient.password" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Password to use to authenticate the download client user.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.RtorrentDownloadClient.category" class="doc doc-heading">
+<code class="highlight language-python">category: Optional[str] = 'tv-sonarr'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.RtorrentDownloadClient.category" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Associate media from Sonarr with a category.</p>
+<p>Adding a category specific to Sonarr avoids conflicts with unrelated non-Sonarr downloads.
+Using a category is optional, but strongly recommended.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.RtorrentDownloadClient.postimport_category" class="doc doc-heading">
+<code class="highlight language-python">postimport_category: Optional[str] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.RtorrentDownloadClient.postimport_category" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Category for Sonarr to set after it has imported the download.</p>
+<p>Sonarr will not remove torrents in that category even if seeding has finished.
+Leave blank, set to <code>null</code> or undefined to keep the same category.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.RtorrentDownloadClient.recent_priority" class="doc doc-heading">
+<code class="highlight language-python">recent_priority: RtorrentPriority = RtorrentPriority.normal</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.RtorrentDownloadClient.recent_priority" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Priority to use when grabbing episodes that aired within the last 14 days.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.RtorrentDownloadClient.older_priority" class="doc doc-heading">
+<code class="highlight language-python">older_priority: RtorrentPriority = RtorrentPriority.normal</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.RtorrentDownloadClient.older_priority" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Priority to use when grabbing episodes that aired over 14 days ago.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.RtorrentDownloadClient.add_stopped" class="doc doc-heading">
+<code class="highlight language-python">add_stopped: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.RtorrentDownloadClient.add_stopped" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Enabling will add torrents and magnets to RTorrent in a stopped state.</p>
+<p>This may break magnet files.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="torrent-blackhole">Torrent Blackhole<a class="headerlink" href="#torrent-blackhole" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.download_clients.download_clients.TorrentBlackholeDownloadClient"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.plugins.sonarr.config.download_clients.download_clients.TorrentDownloadClient">TorrentDownloadClient</span></code></p>
+
+  
+      <p>Torrent Blackhole download client.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.TorrentBlackholeDownloadClient.type" class="doc doc-heading">
+<code class="highlight language-python">type: Literal['torrent-blackhole'] = 'torrent-blackhole'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.TorrentBlackholeDownloadClient.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.TorrentBlackholeDownloadClient.torrent_folder" class="doc doc-heading">
+<code class="highlight language-python">torrent_folder: NonEmptyStr</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.TorrentBlackholeDownloadClient.torrent_folder" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Folder in which Sonarr will store <code>.torrent</code> files.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.TorrentBlackholeDownloadClient.watch_folder" class="doc doc-heading">
+<code class="highlight language-python">watch_folder: NonEmptyStr</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.TorrentBlackholeDownloadClient.watch_folder" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Folder from which Sonarr should import completed downloads.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.TorrentBlackholeDownloadClient.save_magnet_files" class="doc doc-heading">
+<code class="highlight language-python">save_magnet_files: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.TorrentBlackholeDownloadClient.save_magnet_files" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Save the magnet link if no <code>.torrent</code> file is available.</p>
+<p>Only useful if the download client supports magnets saved to a file.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.TorrentBlackholeDownloadClient.magnet_file_extension" class="doc doc-heading">
+<code class="highlight language-python">magnet_file_extension: NonEmptyStr = '.magnet'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.TorrentBlackholeDownloadClient.magnet_file_extension" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Extension to use for magnet links.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.TorrentBlackholeDownloadClient.read_only" class="doc doc-heading">
+<code class="highlight language-python">read_only: bool = True</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.TorrentBlackholeDownloadClient.read_only" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Instead of moving files, this will instruct Sonarr to copy or hard link
+(depending on settings/system configuration).</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="transmissionvuze">Transmission/Vuze<a class="headerlink" href="#transmissionvuze" title="Permanent link">#</a></h2>
+<p>Transmission and Vuze use the same configuration parameters.</p>
+<p>To use Transmission, set the <code>type</code> attribute in the download client to <code>transmission</code>.</p>
+<p>To use Vuze, set the <code>type</code> attribute in the download client to <code>vuze</code>.</p>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.download_clients.download_clients.TransmissionDownloadClientBase"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.plugins.sonarr.config.download_clients.download_clients.TorrentDownloadClient">TorrentDownloadClient</span></code></p>
+
+  
+      <p>Configuration options common to both Transmission and Vuze download clients:</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.TransmissionDownloadClientBase.host" class="doc doc-heading">
+<code class="highlight language-python">host: NonEmptyStr</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.TransmissionDownloadClientBase.host" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Transmission/Vuze host name.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.TransmissionDownloadClientBase.port" class="doc doc-heading">
+<code class="highlight language-python">port: Port = 9091</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.TransmissionDownloadClientBase.port" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Download client access port.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.TransmissionDownloadClientBase.use_ssl" class="doc doc-heading">
+<code class="highlight language-python">use_ssl: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.TransmissionDownloadClientBase.use_ssl" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Use a secure connection when connecting to the download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.TransmissionDownloadClientBase.url_base" class="doc doc-heading">
+<code class="highlight language-python">url_base: NonEmptyStr = '/transmission/'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.TransmissionDownloadClientBase.url_base" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Adds a prefix to the Transmission/Vuze RPC url, e.g.<code>http://[host]:[port][url_base]rpc</code>.</p>
+<p>This is set by default in most clients to <code>/transmission/</code>.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.TransmissionDownloadClientBase.username" class="doc doc-heading">
+<code class="highlight language-python">username: Optional[str] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.TransmissionDownloadClientBase.username" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>User name to use when authenticating with the download client, if required.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.TransmissionDownloadClientBase.password" class="doc doc-heading">
+<code class="highlight language-python">password: Optional[Password] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.TransmissionDownloadClientBase.password" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Password to use to authenticate the download client user, if required.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.TransmissionDownloadClientBase.category" class="doc doc-heading">
+<code class="highlight language-python">category: Optional[str] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.TransmissionDownloadClientBase.category" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Associate media from Sonarr with a category.
+Creates a <code>[category]</code> subdirectory in the output directory.</p>
+<p>Adding a category specific to Sonarr avoids conflicts with unrelated non-Sonarr downloads.
+Using a category is optional, but strongly recommended.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.TransmissionDownloadClientBase.directory" class="doc doc-heading">
+<code class="highlight language-python">directory: Optional[str] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.TransmissionDownloadClientBase.directory" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Optional shared folder to put downloads into.</p>
+<p>Leave blank, set to <code>null</code> or undefined to use the default download client location.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.TransmissionDownloadClientBase.recent_priority" class="doc doc-heading">
+<code class="highlight language-python">recent_priority: TransmissionPriority = TransmissionPriority.last</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.TransmissionDownloadClientBase.recent_priority" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Priority to use when grabbing episodes that aired within the last 14 days.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.TransmissionDownloadClientBase.older_priority" class="doc doc-heading">
+<code class="highlight language-python">older_priority: TransmissionPriority = TransmissionPriority.last</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.TransmissionDownloadClientBase.older_priority" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Priority to use when grabbing episodes that aired over 14 days ago.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.TransmissionDownloadClientBase.add_paused" class="doc doc-heading">
+<code class="highlight language-python">add_paused: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.TransmissionDownloadClientBase.add_paused" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Add media to the download client in the Paused state.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="configuring-remote-path-mappings">Configuring remote path mappings<a class="headerlink" href="#configuring-remote-path-mappings" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.download_clients.remote_path_mappings.SonarrRemotePathMappingsSettingsConfig"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.config.ConfigBase">ConfigBase</span></code></p>
+
+  
+      <p>Remote path mappings are used to associate a path on a download client remote host
+with its associated path on the local Sonarr instance.</p>
+<p>The main use case for this is when Sonarr and the download client are not running
+on the same system, or when Docker is used to isolate these services and the
+mountpoints for media locations are not consistent between the containers.</p>
+<pre class="highlight"><code class="language-yaml">sonarr:
+  settings:
+    download_clients:
+      definitions:
+        Transmission:
+          type: "transmission"
+          host: "transmission"
+          port: 9091
+      remote_path_mappings:
+        delete_unmanaged: false # Optional
+        definitions:
+          - host: "transmission"
+            remote_path: "/remote/path"
+            local_path: "/local/path"
+            ensure: "present" # Optional</code></pre>
+<p>Remote path mappings can be difficult to properly configure.
+TRaSH-Guides provides an
+<a href="https://trash-guides.info/Sonarr/Sonarr-remote-path-mapping/">excellent guide</a>
+that explains what they are for, and how to use them.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.remote_path_mappings.SonarrRemotePathMappingsSettingsConfig.delete_unmanaged" class="doc doc-heading">
+<code class="highlight language-python">delete_unmanaged: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.remote_path_mappings.SonarrRemotePathMappingsSettingsConfig.delete_unmanaged" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Automatically delete remote path mappings not configured in Buildarr.</p>
+<p>Deleting existing remote path mappings can cause problems with a running
+Sonarr instance. Think carefully before you enable this option.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.remote_path_mappings.SonarrRemotePathMappingsSettingsConfig.definitions" class="doc doc-heading">
+<code class="highlight language-python">definitions: List[RemotePathMapping] = []</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.remote_path_mappings.SonarrRemotePathMappingsSettingsConfig.definitions" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Remote path mapping definitions.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h3 id="remote-path-mapping-parameters">Remote path mapping parameters<a class="headerlink" href="#remote-path-mapping-parameters" title="Permanent link">#</a></h3>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.download_clients.remote_path_mappings.RemotePathMapping"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.config.ConfigBase">ConfigBase</span></code></p>
+
+  
+      <p>Remote path mapping definitions themselves are relatively simple.</p>
+<p>They can be configured with a desired <code>ensure</code> state, however, which
+Buildarr uses to control whether to create or delete the remote path mapping.
+Ensure this value is set appropriately.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.remote_path_mappings.RemotePathMapping.host" class="doc doc-heading">
+<code class="highlight language-python">host: NonEmptyStr</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.remote_path_mappings.RemotePathMapping.host" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The name of the host, as specified for the remote download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.remote_path_mappings.RemotePathMapping.remote_path" class="doc doc-heading">
+<code class="highlight language-python">remote_path: NonEmptyStr</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.remote_path_mappings.RemotePathMapping.remote_path" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Root path to the directory that the download client accesses.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.remote_path_mappings.RemotePathMapping.local_path" class="doc doc-heading">
+<code class="highlight language-python">local_path: NonEmptyStr</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.remote_path_mappings.RemotePathMapping.local_path" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The path that Sonarr should use to access the remote path locally.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.remote_path_mappings.RemotePathMapping.ensure" class="doc doc-heading">
+<code class="highlight language-python">ensure: Ensure = Ensure.present</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.remote_path_mappings.RemotePathMapping.ensure" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Desired state for this resource.</p>
+<p>If set to <code>present</code>, the resource is created on the remote instance if it does not exist.</p>
+<p>If set to <code>absent</code>, the resource will be destroyed on the remote instance if it exists.
+This takes effect even if the  <code>delete_unmanaged</code> is set to <code>False</code>
+for all remote path mappings.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../js/base.js" defer></script>
+        <script src="../../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../../img/favicon.ico">
+        <title>Media Management - Buildarr</title>
+        <link href="../../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link href="../../../../assets/_mkdocstrings.css" rel="stylesheet">
+
+        <script src="../../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../../..">Buildarr</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../installation/" class="nav-link">Installation</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../configuration/" class="nav-link">Configuration</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Plugins <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../" class="dropdown-item">Introduction</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">buildarr-sonarr</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../" class="dropdown-item">Introduction</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Configuration</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../host/" class="dropdown-item">Host Configuration</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active">Media Management</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Profiles</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../profiles/quality/" class="dropdown-item">Quality Profiles</a>
+</li>
+            
+<li>
+    <a href="../profiles/language/" class="dropdown-item">Language Profiles</a>
+</li>
+            
+<li>
+    <a href="../profiles/delay/" class="dropdown-item">Delay Profiles</a>
+</li>
+            
+<li>
+    <a href="../profiles/release/" class="dropdown-item">Release Profiles</a>
+</li>
+    </ul>
+  </li>
+            
+<li>
+    <a href="../quality/" class="dropdown-item">Quality</a>
+</li>
+            
+<li>
+    <a href="../indexers/" class="dropdown-item">Indexers</a>
+</li>
+            
+<li>
+    <a href="../download-clients/" class="dropdown-item">Download Clients</a>
+</li>
+            
+<li>
+    <a href="../import-lists/" class="dropdown-item">Import Lists</a>
+</li>
+            
+<li>
+    <a href="../connect/" class="dropdown-item">Connect</a>
+</li>
+            
+<li>
+    <a href="../metadata/" class="dropdown-item">Metadata</a>
+</li>
+            
+<li>
+    <a href="../tags/" class="dropdown-item">Tags</a>
+</li>
+            
+<li>
+    <a href="../general/" class="dropdown-item">General</a>
+</li>
+            
+<li>
+    <a href="../ui/" class="dropdown-item">UI</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../usage/" class="nav-link">Usage</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../host/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../profiles/quality/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#media-management" class="nav-link">Media Management</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="media-management">Media Management<a class="headerlink" href="#media-management" title="Permanent link">#</a></h1>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.config.ConfigBase">ConfigBase</span></code></p>
+
+  
+      <p>Naming, file management and root folder configuration.</p>
+<pre class="highlight"><code class="language-yaml">sonarr:
+  settings:
+    media_management:
+      ...</code></pre>
+<p>For more information on how to configure these options correctly,
+refer to these guides from
+<a href="https://wiki.servarr.com/sonarr/settings#media-management">WikiArr</a>
+and <a href="https://trash-guides.info/Sonarr/Sonarr-recommended-naming-scheme">TRaSH-Guides</a>.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.rename_episodes" class="doc doc-heading">
+<code class="highlight language-python">rename_episodes: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.rename_episodes" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Rename imported files to the defined standard format.</p>
+<p>Sonarr will use the existing file name if renaming is disabled.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.replace_illegal_characters" class="doc doc-heading">
+<code class="highlight language-python">replace_illegal_characters: bool = True</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.replace_illegal_characters" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Replace illegal characters within the file name.</p>
+<p>If set to <code>False</code>, Sonarr will remove them instead.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.standard_episode_format" class="doc doc-heading">
+<code class="highlight language-python">standard_episode_format: NonEmptyStr = '{Series TitleYear} - S{season:00}E{episode:00} - {Episode CleanTitle} [{Preferred Words }{Quality Full}]{[MediaInfo VideoDynamicRangeType]}{[Mediainfo AudioCodec}{ Mediainfo AudioChannels]}{MediaInfo AudioLanguages}{[MediaInfo VideoCodec]}{-Release Group}'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.standard_episode_format" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>File renaming format for a standard episode file.</p>
+<p>The default specified here is the current TRaSH-Guides recommended format,
+but it will not be applied to the Sonarr instance unless it is explicitly
+defined in the configuration file.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.daily_episode_format" class="doc doc-heading">
+<code class="highlight language-python">daily_episode_format: NonEmptyStr = '{Series TitleYear} - {Air-Date} - {Episode CleanTitle} [{Preferred Words }{Quality Full}]{[MediaInfo VideoDynamicRangeType]}{[Mediainfo AudioCodec}{ Mediainfo AudioChannels]}{MediaInfo AudioLanguages}{[MediaInfo VideoCodec]}{-Release Group}'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.daily_episode_format" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>File renaming format for a daily episode file.</p>
+<p>The default specified here is the current TRaSH-Guides recommended format,
+but it will not be applied to the Sonarr instance unless it is explicitly
+defined in the configuration file.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.anime_episode_format" class="doc doc-heading">
+<code class="highlight language-python">anime_episode_format: NonEmptyStr = '{Series TitleYear} - S{season:00}E{episode:00} - {absolute:000} - {Episode CleanTitle} [{Preferred Words }{Quality Full}]{[MediaInfo VideoDynamicRangeType]}[{MediaInfo VideoBitDepth}bit]{[MediaInfo VideoCodec]}[{Mediainfo AudioCodec} { Mediainfo AudioChannels}]{MediaInfo AudioLanguages}{-Release Group}'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.anime_episode_format" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>File renaming format for an anime episode file.</p>
+<p>The default specified here is the current TRaSH-Guides recommended format,
+but it will not be applied to the Sonarr instance unless it is explicitly
+defined in the configuration file.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.series_folder_format" class="doc doc-heading">
+<code class="highlight language-python">series_folder_format: NonEmptyStr = '{Series TitleYear}'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.series_folder_format" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Renaming format for a series folder.</p>
+<p>The default specified here is the current TRaSH-Guides recommended format,
+but it will not be applied to the Sonarr instance unless it is explicitly
+defined in the configuration file.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.season_folder_format" class="doc doc-heading">
+<code class="highlight language-python">season_folder_format: NonEmptyStr = 'Season {season:00}'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.season_folder_format" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Renaming format for a season folder of a series.</p>
+<p>The default specified here is the current TRaSH-Guides recommended format,
+but it will not be applied to the Sonarr instance unless it is explicitly
+defined in the configuration file.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.specials_folder_format" class="doc doc-heading">
+<code class="highlight language-python">specials_folder_format: NonEmptyStr = 'Specials'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.specials_folder_format" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Renaming format for a specials folder of a series.</p>
+<p>The default specified here is the current TRaSH-Guides recommended format,
+but it will not be applied to the Sonarr instance unless it is explicitly
+defined in the configuration file.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.multiepisode_style" class="doc doc-heading">
+<code class="highlight language-python">multiepisode_style: MultiEpisodeStyle = MultiEpisodeStyle.range</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.multiepisode_style" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Formatting style for the episode numbers of a multi-episode media file.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.create_empty_series_folders" class="doc doc-heading">
+<code class="highlight language-python">create_empty_series_folders: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.create_empty_series_folders" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Create missing series folders during disk scan.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.delete_empty_folders" class="doc doc-heading">
+<code class="highlight language-python">delete_empty_folders: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.delete_empty_folders" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Delete empty series and season folders during disk scan and when
+episode files are deleted.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.episode_title_required" class="doc doc-heading">
+<code class="highlight language-python">episode_title_required: EpisodeTitleRequired = EpisodeTitleRequired.always</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.episode_title_required" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Prevent importing for up to 48 hours if the episode title
+is in the naming format and the episode title is TBA.</p>
+<p>Values:</p>
+<ul>
+<li><code>always</code></li>
+<li><code>bulk-season-releases</code></li>
+<li><code>never</code></li>
+</ul>
+<pre class="highlight"><code class="language-yaml">sonarr:
+  settings:
+    media_management:
+      episode_title_required: "always"</code></pre>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.skip_free_space_check" class="doc doc-heading">
+<code class="highlight language-python">skip_free_space_check: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.skip_free_space_check" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Skip the free space check for the series root folder.</p>
+<p>Only enable when Sonarr is unable to detect free space from your series root folder.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.minimum_free_space" class="doc doc-heading">
+<code class="highlight language-python">minimum_free_space: int = Field(100, ge=0)</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.minimum_free_space" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Prevent import if it would leave less than the specified
+amount of disk space (in megabytes) available.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.use_hardlinks" class="doc doc-heading">
+<code class="highlight language-python">use_hardlinks: bool = True</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.use_hardlinks" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Use hard links when trying to copy files from torrents that are still being seeded.</p>
+<p>Occasionally, file locks may prevent renaming files that are being seeded.
+You may temporarily disable seeding and use Sonarr's rename function as a work around.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.import_extra_files" class="doc doc-heading">
+<code class="highlight language-python">import_extra_files: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.import_extra_files" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Import matching extra files (subtitles, <code>.nfo</code> file, etc) after importing an episode file.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.unmonitor_deleted_episodes" class="doc doc-heading">
+<code class="highlight language-python">unmonitor_deleted_episodes: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.unmonitor_deleted_episodes" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Episodes deleted from disk are automatically unmonitored in Sonarr.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.propers_and_repacks" class="doc doc-heading">
+<code class="highlight language-python">propers_and_repacks: PropersAndRepacks = PropersAndRepacks.do_not_prefer</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.propers_and_repacks" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Whether or not to automatically upgrade to Propers/Repacks.</p>
+<p>Values:</p>
+<ul>
+<li><code>prefer-and-upgrade</code></li>
+<li><code>do-not-upgrade-automatically</code></li>
+<li><code>do-not-prefer</code></li>
+</ul>
+<pre class="highlight"><code class="language-yaml">sonarr:
+  settings:
+    media_management:
+      propers_and_repacks: "do-not-prefer"</code></pre>
+<p>Use 'Do not Prefer' to sort by preferred word score over propers/repacks.
+Use 'Prefer and Upgrade' for automatic upgrades to propers/repacks.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.analyze_video_files" class="doc doc-heading">
+<code class="highlight language-python">analyze_video_files: bool = True</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.analyze_video_files" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Extract video information such as resolution, runtime and codec information
+from files.</p>
+<p>This requires Sonarr to read parts of the file, which may cause high disk
+or network activity during scans.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.rescan_series_folder_after_refresh" class="doc doc-heading">
+<code class="highlight language-python">rescan_series_folder_after_refresh: RescanSeriesFolderAfterRefresh = RescanSeriesFolderAfterRefresh.always</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.rescan_series_folder_after_refresh" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Rescan the series folder after refreshing the series.</p>
+<p>Values:</p>
+<ul>
+<li><code>always</code></li>
+<li><code>after_manual_refresh</code></li>
+<li><code>never</code></li>
+</ul>
+<pre class="highlight"><code class="language-yaml">sonarr:
+  settings:
+    media_management:
+      rescan_series_folder_after_refresh: "always"</code></pre>
+<p>NOTE: Sonarr will not automatically detect changes to files
+if this option is not set to <code>always</code>.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.change_file_date" class="doc doc-heading">
+<code class="highlight language-python">change_file_date: ChangeFileDate = ChangeFileDate.none</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.change_file_date" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Change file date on import/rescan.</p>
+<p>Values:</p>
+<ul>
+<li><code>none</code></li>
+<li><code>local-air-date</code></li>
+<li><code>utc-air-date</code></li>
+</ul>
+<pre class="highlight"><code class="language-yaml">sonarr:
+  settings:
+    media_management:
+      change_file_date: "none"</code></pre>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.recycling_bin" class="doc doc-heading">
+<code class="highlight language-python">recycling_bin: Optional[NonEmptyStr] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.recycling_bin" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Episode files will go here when deleted instead of being permanently deleted.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.recycling_bin_cleanup" class="doc doc-heading">
+<code class="highlight language-python">recycling_bin_cleanup: int = Field(7, ge=0)</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.recycling_bin_cleanup" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Files in the recycle bin older than the selected number of days
+will be cleaned up automatically.</p>
+<p>Set to 0 to disable automatic cleanup.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.set_permissions" class="doc doc-heading">
+<code class="highlight language-python">set_permissions: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.set_permissions" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Set whether or not <code>chmod</code> should run when files are imported/renamed.</p>
+<p>If you're unsure what this and the <code>chmod</code>/<code>chown</code> series of attributes do,
+do not alter them.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.chmod_folder" class="doc doc-heading">
+<code class="highlight language-python">chmod_folder: ChmodFolder = ChmodFolder.drwxr_xr_x</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.chmod_folder" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Permissions to set on media folders and files during import/rename.
+File permissions are set without execute bits.</p>
+<p>This only works if the user running Sonarr is the owner of the file.
+It's better to ensure the download client sets the permissions properly.</p>
+<p>Values:</p>
+<ul>
+<li><code>drwxr-xr-x</code>/<code>755</code></li>
+<li><code>drwxrwxr-x</code>/<code>775</code></li>
+<li><code>drwxrwx---</code>/<code>770</code></li>
+<li><code>drwxr-x---</code>/<code>750</code></li>
+<li><code>drwxrwxrwx</code>/<code>777</code></li>
+</ul>
+<pre class="highlight"><code class="language-yaml">sonarr:
+  settings:
+    media_management:
+      chmod_folder: "drwxr-xr-x"</code></pre>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.chown_group" class="doc doc-heading">
+<code class="highlight language-python">chown_group: Optional[NonEmptyStr] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.chown_group" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Group name or gid. Use gid for remote file systems.</p>
+<p>This only works if the user running Sonarr is the owner of the file.
+It's better to ensure the download client uses the same group as Sonarr.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.root_folders" class="doc doc-heading">
+<code class="highlight language-python">root_folders: List[NonEmptyStr] = []</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.root_folders" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>This allows you to create a root path for a place to either
+place new imported downloads, or to allow Sonarr to scan existing media.</p>
+<pre class="highlight"><code class="language-yaml">sonarr:
+  settings:
+    media_management:
+      root_folders:
+        - "/path/to/rootfolder"</code></pre>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../js/base.js" defer></script>
+        <script src="../../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

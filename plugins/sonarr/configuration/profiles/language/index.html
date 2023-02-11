@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../../../img/favicon.ico">
+        <title>Language Profiles - Buildarr</title>
+        <link href="../../../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link href="../../../../../assets/_mkdocstrings.css" rel="stylesheet">
+
+        <script src="../../../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../../../..">Buildarr</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../../installation/" class="nav-link">Installation</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../../configuration/" class="nav-link">Configuration</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Plugins <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../../" class="dropdown-item">Introduction</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">buildarr-sonarr</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../" class="dropdown-item">Introduction</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Configuration</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../host/" class="dropdown-item">Host Configuration</a>
+</li>
+            
+<li>
+    <a href="../../media-management/" class="dropdown-item">Media Management</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Profiles</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../quality/" class="dropdown-item">Quality Profiles</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active">Language Profiles</a>
+</li>
+            
+<li>
+    <a href="../delay/" class="dropdown-item">Delay Profiles</a>
+</li>
+            
+<li>
+    <a href="../release/" class="dropdown-item">Release Profiles</a>
+</li>
+    </ul>
+  </li>
+            
+<li>
+    <a href="../../quality/" class="dropdown-item">Quality</a>
+</li>
+            
+<li>
+    <a href="../../indexers/" class="dropdown-item">Indexers</a>
+</li>
+            
+<li>
+    <a href="../../download-clients/" class="dropdown-item">Download Clients</a>
+</li>
+            
+<li>
+    <a href="../../import-lists/" class="dropdown-item">Import Lists</a>
+</li>
+            
+<li>
+    <a href="../../connect/" class="dropdown-item">Connect</a>
+</li>
+            
+<li>
+    <a href="../../metadata/" class="dropdown-item">Metadata</a>
+</li>
+            
+<li>
+    <a href="../../tags/" class="dropdown-item">Tags</a>
+</li>
+            
+<li>
+    <a href="../../general/" class="dropdown-item">General</a>
+</li>
+            
+<li>
+    <a href="../../ui/" class="dropdown-item">UI</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../../usage/" class="nav-link">Usage</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../quality/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../delay/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#language-profiles" class="nav-link">Language Profiles</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#general-configuration" class="nav-link">General configuration</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#creating-a-language-profile" class="nav-link">Creating a language profile</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#available-languages" class="nav-link">Available languages</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="language-profiles">Language Profiles<a class="headerlink" href="#language-profiles" title="Permanent link">#</a></h1>
+<p>Language profiles define preferred audio languages for media files, and tell Sonarr how media files should be upgraded if a more preferred language version becomes available.</p>
+<pre class="highlight"><code class="language-yaml">sonarr:
+  settings:
+    profiles:
+      language_profiles:
+        # Set to `true` or `false` as desired. (Default `false`)
+        delete_unmanaged: true
+        definitions:
+          # Add language profiles here.
+          # The name of the block becomes the name of the quality profile.
+          Anime:
+            upgrades_allowed: true
+            upgrade_until: "Japanese"
+            # Highest priority quality first, lowest priority goes last.
+            qualities:
+              - "Japanese"
+              - "English"
+          # Add additional language profiles here as needed.</code></pre>
+<p>In Buildarr, language profiles are defined using a dictonary structure. The languages listed in the <code>languages</code> attribute are enabled, and prioritised from first to last (top to bottom). Languages not in this list are not selected for download.</p>
+<p>For more information, see this guide from <a href="https://wiki.servarr.com/sonarr/settings#language-profiles">WikiArr</a>.</p>
+<h2 id="general-configuration">General configuration<a class="headerlink" href="#general-configuration" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.profiles.language.SonarrLanguageProfilesSettingsConfig"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.config.ConfigBase">ConfigBase</span></code></p>
+
+  
+      <p>Configuration parameters for controlling how Buildarr handles language profiles.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.profiles.language.SonarrLanguageProfilesSettingsConfig.delete_unmanaged" class="doc doc-heading">
+<code class="highlight language-python">delete_unmanaged = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.profiles.language.SonarrLanguageProfilesSettingsConfig.delete_unmanaged" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Automatically delete language profiles not defined in Buildarr.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.profiles.language.SonarrLanguageProfilesSettingsConfig.definitions" class="doc doc-heading">
+<code class="highlight language-python">definitions: Dict[str, LanguageProfile] = {}</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.profiles.language.SonarrLanguageProfilesSettingsConfig.definitions" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Define language profiles to configure on Sonarr here.</p>
+<p>If there are no language profiles defined and <code>delete_unmanaged</code> is <code>False</code>,
+Buildarr will not modify existing language profiles, but if <code>delete_unmanaged</code> is <code>True</code>,
+<strong>Buildarr will delete all existing profiles. Be careful when using <code>delete_unmanaged</code>.</strong></p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="creating-a-language-profile">Creating a language profile<a class="headerlink" href="#creating-a-language-profile" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.profiles.language.LanguageProfile"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.config.ConfigBase">ConfigBase</span></code></p>
+
+  
+      <p>A language profile is defined under the <code>language_profiles</code> block as shown below.</p>
+<pre class="highlight"><code class="language-yaml">...
+  language_profiles:
+    definitions:
+      Anime: # Name of the language profile
+        upgrades_allowed: true
+        upgrade_until: "Japanese" # Required if upgrades are allowed
+        qualities: # Required
+          - "Japanese"
+          - "English"</code></pre>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.profiles.language.LanguageProfile.upgrades_allowed" class="doc doc-heading">
+<code class="highlight language-python">upgrades_allowed = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.profiles.language.LanguageProfile.upgrades_allowed" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Enable automatic upgrading if a version of a media file
+in a more preferred language becomes available.</p>
+<p>If disabled, languages will not be upgraded.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.profiles.language.LanguageProfile.upgrade_until" class="doc doc-heading">
+<code class="highlight language-python">upgrade_until: Optional[Language] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.profiles.language.LanguageProfile.upgrade_until" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The highest priority language to upgrade an episode to.
+Usually this would be set to the highest priority language in the profile.</p>
+<p>This attribute is required if <code>upgrades_allowed</code> is set to <code>True</code>.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.profiles.language.LanguageProfile.languages" class="doc doc-heading">
+<code class="highlight language-python">languages: Annotated[List[Language], Field(min_items=1)]</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.profiles.language.LanguageProfile.languages" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The languages episodes are allowed to be in.
+The order of the list determines priority (highest priority first, lowest priority last).</p>
+<p>Use the name of the language in English (e.g. <code>Japanese</code>, not <code>Nihongo</code> or <code>日本語</code>).</p>
+<pre class="highlight"><code class="language-yaml">...
+  languages:
+    - "Japanese"
+    - "English"</code></pre>
+<p>At least one language must be specified.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="available-languages">Available languages<a class="headerlink" href="#available-languages" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.profiles.language.Language"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.config.ConfigEnum">ConfigEnum</span></code></p>
+
+  
+      <p>These are the available languages that can be selected in a language profile.</p>
+<ul>
+<li>Arabic</li>
+<li>Bulgarian</li>
+<li>Chinese</li>
+<li>Czech</li>
+<li>Danish</li>
+<li>Dutch</li>
+<li>English</li>
+<li>Finnish</li>
+<li>Flemish</li>
+<li>French</li>
+<li>German</li>
+<li>Greek</li>
+<li>Hebrew</li>
+<li>Hindi</li>
+<li>Hungarian</li>
+<li>Icelandic</li>
+<li>Italian</li>
+<li>Japanese</li>
+<li>Korean</li>
+<li>Lithuanian</li>
+<li>Malayalam</li>
+<li>Norwegian</li>
+<li>Polish</li>
+<li>Portuguese</li>
+<li>Russian</li>
+<li>Spanish</li>
+<li>Swedish</li>
+<li>Turkish</li>
+<li>Ukrainian</li>
+<li>Vietnamese</li>
+</ul>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../../js/base.js" defer></script>
+        <script src="../../../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

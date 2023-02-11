@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../../img/favicon.ico">
+        <title>General - Buildarr</title>
+        <link href="../../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link href="../../../../assets/_mkdocstrings.css" rel="stylesheet">
+
+        <script src="../../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../../..">Buildarr</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../installation/" class="nav-link">Installation</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../configuration/" class="nav-link">Configuration</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Plugins <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../" class="dropdown-item">Introduction</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">buildarr-sonarr</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../" class="dropdown-item">Introduction</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Configuration</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../host/" class="dropdown-item">Host Configuration</a>
+</li>
+            
+<li>
+    <a href="../media-management/" class="dropdown-item">Media Management</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Profiles</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../profiles/quality/" class="dropdown-item">Quality Profiles</a>
+</li>
+            
+<li>
+    <a href="../profiles/language/" class="dropdown-item">Language Profiles</a>
+</li>
+            
+<li>
+    <a href="../profiles/delay/" class="dropdown-item">Delay Profiles</a>
+</li>
+            
+<li>
+    <a href="../profiles/release/" class="dropdown-item">Release Profiles</a>
+</li>
+    </ul>
+  </li>
+            
+<li>
+    <a href="../quality/" class="dropdown-item">Quality</a>
+</li>
+            
+<li>
+    <a href="../indexers/" class="dropdown-item">Indexers</a>
+</li>
+            
+<li>
+    <a href="../download-clients/" class="dropdown-item">Download Clients</a>
+</li>
+            
+<li>
+    <a href="../import-lists/" class="dropdown-item">Import Lists</a>
+</li>
+            
+<li>
+    <a href="../connect/" class="dropdown-item">Connect</a>
+</li>
+            
+<li>
+    <a href="../metadata/" class="dropdown-item">Metadata</a>
+</li>
+            
+<li>
+    <a href="../tags/" class="dropdown-item">Tags</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active">General</a>
+</li>
+            
+<li>
+    <a href="../ui/" class="dropdown-item">UI</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../usage/" class="nav-link">Usage</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../tags/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../ui/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#general" class="nav-link">General</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#host" class="nav-link">Host</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#security" class="nav-link">Security</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#proxy" class="nav-link">Proxy</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#logging" class="nav-link">Logging</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#analytics" class="nav-link">Analytics</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#updates" class="nav-link">Updates</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#backup" class="nav-link">Backup</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="general">General<a class="headerlink" href="#general" title="Permanent link">#</a></h1>
+<p>General configuration for Sonarr are separated by category.</p>
+<pre class="highlight"><code class="language-yaml">sonarr:
+  settings:
+    general:
+      host:
+        bind_address: "*"
+        port: 8989
+        url_base: null
+        instance_name: "Sonarr (Example)"
+      security:
+        authentication_method: "none"
+      proxy:
+        enable: false
+      logging:
+        log_level: "INFO"
+      analytics:
+        send_anonymous_usage_data: false
+      updates:
+        branch: "main"
+        automatic: false
+        update_mechanism: "docker"
+      backup:
+        folder: "Backups"
+        interval: 7
+        retention: 28</code></pre>
+<p>Some of the settings may affect Buildarr's ability to connect with the Sonarr instance.
+Take care when changing these settings.</p>
+<h2 id="host">Host<a class="headerlink" href="#host" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.general.HostGeneralSettings"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.plugins.sonarr.config.general.GeneralSettings">GeneralSettings</span></code></p>
+
+  
+      <p>Sonarr instance connection and name configuration.</p>
+<p>Many of these settings configure Sonarr's external connection interface.
+If they are changed, the <a href="../host/">settings Buildarr uses to connect</a> with this
+Sonarr instance may need to be updated, so take care when modifying them.</p>
+<p><strong>Changing any of these settings require a restart of Sonarr to take effect.</strong></p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.general.HostGeneralSettings.bind_address" class="doc doc-heading">
+<code class="highlight language-python">bind_address: Union[Literal['*'], IPv4Address] = '*'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.general.HostGeneralSettings.bind_address" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Bind address for Sonarr. Set to an IPv4 address bound to a local interface
+or <code>*</code> to bind on all interfaces.</p>
+<p>Unless you run Sonarr directly on a host machine (i.e. not via Docker) and
+want Sonarr to only be available on a specific network or interface,
+this generally should be left untouched.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.general.HostGeneralSettings.port" class="doc doc-heading">
+<code class="highlight language-python">port: Port = 8989</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.general.HostGeneralSettings.port" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Unencrypted (HTTP) listening port for Sonarr.</p>
+<p>If Sonarr is being run via Docker in the default bridge mode,
+this setting shouldn't be changed.
+Instead, change the external port it is bound to using
+<code>--publish &lt;port number&gt;:8989</code>.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.general.HostGeneralSettings.ssl_port" class="doc doc-heading">
+<code class="highlight language-python">ssl_port: Port = 9898</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.general.HostGeneralSettings.ssl_port" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Enncrypted (HTTPS) listening port for Sonarr.</p>
+<p>If Sonarr is being run via Docker in the default bridge mode,
+this setting shouldn't be changed.
+Instead, change the external port it is bound to using
+<code>--publish &lt;port number&gt;:9898</code>.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.general.HostGeneralSettings.use_ssl" class="doc doc-heading">
+<code class="highlight language-python">use_ssl: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.general.HostGeneralSettings.use_ssl" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Enable the encrypted (HTTPS) listening port in Sonarr.
+As Sonarr only supports self-signed certificates, it is recommended
+to put Sonarr behind a HTTPS-terminating reverse proxy such as Nginx, Caddy or Traefik.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.general.HostGeneralSettings.url_base" class="doc doc-heading">
+<code class="highlight language-python">url_base: Optional[str] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.general.HostGeneralSettings.url_base" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Add a prefix to all Sonarr URLs,
+e.g. <code>http://localhost:8989/&lt;url_base&gt;/settings/general</code>.</p>
+<p>Generally used to accommodate reverse proxies where Sonarr
+is assigned to a subfolder, e.g. <code>https://example.com/sonarr</code>.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.general.HostGeneralSettings.instance_name" class="doc doc-heading">
+<code class="highlight language-python">instance_name: NonEmptyStr = 'Sonarr'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.general.HostGeneralSettings.instance_name" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Instance name in the browser tab and in syslog.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="security">Security<a class="headerlink" href="#security" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.general.SecurityGeneralSettings"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.plugins.sonarr.config.general.GeneralSettings">GeneralSettings</span></code></p>
+
+  
+      <p>Sonarr instance security (authentication) settings.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.general.SecurityGeneralSettings.authentication" class="doc doc-heading">
+<code class="highlight language-python">authentication: AuthenticationMethod = AuthenticationMethod.none</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.general.SecurityGeneralSettings.authentication" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Authentication method for logging into Sonarr.
+By default, do not require authentication.</p>
+<p>Values:</p>
+<ul>
+<li><code>none</code> - No authentication</li>
+<li><code>basic</code> - Authentication using HTTP basic auth (browser popup)</li>
+<li><code>form</code> - Authentication using a login page</li>
+</ul>
+<p>Requires a restart of Sonarr to take effect.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.general.SecurityGeneralSettings.username" class="doc doc-heading">
+<code class="highlight language-python">username: Optional[str] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.general.SecurityGeneralSettings.username" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Username for the administrator user.
+Only used when authentication is enforced.</p>
+<p>Requires a restart of Sonarr to take effect.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.general.SecurityGeneralSettings.password" class="doc doc-heading">
+<code class="highlight language-python">password: Optional[Password] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.general.SecurityGeneralSettings.password" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Password for the administrator user.
+Only used when authentication is enforced.</p>
+<p>Requires a restart of Sonarr to take effect.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.general.SecurityGeneralSettings.certificate_validation" class="doc doc-heading">
+<code class="highlight language-python">certificate_validation: CertificateValidation = CertificateValidation.enabled</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.general.SecurityGeneralSettings.certificate_validation" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Change how strict HTTPS certification validation is.
+Do not change unless you understand the risks.</p>
+<p>Values:</p>
+<ul>
+<li><code>enabled</code> - Validate HTTPS certificates for all hosts</li>
+<li><code>local-disabled</code> - Disable HTTPS certificate validation for hosts on the local network</li>
+<li><code>disabled</code> - Disable HTTPS certificate validation completely</li>
+</ul>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="proxy">Proxy<a class="headerlink" href="#proxy" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.general.ProxyGeneralSettings"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.plugins.sonarr.config.general.GeneralSettings">GeneralSettings</span></code></p>
+
+  
+      <p>Proxy configuration for Sonarr.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.general.ProxyGeneralSettings.enable" class="doc doc-heading">
+<code class="highlight language-python">enable: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.general.ProxyGeneralSettings.enable" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Use a proxy server to access the Internet.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.general.ProxyGeneralSettings.proxy_type" class="doc doc-heading">
+<code class="highlight language-python">proxy_type: ProxyType = ProxyType.http</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.general.ProxyGeneralSettings.proxy_type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type of proxy to connect to.</p>
+<p>Values:</p>
+<ul>
+<li><code>http</code> - HTTP(S) proxy</li>
+<li><code>socks4</code> - SOCKSv4 proxy</li>
+<li><code>socks5</code> - SOCKSv5 proxy (Tor is supported)</li>
+</ul>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.general.ProxyGeneralSettings.hostname" class="doc doc-heading">
+<code class="highlight language-python">hostname: Optional[str] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.general.ProxyGeneralSettings.hostname" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Proxy server hostname.</p>
+<p>Required if using a proxy is enabled.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.general.ProxyGeneralSettings.port" class="doc doc-heading">
+<code class="highlight language-python">port: Port = 8080</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.general.ProxyGeneralSettings.port" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Proxy server access port.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.general.ProxyGeneralSettings.username" class="doc doc-heading">
+<code class="highlight language-python">username: Optional[str] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.general.ProxyGeneralSettings.username" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Username to authenticate with.
+Only enter if authentication is required by the proxy.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.general.ProxyGeneralSettings.password" class="doc doc-heading">
+<code class="highlight language-python">password: Optional[Password] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.general.ProxyGeneralSettings.password" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Password for the proxy user.
+Only enter if authentication is required by the proxy.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.general.ProxyGeneralSettings.ignored_addresses" class="doc doc-heading">
+<code class="highlight language-python">ignored_addresses: List[NonEmptyStr] = []</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.general.ProxyGeneralSettings.ignored_addresses" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>List of domains/addresses which bypass the proxy. Wildcards (<code>*</code>) are supported.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.general.ProxyGeneralSettings.bypass_proxy_for_local_addresses" class="doc doc-heading">
+<code class="highlight language-python">bypass_proxy_for_local_addresses: bool = True</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.general.ProxyGeneralSettings.bypass_proxy_for_local_addresses" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Do not use the proxy to access local network addresses.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="logging">Logging<a class="headerlink" href="#logging" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.general.LoggingGeneralSettings"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.plugins.sonarr.config.general.GeneralSettings">GeneralSettings</span></code></p>
+
+  
+      <p>Logging configuration for the Sonarr application.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.general.LoggingGeneralSettings.log_level" class="doc doc-heading">
+<code class="highlight language-python">log_level: SonarrLogLevel = SonarrLogLevel.INFO</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.general.LoggingGeneralSettings.log_level" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Verbosity of logging output.</p>
+<p>Values:</p>
+<ul>
+<li><code>INFO</code> - Standard log output</li>
+<li><code>DEBUG</code> - Debugging log output</li>
+<li><code>TRACE</code> - Trace diagnostics log output</li>
+</ul>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="analytics">Analytics<a class="headerlink" href="#analytics" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.general.AnalyticsGeneralSettings"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.plugins.sonarr.config.general.GeneralSettings">GeneralSettings</span></code></p>
+
+  
+      <p>Configuration of analytics and telemetry from within Sonarr.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.general.AnalyticsGeneralSettings.send_anonymous_usage_data" class="doc doc-heading">
+<code class="highlight language-python">send_anonymous_usage_data: bool = True</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.general.AnalyticsGeneralSettings.send_anonymous_usage_data" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Send anonymous usage and error information to Sonarr's servers.</p>
+<p>This includes information on your browser, which Sonarr Web UI pages you use,
+error reporting and OS/runtime versions. This information is reportedly used
+to prioritise features and bug fixes.</p>
+<p>Requires a restart of Sonarr to take effect.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="updates">Updates<a class="headerlink" href="#updates" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.general.UpdatesGeneralSettings"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.plugins.sonarr.config.general.GeneralSettings">GeneralSettings</span></code></p>
+
+  
+      <p>Settings for updating Sonarr.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.general.UpdatesGeneralSettings.branch" class="doc doc-heading">
+<code class="highlight language-python">branch: NonEmptyStr = 'main'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.general.UpdatesGeneralSettings.branch" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Branch used by the external update mechanism.
+Changing this value has no effect on Docker installations.</p>
+<p>If unsure, leave this undefined in Buildarr and use the value already set in Sonarr.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.general.UpdatesGeneralSettings.automatic" class="doc doc-heading">
+<code class="highlight language-python">automatic: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.general.UpdatesGeneralSettings.automatic" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Automatically download and install updates.
+Manual updates can still be performed from System -&gt; Updates.</p>
+<p>This option must be left set to <code>false</code> on Docker installations.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.general.UpdatesGeneralSettings.mechanism" class="doc doc-heading">
+<code class="highlight language-python">mechanism: UpdateMechanism = UpdateMechanism.docker</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.general.UpdatesGeneralSettings.mechanism" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Set the mechanism for updating Sonarr.
+Must be set to <code>docker</code> on Docker installations.</p>
+<p>Values:</p>
+<ul>
+<li><code>builtin</code> - Sonarr built-in updater mechanism</li>
+<li><code>script</code> - Use the configured update script</li>
+<li><code>external</code> - External update mechanism</li>
+<li><code>apt</code> - Debian APT package</li>
+<li><code>docker</code> - Docker image</li>
+</ul>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.general.UpdatesGeneralSettings.script_path" class="doc doc-heading">
+<code class="highlight language-python">script_path: Optional[str] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.general.UpdatesGeneralSettings.script_path" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Path to a custom script that takes an extracted update package
+and handles the remainder of the update process.</p>
+<p>Required if <code>mechanism</code> is set to <code>script</code>.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="backup">Backup<a class="headerlink" href="#backup" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.general.BackupGeneralSettings"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.plugins.sonarr.config.general.GeneralSettings">GeneralSettings</span></code></p>
+
+  
+      <p>Settings for Sonarr automatic backups.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.general.BackupGeneralSettings.folder" class="doc doc-heading">
+<code class="highlight language-python">folder: NonEmptyStr = 'Backups'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.general.BackupGeneralSettings.folder" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Folder to backup Sonarr data to.</p>
+<p>Relative paths will be under Sonarr's AppData directory.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.general.BackupGeneralSettings.interval" class="doc doc-heading">
+<code class="highlight language-python">interval: int = Field(7, ge=0)</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.general.BackupGeneralSettings.interval" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Interval between automatic backups, in days.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.general.BackupGeneralSettings.retention" class="doc doc-heading">
+<code class="highlight language-python">retention: int = Field(28, ge=0)</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.general.BackupGeneralSettings.retention" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Retention period for backups, in days.
+Backups older than the retention period will be cleaned up automatically.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../js/base.js" defer></script>
+        <script src="../../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

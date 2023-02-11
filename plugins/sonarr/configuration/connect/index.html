@@ -1,0 +1,4091 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../../img/favicon.ico">
+        <title>Connect - Buildarr</title>
+        <link href="../../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link href="../../../../assets/_mkdocstrings.css" rel="stylesheet">
+
+        <script src="../../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../../..">Buildarr</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../installation/" class="nav-link">Installation</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../configuration/" class="nav-link">Configuration</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Plugins <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../" class="dropdown-item">Introduction</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">buildarr-sonarr</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../" class="dropdown-item">Introduction</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Configuration</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../host/" class="dropdown-item">Host Configuration</a>
+</li>
+            
+<li>
+    <a href="../media-management/" class="dropdown-item">Media Management</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Profiles</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../profiles/quality/" class="dropdown-item">Quality Profiles</a>
+</li>
+            
+<li>
+    <a href="../profiles/language/" class="dropdown-item">Language Profiles</a>
+</li>
+            
+<li>
+    <a href="../profiles/delay/" class="dropdown-item">Delay Profiles</a>
+</li>
+            
+<li>
+    <a href="../profiles/release/" class="dropdown-item">Release Profiles</a>
+</li>
+    </ul>
+  </li>
+            
+<li>
+    <a href="../quality/" class="dropdown-item">Quality</a>
+</li>
+            
+<li>
+    <a href="../indexers/" class="dropdown-item">Indexers</a>
+</li>
+            
+<li>
+    <a href="../download-clients/" class="dropdown-item">Download Clients</a>
+</li>
+            
+<li>
+    <a href="../import-lists/" class="dropdown-item">Import Lists</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active">Connect</a>
+</li>
+            
+<li>
+    <a href="../metadata/" class="dropdown-item">Metadata</a>
+</li>
+            
+<li>
+    <a href="../tags/" class="dropdown-item">Tags</a>
+</li>
+            
+<li>
+    <a href="../general/" class="dropdown-item">General</a>
+</li>
+            
+<li>
+    <a href="../ui/" class="dropdown-item">UI</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../usage/" class="nav-link">Usage</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../import-lists/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../metadata/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#connect" class="nav-link">Connect</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#configuring-connections" class="nav-link">Configuring connections</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#boxcar" class="nav-link">Boxcar</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#custom-script" class="nav-link">Custom Script</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#discord" class="nav-link">Discord</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#email" class="nav-link">Email</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#emby" class="nav-link">Emby</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#gotify" class="nav-link">Gotify</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#join" class="nav-link">Join</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#kodi-xbmc" class="nav-link">Kodi (XBMC)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#mailgun" class="nav-link">Mailgun</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#plex-home-theater" class="nav-link">Plex Home Theater</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#plex-media-center" class="nav-link">Plex Media Center</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#plex-media-server" class="nav-link">Plex Media Server</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#prowl" class="nav-link">Prowl</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#pushbullet" class="nav-link">Pushbullet</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#pushover" class="nav-link">Pushover</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#sendgrid" class="nav-link">SendGrid</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#slack" class="nav-link">Slack</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#synology-indexer" class="nav-link">Synology Indexer</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#telegram" class="nav-link">Telegram</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#trakt" class="nav-link">Trakt</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#twitter" class="nav-link">Twitter</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#webhook" class="nav-link">Webhook</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="connect">Connect<a class="headerlink" href="#connect" title="Permanent link">#</a></h1>
+<p>Sonarr supports configuring connections to external applications and services.</p>
+<p>These are not only for Sonarr to communicate with the outside world, they can also be useful for monitoring
+since the user can be alerted by a variety of possible service when some kind of event (or problem)
+occurs in Sonarr.</p>
+<h2 id="configuring-connections">Configuring connections<a class="headerlink" href="#configuring-connections" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.connect.NotificationTriggers"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.config.ConfigBase">ConfigBase</span></code></p>
+
+  
+      <p>Connections are configured using the following syntax.</p>
+<pre class="highlight"><code class="language-yaml">sonarr:
+  settings:
+    connect:
+      delete_unmanaged: false # Optional
+      definitions:
+        Email: # Name of connection in Sonarr.
+          type: "email" # Required
+          notification_triggers: # When to send notifications.
+            on_grab: true
+            on_import: true
+            on_upgrade: true
+            on_rename: false # Not supported by email notifications.
+            on_series_delete: true
+            on_episode_file_delete: true
+            on_episode_file_delete_for_upgrade: true
+            on_health_issue: true
+            include_health_warnings: false # Do not send on just warnings.
+            on_application_update: true
+          tags: # Tags can also be assigned to connections.
+            - "example"
+          # Connection-specific parameters.
+          server: "smtp.example.com"
+          port: 465
+          use_encryption: true
+          username: "sonarr"
+          password: "fake-password"
+          from_address: "sonarr@example.com"
+          recipient_addresses:
+            - "admin@example.com"
+        # Add additional connections here.</code></pre>
+<p>A <code>type</code> attribute must be defined so Buildarr knows what type of connection to make.
+Each connection has a unique value for <code>type</code> documented below.</p>
+<p>The triggers enabled on a connection are defined under <code>notification_triggers</code>.
+Tags can be assigned to connections, to only allow notifications relating
+to media under those tags.</p>
+<p>The <code>delete_unmanaged</code> flag on the outer <code>connect</code> block can be set
+to remove connections not defined in Buildarr.
+Take care when using this option, as it can remove connections
+automatically managed by other applications.</p>
+<p>The following notification triggers can be enabled.
+Some connection types only allow a subset of these to be enabled,
+check the documentation the specific connection type for more information.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.NotificationTriggers.on_grab" class="doc doc-heading">
+<code class="highlight language-python">on_grab: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.NotificationTriggers.on_grab" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Be notified when episodes are available for download and has been sent to a download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.NotificationTriggers.on_import" class="doc doc-heading">
+<code class="highlight language-python">on_import: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.NotificationTriggers.on_import" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Be notified when episodes are successfully imported. (Formerly known as On Download)</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.NotificationTriggers.on_upgrade" class="doc doc-heading">
+<code class="highlight language-python">on_upgrade: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.NotificationTriggers.on_upgrade" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Be notified when episodes are upgraded to a better quality.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.NotificationTriggers.on_rename" class="doc doc-heading">
+<code class="highlight language-python">on_rename: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.NotificationTriggers.on_rename" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Be notified when episodes are renamed.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.NotificationTriggers.on_series_delete" class="doc doc-heading">
+<code class="highlight language-python">on_series_delete: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.NotificationTriggers.on_series_delete" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Be notified when series are deleted.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.NotificationTriggers.on_episode_file_delete" class="doc doc-heading">
+<code class="highlight language-python">on_episode_file_delete: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.NotificationTriggers.on_episode_file_delete" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Be notified when episodes files are deleted.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.NotificationTriggers.on_episode_file_delete_for_upgrade" class="doc doc-heading">
+<code class="highlight language-python">on_episode_file_delete_for_upgrade: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.NotificationTriggers.on_episode_file_delete_for_upgrade" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Be notified when episode files are deleted for upgrades.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.NotificationTriggers.on_health_issue" class="doc doc-heading">
+<code class="highlight language-python">on_health_issue: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.NotificationTriggers.on_health_issue" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Be notified on health check failures.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.NotificationTriggers.include_health_warnings" class="doc doc-heading">
+<code class="highlight language-python">include_health_warnings: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.NotificationTriggers.include_health_warnings" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Be notified on health warnings in addition to errors.</p>
+<p>Requires <code>on_health_issue</code> to be enabled to have any effect.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.NotificationTriggers.on_application_update" class="doc doc-heading">
+<code class="highlight language-python">on_application_update: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.NotificationTriggers.on_application_update" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Be notified when Sonarr gets updated to a new version.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="boxcar">Boxcar<a class="headerlink" href="#boxcar" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.connect.BoxcarConnection"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.plugins.sonarr.config.connect.Connection">Connection</span></code></p>
+
+  
+      <p>Receive media update and health alert push notifications via Boxcar.</p>
+<p>Supported notification triggers: All except <code>on_rename</code></p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.BoxcarConnection.type" class="doc doc-heading">
+<code class="highlight language-python">type: Literal['boxcar'] = 'boxcar'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.BoxcarConnection.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of connection.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.BoxcarConnection.access_token" class="doc doc-heading">
+<code class="highlight language-python">access_token: Password</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.BoxcarConnection.access_token" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Access token for authenticating with Boxcar.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="custom-script">Custom Script<a class="headerlink" href="#custom-script" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.connect.CustomscriptConnection"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.plugins.sonarr.config.connect.Connection">Connection</span></code></p>
+
+  
+      <p>Execute a local script on the Sonarr instance when events occur.</p>
+<p>Supported notification triggers: All</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.CustomscriptConnection.type" class="doc doc-heading">
+<code class="highlight language-python">type: Literal['customscript'] = 'customscript'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.CustomscriptConnection.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of connection.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.CustomscriptConnection.path" class="doc doc-heading">
+<code class="highlight language-python">path: NonEmptyStr</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.CustomscriptConnection.path" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Path of the script to execute.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="discord">Discord<a class="headerlink" href="#discord" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.connect.DiscordConnection"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.plugins.sonarr.config.connect.Connection">Connection</span></code></p>
+
+  
+      <p>Send media update and health alert messages to a Discord server.</p>
+<p>Supported notification triggers: All</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.DiscordConnection.type" class="doc doc-heading">
+<code class="highlight language-python">type: Literal['discord'] = 'discord'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.DiscordConnection.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of connection.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.DiscordConnection.username" class="doc doc-heading">
+<code class="highlight language-python">username: Optional[str] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.DiscordConnection.username" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The username to post as.</p>
+<p>If unset, blank or set to <code>None</code>, use the default username set to the webhook URL.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.DiscordConnection.avatar" class="doc doc-heading">
+<code class="highlight language-python">avatar: Optional[str] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.DiscordConnection.avatar" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Change the avatar that is used for messages from this connection.</p>
+<p>If unset, blank or set to <code>None</code>, use the default avatar for the user.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.DiscordConnection.host" class="doc doc-heading">
+<code class="highlight language-python">host: Optional[str] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.DiscordConnection.host" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Override the host name that shows for this notification.</p>
+<p>If unset, blank or set to <code>None</code>, use the machine name.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.DiscordConnection.on_grab_fields" class="doc doc-heading">
+<code class="highlight language-python">on_grab_fields: List[OnGrabField] = [OnGrabField.overview, OnGrabField.rating, OnGrabField.genres, OnGrabField.quality, OnGrabField.size, OnGrabField.links, OnGrabField.release, OnGrabField.poster, OnGrabField.fanart]</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.DiscordConnection.on_grab_fields" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Set the fields that are passed in for this 'on grab' notification.
+By default, all fields are passed in.</p>
+<p>Values:</p>
+<ul>
+<li><code>overview</code></li>
+<li><code>rating</code></li>
+<li><code>genres</code></li>
+<li><code>quality</code></li>
+<li><code>group</code></li>
+<li><code>size</code></li>
+<li><code>links</code></li>
+<li><code>release</code></li>
+<li><code>poster</code></li>
+<li><code>fanart</code></li>
+</ul>
+<p>Example:</p>
+<pre class="highlight"><code class="language-yaml">...
+  connect:
+    definitions:
+      Discord:
+        type: "discord"
+        webhook_url: "https://..."
+        on_grab_fields:
+          - "overview"
+          - "quality"
+          - "release"</code></pre>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.DiscordConnection.on_import_fields" class="doc doc-heading">
+<code class="highlight language-python">on_import_fields: List[OnImportField] = [OnImportField.overview, OnImportField.rating, OnImportField.genres, OnImportField.quality, OnImportField.codecs, OnImportField.group, OnImportField.size, OnImportField.languages, OnImportField.subtitles, OnImportField.links, OnImportField.release, OnImportField.poster, OnImportField.fanart]</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.DiscordConnection.on_import_fields" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Set the fields that are passed in for this 'on import' notification.
+By default, all fields are passed in.</p>
+<p>Values:</p>
+<ul>
+<li><code>overview</code></li>
+<li><code>rating</code></li>
+<li><code>genres</code></li>
+<li><code>quality</code></li>
+<li><code>codecs</code></li>
+<li><code>group</code></li>
+<li><code>size</code></li>
+<li><code>languages</code></li>
+<li><code>subtitles</code></li>
+<li><code>links</code></li>
+<li><code>release</code></li>
+<li><code>poster</code></li>
+<li><code>fanart</code></li>
+</ul>
+<p>Example:</p>
+<pre class="highlight"><code class="language-yaml">...
+  connect:
+    definitions:
+      Discord:
+        type: "discord"
+        webhook_url: "https://..."
+        on_import_fields:
+          - "overview"
+          - "quality"
+          - "release"</code></pre>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="email">Email<a class="headerlink" href="#email" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.connect.EmailConnection"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.plugins.sonarr.config.connect.Connection">Connection</span></code></p>
+
+  
+      <p>Send media update and health alert messages to an email address.</p>
+<p>Supported notification triggers: All except <code>on_rename</code></p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.EmailConnection.type" class="doc doc-heading">
+<code class="highlight language-python">type: Literal['email'] = 'email'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.EmailConnection.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of connection.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.EmailConnection.server" class="doc doc-heading">
+<code class="highlight language-python">server: NonEmptyStr</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.EmailConnection.server" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Hostname or IP address of the SMTP server to send outbound mail to.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.EmailConnection.port" class="doc doc-heading">
+<code class="highlight language-python">port: Port = 587</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.EmailConnection.port" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The port number on the SMTP server to use to submit mail.</p>
+<p>The default is to use STARTTLS on the standard SMTP submission port.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.EmailConnection.use_encryption" class="doc doc-heading">
+<code class="highlight language-python">use_encryption: bool = True</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.EmailConnection.use_encryption" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Whether or not to use encryption when sending mail to the SMTP server.</p>
+<p>If the port number is set to 465, SMTPS (implicit TLS) will be used.
+Any other port number will result in STARTTLS being used.</p>
+<p>The default is to enable encryption.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.EmailConnection.username" class="doc doc-heading">
+<code class="highlight language-python">username: NonEmptyStr</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.EmailConnection.username" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>SMTP username of the account to send the mail from.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.EmailConnection.password" class="doc doc-heading">
+<code class="highlight language-python">password: Password</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.EmailConnection.password" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>SMTP password of the account to send the mail from.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.EmailConnection.from_address" class="doc doc-heading">
+<code class="highlight language-python">from_address: NameEmail</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.EmailConnection.from_address" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Email address to send the mail as.</p>
+<p>RFC-5322 formatted mailbox addresses are also supported,
+e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.EmailConnection.recipient_addresses" class="doc doc-heading">
+<code class="highlight language-python">recipient_addresses: Annotated[List[NameEmail], Field(min_items=1, unique_items=True)]</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.EmailConnection.recipient_addresses" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>List of email addresses to directly address the mail to.</p>
+<p>At least one address must be provided.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.EmailConnection.cc_addresses" class="doc doc-heading">
+<code class="highlight language-python">cc_addresses: List[NameEmail] = []</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.EmailConnection.cc_addresses" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Optional list of email addresses to copy (CC) the mail to.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.EmailConnection.bcc_addresses" class="doc doc-heading">
+<code class="highlight language-python">bcc_addresses: List[NameEmail] = []</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.EmailConnection.bcc_addresses" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Optional list of email addresses to blind copy (BCC) the mail to.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="emby">Emby<a class="headerlink" href="#emby" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.connect.EmbyConnection"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.plugins.sonarr.config.connect.Connection">Connection</span></code></p>
+
+  
+      <p>Send media update and health alert notifications to an Emby server.</p>
+<p>Supported notification triggers: All</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.EmbyConnection.type" class="doc doc-heading">
+<code class="highlight language-python">type: Literal['emby'] = 'emby'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.EmbyConnection.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of connection.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.EmbyConnection.host" class="doc doc-heading">
+<code class="highlight language-python">host: NonEmptyStr</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.EmbyConnection.host" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Emby server hostname or IP address.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.EmbyConnection.port" class="doc doc-heading">
+<code class="highlight language-python">port: Port = 8096</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.EmbyConnection.port" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Emby server port.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.EmbyConnection.use_ssl" class="doc doc-heading">
+<code class="highlight language-python">use_ssl: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.EmbyConnection.use_ssl" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Use HTTPS to connect to Emby, instead of HTTP.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.EmbyConnection.api_key" class="doc doc-heading">
+<code class="highlight language-python">api_key: Password</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.EmbyConnection.api_key" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>API key to authenticate with Emby.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.EmbyConnection.send_notifications" class="doc doc-heading">
+<code class="highlight language-python">send_notifications: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.EmbyConnection.send_notifications" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Have MediaBrowser send notifications to configured providers.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.EmbyConnection.update_library" class="doc doc-heading">
+<code class="highlight language-python">update_library: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.EmbyConnection.update_library" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Update the Emby library on import, rename, or delete.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="gotify">Gotify<a class="headerlink" href="#gotify" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.connect.GotifyConnection"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.plugins.sonarr.config.connect.Connection">Connection</span></code></p>
+
+  
+      <p>Send media update and health alert push notifications via a Gotify server.</p>
+<p>Supported notification triggers: All except <code>on_rename</code></p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.GotifyConnection.type" class="doc doc-heading">
+<code class="highlight language-python">type: Literal['gotify'] = 'gotify'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.GotifyConnection.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of connection.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.GotifyConnection.server" class="doc doc-heading">
+<code class="highlight language-python">server: HttpUrl</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.GotifyConnection.server" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Gotify server URL. (e.g. <code>http://gotify.example.com:1234</code>)</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.GotifyConnection.app_token" class="doc doc-heading">
+<code class="highlight language-python">app_token: Password</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.GotifyConnection.app_token" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>App token to use to authenticate with Gotify.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.GotifyConnection.priority" class="doc doc-heading">
+<code class="highlight language-python">priority: GotifyPriority = GotifyPriority.normal</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.GotifyConnection.priority" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Gotify notification priority.</p>
+<p>Values:</p>
+<ul>
+<li><code>min</code></li>
+<li><code>low</code></li>
+<li><code>normal</code></li>
+<li><code>high</code></li>
+</ul>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="join">Join<a class="headerlink" href="#join" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.connect.JoinConnection"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.plugins.sonarr.config.connect.Connection">Connection</span></code></p>
+
+  
+      <p>Send media update and health alert push notifications via Join.</p>
+<p>Supported notification triggers: All except <code>on_rename</code></p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.JoinConnection.type" class="doc doc-heading">
+<code class="highlight language-python">type: Literal['join'] = 'join'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.JoinConnection.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of connection.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.JoinConnection.api_key" class="doc doc-heading">
+<code class="highlight language-python">api_key: Password</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.JoinConnection.api_key" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>API key to use to authenticate with Join.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.JoinConnection.device_names" class="doc doc-heading">
+<code class="highlight language-python">device_names: List[NonEmptyStr] = []</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.JoinConnection.device_names" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>List of full or partial device names you'd like to send notifications to.</p>
+<p>If unset or empty, all devices will receive notifications.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.JoinConnection.priority" class="doc doc-heading">
+<code class="highlight language-python">priority: JoinPriority = JoinPriority.normal</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.JoinConnection.priority" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Join push notification priority.</p>
+<p>Values:</p>
+<ul>
+<li><code>silent</code></li>
+<li><code>quiet</code></li>
+<li><code>normal</code></li>
+<li><code>high</code></li>
+<li><code>emergency</code></li>
+</ul>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="kodi-xbmc">Kodi (XBMC)<a class="headerlink" href="#kodi-xbmc" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.connect.KodiConnection"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.plugins.sonarr.config.connect.Connection">Connection</span></code></p>
+
+  
+      <p>Send media update and health alert notifications to a Kodi (XBMC) instance.</p>
+<p>Supported notification triggers: All</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.KodiConnection.type" class="doc doc-heading">
+<code class="highlight language-python">type: Literal['kodi', 'xbmc'] = 'kodi'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.KodiConnection.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type values associated with this kind of connection. (Use either one)</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.KodiConnection.host" class="doc doc-heading">
+<code class="highlight language-python">host: NonEmptyStr</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.KodiConnection.host" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Kodi hostname or IP address.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.KodiConnection.port" class="doc doc-heading">
+<code class="highlight language-python">port: Port = 8080</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.KodiConnection.port" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Kodi API port.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.KodiConnection.use_ssl" class="doc doc-heading">
+<code class="highlight language-python">use_ssl: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.KodiConnection.use_ssl" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Connect to Kodi over HTTPS instead of HTTP.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.KodiConnection.username" class="doc doc-heading">
+<code class="highlight language-python">username: NonEmptyStr</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.KodiConnection.username" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Username to use to login to Kodi.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.KodiConnection.password" class="doc doc-heading">
+<code class="highlight language-python">password: Password</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.KodiConnection.password" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Password to use to login to Kodi.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.KodiConnection.gui_notification" class="doc doc-heading">
+<code class="highlight language-python">gui_notification: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.KodiConnection.gui_notification" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Enable showing notifications from Sonarr in the Kodi GUI.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.KodiConnection.display_time" class="doc doc-heading">
+<code class="highlight language-python">display_time: int = Field(5, ge=0)</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.KodiConnection.display_time" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>How long the notification will be displayed for (in seconds).</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.KodiConnection.update_library" class="doc doc-heading">
+<code class="highlight language-python">update_library: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.KodiConnection.update_library" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Update the Kodi library on import/rename.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.KodiConnection.clean_library" class="doc doc-heading">
+<code class="highlight language-python">clean_library: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.KodiConnection.clean_library" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Clean the Kodi library after update.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.KodiConnection.always_update" class="doc doc-heading">
+<code class="highlight language-python">always_update: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.KodiConnection.always_update" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Update the Kodi library even when a video is playing.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="mailgun">Mailgun<a class="headerlink" href="#mailgun" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.connect.MailgunConnection"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.plugins.sonarr.config.connect.Connection">Connection</span></code></p>
+
+  
+      <p>Send media update and health alert emails via the Mailgun delivery service.</p>
+<p>Supported notification triggers: All except <code>on_rename</code></p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.MailgunConnection.type" class="doc doc-heading">
+<code class="highlight language-python">type: Literal['mailgun'] = 'mailgun'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.MailgunConnection.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of connection.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.MailgunConnection.api_key" class="doc doc-heading">
+<code class="highlight language-python">api_key: Password</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.MailgunConnection.api_key" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>API key to use to authenticate with Mailgun.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.MailgunConnection.use_eu_endpoint" class="doc doc-heading">
+<code class="highlight language-python">use_eu_endpoint: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.MailgunConnection.use_eu_endpoint" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Send mail via the EU endpoint instead of the US one.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.MailgunConnection.from_address" class="doc doc-heading">
+<code class="highlight language-python">from_address: NameEmail</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.MailgunConnection.from_address" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Email address to send the mail as.</p>
+<p>RFC-5322 formatted mailbox addresses are also supported,
+e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.MailgunConnection.sender_domain" class="doc doc-heading">
+<code class="highlight language-python">sender_domain: NonEmptyStr</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.MailgunConnection.sender_domain" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The domain from which the mail will be sent.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.MailgunConnection.recipient_addresses" class="doc doc-heading">
+<code class="highlight language-python">recipient_addresses: List[NameEmail] = []</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.MailgunConnection.recipient_addresses" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The recipient email addresses of the notification mail.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="plex-home-theater">Plex Home Theater<a class="headerlink" href="#plex-home-theater" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.connect.PlexHomeTheaterConnection"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.plugins.sonarr.config.connect.Connection">Connection</span></code></p>
+
+  
+      <p>Send media update notifications to a Plex Home Theater instance.</p>
+<p>Supported notification triggers: <code>on_grab</code>, <code>on_import</code>, <code>on_upgrade</code> <strong>only</strong></p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.PlexHomeTheaterConnection.type" class="doc doc-heading">
+<code class="highlight language-python">type: Literal['plex-home-theater'] = 'plex-home-theater'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.PlexHomeTheaterConnection.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of connection.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.PlexHomeTheaterConnection.host" class="doc doc-heading">
+<code class="highlight language-python">host: NonEmptyStr</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.PlexHomeTheaterConnection.host" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Plex Home Theater hostname or IP address.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.PlexHomeTheaterConnection.port" class="doc doc-heading">
+<code class="highlight language-python">port: Port = 3005</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.PlexHomeTheaterConnection.port" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Plex Home Theater API port.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.PlexHomeTheaterConnection.use_ssl" class="doc doc-heading">
+<code class="highlight language-python">use_ssl: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.PlexHomeTheaterConnection.use_ssl" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Connect to Plex Home Theater over HTTPS instead of HTTP.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.PlexHomeTheaterConnection.username" class="doc doc-heading">
+<code class="highlight language-python">username: NonEmptyStr</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.PlexHomeTheaterConnection.username" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Username to use to login to Plex Home Theater.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.PlexHomeTheaterConnection.password" class="doc doc-heading">
+<code class="highlight language-python">password: Password</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.PlexHomeTheaterConnection.password" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Password to use to login to Plex Home Theater.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.PlexHomeTheaterConnection.gui_notification" class="doc doc-heading">
+<code class="highlight language-python">gui_notification: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.PlexHomeTheaterConnection.gui_notification" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Enable showing notifications from Sonarr in the Plex Home Theater GUI.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.PlexHomeTheaterConnection.display_time" class="doc doc-heading">
+<code class="highlight language-python">display_time: int = Field(5, ge=0)</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.PlexHomeTheaterConnection.display_time" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>How long the notification will be displayed for (in seconds).</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.PlexHomeTheaterConnection.update_library" class="doc doc-heading">
+<code class="highlight language-python">update_library: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.PlexHomeTheaterConnection.update_library" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Update the Plex Home Theater library on import/rename.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.PlexHomeTheaterConnection.clean_library" class="doc doc-heading">
+<code class="highlight language-python">clean_library: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.PlexHomeTheaterConnection.clean_library" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Clean the Plex Home Theater library after update.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.PlexHomeTheaterConnection.always_update" class="doc doc-heading">
+<code class="highlight language-python">always_update: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.PlexHomeTheaterConnection.always_update" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Update the Plex Home THeater library even when a video is playing.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="plex-media-center">Plex Media Center<a class="headerlink" href="#plex-media-center" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.connect.PlexMediaCenterConnection"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.plugins.sonarr.config.connect.Connection">Connection</span></code></p>
+
+  
+      <p>Send media update notifications to a Plex Media Center instance.</p>
+<p>Supported notification triggers: <code>on_grab</code>, <code>on_import</code>, <code>on_upgrade</code> <strong>only</strong></p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.PlexMediaCenterConnection.type" class="doc doc-heading">
+<code class="highlight language-python">type: Literal['plex-media-center'] = 'plex-media-center'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.PlexMediaCenterConnection.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of connection.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.PlexMediaCenterConnection.host" class="doc doc-heading">
+<code class="highlight language-python">host: NonEmptyStr</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.PlexMediaCenterConnection.host" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Plex Media Center hostname or IP address.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.PlexMediaCenterConnection.port" class="doc doc-heading">
+<code class="highlight language-python">port: Port = 3000</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.PlexMediaCenterConnection.port" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Plex Media Center API port.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.PlexMediaCenterConnection.username" class="doc doc-heading">
+<code class="highlight language-python">username: NonEmptyStr</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.PlexMediaCenterConnection.username" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Username to use to login to Plex Media Center.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.PlexMediaCenterConnection.password" class="doc doc-heading">
+<code class="highlight language-python">password: Password</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.PlexMediaCenterConnection.password" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Password to use to login to Plex Media Center.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="plex-media-server">Plex Media Server<a class="headerlink" href="#plex-media-server" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.connect.PlexMediaServerConnection"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.plugins.sonarr.config.connect.Connection">Connection</span></code></p>
+
+  
+      <p>Send media update notifications to a Plex Media Server instance.</p>
+<p>Supported notification triggers: All except <code>on_grab</code>, <code>on_health_issue</code>
+and <code>on_application_update</code></p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.PlexMediaServerConnection.type" class="doc doc-heading">
+<code class="highlight language-python">type: Literal['plex-media-server'] = 'plex-media-server'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.PlexMediaServerConnection.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of connection.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.PlexMediaServerConnection.host" class="doc doc-heading">
+<code class="highlight language-python">host: NonEmptyStr</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.PlexMediaServerConnection.host" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Plex Media Server hostname or IP address.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.PlexMediaServerConnection.port" class="doc doc-heading">
+<code class="highlight language-python">port: Port = 32400</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.PlexMediaServerConnection.port" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Plex Media Server API port.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.PlexMediaServerConnection.use_ssl" class="doc doc-heading">
+<code class="highlight language-python">use_ssl: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.PlexMediaServerConnection.use_ssl" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Connect to Plex Media Server over HTTPS instead of HTTP.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.PlexMediaServerConnection.auth_token" class="doc doc-heading">
+<code class="highlight language-python">auth_token: Password</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.PlexMediaServerConnection.auth_token" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Plex authentication token.</p>
+<p>If unsure on where to find this token,
+<a href="https://support.plex.tv/articles/204059436-finding-an-authentication-token-x-plex-token">follow this guide from Plex.tv</a>.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.PlexMediaServerConnection.update_library" class="doc doc-heading">
+<code class="highlight language-python">update_library: bool = True</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.PlexMediaServerConnection.update_library" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Update the Plex Media Server library on import, rename or delete.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="prowl">Prowl<a class="headerlink" href="#prowl" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.connect.ProwlConnection"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.plugins.sonarr.config.connect.Connection">Connection</span></code></p>
+
+  
+      <p>Send media update and health alert push notifications to a Prowl client.</p>
+<p>Supported notification triggers: All except <code>on_rename</code></p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.ProwlConnection.type" class="doc doc-heading">
+<code class="highlight language-python">type: Literal['prowl'] = 'prowl'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.ProwlConnection.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of connection.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.ProwlConnection.api_key" class="doc doc-heading">
+<code class="highlight language-python">api_key: Password</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.ProwlConnection.api_key" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>API key to use when authenticating with Prowl.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.ProwlConnection.priority" class="doc doc-heading">
+<code class="highlight language-python">priority: ProwlPriority = ProwlPriority.normal</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.ProwlConnection.priority" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Prowl push notification priority.</p>
+<p>Values:</p>
+<ul>
+<li><code>verylow</code></li>
+<li><code>low</code></li>
+<li><code>normal</code></li>
+<li><code>high</code></li>
+<li><code>emergency</code></li>
+</ul>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="pushbullet">Pushbullet<a class="headerlink" href="#pushbullet" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.connect.PushbulletConnection"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.plugins.sonarr.config.connect.Connection">Connection</span></code></p>
+
+  
+      <p>Send media update and health alert push notifications to 1 or more Pushbullet devices.</p>
+<p>Supported notification triggers: All except <code>on_rename</code></p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.PushbulletConnection.type" class="doc doc-heading">
+<code class="highlight language-python">type: Literal['pushbullet'] = 'pushbullet'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.PushbulletConnection.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of connection.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.PushbulletConnection.api_key" class="doc doc-heading">
+<code class="highlight language-python">api_key: Password</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.PushbulletConnection.api_key" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>API key to use when authenticating with Pushbullet.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.PushbulletConnection.device_ids" class="doc doc-heading">
+<code class="highlight language-python">device_ids: List[NonEmptyStr] = []</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.PushbulletConnection.device_ids" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>List of device IDs to send notifications to.</p>
+<p>If unset or empty, send to all devices.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.PushbulletConnection.channel_tags" class="doc doc-heading">
+<code class="highlight language-python">channel_tags: List[NonEmptyStr] = []</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.PushbulletConnection.channel_tags" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>List of Channel Tags to send notifications to.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.PushbulletConnection.sender_id" class="doc doc-heading">
+<code class="highlight language-python">sender_id: Optional[str] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.PushbulletConnection.sender_id" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The device ID to send notifications from
+(<code>device_iden</code> in the device's URL on <a href="https://pushbullet.com">pushbullet.com</a>).</p>
+<p>Leave unset, blank or set to <code>None</code> to send from yourself.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="pushover">Pushover<a class="headerlink" href="#pushover" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.connect.PushoverConnection"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.plugins.sonarr.config.connect.Connection">Connection</span></code></p>
+
+  
+      <p>Send media update and health alert push notifications to 1 or more Pushover devices.</p>
+<p>Supported notification triggers: All except <code>on_rename</code></p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.PushoverConnection.type" class="doc doc-heading">
+<code class="highlight language-python">type: Literal['pushover'] = 'pushover'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.PushoverConnection.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of connection.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.PushoverConnection.user_key" class="doc doc-heading">
+<code class="highlight language-python">user_key: Annotated[SecretStr, Field(min_length=30, max_length=30)]</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.PushoverConnection.user_key" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>User key to use to authenticate with your Pushover account.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.PushoverConnection.api_key" class="doc doc-heading">
+<code class="highlight language-python">api_key: Annotated[SecretStr, Field(min_length=30, max_length=30)]</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.PushoverConnection.api_key" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>API key assigned to Sonarr in Pushover.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.PushoverConnection.devices" class="doc doc-heading">
+<code class="highlight language-python">devices: List[NonEmptyStr] = []</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.PushoverConnection.devices" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>List of device names to send notifications to.</p>
+<p>If unset or empty, send to all devices.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.PushoverConnection.priority" class="doc doc-heading">
+<code class="highlight language-python">priority: PushoverPriority = PushoverPriority.normal</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.PushoverConnection.priority" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Pushover push notification priority.</p>
+<p>Values:</p>
+<ul>
+<li><code>silent</code></li>
+<li><code>quiet</code></li>
+<li><code>normal</code></li>
+<li><code>high</code></li>
+<li><code>emergency</code></li>
+</ul>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.PushoverConnection.retry" class="doc doc-heading">
+<code class="highlight language-python">retry: Union[Literal[0], PushoverRetry] = 0</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.PushoverConnection.retry" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Interval to retry emergency alerts, in seconds.</p>
+<p>Minimum 30 seconds. Set to 0 to disable retrying emergency alerts.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.PushoverConnection.expire" class="doc doc-heading">
+<code class="highlight language-python">expire: int = Field(0, ge=0, le=86400)</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.PushoverConnection.expire" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Threshold for retrying emergency alerts, in seconds.
+If <code>retry</code> is set, this should be set to a higher value.</p>
+<p>Maximum 86400 seconds (1 day).</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.PushoverConnection.sound" class="doc doc-heading">
+<code class="highlight language-python">sound: Optional[str] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.PushoverConnection.sound" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Notification sound to use on devices.</p>
+<p>Leave unset, blank or set to <code>None</code> to use the default.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="sendgrid">SendGrid<a class="headerlink" href="#sendgrid" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.connect.SendgridConnection"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.plugins.sonarr.config.connect.Connection">Connection</span></code></p>
+
+  
+      <p>Send media update and health alert emails via the SendGrid delivery service.</p>
+<p>Supported notification triggers: All except <code>on_rename</code></p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.SendgridConnection.type" class="doc doc-heading">
+<code class="highlight language-python">type: Literal['sendgrid'] = 'sendgrid'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.SendgridConnection.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of connection.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.SendgridConnection.api_key" class="doc doc-heading">
+<code class="highlight language-python">api_key: Password</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.SendgridConnection.api_key" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>API key to use to authenticate with SendGrid.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.SendgridConnection.from_address" class="doc doc-heading">
+<code class="highlight language-python">from_address: NameEmail</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.SendgridConnection.from_address" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Email address to send the mail as.</p>
+<p>RFC-5322 formatted mailbox addresses are also supported,
+e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.SendgridConnection.recipient_addresses" class="doc doc-heading">
+<code class="highlight language-python">recipient_addresses: List[NameEmail] = []</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.SendgridConnection.recipient_addresses" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The recipient email addresses of the notification mail.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="slack">Slack<a class="headerlink" href="#slack" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.connect.SlackConnection"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.plugins.sonarr.config.connect.Connection">Connection</span></code></p>
+
+  
+      <p>Send media update and health alert messages to a Slack channel.</p>
+<p>Supported notification triggers: All</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.SlackConnection.type" class="doc doc-heading">
+<code class="highlight language-python">type: Literal['slack'] = 'slack'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.SlackConnection.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of connection.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.SlackConnection.webhook_url" class="doc doc-heading">
+<code class="highlight language-python">webhook_url: HttpUrl</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.SlackConnection.webhook_url" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Webhook URL for the Slack channel to send to.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.SlackConnection.username" class="doc doc-heading">
+<code class="highlight language-python">username: NonEmptyStr</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.SlackConnection.username" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Username to post as.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.SlackConnection.icon" class="doc doc-heading">
+<code class="highlight language-python">icon: Optional[str] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.SlackConnection.icon" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The icon that is used for messages from this integration (emoji or URL).</p>
+<p>If unset, blank or set to <code>None</code>, use the default for the user.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.SlackConnection.channel" class="doc doc-heading">
+<code class="highlight language-python">channel: Optional[str] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.SlackConnection.channel" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>If set, overrides the default channel in the webhook.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="synology-indexer">Synology Indexer<a class="headerlink" href="#synology-indexer" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.connect.SynologyIndexerConnection"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.plugins.sonarr.config.connect.Connection">Connection</span></code></p>
+
+  
+      <p>Send media update notifications to the local Synology Indexer.</p>
+<p>Supported notification triggers: All except <code>on_grab</code>, <code>on_health_issue</code>
+and <code>on_application_update</code></p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.SynologyIndexerConnection.type" class="doc doc-heading">
+<code class="highlight language-python">type: Literal['synology-indexer'] = 'synology-indexer'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.SynologyIndexerConnection.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of connection.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.SynologyIndexerConnection.update_library" class="doc doc-heading">
+<code class="highlight language-python">update_library: bool = True</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.SynologyIndexerConnection.update_library" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Update the library on media import/rename/delete.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="telegram">Telegram<a class="headerlink" href="#telegram" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.connect.TelegramConnection"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.plugins.sonarr.config.connect.Connection">Connection</span></code></p>
+
+  
+      <p>Send media update and health alert messages to a Telegram chat room.</p>
+<p>Supported notification triggers: All</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.TelegramConnection.type" class="doc doc-heading">
+<code class="highlight language-python">type: Literal['telegram'] = 'telegram'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.TelegramConnection.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of connection.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.TelegramConnection.bot_token" class="doc doc-heading">
+<code class="highlight language-python">bot_token: Password</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.TelegramConnection.bot_token" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The bot token assigned to the Sonarr instance.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.TelegramConnection.chat_id" class="doc doc-heading">
+<code class="highlight language-python">chat_id: NonEmptyStr</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.TelegramConnection.chat_id" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The ID of the chat room to send messages to.</p>
+<p>You must start a conversation with the bot or add it to your group to receive messages.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.TelegramConnection.send_silently" class="doc doc-heading">
+<code class="highlight language-python">send_silently: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.TelegramConnection.send_silently" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Sends the message silently. Users will receive a notification with no sound.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="trakt">Trakt<a class="headerlink" href="#trakt" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.connect.TraktConnection"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.plugins.sonarr.config.connect.Connection">Connection</span></code></p>
+
+  
+      <p>Send media update and health alert messages to the Trakt media tracker.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Sonarr directly authenticates with Trakt to generate tokens for it to use.
+At the moment, the easiest way to generate the tokens for Buildarr
+is to do it using the GUI within Sonarr, and use the following
+shell command to retrieve the generated configuration.</p>
+<pre class="highlight"><code class="language-bash">$ curl -X "GET" "&lt;sonarr-url&gt;/api/v3/notification" -H "X-Api-Key: &lt;api-key&gt;"</code></pre>
+</div>
+<p>Supported notification triggers: All except <code>on_grab</code>, <code>on_rename</code>,
+<code>on_health_issue</code> and <code>on_application_update</code></p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.TraktConnection.type" class="doc doc-heading">
+<code class="highlight language-python">type: Literal['trakt'] = 'trakt'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.TraktConnection.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of connection.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.TraktConnection.access_token" class="doc doc-heading">
+<code class="highlight language-python">access_token: Password</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.TraktConnection.access_token" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Access token for Sonarr from Trakt.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.TraktConnection.refresh_token" class="doc doc-heading">
+<code class="highlight language-python">refresh_token: Password</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.TraktConnection.refresh_token" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Refresh token for Sonarr from Trakt.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.TraktConnection.expires" class="doc doc-heading">
+<code class="highlight language-python">expires: datetime</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.TraktConnection.expires" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Expiry date-time of the access token, preferably in ISO-8601 format and in UTC.</p>
+<p>Example: <code>2023-05-10T15:34:08.117451Z</code></p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.TraktConnection.auth_user" class="doc doc-heading">
+<code class="highlight language-python">auth_user: TraktAuthUser</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.TraktConnection.auth_user" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The username being authenticated in Trakt.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="twitter">Twitter<a class="headerlink" href="#twitter" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.connect.TwitterConnection"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.plugins.sonarr.config.connect.Connection">Connection</span></code></p>
+
+  
+      <p>Send media update and health alert messages via Twitter.</p>
+<p>Twitter requires you to create an application for their API
+to generate the necessary keys and secrets.
+If unsure how to proceed, refer to these guides from
+<a href="https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret">Twitter</a>
+and <a href="https://wiki.servarr.com/useful-tools#twitter-connect">WikiArr</a>.</p>
+<p>Access tokens can be obtained using the prodecure documented <a href="https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens">here</a>.</p>
+<p>Supported notification triggers: All except <code>on_rename</code></p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.TwitterConnection.type" class="doc doc-heading">
+<code class="highlight language-python">type: Literal['twitter'] = 'twitter'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.TwitterConnection.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of connection.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.TwitterConnection.consumer_key" class="doc doc-heading">
+<code class="highlight language-python">consumer_key: Password</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.TwitterConnection.consumer_key" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Consumer key from a Twitter application.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.TwitterConnection.consumer_secret" class="doc doc-heading">
+<code class="highlight language-python">consumer_secret: Password</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.TwitterConnection.consumer_secret" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Consumer key from a Twitter application.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.TwitterConnection.access_token" class="doc doc-heading">
+<code class="highlight language-python">access_token: Password</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.TwitterConnection.access_token" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Access token for a Twitter user.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.TwitterConnection.access_token_secret" class="doc doc-heading">
+<code class="highlight language-python">access_token_secret: Password</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.TwitterConnection.access_token_secret" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Access token secret for a Twitter user.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.TwitterConnection.mention" class="doc doc-heading">
+<code class="highlight language-python">mention: NonEmptyStr</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.TwitterConnection.mention" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Mention this user in sent tweets.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.TwitterConnection.direct_message" class="doc doc-heading">
+<code class="highlight language-python">direct_message: bool = True</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.TwitterConnection.direct_message" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Send a direct message instead of a public message.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="webhook">Webhook<a class="headerlink" href="#webhook" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.connect.WebhookConnection"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.plugins.sonarr.config.connect.Connection">Connection</span></code></p>
+
+  
+      <p>Send media update and health alert notifications to a webhook API.</p>
+<p>Supported notification triggers: All</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.WebhookConnection.type" class="doc doc-heading">
+<code class="highlight language-python">type: Literal['webhook'] = 'webhook'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.WebhookConnection.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of connection.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.WebhookConnection.method" class="doc doc-heading">
+<code class="highlight language-python">method: WebhookMethod = WebhookMethod.POST</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.WebhookConnection.method" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>HTTP request method type to use.</p>
+<p>Values:</p>
+<ul>
+<li><code>POST</code></li>
+<li><code>PUT</code></li>
+</ul>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.WebhookConnection.username" class="doc doc-heading">
+<code class="highlight language-python">username: NonEmptyStr</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.WebhookConnection.username" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Webhook API username.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.connect.WebhookConnection.password" class="doc doc-heading">
+<code class="highlight language-python">password: Password</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.connect.WebhookConnection.password" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Webhook API password.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../js/base.js" defer></script>
+        <script src="../../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

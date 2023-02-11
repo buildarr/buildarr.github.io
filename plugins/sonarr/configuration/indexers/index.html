@@ -1,0 +1,2315 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../../img/favicon.ico">
+        <title>Indexers - Buildarr</title>
+        <link href="../../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link href="../../../../assets/_mkdocstrings.css" rel="stylesheet">
+
+        <script src="../../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../../..">Buildarr</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../installation/" class="nav-link">Installation</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../configuration/" class="nav-link">Configuration</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Plugins <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../" class="dropdown-item">Introduction</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">buildarr-sonarr</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../" class="dropdown-item">Introduction</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Configuration</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../host/" class="dropdown-item">Host Configuration</a>
+</li>
+            
+<li>
+    <a href="../media-management/" class="dropdown-item">Media Management</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Profiles</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../profiles/quality/" class="dropdown-item">Quality Profiles</a>
+</li>
+            
+<li>
+    <a href="../profiles/language/" class="dropdown-item">Language Profiles</a>
+</li>
+            
+<li>
+    <a href="../profiles/delay/" class="dropdown-item">Delay Profiles</a>
+</li>
+            
+<li>
+    <a href="../profiles/release/" class="dropdown-item">Release Profiles</a>
+</li>
+    </ul>
+  </li>
+            
+<li>
+    <a href="../quality/" class="dropdown-item">Quality</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active">Indexers</a>
+</li>
+            
+<li>
+    <a href="../download-clients/" class="dropdown-item">Download Clients</a>
+</li>
+            
+<li>
+    <a href="../import-lists/" class="dropdown-item">Import Lists</a>
+</li>
+            
+<li>
+    <a href="../connect/" class="dropdown-item">Connect</a>
+</li>
+            
+<li>
+    <a href="../metadata/" class="dropdown-item">Metadata</a>
+</li>
+            
+<li>
+    <a href="../tags/" class="dropdown-item">Tags</a>
+</li>
+            
+<li>
+    <a href="../general/" class="dropdown-item">General</a>
+</li>
+            
+<li>
+    <a href="../ui/" class="dropdown-item">UI</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../usage/" class="nav-link">Usage</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../quality/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../download-clients/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#indexers" class="nav-link">Indexers</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#configuring-indexers" class="nav-link">Configuring indexers</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#fanzub" class="nav-link">Fanzub</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#newznab" class="nav-link">Newznab</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#omgwtfnzbs" class="nav-link">OmgWtfNZBs</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#torrent-indexers" class="nav-link">Torrent Indexers</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#broadcasthenet" class="nav-link">BroadcasTheNet</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#filelist" class="nav-link">Filelist</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#hdbits" class="nav-link">HDBits</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#ip-torrents" class="nav-link">IP Torrents</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#nyaa" class="nav-link">Nyaa</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#rarbg" class="nav-link">Rarbg</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#torrent-rss-feed" class="nav-link">Torrent RSS Feed</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#torrentleech" class="nav-link">TorrentLeech</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#torznab" class="nav-link">Torznab</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="indexers">Indexers<a class="headerlink" href="#indexers" title="Permanent link">#</a></h1>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.indexers.SonarrIndexersSettingsConfig"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.config.ConfigBase">ConfigBase</span></code></p>
+
+  
+      <p>Indexers are used to monitor for new releases of media on external trackers.
+When a suitable release has been found, Sonarr registers it for download
+on one of the configured download clients.</p>
+<pre class="highlight"><code class="language-yaml">sonarr:
+  config:
+    indexers:
+      minimum_age: 0
+      retention: 0
+      maximum_size: 0
+      rss_sync_interval: 15
+      delete_unmanaged: false # Better to leave off for the most part
+      definitions:
+        Nyaa: # Indexer name
+          type: "nyaa" # Type of indexer
+          # Configuration common to all indexers
+          enable_rss: true
+          enable_automatic_search: true
+          enable_interactive_search: true
+          anime_standard_format_search: true
+          indexer_priority: 25
+          download_client: null
+          tags:
+            - "example"
+          # Nyaa-specific configuration
+          website_url: "https://example.com"
+        # Define more indexers here.</code></pre>
+<p>The following parameters are available for configuring indexers and
+how they are handled by Sonarr.</p>
+<p>For more information on how Sonarr finds epsiodes, refer to the FAQ on
+<a href="https://wiki.servarr.com/sonarr/faq#how-does-sonarr-find-episodes">WikiArr</a>.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.SonarrIndexersSettingsConfig.minimum_age" class="doc doc-heading">
+<code class="highlight language-python">minimum_age: int = Field(0, ge=0)</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.SonarrIndexersSettingsConfig.minimum_age" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Minimum age (in minutes) of NZBs before they are grabbed. (Usenet only)</p>
+<p>Use this to give new releases time to propagate to your Usenet provider.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.SonarrIndexersSettingsConfig.retention" class="doc doc-heading">
+<code class="highlight language-python">retention: int = Field(0, ge=0)</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.SonarrIndexersSettingsConfig.retention" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Retention of releases. (Usenet only)</p>
+<p>Set to <code>0</code> for unlimited retention.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.SonarrIndexersSettingsConfig.maximum_size" class="doc doc-heading">
+<code class="highlight language-python">maximum_size: int = Field(0, ge=0)</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.SonarrIndexersSettingsConfig.maximum_size" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Maximum size for a release to be grabbed, in megabytes (MB).</p>
+<p>Set to <code>0</code> to set for unlimited size.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.SonarrIndexersSettingsConfig.rss_sync_interval" class="doc doc-heading">
+<code class="highlight language-python">rss_sync_interval: int = Field(15, ge=0)</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.SonarrIndexersSettingsConfig.rss_sync_interval" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Interval (in minutes) to sync RSS feeds with indexers.</p>
+<p>Set to <code>0</code> to disable syncing. This also disables automatic release grabbing.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.SonarrIndexersSettingsConfig.delete_unmanaged" class="doc doc-heading">
+<code class="highlight language-python">delete_unmanaged: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.SonarrIndexersSettingsConfig.delete_unmanaged" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Automatically delete indexers not configured by Buildarr.</p>
+<p>Take care when enabling this option, as it will also delete indexers
+created by external applications such as Prowlarr.</p>
+<p>If unsure, leave set at the default of <code>false</code>.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.SonarrIndexersSettingsConfig.definitions" class="doc doc-heading">
+<code class="highlight language-python">definitions: Dict[str, Union[FanzubIndexer, NewznabIndexer, OmgwtfnzbsIndexer, BroadcasthenetIndexer, FilelistIndexer, HdbitsIndexer, IptorrentsIndexer, NyaaIndexer, RarbgIndexer, TorrentrssfeedIndexer, TorrentleechIndexer, TorznabIndexer]] = {}</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.SonarrIndexersSettingsConfig.definitions" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Indexer to manage via Buildarr are defined here.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="configuring-indexers">Configuring indexers<a class="headerlink" href="#configuring-indexers" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.indexers.Indexer"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.config.ConfigBase">ConfigBase</span></code></p>
+
+  
+      <p>Here is an example of an indexer being configured in the <code>indexers</code> configuration
+block in Buildarr.</p>
+<pre class="highlight"><code class="language-yaml">...
+  indexers:
+    definitions:
+      Nyaa: # Indexer name
+        type: "nyaa" # Type of indexer
+        # Configuration common to all indexers
+        enable_rss: true
+        enable_automatic_search: true
+        enable_interactive_search: true
+        anime_standard_format_search: true
+        indexer_priority: 25
+        download_client: null
+        tags:
+          - "example"
+        # Nyaa-specific configuration
+        website_url: "https://example.com"
+      # Define more indexers here.</code></pre>
+<p>There are configuration parameters common to all indexer types,
+and parameters common to only specific types of indexers.</p>
+<p>The following configuration attributes can be defined on all indexer types.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.Indexer.enable_rss" class="doc doc-heading">
+<code class="highlight language-python">enable_rss: bool = True</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.Indexer.enable_rss" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>If enabled, use this indexer to watch for files that are wanted and missing
+or have not yet reached their cutoff.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.Indexer.enable_automatic_search" class="doc doc-heading">
+<code class="highlight language-python">enable_automatic_search: bool = True</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.Indexer.enable_automatic_search" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>If enabled, use this indexer for automatic searches, including Search on Add.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.Indexer.enable_interactive_search" class="doc doc-heading">
+<code class="highlight language-python">enable_interactive_search: bool = True</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.Indexer.enable_interactive_search" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>If enabled, use this indexer for manual interactive searches.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.Indexer.anime_standard_format_search" class="doc doc-heading">
+<code class="highlight language-python">anime_standard_format_search: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.Indexer.anime_standard_format_search" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Also search for anime using the standard numbering. Only applies for Anime series types.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.Indexer.indexer_priority" class="doc doc-heading">
+<code class="highlight language-python">indexer_priority: int = Field(25, ge=1, le=50)</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.Indexer.indexer_priority" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios.</p>
+<p>1 is highest priority and 50 is lowest priority.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.Indexer.download_client" class="doc doc-heading">
+<code class="highlight language-python">download_client: Optional[NonEmptyStr] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.Indexer.download_client" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The name of the download client to use for grabs from this indexer.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.Indexer.tags" class="doc doc-heading">
+<code class="highlight language-python">tags: List[NonEmptyStr] = []</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.Indexer.tags" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Only use this indexer for series with at least one matching tag.
+Leave blank to use with all series.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="fanzub">Fanzub<a class="headerlink" href="#fanzub" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.indexers.FanzubIndexer"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.plugins.sonarr.config.indexers.UsenetIndexer">UsenetIndexer</span></code></p>
+
+  
+      <p>An indexer which uses a Fanzub-compatible RSS feed to monitor for releases.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.FanzubIndexer.type" class="doc doc-heading">
+<code class="highlight language-python">type: Literal['fanzub'] = 'fanzub'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.FanzubIndexer.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of indexer.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.FanzubIndexer.rss_url" class="doc doc-heading">
+<code class="highlight language-python">rss_url: RssUrl</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.FanzubIndexer.rss_url" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>A URL to a Fanzub compatible RSS feed.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="newznab">Newznab<a class="headerlink" href="#newznab" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.indexers.NewznabIndexer"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.plugins.sonarr.config.indexers.UsenetIndexer">UsenetIndexer</span></code></p>
+
+  
+      <p>An indexer for monitoring a Newznab-compliant Usenet indexing site.</p>
+<p>Sonarr defines presets for several popular sites.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.NewznabIndexer.type" class="doc doc-heading">
+<code class="highlight language-python">type: Literal['newznab'] = 'newznab'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.NewznabIndexer.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of indexer.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.NewznabIndexer.url" class="doc doc-heading">
+<code class="highlight language-python">url: HttpUrl</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.NewznabIndexer.url" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>URL of the Newznab-compatible indexing site.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.NewznabIndexer.api_path" class="doc doc-heading">
+<code class="highlight language-python">api_path: NonEmptyStr = '/api'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.NewznabIndexer.api_path" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Newznab API endpoint. Usually <code>/api</code>.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.NewznabIndexer.categories" class="doc doc-heading">
+<code class="highlight language-python">categories: Set[NabCategory] = {NabCategory.TV_SD, NabCategory.TV_HD}</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.NewznabIndexer.categories" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Categories to monitor for standard/daily shows.
+Define as empty to disable.</p>
+<p>Values:</p>
+<ul>
+<li><code>TV-WEBDL</code></li>
+<li><code>TV-Foreign</code></li>
+<li><code>TV-SD</code></li>
+<li><code>TV-HD</code></li>
+<li><code>TV-UHD</code></li>
+<li><code>TV-Other</code></li>
+<li><code>TV-Sports</code></li>
+<li><code>TV-Anime</code></li>
+<li><code>TV-Documentary</code></li>
+</ul>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.NewznabIndexer.anime_categories" class="doc doc-heading">
+<code class="highlight language-python">anime_categories: Set[NabCategory] = set()</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.NewznabIndexer.anime_categories" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Categories to monitor for anime.
+Define as empty to disable.</p>
+<p>Values:</p>
+<ul>
+<li><code>TV-WEBDL</code></li>
+<li><code>TV-Foreign</code></li>
+<li><code>TV-SD</code></li>
+<li><code>TV-HD</code></li>
+<li><code>TV-UHD</code></li>
+<li><code>TV-Other</code></li>
+<li><code>TV-Sports</code></li>
+<li><code>TV-Anime</code></li>
+<li><code>TV-Documentary</code></li>
+</ul>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.NewznabIndexer.additional_parameters" class="doc doc-heading">
+<code class="highlight language-python">additional_parameters: Optional[str] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.NewznabIndexer.additional_parameters" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Additional Newznab API parameters.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="omgwtfnzbs">OmgWtfNZBs<a class="headerlink" href="#omgwtfnzbs" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.indexers.OmgwtfnzbsIndexer"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.plugins.sonarr.config.indexers.UsenetIndexer">UsenetIndexer</span></code></p>
+
+  
+      <p>An indexer for monitoring OmgWtfNZBs.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.OmgwtfnzbsIndexer.type" class="doc doc-heading">
+<code class="highlight language-python">type: Literal['omgwtfnzbs'] = 'omgwtfnzbs'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.OmgwtfnzbsIndexer.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of indexer.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.OmgwtfnzbsIndexer.username" class="doc doc-heading">
+<code class="highlight language-python">username: NonEmptyStr</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.OmgwtfnzbsIndexer.username" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Username for the OmgWtfNZBs account.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.OmgwtfnzbsIndexer.api_key" class="doc doc-heading">
+<code class="highlight language-python">api_key: Password</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.OmgwtfnzbsIndexer.api_key" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>API key for the OmgWtfNZBs API.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.OmgwtfnzbsIndexer.delay" class="doc doc-heading">
+<code class="highlight language-python">delay: int = Field(30, ge=0)</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.OmgwtfnzbsIndexer.delay" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Time (in minutes) to delay new NZBs before they appear on the RSS feed.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="torrent-indexers">Torrent Indexers<a class="headerlink" href="#torrent-indexers" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.indexers.TorrentIndexer"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><a class="autorefs autorefs-internal" title="buildarr.plugins.sonarr.config.indexers.Indexer" href="#buildarr.plugins.sonarr.config.indexers.Indexer">Indexer</a></code></p>
+
+  
+      <p>Configuration attributes common to all torrent indexers.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.TorrentIndexer.minimum_seeders" class="doc doc-heading">
+<code class="highlight language-python">minimum_seeders: PositiveInt = 1</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.TorrentIndexer.minimum_seeders" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The minimum number of seeders required before downloading a release.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.TorrentIndexer.seed_ratio" class="doc doc-heading">
+<code class="highlight language-python">seed_ratio: Optional[float] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.TorrentIndexer.seed_ratio" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The seed ratio a torrent should reach before stopping.</p>
+<p>If unset or set to <code>null</code>, use the download client's defaults.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.TorrentIndexer.seed_time" class="doc doc-heading">
+<code class="highlight language-python">seed_time: Optional[int] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.TorrentIndexer.seed_time" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The amount of time (in minutes) a torrent should be seeded before stopping.</p>
+<p>If unset or set to <code>null</code>, use the download client's defaults.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.TorrentIndexer.seasonpack_seed_time" class="doc doc-heading">
+<code class="highlight language-python">seasonpack_seed_time: Optional[int] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.TorrentIndexer.seasonpack_seed_time" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The amount of time (in minutes) a season-pack torrent should be seeded before stopping.</p>
+<p>If unset or set to <code>null</code>, use the download client's defaults.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="broadcasthenet">BroadcasTheNet<a class="headerlink" href="#broadcasthenet" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.indexers.BroadcasthenetIndexer"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><a class="autorefs autorefs-internal" title="buildarr.plugins.sonarr.config.indexers.TorrentIndexer" href="#buildarr.plugins.sonarr.config.indexers.TorrentIndexer">TorrentIndexer</a></code></p>
+
+  
+      <p>Indexer for monitoring for new releases on BroacasTheNet.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.BroadcasthenetIndexer.type" class="doc doc-heading">
+<code class="highlight language-python">type: Literal['broadcasthenet'] = 'broadcasthenet'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.BroadcasthenetIndexer.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of indexer.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.BroadcasthenetIndexer.api_url" class="doc doc-heading">
+<code class="highlight language-python">api_url: HttpUrl = 'https://api.broadcasthe.net'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.BroadcasthenetIndexer.api_url" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>BroadcasTheNet API URL.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.BroadcasthenetIndexer.api_key" class="doc doc-heading">
+<code class="highlight language-python">api_key: Password</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.BroadcasthenetIndexer.api_key" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>BroadcasTheNet API key.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="filelist">Filelist<a class="headerlink" href="#filelist" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.indexers.FilelistIndexer"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><a class="autorefs autorefs-internal" title="buildarr.plugins.sonarr.config.indexers.TorrentIndexer" href="#buildarr.plugins.sonarr.config.indexers.TorrentIndexer">TorrentIndexer</a></code></p>
+
+  
+      <p>Monitor for new releases on FileList.io.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.FilelistIndexer.type" class="doc doc-heading">
+<code class="highlight language-python">type: Literal['filelist'] = 'filelist'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.FilelistIndexer.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of indexer.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.FilelistIndexer.username" class="doc doc-heading">
+<code class="highlight language-python">username: NonEmptyStr</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.FilelistIndexer.username" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>FileList username.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.FilelistIndexer.passkey" class="doc doc-heading">
+<code class="highlight language-python">passkey: Password</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.FilelistIndexer.passkey" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>FileList account API key.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.FilelistIndexer.api_url" class="doc doc-heading">
+<code class="highlight language-python">api_url: HttpUrl = 'https://filelist.io'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.FilelistIndexer.api_url" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>FileList API URL.</p>
+<p>Do not change this unless you know what you're doing,
+as your API key will be sent to this host.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.FilelistIndexer.categories" class="doc doc-heading">
+<code class="highlight language-python">categories: List[FilelistCategory] = [FilelistCategory.TV_SD, FilelistCategory.TV_HD, FilelistCategory.TV_4K]</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.FilelistIndexer.categories" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Categories to monitor for standard/daily show new releases.</p>
+<p>Set to an empty list to not monitor for standard/daily shows.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.FilelistIndexer.anime_categories" class="doc doc-heading">
+<code class="highlight language-python">anime_categories: List[FilelistCategory] = []</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.FilelistIndexer.anime_categories" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Categories to monitor for anime new releases.</p>
+<p>Leave empty to not monitor for anime.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="hdbits">HDBits<a class="headerlink" href="#hdbits" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.indexers.HdbitsIndexer"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><a class="autorefs autorefs-internal" title="buildarr.plugins.sonarr.config.indexers.TorrentIndexer" href="#buildarr.plugins.sonarr.config.indexers.TorrentIndexer">TorrentIndexer</a></code></p>
+
+  
+      <p>Monitor for new releases on HDBits.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.HdbitsIndexer.type" class="doc doc-heading">
+<code class="highlight language-python">type: Literal['hdbits'] = 'hdbits'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.HdbitsIndexer.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of indexer.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.HdbitsIndexer.username" class="doc doc-heading">
+<code class="highlight language-python">username: NonEmptyStr</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.HdbitsIndexer.username" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>HDBits account username.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.HdbitsIndexer.api_key" class="doc doc-heading">
+<code class="highlight language-python">api_key: Password</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.HdbitsIndexer.api_key" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>HDBits API key assigned to the account.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.HdbitsIndexer.api_url" class="doc doc-heading">
+<code class="highlight language-python">api_url: HttpUrl = 'https://hdbits.org'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.HdbitsIndexer.api_url" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>HDBits API URL.</p>
+<p>Do not change this unless you know what you're doing,
+as your API key will be sent to this host.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="ip-torrents">IP Torrents<a class="headerlink" href="#ip-torrents" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.indexers.IptorrentsIndexer"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><a class="autorefs autorefs-internal" title="buildarr.plugins.sonarr.config.indexers.TorrentIndexer" href="#buildarr.plugins.sonarr.config.indexers.TorrentIndexer">TorrentIndexer</a></code></p>
+
+  
+      <p>Monitor for releases using the IP Torrents native API.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>IP Torrents' native API does not support automatic searching.
+It is recommended to instead configure IP Torrents as a Torznab indexer.</p>
+</div>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.IptorrentsIndexer.type" class="doc doc-heading">
+<code class="highlight language-python">type: Literal['iptorrents'] = 'iptorrents'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.IptorrentsIndexer.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of indexer.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.IptorrentsIndexer.feed_url" class="doc doc-heading">
+<code class="highlight language-python">feed_url: RssUrl</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.IptorrentsIndexer.feed_url" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The full RSS feed url generated by IP Torrents, using only the categories
+you selected (HD, SD, x264, etc ...).</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="nyaa">Nyaa<a class="headerlink" href="#nyaa" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.indexers.NyaaIndexer"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><a class="autorefs autorefs-internal" title="buildarr.plugins.sonarr.config.indexers.TorrentIndexer" href="#buildarr.plugins.sonarr.config.indexers.TorrentIndexer">TorrentIndexer</a></code></p>
+
+  
+      <p>Monitor for new anime releases on the configured Nyaa domain.</p>
+<p>Nyaa only supports searching for Anime series type releases.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.NyaaIndexer.type" class="doc doc-heading">
+<code class="highlight language-python">type: Literal['nyaa'] = 'nyaa'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.NyaaIndexer.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of indexer.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.NyaaIndexer.website_url" class="doc doc-heading">
+<code class="highlight language-python">website_url: HttpUrl</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.NyaaIndexer.website_url" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>HTTPS URL for accessing Nyaa.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.NyaaIndexer.additional_parameters" class="doc doc-heading">
+<code class="highlight language-python">additional_parameters: Optional[str] = '&amp;cats=1_0&amp;filter=1'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.NyaaIndexer.additional_parameters" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Parameters to send in the Nyaa search request.</p>
+<p>Note that if you change the category, you will have to add
+required/restricted rules about the subgroups to avoid foreign language releases.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="rarbg">Rarbg<a class="headerlink" href="#rarbg" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.indexers.RarbgIndexer"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><a class="autorefs autorefs-internal" title="buildarr.plugins.sonarr.config.indexers.TorrentIndexer" href="#buildarr.plugins.sonarr.config.indexers.TorrentIndexer">TorrentIndexer</a></code></p>
+
+  
+      <p>Monitor for new releases on the RARBG torrent tracker.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.RarbgIndexer.type" class="doc doc-heading">
+<code class="highlight language-python">type: Literal['rarbg'] = 'rarbg'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.RarbgIndexer.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of indexer.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.RarbgIndexer.api_url" class="doc doc-heading">
+<code class="highlight language-python">api_url: HttpUrl</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.RarbgIndexer.api_url" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>RARBG API url.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.RarbgIndexer.ranked_only" class="doc doc-heading">
+<code class="highlight language-python">ranked_only: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.RarbgIndexer.ranked_only" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Only include ranked results.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.RarbgIndexer.captcha_token" class="doc doc-heading">
+<code class="highlight language-python">captcha_token: Optional[str] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.RarbgIndexer.captcha_token" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>CAPTCHA clearance token used to handle CloudFlare anti-DDoS measures on shared-IP VPNs.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="torrent-rss-feed">Torrent RSS Feed<a class="headerlink" href="#torrent-rss-feed" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.indexers.TorrentrssfeedIndexer"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><a class="autorefs autorefs-internal" title="buildarr.plugins.sonarr.config.indexers.TorrentIndexer" href="#buildarr.plugins.sonarr.config.indexers.TorrentIndexer">TorrentIndexer</a></code></p>
+
+  
+      <p>Generic parser for monitoring a torrent RSS feed.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This indexer does not support automatic searching.
+It is recommended to use an indexer that natively communicates with
+a tracker using an API.</p>
+</div>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.TorrentrssfeedIndexer.type" class="doc doc-heading">
+<code class="highlight language-python">type: Literal['torrentrssfeed'] = 'torrentrssfeed'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.TorrentrssfeedIndexer.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of indexer.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.TorrentrssfeedIndexer.full_rss_feed_url" class="doc doc-heading">
+<code class="highlight language-python">full_rss_feed_url: RssUrl</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.TorrentrssfeedIndexer.full_rss_feed_url" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>RSS feed to monitor.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.TorrentrssfeedIndexer.cookie" class="doc doc-heading">
+<code class="highlight language-python">cookie: Optional[str] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.TorrentrssfeedIndexer.cookie" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Session cookie for accessing the RSS feed.</p>
+<p>If the RSS feed requires one, this should be retrieved manually via a web browser.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.TorrentrssfeedIndexer.allow_zero_size" class="doc doc-heading">
+<code class="highlight language-python">allow_zero_size: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.TorrentrssfeedIndexer.allow_zero_size" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Allow access to releases that don't specify release size.</p>
+<p>As size checks will not be performed, be careful when enabling this option.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="torrentleech">TorrentLeech<a class="headerlink" href="#torrentleech" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.indexers.TorrentleechIndexer"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><a class="autorefs autorefs-internal" title="buildarr.plugins.sonarr.config.indexers.TorrentIndexer" href="#buildarr.plugins.sonarr.config.indexers.TorrentIndexer">TorrentIndexer</a></code></p>
+
+  
+      <p>Monitor for new releases on TorrentLeech.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This indexer does not support automatic searching.</p>
+</div>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.TorrentleechIndexer.type" class="doc doc-heading">
+<code class="highlight language-python">type: Literal['torrentleech'] = 'torrentleech'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.TorrentleechIndexer.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of indexer.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.TorrentleechIndexer.website_url" class="doc doc-heading">
+<code class="highlight language-python">website_url: HttpUrl = 'http://rss.torrentleech.org'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.TorrentleechIndexer.website_url" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>TorrentLeech feed API URL.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.TorrentleechIndexer.api_key" class="doc doc-heading">
+<code class="highlight language-python">api_key: Password</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.TorrentleechIndexer.api_key" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>TorrentLeech API key.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="torznab">Torznab<a class="headerlink" href="#torznab" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.indexers.TorznabIndexer"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><a class="autorefs autorefs-internal" title="buildarr.plugins.sonarr.config.indexers.TorrentIndexer" href="#buildarr.plugins.sonarr.config.indexers.TorrentIndexer">TorrentIndexer</a></code></p>
+
+  
+      <p>Monitor and search for new releases on a Torznab-compliant torrent indexing site.</p>
+<p>Sonarr defines presets for several popular sites.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.TorznabIndexer.type" class="doc doc-heading">
+<code class="highlight language-python">type: Literal['torznab'] = 'torznab'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.TorznabIndexer.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of indexer.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.TorznabIndexer.url" class="doc doc-heading">
+<code class="highlight language-python">url: HttpUrl</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.TorznabIndexer.url" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>URL of the Torznab-compatible indexing site.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.TorznabIndexer.api_path" class="doc doc-heading">
+<code class="highlight language-python">api_path: NonEmptyStr = '/api'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.TorznabIndexer.api_path" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Tornab API endpoint. Usually <code>/api</code>.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.TorznabIndexer.categories" class="doc doc-heading">
+<code class="highlight language-python">categories: Set[NabCategory] = {NabCategory.TV_SD, NabCategory.TV_HD}</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.TorznabIndexer.categories" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Categories to monitor for standard/daily shows.
+Define as empty to disable.</p>
+<p>Values:</p>
+<ul>
+<li><code>TV-WEBDL</code></li>
+<li><code>TV-Foreign</code></li>
+<li><code>TV-SD</code></li>
+<li><code>TV-HD</code></li>
+<li><code>TV-UHD</code></li>
+<li><code>TV-Other</code></li>
+<li><code>TV-Sports</code></li>
+<li><code>TV-Anime</code></li>
+<li><code>TV-Documentary</code></li>
+</ul>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.TorznabIndexer.anime_categories" class="doc doc-heading">
+<code class="highlight language-python">anime_categories: Set[NabCategory] = set()</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.TorznabIndexer.anime_categories" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Categories to monitor for anime.</p>
+<p>Values:</p>
+<ul>
+<li><code>TV-WEBDL</code></li>
+<li><code>TV-Foreign</code></li>
+<li><code>TV-SD</code></li>
+<li><code>TV-HD</code></li>
+<li><code>TV-UHD</code></li>
+<li><code>TV-Other</code></li>
+<li><code>TV-Sports</code></li>
+<li><code>TV-Anime</code></li>
+<li><code>TV-Documentary</code></li>
+</ul>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.indexers.TorznabIndexer.additional_parameters" class="doc doc-heading">
+<code class="highlight language-python">additional_parameters: Optional[str] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.indexers.TorznabIndexer.additional_parameters" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Additional Torznab API parameters.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../js/base.js" defer></script>
+        <script src="../../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

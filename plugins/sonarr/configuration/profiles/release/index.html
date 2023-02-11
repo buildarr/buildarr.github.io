@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../../../img/favicon.ico">
+        <title>Release Profiles - Buildarr</title>
+        <link href="../../../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link href="../../../../../assets/_mkdocstrings.css" rel="stylesheet">
+
+        <script src="../../../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../../../..">Buildarr</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../../installation/" class="nav-link">Installation</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../../configuration/" class="nav-link">Configuration</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Plugins <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../../" class="dropdown-item">Introduction</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">buildarr-sonarr</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../" class="dropdown-item">Introduction</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Configuration</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../host/" class="dropdown-item">Host Configuration</a>
+</li>
+            
+<li>
+    <a href="../../media-management/" class="dropdown-item">Media Management</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Profiles</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../quality/" class="dropdown-item">Quality Profiles</a>
+</li>
+            
+<li>
+    <a href="../language/" class="dropdown-item">Language Profiles</a>
+</li>
+            
+<li>
+    <a href="../delay/" class="dropdown-item">Delay Profiles</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active">Release Profiles</a>
+</li>
+    </ul>
+  </li>
+            
+<li>
+    <a href="../../quality/" class="dropdown-item">Quality</a>
+</li>
+            
+<li>
+    <a href="../../indexers/" class="dropdown-item">Indexers</a>
+</li>
+            
+<li>
+    <a href="../../download-clients/" class="dropdown-item">Download Clients</a>
+</li>
+            
+<li>
+    <a href="../../import-lists/" class="dropdown-item">Import Lists</a>
+</li>
+            
+<li>
+    <a href="../../connect/" class="dropdown-item">Connect</a>
+</li>
+            
+<li>
+    <a href="../../metadata/" class="dropdown-item">Metadata</a>
+</li>
+            
+<li>
+    <a href="../../tags/" class="dropdown-item">Tags</a>
+</li>
+            
+<li>
+    <a href="../../general/" class="dropdown-item">General</a>
+</li>
+            
+<li>
+    <a href="../../ui/" class="dropdown-item">UI</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../../usage/" class="nav-link">Usage</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../delay/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../quality/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#release-profiles" class="nav-link">Release Profiles</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#general-configuration" class="nav-link">General configuration</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#creating-a-release-profile" class="nav-link">Creating a release profile</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#manually-defining-filters" class="nav-link">Manually defining filters</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#importing-release-profiles-from-trash-guides" class="nav-link">Importing release profiles from TRaSH-Guides</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#trash-guides-release-profile-import-examples" class="nav-link">TRaSH-Guides release profile import examples</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="release-profiles">Release Profiles<a class="headerlink" href="#release-profiles" title="Permanent link">#</a></h1>
+<p>Release profiles are used to select releases to download that best fit the criteria for what you want to retrieve for your media library.</p>
+<p>Since not all releases are created equal, and each release group has their own way of packaging and encoding their material, being able to dial-in what Sonarr selects is important to getting good results.</p>
+<pre class="highlight"><code class="language-yaml">sonarr:
+  settings:
+    profiles:
+      release_profiles:
+        definitions:
+          Example:
+            must_contain:
+              - '\.*\.mkv$/i'
+            must_not_contain:
+              - '-FAKEGROUP'
+            preferred:
+              - term: '/\b(amzn|amazon)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i'
+                score: 100
+              - term: '/(-BRiNK|-CHX|-GHOSTS|-EVO|)\b/i'
+                score: -10000
+          Release Sources (Streaming Service):
+            trash_id: 1B018E0C53EC825085DD911102E2CA36
+          P2P Groups + Repack/Proper:
+            trash_id: 71899E6C303A07AF0E4746EFF9873532</code></pre>
+<p>In Buildarr, release profiles are defined using a dictonary structure. Each profile has either a set of
+filters determining the kind of releases that should be prioritised (or ignored),
+or a reference to an external provider of pre-made release profiles like TRaSH-Guides.</p>
+<p>For more information on release profiles, refer to this page on
+<a href="https://wiki.servarr.com/sonarr/settings#release-profiles">WikiArr</a>.</p>
+<h2 id="general-configuration">General configuration<a class="headerlink" href="#general-configuration" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.profiles.release.SonarrReleaseProfilesSettingsConfig"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.config.ConfigBase">ConfigBase</span></code></p>
+
+  
+      <p>Configuration parameters for controlling how Buildarr handles release profiles.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.profiles.release.SonarrReleaseProfilesSettingsConfig.delete_unmanaged" class="doc doc-heading">
+<code class="highlight language-python">delete_unmanaged: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.profiles.release.SonarrReleaseProfilesSettingsConfig.delete_unmanaged" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Automatically delete release profiles not defined in Buildarr.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.profiles.release.SonarrReleaseProfilesSettingsConfig.definitions" class="doc doc-heading">
+<code class="highlight language-python">definitions: Dict[str, ReleaseProfile] = {}</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.profiles.release.SonarrReleaseProfilesSettingsConfig.definitions" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Define release profiles to configure on Sonarr here.</p>
+<p>If there are no release profiles defined and <code>delete_unmanaged</code> is <code>False</code>,
+Buildarr will not modify existing release profiles, but if <code>delete_unmanaged</code> is <code>True</code>,
+<strong>Buildarr will delete all existing profiles. Be careful when using <code>delete_unmanaged</code>.</strong></p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="creating-a-release-profile">Creating a release profile<a class="headerlink" href="#creating-a-release-profile" title="Permanent link">#</a></h2>
+<p>Release profiles are defined in Sonarr like this.</p>
+<pre class="highlight"><code class="language-yaml">sonarr:
+  settings:
+    profiles:
+      release_profiles:
+        definitions:
+          Example:
+            must_contain:
+              - '\.*\.mkv$/i'
+            must_not_contain:
+              - '-FAKEGROUP'
+            preferred:
+              - term: '/\b(amzn|amazon)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i'
+                score: 100
+              - term: '/(-BRiNK|-CHX|-GHOSTS|-EVO|)\b/i'
+                score: -10000</code></pre>
+<p>The below attributes are common to all release profiles.</p>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.profiles.release.ReleaseProfile"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.config.ConfigBase">ConfigBase</span></code></p>
+
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.profiles.release.ReleaseProfile.enable" class="doc doc-heading">
+<code class="highlight language-python">enable: bool = True</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.profiles.release.ReleaseProfile.enable" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Enable the release profile in Sonarr.</p>
+<p>If set to <code>False</code>, the release profile will be uploaded to Sonarr, but inactive.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.profiles.release.ReleaseProfile.include_preferred_when_renaming" class="doc doc-heading">
+<code class="highlight language-python">include_preferred_when_renaming: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.profiles.release.ReleaseProfile.include_preferred_when_renaming" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Add preferred words to the file name as <code>{Preferred Words}</code>
+when doing automatic renaming in Sonarr.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.profiles.release.ReleaseProfile.indexer" class="doc doc-heading">
+<code class="highlight language-python">indexer: Optional[NonEmptyStr] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.profiles.release.ReleaseProfile.indexer" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>When set to <code>None</code> or an empty string, use any available indexer.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.profiles.release.ReleaseProfile.tags" class="doc doc-heading">
+<code class="highlight language-python">tags: Set[NonEmptyStr] = set()</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.profiles.release.ReleaseProfile.tags" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>A list of one or more strings representing tags that will be applied to this release profile.</p>
+<p>All tags on an existing release profile (if present) are removed
+and replaced with only the tags in this list.</p>
+<p>If an empty list is explicitly defined, no tags will be set on the release profile,
+and any existing tags (if present) are removed.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="manually-defining-filters">Manually defining filters<a class="headerlink" href="#manually-defining-filters" title="Permanent link">#</a></h2>
+<p>When not importing release profiles from external sources like TRaSH-Guides,
+settings for how to prefer and ignore releases must be defined within
+the release profile using the following parameters.</p>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.profiles.release.ReleaseProfile"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.config.ConfigBase">ConfigBase</span></code></p>
+
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.profiles.release.ReleaseProfile.must_contain" class="doc doc-heading">
+<code class="highlight language-python">must_contain: Set[NonEmptyStr] = set()</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.profiles.release.ReleaseProfile.must_contain" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>A list of terms to mark as "Must Contain" in Sonarr.</p>
+<p>The release will be rejected if it does not contain one or more of terms
+(case insensitive) or regular expressions.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.profiles.release.ReleaseProfile.must_not_contain" class="doc doc-heading">
+<code class="highlight language-python">must_not_contain: Set[NonEmptyStr] = set()</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.profiles.release.ReleaseProfile.must_not_contain" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>A list of terms to mark as "Must Not Contain" in Sonarr.</p>
+<p>The release will be rejected if it contains one or more of terms (case insensitive)
+or regular expressions.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.profiles.release.ReleaseProfile.preferred" class="doc doc-heading">
+<code class="highlight language-python">preferred: List[PreferredWord] = []</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.profiles.release.ReleaseProfile.preferred" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Assign a score to terms (or a regular expression patterns) found in the file name
+of a release, and prefer it or not prefer it depending on the result
+of comparing a release file name against all terms.</p>
+<pre class="highlight"><code class="language-yaml">...
+  release_profiles:
+    Example:
+      preferred:
+        - term: "/(amzn|amazon)(?=[ ._-]web[ ._-]?(dl|rip))/i"
+          score: 100
+        - term: "/(-BRiNK|-CHX|-GHOSTS|-EVO|)/i"
+          score: -10000</code></pre>
+<p>The release will be preferred based on each term's score.
+Positive scores will be more preferred, and negative scores will be less preferred.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="importing-release-profiles-from-trash-guides">Importing release profiles from TRaSH-Guides<a class="headerlink" href="#importing-release-profiles-from-trash-guides" title="Permanent link">#</a></h2>
+<p>TRaSH-Guides maintains a list of release profiles for a variety of use cases.</p>
+<ul>
+<li><a href="https://trash-guides.info/Sonarr/Sonarr-Release-Profile-RegEx/">Release Profile RegEx (WEB-DL)</a></li>
+<li><a href="https://trash-guides.info/Sonarr/Sonarr-Release-Profile-RegEx-Anime/">Release Profile RegEx (Anime)</a></li>
+</ul>
+<p>Buildarr supports downloading these release profiles from the
+<a href="https://github.com/TRaSH-/Guides/tree/master/docs/json/sonarr/rp">TRaSH-Guides metadata repository</a>,
+and pushing the latest changes to Sonarr directly, without having to manually input them.</p>
+<pre class="highlight"><code class="language-yaml">sonarr:
+  settings:
+    profiles:
+      release_profiles:
+        definitions:
+          Release Sources (Streaming Service):
+            trash_id: 1B018E0C53EC825085DD911102E2CA36
+          P2P Groups + Repack/Proper:
+            trash_id: 71899E6C303A07AF0E4746EFF9873532</code></pre>
+<p>When using imported release profiles, the filters within the release profile itself cannot be modified,
+but there are some customisation options that alter how Buildarr interprets them.
+These are identical to the customisation options for release profiles
+provided by
+<a href="https://recyclarr.dev/wiki/yaml/config-reference#release-profile-settings">Recyclarr</a>.</p>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.profiles.release.ReleaseProfile"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.config.ConfigBase">ConfigBase</span></code></p>
+
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.profiles.release.ReleaseProfile.trash_id" class="doc doc-heading">
+<code class="highlight language-python">trash_id: Optional[TrashID] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.profiles.release.ReleaseProfile.trash_id" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The trash ID of the release profile to import from TRaSH-Guides metadata.</p>
+<p>If not specified, Buildarr assumes the release profile filters are manually defined.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.profiles.release.ReleaseProfile.filter" class="doc doc-heading">
+<code class="highlight language-python">filter: TrashFilter = TrashFilter()</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.profiles.release.ReleaseProfile.filter" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.profiles.release.TrashFilter"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.config.ConfigBase">ConfigBase</span></code></p>
+
+  
+      <p>Defines various ways that release profile terms from the guide are synchronised with Sonarr.
+These terms have individual trash IDs, and using this filter allows you to
+pick and choose which parts of the release profile you want to use.</p>
+<pre class="highlight"><code class="language-yaml">...
+  release_profiles:
+    definitions:
+      Optionals:
+        trash_id: 76e060895c5b8a765c310933da0a5357
+        filter:
+          include:
+            - ea83f4740cec4df8112f3d6dd7c82751 # Prefer Season Packs
+            - cec8880b847dd5d31d29167ee0112b57 # Ignore 720p/1080p HEVC (Golden Rule)
+            # All the other preferred words in the 'Optionals' profile
+            # are ignored.</code></pre>
+<p>The attributes <code>include</code> and <code>exclude</code> are mutually exclusive.
+If both are defined, <code>include</code> is used.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="buildarr.plugins.sonarr.config.profiles.release.TrashFilter.include" class="doc doc-heading">
+<code class="highlight language-python">include: List[TrashID] = []</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.profiles.release.TrashFilter.include" class="headerlink" title="Permanent link">#</a></h6>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>A list of <code>trash_id</code> values representing terms (<code>Required</code>, <code>Ignored</code>, or <code>Preferred</code>)
+that should be included in the created Release Profile in Sonarr.</p>
+<p>Terms that are <em>not</em> specified here are excluded automatically.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="buildarr.plugins.sonarr.config.profiles.release.TrashFilter.exclude" class="doc doc-heading">
+<code class="highlight language-python">exclude: List[TrashID] = []</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.profiles.release.TrashFilter.exclude" class="headerlink" title="Permanent link">#</a></h6>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>A list of <code>trash_id</code> values representing terms (<code>Required</code>, <code>Ignored</code>, or <code>Preferred</code>)
+that should be excluded from the created Release Profile in Sonarr.</p>
+<p>Terms that are <em>not</em> specified here are included automatically.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.profiles.release.ReleaseProfile.strict_negative_scores" class="doc doc-heading">
+<code class="highlight language-python">strict_negative_scores: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.profiles.release.ReleaseProfile.strict_negative_scores" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Enables preferred term scores less than 0 to be instead treated
+as "Must Not Contain" (ignored) terms.</p>
+<p>For example, if something is "Preferred" with a score of <code>-10,</code> it will instead
+be put in the "Must Not Contain" section of the uploaded release profile.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="trash-guides-release-profile-import-examples">TRaSH-Guides release profile import examples<a class="headerlink" href="#trash-guides-release-profile-import-examples" title="Permanent link">#</a></h2>
+<p>Here are some examples of importing well used release profiles from TRaSH-Guides.</p>
+<h5 id="release-profile-regex-web-dl">Release Profile RegEx (WEB-DL)<a class="headerlink" href="#release-profile-regex-web-dl" title="Permanent link">#</a></h5>
+<pre class="highlight"><code class="language-yaml">sonarr:
+  settings:
+    profiles:
+      release_profiles:
+        definitions:
+          Release Sources (Streaming Service):
+            trash_id: 1B018E0C53EC825085DD911102E2CA36
+          P2P Groups + Repack/Proper:
+            trash_id: 71899E6C303A07AF0E4746EFF9873532
+          Low Quality Groups:
+            trash_id: EBC725268D687D588A20CBC5F97E538B
+          Optionals:
+            trash_id: 76e060895c5b8a765c310933da0a5357
+            filter:
+              include:
+                - ea83f4740cec4df8112f3d6dd7c82751 # Prefer Season Packs
+                - 6f2aefa61342a63387f2a90489e90790 # Dislike renamed/retagged releases
+                - 19cd5ecc0a24bf493a75e80a51974cdd # Dislike retagged/obfuscated groups
+                - 6a7b462c6caee4a991a9d8aa38ce2405 # Dislike release ending: en
+                - 236a3626a07cacf5692c73cc947bc280 # Dislike release containing: 1-
+                - cec8880b847dd5d31d29167ee0112b57 # Ignore 720p/1080p HEVC re-encodes (Golden Rule)
+                - 436f5a7d08fbf02ba25cb5e5dfe98e55 # Ignore Dolby Vision without HDR10 fallback
+                - f3f0f3691c6a1988d4a02963e69d11f2 # Ignore The Group -SCENE
+                - 5bc23c3a055a1a5d8bbe4fb49d80e0cb # Ignore so-called scene releases
+                - 538bad00ee6f8aced8e0db5218b8484c # Ignore Bad Dual Audio Groups
+                - 4861d8238f9234606df6721df6e27deb # Ignore AV1</code></pre>
+<h5 id="release-profile-regex-anime">Release Profile RegEx (Anime)<a class="headerlink" href="#release-profile-regex-anime" title="Permanent link">#</a></h5>
+<pre class="highlight"><code class="language-yaml">sonarr:
+  settings:
+    profiles:
+      release_profiles:
+        definitions:
+          Anime Profile 1:
+            #   * Prefer uncensored
+            #   * Prefer Multi-Audio or Dual-Audio
+            # https://trash-guides.info/Sonarr/Sonarr-Release-Profile-RegEx-Anime/#first-release-profile
+            trash_id: d428eda85af1df8904b4bbe4fc2f537c
+            strict_negative_scores: true
+          Anime Profile 2:
+            # Prioritise/ignore releases based on group.
+            # You may need to adjust the profile based on actual results.
+            # https://trash-guides.info/Sonarr/Sonarr-Release-Profile-RegEx-Anime/#second-release-profile
+            trash_id: 6cd9e10bb5bb4c63d2d7cd3279924c7b
+            strict_negative_scores: true</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../../js/base.js" defer></script>
+        <script src="../../../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
