@@ -247,6 +247,10 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-level="2"><a href="#utorrent" class="nav-link">uTorrent</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#configuring-remote-path-mappings" class="nav-link">Configuring remote path mappings</a>
               <ul class="nav flex-column">
               </ul>
@@ -3967,6 +3971,306 @@ Using a category is optional, but strongly recommended.</p>
   <div class="doc doc-contents ">
   
       <p>Add media to the download client in the Paused state.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="utorrent">uTorrent<a class="headerlink" href="#utorrent" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr.plugins.sonarr.config.download_clients.download_clients.UtorrentDownloadClient"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr.plugins.sonarr.config.download_clients.download_clients.TorrentDownloadClient">TorrentDownloadClient</span></code></p>
+
+  
+      <p>uTorrent download client.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.UtorrentDownloadClient.type" class="doc doc-heading">
+<code class="highlight language-python">type: Literal['utorrent'] = 'utorrent'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.UtorrentDownloadClient.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.UtorrentDownloadClient.host" class="doc doc-heading">
+<code class="highlight language-python">host: NonEmptyStr</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.UtorrentDownloadClient.host" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>uTorrent host name.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.UtorrentDownloadClient.port" class="doc doc-heading">
+<code class="highlight language-python">port: Port = 8080</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.UtorrentDownloadClient.port" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Download client access port.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.UtorrentDownloadClient.use_ssl" class="doc doc-heading">
+<code class="highlight language-python">use_ssl: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.UtorrentDownloadClient.use_ssl" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Use a secure connection when connecting to the download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.UtorrentDownloadClient.url_base" class="doc doc-heading">
+<code class="highlight language-python">url_base: Optional[str] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.UtorrentDownloadClient.url_base" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Adds a prefix to the uTorrent URL, e.g. <code>http://[host]:[port]/[url_base]/api</code>.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.UtorrentDownloadClient.username" class="doc doc-heading">
+<code class="highlight language-python">username: NonEmptyStr</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.UtorrentDownloadClient.username" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>User name to use when authenticating with the download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.UtorrentDownloadClient.password" class="doc doc-heading">
+<code class="highlight language-python">password: Password</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.UtorrentDownloadClient.password" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Password to use to authenticate the download client user.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.UtorrentDownloadClient.category" class="doc doc-heading">
+<code class="highlight language-python">category: Optional[str] = 'tv-sonarr'</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.UtorrentDownloadClient.category" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Associate media from Sonarr with a category.</p>
+<p>Adding a category specific to Sonarr avoids conflicts with unrelated non-Sonarr downloads.
+Using a category is optional, but strongly recommended.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.UtorrentDownloadClient.postimport_category" class="doc doc-heading">
+<code class="highlight language-python">postimport_category: Optional[str] = None</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.UtorrentDownloadClient.postimport_category" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Category for Sonarr to set after it has imported the download.</p>
+<p>Sonarr will not remove torrents in that category even if seeding has finished.
+Leave blank, set to <code>null</code> or undefined to keep the same category.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.UtorrentDownloadClient.recent_priority" class="doc doc-heading">
+<code class="highlight language-python">recent_priority: UtorrentPriority = UtorrentPriority.last</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.UtorrentDownloadClient.recent_priority" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Priority to use when grabbing episodes that aired within the last 14 days.</p>
+<p>Values:</p>
+<ul>
+<li><code>last</code></li>
+<li><code>first</code></li>
+</ul>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.UtorrentDownloadClient.older_priority" class="doc doc-heading">
+<code class="highlight language-python">older_priority: UtorrentPriority = UtorrentPriority.last</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.UtorrentDownloadClient.older_priority" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Priority to use when grabbing episodes that aired over 14 days ago.</p>
+<p>Values:</p>
+<ul>
+<li><code>last</code></li>
+<li><code>first</code></li>
+</ul>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.download_clients.download_clients.UtorrentDownloadClient.initial_state" class="doc doc-heading">
+<code class="highlight language-python">initial_state: UtorrentState = UtorrentState.start</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.download_clients.download_clients.UtorrentDownloadClient.initial_state" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Initial state for torrents added to uTorrent.</p>
   </div>
 
 </div>
