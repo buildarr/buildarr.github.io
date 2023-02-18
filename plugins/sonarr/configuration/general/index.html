@@ -38,6 +38,9 @@
                                 <a href="../../../.." class="nav-link">Home</a>
                             </li>
                             <li class="navitem">
+                                <a href="../../../../release-notes/" class="nav-link">Release Notes</a>
+                            </li>
+                            <li class="navitem">
                                 <a href="../../../../installation/" class="nav-link">Installation</a>
                             </li>
                             <li class="navitem">
@@ -231,7 +234,7 @@
       updates:
         branch: "main"
         automatic: false
-        update_mechanism: "docker"
+        mechanism: "docker"
       backup:
         folder: "Backups"
         interval: 7
@@ -1073,7 +1076,7 @@ and handles the remainder of the update process.</p>
 
 
 <h5 id="buildarr.plugins.sonarr.config.general.BackupGeneralSettings.interval" class="doc doc-heading">
-<code class="highlight language-python">interval: int = Field(7, ge=0)</code>
+<code class="highlight language-python">interval: int = Field(7, ge=1, le=7)</code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
@@ -1085,6 +1088,7 @@ and handles the remainder of the update process.</p>
   <div class="doc doc-contents ">
   
       <p>Interval between automatic backups, in days.</p>
+<p>Must be set somewhere between 1 and 7 days.</p>
   </div>
 
 </div>
@@ -1094,7 +1098,7 @@ and handles the remainder of the update process.</p>
 
 
 <h5 id="buildarr.plugins.sonarr.config.general.BackupGeneralSettings.retention" class="doc doc-heading">
-<code class="highlight language-python">retention: int = Field(28, ge=0)</code>
+<code class="highlight language-python">retention: int = Field(28, ge=1, le=90)</code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
@@ -1107,6 +1111,7 @@ and handles the remainder of the update process.</p>
   
       <p>Retention period for backups, in days.
 Backups older than the retention period will be cleaned up automatically.</p>
+<p>Must be set somewhere between 1 and 90 days.</p>
   </div>
 
 </div>

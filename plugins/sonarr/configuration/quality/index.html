@@ -38,6 +38,9 @@
                                 <a href="../../../.." class="nav-link">Home</a>
                             </li>
                             <li class="navitem">
+                                <a href="../../../../release-notes/" class="nav-link">Release Notes</a>
+                            </li>
+                            <li class="navitem">
                                 <a href="../../../../installation/" class="nav-link">Installation</a>
                             </li>
                             <li class="navitem">
@@ -299,7 +302,7 @@ and quality definitions not set within Buildarr are left unmodified.</p>
 <a id="buildarr.plugins.sonarr.config.quality.QualityDefinition"></a>
   <div class="doc doc-contents first">
       <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr.config.ConfigBase">ConfigBase</span></code></p>
+        Bases: <code><span title="buildarr.plugins.sonarr.config.types.SonarrConfigBase">SonarrConfigBase</span></code></p>
 
   
       <p>Manually set quality definitions can have the following parameters.</p>
@@ -321,7 +324,7 @@ and quality definitions not set within Buildarr are left unmodified.</p>
 
 
 <h5 id="buildarr.plugins.sonarr.config.quality.QualityDefinition.title" class="doc doc-heading">
-<code class="highlight language-python">title: Optional[NonEmptyStr] = None</code>
+<code class="highlight language-python">title: Optional[str] = None</code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
