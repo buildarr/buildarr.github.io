@@ -530,7 +530,7 @@ is in the naming format and the episode title is TBA.</p>
 
 
 <h5 id="buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.minimum_free_space" class="doc doc-heading">
-<code class="highlight language-python">minimum_free_space: int = Field(100, ge=0)</code>
+<code class="highlight language-python">minimum_free_space: int = Field(100, ge=100)</code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
@@ -543,6 +543,7 @@ is in the naming format and the episode title is TBA.</p>
   
       <p>Prevent import if it would leave less than the specified
 amount of disk space (in megabytes) available.</p>
+<p>Minimum value is 100 MB.</p>
   </div>
 
 </div>
@@ -841,7 +842,7 @@ It's better to ensure the download client sets the permissions properly.</p>
 
 
 <h5 id="buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.chown_group" class="doc doc-heading">
-<code class="highlight language-python">chown_group: Optional[NonEmptyStr] = None</code>
+<code class="highlight language-python">chown_group: Optional[str] = None</code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
@@ -864,7 +865,7 @@ It's better to ensure the download client uses the same group as Sonarr.</p>
 
 
 <h5 id="buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.root_folders" class="doc doc-heading">
-<code class="highlight language-python">root_folders: List[NonEmptyStr] = []</code>
+<code class="highlight language-python">root_folders: Set[NonEmptyStr] = set()</code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
@@ -882,6 +883,33 @@ place new imported downloads, or to allow Sonarr to scan existing media.</p>
     media_management:
       root_folders:
         - "/path/to/rootfolder"</code></pre>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.delete_unmanaged_root_folders" class="doc doc-heading">
+<code class="highlight language-python">delete_unmanaged_root_folders: bool = False</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.media_management.SonarrMediaManagementSettingsConfig.delete_unmanaged_root_folders" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Delete root folder definitions from Sonarr if they are not
+explicitly defined in Buildarr.</p>
+<p>Before enabling this option, ensure all the root folders
+you want Sonarr to scan are defined in Buildarr,
+as Sonarr might remove imported media from its database
+when root folder definitions are deleted.</p>
+<p><em>Added in version 0.1.2.</em></p>
   </div>
 
 </div>

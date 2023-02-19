@@ -203,8 +203,6 @@
   settings:
     profiles:
       language_profiles:
-        # Set to `true` or `false` as desired. (Default `false`)
-        delete_unmanaged: true
         definitions:
           # Add language profiles here.
           # The name of the block becomes the name of the quality profile.
@@ -212,7 +210,7 @@
             upgrades_allowed: true
             upgrade_until: "Japanese"
             # Highest priority quality first, lowest priority goes last.
-            qualities:
+            languages:
               - "Japanese"
               - "English"
           # Add additional language profiles here as needed.</code></pre>
@@ -316,7 +314,7 @@ Buildarr will not modify existing language profiles, but if <code>delete_unmanag
       Anime: # Name of the language profile
         upgrades_allowed: true
         upgrade_until: "Japanese" # Required if upgrades are allowed
-        qualities: # Required
+        languages: # Required
           - "Japanese"
           - "English"</code></pre>
 

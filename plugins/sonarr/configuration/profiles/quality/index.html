@@ -401,7 +401,7 @@ For a quality group, specify the group name.</p>
 
 
 <h5 id="buildarr.plugins.sonarr.config.profiles.quality.QualityProfile.qualities" class="doc doc-heading">
-<code class="highlight language-python">qualities: Annotated[List[Union[str, QualityGroup]], Field(min_items=1)]</code>
+<code class="highlight language-python">qualities: Annotated[List[Union[NonEmptyStr, QualityGroup]], Field(min_items=1)]</code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
