@@ -337,7 +337,7 @@ Instead, change the external port it is bound to using
 
   <div class="doc doc-contents ">
   
-      <p>Enncrypted (HTTPS) listening port for Sonarr.</p>
+      <p>Encrypted (HTTPS) listening port for Sonarr.</p>
 <p>If Sonarr is being run via Docker in the default bridge mode,
 this setting shouldn't be changed.
 Instead, change the external port it is bound to using
@@ -723,7 +723,7 @@ Only enter if authentication is required by the proxy.</p>
 
 
 <h5 id="buildarr.plugins.sonarr.config.general.ProxyGeneralSettings.ignored_addresses" class="doc doc-heading">
-<code class="highlight language-python">ignored_addresses: List[NonEmptyStr] = []</code>
+<code class="highlight language-python">ignored_addresses: Set[NonEmptyStr] = set()</code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>

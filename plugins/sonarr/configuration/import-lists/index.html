@@ -298,7 +298,7 @@ attribute.</p>
 
 
 <h5 id="buildarr.plugins.sonarr.config.import_lists.SonarrImportListsSettingsConfig.definitions" class="doc doc-heading">
-<code class="highlight language-python">definitions: Dict[str, Union[SonarrImportList, PlexWatchlistImportList, TraktListImportList, TraktPopularlistImportList, TraktUserImportList]] = {}</code>
+<code class="highlight language-python">definitions: Dict[str, Annotated[ImportListType, Field(discriminator=type)]] = {}</code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>

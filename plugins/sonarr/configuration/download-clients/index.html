@@ -383,7 +383,7 @@ sonarr:
 
 
 <h5 id="buildarr.plugins.sonarr.config.download_clients.SonarrDownloadClientsSettingsConfig.definitions" class="doc doc-heading">
-<code class="highlight language-python">definitions: DownloadClientDefinitions = {}</code>
+<code class="highlight language-python">definitions: Dict[str, Annotated[DownloadClientType, Field(discriminator=type)]] = {}</code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>

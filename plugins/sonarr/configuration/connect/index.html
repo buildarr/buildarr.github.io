@@ -842,7 +842,7 @@ check the documentation the specific connection type for more information.</p>
 
 
 <h5 id="buildarr.plugins.sonarr.config.connect.DiscordConnection.on_grab_fields" class="doc doc-heading">
-<code class="highlight language-python">on_grab_fields: List[OnGrabField] = [OnGrabField.overview, OnGrabField.rating, OnGrabField.genres, OnGrabField.quality, OnGrabField.size, OnGrabField.links, OnGrabField.release, OnGrabField.poster, OnGrabField.fanart]</code>
+<code class="highlight language-python">on_grab_fields: Set[OnGrabField] = {OnGrabField.overview, OnGrabField.rating, OnGrabField.genres, OnGrabField.quality, OnGrabField.size, OnGrabField.links, OnGrabField.release, OnGrabField.poster, OnGrabField.fanart}</code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
@@ -888,7 +888,7 @@ By default, all fields are passed in.</p>
 
 
 <h5 id="buildarr.plugins.sonarr.config.connect.DiscordConnection.on_import_fields" class="doc doc-heading">
-<code class="highlight language-python">on_import_fields: List[OnImportField] = [OnImportField.overview, OnImportField.rating, OnImportField.genres, OnImportField.quality, OnImportField.codecs, OnImportField.group, OnImportField.size, OnImportField.languages, OnImportField.subtitles, OnImportField.links, OnImportField.release, OnImportField.poster, OnImportField.fanart]</code>
+<code class="highlight language-python">on_import_fields: Set[OnImportField] = {OnImportField.overview, OnImportField.rating, OnImportField.genres, OnImportField.quality, OnImportField.codecs, OnImportField.group, OnImportField.size, OnImportField.languages, OnImportField.subtitles, OnImportField.links, OnImportField.release, OnImportField.poster, OnImportField.fanart}</code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
@@ -1147,7 +1147,7 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 <h5 id="buildarr.plugins.sonarr.config.connect.EmailConnection.cc_addresses" class="doc doc-heading">
-<code class="highlight language-python">cc_addresses: List[NameEmail] = []</code>
+<code class="highlight language-python">cc_addresses: Annotated[List[NameEmail], Field(unique_items=True)] = []</code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
@@ -1168,7 +1168,7 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 <h5 id="buildarr.plugins.sonarr.config.connect.EmailConnection.bcc_addresses" class="doc doc-heading">
-<code class="highlight language-python">bcc_addresses: List[NameEmail] = []</code>
+<code class="highlight language-python">bcc_addresses: Annotated[List[NameEmail], Field(unique_items=True)] = []</code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
@@ -1574,7 +1574,7 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 <h5 id="buildarr.plugins.sonarr.config.connect.JoinConnection.device_names" class="doc doc-heading">
-<code class="highlight language-python">device_names: List[NonEmptyStr] = []</code>
+<code class="highlight language-python">device_names: Set[NonEmptyStr] = set()</code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
@@ -2033,7 +2033,7 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 <h5 id="buildarr.plugins.sonarr.config.connect.MailgunConnection.recipient_addresses" class="doc doc-heading">
-<code class="highlight language-python">recipient_addresses: List[NameEmail] = []</code>
+<code class="highlight language-python">recipient_addresses: Annotated[List[NameEmail], Field(min_items=1, unique_items=True)]</code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
@@ -2045,6 +2045,7 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
   <div class="doc doc-contents ">
   
       <p>The recipient email addresses of the notification mail.</p>
+<p>At least one recipient address is required.</p>
   </div>
 
 </div>
@@ -2971,7 +2972,7 @@ and <code>on_application_update</code></p>
 
 
 <h5 id="buildarr.plugins.sonarr.config.connect.PushoverConnection.devices" class="doc doc-heading">
-<code class="highlight language-python">devices: List[NonEmptyStr] = []</code>
+<code class="highlight language-python">devices: Set[NonEmptyStr] = set()</code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
@@ -3189,7 +3190,7 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 <h5 id="buildarr.plugins.sonarr.config.connect.SendgridConnection.recipient_addresses" class="doc doc-heading">
-<code class="highlight language-python">recipient_addresses: List[NameEmail] = []</code>
+<code class="highlight language-python">recipient_addresses: Annotated[List[NameEmail], Field(min_items=1, unique_items=True)]</code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
@@ -3201,6 +3202,7 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
   <div class="doc doc-contents ">
   
       <p>The recipient email addresses of the notification mail.</p>
+<p>At least one recipient address is required.</p>
   </div>
 
 </div>

@@ -413,7 +413,7 @@ created by external applications such as Prowlarr.</p>
 
 
 <h5 id="buildarr.plugins.sonarr.config.indexers.SonarrIndexersSettingsConfig.definitions" class="doc doc-heading">
-<code class="highlight language-python">definitions: Dict[str, Union[FanzubIndexer, NewznabIndexer, OmgwtfnzbsIndexer, BroadcasthenetIndexer, FilelistIndexer, HdbitsIndexer, IptorrentsIndexer, NyaaIndexer, RarbgIndexer, TorrentrssfeedIndexer, TorrentleechIndexer, TorznabIndexer]] = {}</code>
+<code class="highlight language-python">definitions: Dict[str, Annotated[IndexerType, Field(discriminator=type)]] = {}</code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
@@ -424,7 +424,7 @@ created by external applications such as Prowlarr.</p>
 
   <div class="doc doc-contents ">
   
-      <p>Indexer to manage via Buildarr are defined here.</p>
+      <p>Indexers to manage via Buildarr are defined here.</p>
   </div>
 
 </div>
@@ -1358,7 +1358,7 @@ as your API key will be sent to this host.</p>
 
 
 <h5 id="buildarr.plugins.sonarr.config.indexers.FilelistIndexer.categories" class="doc doc-heading">
-<code class="highlight language-python">categories: List[FilelistCategory] = [FilelistCategory.TV_SD, FilelistCategory.TV_HD, FilelistCategory.TV_4K]</code>
+<code class="highlight language-python">categories: Set[FilelistCategory] = {FilelistCategory.TV_SD, FilelistCategory.TV_HD, FilelistCategory.TV_4K}</code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
@@ -1371,6 +1371,15 @@ as your API key will be sent to this host.</p>
   
       <p>Categories to monitor for standard/daily show new releases.</p>
 <p>Set to an empty list to not monitor for standard/daily shows.</p>
+<p>Values:</p>
+<ul>
+<li><code>Anime</code></li>
+<li><code>Animation</code></li>
+<li><code>TV 4K</code></li>
+<li><code>TV HD</code></li>
+<li><code>TV SD</code></li>
+<li><code>Sport</code></li>
+</ul>
   </div>
 
 </div>
@@ -1380,7 +1389,7 @@ as your API key will be sent to this host.</p>
 
 
 <h5 id="buildarr.plugins.sonarr.config.indexers.FilelistIndexer.anime_categories" class="doc doc-heading">
-<code class="highlight language-python">anime_categories: List[FilelistCategory] = []</code>
+<code class="highlight language-python">anime_categories: Set[FilelistCategory] = set()</code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
@@ -1393,6 +1402,15 @@ as your API key will be sent to this host.</p>
   
       <p>Categories to monitor for anime new releases.</p>
 <p>Leave empty to not monitor for anime.</p>
+<p>Values:</p>
+<ul>
+<li><code>Anime</code></li>
+<li><code>Animation</code></li>
+<li><code>TV 4K</code></li>
+<li><code>TV HD</code></li>
+<li><code>TV SD</code></li>
+<li><code>Sport</code></li>
+</ul>
   </div>
 
 </div>

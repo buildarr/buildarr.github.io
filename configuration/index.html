@@ -315,10 +315,10 @@ sonarr:
 <div class="doc doc-object doc-class">
 
 
-<a id="buildarr.config.BuildarrConfig"></a>
+<a id="buildarr.config.buildarr.BuildarrConfig"></a>
   <div class="doc doc-contents first">
       <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr.config.ConfigBase">ConfigBase</span></code></p>
+        Bases: <code><span title="buildarr.config.base.ConfigBase">ConfigBase</span></code></p>
 
   
       <p>The <code>buildarr</code> configuration section is used to configure the behaviour of Buildarr itself.</p>
@@ -359,14 +359,14 @@ buildarr:
 
 
 
-<h5 id="buildarr.config.BuildarrConfig.watch_config" class="doc doc-heading">
+<h5 id="buildarr.config.buildarr.BuildarrConfig.watch_config" class="doc doc-heading">
 <code class="highlight language-python">watch_config: bool = False</code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.config.BuildarrConfig.watch_config" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr.config.buildarr.BuildarrConfig.watch_config" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -384,14 +384,14 @@ will also perform this operation, whether <code>watch_config</code> is enabled o
 
 
 
-<h5 id="buildarr.config.BuildarrConfig.update_days" class="doc doc-heading">
-<code class="highlight language-python">update_days: Set[UpdateDay] = set(day for day in UpdateDay)</code>
+<h5 id="buildarr.config.buildarr.BuildarrConfig.update_days" class="doc doc-heading">
+<code class="highlight language-python">update_days: Set[DayOfWeek] = set(day for day in DayOfWeek)</code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.config.BuildarrConfig.update_days" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr.config.buildarr.BuildarrConfig.update_days" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -414,14 +414,14 @@ The days do not need to be in order.</p>
 
 
 
-<h5 id="buildarr.config.BuildarrConfig.update_times" class="doc doc-heading">
+<h5 id="buildarr.config.buildarr.BuildarrConfig.update_times" class="doc doc-heading">
 <code class="highlight language-python">update_times: Set[time] = {time(hour=3)}</code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.config.BuildarrConfig.update_times" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr.config.buildarr.BuildarrConfig.update_times" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -447,14 +447,14 @@ The days do not need to be in order.</p>
 
 
 
-<h5 id="buildarr.config.BuildarrConfig.secrets_file_path" class="doc doc-heading">
+<h5 id="buildarr.config.buildarr.BuildarrConfig.secrets_file_path" class="doc doc-heading">
 <code class="highlight language-python">secrets_file_path: Path = Path('secrets.json')</code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.config.BuildarrConfig.secrets_file_path" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr.config.buildarr.BuildarrConfig.secrets_file_path" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -468,14 +468,14 @@ The days do not need to be in order.</p>
 
 
 
-<h5 id="buildarr.config.BuildarrConfig.trash_metadata_download_url" class="doc doc-heading">
+<h5 id="buildarr.config.buildarr.BuildarrConfig.trash_metadata_download_url" class="doc doc-heading">
 <code class="highlight language-python">trash_metadata_download_url: HttpUrl = 'https://github.com/TRaSH-/Guides/archive/refs/heads/master.zip'</code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.config.BuildarrConfig.trash_metadata_download_url" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr.config.buildarr.BuildarrConfig.trash_metadata_download_url" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -489,14 +489,14 @@ The days do not need to be in order.</p>
 
 
 
-<h5 id="buildarr.config.BuildarrConfig.trash_metadata_dir_prefix" class="doc doc-heading">
+<h5 id="buildarr.config.buildarr.BuildarrConfig.trash_metadata_dir_prefix" class="doc doc-heading">
 <code class="highlight language-python">trash_metadata_dir_prefix: Path = Path('Guides-master')</code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.config.BuildarrConfig.trash_metadata_dir_prefix" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr.config.buildarr.BuildarrConfig.trash_metadata_dir_prefix" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
