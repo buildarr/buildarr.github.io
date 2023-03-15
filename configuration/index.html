@@ -468,8 +468,31 @@ The days do not need to be in order.</p>
 
 
 
+<h5 id="buildarr.config.buildarr.BuildarrConfig.request_timeout" class="doc doc-heading">
+<code class="highlight language-python">request_timeout: PositiveFloat = 30</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.config.buildarr.BuildarrConfig.request_timeout" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The timeout for any API requests Buildarr makes (in seconds).</p>
+<p>If the timeout is reached, an error will occur and Buildarr will stop the update process.</p>
+<p><em>Added in version 0.3.0.</em></p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
 <h5 id="buildarr.config.buildarr.BuildarrConfig.trash_metadata_download_url" class="doc doc-heading">
-<code class="highlight language-python">trash_metadata_download_url: HttpUrl = 'https://github.com/TRaSH-/Guides/archive/refs/heads/master.zip'</code>
+<code class="highlight language-python">trash_metadata_download_url: AnyHttpUrl = 'https://github.com/TRaSH-/Guides/archive/refs/heads/master.zip'</code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>

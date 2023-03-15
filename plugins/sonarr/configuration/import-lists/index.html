@@ -432,7 +432,7 @@ refer to this guide on <a href="https://wiki.servarr.com/en/sonarr/settings#impo
 
 
 <h5 id="buildarr.plugins.sonarr.config.import_lists.ImportList.root_folder" class="doc doc-heading">
-<code class="highlight language-python">root_folder: Optional[str] = None</code>
+<code class="highlight language-python">root_folder: NonEmptyStr</code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
@@ -443,7 +443,8 @@ refer to this guide on <a href="https://wiki.servarr.com/en/sonarr/settings#impo
 
   <div class="doc doc-contents ">
   
-      <p>Add list items to the specified root folder.</p>
+      <p>The root folder to add list items to.</p>
+<p>This attribute is required.</p>
   </div>
 
 </div>
@@ -453,7 +454,7 @@ refer to this guide on <a href="https://wiki.servarr.com/en/sonarr/settings#impo
 
 
 <h5 id="buildarr.plugins.sonarr.config.import_lists.ImportList.quality_profile" class="doc doc-heading">
-<code class="highlight language-python">quality_profile: Optional[str] = None</code>
+<code class="highlight language-python">quality_profile: NonEmptyStr</code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
@@ -465,7 +466,7 @@ refer to this guide on <a href="https://wiki.servarr.com/en/sonarr/settings#impo
   <div class="doc doc-contents ">
   
       <p>The name of the quality profile list items will be added with.</p>
-<p>If unset, blank or set to <code>None</code>, use any quality profile.</p>
+<p>This attribute is required.</p>
   </div>
 
 </div>
@@ -475,7 +476,7 @@ refer to this guide on <a href="https://wiki.servarr.com/en/sonarr/settings#impo
 
 
 <h5 id="buildarr.plugins.sonarr.config.import_lists.ImportList.language_profile" class="doc doc-heading">
-<code class="highlight language-python">language_profile: Optional[str] = None</code>
+<code class="highlight language-python">language_profile: NonEmptyStr</code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
@@ -487,7 +488,7 @@ refer to this guide on <a href="https://wiki.servarr.com/en/sonarr/settings#impo
   <div class="doc doc-contents ">
   
       <p>The name of the language profile list items will be added with.</p>
-<p>If unset, blank or set to <code>None</code>, use any language profile.</p>
+<p>This attribute is required.</p>
   </div>
 
 </div>
@@ -583,7 +584,66 @@ This option affects how Sonarr handles the media, such as renaming.</p>
 
   
       <p>Import items from another Sonarr instance.</p>
-<p>The Sonarr instance preferably should be the same version as this Sonarr instance.</p>
+<p>The linked Sonarr instance must be the same major version as this defined Sonarr instance.
+For example, a Sonarr V3 instance cannot connect with a Sonarr V4 instance, and vice versa.</p>
+<pre class="highlight"><code class="language-yaml">...
+  import_lists:
+    definitions:
+      Sonarr:
+        type: "sonarr"
+        # Global import list options.
+        root_folder: "/path/to/videos"
+        quality_profile: "HD/SD"
+        language_profile: "English"
+        # Sonarr import list-specific options.
+        full_url: "http://sonarr:8989"
+        api_key: "1a2b3c4d5e1a2b3c4d5e1a2b3c4d5e1a"
+        source_quality_profiles:
+          - 11
+          ...
+        source_language_profiles:
+          - 22
+          ...
+        source_tags:
+          - 33
+          ...</code></pre>
+<p>This import list supports instance references to another Buildarr-defined Sonarr instance
+using <code>instance_name</code>.</p>
+<p>In this mode, you can specify <code>instance_name</code> in place of <code>api_key</code>,
+and use actual names for the source language profiles, quality profiles and tags,
+instead of IDs which are subject to change.</p>
+<p>Here is an example of one Sonarr instance (<code>sonarr-4k</code>) referencing
+another instance (<code>sonarr-hd</code>), using it as an import list.</p>
+<pre class="highlight"><code class="language-yaml">sonarr:
+  instances:
+    sonarr-hd:
+      hostname: "localhost"
+      port: 8989
+    sonarr-4k:
+      hostname: "localhost"
+      port: 8990
+      settings:
+        import_lists:
+          definitions:
+            Sonarr (HD):
+              type: "sonarr"
+              # Global import list options.
+              root_folder: "/path/to/videos"
+              quality_profile: "4K"
+              language_profile: "English"
+              # Sonarr import list-specific options.
+              full_url: "http://sonarr:8989"
+              instance_name: "sonarr-hd"
+              source_quality_profiles:
+                - "HD/SD"
+              source_language_profiles:
+                - "English"
+              source_tags:
+                - "shows"</code></pre>
+<p>An important thing to keep in mind is that unless Buildarr is on the same network
+as the rest of the *Arr stack, the hostnames and ports may differ to what the
+Sonarr instances will use to communicate with each other. <code>full_url</code> should be
+set to what the Sonarr instance itself will use to link to the target instance.</p>
 
 
 
@@ -622,8 +682,31 @@ This option affects how Sonarr handles the media, such as renaming.</p>
 
 
 
+<h5 id="buildarr.plugins.sonarr.config.import_lists.SonarrImportList.instance_name" class="doc doc-heading">
+<code class="highlight language-python">instance_name: Optional[InstanceName] = Field(None, plugin='sonarr')</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr.plugins.sonarr.config.import_lists.SonarrImportList.instance_name" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The name of the Sonarr instance within Buildarr, if linking this Sonarr instance
+with another Buildarr-defined Sonarr instance.</p>
+<p><em>Added in version 0.3.0.</em></p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
 <h5 id="buildarr.plugins.sonarr.config.import_lists.SonarrImportList.full_url" class="doc doc-heading">
-<code class="highlight language-python">full_url: HttpUrl</code>
+<code class="highlight language-python">full_url: AnyHttpUrl</code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
@@ -634,7 +717,7 @@ This option affects how Sonarr handles the media, such as renaming.</p>
 
   <div class="doc doc-contents ">
   
-      <p>URL that this Sonarr instance will use to connect to the source Sonarr instance.</p>
+      <p>The URL that this Sonarr instance will use to connect to the source Sonarr instance.</p>
   </div>
 
 </div>
@@ -644,7 +727,7 @@ This option affects how Sonarr handles the media, such as renaming.</p>
 
 
 <h5 id="buildarr.plugins.sonarr.config.import_lists.SonarrImportList.api_key" class="doc doc-heading">
-<code class="highlight language-python">api_key: Password</code>
+<code class="highlight language-python">api_key: Optional[SonarrApiKey] = None</code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
@@ -655,7 +738,9 @@ This option affects how Sonarr handles the media, such as renaming.</p>
 
   <div class="doc doc-contents ">
   
-      <p>API key used to access the remote instance.</p>
+      <p>API key used to access the source Sonarr instance.</p>
+<p>If a Sonarr instance managed by Buildarr is not referenced using <code>instance_name</code>,
+this attribute is required.</p>
   </div>
 
 </div>
@@ -664,19 +749,24 @@ This option affects how Sonarr handles the media, such as renaming.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.import_lists.SonarrImportList.source_quality_profile_ids" class="doc doc-heading">
-<code class="highlight language-python">source_quality_profile_ids: Set[PositiveInt] = set()</code>
+<h5 id="buildarr.plugins.sonarr.config.import_lists.SonarrImportList.source_quality_profiles" class="doc doc-heading">
+<code class="highlight language-python">source_quality_profiles: Set[Union[PositiveInt, NonEmptyStr]] = Field(set(), alias='source_quality_profile_ids')</code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.import_lists.SonarrImportList.source_quality_profile_ids" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr.plugins.sonarr.config.import_lists.SonarrImportList.source_quality_profiles" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
   
-      <p>IDs of the Quality Profiles from the source instance to import from.</p>
+      <p>List of IDs (or names) of the quality profiles on the source instance to import from.</p>
+<p>Quality profile names can only be used if <code>instance_name</code> is used to
+link to a Buildarr-defined Sonarr instance.
+If linking to a Sonarr instance outside Buildarr, IDs must be used.</p>
+<p><em>Changed in version 0.3.0: Renamed from <code>source_quality_profile_ids</code>
+(which is still valid as an alias), and add support for quality profile names.</em></p>
   </div>
 
 </div>
@@ -685,19 +775,24 @@ This option affects how Sonarr handles the media, such as renaming.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.import_lists.SonarrImportList.source_language_profile_ids" class="doc doc-heading">
-<code class="highlight language-python">source_language_profile_ids: Set[PositiveInt] = set()</code>
+<h5 id="buildarr.plugins.sonarr.config.import_lists.SonarrImportList.source_language_profiles" class="doc doc-heading">
+<code class="highlight language-python">source_language_profiles: Set[Union[PositiveInt, NonEmptyStr]] = Field(set(), alias='source_language_profile_ids')</code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.import_lists.SonarrImportList.source_language_profile_ids" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr.plugins.sonarr.config.import_lists.SonarrImportList.source_language_profiles" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
   
-      <p>IDs of the Language Profiles from the source instance to import from.</p>
+      <p>List of IDs (or names) of the language profiles on the source instance to import from.</p>
+<p>Language profile names can only be used if <code>instance_name</code> is used to
+link to a Buildarr-defined Sonarr instance.
+If linking to a Sonarr instance outside Buildarr, IDs must be used.</p>
+<p><em>Changed in version 0.3.0: Renamed from <code>source_language_profile_ids</code>
+(which is still valid as an alias), and add support for language profile names.</em></p>
   </div>
 
 </div>
@@ -706,19 +801,24 @@ This option affects how Sonarr handles the media, such as renaming.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.import_lists.SonarrImportList.source_tag_ids" class="doc doc-heading">
-<code class="highlight language-python">source_tag_ids: Set[PositiveInt] = set()</code>
+<h5 id="buildarr.plugins.sonarr.config.import_lists.SonarrImportList.source_tags" class="doc doc-heading">
+<code class="highlight language-python">source_tags: Set[Union[PositiveInt, NonEmptyStr]] = Field(set(), alias='source_tag_ids')</code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.import_lists.SonarrImportList.source_tag_ids" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr.plugins.sonarr.config.import_lists.SonarrImportList.source_tags" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
   
-      <p>IDs of the tags from the source instance to import from.</p>
+      <p>List of IDs (or names) of the tags on the source instance to import from.</p>
+<p>Tag names can only be used if <code>instance_name</code> is used to
+link to a Buildarr-defined Sonarr instance.
+If linking to a Sonarr instance outside Buildarr, IDs must be used.</p>
+<p><em>Changed in version 0.3.0: Renamed from <code>source_tag_ids</code>
+(which is still valid as an alias), and add support for tag names.</em></p>
   </div>
 
 </div>

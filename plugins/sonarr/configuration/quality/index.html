@@ -348,7 +348,7 @@ will also be <code>Bluray-480p</code>)</p>
 
 
 <h5 id="buildarr.plugins.sonarr.config.quality.QualityDefinition.min" class="doc doc-heading">
-<code class="highlight language-python">min: float = Field(Ellipsis, ge=0, le=399)</code>
+<code class="highlight language-python">min: float = Field(Ellipsis, ge=0, le=QUALITYDEFINITION_MAX - 1)</code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
@@ -361,6 +361,7 @@ will also be <code>Bluray-480p</code>)</p>
   
       <p>The minimum Megabytes per Minute (MB/min) a quality can have.
 Must be set at least 1MB/min lower than <code>max</code>.</p>
+<p>The minimum value is <code>0</code>, and the maximum value is <code>399</code>.</p>
   </div>
 
 </div>
@@ -370,7 +371,7 @@ Must be set at least 1MB/min lower than <code>max</code>.</p>
 
 
 <h5 id="buildarr.plugins.sonarr.config.quality.QualityDefinition.max" class="doc doc-heading">
-<code class="highlight language-python">max: Optional[Annotated[float, Field(ge=1, lt=400)]]</code>
+<code class="highlight language-python">max: Optional[float] = Field(Ellipsis, ge=1, le=QUALITYDEFINITION_MAX)</code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
@@ -383,7 +384,8 @@ Must be set at least 1MB/min lower than <code>max</code>.</p>
   
       <p>The maximum Megabytes per Minute (MB/min) a quality can have.
 Must be set at least 1MB/min higher than <code>min</code>.</p>
-<p>If set to <code>None</code>, the maximum bit rate will be unlimited.</p>
+<p>If set to <code>None</code> or <code>400</code>, the maximum bit rate will be unlimited.</p>
+<p>If not set to <code>None</code>, the minimum value is <code>1</code>, and the maximum value is <code>400</code>.</p>
   </div>
 
 </div>
