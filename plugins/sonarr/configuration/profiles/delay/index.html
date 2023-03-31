@@ -55,11 +55,15 @@
 </li>
                                     
   <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">buildarr-sonarr</a>
+    <a href="#" class="dropdown-item">Buildarr Sonarr Plugin</a>
     <ul class="dropdown-menu">
             
 <li>
     <a href="../../../" class="dropdown-item">Introduction</a>
+</li>
+            
+<li>
+    <a href="../../../release-notes/" class="dropdown-item">Release Notes</a>
 </li>
             
   <li class="dropdown-submenu">
@@ -195,31 +199,32 @@
 
 <h1 id="delay-profiles">Delay Profiles<a class="headerlink" href="#delay-profiles" title="Permanent link">#</a></h1>
 <p>Delay profiles allow you to reduce the number of releases that will be downloaded for an episode by adding a delay while Sonarr continues to watch for releases that better match your preferences.</p>
-<pre class="highlight"><code class="language-yaml">sonarr:
-  settings:
-    profiles:
-      delay_profiles:
-        # Set to `true` or `false` as desired. (Default `false`)
-        # Works a bit differently to other profile types, see
-        # the `delete_unmanaged` attribute docs.
-        delete_unmanaged: true
-        definitions:
-          # Ordered in priority, highest priority first.
-          - preferred_protocol: "usenet-prefer"
-            usenet_delay: 0
-            torrent_delay: 0
-            bypass_if_highest_quality: true
-            tags:
-              - "tv-shows"
-          # Add additional delay profiles here as needed.
-          ...
-          # Default delay profile goes last, and MUST be defined
-          # if you have defined any other delay profiles.
-          - preferred_protocol: "torrent-prefer"
-            usenet_delay: 1440
-            torrent_delay: 1440
-            bypass_if_highest_quality: false
-            # Tags will be ignored for default delay profile.</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nt">sonarr</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">settings</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">profiles</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">delay_profiles</span><span class="p">:</span>
+<span class="w">        </span><span class="c1"># Set to `true` or `false` as desired. (Default `false`)</span>
+<span class="w">        </span><span class="c1"># Works a bit differently to other profile types, see</span>
+<span class="w">        </span><span class="c1"># the `delete_unmanaged` attribute docs.</span>
+<span class="w">        </span><span class="nt">delete_unmanaged</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">        </span><span class="nt">definitions</span><span class="p">:</span>
+<span class="w">          </span><span class="c1"># Ordered in priority, highest priority first.</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">preferred_protocol</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;usenet-prefer&quot;</span>
+<span class="w">            </span><span class="nt">usenet_delay</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">            </span><span class="nt">torrent_delay</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">            </span><span class="nt">bypass_if_highest_quality</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">            </span><span class="nt">tags</span><span class="p">:</span>
+<span class="w">              </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;tv-shows&quot;</span>
+<span class="w">          </span><span class="c1"># Add additional delay profiles here as needed.</span>
+<span class="w">          </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+<span class="w">          </span><span class="c1"># Default delay profile goes last, and MUST be defined</span>
+<span class="w">          </span><span class="c1"># if you have defined any other delay profiles.</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">preferred_protocol</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;torrent-prefer&quot;</span>
+<span class="w">            </span><span class="nt">usenet_delay</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1440</span>
+<span class="w">            </span><span class="nt">torrent_delay</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1440</span>
+<span class="w">            </span><span class="nt">bypass_if_highest_quality</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">            </span><span class="c1"># Tags will be ignored for default delay profile.</span>
+</code></pre></div>
 <p>In Buildarr, due to the unique way how delay profiles work, they are defined using an ordered list structure, prioritised from first to last (top to bottom). The last delay profile in the list is assumed to be the default delay profile. Every non-default delay profile must have tags defined, and the default delay profile must have no tags defined.</p>
 <p>For more information, see this guide from <a href="https://wiki.servarr.com/sonarr/settings#language-profiles">WikiArr</a>.</p>
 <h2 id="general-configuration">General configuration<a class="headerlink" href="#general-configuration" title="Permanent link">#</a></h2>
@@ -228,10 +233,10 @@
 <div class="doc doc-object doc-class">
 
 
-<a id="buildarr.plugins.sonarr.config.profiles.delay.SonarrDelayProfilesSettingsConfig"></a>
+<a id="buildarr_sonarr.config.profiles.delay.SonarrDelayProfilesSettingsConfig"></a>
   <div class="doc doc-contents first">
       <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr.plugins.sonarr.config.types.SonarrConfigBase">SonarrConfigBase</span></code></p>
+        Bases: <code><span title="buildarr_sonarr.config.types.SonarrConfigBase">SonarrConfigBase</span></code></p>
 
   
       <p>Configuration parameters for controlling how Buildarr handles delay profiles.</p>
@@ -252,14 +257,14 @@
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.profiles.delay.SonarrDelayProfilesSettingsConfig.delete_unmanaged" class="doc doc-heading">
-<code class="highlight language-python">delete_unmanaged = False</code>
+<h5 id="buildarr_sonarr.config.profiles.delay.SonarrDelayProfilesSettingsConfig.delete_unmanaged" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">delete_unmanaged</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.profiles.delay.SonarrDelayProfilesSettingsConfig.delete_unmanaged" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.profiles.delay.SonarrDelayProfilesSettingsConfig.delete_unmanaged" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -282,14 +287,14 @@ and configure it exactly as laid out in Buildarr, irrespective of this value.</p
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.profiles.delay.SonarrDelayProfilesSettingsConfig.definitions" class="doc doc-heading">
-<code class="highlight language-python">definitions: List[DelayProfile] = []</code>
+<h5 id="buildarr_sonarr.config.profiles.delay.SonarrDelayProfilesSettingsConfig.definitions" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">definitions</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">DelayProfile</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.profiles.delay.SonarrDelayProfilesSettingsConfig.definitions" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.profiles.delay.SonarrDelayProfilesSettingsConfig.definitions" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -314,35 +319,36 @@ and configure it exactly as laid out in Buildarr, irrespective of this value.</p
 <div class="doc doc-object doc-class">
 
 
-<a id="buildarr.plugins.sonarr.config.profiles.delay.DelayProfile"></a>
+<a id="buildarr_sonarr.config.profiles.delay.DelayProfile"></a>
   <div class="doc doc-contents first">
       <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr.plugins.sonarr.config.types.SonarrConfigBase">SonarrConfigBase</span></code></p>
+        Bases: <code><span title="buildarr_sonarr.config.types.SonarrConfigBase">SonarrConfigBase</span></code></p>
 
   
       <p>Delay profiles are defined as an ordered list of objects.</p>
 <p>A preferred protocol must be specified for all delay profiles.
 Tags must be defined on all except the final profile (the default profile),
 where tags must not be defined.</p>
-<pre class="highlight"><code class="language-yaml">...
-  delay_profiles:
-    definitions:
-      # Ordered in priority, highest priority first.
-      - preferred_protocol: "usenet-prefer" # Required
-        usenet_delay: 0
-        torrent_delay: 0
-        bypass_if_highest_quality: true
-        tags:
-          - "tv-shows"
-        # Add additional delay profiles here as needed.
-        ...
-        # Default delay profile goes last, and MUST be defined
-        # if you have defined any other delay profiles.
-        - preferred_protocol: "torrent-prefer" # Required
-          usenet_delay: 1440
-          torrent_delay: 1440
-          bypass_if_highest_quality: false
-          # Tags will be ignored for default delay profile.</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nn">...</span>
+<span class="w">  </span><span class="nt">delay_profiles</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">definitions</span><span class="p">:</span>
+<span class="w">      </span><span class="c1"># Ordered in priority, highest priority first.</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">preferred_protocol</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;usenet-prefer&quot;</span><span class="w"> </span><span class="c1"># Required</span>
+<span class="w">        </span><span class="nt">usenet_delay</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">        </span><span class="nt">torrent_delay</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">        </span><span class="nt">bypass_if_highest_quality</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">        </span><span class="nt">tags</span><span class="p">:</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;tv-shows&quot;</span>
+<span class="w">        </span><span class="c1"># Add additional delay profiles here as needed.</span>
+<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+<span class="w">        </span><span class="c1"># Default delay profile goes last, and MUST be defined</span>
+<span class="w">        </span><span class="c1"># if you have defined any other delay profiles.</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">preferred_protocol</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;torrent-prefer&quot;</span><span class="w"> </span><span class="c1"># Required</span>
+<span class="w">          </span><span class="nt">usenet_delay</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1440</span>
+<span class="w">          </span><span class="nt">torrent_delay</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1440</span>
+<span class="w">          </span><span class="nt">bypass_if_highest_quality</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">          </span><span class="c1"># Tags will be ignored for default delay profile.</span>
+</code></pre></div>
 
 
 
@@ -360,14 +366,14 @@ where tags must not be defined.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.profiles.delay.DelayProfile.preferred_protocol" class="doc doc-heading">
-<code class="highlight language-python">preferred_protocol: PreferredProtocol</code>
+<h5 id="buildarr_sonarr.config.profiles.delay.DelayProfile.preferred_protocol" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">preferred_protocol</span><span class="p">:</span> <span class="n">PreferredProtocol</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.profiles.delay.DelayProfile.preferred_protocol" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.profiles.delay.DelayProfile.preferred_protocol" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -389,14 +395,14 @@ when choosing between otherwise equal releases.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.profiles.delay.DelayProfile.usenet_delay" class="doc doc-heading">
-<code class="highlight language-python">usenet_delay: int = Field(0, ge=0)</code>
+<h5 id="buildarr_sonarr.config.profiles.delay.DelayProfile.usenet_delay" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">usenet_delay</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.profiles.delay.DelayProfile.usenet_delay" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.profiles.delay.DelayProfile.usenet_delay" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -410,14 +416,14 @@ when choosing between otherwise equal releases.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.profiles.delay.DelayProfile.torrent_delay" class="doc doc-heading">
-<code class="highlight language-python">torrent_delay: int = Field(0, ge=0)</code>
+<h5 id="buildarr_sonarr.config.profiles.delay.DelayProfile.torrent_delay" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">torrent_delay</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.profiles.delay.DelayProfile.torrent_delay" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.profiles.delay.DelayProfile.torrent_delay" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -431,14 +437,14 @@ when choosing between otherwise equal releases.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.profiles.delay.DelayProfile.bypass_if_highest_quality" class="doc doc-heading">
-<code class="highlight language-python">bypass_if_highest_quality: bool = False</code>
+<h5 id="buildarr_sonarr.config.profiles.delay.DelayProfile.bypass_if_highest_quality" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">bypass_if_highest_quality</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.profiles.delay.DelayProfile.bypass_if_highest_quality" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.profiles.delay.DelayProfile.bypass_if_highest_quality" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -454,14 +460,14 @@ as defined in this delay profile.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.profiles.delay.DelayProfile.tags" class="doc doc-heading">
-<code class="highlight language-python">tags: Set[NonEmptyStr] = set()</code>
+<h5 id="buildarr_sonarr.config.profiles.delay.DelayProfile.tags" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">tags</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.profiles.delay.DelayProfile.tags" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.profiles.delay.DelayProfile.tags" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">

@@ -55,11 +55,15 @@
 </li>
                                     
   <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">buildarr-sonarr</a>
+    <a href="#" class="dropdown-item">Buildarr Sonarr Plugin</a>
     <ul class="dropdown-menu">
             
 <li>
     <a href="../../" class="dropdown-item">Introduction</a>
+</li>
+            
+<li>
+    <a href="../../release-notes/" class="dropdown-item">Release Notes</a>
 </li>
             
   <li class="dropdown-submenu">
@@ -207,24 +211,25 @@
 <div class="doc doc-object doc-class">
 
 
-<a id="buildarr.plugins.sonarr.config.metadata.KodiEmbyMetadata"></a>
+<a id="buildarr_sonarr.config.metadata.KodiEmbyMetadata"></a>
   <div class="doc doc-contents first">
       <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr.plugins.sonarr.config.metadata.Metadata">Metadata</span></code></p>
+        Bases: <code><span title="buildarr_sonarr.config.metadata.Metadata">Metadata</span></code></p>
 
   
       <p>Output metadata files in a format suitable for Kodi (XBMC) or Emby.</p>
-<pre class="highlight"><code class="language-yaml">sonarr:
-  settings:
-    metadata:
-      kodi_emby:
-        enable: true
-        series_metadata: true
-        series_metadata_url: true
-        episode_metadata: true
-        series_images: true
-        season_images: true
-        episode_images: true</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nt">sonarr</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">settings</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">metadata</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">kodi_emby</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">        </span><span class="nt">series_metadata</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">        </span><span class="nt">series_metadata_url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">        </span><span class="nt">episode_metadata</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">        </span><span class="nt">series_images</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">        </span><span class="nt">season_images</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">        </span><span class="nt">episode_images</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</code></pre></div>
 
 
 
@@ -242,14 +247,14 @@
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.metadata.KodiEmbyMetadata.series_metadata" class="doc doc-heading">
-<code class="highlight language-python">series_metadata: bool = False</code>
+<h5 id="buildarr_sonarr.config.metadata.KodiEmbyMetadata.series_metadata" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">series_metadata</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.metadata.KodiEmbyMetadata.series_metadata" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.metadata.KodiEmbyMetadata.series_metadata" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -263,14 +268,14 @@
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.metadata.KodiEmbyMetadata.series_metadata_url" class="doc doc-heading">
-<code class="highlight language-python">series_metadata_url: bool = False</code>
+<h5 id="buildarr_sonarr.config.metadata.KodiEmbyMetadata.series_metadata_url" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">series_metadata_url</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.metadata.KodiEmbyMetadata.series_metadata_url" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.metadata.KodiEmbyMetadata.series_metadata_url" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -284,14 +289,14 @@
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.metadata.KodiEmbyMetadata.episode_metadata" class="doc doc-heading">
-<code class="highlight language-python">episode_metadata: bool = False</code>
+<h5 id="buildarr_sonarr.config.metadata.KodiEmbyMetadata.episode_metadata" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">episode_metadata</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.metadata.KodiEmbyMetadata.episode_metadata" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.metadata.KodiEmbyMetadata.episode_metadata" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -305,14 +310,14 @@
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.metadata.KodiEmbyMetadata.series_images" class="doc doc-heading">
-<code class="highlight language-python">series_images: bool = False</code>
+<h5 id="buildarr_sonarr.config.metadata.KodiEmbyMetadata.series_images" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">series_images</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.metadata.KodiEmbyMetadata.series_images" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.metadata.KodiEmbyMetadata.series_images" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -326,14 +331,14 @@
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.metadata.KodiEmbyMetadata.season_images" class="doc doc-heading">
-<code class="highlight language-python">season_images: bool = False</code>
+<h5 id="buildarr_sonarr.config.metadata.KodiEmbyMetadata.season_images" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">season_images</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.metadata.KodiEmbyMetadata.season_images" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.metadata.KodiEmbyMetadata.season_images" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -348,14 +353,14 @@ and <code>season##-banner.jpg</code>/<code>season-specials-banner.jpg</code>.</p
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.metadata.KodiEmbyMetadata.episode_images" class="doc doc-heading">
-<code class="highlight language-python">episode_images: bool = False</code>
+<h5 id="buildarr_sonarr.config.metadata.KodiEmbyMetadata.episode_images" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">episode_images</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.metadata.KodiEmbyMetadata.episode_images" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.metadata.KodiEmbyMetadata.episode_images" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -379,22 +384,23 @@ and <code>season##-banner.jpg</code>/<code>season-specials-banner.jpg</code>.</p
 <div class="doc doc-object doc-class">
 
 
-<a id="buildarr.plugins.sonarr.config.metadata.RoksboxMetadata"></a>
+<a id="buildarr_sonarr.config.metadata.RoksboxMetadata"></a>
   <div class="doc doc-contents first">
       <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr.plugins.sonarr.config.metadata.Metadata">Metadata</span></code></p>
+        Bases: <code><span title="buildarr_sonarr.config.metadata.Metadata">Metadata</span></code></p>
 
   
       <p>Output metadata files in a format suitable for Roksbox.</p>
-<pre class="highlight"><code class="language-yaml">sonarr:
-  settings:
-    metadata:
-      roksbox:
-        enable: true
-        episode_metadata: true
-        series_images: true
-        season_images: true
-        episode_images: true</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nt">sonarr</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">settings</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">metadata</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">roksbox</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">        </span><span class="nt">episode_metadata</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">        </span><span class="nt">series_images</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">        </span><span class="nt">season_images</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">        </span><span class="nt">episode_images</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</code></pre></div>
 
 
 
@@ -412,14 +418,14 @@ and <code>season##-banner.jpg</code>/<code>season-specials-banner.jpg</code>.</p
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.metadata.RoksboxMetadata.episode_metadata" class="doc doc-heading">
-<code class="highlight language-python">episode_metadata: bool = False</code>
+<h5 id="buildarr_sonarr.config.metadata.RoksboxMetadata.episode_metadata" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">episode_metadata</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.metadata.RoksboxMetadata.episode_metadata" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.metadata.RoksboxMetadata.episode_metadata" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -433,14 +439,14 @@ and <code>season##-banner.jpg</code>/<code>season-specials-banner.jpg</code>.</p
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.metadata.RoksboxMetadata.series_images" class="doc doc-heading">
-<code class="highlight language-python">series_images: bool = False</code>
+<h5 id="buildarr_sonarr.config.metadata.RoksboxMetadata.series_images" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">series_images</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.metadata.RoksboxMetadata.series_images" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.metadata.RoksboxMetadata.series_images" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -454,14 +460,14 @@ and <code>season##-banner.jpg</code>/<code>season-specials-banner.jpg</code>.</p
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.metadata.RoksboxMetadata.season_images" class="doc doc-heading">
-<code class="highlight language-python">season_images: bool = False</code>
+<h5 id="buildarr_sonarr.config.metadata.RoksboxMetadata.season_images" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">season_images</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.metadata.RoksboxMetadata.season_images" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.metadata.RoksboxMetadata.season_images" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -475,14 +481,14 @@ and <code>season##-banner.jpg</code>/<code>season-specials-banner.jpg</code>.</p
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.metadata.RoksboxMetadata.episode_images" class="doc doc-heading">
-<code class="highlight language-python">episode_images: bool = False</code>
+<h5 id="buildarr_sonarr.config.metadata.RoksboxMetadata.episode_images" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">episode_images</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.metadata.RoksboxMetadata.episode_images" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.metadata.RoksboxMetadata.episode_images" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -506,22 +512,23 @@ and <code>season##-banner.jpg</code>/<code>season-specials-banner.jpg</code>.</p
 <div class="doc doc-object doc-class">
 
 
-<a id="buildarr.plugins.sonarr.config.metadata.WdtvMetadata"></a>
+<a id="buildarr_sonarr.config.metadata.WdtvMetadata"></a>
   <div class="doc doc-contents first">
       <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr.plugins.sonarr.config.metadata.Metadata">Metadata</span></code></p>
+        Bases: <code><span title="buildarr_sonarr.config.metadata.Metadata">Metadata</span></code></p>
 
   
       <p>Output metadata files in a format suitable for WDTV.</p>
-<pre class="highlight"><code class="language-yaml">sonarr:
-  settings:
-    metadata:
-      wdtv:
-        enable: true
-        episode_metadata: true
-        series_images: true
-        season_images: true
-        episode_images: true</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nt">sonarr</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">settings</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">metadata</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">wdtv</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">        </span><span class="nt">episode_metadata</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">        </span><span class="nt">series_images</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">        </span><span class="nt">season_images</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">        </span><span class="nt">episode_images</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</code></pre></div>
 
 
 
@@ -539,14 +546,14 @@ and <code>season##-banner.jpg</code>/<code>season-specials-banner.jpg</code>.</p
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.metadata.WdtvMetadata.episode_metadata" class="doc doc-heading">
-<code class="highlight language-python">episode_metadata: bool = False</code>
+<h5 id="buildarr_sonarr.config.metadata.WdtvMetadata.episode_metadata" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">episode_metadata</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.metadata.WdtvMetadata.episode_metadata" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.metadata.WdtvMetadata.episode_metadata" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -560,14 +567,14 @@ and <code>season##-banner.jpg</code>/<code>season-specials-banner.jpg</code>.</p
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.metadata.WdtvMetadata.series_images" class="doc doc-heading">
-<code class="highlight language-python">series_images: bool = False</code>
+<h5 id="buildarr_sonarr.config.metadata.WdtvMetadata.series_images" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">series_images</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.metadata.WdtvMetadata.series_images" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.metadata.WdtvMetadata.series_images" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -581,14 +588,14 @@ and <code>season##-banner.jpg</code>/<code>season-specials-banner.jpg</code>.</p
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.metadata.WdtvMetadata.season_images" class="doc doc-heading">
-<code class="highlight language-python">season_images: bool = False</code>
+<h5 id="buildarr_sonarr.config.metadata.WdtvMetadata.season_images" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">season_images</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.metadata.WdtvMetadata.season_images" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.metadata.WdtvMetadata.season_images" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -603,14 +610,14 @@ and <code>season##-banner.jpg</code>/<code>season-specials-banner.jpg</code>.</p
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.metadata.WdtvMetadata.episode_images" class="doc doc-heading">
-<code class="highlight language-python">episode_images: bool = False</code>
+<h5 id="buildarr_sonarr.config.metadata.WdtvMetadata.episode_images" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">episode_images</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.metadata.WdtvMetadata.episode_images" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.metadata.WdtvMetadata.episode_images" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">

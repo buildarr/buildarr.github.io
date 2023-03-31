@@ -55,11 +55,15 @@
 </li>
                                     
   <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">buildarr-sonarr</a>
+    <a href="#" class="dropdown-item">Buildarr Sonarr Plugin</a>
     <ul class="dropdown-menu">
             
 <li>
     <a href="../../" class="dropdown-item">Introduction</a>
+</li>
+            
+<li>
+    <a href="../../release-notes/" class="dropdown-item">Release Notes</a>
 </li>
             
   <li class="dropdown-submenu">
@@ -288,43 +292,44 @@ occurs in Sonarr.</p>
 <div class="doc doc-object doc-class">
 
 
-<a id="buildarr.plugins.sonarr.config.connect.NotificationTriggers"></a>
+<a id="buildarr_sonarr.config.connect.NotificationTriggers"></a>
   <div class="doc doc-contents first">
       <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr.plugins.sonarr.config.types.SonarrConfigBase">SonarrConfigBase</span></code></p>
+        Bases: <code><span title="buildarr_sonarr.config.types.SonarrConfigBase">SonarrConfigBase</span></code></p>
 
   
       <p>Connections are configured using the following syntax.</p>
-<pre class="highlight"><code class="language-yaml">sonarr:
-  settings:
-    connect:
-      delete_unmanaged: false # Optional
-      definitions:
-        Email: # Name of connection in Sonarr.
-          type: "email" # Required
-          notification_triggers: # When to send notifications.
-            on_grab: true
-            on_import: true
-            on_upgrade: true
-            on_rename: false # Not supported by email notifications.
-            on_series_delete: true
-            on_episode_file_delete: true
-            on_episode_file_delete_for_upgrade: true
-            on_health_issue: true
-            include_health_warnings: false # Do not send on just warnings.
-            on_application_update: true
-          tags: # Tags can also be assigned to connections.
-            - "example"
-          # Connection-specific parameters.
-          server: "smtp.example.com"
-          port: 465
-          use_encryption: true
-          username: "sonarr"
-          password: "fake-password"
-          from_address: "sonarr@example.com"
-          recipient_addresses:
-            - "admin@example.com"
-        # Add additional connections here.</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nt">sonarr</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">settings</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">connect</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">delete_unmanaged</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"> </span><span class="c1"># Optional</span>
+<span class="w">      </span><span class="nt">definitions</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">Email</span><span class="p">:</span><span class="w"> </span><span class="c1"># Name of connection in Sonarr.</span>
+<span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;email&quot;</span><span class="w"> </span><span class="c1"># Required</span>
+<span class="w">          </span><span class="nt">notification_triggers</span><span class="p">:</span><span class="w"> </span><span class="c1"># When to send notifications.</span>
+<span class="w">            </span><span class="nt">on_grab</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">            </span><span class="nt">on_import</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">            </span><span class="nt">on_upgrade</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">            </span><span class="nt">on_rename</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"> </span><span class="c1"># Not supported by email notifications.</span>
+<span class="w">            </span><span class="nt">on_series_delete</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">            </span><span class="nt">on_episode_file_delete</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">            </span><span class="nt">on_episode_file_delete_for_upgrade</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">            </span><span class="nt">on_health_issue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">            </span><span class="nt">include_health_warnings</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"> </span><span class="c1"># Do not send on just warnings.</span>
+<span class="w">            </span><span class="nt">on_application_update</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">          </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="c1"># Tags can also be assigned to connections.</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;example&quot;</span>
+<span class="w">          </span><span class="c1"># Connection-specific parameters.</span>
+<span class="w">          </span><span class="nt">server</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;smtp.example.com&quot;</span>
+<span class="w">          </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">465</span>
+<span class="w">          </span><span class="nt">use_encryption</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">          </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;sonarr&quot;</span>
+<span class="w">          </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;fake-password&quot;</span>
+<span class="w">          </span><span class="nt">from_address</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;sonarr@example.com&quot;</span>
+<span class="w">          </span><span class="nt">recipient_addresses</span><span class="p">:</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;admin@example.com&quot;</span>
+<span class="w">        </span><span class="c1"># Add additional connections here.</span>
+</code></pre></div>
 <p>A <code>type</code> attribute must be defined so Buildarr knows what type of connection to make.
 Each connection has a unique value for <code>type</code> documented below.</p>
 <p>The triggers enabled on a connection are defined under <code>notification_triggers</code>.
@@ -354,14 +359,14 @@ check the documentation the specific connection type for more information.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.NotificationTriggers.on_grab" class="doc doc-heading">
-<code class="highlight language-python">on_grab: bool = False</code>
+<h5 id="buildarr_sonarr.config.connect.NotificationTriggers.on_grab" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">on_grab</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.NotificationTriggers.on_grab" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.NotificationTriggers.on_grab" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -375,14 +380,14 @@ check the documentation the specific connection type for more information.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.NotificationTriggers.on_import" class="doc doc-heading">
-<code class="highlight language-python">on_import: bool = False</code>
+<h5 id="buildarr_sonarr.config.connect.NotificationTriggers.on_import" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">on_import</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.NotificationTriggers.on_import" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.NotificationTriggers.on_import" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -396,14 +401,14 @@ check the documentation the specific connection type for more information.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.NotificationTriggers.on_upgrade" class="doc doc-heading">
-<code class="highlight language-python">on_upgrade: bool = False</code>
+<h5 id="buildarr_sonarr.config.connect.NotificationTriggers.on_upgrade" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">on_upgrade</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.NotificationTriggers.on_upgrade" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.NotificationTriggers.on_upgrade" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -417,14 +422,14 @@ check the documentation the specific connection type for more information.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.NotificationTriggers.on_rename" class="doc doc-heading">
-<code class="highlight language-python">on_rename: bool = False</code>
+<h5 id="buildarr_sonarr.config.connect.NotificationTriggers.on_rename" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">on_rename</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.NotificationTriggers.on_rename" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.NotificationTriggers.on_rename" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -438,14 +443,14 @@ check the documentation the specific connection type for more information.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.NotificationTriggers.on_series_delete" class="doc doc-heading">
-<code class="highlight language-python">on_series_delete: bool = False</code>
+<h5 id="buildarr_sonarr.config.connect.NotificationTriggers.on_series_delete" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">on_series_delete</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.NotificationTriggers.on_series_delete" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.NotificationTriggers.on_series_delete" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -459,14 +464,14 @@ check the documentation the specific connection type for more information.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.NotificationTriggers.on_episode_file_delete" class="doc doc-heading">
-<code class="highlight language-python">on_episode_file_delete: bool = False</code>
+<h5 id="buildarr_sonarr.config.connect.NotificationTriggers.on_episode_file_delete" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">on_episode_file_delete</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.NotificationTriggers.on_episode_file_delete" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.NotificationTriggers.on_episode_file_delete" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -480,14 +485,14 @@ check the documentation the specific connection type for more information.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.NotificationTriggers.on_episode_file_delete_for_upgrade" class="doc doc-heading">
-<code class="highlight language-python">on_episode_file_delete_for_upgrade: bool = False</code>
+<h5 id="buildarr_sonarr.config.connect.NotificationTriggers.on_episode_file_delete_for_upgrade" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">on_episode_file_delete_for_upgrade</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.NotificationTriggers.on_episode_file_delete_for_upgrade" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.NotificationTriggers.on_episode_file_delete_for_upgrade" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -501,14 +506,14 @@ check the documentation the specific connection type for more information.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.NotificationTriggers.on_health_issue" class="doc doc-heading">
-<code class="highlight language-python">on_health_issue: bool = False</code>
+<h5 id="buildarr_sonarr.config.connect.NotificationTriggers.on_health_issue" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">on_health_issue</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.NotificationTriggers.on_health_issue" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.NotificationTriggers.on_health_issue" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -522,14 +527,14 @@ check the documentation the specific connection type for more information.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.NotificationTriggers.include_health_warnings" class="doc doc-heading">
-<code class="highlight language-python">include_health_warnings: bool = False</code>
+<h5 id="buildarr_sonarr.config.connect.NotificationTriggers.include_health_warnings" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">include_health_warnings</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.NotificationTriggers.include_health_warnings" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.NotificationTriggers.include_health_warnings" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -544,14 +549,14 @@ check the documentation the specific connection type for more information.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.NotificationTriggers.on_application_update" class="doc doc-heading">
-<code class="highlight language-python">on_application_update: bool = False</code>
+<h5 id="buildarr_sonarr.config.connect.NotificationTriggers.on_application_update" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">on_application_update</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.NotificationTriggers.on_application_update" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.NotificationTriggers.on_application_update" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -575,10 +580,10 @@ check the documentation the specific connection type for more information.</p>
 <div class="doc doc-object doc-class">
 
 
-<a id="buildarr.plugins.sonarr.config.connect.BoxcarConnection"></a>
+<a id="buildarr_sonarr.config.connect.BoxcarConnection"></a>
   <div class="doc doc-contents first">
       <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr.plugins.sonarr.config.connect.Connection">Connection</span></code></p>
+        Bases: <code><span title="buildarr_sonarr.config.connect.Connection">Connection</span></code></p>
 
   
       <p>Receive media update and health alert push notifications via Boxcar.</p>
@@ -600,14 +605,14 @@ check the documentation the specific connection type for more information.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.BoxcarConnection.type" class="doc doc-heading">
-<code class="highlight language-python">type: Literal['boxcar'] = 'boxcar'</code>
+<h5 id="buildarr_sonarr.config.connect.BoxcarConnection.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;boxcar&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;boxcar&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.BoxcarConnection.type" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.BoxcarConnection.type" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -621,14 +626,14 @@ check the documentation the specific connection type for more information.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.BoxcarConnection.access_token" class="doc doc-heading">
-<code class="highlight language-python">access_token: Password</code>
+<h5 id="buildarr_sonarr.config.connect.BoxcarConnection.access_token" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">access_token</span><span class="p">:</span> <span class="n">Password</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.BoxcarConnection.access_token" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.BoxcarConnection.access_token" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -652,10 +657,10 @@ check the documentation the specific connection type for more information.</p>
 <div class="doc doc-object doc-class">
 
 
-<a id="buildarr.plugins.sonarr.config.connect.CustomscriptConnection"></a>
+<a id="buildarr_sonarr.config.connect.CustomscriptConnection"></a>
   <div class="doc doc-contents first">
       <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr.plugins.sonarr.config.connect.Connection">Connection</span></code></p>
+        Bases: <code><span title="buildarr_sonarr.config.connect.Connection">Connection</span></code></p>
 
   
       <p>Execute a local script on the Sonarr instance when events occur.</p>
@@ -677,14 +682,14 @@ check the documentation the specific connection type for more information.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.CustomscriptConnection.type" class="doc doc-heading">
-<code class="highlight language-python">type: Literal['customscript'] = 'customscript'</code>
+<h5 id="buildarr_sonarr.config.connect.CustomscriptConnection.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;customscript&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;customscript&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.CustomscriptConnection.type" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.CustomscriptConnection.type" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -698,14 +703,14 @@ check the documentation the specific connection type for more information.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.CustomscriptConnection.path" class="doc doc-heading">
-<code class="highlight language-python">path: NonEmptyStr</code>
+<h5 id="buildarr_sonarr.config.connect.CustomscriptConnection.path" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">path</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.CustomscriptConnection.path" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.CustomscriptConnection.path" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -729,10 +734,10 @@ check the documentation the specific connection type for more information.</p>
 <div class="doc doc-object doc-class">
 
 
-<a id="buildarr.plugins.sonarr.config.connect.DiscordConnection"></a>
+<a id="buildarr_sonarr.config.connect.DiscordConnection"></a>
   <div class="doc doc-contents first">
       <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr.plugins.sonarr.config.connect.Connection">Connection</span></code></p>
+        Bases: <code><span title="buildarr_sonarr.config.connect.Connection">Connection</span></code></p>
 
   
       <p>Send media update and health alert messages to a Discord server.</p>
@@ -754,14 +759,14 @@ check the documentation the specific connection type for more information.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.DiscordConnection.type" class="doc doc-heading">
-<code class="highlight language-python">type: Literal['discord'] = 'discord'</code>
+<h5 id="buildarr_sonarr.config.connect.DiscordConnection.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;discord&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;discord&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.DiscordConnection.type" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.DiscordConnection.type" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -775,14 +780,14 @@ check the documentation the specific connection type for more information.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.DiscordConnection.username" class="doc doc-heading">
-<code class="highlight language-python">username: Optional[str] = None</code>
+<h5 id="buildarr_sonarr.config.connect.DiscordConnection.username" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.DiscordConnection.username" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.DiscordConnection.username" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -797,14 +802,14 @@ check the documentation the specific connection type for more information.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.DiscordConnection.avatar" class="doc doc-heading">
-<code class="highlight language-python">avatar: Optional[str] = None</code>
+<h5 id="buildarr_sonarr.config.connect.DiscordConnection.avatar" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">avatar</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.DiscordConnection.avatar" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.DiscordConnection.avatar" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -819,14 +824,14 @@ check the documentation the specific connection type for more information.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.DiscordConnection.host" class="doc doc-heading">
-<code class="highlight language-python">host: Optional[str] = None</code>
+<h5 id="buildarr_sonarr.config.connect.DiscordConnection.host" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.DiscordConnection.host" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.DiscordConnection.host" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -841,14 +846,14 @@ check the documentation the specific connection type for more information.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.DiscordConnection.on_grab_fields" class="doc doc-heading">
-<code class="highlight language-python">on_grab_fields: Set[OnGrabField] = {OnGrabField.overview, OnGrabField.rating, OnGrabField.genres, OnGrabField.quality, OnGrabField.size, OnGrabField.links, OnGrabField.release, OnGrabField.poster, OnGrabField.fanart}</code>
+<h5 id="buildarr_sonarr.config.connect.DiscordConnection.on_grab_fields" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">on_grab_fields</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">OnGrabField</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">OnGrabField</span><span class="o">.</span><span class="n">overview</span><span class="p">,</span> <span class="n">OnGrabField</span><span class="o">.</span><span class="n">rating</span><span class="p">,</span> <span class="n">OnGrabField</span><span class="o">.</span><span class="n">genres</span><span class="p">,</span> <span class="n">OnGrabField</span><span class="o">.</span><span class="n">quality</span><span class="p">,</span> <span class="n">OnGrabField</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="n">OnGrabField</span><span class="o">.</span><span class="n">links</span><span class="p">,</span> <span class="n">OnGrabField</span><span class="o">.</span><span class="n">release</span><span class="p">,</span> <span class="n">OnGrabField</span><span class="o">.</span><span class="n">poster</span><span class="p">,</span> <span class="n">OnGrabField</span><span class="o">.</span><span class="n">fanart</span><span class="p">}</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.DiscordConnection.on_grab_fields" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.DiscordConnection.on_grab_fields" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -869,16 +874,17 @@ By default, all fields are passed in.</p>
 <li><code>fanart</code></li>
 </ul>
 <p>Example:</p>
-<pre class="highlight"><code class="language-yaml">...
-  connect:
-    definitions:
-      Discord:
-        type: "discord"
-        webhook_url: "https://..."
-        on_grab_fields:
-          - "overview"
-          - "quality"
-          - "release"</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nn">...</span>
+<span class="w">  </span><span class="nt">connect</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">definitions</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">Discord</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;discord&quot;</span>
+<span class="w">        </span><span class="nt">webhook_url</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://...&quot;</span>
+<span class="w">        </span><span class="nt">on_grab_fields</span><span class="p">:</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;overview&quot;</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;quality&quot;</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;release&quot;</span>
+</code></pre></div>
   </div>
 
 </div>
@@ -887,14 +893,14 @@ By default, all fields are passed in.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.DiscordConnection.on_import_fields" class="doc doc-heading">
-<code class="highlight language-python">on_import_fields: Set[OnImportField] = {OnImportField.overview, OnImportField.rating, OnImportField.genres, OnImportField.quality, OnImportField.codecs, OnImportField.group, OnImportField.size, OnImportField.languages, OnImportField.subtitles, OnImportField.links, OnImportField.release, OnImportField.poster, OnImportField.fanart}</code>
+<h5 id="buildarr_sonarr.config.connect.DiscordConnection.on_import_fields" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">on_import_fields</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">OnImportField</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">OnImportField</span><span class="o">.</span><span class="n">overview</span><span class="p">,</span> <span class="n">OnImportField</span><span class="o">.</span><span class="n">rating</span><span class="p">,</span> <span class="n">OnImportField</span><span class="o">.</span><span class="n">genres</span><span class="p">,</span> <span class="n">OnImportField</span><span class="o">.</span><span class="n">quality</span><span class="p">,</span> <span class="n">OnImportField</span><span class="o">.</span><span class="n">codecs</span><span class="p">,</span> <span class="n">OnImportField</span><span class="o">.</span><span class="n">group</span><span class="p">,</span> <span class="n">OnImportField</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="n">OnImportField</span><span class="o">.</span><span class="n">languages</span><span class="p">,</span> <span class="n">OnImportField</span><span class="o">.</span><span class="n">subtitles</span><span class="p">,</span> <span class="n">OnImportField</span><span class="o">.</span><span class="n">links</span><span class="p">,</span> <span class="n">OnImportField</span><span class="o">.</span><span class="n">release</span><span class="p">,</span> <span class="n">OnImportField</span><span class="o">.</span><span class="n">poster</span><span class="p">,</span> <span class="n">OnImportField</span><span class="o">.</span><span class="n">fanart</span><span class="p">}</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.DiscordConnection.on_import_fields" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.DiscordConnection.on_import_fields" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -918,16 +924,17 @@ By default, all fields are passed in.</p>
 <li><code>fanart</code></li>
 </ul>
 <p>Example:</p>
-<pre class="highlight"><code class="language-yaml">...
-  connect:
-    definitions:
-      Discord:
-        type: "discord"
-        webhook_url: "https://..."
-        on_import_fields:
-          - "overview"
-          - "quality"
-          - "release"</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nn">...</span>
+<span class="w">  </span><span class="nt">connect</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">definitions</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">Discord</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;discord&quot;</span>
+<span class="w">        </span><span class="nt">webhook_url</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://...&quot;</span>
+<span class="w">        </span><span class="nt">on_import_fields</span><span class="p">:</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;overview&quot;</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;quality&quot;</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;release&quot;</span>
+</code></pre></div>
   </div>
 
 </div>
@@ -946,10 +953,10 @@ By default, all fields are passed in.</p>
 <div class="doc doc-object doc-class">
 
 
-<a id="buildarr.plugins.sonarr.config.connect.EmailConnection"></a>
+<a id="buildarr_sonarr.config.connect.EmailConnection"></a>
   <div class="doc doc-contents first">
       <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr.plugins.sonarr.config.connect.Connection">Connection</span></code></p>
+        Bases: <code><span title="buildarr_sonarr.config.connect.Connection">Connection</span></code></p>
 
   
       <p>Send media update and health alert messages to an email address.</p>
@@ -971,14 +978,14 @@ By default, all fields are passed in.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.EmailConnection.type" class="doc doc-heading">
-<code class="highlight language-python">type: Literal['email'] = 'email'</code>
+<h5 id="buildarr_sonarr.config.connect.EmailConnection.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;email&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.EmailConnection.type" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.EmailConnection.type" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -992,14 +999,14 @@ By default, all fields are passed in.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.EmailConnection.server" class="doc doc-heading">
-<code class="highlight language-python">server: NonEmptyStr</code>
+<h5 id="buildarr_sonarr.config.connect.EmailConnection.server" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">server</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.EmailConnection.server" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.EmailConnection.server" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -1013,14 +1020,14 @@ By default, all fields are passed in.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.EmailConnection.port" class="doc doc-heading">
-<code class="highlight language-python">port: Port = 587</code>
+<h5 id="buildarr_sonarr.config.connect.EmailConnection.port" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">587</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.EmailConnection.port" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.EmailConnection.port" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -1035,14 +1042,14 @@ By default, all fields are passed in.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.EmailConnection.use_encryption" class="doc doc-heading">
-<code class="highlight language-python">use_encryption: bool = True</code>
+<h5 id="buildarr_sonarr.config.connect.EmailConnection.use_encryption" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">use_encryption</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.EmailConnection.use_encryption" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.EmailConnection.use_encryption" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -1059,14 +1066,14 @@ Any other port number will result in STARTTLS being used.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.EmailConnection.username" class="doc doc-heading">
-<code class="highlight language-python">username: NonEmptyStr</code>
+<h5 id="buildarr_sonarr.config.connect.EmailConnection.username" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.EmailConnection.username" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.EmailConnection.username" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -1080,14 +1087,14 @@ Any other port number will result in STARTTLS being used.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.EmailConnection.password" class="doc doc-heading">
-<code class="highlight language-python">password: Password</code>
+<h5 id="buildarr_sonarr.config.connect.EmailConnection.password" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">password</span><span class="p">:</span> <span class="n">Password</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.EmailConnection.password" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.EmailConnection.password" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -1101,14 +1108,14 @@ Any other port number will result in STARTTLS being used.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.EmailConnection.from_address" class="doc doc-heading">
-<code class="highlight language-python">from_address: NameEmail</code>
+<h5 id="buildarr_sonarr.config.connect.EmailConnection.from_address" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">from_address</span><span class="p">:</span> <span class="n">NameEmail</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.EmailConnection.from_address" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.EmailConnection.from_address" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -1124,14 +1131,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.EmailConnection.recipient_addresses" class="doc doc-heading">
-<code class="highlight language-python">recipient_addresses: Annotated[List[NameEmail], Field(min_items=1, unique_items=True)]</code>
+<h5 id="buildarr_sonarr.config.connect.EmailConnection.recipient_addresses" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">recipient_addresses</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">NameEmail</span><span class="p">],</span> <span class="n">Field</span><span class="p">(</span><span class="n">min_items</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">unique_items</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.EmailConnection.recipient_addresses" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.EmailConnection.recipient_addresses" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -1146,14 +1153,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.EmailConnection.cc_addresses" class="doc doc-heading">
-<code class="highlight language-python">cc_addresses: Annotated[List[NameEmail], Field(unique_items=True)] = []</code>
+<h5 id="buildarr_sonarr.config.connect.EmailConnection.cc_addresses" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">cc_addresses</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">NameEmail</span><span class="p">],</span> <span class="n">Field</span><span class="p">(</span><span class="n">unique_items</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span> <span class="o">=</span> <span class="p">[]</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.EmailConnection.cc_addresses" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.EmailConnection.cc_addresses" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -1167,14 +1174,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.EmailConnection.bcc_addresses" class="doc doc-heading">
-<code class="highlight language-python">bcc_addresses: Annotated[List[NameEmail], Field(unique_items=True)] = []</code>
+<h5 id="buildarr_sonarr.config.connect.EmailConnection.bcc_addresses" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">bcc_addresses</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">NameEmail</span><span class="p">],</span> <span class="n">Field</span><span class="p">(</span><span class="n">unique_items</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span> <span class="o">=</span> <span class="p">[]</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.EmailConnection.bcc_addresses" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.EmailConnection.bcc_addresses" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -1198,10 +1205,10 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 <div class="doc doc-object doc-class">
 
 
-<a id="buildarr.plugins.sonarr.config.connect.EmbyConnection"></a>
+<a id="buildarr_sonarr.config.connect.EmbyConnection"></a>
   <div class="doc doc-contents first">
       <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr.plugins.sonarr.config.connect.Connection">Connection</span></code></p>
+        Bases: <code><span title="buildarr_sonarr.config.connect.Connection">Connection</span></code></p>
 
   
       <p>Send media update and health alert notifications to an Emby server.</p>
@@ -1223,14 +1230,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.EmbyConnection.type" class="doc doc-heading">
-<code class="highlight language-python">type: Literal['emby'] = 'emby'</code>
+<h5 id="buildarr_sonarr.config.connect.EmbyConnection.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;emby&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;emby&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.EmbyConnection.type" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.EmbyConnection.type" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -1244,14 +1251,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.EmbyConnection.host" class="doc doc-heading">
-<code class="highlight language-python">host: NonEmptyStr</code>
+<h5 id="buildarr_sonarr.config.connect.EmbyConnection.host" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.EmbyConnection.host" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.EmbyConnection.host" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -1265,14 +1272,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.EmbyConnection.port" class="doc doc-heading">
-<code class="highlight language-python">port: Port = 8096</code>
+<h5 id="buildarr_sonarr.config.connect.EmbyConnection.port" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">8096</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.EmbyConnection.port" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.EmbyConnection.port" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -1286,14 +1293,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.EmbyConnection.use_ssl" class="doc doc-heading">
-<code class="highlight language-python">use_ssl: bool = False</code>
+<h5 id="buildarr_sonarr.config.connect.EmbyConnection.use_ssl" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.EmbyConnection.use_ssl" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.EmbyConnection.use_ssl" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -1307,14 +1314,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.EmbyConnection.api_key" class="doc doc-heading">
-<code class="highlight language-python">api_key: Password</code>
+<h5 id="buildarr_sonarr.config.connect.EmbyConnection.api_key" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">Password</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.EmbyConnection.api_key" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.EmbyConnection.api_key" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -1328,14 +1335,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.EmbyConnection.send_notifications" class="doc doc-heading">
-<code class="highlight language-python">send_notifications: bool = False</code>
+<h5 id="buildarr_sonarr.config.connect.EmbyConnection.send_notifications" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">send_notifications</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.EmbyConnection.send_notifications" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.EmbyConnection.send_notifications" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -1349,14 +1356,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.EmbyConnection.update_library" class="doc doc-heading">
-<code class="highlight language-python">update_library: bool = False</code>
+<h5 id="buildarr_sonarr.config.connect.EmbyConnection.update_library" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">update_library</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.EmbyConnection.update_library" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.EmbyConnection.update_library" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -1380,10 +1387,10 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 <div class="doc doc-object doc-class">
 
 
-<a id="buildarr.plugins.sonarr.config.connect.GotifyConnection"></a>
+<a id="buildarr_sonarr.config.connect.GotifyConnection"></a>
   <div class="doc doc-contents first">
       <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr.plugins.sonarr.config.connect.Connection">Connection</span></code></p>
+        Bases: <code><span title="buildarr_sonarr.config.connect.Connection">Connection</span></code></p>
 
   
       <p>Send media update and health alert push notifications via a Gotify server.</p>
@@ -1405,14 +1412,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.GotifyConnection.type" class="doc doc-heading">
-<code class="highlight language-python">type: Literal['gotify'] = 'gotify'</code>
+<h5 id="buildarr_sonarr.config.connect.GotifyConnection.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;gotify&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;gotify&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.GotifyConnection.type" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.GotifyConnection.type" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -1426,14 +1433,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.GotifyConnection.server" class="doc doc-heading">
-<code class="highlight language-python">server: AnyHttpUrl</code>
+<h5 id="buildarr_sonarr.config.connect.GotifyConnection.server" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">server</span><span class="p">:</span> <span class="n">AnyHttpUrl</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.GotifyConnection.server" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.GotifyConnection.server" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -1447,14 +1454,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.GotifyConnection.app_token" class="doc doc-heading">
-<code class="highlight language-python">app_token: Password</code>
+<h5 id="buildarr_sonarr.config.connect.GotifyConnection.app_token" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">app_token</span><span class="p">:</span> <span class="n">Password</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.GotifyConnection.app_token" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.GotifyConnection.app_token" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -1468,14 +1475,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.GotifyConnection.priority" class="doc doc-heading">
-<code class="highlight language-python">priority: GotifyPriority = GotifyPriority.normal</code>
+<h5 id="buildarr_sonarr.config.connect.GotifyConnection.priority" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">priority</span><span class="p">:</span> <span class="n">GotifyPriority</span> <span class="o">=</span> <span class="n">GotifyPriority</span><span class="o">.</span><span class="n">normal</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.GotifyConnection.priority" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.GotifyConnection.priority" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -1506,10 +1513,10 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 <div class="doc doc-object doc-class">
 
 
-<a id="buildarr.plugins.sonarr.config.connect.JoinConnection"></a>
+<a id="buildarr_sonarr.config.connect.JoinConnection"></a>
   <div class="doc doc-contents first">
       <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr.plugins.sonarr.config.connect.Connection">Connection</span></code></p>
+        Bases: <code><span title="buildarr_sonarr.config.connect.Connection">Connection</span></code></p>
 
   
       <p>Send media update and health alert push notifications via Join.</p>
@@ -1531,14 +1538,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.JoinConnection.type" class="doc doc-heading">
-<code class="highlight language-python">type: Literal['join'] = 'join'</code>
+<h5 id="buildarr_sonarr.config.connect.JoinConnection.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;join&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;join&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.JoinConnection.type" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.JoinConnection.type" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -1552,14 +1559,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.JoinConnection.api_key" class="doc doc-heading">
-<code class="highlight language-python">api_key: Password</code>
+<h5 id="buildarr_sonarr.config.connect.JoinConnection.api_key" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">Password</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.JoinConnection.api_key" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.JoinConnection.api_key" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -1573,14 +1580,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.JoinConnection.device_names" class="doc doc-heading">
-<code class="highlight language-python">device_names: Set[NonEmptyStr] = set()</code>
+<h5 id="buildarr_sonarr.config.connect.JoinConnection.device_names" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">device_names</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.JoinConnection.device_names" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.JoinConnection.device_names" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -1595,14 +1602,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.JoinConnection.priority" class="doc doc-heading">
-<code class="highlight language-python">priority: JoinPriority = JoinPriority.normal</code>
+<h5 id="buildarr_sonarr.config.connect.JoinConnection.priority" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">priority</span><span class="p">:</span> <span class="n">JoinPriority</span> <span class="o">=</span> <span class="n">JoinPriority</span><span class="o">.</span><span class="n">normal</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.JoinConnection.priority" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.JoinConnection.priority" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -1634,10 +1641,10 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 <div class="doc doc-object doc-class">
 
 
-<a id="buildarr.plugins.sonarr.config.connect.KodiConnection"></a>
+<a id="buildarr_sonarr.config.connect.KodiConnection"></a>
   <div class="doc doc-contents first">
       <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr.plugins.sonarr.config.connect.Connection">Connection</span></code></p>
+        Bases: <code><span title="buildarr_sonarr.config.connect.Connection">Connection</span></code></p>
 
   
       <p>Send media update and health alert notifications to a Kodi (XBMC) instance.</p>
@@ -1659,14 +1666,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.KodiConnection.type" class="doc doc-heading">
-<code class="highlight language-python">type: Literal['kodi', 'xbmc'] = 'kodi'</code>
+<h5 id="buildarr_sonarr.config.connect.KodiConnection.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;kodi&#39;</span><span class="p">,</span> <span class="s1">&#39;xbmc&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;kodi&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.KodiConnection.type" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.KodiConnection.type" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -1680,14 +1687,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.KodiConnection.host" class="doc doc-heading">
-<code class="highlight language-python">host: NonEmptyStr</code>
+<h5 id="buildarr_sonarr.config.connect.KodiConnection.host" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.KodiConnection.host" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.KodiConnection.host" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -1701,14 +1708,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.KodiConnection.port" class="doc doc-heading">
-<code class="highlight language-python">port: Port = 8080</code>
+<h5 id="buildarr_sonarr.config.connect.KodiConnection.port" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">8080</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.KodiConnection.port" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.KodiConnection.port" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -1722,14 +1729,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.KodiConnection.use_ssl" class="doc doc-heading">
-<code class="highlight language-python">use_ssl: bool = False</code>
+<h5 id="buildarr_sonarr.config.connect.KodiConnection.use_ssl" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.KodiConnection.use_ssl" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.KodiConnection.use_ssl" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -1743,14 +1750,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.KodiConnection.username" class="doc doc-heading">
-<code class="highlight language-python">username: NonEmptyStr</code>
+<h5 id="buildarr_sonarr.config.connect.KodiConnection.username" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.KodiConnection.username" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.KodiConnection.username" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -1764,14 +1771,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.KodiConnection.password" class="doc doc-heading">
-<code class="highlight language-python">password: Password</code>
+<h5 id="buildarr_sonarr.config.connect.KodiConnection.password" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">password</span><span class="p">:</span> <span class="n">Password</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.KodiConnection.password" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.KodiConnection.password" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -1785,14 +1792,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.KodiConnection.gui_notification" class="doc doc-heading">
-<code class="highlight language-python">gui_notification: bool = False</code>
+<h5 id="buildarr_sonarr.config.connect.KodiConnection.gui_notification" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">gui_notification</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.KodiConnection.gui_notification" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.KodiConnection.gui_notification" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -1806,14 +1813,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.KodiConnection.display_time" class="doc doc-heading">
-<code class="highlight language-python">display_time: int = Field(5, ge=0)</code>
+<h5 id="buildarr_sonarr.config.connect.KodiConnection.display_time" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">display_time</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.KodiConnection.display_time" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.KodiConnection.display_time" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -1827,14 +1834,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.KodiConnection.update_library" class="doc doc-heading">
-<code class="highlight language-python">update_library: bool = False</code>
+<h5 id="buildarr_sonarr.config.connect.KodiConnection.update_library" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">update_library</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.KodiConnection.update_library" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.KodiConnection.update_library" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -1848,14 +1855,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.KodiConnection.clean_library" class="doc doc-heading">
-<code class="highlight language-python">clean_library: bool = False</code>
+<h5 id="buildarr_sonarr.config.connect.KodiConnection.clean_library" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">clean_library</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.KodiConnection.clean_library" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.KodiConnection.clean_library" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -1869,14 +1876,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.KodiConnection.always_update" class="doc doc-heading">
-<code class="highlight language-python">always_update: bool = False</code>
+<h5 id="buildarr_sonarr.config.connect.KodiConnection.always_update" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">always_update</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.KodiConnection.always_update" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.KodiConnection.always_update" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -1900,10 +1907,10 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 <div class="doc doc-object doc-class">
 
 
-<a id="buildarr.plugins.sonarr.config.connect.MailgunConnection"></a>
+<a id="buildarr_sonarr.config.connect.MailgunConnection"></a>
   <div class="doc doc-contents first">
       <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr.plugins.sonarr.config.connect.Connection">Connection</span></code></p>
+        Bases: <code><span title="buildarr_sonarr.config.connect.Connection">Connection</span></code></p>
 
   
       <p>Send media update and health alert emails via the Mailgun delivery service.</p>
@@ -1925,14 +1932,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.MailgunConnection.type" class="doc doc-heading">
-<code class="highlight language-python">type: Literal['mailgun'] = 'mailgun'</code>
+<h5 id="buildarr_sonarr.config.connect.MailgunConnection.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;mailgun&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;mailgun&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.MailgunConnection.type" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.MailgunConnection.type" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -1946,14 +1953,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.MailgunConnection.api_key" class="doc doc-heading">
-<code class="highlight language-python">api_key: Password</code>
+<h5 id="buildarr_sonarr.config.connect.MailgunConnection.api_key" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">Password</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.MailgunConnection.api_key" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.MailgunConnection.api_key" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -1967,14 +1974,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.MailgunConnection.use_eu_endpoint" class="doc doc-heading">
-<code class="highlight language-python">use_eu_endpoint: bool = False</code>
+<h5 id="buildarr_sonarr.config.connect.MailgunConnection.use_eu_endpoint" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">use_eu_endpoint</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.MailgunConnection.use_eu_endpoint" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.MailgunConnection.use_eu_endpoint" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -1988,14 +1995,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.MailgunConnection.from_address" class="doc doc-heading">
-<code class="highlight language-python">from_address: NameEmail</code>
+<h5 id="buildarr_sonarr.config.connect.MailgunConnection.from_address" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">from_address</span><span class="p">:</span> <span class="n">NameEmail</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.MailgunConnection.from_address" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.MailgunConnection.from_address" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -2011,14 +2018,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.MailgunConnection.sender_domain" class="doc doc-heading">
-<code class="highlight language-python">sender_domain: NonEmptyStr</code>
+<h5 id="buildarr_sonarr.config.connect.MailgunConnection.sender_domain" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">sender_domain</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.MailgunConnection.sender_domain" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.MailgunConnection.sender_domain" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -2032,14 +2039,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.MailgunConnection.recipient_addresses" class="doc doc-heading">
-<code class="highlight language-python">recipient_addresses: Annotated[List[NameEmail], Field(min_items=1, unique_items=True)]</code>
+<h5 id="buildarr_sonarr.config.connect.MailgunConnection.recipient_addresses" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">recipient_addresses</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">NameEmail</span><span class="p">],</span> <span class="n">Field</span><span class="p">(</span><span class="n">min_items</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">unique_items</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.MailgunConnection.recipient_addresses" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.MailgunConnection.recipient_addresses" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -2064,10 +2071,10 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 <div class="doc doc-object doc-class">
 
 
-<a id="buildarr.plugins.sonarr.config.connect.PlexHomeTheaterConnection"></a>
+<a id="buildarr_sonarr.config.connect.PlexHomeTheaterConnection"></a>
   <div class="doc doc-contents first">
       <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr.plugins.sonarr.config.connect.Connection">Connection</span></code></p>
+        Bases: <code><span title="buildarr_sonarr.config.connect.Connection">Connection</span></code></p>
 
   
       <p>Send media update notifications to a Plex Home Theater instance.</p>
@@ -2089,14 +2096,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.PlexHomeTheaterConnection.type" class="doc doc-heading">
-<code class="highlight language-python">type: Literal['plex-home-theater'] = 'plex-home-theater'</code>
+<h5 id="buildarr_sonarr.config.connect.PlexHomeTheaterConnection.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;plex-home-theater&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;plex-home-theater&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.PlexHomeTheaterConnection.type" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.PlexHomeTheaterConnection.type" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -2110,14 +2117,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.PlexHomeTheaterConnection.host" class="doc doc-heading">
-<code class="highlight language-python">host: NonEmptyStr</code>
+<h5 id="buildarr_sonarr.config.connect.PlexHomeTheaterConnection.host" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.PlexHomeTheaterConnection.host" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.PlexHomeTheaterConnection.host" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -2131,14 +2138,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.PlexHomeTheaterConnection.port" class="doc doc-heading">
-<code class="highlight language-python">port: Port = 3005</code>
+<h5 id="buildarr_sonarr.config.connect.PlexHomeTheaterConnection.port" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">3005</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.PlexHomeTheaterConnection.port" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.PlexHomeTheaterConnection.port" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -2152,14 +2159,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.PlexHomeTheaterConnection.use_ssl" class="doc doc-heading">
-<code class="highlight language-python">use_ssl: bool = False</code>
+<h5 id="buildarr_sonarr.config.connect.PlexHomeTheaterConnection.use_ssl" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.PlexHomeTheaterConnection.use_ssl" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.PlexHomeTheaterConnection.use_ssl" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -2173,14 +2180,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.PlexHomeTheaterConnection.username" class="doc doc-heading">
-<code class="highlight language-python">username: NonEmptyStr</code>
+<h5 id="buildarr_sonarr.config.connect.PlexHomeTheaterConnection.username" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.PlexHomeTheaterConnection.username" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.PlexHomeTheaterConnection.username" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -2194,14 +2201,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.PlexHomeTheaterConnection.password" class="doc doc-heading">
-<code class="highlight language-python">password: Password</code>
+<h5 id="buildarr_sonarr.config.connect.PlexHomeTheaterConnection.password" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">password</span><span class="p">:</span> <span class="n">Password</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.PlexHomeTheaterConnection.password" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.PlexHomeTheaterConnection.password" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -2215,14 +2222,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.PlexHomeTheaterConnection.gui_notification" class="doc doc-heading">
-<code class="highlight language-python">gui_notification: bool = False</code>
+<h5 id="buildarr_sonarr.config.connect.PlexHomeTheaterConnection.gui_notification" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">gui_notification</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.PlexHomeTheaterConnection.gui_notification" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.PlexHomeTheaterConnection.gui_notification" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -2236,14 +2243,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.PlexHomeTheaterConnection.display_time" class="doc doc-heading">
-<code class="highlight language-python">display_time: int = Field(5, ge=0)</code>
+<h5 id="buildarr_sonarr.config.connect.PlexHomeTheaterConnection.display_time" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">display_time</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.PlexHomeTheaterConnection.display_time" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.PlexHomeTheaterConnection.display_time" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -2257,14 +2264,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.PlexHomeTheaterConnection.update_library" class="doc doc-heading">
-<code class="highlight language-python">update_library: bool = False</code>
+<h5 id="buildarr_sonarr.config.connect.PlexHomeTheaterConnection.update_library" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">update_library</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.PlexHomeTheaterConnection.update_library" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.PlexHomeTheaterConnection.update_library" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -2278,14 +2285,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.PlexHomeTheaterConnection.clean_library" class="doc doc-heading">
-<code class="highlight language-python">clean_library: bool = False</code>
+<h5 id="buildarr_sonarr.config.connect.PlexHomeTheaterConnection.clean_library" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">clean_library</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.PlexHomeTheaterConnection.clean_library" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.PlexHomeTheaterConnection.clean_library" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -2299,14 +2306,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.PlexHomeTheaterConnection.always_update" class="doc doc-heading">
-<code class="highlight language-python">always_update: bool = False</code>
+<h5 id="buildarr_sonarr.config.connect.PlexHomeTheaterConnection.always_update" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">always_update</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.PlexHomeTheaterConnection.always_update" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.PlexHomeTheaterConnection.always_update" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -2330,10 +2337,10 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 <div class="doc doc-object doc-class">
 
 
-<a id="buildarr.plugins.sonarr.config.connect.PlexMediaCenterConnection"></a>
+<a id="buildarr_sonarr.config.connect.PlexMediaCenterConnection"></a>
   <div class="doc doc-contents first">
       <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr.plugins.sonarr.config.connect.Connection">Connection</span></code></p>
+        Bases: <code><span title="buildarr_sonarr.config.connect.Connection">Connection</span></code></p>
 
   
       <p>Send media update notifications to a Plex Media Center instance.</p>
@@ -2355,14 +2362,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.PlexMediaCenterConnection.type" class="doc doc-heading">
-<code class="highlight language-python">type: Literal['plex-media-center'] = 'plex-media-center'</code>
+<h5 id="buildarr_sonarr.config.connect.PlexMediaCenterConnection.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;plex-media-center&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;plex-media-center&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.PlexMediaCenterConnection.type" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.PlexMediaCenterConnection.type" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -2376,14 +2383,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.PlexMediaCenterConnection.host" class="doc doc-heading">
-<code class="highlight language-python">host: NonEmptyStr</code>
+<h5 id="buildarr_sonarr.config.connect.PlexMediaCenterConnection.host" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.PlexMediaCenterConnection.host" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.PlexMediaCenterConnection.host" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -2397,14 +2404,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.PlexMediaCenterConnection.port" class="doc doc-heading">
-<code class="highlight language-python">port: Port = 3000</code>
+<h5 id="buildarr_sonarr.config.connect.PlexMediaCenterConnection.port" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">3000</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.PlexMediaCenterConnection.port" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.PlexMediaCenterConnection.port" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -2418,14 +2425,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.PlexMediaCenterConnection.username" class="doc doc-heading">
-<code class="highlight language-python">username: NonEmptyStr</code>
+<h5 id="buildarr_sonarr.config.connect.PlexMediaCenterConnection.username" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.PlexMediaCenterConnection.username" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.PlexMediaCenterConnection.username" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -2439,14 +2446,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.PlexMediaCenterConnection.password" class="doc doc-heading">
-<code class="highlight language-python">password: Password</code>
+<h5 id="buildarr_sonarr.config.connect.PlexMediaCenterConnection.password" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">password</span><span class="p">:</span> <span class="n">Password</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.PlexMediaCenterConnection.password" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.PlexMediaCenterConnection.password" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -2470,10 +2477,10 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 <div class="doc doc-object doc-class">
 
 
-<a id="buildarr.plugins.sonarr.config.connect.PlexMediaServerConnection"></a>
+<a id="buildarr_sonarr.config.connect.PlexMediaServerConnection"></a>
   <div class="doc doc-contents first">
       <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr.plugins.sonarr.config.connect.Connection">Connection</span></code></p>
+        Bases: <code><span title="buildarr_sonarr.config.connect.Connection">Connection</span></code></p>
 
   
       <p>Send media update notifications to a Plex Media Server instance.</p>
@@ -2496,14 +2503,14 @@ and <code>on_application_update</code></p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.PlexMediaServerConnection.type" class="doc doc-heading">
-<code class="highlight language-python">type: Literal['plex-media-server'] = 'plex-media-server'</code>
+<h5 id="buildarr_sonarr.config.connect.PlexMediaServerConnection.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;plex-media-server&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;plex-media-server&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.PlexMediaServerConnection.type" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.PlexMediaServerConnection.type" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -2517,14 +2524,14 @@ and <code>on_application_update</code></p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.PlexMediaServerConnection.host" class="doc doc-heading">
-<code class="highlight language-python">host: NonEmptyStr</code>
+<h5 id="buildarr_sonarr.config.connect.PlexMediaServerConnection.host" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.PlexMediaServerConnection.host" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.PlexMediaServerConnection.host" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -2538,14 +2545,14 @@ and <code>on_application_update</code></p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.PlexMediaServerConnection.port" class="doc doc-heading">
-<code class="highlight language-python">port: Port = 32400</code>
+<h5 id="buildarr_sonarr.config.connect.PlexMediaServerConnection.port" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">32400</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.PlexMediaServerConnection.port" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.PlexMediaServerConnection.port" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -2559,14 +2566,14 @@ and <code>on_application_update</code></p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.PlexMediaServerConnection.use_ssl" class="doc doc-heading">
-<code class="highlight language-python">use_ssl: bool = False</code>
+<h5 id="buildarr_sonarr.config.connect.PlexMediaServerConnection.use_ssl" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.PlexMediaServerConnection.use_ssl" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.PlexMediaServerConnection.use_ssl" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -2580,14 +2587,14 @@ and <code>on_application_update</code></p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.PlexMediaServerConnection.auth_token" class="doc doc-heading">
-<code class="highlight language-python">auth_token: Password</code>
+<h5 id="buildarr_sonarr.config.connect.PlexMediaServerConnection.auth_token" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">auth_token</span><span class="p">:</span> <span class="n">Password</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.PlexMediaServerConnection.auth_token" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.PlexMediaServerConnection.auth_token" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -2603,14 +2610,14 @@ and <code>on_application_update</code></p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.PlexMediaServerConnection.update_library" class="doc doc-heading">
-<code class="highlight language-python">update_library: bool = True</code>
+<h5 id="buildarr_sonarr.config.connect.PlexMediaServerConnection.update_library" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">update_library</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.PlexMediaServerConnection.update_library" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.PlexMediaServerConnection.update_library" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -2634,10 +2641,10 @@ and <code>on_application_update</code></p>
 <div class="doc doc-object doc-class">
 
 
-<a id="buildarr.plugins.sonarr.config.connect.ProwlConnection"></a>
+<a id="buildarr_sonarr.config.connect.ProwlConnection"></a>
   <div class="doc doc-contents first">
       <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr.plugins.sonarr.config.connect.Connection">Connection</span></code></p>
+        Bases: <code><span title="buildarr_sonarr.config.connect.Connection">Connection</span></code></p>
 
   
       <p>Send media update and health alert push notifications to a Prowl client.</p>
@@ -2659,14 +2666,14 @@ and <code>on_application_update</code></p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.ProwlConnection.type" class="doc doc-heading">
-<code class="highlight language-python">type: Literal['prowl'] = 'prowl'</code>
+<h5 id="buildarr_sonarr.config.connect.ProwlConnection.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;prowl&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;prowl&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.ProwlConnection.type" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.ProwlConnection.type" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -2680,14 +2687,14 @@ and <code>on_application_update</code></p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.ProwlConnection.api_key" class="doc doc-heading">
-<code class="highlight language-python">api_key: Password</code>
+<h5 id="buildarr_sonarr.config.connect.ProwlConnection.api_key" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">Password</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.ProwlConnection.api_key" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.ProwlConnection.api_key" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -2701,14 +2708,14 @@ and <code>on_application_update</code></p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.ProwlConnection.priority" class="doc doc-heading">
-<code class="highlight language-python">priority: ProwlPriority = ProwlPriority.normal</code>
+<h5 id="buildarr_sonarr.config.connect.ProwlConnection.priority" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">priority</span><span class="p">:</span> <span class="n">ProwlPriority</span> <span class="o">=</span> <span class="n">ProwlPriority</span><span class="o">.</span><span class="n">normal</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.ProwlConnection.priority" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.ProwlConnection.priority" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -2740,10 +2747,10 @@ and <code>on_application_update</code></p>
 <div class="doc doc-object doc-class">
 
 
-<a id="buildarr.plugins.sonarr.config.connect.PushbulletConnection"></a>
+<a id="buildarr_sonarr.config.connect.PushbulletConnection"></a>
   <div class="doc doc-contents first">
       <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr.plugins.sonarr.config.connect.Connection">Connection</span></code></p>
+        Bases: <code><span title="buildarr_sonarr.config.connect.Connection">Connection</span></code></p>
 
   
       <p>Send media update and health alert push notifications to 1 or more Pushbullet devices.</p>
@@ -2765,14 +2772,14 @@ and <code>on_application_update</code></p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.PushbulletConnection.type" class="doc doc-heading">
-<code class="highlight language-python">type: Literal['pushbullet'] = 'pushbullet'</code>
+<h5 id="buildarr_sonarr.config.connect.PushbulletConnection.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;pushbullet&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;pushbullet&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.PushbulletConnection.type" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.PushbulletConnection.type" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -2786,14 +2793,14 @@ and <code>on_application_update</code></p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.PushbulletConnection.api_key" class="doc doc-heading">
-<code class="highlight language-python">api_key: Password</code>
+<h5 id="buildarr_sonarr.config.connect.PushbulletConnection.api_key" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">Password</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.PushbulletConnection.api_key" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.PushbulletConnection.api_key" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -2807,14 +2814,14 @@ and <code>on_application_update</code></p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.PushbulletConnection.device_ids" class="doc doc-heading">
-<code class="highlight language-python">device_ids: List[NonEmptyStr] = []</code>
+<h5 id="buildarr_sonarr.config.connect.PushbulletConnection.device_ids" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">device_ids</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.PushbulletConnection.device_ids" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.PushbulletConnection.device_ids" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -2829,14 +2836,14 @@ and <code>on_application_update</code></p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.PushbulletConnection.channel_tags" class="doc doc-heading">
-<code class="highlight language-python">channel_tags: List[NonEmptyStr] = []</code>
+<h5 id="buildarr_sonarr.config.connect.PushbulletConnection.channel_tags" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">channel_tags</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.PushbulletConnection.channel_tags" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.PushbulletConnection.channel_tags" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -2850,14 +2857,14 @@ and <code>on_application_update</code></p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.PushbulletConnection.sender_id" class="doc doc-heading">
-<code class="highlight language-python">sender_id: Optional[str] = None</code>
+<h5 id="buildarr_sonarr.config.connect.PushbulletConnection.sender_id" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">sender_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.PushbulletConnection.sender_id" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.PushbulletConnection.sender_id" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -2883,10 +2890,10 @@ and <code>on_application_update</code></p>
 <div class="doc doc-object doc-class">
 
 
-<a id="buildarr.plugins.sonarr.config.connect.PushoverConnection"></a>
+<a id="buildarr_sonarr.config.connect.PushoverConnection"></a>
   <div class="doc doc-contents first">
       <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr.plugins.sonarr.config.connect.Connection">Connection</span></code></p>
+        Bases: <code><span title="buildarr_sonarr.config.connect.Connection">Connection</span></code></p>
 
   
       <p>Send media update and health alert push notifications to 1 or more Pushover devices.</p>
@@ -2908,14 +2915,14 @@ and <code>on_application_update</code></p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.PushoverConnection.type" class="doc doc-heading">
-<code class="highlight language-python">type: Literal['pushover'] = 'pushover'</code>
+<h5 id="buildarr_sonarr.config.connect.PushoverConnection.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;pushover&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;pushover&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.PushoverConnection.type" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.PushoverConnection.type" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -2929,14 +2936,14 @@ and <code>on_application_update</code></p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.PushoverConnection.user_key" class="doc doc-heading">
-<code class="highlight language-python">user_key: Annotated[SecretStr, Field(min_length=30, max_length=30)]</code>
+<h5 id="buildarr_sonarr.config.connect.PushoverConnection.user_key" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">user_key</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="n">SecretStr</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">min_length</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">30</span><span class="p">)]</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.PushoverConnection.user_key" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.PushoverConnection.user_key" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -2950,14 +2957,14 @@ and <code>on_application_update</code></p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.PushoverConnection.api_key" class="doc doc-heading">
-<code class="highlight language-python">api_key: Annotated[SecretStr, Field(min_length=30, max_length=30)]</code>
+<h5 id="buildarr_sonarr.config.connect.PushoverConnection.api_key" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="n">SecretStr</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">min_length</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">30</span><span class="p">)]</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.PushoverConnection.api_key" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.PushoverConnection.api_key" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -2971,14 +2978,14 @@ and <code>on_application_update</code></p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.PushoverConnection.devices" class="doc doc-heading">
-<code class="highlight language-python">devices: Set[NonEmptyStr] = set()</code>
+<h5 id="buildarr_sonarr.config.connect.PushoverConnection.devices" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">devices</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.PushoverConnection.devices" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.PushoverConnection.devices" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -2993,14 +3000,14 @@ and <code>on_application_update</code></p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.PushoverConnection.priority" class="doc doc-heading">
-<code class="highlight language-python">priority: PushoverPriority = PushoverPriority.normal</code>
+<h5 id="buildarr_sonarr.config.connect.PushoverConnection.priority" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">priority</span><span class="p">:</span> <span class="n">PushoverPriority</span> <span class="o">=</span> <span class="n">PushoverPriority</span><span class="o">.</span><span class="n">normal</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.PushoverConnection.priority" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.PushoverConnection.priority" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -3022,14 +3029,14 @@ and <code>on_application_update</code></p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.PushoverConnection.retry" class="doc doc-heading">
-<code class="highlight language-python">retry: Union[Literal[0], PushoverRetry] = 0</code>
+<h5 id="buildarr_sonarr.config.connect.PushoverConnection.retry" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">retry</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Literal</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">PushoverRetry</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.PushoverConnection.retry" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.PushoverConnection.retry" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -3044,14 +3051,14 @@ and <code>on_application_update</code></p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.PushoverConnection.expire" class="doc doc-heading">
-<code class="highlight language-python">expire: int = Field(0, ge=0, le=86400)</code>
+<h5 id="buildarr_sonarr.config.connect.PushoverConnection.expire" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">expire</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">le</span><span class="o">=</span><span class="mi">86400</span><span class="p">)</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.PushoverConnection.expire" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.PushoverConnection.expire" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -3067,14 +3074,14 @@ If <code>retry</code> is set, this should be set to a higher value.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.PushoverConnection.sound" class="doc doc-heading">
-<code class="highlight language-python">sound: Optional[str] = None</code>
+<h5 id="buildarr_sonarr.config.connect.PushoverConnection.sound" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">sound</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.PushoverConnection.sound" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.PushoverConnection.sound" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -3099,10 +3106,10 @@ If <code>retry</code> is set, this should be set to a higher value.</p>
 <div class="doc doc-object doc-class">
 
 
-<a id="buildarr.plugins.sonarr.config.connect.SendgridConnection"></a>
+<a id="buildarr_sonarr.config.connect.SendgridConnection"></a>
   <div class="doc doc-contents first">
       <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr.plugins.sonarr.config.connect.Connection">Connection</span></code></p>
+        Bases: <code><span title="buildarr_sonarr.config.connect.Connection">Connection</span></code></p>
 
   
       <p>Send media update and health alert emails via the SendGrid delivery service.</p>
@@ -3124,14 +3131,14 @@ If <code>retry</code> is set, this should be set to a higher value.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.SendgridConnection.type" class="doc doc-heading">
-<code class="highlight language-python">type: Literal['sendgrid'] = 'sendgrid'</code>
+<h5 id="buildarr_sonarr.config.connect.SendgridConnection.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;sendgrid&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;sendgrid&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.SendgridConnection.type" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.SendgridConnection.type" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -3145,14 +3152,14 @@ If <code>retry</code> is set, this should be set to a higher value.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.SendgridConnection.api_key" class="doc doc-heading">
-<code class="highlight language-python">api_key: Password</code>
+<h5 id="buildarr_sonarr.config.connect.SendgridConnection.api_key" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">Password</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.SendgridConnection.api_key" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.SendgridConnection.api_key" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -3166,14 +3173,14 @@ If <code>retry</code> is set, this should be set to a higher value.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.SendgridConnection.from_address" class="doc doc-heading">
-<code class="highlight language-python">from_address: NameEmail</code>
+<h5 id="buildarr_sonarr.config.connect.SendgridConnection.from_address" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">from_address</span><span class="p">:</span> <span class="n">NameEmail</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.SendgridConnection.from_address" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.SendgridConnection.from_address" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -3189,14 +3196,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.SendgridConnection.recipient_addresses" class="doc doc-heading">
-<code class="highlight language-python">recipient_addresses: Annotated[List[NameEmail], Field(min_items=1, unique_items=True)]</code>
+<h5 id="buildarr_sonarr.config.connect.SendgridConnection.recipient_addresses" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">recipient_addresses</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">NameEmail</span><span class="p">],</span> <span class="n">Field</span><span class="p">(</span><span class="n">min_items</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">unique_items</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.SendgridConnection.recipient_addresses" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.SendgridConnection.recipient_addresses" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -3221,10 +3228,10 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 <div class="doc doc-object doc-class">
 
 
-<a id="buildarr.plugins.sonarr.config.connect.SlackConnection"></a>
+<a id="buildarr_sonarr.config.connect.SlackConnection"></a>
   <div class="doc doc-contents first">
       <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr.plugins.sonarr.config.connect.Connection">Connection</span></code></p>
+        Bases: <code><span title="buildarr_sonarr.config.connect.Connection">Connection</span></code></p>
 
   
       <p>Send media update and health alert messages to a Slack channel.</p>
@@ -3246,14 +3253,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.SlackConnection.type" class="doc doc-heading">
-<code class="highlight language-python">type: Literal['slack'] = 'slack'</code>
+<h5 id="buildarr_sonarr.config.connect.SlackConnection.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;slack&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;slack&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.SlackConnection.type" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.SlackConnection.type" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -3267,14 +3274,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.SlackConnection.webhook_url" class="doc doc-heading">
-<code class="highlight language-python">webhook_url: AnyHttpUrl</code>
+<h5 id="buildarr_sonarr.config.connect.SlackConnection.webhook_url" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">webhook_url</span><span class="p">:</span> <span class="n">AnyHttpUrl</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.SlackConnection.webhook_url" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.SlackConnection.webhook_url" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -3288,14 +3295,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.SlackConnection.username" class="doc doc-heading">
-<code class="highlight language-python">username: NonEmptyStr</code>
+<h5 id="buildarr_sonarr.config.connect.SlackConnection.username" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.SlackConnection.username" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.SlackConnection.username" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -3309,14 +3316,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.SlackConnection.icon" class="doc doc-heading">
-<code class="highlight language-python">icon: Optional[str] = None</code>
+<h5 id="buildarr_sonarr.config.connect.SlackConnection.icon" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">icon</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.SlackConnection.icon" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.SlackConnection.icon" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -3331,14 +3338,14 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.SlackConnection.channel" class="doc doc-heading">
-<code class="highlight language-python">channel: Optional[str] = None</code>
+<h5 id="buildarr_sonarr.config.connect.SlackConnection.channel" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">channel</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.SlackConnection.channel" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.SlackConnection.channel" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -3362,10 +3369,10 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 <div class="doc doc-object doc-class">
 
 
-<a id="buildarr.plugins.sonarr.config.connect.SynologyIndexerConnection"></a>
+<a id="buildarr_sonarr.config.connect.SynologyIndexerConnection"></a>
   <div class="doc doc-contents first">
       <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr.plugins.sonarr.config.connect.Connection">Connection</span></code></p>
+        Bases: <code><span title="buildarr_sonarr.config.connect.Connection">Connection</span></code></p>
 
   
       <p>Send media update notifications to the local Synology Indexer.</p>
@@ -3388,14 +3395,14 @@ and <code>on_application_update</code></p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.SynologyIndexerConnection.type" class="doc doc-heading">
-<code class="highlight language-python">type: Literal['synology-indexer'] = 'synology-indexer'</code>
+<h5 id="buildarr_sonarr.config.connect.SynologyIndexerConnection.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;synology-indexer&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;synology-indexer&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.SynologyIndexerConnection.type" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.SynologyIndexerConnection.type" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -3409,14 +3416,14 @@ and <code>on_application_update</code></p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.SynologyIndexerConnection.update_library" class="doc doc-heading">
-<code class="highlight language-python">update_library: bool = True</code>
+<h5 id="buildarr_sonarr.config.connect.SynologyIndexerConnection.update_library" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">update_library</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.SynologyIndexerConnection.update_library" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.SynologyIndexerConnection.update_library" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -3440,10 +3447,10 @@ and <code>on_application_update</code></p>
 <div class="doc doc-object doc-class">
 
 
-<a id="buildarr.plugins.sonarr.config.connect.TelegramConnection"></a>
+<a id="buildarr_sonarr.config.connect.TelegramConnection"></a>
   <div class="doc doc-contents first">
       <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr.plugins.sonarr.config.connect.Connection">Connection</span></code></p>
+        Bases: <code><span title="buildarr_sonarr.config.connect.Connection">Connection</span></code></p>
 
   
       <p>Send media update and health alert messages to a Telegram chat room.</p>
@@ -3465,14 +3472,14 @@ and <code>on_application_update</code></p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.TelegramConnection.type" class="doc doc-heading">
-<code class="highlight language-python">type: Literal['telegram'] = 'telegram'</code>
+<h5 id="buildarr_sonarr.config.connect.TelegramConnection.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;telegram&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;telegram&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.TelegramConnection.type" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.TelegramConnection.type" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -3486,14 +3493,14 @@ and <code>on_application_update</code></p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.TelegramConnection.bot_token" class="doc doc-heading">
-<code class="highlight language-python">bot_token: Password</code>
+<h5 id="buildarr_sonarr.config.connect.TelegramConnection.bot_token" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">bot_token</span><span class="p">:</span> <span class="n">Password</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.TelegramConnection.bot_token" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.TelegramConnection.bot_token" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -3507,14 +3514,14 @@ and <code>on_application_update</code></p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.TelegramConnection.chat_id" class="doc doc-heading">
-<code class="highlight language-python">chat_id: NonEmptyStr</code>
+<h5 id="buildarr_sonarr.config.connect.TelegramConnection.chat_id" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">chat_id</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.TelegramConnection.chat_id" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.TelegramConnection.chat_id" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -3529,14 +3536,14 @@ and <code>on_application_update</code></p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.TelegramConnection.send_silently" class="doc doc-heading">
-<code class="highlight language-python">send_silently: bool = False</code>
+<h5 id="buildarr_sonarr.config.connect.TelegramConnection.send_silently" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">send_silently</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.TelegramConnection.send_silently" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.TelegramConnection.send_silently" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -3560,10 +3567,10 @@ and <code>on_application_update</code></p>
 <div class="doc doc-object doc-class">
 
 
-<a id="buildarr.plugins.sonarr.config.connect.TraktConnection"></a>
+<a id="buildarr_sonarr.config.connect.TraktConnection"></a>
   <div class="doc doc-contents first">
       <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr.plugins.sonarr.config.connect.Connection">Connection</span></code></p>
+        Bases: <code><span title="buildarr_sonarr.config.connect.Connection">Connection</span></code></p>
 
   
       <p>Send media update and health alert messages to the Trakt media tracker.</p>
@@ -3573,7 +3580,8 @@ and <code>on_application_update</code></p>
 At the moment, the easiest way to generate the tokens for Buildarr
 is to do it using the GUI within Sonarr, and use the following
 shell command to retrieve the generated configuration.</p>
-<pre class="highlight"><code class="language-bash">$ curl -X "GET" "&lt;sonarr-url&gt;/api/v3/notification" -H "X-Api-Key: &lt;api-key&gt;"</code></pre>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>curl<span class="w"> </span>-X<span class="w"> </span><span class="s2">&quot;GET&quot;</span><span class="w"> </span><span class="s2">&quot;&lt;sonarr-url&gt;/api/v3/notification&quot;</span><span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;X-Api-Key: &lt;api-key&gt;&quot;</span>
+</code></pre></div>
 </div>
 <p>Supported notification triggers: All except <code>on_grab</code>, <code>on_rename</code>,
 <code>on_health_issue</code> and <code>on_application_update</code></p>
@@ -3594,14 +3602,14 @@ shell command to retrieve the generated configuration.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.TraktConnection.type" class="doc doc-heading">
-<code class="highlight language-python">type: Literal['trakt'] = 'trakt'</code>
+<h5 id="buildarr_sonarr.config.connect.TraktConnection.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;trakt&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;trakt&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.TraktConnection.type" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.TraktConnection.type" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -3615,14 +3623,14 @@ shell command to retrieve the generated configuration.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.TraktConnection.access_token" class="doc doc-heading">
-<code class="highlight language-python">access_token: Password</code>
+<h5 id="buildarr_sonarr.config.connect.TraktConnection.access_token" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">access_token</span><span class="p">:</span> <span class="n">Password</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.TraktConnection.access_token" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.TraktConnection.access_token" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -3636,14 +3644,14 @@ shell command to retrieve the generated configuration.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.TraktConnection.refresh_token" class="doc doc-heading">
-<code class="highlight language-python">refresh_token: Password</code>
+<h5 id="buildarr_sonarr.config.connect.TraktConnection.refresh_token" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">refresh_token</span><span class="p">:</span> <span class="n">Password</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.TraktConnection.refresh_token" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.TraktConnection.refresh_token" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -3657,14 +3665,14 @@ shell command to retrieve the generated configuration.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.TraktConnection.expires" class="doc doc-heading">
-<code class="highlight language-python">expires: datetime</code>
+<h5 id="buildarr_sonarr.config.connect.TraktConnection.expires" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">expires</span><span class="p">:</span> <span class="n">datetime</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.TraktConnection.expires" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.TraktConnection.expires" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -3679,14 +3687,14 @@ shell command to retrieve the generated configuration.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.TraktConnection.auth_user" class="doc doc-heading">
-<code class="highlight language-python">auth_user: TraktAuthUser</code>
+<h5 id="buildarr_sonarr.config.connect.TraktConnection.auth_user" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">auth_user</span><span class="p">:</span> <span class="n">TraktAuthUser</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.TraktConnection.auth_user" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.TraktConnection.auth_user" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -3710,10 +3718,10 @@ shell command to retrieve the generated configuration.</p>
 <div class="doc doc-object doc-class">
 
 
-<a id="buildarr.plugins.sonarr.config.connect.TwitterConnection"></a>
+<a id="buildarr_sonarr.config.connect.TwitterConnection"></a>
   <div class="doc doc-contents first">
       <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr.plugins.sonarr.config.connect.Connection">Connection</span></code></p>
+        Bases: <code><span title="buildarr_sonarr.config.connect.Connection">Connection</span></code></p>
 
   
       <p>Send media update and health alert messages via Twitter.</p>
@@ -3741,14 +3749,14 @@ and <a href="https://wiki.servarr.com/useful-tools#twitter-connect">WikiArr</a>.
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.TwitterConnection.type" class="doc doc-heading">
-<code class="highlight language-python">type: Literal['twitter'] = 'twitter'</code>
+<h5 id="buildarr_sonarr.config.connect.TwitterConnection.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;twitter&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;twitter&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.TwitterConnection.type" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.TwitterConnection.type" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -3762,14 +3770,14 @@ and <a href="https://wiki.servarr.com/useful-tools#twitter-connect">WikiArr</a>.
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.TwitterConnection.consumer_key" class="doc doc-heading">
-<code class="highlight language-python">consumer_key: Password</code>
+<h5 id="buildarr_sonarr.config.connect.TwitterConnection.consumer_key" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">consumer_key</span><span class="p">:</span> <span class="n">Password</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.TwitterConnection.consumer_key" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.TwitterConnection.consumer_key" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -3783,14 +3791,14 @@ and <a href="https://wiki.servarr.com/useful-tools#twitter-connect">WikiArr</a>.
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.TwitterConnection.consumer_secret" class="doc doc-heading">
-<code class="highlight language-python">consumer_secret: Password</code>
+<h5 id="buildarr_sonarr.config.connect.TwitterConnection.consumer_secret" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">consumer_secret</span><span class="p">:</span> <span class="n">Password</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.TwitterConnection.consumer_secret" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.TwitterConnection.consumer_secret" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -3804,14 +3812,14 @@ and <a href="https://wiki.servarr.com/useful-tools#twitter-connect">WikiArr</a>.
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.TwitterConnection.access_token" class="doc doc-heading">
-<code class="highlight language-python">access_token: Password</code>
+<h5 id="buildarr_sonarr.config.connect.TwitterConnection.access_token" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">access_token</span><span class="p">:</span> <span class="n">Password</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.TwitterConnection.access_token" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.TwitterConnection.access_token" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -3825,14 +3833,14 @@ and <a href="https://wiki.servarr.com/useful-tools#twitter-connect">WikiArr</a>.
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.TwitterConnection.access_token_secret" class="doc doc-heading">
-<code class="highlight language-python">access_token_secret: Password</code>
+<h5 id="buildarr_sonarr.config.connect.TwitterConnection.access_token_secret" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">access_token_secret</span><span class="p">:</span> <span class="n">Password</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.TwitterConnection.access_token_secret" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.TwitterConnection.access_token_secret" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -3846,14 +3854,14 @@ and <a href="https://wiki.servarr.com/useful-tools#twitter-connect">WikiArr</a>.
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.TwitterConnection.mention" class="doc doc-heading">
-<code class="highlight language-python">mention: NonEmptyStr</code>
+<h5 id="buildarr_sonarr.config.connect.TwitterConnection.mention" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">mention</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.TwitterConnection.mention" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.TwitterConnection.mention" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -3867,14 +3875,14 @@ and <a href="https://wiki.servarr.com/useful-tools#twitter-connect">WikiArr</a>.
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.TwitterConnection.direct_message" class="doc doc-heading">
-<code class="highlight language-python">direct_message: bool = True</code>
+<h5 id="buildarr_sonarr.config.connect.TwitterConnection.direct_message" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">direct_message</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.TwitterConnection.direct_message" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.TwitterConnection.direct_message" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -3898,10 +3906,10 @@ and <a href="https://wiki.servarr.com/useful-tools#twitter-connect">WikiArr</a>.
 <div class="doc doc-object doc-class">
 
 
-<a id="buildarr.plugins.sonarr.config.connect.WebhookConnection"></a>
+<a id="buildarr_sonarr.config.connect.WebhookConnection"></a>
   <div class="doc doc-contents first">
       <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr.plugins.sonarr.config.connect.Connection">Connection</span></code></p>
+        Bases: <code><span title="buildarr_sonarr.config.connect.Connection">Connection</span></code></p>
 
   
       <p>Send media update and health alert notifications to a webhook API.</p>
@@ -3923,14 +3931,14 @@ and <a href="https://wiki.servarr.com/useful-tools#twitter-connect">WikiArr</a>.
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.WebhookConnection.type" class="doc doc-heading">
-<code class="highlight language-python">type: Literal['webhook'] = 'webhook'</code>
+<h5 id="buildarr_sonarr.config.connect.WebhookConnection.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;webhook&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;webhook&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.WebhookConnection.type" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.WebhookConnection.type" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -3944,14 +3952,14 @@ and <a href="https://wiki.servarr.com/useful-tools#twitter-connect">WikiArr</a>.
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.WebhookConnection.method" class="doc doc-heading">
-<code class="highlight language-python">method: WebhookMethod = WebhookMethod.POST</code>
+<h5 id="buildarr_sonarr.config.connect.WebhookConnection.method" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">method</span><span class="p">:</span> <span class="n">WebhookMethod</span> <span class="o">=</span> <span class="n">WebhookMethod</span><span class="o">.</span><span class="n">POST</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.WebhookConnection.method" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.WebhookConnection.method" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -3970,14 +3978,14 @@ and <a href="https://wiki.servarr.com/useful-tools#twitter-connect">WikiArr</a>.
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.WebhookConnection.username" class="doc doc-heading">
-<code class="highlight language-python">username: NonEmptyStr</code>
+<h5 id="buildarr_sonarr.config.connect.WebhookConnection.username" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.WebhookConnection.username" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.WebhookConnection.username" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -3991,14 +3999,14 @@ and <a href="https://wiki.servarr.com/useful-tools#twitter-connect">WikiArr</a>.
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.connect.WebhookConnection.password" class="doc doc-heading">
-<code class="highlight language-python">password: Password</code>
+<h5 id="buildarr_sonarr.config.connect.WebhookConnection.password" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">password</span><span class="p">:</span> <span class="n">Password</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.connect.WebhookConnection.password" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.connect.WebhookConnection.password" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">

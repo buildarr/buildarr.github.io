@@ -55,11 +55,15 @@
 </li>
                                     
   <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">buildarr-sonarr</a>
+    <a href="#" class="dropdown-item">Buildarr Sonarr Plugin</a>
     <ul class="dropdown-menu">
             
 <li>
     <a href="../../" class="dropdown-item">Introduction</a>
+</li>
+            
+<li>
+    <a href="../../release-notes/" class="dropdown-item">Release Notes</a>
 </li>
             
   <li class="dropdown-submenu">
@@ -191,23 +195,24 @@
 <div class="doc doc-object doc-class">
 
 
-<a id="buildarr.plugins.sonarr.config.ui.SonarrUISettingsConfig"></a>
+<a id="buildarr_sonarr.config.ui.SonarrUISettingsConfig"></a>
   <div class="doc doc-contents first">
       <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr.plugins.sonarr.config.types.SonarrConfigBase">SonarrConfigBase</span></code></p>
+        Bases: <code><span title="buildarr_sonarr.config.types.SonarrConfigBase">SonarrConfigBase</span></code></p>
 
   
       <p>Sonarr user interface configuration can also be set directly from Buildarr.</p>
-<pre class="highlight"><code class="language-yaml">sonarr:
-  settings:
-    ui:
-      first_day_of_week: "monday"
-      week_column_header: "day-first"
-      short_date_format: "word-month-second"
-      long_date_format: "day-first"
-      time_format: "twentyfour-hour"
-      show_relative_dates: true
-      enable_color_impaired_mode: false</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nt">sonarr</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">settings</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ui</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">first_day_of_week</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;monday&quot;</span>
+<span class="w">      </span><span class="nt">week_column_header</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;day-first&quot;</span>
+<span class="w">      </span><span class="nt">short_date_format</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;word-month-second&quot;</span>
+<span class="w">      </span><span class="nt">long_date_format</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;day-first&quot;</span>
+<span class="w">      </span><span class="nt">time_format</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;twentyfour-hour&quot;</span>
+<span class="w">      </span><span class="nt">show_relative_dates</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="nt">enable_color_impaired_mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+</code></pre></div>
 
 
 
@@ -225,14 +230,14 @@
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.ui.SonarrUISettingsConfig.first_day_of_week" class="doc doc-heading">
-<code class="highlight language-python">first_day_of_week: FirstDayOfWeek = FirstDayOfWeek.sunday</code>
+<h5 id="buildarr_sonarr.config.ui.SonarrUISettingsConfig.first_day_of_week" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">first_day_of_week</span><span class="p">:</span> <span class="n">FirstDayOfWeek</span> <span class="o">=</span> <span class="n">FirstDayOfWeek</span><span class="o">.</span><span class="n">sunday</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.ui.SonarrUISettingsConfig.first_day_of_week" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.ui.SonarrUISettingsConfig.first_day_of_week" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -251,14 +256,14 @@
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.ui.SonarrUISettingsConfig.week_column_header" class="doc doc-heading">
-<code class="highlight language-python">week_column_header: WeekColumnHeader = WeekColumnHeader.month_first</code>
+<h5 id="buildarr_sonarr.config.ui.SonarrUISettingsConfig.week_column_header" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">week_column_header</span><span class="p">:</span> <span class="n">WeekColumnHeader</span> <span class="o">=</span> <span class="n">WeekColumnHeader</span><span class="o">.</span><span class="n">month_first</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.ui.SonarrUISettingsConfig.week_column_header" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.ui.SonarrUISettingsConfig.week_column_header" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -279,14 +284,14 @@
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.ui.SonarrUISettingsConfig.short_date_format" class="doc doc-heading">
-<code class="highlight language-python">short_date_format: ShortDateFormat = ShortDateFormat.word_month_first</code>
+<h5 id="buildarr_sonarr.config.ui.SonarrUISettingsConfig.short_date_format" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">short_date_format</span><span class="p">:</span> <span class="n">ShortDateFormat</span> <span class="o">=</span> <span class="n">ShortDateFormat</span><span class="o">.</span><span class="n">word_month_first</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.ui.SonarrUISettingsConfig.short_date_format" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.ui.SonarrUISettingsConfig.short_date_format" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -309,14 +314,14 @@
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.ui.SonarrUISettingsConfig.long_date_format" class="doc doc-heading">
-<code class="highlight language-python">long_date_format: LongDateFormat = LongDateFormat.month_first</code>
+<h5 id="buildarr_sonarr.config.ui.SonarrUISettingsConfig.long_date_format" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">long_date_format</span><span class="p">:</span> <span class="n">LongDateFormat</span> <span class="o">=</span> <span class="n">LongDateFormat</span><span class="o">.</span><span class="n">month_first</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.ui.SonarrUISettingsConfig.long_date_format" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.ui.SonarrUISettingsConfig.long_date_format" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -335,14 +340,14 @@
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.ui.SonarrUISettingsConfig.time_format" class="doc doc-heading">
-<code class="highlight language-python">time_format: TimeFormat = TimeFormat.twelve_hour</code>
+<h5 id="buildarr_sonarr.config.ui.SonarrUISettingsConfig.time_format" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">time_format</span><span class="p">:</span> <span class="n">TimeFormat</span> <span class="o">=</span> <span class="n">TimeFormat</span><span class="o">.</span><span class="n">twelve_hour</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.ui.SonarrUISettingsConfig.time_format" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.ui.SonarrUISettingsConfig.time_format" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -361,14 +366,14 @@
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.ui.SonarrUISettingsConfig.show_relative_dates" class="doc doc-heading">
-<code class="highlight language-python">show_relative_dates: bool = True</code>
+<h5 id="buildarr_sonarr.config.ui.SonarrUISettingsConfig.show_relative_dates" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">show_relative_dates</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.ui.SonarrUISettingsConfig.show_relative_dates" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.ui.SonarrUISettingsConfig.show_relative_dates" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -383,14 +388,14 @@ instead of absolute dates (e.g. Monday, Tuesday ...).</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.ui.SonarrUISettingsConfig.enable_color_impaired_mode" class="doc doc-heading">
-<code class="highlight language-python">enable_color_impaired_mode: bool = False</code>
+<h5 id="buildarr_sonarr.config.ui.SonarrUISettingsConfig.enable_color_impaired_mode" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">enable_color_impaired_mode</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.ui.SonarrUISettingsConfig.enable_color_impaired_mode" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.ui.SonarrUISettingsConfig.enable_color_impaired_mode" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">

@@ -55,11 +55,15 @@
 </li>
                                     
   <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">buildarr-sonarr</a>
+    <a href="#" class="dropdown-item">Buildarr Sonarr Plugin</a>
     <ul class="dropdown-menu">
             
 <li>
     <a href="../../" class="dropdown-item">Introduction</a>
+</li>
+            
+<li>
+    <a href="../../release-notes/" class="dropdown-item">Release Notes</a>
 </li>
             
   <li class="dropdown-submenu">
@@ -199,7 +203,7 @@
 <div class="doc doc-object doc-class">
 
 
-<a id="buildarr.plugins.sonarr.config.quality.SonarrQualitySettingsConfig"></a>
+<a id="buildarr_sonarr.config.quality.SonarrQualitySettingsConfig"></a>
   <div class="doc doc-contents first">
       <p class="doc doc-class-bases">
         Bases: <code><span title="buildarr.config.ConfigBase">ConfigBase</span></code></p>
@@ -208,15 +212,16 @@
       <p>Quality definitions are used to set the permitted bit rates for each quality level.</p>
 <p>These can either be set manually within Buildarr, or pre-made profiles can be
 imported from TRaSH-Guides.</p>
-<pre class="highlight"><code class="language-yaml">sonarr:
-  settings:
-    quality:
-      trash_id: "bef99584217af744e404ed44a33af589" # series
-      definitions:
-        Bluray-480p: # "Quality" column name (not "Title")
-          min: 2
-          max: 100
-        # Add additional override quality definitions here</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nt">sonarr</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">settings</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">quality</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">trash_id</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;bef99584217af744e404ed44a33af589&quot;</span><span class="w"> </span><span class="c1"># series</span>
+<span class="w">      </span><span class="nt">definitions</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">Bluray-480p</span><span class="p">:</span><span class="w"> </span><span class="c1"># &quot;Quality&quot; column name (not &quot;Title&quot;)</span>
+<span class="w">          </span><span class="nt">min</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">          </span><span class="nt">max</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">        </span><span class="c1"># Add additional override quality definitions here</span>
+</code></pre></div>
 <p>Quality definition profiles retrieved from TRaSH-Guides are automatically
 kept up to date by Buildarr, with the latest values being pushed to Sonarr
 on an update run.</p>
@@ -240,14 +245,14 @@ and <a href="https://trash-guides.info/Sonarr/Sonarr-Quality-Settings-File-Size/
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.quality.SonarrQualitySettingsConfig.trash_id" class="doc doc-heading">
-<code class="highlight language-python">trash_id: Optional[TrashID] = None</code>
+<h5 id="buildarr_sonarr.config.quality.SonarrQualitySettingsConfig.trash_id" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">trash_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TrashID</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.quality.SonarrQualitySettingsConfig.trash_id" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.quality.SonarrQualitySettingsConfig.trash_id" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -262,14 +267,14 @@ and <a href="https://trash-guides.info/Sonarr/Sonarr-Quality-Settings-File-Size/
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.quality.SonarrQualitySettingsConfig.definitions" class="doc doc-heading">
-<code class="highlight language-python">definitions: Dict[str, QualityDefinition] = {}</code>
+<h5 id="buildarr_sonarr.config.quality.SonarrQualitySettingsConfig.definitions" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">definitions</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">QualityDefinition</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.quality.SonarrQualitySettingsConfig.definitions" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.quality.SonarrQualitySettingsConfig.definitions" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -299,10 +304,10 @@ and quality definitions not set within Buildarr are left unmodified.</p>
 <div class="doc doc-object doc-class">
 
 
-<a id="buildarr.plugins.sonarr.config.quality.QualityDefinition"></a>
+<a id="buildarr_sonarr.config.quality.QualityDefinition"></a>
   <div class="doc doc-contents first">
       <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr.plugins.sonarr.config.types.SonarrConfigBase">SonarrConfigBase</span></code></p>
+        Bases: <code><span title="buildarr_sonarr.config.types.SonarrConfigBase">SonarrConfigBase</span></code></p>
 
   
       <p>Manually set quality definitions can have the following parameters.</p>
@@ -323,14 +328,14 @@ and quality definitions not set within Buildarr are left unmodified.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.quality.QualityDefinition.title" class="doc doc-heading">
-<code class="highlight language-python">title: Optional[str] = None</code>
+<h5 id="buildarr_sonarr.config.quality.QualityDefinition.title" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">title</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.quality.QualityDefinition.title" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.quality.QualityDefinition.title" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -347,14 +352,14 @@ will also be <code>Bluray-480p</code>)</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.quality.QualityDefinition.min" class="doc doc-heading">
-<code class="highlight language-python">min: float = Field(Ellipsis, ge=0, le=QUALITYDEFINITION_MAX - 1)</code>
+<h5 id="buildarr_sonarr.config.quality.QualityDefinition.min" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">min</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="bp">Ellipsis</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">le</span><span class="o">=</span><span class="n">QUALITYDEFINITION_MAX</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.quality.QualityDefinition.min" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.quality.QualityDefinition.min" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -370,14 +375,14 @@ Must be set at least 1MB/min lower than <code>max</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.quality.QualityDefinition.max" class="doc doc-heading">
-<code class="highlight language-python">max: Optional[float] = Field(Ellipsis, ge=1, le=QUALITYDEFINITION_MAX)</code>
+<h5 id="buildarr_sonarr.config.quality.QualityDefinition.max" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">max</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="bp">Ellipsis</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">le</span><span class="o">=</span><span class="n">QUALITYDEFINITION_MAX</span><span class="p">)</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.quality.QualityDefinition.max" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.quality.QualityDefinition.max" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">

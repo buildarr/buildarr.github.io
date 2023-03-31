@@ -55,11 +55,15 @@
 </li>
                                     
   <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">buildarr-sonarr</a>
+    <a href="#" class="dropdown-item">Buildarr Sonarr Plugin</a>
     <ul class="dropdown-menu">
             
 <li>
     <a href="../../" class="dropdown-item">Introduction</a>
+</li>
+            
+<li>
+    <a href="../../release-notes/" class="dropdown-item">Release Notes</a>
 </li>
             
   <li class="dropdown-submenu">
@@ -149,7 +153,7 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../../" class="nav-link">
+                                <a rel="prev" href="../../release-notes/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
@@ -191,40 +195,42 @@
 <div class="doc doc-object doc-class">
 
 
-<a id="buildarr.plugins.sonarr.config.SonarrInstanceConfig"></a>
+<a id="buildarr_sonarr.config.SonarrInstanceConfig"></a>
   <div class="doc doc-contents first">
       <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr.plugins.sonarr.config._SonarrInstanceConfig">_SonarrInstanceConfig</span></code></p>
+        Bases: <code><span title="buildarr_sonarr.config._SonarrInstanceConfig">_SonarrInstanceConfig</span></code></p>
 
   
       <p>By default, Buildarr will look for a single instance at <code>http://sonarr:8989</code>.
 Most configurations are different, and to accommodate those, you can configure
 how Buildarr connects to individual Sonarr instances.</p>
 <p>Configuration of a single Sonarr instance:</p>
-<pre class="highlight"><code class="language-yaml">sonarr:
-  hostname: "sonarr.example.com"
-  port: 8989
-  protocol: "http"
-  settings:
-    ...</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nt">sonarr</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">hostname</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;sonarr.example.com&quot;</span>
+<span class="w">  </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8989</span>
+<span class="w">  </span><span class="nt">protocol</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;http&quot;</span>
+<span class="w">  </span><span class="nt">settings</span><span class="p">:</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+</code></pre></div>
 <p>Configuration of multiple instances:</p>
-<pre class="highlight"><code class="language-yaml">sonarr:
-  # Configuration and settings common to all instances.
-  port: 8989
-  settings:
-    ...
-  instances:
-    # Sonarr instance 1-specific configuration.
-    sonarr1:
-      hostname: "sonarr1.example.com"
-      settings:
-        ...
-    # Sonarr instance 2-specific configuration.
-    sonarr2:
-      hostname: "sonarr2.example.com"
-      api_key: "..." # Explicitly define API key
-      settings:
-        ...</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nt">sonarr</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Configuration and settings common to all instances.</span>
+<span class="w">  </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8989</span>
+<span class="w">  </span><span class="nt">settings</span><span class="p">:</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+<span class="w">  </span><span class="nt">instances</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># Sonarr instance 1-specific configuration.</span>
+<span class="w">    </span><span class="nt">sonarr1</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hostname</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;sonarr1.example.com&quot;</span>
+<span class="w">      </span><span class="nt">settings</span><span class="p">:</span>
+<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+<span class="w">    </span><span class="c1"># Sonarr instance 2-specific configuration.</span>
+<span class="w">    </span><span class="nt">sonarr2</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">hostname</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;sonarr2.example.com&quot;</span>
+<span class="w">      </span><span class="nt">api_key</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;...&quot;</span><span class="w"> </span><span class="c1"># Explicitly define API key</span>
+<span class="w">      </span><span class="nt">settings</span><span class="p">:</span>
+<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+</code></pre></div>
 
 
 
@@ -242,14 +248,14 @@ how Buildarr connects to individual Sonarr instances.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.SonarrInstanceConfig.hostname" class="doc doc-heading">
-<code class="highlight language-python">hostname: NonEmptyStr = 'sonarr'</code>
+<h5 id="buildarr_sonarr.config.SonarrInstanceConfig.hostname" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">hostname</span><span class="p">:</span> <span class="n">NonEmptyStr</span> <span class="o">=</span> <span class="s1">&#39;sonarr&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.SonarrInstanceConfig.hostname" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.SonarrInstanceConfig.hostname" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -259,10 +265,11 @@ how Buildarr connects to individual Sonarr instances.</p>
 the default hostname is <code>sonarr</code>.</p>
 <p>When using multiple instance-specific configurations, the default hostname
 is the name given to the instance in the <code>instances</code> attribute.</p>
-<pre class="highlight"><code class="language-yaml">sonarr:
-  instances:
-    sonarr1: # &lt;--- This becomes the default hostname
-      ...</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nt">sonarr</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">instances</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">sonarr1</span><span class="p">:</span><span class="w"> </span><span class="c1"># &lt;--- This becomes the default hostname</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+</code></pre></div>
   </div>
 
 </div>
@@ -271,14 +278,14 @@ is the name given to the instance in the <code>instances</code> attribute.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.SonarrInstanceConfig.port" class="doc doc-heading">
-<code class="highlight language-python">port: Port = 8989</code>
+<h5 id="buildarr_sonarr.config.SonarrInstanceConfig.port" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">8989</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.SonarrInstanceConfig.port" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.SonarrInstanceConfig.port" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -292,14 +299,14 @@ is the name given to the instance in the <code>instances</code> attribute.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.SonarrInstanceConfig.protocol" class="doc doc-heading">
-<code class="highlight language-python">protocol: SonarrProtocol = 'http'</code>
+<h5 id="buildarr_sonarr.config.SonarrInstanceConfig.protocol" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">protocol</span><span class="p">:</span> <span class="n">SonarrProtocol</span> <span class="o">=</span> <span class="s1">&#39;http&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.SonarrInstanceConfig.protocol" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.SonarrInstanceConfig.protocol" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -313,14 +320,14 @@ is the name given to the instance in the <code>instances</code> attribute.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.SonarrInstanceConfig.api_key" class="doc doc-heading">
-<code class="highlight language-python">api_key: Optional[SonarrApiKey] = None</code>
+<h5 id="buildarr_sonarr.config.SonarrInstanceConfig.api_key" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">SonarrApiKey</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.SonarrInstanceConfig.api_key" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.SonarrInstanceConfig.api_key" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -336,21 +343,22 @@ This can only be done on Sonarr instances with authentication disabled.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.SonarrInstanceConfig.version" class="doc doc-heading">
-<code class="highlight language-python">version: Optional[str] = None</code>
+<h5 id="buildarr_sonarr.config.SonarrInstanceConfig.version" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">version</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.SonarrInstanceConfig.version" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.SonarrInstanceConfig.version" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
   
       <p>The expected version of the Sonarr instance.
 If undefined or set to <code>None</code>, the version is auto-detected.</p>
-<p>At the moment this attribute is unused, and there is likely no need to explicitly set it.</p>
+<p>This value is also used when generating a Docker Compose file.
+When undefined or set to <code>None</code>, the version tag will be set to <code>latest</code>.</p>
   </div>
 
 </div>
@@ -359,14 +367,14 @@ If undefined or set to <code>None</code>, the version is auto-detected.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.SonarrInstanceConfig.settings" class="doc doc-heading">
-<code class="highlight language-python">settings: SonarrSettingsConfig = SonarrSettingsConfig()</code>
+<h5 id="buildarr_sonarr.config.SonarrInstanceConfig.settings" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">settings</span><span class="p">:</span> <span class="n">SonarrSettingsConfig</span> <span class="o">=</span> <span class="n">SonarrSettingsConfig</span><span class="p">()</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.SonarrInstanceConfig.settings" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.SonarrInstanceConfig.settings" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">

@@ -55,11 +55,15 @@
 </li>
                                     
   <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">buildarr-sonarr</a>
+    <a href="#" class="dropdown-item">Buildarr Sonarr Plugin</a>
     <ul class="dropdown-menu">
             
 <li>
     <a href="../../" class="dropdown-item">Introduction</a>
+</li>
+            
+<li>
+    <a href="../../release-notes/" class="dropdown-item">Release Notes</a>
 </li>
             
   <li class="dropdown-submenu">
@@ -191,19 +195,20 @@
 <div class="doc doc-object doc-class">
 
 
-<a id="buildarr.plugins.sonarr.config.tags.SonarrTagsSettingsConfig"></a>
+<a id="buildarr_sonarr.config.tags.SonarrTagsSettingsConfig"></a>
   <div class="doc doc-contents first">
       <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr.plugins.sonarr.config.types.SonarrConfigBase">SonarrConfigBase</span></code></p>
+        Bases: <code><span title="buildarr_sonarr.config.types.SonarrConfigBase">SonarrConfigBase</span></code></p>
 
   
       <p>Tags are used to associate media files with certain resources (e.g. release profiles).</p>
-<pre class="highlight"><code class="language-yaml">sonarr:
-  settings:
-    tags:
-      definitions:
-        - "example1"
-        - "example2"</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nt">sonarr</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">settings</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">definitions</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;example1&quot;</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;example2&quot;</span>
+</code></pre></div>
 <p>To be able to use those tags in Buildarr, they need to be defined
 in this configuration section.</p>
 
@@ -223,14 +228,14 @@ in this configuration section.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.tags.SonarrTagsSettingsConfig.delete_unused" class="doc doc-heading">
-<code class="highlight language-python">delete_unused: bool = False</code>
+<h5 id="buildarr_sonarr.config.tags.SonarrTagsSettingsConfig.delete_unused" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">delete_unused</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.tags.SonarrTagsSettingsConfig.delete_unused" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.tags.SonarrTagsSettingsConfig.delete_unused" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -248,14 +253,14 @@ so in most cases there is no need to enable this option.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.tags.SonarrTagsSettingsConfig.definitions" class="doc doc-heading">
-<code class="highlight language-python">definitions: List[NonEmptyStr] = []</code>
+<h5 id="buildarr_sonarr.config.tags.SonarrTagsSettingsConfig.definitions" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">definitions</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.tags.SonarrTagsSettingsConfig.definitions" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.tags.SonarrTagsSettingsConfig.definitions" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">

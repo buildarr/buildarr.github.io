@@ -55,11 +55,15 @@
 </li>
                                     
   <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">buildarr-sonarr</a>
+    <a href="#" class="dropdown-item">Buildarr Sonarr Plugin</a>
     <ul class="dropdown-menu">
             
 <li>
     <a href="../../../" class="dropdown-item">Introduction</a>
+</li>
+            
+<li>
+    <a href="../../../release-notes/" class="dropdown-item">Release Notes</a>
 </li>
             
   <li class="dropdown-submenu">
@@ -208,25 +212,26 @@
 <h1 id="release-profiles">Release Profiles<a class="headerlink" href="#release-profiles" title="Permanent link">#</a></h1>
 <p>Release profiles are used to select releases to download that best fit the criteria for what you want to retrieve for your media library.</p>
 <p>Since not all releases are created equal, and each release group has their own way of packaging and encoding their material, being able to dial-in what Sonarr selects is important to getting good results.</p>
-<pre class="highlight"><code class="language-yaml">sonarr:
-  settings:
-    profiles:
-      release_profiles:
-        definitions:
-          Example:
-            must_contain:
-              - '\.*\.mkv$/i'
-            must_not_contain:
-              - '-FAKEGROUP'
-            preferred:
-              - term: '/\b(amzn|amazon)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i'
-                score: 100
-              - term: '/(-BRiNK|-CHX|-GHOSTS|-EVO|)\b/i'
-                score: -10000
-          Release Sources (Streaming Service):
-            trash_id: 1B018E0C53EC825085DD911102E2CA36
-          P2P Groups + Repack/Proper:
-            trash_id: 71899E6C303A07AF0E4746EFF9873532</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nt">sonarr</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">settings</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">profiles</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">release_profiles</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">definitions</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">Example</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">must_contain</span><span class="p">:</span>
+<span class="w">              </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;\.*\.mkv$/i&#39;</span>
+<span class="w">            </span><span class="nt">must_not_contain</span><span class="p">:</span>
+<span class="w">              </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;-FAKEGROUP&#39;</span>
+<span class="w">            </span><span class="nt">preferred</span><span class="p">:</span>
+<span class="w">              </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">term</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;/\b(amzn|amazon)\b(?=[</span><span class="nv"> </span><span class="s">._-]web[</span><span class="nv"> </span><span class="s">._-]?(dl|rip)\b)/i&#39;</span>
+<span class="w">                </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">              </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">term</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;/(-BRiNK|-CHX|-GHOSTS|-EVO|)\b/i&#39;</span>
+<span class="w">                </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-10000</span>
+<span class="w">          </span><span class="nt">Release Sources (Streaming Service)</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">trash_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1B018E0C53EC825085DD911102E2CA36</span>
+<span class="w">          </span><span class="nt">P2P Groups + Repack/Proper</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">trash_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">71899E6C303A07AF0E4746EFF9873532</span>
+</code></pre></div>
 <p>In Buildarr, release profiles are defined using a dictonary structure. Each profile has either a set of
 filters determining the kind of releases that should be prioritised (or ignored),
 or a reference to an external provider of pre-made release profiles like TRaSH-Guides.</p>
@@ -238,10 +243,10 @@ or a reference to an external provider of pre-made release profiles like TRaSH-G
 <div class="doc doc-object doc-class">
 
 
-<a id="buildarr.plugins.sonarr.config.profiles.release.SonarrReleaseProfilesSettingsConfig"></a>
+<a id="buildarr_sonarr.config.profiles.release.SonarrReleaseProfilesSettingsConfig"></a>
   <div class="doc doc-contents first">
       <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr.plugins.sonarr.config.types.SonarrConfigBase">SonarrConfigBase</span></code></p>
+        Bases: <code><span title="buildarr_sonarr.config.types.SonarrConfigBase">SonarrConfigBase</span></code></p>
 
   
       <p>Configuration parameters for controlling how Buildarr handles release profiles.</p>
@@ -262,14 +267,14 @@ or a reference to an external provider of pre-made release profiles like TRaSH-G
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.profiles.release.SonarrReleaseProfilesSettingsConfig.delete_unmanaged" class="doc doc-heading">
-<code class="highlight language-python">delete_unmanaged: bool = False</code>
+<h5 id="buildarr_sonarr.config.profiles.release.SonarrReleaseProfilesSettingsConfig.delete_unmanaged" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">delete_unmanaged</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.profiles.release.SonarrReleaseProfilesSettingsConfig.delete_unmanaged" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.profiles.release.SonarrReleaseProfilesSettingsConfig.delete_unmanaged" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -283,14 +288,14 @@ or a reference to an external provider of pre-made release profiles like TRaSH-G
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.profiles.release.SonarrReleaseProfilesSettingsConfig.definitions" class="doc doc-heading">
-<code class="highlight language-python">definitions: Dict[str, ReleaseProfile] = {}</code>
+<h5 id="buildarr_sonarr.config.profiles.release.SonarrReleaseProfilesSettingsConfig.definitions" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">definitions</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">ReleaseProfile</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.profiles.release.SonarrReleaseProfilesSettingsConfig.definitions" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.profiles.release.SonarrReleaseProfilesSettingsConfig.definitions" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -313,31 +318,32 @@ Buildarr will not modify existing release profiles, but if <code>delete_unmanage
 
 </div><h2 id="creating-a-release-profile">Creating a release profile<a class="headerlink" href="#creating-a-release-profile" title="Permanent link">#</a></h2>
 <p>Release profiles are defined in Sonarr like this.</p>
-<pre class="highlight"><code class="language-yaml">sonarr:
-  settings:
-    profiles:
-      release_profiles:
-        definitions:
-          Example:
-            must_contain:
-              - '\.*\.mkv$/i'
-            must_not_contain:
-              - '-FAKEGROUP'
-            preferred:
-              - term: '/\b(amzn|amazon)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i'
-                score: 100
-              - term: '/(-BRiNK|-CHX|-GHOSTS|-EVO|)\b/i'
-                score: -10000</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nt">sonarr</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">settings</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">profiles</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">release_profiles</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">definitions</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">Example</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">must_contain</span><span class="p">:</span>
+<span class="w">              </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;\.*\.mkv$/i&#39;</span>
+<span class="w">            </span><span class="nt">must_not_contain</span><span class="p">:</span>
+<span class="w">              </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;-FAKEGROUP&#39;</span>
+<span class="w">            </span><span class="nt">preferred</span><span class="p">:</span>
+<span class="w">              </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">term</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;/\b(amzn|amazon)\b(?=[</span><span class="nv"> </span><span class="s">._-]web[</span><span class="nv"> </span><span class="s">._-]?(dl|rip)\b)/i&#39;</span>
+<span class="w">                </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">              </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">term</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;/(-BRiNK|-CHX|-GHOSTS|-EVO|)\b/i&#39;</span>
+<span class="w">                </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-10000</span>
+</code></pre></div>
 <p>The below attributes are common to all release profiles.</p>
 
 
 <div class="doc doc-object doc-class">
 
 
-<a id="buildarr.plugins.sonarr.config.profiles.release.ReleaseProfile"></a>
+<a id="buildarr_sonarr.config.profiles.release.ReleaseProfile"></a>
   <div class="doc doc-contents first">
       <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr.plugins.sonarr.config.types.SonarrConfigBase">SonarrConfigBase</span></code></p>
+        Bases: <code><span title="buildarr_sonarr.config.types.SonarrConfigBase">SonarrConfigBase</span></code></p>
 
 
 
@@ -356,14 +362,14 @@ Buildarr will not modify existing release profiles, but if <code>delete_unmanage
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.profiles.release.ReleaseProfile.enable" class="doc doc-heading">
-<code class="highlight language-python">enable: bool = True</code>
+<h5 id="buildarr_sonarr.config.profiles.release.ReleaseProfile.enable" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">enable</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.profiles.release.ReleaseProfile.enable" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.profiles.release.ReleaseProfile.enable" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -378,14 +384,14 @@ Buildarr will not modify existing release profiles, but if <code>delete_unmanage
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.profiles.release.ReleaseProfile.include_preferred_when_renaming" class="doc doc-heading">
-<code class="highlight language-python">include_preferred_when_renaming: bool = False</code>
+<h5 id="buildarr_sonarr.config.profiles.release.ReleaseProfile.include_preferred_when_renaming" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">include_preferred_when_renaming</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.profiles.release.ReleaseProfile.include_preferred_when_renaming" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.profiles.release.ReleaseProfile.include_preferred_when_renaming" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -400,14 +406,14 @@ when doing automatic renaming in Sonarr.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.profiles.release.ReleaseProfile.indexer" class="doc doc-heading">
-<code class="highlight language-python">indexer: Optional[NonEmptyStr] = None</code>
+<h5 id="buildarr_sonarr.config.profiles.release.ReleaseProfile.indexer" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">indexer</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.profiles.release.ReleaseProfile.indexer" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.profiles.release.ReleaseProfile.indexer" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -421,14 +427,14 @@ when doing automatic renaming in Sonarr.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.profiles.release.ReleaseProfile.tags" class="doc doc-heading">
-<code class="highlight language-python">tags: Set[NonEmptyStr] = set()</code>
+<h5 id="buildarr_sonarr.config.profiles.release.ReleaseProfile.tags" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">tags</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.profiles.release.ReleaseProfile.tags" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.profiles.release.ReleaseProfile.tags" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -459,10 +465,10 @@ the release profile using the following parameters.</p>
 <div class="doc doc-object doc-class">
 
 
-<a id="buildarr.plugins.sonarr.config.profiles.release.ReleaseProfile"></a>
+<a id="buildarr_sonarr.config.profiles.release.ReleaseProfile"></a>
   <div class="doc doc-contents first">
       <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr.plugins.sonarr.config.types.SonarrConfigBase">SonarrConfigBase</span></code></p>
+        Bases: <code><span title="buildarr_sonarr.config.types.SonarrConfigBase">SonarrConfigBase</span></code></p>
 
 
 
@@ -481,14 +487,14 @@ the release profile using the following parameters.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.profiles.release.ReleaseProfile.must_contain" class="doc doc-heading">
-<code class="highlight language-python">must_contain: Set[NonEmptyStr] = set()</code>
+<h5 id="buildarr_sonarr.config.profiles.release.ReleaseProfile.must_contain" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">must_contain</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.profiles.release.ReleaseProfile.must_contain" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.profiles.release.ReleaseProfile.must_contain" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -504,14 +510,14 @@ the release profile using the following parameters.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.profiles.release.ReleaseProfile.must_not_contain" class="doc doc-heading">
-<code class="highlight language-python">must_not_contain: Set[NonEmptyStr] = set()</code>
+<h5 id="buildarr_sonarr.config.profiles.release.ReleaseProfile.must_not_contain" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">must_not_contain</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.profiles.release.ReleaseProfile.must_not_contain" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.profiles.release.ReleaseProfile.must_not_contain" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -527,14 +533,14 @@ or regular expressions.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.profiles.release.ReleaseProfile.preferred" class="doc doc-heading">
-<code class="highlight language-python">preferred: List[PreferredWord] = []</code>
+<h5 id="buildarr_sonarr.config.profiles.release.ReleaseProfile.preferred" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">preferred</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">PreferredWord</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.profiles.release.ReleaseProfile.preferred" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.profiles.release.ReleaseProfile.preferred" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -542,14 +548,15 @@ or regular expressions.</p>
       <p>Assign a score to terms (or a regular expression patterns) found in the file name
 of a release, and prefer it or not prefer it depending on the result
 of comparing a release file name against all terms.</p>
-<pre class="highlight"><code class="language-yaml">...
-  release_profiles:
-    Example:
-      preferred:
-        - term: "/(amzn|amazon)(?=[ ._-]web[ ._-]?(dl|rip))/i"
-          score: 100
-        - term: "/(-BRiNK|-CHX|-GHOSTS|-EVO|)/i"
-          score: -10000</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nn">...</span>
+<span class="w">  </span><span class="nt">release_profiles</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">Example</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">preferred</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">term</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/(amzn|amazon)(?=[</span><span class="nv"> </span><span class="s">._-]web[</span><span class="nv"> </span><span class="s">._-]?(dl|rip))/i&quot;</span>
+<span class="w">          </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">term</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/(-BRiNK|-CHX|-GHOSTS|-EVO|)/i&quot;</span>
+<span class="w">          </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-10000</span>
+</code></pre></div>
 <p>The release will be preferred based on each term's score.
 Positive scores will be more preferred, and negative scores will be less preferred.</p>
   </div>
@@ -573,15 +580,16 @@ Positive scores will be more preferred, and negative scores will be less preferr
 <p>Buildarr supports downloading these release profiles from the
 <a href="https://github.com/TRaSH-/Guides/tree/master/docs/json/sonarr/rp">TRaSH-Guides metadata repository</a>,
 and pushing the latest changes to Sonarr directly, without having to manually input them.</p>
-<pre class="highlight"><code class="language-yaml">sonarr:
-  settings:
-    profiles:
-      release_profiles:
-        definitions:
-          Release Sources (Streaming Service):
-            trash_id: 1B018E0C53EC825085DD911102E2CA36
-          P2P Groups + Repack/Proper:
-            trash_id: 71899E6C303A07AF0E4746EFF9873532</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nt">sonarr</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">settings</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">profiles</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">release_profiles</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">definitions</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">Release Sources (Streaming Service)</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">trash_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1B018E0C53EC825085DD911102E2CA36</span>
+<span class="w">          </span><span class="nt">P2P Groups + Repack/Proper</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">trash_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">71899E6C303A07AF0E4746EFF9873532</span>
+</code></pre></div>
 <p>When using imported release profiles, the filters within the release profile itself cannot be modified,
 but there are some customisation options that alter how Buildarr interprets them.
 These are identical to the customisation options for release profiles
@@ -592,10 +600,10 @@ provided by
 <div class="doc doc-object doc-class">
 
 
-<a id="buildarr.plugins.sonarr.config.profiles.release.ReleaseProfile"></a>
+<a id="buildarr_sonarr.config.profiles.release.ReleaseProfile"></a>
   <div class="doc doc-contents first">
       <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr.plugins.sonarr.config.types.SonarrConfigBase">SonarrConfigBase</span></code></p>
+        Bases: <code><span title="buildarr_sonarr.config.types.SonarrConfigBase">SonarrConfigBase</span></code></p>
 
 
 
@@ -614,14 +622,14 @@ provided by
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.profiles.release.ReleaseProfile.trash_id" class="doc doc-heading">
-<code class="highlight language-python">trash_id: Optional[TrashID] = None</code>
+<h5 id="buildarr_sonarr.config.profiles.release.ReleaseProfile.trash_id" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">trash_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TrashID</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.profiles.release.ReleaseProfile.trash_id" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.profiles.release.ReleaseProfile.trash_id" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -636,14 +644,14 @@ provided by
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.profiles.release.ReleaseProfile.filter" class="doc doc-heading">
-<code class="highlight language-python">filter: TrashFilter = TrashFilter()</code>
+<h5 id="buildarr_sonarr.config.profiles.release.ReleaseProfile.filter" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">filter</span><span class="p">:</span> <span class="n">TrashFilter</span> <span class="o">=</span> <span class="n">TrashFilter</span><span class="p">()</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.profiles.release.ReleaseProfile.filter" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.profiles.release.ReleaseProfile.filter" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -651,26 +659,27 @@ provided by
       <div class="doc doc-object doc-class">
 
 
-<a id="buildarr.plugins.sonarr.config.profiles.release.TrashFilter"></a>
+<a id="buildarr_sonarr.config.profiles.release.TrashFilter"></a>
   <div class="doc doc-contents first">
       <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr.plugins.sonarr.config.types.SonarrConfigBase">SonarrConfigBase</span></code></p>
+        Bases: <code><span title="buildarr_sonarr.config.types.SonarrConfigBase">SonarrConfigBase</span></code></p>
 
   
       <p>Defines various ways that release profile terms from the guide are synchronised with Sonarr.
 These terms have individual trash IDs, and using this filter allows you to
 pick and choose which parts of the release profile you want to use.</p>
-<pre class="highlight"><code class="language-yaml">...
-  release_profiles:
-    definitions:
-      Optionals:
-        trash_id: 76e060895c5b8a765c310933da0a5357
-        filter:
-          include:
-            - ea83f4740cec4df8112f3d6dd7c82751 # Prefer Season Packs
-            - cec8880b847dd5d31d29167ee0112b57 # Ignore 720p/1080p HEVC (Golden Rule)
-            # All the other preferred words in the 'Optionals' profile
-            # are ignored.</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nn">...</span>
+<span class="w">  </span><span class="nt">release_profiles</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">definitions</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">Optionals</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">trash_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">76e060895c5b8a765c310933da0a5357</span>
+<span class="w">        </span><span class="nt">filter</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">include</span><span class="p">:</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ea83f4740cec4df8112f3d6dd7c82751</span><span class="w"> </span><span class="c1"># Prefer Season Packs</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cec8880b847dd5d31d29167ee0112b57</span><span class="w"> </span><span class="c1"># Ignore 720p/1080p HEVC (Golden Rule)</span>
+<span class="w">            </span><span class="c1"># All the other preferred words in the &#39;Optionals&#39; profile</span>
+<span class="w">            </span><span class="c1"># are ignored.</span>
+</code></pre></div>
 <p>The attributes <code>include</code> and <code>exclude</code> are mutually exclusive.
 If both are defined, <code>include</code> is used.</p>
 
@@ -690,14 +699,14 @@ If both are defined, <code>include</code> is used.</p>
 
 
 
-<h6 id="buildarr.plugins.sonarr.config.profiles.release.TrashFilter.include" class="doc doc-heading">
-<code class="highlight language-python">include: List[TrashID] = []</code>
+<h6 id="buildarr_sonarr.config.profiles.release.TrashFilter.include" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">include</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">TrashID</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.profiles.release.TrashFilter.include" class="headerlink" title="Permanent link">#</a></h6>
+<a href="#buildarr_sonarr.config.profiles.release.TrashFilter.include" class="headerlink" title="Permanent link">#</a></h6>
 
 
   <div class="doc doc-contents ">
@@ -713,14 +722,14 @@ that should be included in the created Release Profile in Sonarr.</p>
 
 
 
-<h6 id="buildarr.plugins.sonarr.config.profiles.release.TrashFilter.exclude" class="doc doc-heading">
-<code class="highlight language-python">exclude: List[TrashID] = []</code>
+<h6 id="buildarr_sonarr.config.profiles.release.TrashFilter.exclude" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">exclude</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">TrashID</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.profiles.release.TrashFilter.exclude" class="headerlink" title="Permanent link">#</a></h6>
+<a href="#buildarr_sonarr.config.profiles.release.TrashFilter.exclude" class="headerlink" title="Permanent link">#</a></h6>
 
 
   <div class="doc doc-contents ">
@@ -749,14 +758,14 @@ that should be excluded from the created Release Profile in Sonarr.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.profiles.release.ReleaseProfile.strict_negative_scores" class="doc doc-heading">
-<code class="highlight language-python">strict_negative_scores: bool = False</code>
+<h5 id="buildarr_sonarr.config.profiles.release.ReleaseProfile.strict_negative_scores" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">strict_negative_scores</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.profiles.release.ReleaseProfile.strict_negative_scores" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.profiles.release.ReleaseProfile.strict_negative_scores" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -780,50 +789,52 @@ be put in the "Must Not Contain" section of the uploaded release profile.</p>
 </div><h2 id="trash-guides-release-profile-import-examples">TRaSH-Guides release profile import examples<a class="headerlink" href="#trash-guides-release-profile-import-examples" title="Permanent link">#</a></h2>
 <p>Here are some examples of importing well used release profiles from TRaSH-Guides.</p>
 <h5 id="release-profile-regex-web-dl">Release Profile RegEx (WEB-DL)<a class="headerlink" href="#release-profile-regex-web-dl" title="Permanent link">#</a></h5>
-<pre class="highlight"><code class="language-yaml">sonarr:
-  settings:
-    profiles:
-      release_profiles:
-        definitions:
-          Release Sources (Streaming Service):
-            trash_id: 1B018E0C53EC825085DD911102E2CA36
-          P2P Groups + Repack/Proper:
-            trash_id: 71899E6C303A07AF0E4746EFF9873532
-          Low Quality Groups:
-            trash_id: EBC725268D687D588A20CBC5F97E538B
-          Optionals:
-            trash_id: 76e060895c5b8a765c310933da0a5357
-            filter:
-              include:
-                - ea83f4740cec4df8112f3d6dd7c82751 # Prefer Season Packs
-                - 6f2aefa61342a63387f2a90489e90790 # Dislike renamed/retagged releases
-                - 19cd5ecc0a24bf493a75e80a51974cdd # Dislike retagged/obfuscated groups
-                - 6a7b462c6caee4a991a9d8aa38ce2405 # Dislike release ending: en
-                - 236a3626a07cacf5692c73cc947bc280 # Dislike release containing: 1-
-                - cec8880b847dd5d31d29167ee0112b57 # Ignore 720p/1080p HEVC re-encodes (Golden Rule)
-                - 436f5a7d08fbf02ba25cb5e5dfe98e55 # Ignore Dolby Vision without HDR10 fallback
-                - f3f0f3691c6a1988d4a02963e69d11f2 # Ignore The Group -SCENE
-                - 5bc23c3a055a1a5d8bbe4fb49d80e0cb # Ignore so-called scene releases
-                - 538bad00ee6f8aced8e0db5218b8484c # Ignore Bad Dual Audio Groups
-                - 4861d8238f9234606df6721df6e27deb # Ignore AV1</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nt">sonarr</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">settings</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">profiles</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">release_profiles</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">definitions</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">Release Sources (Streaming Service)</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">trash_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1B018E0C53EC825085DD911102E2CA36</span>
+<span class="w">          </span><span class="nt">P2P Groups + Repack/Proper</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">trash_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">71899E6C303A07AF0E4746EFF9873532</span>
+<span class="w">          </span><span class="nt">Low Quality Groups</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">trash_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EBC725268D687D588A20CBC5F97E538B</span>
+<span class="w">          </span><span class="nt">Optionals</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">trash_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">76e060895c5b8a765c310933da0a5357</span>
+<span class="w">            </span><span class="nt">filter</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">include</span><span class="p">:</span>
+<span class="w">                </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ea83f4740cec4df8112f3d6dd7c82751</span><span class="w"> </span><span class="c1"># Prefer Season Packs</span>
+<span class="w">                </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">6f2aefa61342a63387f2a90489e90790</span><span class="w"> </span><span class="c1"># Dislike renamed/retagged releases</span>
+<span class="w">                </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">19cd5ecc0a24bf493a75e80a51974cdd</span><span class="w"> </span><span class="c1"># Dislike retagged/obfuscated groups</span>
+<span class="w">                </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">6a7b462c6caee4a991a9d8aa38ce2405</span><span class="w"> </span><span class="c1"># Dislike release ending: en</span>
+<span class="w">                </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">236a3626a07cacf5692c73cc947bc280</span><span class="w"> </span><span class="c1"># Dislike release containing: 1-</span>
+<span class="w">                </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cec8880b847dd5d31d29167ee0112b57</span><span class="w"> </span><span class="c1"># Ignore 720p/1080p HEVC re-encodes (Golden Rule)</span>
+<span class="w">                </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">436f5a7d08fbf02ba25cb5e5dfe98e55</span><span class="w"> </span><span class="c1"># Ignore Dolby Vision without HDR10 fallback</span>
+<span class="w">                </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">f3f0f3691c6a1988d4a02963e69d11f2</span><span class="w"> </span><span class="c1"># Ignore The Group -SCENE</span>
+<span class="w">                </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5bc23c3a055a1a5d8bbe4fb49d80e0cb</span><span class="w"> </span><span class="c1"># Ignore so-called scene releases</span>
+<span class="w">                </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">538bad00ee6f8aced8e0db5218b8484c</span><span class="w"> </span><span class="c1"># Ignore Bad Dual Audio Groups</span>
+<span class="w">                </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4861d8238f9234606df6721df6e27deb</span><span class="w"> </span><span class="c1"># Ignore AV1</span>
+</code></pre></div>
 <h5 id="release-profile-regex-anime">Release Profile RegEx (Anime)<a class="headerlink" href="#release-profile-regex-anime" title="Permanent link">#</a></h5>
-<pre class="highlight"><code class="language-yaml">sonarr:
-  settings:
-    profiles:
-      release_profiles:
-        definitions:
-          Anime Profile 1:
-            #   * Prefer uncensored
-            #   * Prefer Multi-Audio or Dual-Audio
-            # https://trash-guides.info/Sonarr/Sonarr-Release-Profile-RegEx-Anime/#first-release-profile
-            trash_id: d428eda85af1df8904b4bbe4fc2f537c
-            strict_negative_scores: true
-          Anime Profile 2:
-            # Prioritise/ignore releases based on group.
-            # You may need to adjust the profile based on actual results.
-            # https://trash-guides.info/Sonarr/Sonarr-Release-Profile-RegEx-Anime/#second-release-profile
-            trash_id: 6cd9e10bb5bb4c63d2d7cd3279924c7b
-            strict_negative_scores: true</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nt">sonarr</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">settings</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">profiles</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">release_profiles</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">definitions</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">Anime Profile 1</span><span class="p">:</span>
+<span class="w">            </span><span class="c1">#   * Prefer uncensored</span>
+<span class="w">            </span><span class="c1">#   * Prefer Multi-Audio or Dual-Audio</span>
+<span class="w">            </span><span class="c1"># https://trash-guides.info/Sonarr/Sonarr-Release-Profile-RegEx-Anime/#first-release-profile</span>
+<span class="w">            </span><span class="nt">trash_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">d428eda85af1df8904b4bbe4fc2f537c</span>
+<span class="w">            </span><span class="nt">strict_negative_scores</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">          </span><span class="nt">Anime Profile 2</span><span class="p">:</span>
+<span class="w">            </span><span class="c1"># Prioritise/ignore releases based on group.</span>
+<span class="w">            </span><span class="c1"># You may need to adjust the profile based on actual results.</span>
+<span class="w">            </span><span class="c1"># https://trash-guides.info/Sonarr/Sonarr-Release-Profile-RegEx-Anime/#second-release-profile</span>
+<span class="w">            </span><span class="nt">trash_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">6cd9e10bb5bb4c63d2d7cd3279924c7b</span>
+<span class="w">            </span><span class="nt">strict_negative_scores</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</code></pre></div></div>
             </div>
         </div>
 

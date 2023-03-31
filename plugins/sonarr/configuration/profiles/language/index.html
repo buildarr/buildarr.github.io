@@ -55,11 +55,15 @@
 </li>
                                     
   <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">buildarr-sonarr</a>
+    <a href="#" class="dropdown-item">Buildarr Sonarr Plugin</a>
     <ul class="dropdown-menu">
             
 <li>
     <a href="../../../" class="dropdown-item">Introduction</a>
+</li>
+            
+<li>
+    <a href="../../../release-notes/" class="dropdown-item">Release Notes</a>
 </li>
             
   <li class="dropdown-submenu">
@@ -199,21 +203,22 @@
 
 <h1 id="language-profiles">Language Profiles<a class="headerlink" href="#language-profiles" title="Permanent link">#</a></h1>
 <p>Language profiles define preferred audio languages for media files, and tell Sonarr how media files should be upgraded if a more preferred language version becomes available.</p>
-<pre class="highlight"><code class="language-yaml">sonarr:
-  settings:
-    profiles:
-      language_profiles:
-        definitions:
-          # Add language profiles here.
-          # The name of the block becomes the name of the quality profile.
-          Anime:
-            upgrades_allowed: true
-            upgrade_until: "Japanese"
-            # Highest priority quality first, lowest priority goes last.
-            languages:
-              - "Japanese"
-              - "English"
-          # Add additional language profiles here as needed.</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nt">sonarr</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">settings</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">profiles</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">language_profiles</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">definitions</span><span class="p">:</span>
+<span class="w">          </span><span class="c1"># Add language profiles here.</span>
+<span class="w">          </span><span class="c1"># The name of the block becomes the name of the quality profile.</span>
+<span class="w">          </span><span class="nt">Anime</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">upgrades_allowed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">            </span><span class="nt">upgrade_until</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Japanese&quot;</span>
+<span class="w">            </span><span class="c1"># Highest priority quality first, lowest priority goes last.</span>
+<span class="w">            </span><span class="nt">languages</span><span class="p">:</span>
+<span class="w">              </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;Japanese&quot;</span>
+<span class="w">              </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;English&quot;</span>
+<span class="w">          </span><span class="c1"># Add additional language profiles here as needed.</span>
+</code></pre></div>
 <p>In Buildarr, language profiles are defined using a dictonary structure. The languages listed in the <code>languages</code> attribute are enabled, and prioritised from first to last (top to bottom). Languages not in this list are not selected for download.</p>
 <p>For more information, see this guide from <a href="https://wiki.servarr.com/sonarr/settings#language-profiles">WikiArr</a>.</p>
 <h2 id="general-configuration">General configuration<a class="headerlink" href="#general-configuration" title="Permanent link">#</a></h2>
@@ -222,10 +227,10 @@
 <div class="doc doc-object doc-class">
 
 
-<a id="buildarr.plugins.sonarr.config.profiles.language.SonarrLanguageProfilesSettingsConfig"></a>
+<a id="buildarr_sonarr.config.profiles.language.SonarrLanguageProfilesSettingsConfig"></a>
   <div class="doc doc-contents first">
       <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr.plugins.sonarr.config.types.SonarrConfigBase">SonarrConfigBase</span></code></p>
+        Bases: <code><span title="buildarr_sonarr.config.types.SonarrConfigBase">SonarrConfigBase</span></code></p>
 
   
       <p>Configuration parameters for controlling how Buildarr handles language profiles.</p>
@@ -246,14 +251,14 @@
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.profiles.language.SonarrLanguageProfilesSettingsConfig.delete_unmanaged" class="doc doc-heading">
-<code class="highlight language-python">delete_unmanaged = False</code>
+<h5 id="buildarr_sonarr.config.profiles.language.SonarrLanguageProfilesSettingsConfig.delete_unmanaged" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">delete_unmanaged</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.profiles.language.SonarrLanguageProfilesSettingsConfig.delete_unmanaged" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.profiles.language.SonarrLanguageProfilesSettingsConfig.delete_unmanaged" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -267,14 +272,14 @@
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.profiles.language.SonarrLanguageProfilesSettingsConfig.definitions" class="doc doc-heading">
-<code class="highlight language-python">definitions: Dict[str, LanguageProfile] = {}</code>
+<h5 id="buildarr_sonarr.config.profiles.language.SonarrLanguageProfilesSettingsConfig.definitions" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">definitions</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">LanguageProfile</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.profiles.language.SonarrLanguageProfilesSettingsConfig.definitions" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.profiles.language.SonarrLanguageProfilesSettingsConfig.definitions" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -301,22 +306,23 @@ Buildarr will not modify existing language profiles, but if <code>delete_unmanag
 <div class="doc doc-object doc-class">
 
 
-<a id="buildarr.plugins.sonarr.config.profiles.language.LanguageProfile"></a>
+<a id="buildarr_sonarr.config.profiles.language.LanguageProfile"></a>
   <div class="doc doc-contents first">
       <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr.plugins.sonarr.config.types.SonarrConfigBase">SonarrConfigBase</span></code></p>
+        Bases: <code><span title="buildarr_sonarr.config.types.SonarrConfigBase">SonarrConfigBase</span></code></p>
 
   
       <p>A language profile is defined under the <code>language_profiles</code> block as shown below.</p>
-<pre class="highlight"><code class="language-yaml">...
-  language_profiles:
-    definitions:
-      Anime: # Name of the language profile
-        upgrades_allowed: true
-        upgrade_until: "Japanese" # Required if upgrades are allowed
-        languages: # Required
-          - "Japanese"
-          - "English"</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nn">...</span>
+<span class="w">  </span><span class="nt">language_profiles</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">definitions</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">Anime</span><span class="p">:</span><span class="w"> </span><span class="c1"># Name of the language profile</span>
+<span class="w">        </span><span class="nt">upgrades_allowed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">        </span><span class="nt">upgrade_until</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Japanese&quot;</span><span class="w"> </span><span class="c1"># Required if upgrades are allowed</span>
+<span class="w">        </span><span class="nt">languages</span><span class="p">:</span><span class="w"> </span><span class="c1"># Required</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;Japanese&quot;</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;English&quot;</span>
+</code></pre></div>
 
 
 
@@ -334,14 +340,14 @@ Buildarr will not modify existing language profiles, but if <code>delete_unmanag
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.profiles.language.LanguageProfile.upgrades_allowed" class="doc doc-heading">
-<code class="highlight language-python">upgrades_allowed: bool = False</code>
+<h5 id="buildarr_sonarr.config.profiles.language.LanguageProfile.upgrades_allowed" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">upgrades_allowed</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.profiles.language.LanguageProfile.upgrades_allowed" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.profiles.language.LanguageProfile.upgrades_allowed" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -357,14 +363,14 @@ in a more preferred language becomes available.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.profiles.language.LanguageProfile.upgrade_until" class="doc doc-heading">
-<code class="highlight language-python">upgrade_until: Optional[Language] = None</code>
+<h5 id="buildarr_sonarr.config.profiles.language.LanguageProfile.upgrade_until" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">upgrade_until</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Language</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.profiles.language.LanguageProfile.upgrade_until" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.profiles.language.LanguageProfile.upgrade_until" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -380,14 +386,14 @@ Usually this would be set to the highest priority language in the profile.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.profiles.language.LanguageProfile.languages" class="doc doc-heading">
-<code class="highlight language-python">languages: Annotated[List[Language], Field(min_items=1)]</code>
+<h5 id="buildarr_sonarr.config.profiles.language.LanguageProfile.languages" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">languages</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">Language</span><span class="p">],</span> <span class="n">Field</span><span class="p">(</span><span class="n">min_items</span><span class="o">=</span><span class="mi">1</span><span class="p">)]</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.profiles.language.LanguageProfile.languages" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.profiles.language.LanguageProfile.languages" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -395,10 +401,11 @@ Usually this would be set to the highest priority language in the profile.</p>
       <p>The languages episodes are allowed to be in.
 The order of the list determines priority (highest priority first, lowest priority last).</p>
 <p>Use the name of the language in English (e.g. <code>Japanese</code>, not <code>Nihongo</code> or <code>日本語</code>).</p>
-<pre class="highlight"><code class="language-yaml">...
-  languages:
-    - "Japanese"
-    - "English"</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nn">...</span>
+<span class="w">  </span><span class="nt">languages</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;Japanese&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;English&quot;</span>
+</code></pre></div>
 <p>At least one language must be specified.</p>
   </div>
 
@@ -418,7 +425,7 @@ The order of the list determines priority (highest priority first, lowest priori
 <div class="doc doc-object doc-class">
 
 
-<a id="buildarr.plugins.sonarr.config.profiles.language.Language"></a>
+<a id="buildarr_sonarr.config.profiles.language.Language"></a>
   <div class="doc doc-contents first">
       <p class="doc doc-class-bases">
         Bases: <code><span title="buildarr.types.BaseEnum">BaseEnum</span></code></p>

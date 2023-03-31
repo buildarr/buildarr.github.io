@@ -55,11 +55,15 @@
 </li>
                                     
   <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">buildarr-sonarr</a>
+    <a href="#" class="dropdown-item">Buildarr Sonarr Plugin</a>
     <ul class="dropdown-menu">
             
 <li>
     <a href="./" class="dropdown-item active">Introduction</a>
+</li>
+            
+<li>
+    <a href="release-notes/" class="dropdown-item">Release Notes</a>
 </li>
             
   <li class="dropdown-submenu">
@@ -154,7 +158,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="configuration/host/" class="nav-link">
+                                <a rel="next" href="release-notes/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -176,7 +180,7 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#buildarr-sonarr" class="nav-link">buildarr-sonarr</a>
+            <li class="nav-item" data-level="1"><a href="#buildarr-sonarr-plugin" class="nav-link">Buildarr Sonarr Plugin</a>
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#installation" class="nav-link">Installation</a>
               <ul class="nav flex-column">
@@ -201,46 +205,60 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="buildarr-sonarr"><code>buildarr-sonarr</code><a class="headerlink" href="#buildarr-sonarr" title="Permanent link">#</a></h1>
-<p><code>buildarr-sonarr</code> is a Buildarr plugin for configuring and managing <a href="http://sonarr.tv">Sonarr</a> instances.</p>
+<h1 id="buildarr-sonarr-plugin">Buildarr Sonarr Plugin<a class="headerlink" href="#buildarr-sonarr-plugin" title="Permanent link">#</a></h1>
+<p><a href="https://pypi.org/project/buildarr-sonarr"><img alt="PyPI" src="https://img.shields.io/pypi/v/buildarr-sonarr" /></a> <img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/buildarr-sonarr" />  <a href="https://github.com/buildarr/buildarr-sonarr/blob/main/LICENSE"><img alt="GitHub" src="https://img.shields.io/github/license/buildarr/buildarr-sonarr" /></a> <img alt="Pre-commit hooks" src="https://github.com/buildarr/buildarr-sonarr/actions/workflows/pre-commit.yml/badge.svg" /> <a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg" /></a></p>
+<p>The Buildarr Sonarr plugin (<code>buildarr-sonarr</code>) is a plugin for Buildarr that adds the capability to configure and manage <a href="http://sonarr.tv">Sonarr</a> instances.</p>
 <p>Sonarr is a PVR application which downloads, renames and manages the lifecycle of TV shows in your media library. It is capable of scanning for higher quality versions of your media and automatically upgrading them when a suitable version is available.</p>
 <p>Currently, Sonarr V3 is the only supported version. Sonarr V4 support is planned for the future.</p>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">#</a></h2>
-<p>As of the current release of Buildarr, <code>buildarr-sonarr</code> is distributed with Buildarr itself, to ease the burden of developing the Buildarr plugin API and <code>buildarr-sonarr</code> itself.</p>
-<p>However, it is the intention that as the Buildarr plugin API stabilises, <code>buildarr-sonarr</code> will be eventually be separated from Buildarr itself, and developed independently.</p>
+<p>From <a href="https://buildarr.github.io/release-notes/#v040-2023-03-31">version 0.4.0</a> onwards, the Buildarr Sonarr plugin is now an independent package, developed separately from the core Buildarr package.</p>
+<p>When using Buildarr as a <a href="https://buildarr.github.io/installation/#standalone-application">standalone application</a>, it can simply be installed using <code>pip</code>:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>buildarr<span class="w"> </span>buildarr-sonarr
+</code></pre></div>
+<p>When using Buildarr as a <a href="https://buildarr.github.io/installation/#docker">Docker container</a>, the Sonarr plugin is still bundled in the official container (<code>callum027/buildarr</code>). There is no need to install it separately.</p>
+<p>You can upgrade, or pin the version of the plugin to a specific version, within the container by setting the <code>$BUILDARR_INSTALL_PACKAGES</code> environment variable in the <code>docker run</code> command using <code>--env</code>/<code>-e</code>:</p>
+<div class="highlight"><pre><span></span><code>-e<span class="w"> </span><span class="nv">BUILDARR_INSTALL_PACKAGES</span><span class="o">=</span><span class="s2">&quot;buildarr-sonar==&lt;version&gt;&quot;</span>
+</code></pre></div>
+<p>In Buildarr version 0.3.0 and earlier, the Sonarr plugin was vendored within the core Buildarr package. On these versions, it is not necessary to install the Sonarr plugin separately.</p>
 <h2 id="quick-start">Quick Start<a class="headerlink" href="#quick-start" title="Permanent link">#</a></h2>
-<p>To use the <code>buildarr-sonarr</code> plugin, create a <code>sonarr</code> block within <code>buildarr.yml</code>, and enter the connection information required for the Buildarr instance to connect to the Sonarr instance you'd like to manage.</p>
+<p>To use the Sonarr plugin, create a <code>sonarr</code> block within <code>buildarr.yml</code>, and enter the connection information required for the Buildarr instance to connect to the Sonarr instance you'd like to manage.</p>
 <p>Buildarr won't modify anything yet since no configuration has been defined, but you are able to test if Buildarr is able to connect to and authenticate with the Sonarr instance.</p>
-<pre class="highlight"><code class="language-yaml">---
+<div class="highlight"><pre><span></span><code><span class="nn">---</span>
 
-buildarr:
-  watch_config: true
+<span class="nt">buildarr</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">watch_config</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 
-sonarr:
-  hostname: "localhost" # Defaults to `sonarr`, or the instance name for instance-specific configs.
-  port: 8989 # Defaults to 8989.
-  protocol: "http" # Defaults to `http`.
-  api_key: "..." # Optional. If undefined, auto-fetch (authentication must be disabled).</code></pre>
-<p>Now try a <code>buildarr run</code>. If the output is similar to the below output, Buildarr was able to connect to your Sonarr instance's API.</p>
-<pre class="highlight"><code class="language-bash">$ buildarr run
-2023-02-22 20:34:43,271 buildarr:1 buildarr.main [INFO] Buildarr version 0.2.0 (log level: INFO)
-2023-02-22 20:34:43,271 buildarr:1 buildarr.main [INFO] Loading configuration file '/config/buildarr.yml'
-2023-02-22 20:34:43,308 buildarr:1 buildarr.main [INFO] Finished loading configuration file
-2023-02-22 20:34:43,337 buildarr:1 buildarr.main [INFO] Plugins loaded: sonarr
-2023-02-22 20:34:43,342 buildarr:1 buildarr.main [INFO] Running with plugins: sonarr
-2023-02-22 20:34:43,344 buildarr:1 buildarr.main [INFO] Loading secrets file from '/config/secrets.json'
-2023-02-22 20:34:43,345 buildarr:1 buildarr.main [INFO] Finished loading secrets file
-2023-02-22 20:34:43,345 buildarr:1 buildarr.plugins.sonarr default [INFO] Checking secrets
-2023-02-22 20:34:43,355 buildarr:1 buildarr.plugins.sonarr default [INFO] Connection test failed using cached secrets (or not cached), fetching secrets
-2023-02-22 20:34:43,379 buildarr:1 buildarr.plugins.sonarr default [INFO] Connection test successful using fetched secrets
-2023-02-22 20:34:43,380 buildarr:1 buildarr.plugins.sonarr default [INFO] Finished checking secrets
-2023-02-22 20:34:43,380 buildarr:1 buildarr.main [INFO] Saving updated secrets file to 'secrets.json'
-2023-02-22 20:34:43,381 buildarr:1 buildarr.main [INFO] Finished saving updated secrets file
-2023-02-22 20:34:50,508 buildarr:1 buildarr.plugins.sonarr default [INFO] Getting remote configuration
-2023-02-22 20:34:50,774 buildarr:1 buildarr.plugins.sonarr default [INFO] Finished getting remote configuration
-2023-02-22 20:34:50,832 buildarr:1 buildarr.plugins.sonarr default [INFO] Updating remote configuration
-2023-02-22 20:34:51,177 buildarr:1 buildarr.plugins.sonarr default [INFO] Remote configuration is up to date
-2023-02-22 20:34:51,178 buildarr:1 buildarr.plugins.sonarr default [INFO] Finished updating remote configuration</code></pre>
+<span class="nt">sonarr</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">hostname</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;localhost&quot;</span><span class="w"> </span><span class="c1"># Defaults to `sonarr`, or the instance name for instance-specific configs.</span>
+<span class="w">  </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8989</span><span class="w"> </span><span class="c1"># Defaults to 8989.</span>
+<span class="w">  </span><span class="nt">protocol</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;http&quot;</span><span class="w"> </span><span class="c1"># Defaults to `http`.</span>
+<span class="w">  </span><span class="nt">api_key</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;...&quot;</span><span class="w"> </span><span class="c1"># Optional. If undefined, auto-fetch (authentication must be disabled).</span>
+</code></pre></div>
+<p>Now try a <code>buildarr run</code>. If the output is similar to the below output, Buildarr was able to connect to your Sonarr instance.</p>
+<div class="highlight"><pre><span></span><code>2023-03-29 20:39:50,856 buildarr:1 buildarr.cli.run [INFO] Buildarr version 0.4.0 (log level: INFO)
+2023-03-29 20:39:50,856 buildarr:1 buildarr.cli.run [INFO] Loading configuration file &#39;/config/buildarr.yml&#39;
+2023-03-29 20:39:50,872 buildarr:1 buildarr.cli.run [INFO] Finished loading configuration file
+2023-03-29 20:39:50,874 buildarr:1 buildarr.cli.run [INFO] Loaded plugins: sonarr (0.4.0)
+2023-03-29 20:39:50,875 buildarr:1 buildarr.cli.run [INFO] Loading instance configurations
+2023-03-29 20:39:50,877 buildarr:1 buildarr.cli.run [INFO] Finished loading instance configurations
+2023-03-29 20:39:50,877 buildarr:1 buildarr.cli.run [INFO] Running with plugins: sonarr
+2023-03-29 20:39:50,877 buildarr:1 buildarr.cli.run [INFO] Resolving instance dependencies
+2023-03-29 20:39:50,877 buildarr:1 buildarr.cli.run [INFO] Finished resolving instance dependencies
+2023-03-29 20:39:50,877 buildarr:1 buildarr.cli.run [INFO] Loading secrets file from &#39;/config/secrets.json&#39;
+2023-03-29 20:39:50,886 buildarr:1 buildarr.cli.run [INFO] Finished loading secrets file
+2023-03-29 20:39:50,886 buildarr:1 buildarr.cli.run [INFO] &lt;sonarr&gt; (default) Checking secrets
+2023-03-29 20:39:50,912 buildarr:1 buildarr.cli.run [INFO] &lt;sonarr&gt; (default) Connection test successful using cached secrets
+2023-03-29 20:39:50,912 buildarr:1 buildarr.cli.run [INFO] &lt;sonarr&gt; (default) Finished checking secrets
+2023-03-29 20:39:50,912 buildarr:1 buildarr.cli.run [INFO] Saving updated secrets file to &#39;/config/secrets.json&#39;
+2023-03-29 20:39:50,914 buildarr:1 buildarr.cli.run [INFO] Finished saving updated secrets file
+2023-03-29 20:39:50,914 buildarr:1 buildarr.cli.run [INFO] Updating configuration on remote instances
+2023-03-29 20:39:50,914 buildarr:1 buildarr.cli.run [INFO] &lt;sonarr&gt; (default) Getting remote configuration
+2023-03-29 20:39:51,406 buildarr:1 buildarr.cli.run [INFO] &lt;sonarr&gt; (default) Finished getting remote configuration
+2023-03-29 20:39:51,463 buildarr:1 buildarr.cli.run [INFO] &lt;sonarr&gt; (default) Updating remote configuration
+2023-03-29 20:39:52,019 buildarr:1 buildarr.cli.run [INFO] &lt;sonarr&gt; (default) Remote configuration is up to date
+2023-03-29 20:39:52,019 buildarr:1 buildarr.cli.run [INFO] &lt;sonarr&gt; (default) Finished updating remote configuration
+2023-03-29 20:39:52,019 buildarr:1 buildarr.cli.run [INFO] Finished updating configuration on remote instances
+</code></pre></div>
 <h2 id="configuring-your-sonarr-instance">Configuring your Sonarr instance<a class="headerlink" href="#configuring-your-sonarr-instance" title="Permanent link">#</a></h2>
 <p>The following sections cover comprehensive configuration of a Sonarr instance.</p>
 <p>Note that these documents do not show how you <em>should</em> configure a Sonarr instance. Rather, they show how you <em>can</em> configure a Sonarr instance the way you want with Buildarr. For more information on how to optimally configure Sonarr, you can refer to the excellent guides from <a href="https://wiki.servarr.com/sonarr">WikiArr</a> and <a href="https://trash-guides.info/Sonarr/">TRaSH-Guides</a>.</p>
@@ -266,396 +284,398 @@ sonarr:
 </ul>
 <h2 id="dumping-an-existing-sonarr-instance-configuration">Dumping an existing Sonarr instance configuration<a class="headerlink" href="#dumping-an-existing-sonarr-instance-configuration" title="Permanent link">#</a></h2>
 <p>Buildarr is capable of dumping a running Sonarr instance's configuration.</p>
-<pre class="highlight"><code class="language-bash">$ buildarr sonarr dump-config http://localhost:8989 &gt; sonarr.yml
-Sonarr instance API key: &lt;Paste API key here&gt;</code></pre>
-<p>The dumped YAML object can be placed directly under the <code>sonarr</code> configuration block, or used as an <a href="../../configuration/#multiple-instances-of-the-same-type">instance-specific configuration</a>.</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>buildarr<span class="w"> </span>sonarr<span class="w"> </span>dump-config<span class="w"> </span>http://localhost:8989<span class="w"> </span>&gt;<span class="w"> </span>sonarr.yml
+Sonarr<span class="w"> </span>instance<span class="w"> </span>API<span class="w"> </span>key:<span class="w"> </span>&lt;Paste<span class="w"> </span>API<span class="w"> </span>key<span class="w"> </span>here&gt;
+</code></pre></div>
+<p>The dumped YAML object can be placed directly under the <code>sonarr</code> configuration block, or used as an <a href="https://buildarr.github.io/configuration/#multiple-instances-of-the-same-type">instance-specific configuration</a>.</p>
 <p>Most values are explicitly defined in this dumped configuration, ensuring that when used with Buildarr, the configuration will always remain static.</p>
-<pre class="highlight"><code class="language-yaml">api_key: 1a2b3c4d5e6f1a2b3c4d5e6f1a2b3c4d
-hostname: localhost
-port: 8989
-protocol: http
-settings:
-  connect:
-    definitions:
-      Trakt:
-        access_token: 1a2b3c4d5e6f1a2b3c4d5e6f1a2b3c4d5e6f1a2b3c4d5e6f1a2b3c4d5e6f1a2b
-        auth_user: example
-        expires: '2023-05-10T15:34:08.117451+00:00'
-        notification_triggers:
-          include_health_warnings: false
-          on_application_update: false
-          on_episode_file_delete: true
-          on_episode_file_delete_for_upgrade: true
-          on_grab: false
-          on_health_issue: false
-          on_import: true
-          on_rename: false
-          on_series_delete: true
-          on_upgrade: true
-        refresh_token: 1a2b3c4d5e6f1a2b3c4d5e6f1a2b3c4d5e6f1a2b3c4d5e6f1a2b3c4d5e6f1a2b
-        tags: []
-  download_clients:
-    definitions:
-      Transmission:
-        add_paused: false
-        category: sonarr
-        directory: null
-        enable: true
-        host: transmission
-        older_priority: last
-        password: null
-        port: 9091
-        priority: 1
-        recent_priority: last
-        remove_completed_downloads: true
-        remove_failed_downloads: true
-        tags: []
-        url_base: /transmission/
-        use_ssl: false
-        username: null
-    enable_completed_download_handling: true
-    redownload_failed: true
-    remote_path_mappings:
-      definitions: []
-  general:
-    analytics:
-      send_anonymous_usage_data: true
-    backup:
-      folder: Backups
-      interval: 7
-      retention: 28
-    host:
-      bind_address: '*'
-      instance_name: Sonarr (Example)
-      port: 8989
-      ssl_port: 9898
-      url_base: null
-      use_ssl: false
-    logging:
-      log_level: INFO
-    proxy:
-      bypass_proxy_for_local_addresses: true
-      enable: false
-      hostname: null
-      ignored_addresses: []
-      password: null
-      port: 8080
-      proxy_type: http
-      username: null
-    security:
-      authentication: none
-      certificate_validation: enabled
-      password: null
-      username: null
-    updates:
-      automatic: false
-      branch: main
-      mechanism: docker
-      script_path: null
-  import_lists:
-    definitions: {}
-  indexers:
-    definitions: {}
-    maximum_size: 0
-    minimum_age: 0
-    retention: 0
-    rss_sync_interval: 15
-  media_management:
-    analyze_video_files: true
-    anime_episode_format: '{Series TitleYear} - S{season:00}E{episode:00} - {absolute:000}
-      - {Episode CleanTitle} {[Preferred Words]} {[Quality Full]} {[MediaInfo VideoDynamicRangeType]}
-      [{MediaInfo VideoBitDepth}bit] {[MediaInfo VideoCodec]} [{Mediainfo AudioCodec}
-      { Mediainfo AudioChannels}]{MediaInfo AudioLanguages} {[Release Group]} - Default'
-    change_file_date: none
-    chmod_folder: drwxr-xr-x
-    chown_group: null
-    create_empty_series_folders: false
-    daily_episode_format: '{Series TitleYear} - {Air-Date} - {Episode CleanTitle}
-      - {[Preferred Words]} {[Quality Full]} {[MediaInfo VideoDynamicRangeType]} [{MediaInfo
-      VideoBitDepth}bit] {[MediaInfo VideoCodec]} [{Mediainfo AudioCodec} {Mediainfo
-      AudioChannels}] {[MediaInfo AudioLanguages]} {[Release Group]} - Default'
-    delete_empty_folders: false
-    episode_title_required: always
-    import_extra_files: false
-    minimum_free_space: 100
-    multiepisode_style: range
-    propers_and_repacks: do-not-prefer
-    recycling_bin: null
-    recycling_bin_cleanup: 7
-    rename_episodes: true
-    replace_illegal_characters: true
-    rescan_series_folder_after_refresh: always
-    root_folders: []
-    season_folder_format: Season {season:00}
-    series_folder_format: '{Series TitleYear} [imdbid-{ImdbId}]'
-    set_permissions: false
-    skip_free_space_check: false
-    specials_folder_format: Specials
-    standard_episode_format: '{Series TitleYear} - S{season:00}E{episode:00} - {Episode
-      CleanTitle} - {[Preferred Words]} {[Quality Full]} {[MediaInfo VideoDynamicRangeType]}
-      [{MediaInfo VideoBitDepth}bit] {[MediaInfo VideoCodec]} [{Mediainfo AudioCodec}
-      {Mediainfo AudioChannels}] {[MediaInfo AudioLanguages]} {[Release Group]} -
-      Default'
-    use_hardlinks: true
-  metadata:
-    kodi_emby:
-      enable: false
-      episode_images: true
-      episode_metadata: true
-      season_images: true
-      series_images: true
-      series_metadata: true
-      series_metadata_url: true
-    roksbox:
-      enable: false
-      episode_images: true
-      episode_metadata: true
-      season_images: true
-      series_images: true
-    wdtv:
-      enable: false
-      episode_images: true
-      episode_metadata: true
-      season_images: true
-      series_images: true
-  profiles:
-    delay_profiles:
-      definitions:
-      - bypass_if_highest_quality: true
-        preferred_protocol: usenet-prefer
-        tags: []
-        torrent_delay: 0
-        usenet_delay: 0
-    language_profiles:
-      definitions:
-        Shows:
-          languages:
-          - english
-          upgrade_until: english
-          upgrades_allowed: true
-    quality_profiles:
-      definitions:
-        SD/HD:
-          qualities:
-          - Bluray-1080p
-          - members:
-            - WEBDL-1080p
-            - WEBRip-1080p
-            name: WEB 1080p
-          - HDTV-1080p
-          - Bluray-720p
-          - members:
-            - WEBDL-720p
-            - WEBRip-720p
-            name: WEB 720p
-          - HDTV-720p
-          - Raw-HD
-          - Bluray-480p
-          - DVD
-          - members:
-            - WEBDL-480p
-            - WEBRip-480p
-            name: WEB 480p
-          - SDTV
-          upgrade_until: Bluray-1080p
-          upgrades_allowed: true
-    release_profiles:
-      definitions:
-        '[Trash] Low Quality Groups':
-          enable: true
-          include_preferred_when_renaming: false
-          indexer: null
-          must_contain: []
-          must_not_contain: []
-          preferred:
-          - score: -10000
-            term: /(-BRiNK|-CHX|-GHOSTS|-EVO|-FGT|JFF|PSA|MeGusta|-NERO|nhanc3|Pahe\.ph|Pahe\.in|TBS|-VIDEOHOLE|-worldmkv|-XLF)\b/i
-          tags: []
-        '[Trash] Optionals':
-          enable: true
-          include_preferred_when_renaming: false
-          indexer: null
-          must_contain: []
-          must_not_contain:
-          - /^(?=.*(1080|720))(?=.*((x|h)[ ._-]?265|hevc)).*/i
-          - /\b(-alfaHD|-BAT|-BNd|-C\.A\.A|-Cory|-EXTREME|-FF|-FOXX|-G4RiS|-GUEIRA|-N3G4N|-PD|-PTHome|-RiPER|-RK|-SiGLA|-Tars|-WTV|-Yatogam1|-YusukeFLA|-ZigZag)\b/i
-          - /\b(-scene)\b/i
-          - /^(?!.*(HDR|HULU|REMUX))(?=.*\b(DV|Dovi|Dolby[- .]?Vision)\b).*/i
-          - /\bAV1\b/i
-          - /^(?!.*(web[ ]dl|-deflate|-inflate))(?=.*([_. ]WEB[_. ]|-CAKES\b|-GGEZ\b|-GGWP\b|-GLHF\b|-GOSSIP\b|-KOGI\b|-PECULATE\b|-SLOT\b)).*/i
-          preferred:
-          - score: 15
-            term: /\bS\d+\b(?!E\d+\b)/i
-          - score: -10000
-            term: /(-4P|-4Planet|-AsRequested|-BUYMORE|-CAPTCHA|-Chamele0n|-GEROV|-iNC0GNiTO|-NZBGeek|-Obfuscated|-postbot|-Rakuv|-Scrambled|-WhiteRev|-WRTEAM|-xpost)\b/i
-          - score: -10000
-            term: /(?&lt;!\d\.)(1-.+)$/i
-          - score: -10000
-            term: /(\[rartv\]|\[rarbg\]|\[eztv\]|\[TGx\])/i
-          - score: -10000
-            term: /\s?\ben\b$/i
-          tags: []
-        '[Trash] P2P Groups + Repack/Proper':
-          enable: true
-          include_preferred_when_renaming: false
-          indexer: null
-          must_contain: []
-          must_not_contain: []
-          preferred:
-          - score: 1800
-            term: /(-deflate|-inflate)\b/i
-          - score: 1700
-            term: /(-ABBIE|-AJP69|-APEX|-CasStudio|CRFW|-CtrlHD|-FLUX|\bHONE|-KiNGS|-monkee|NOSiViD|-NTb|-NTG|-PAXA|-PEXA|-QOQ|-RTN|-SiC|T6D|-TOMMY|-ViSUM|-XEPA)\b/i
-          - score: 1650
-            term: /(3CTWeB|BLUTONiUM|-BTW|-Chotab|-Cinefeel|-CiT|Coo7|-dB|-DEEP|-END|-ETHiCS|-FC|-Flights|-GNOME|-iJP|-iKA|-iT00NZ|-JETIX|-KHN|-KiMCHI|-LAZY|-MZABI|-NPMS|-NYH|-orbitron|playWEB|PSiG|-ROCCaT|RTFM|-SA89|-SDCC|-SIGMA|-SMURF|-SPiRiT|-TEPES|-TVSmash|-WELP)\b/i
-          - score: 1600
-            term: /(-DRACULA|SLiGNOME|T4H|-ViSiON|SwAgLaNdEr)\b/i
-          - score: 13
-            term: /(repack3)/i
-          - score: 12
-            term: /(repack2)/i
-          - score: 11
-            term: /\b(repack|proper)\b/i
-          tags: []
-        '[Trash] Release Sources (Streaming Service)':
-          enable: true
-          include_preferred_when_renaming: true
-          indexer: null
-          must_contain: []
-          must_not_contain: []
-          preferred:
-          - score: 100
-            term: /\b(amzn|amazon)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i
-          - score: 100
-            term: /\b(atvp|aptv|Apple TV\+)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i
-          - score: 95
-            term: /\b(sho|showtime)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i
-          - score: 90
-            term: /\b(dsnp|dsny|disney|Disney\+)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i
-          - score: 90
-            term: /\b(hmax|hbom|hbo[ ._-]max)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i
-          - score: 90
-            term: /\b(nf|netflix)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i
-          - score: 90
-            term: /\b(qibi|quibi)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i
-          - score: 85
-            term: /\b(hulu)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i
-          - score: 85
-            term: /\b(pcok|Peacock TV)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i
-          - score: 75
-            term: /\b(dcu)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i
-          - score: 75
-            term: /\b(hbo)(?![ ._-]max)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i
-          - score: 75
-            term: /\b(it)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i
-          - score: 75
-            term: /\b(nlz)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i
-          - score: 75
-            term: /\b(pmtp)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i
-          - score: 75
-            term: /\b(red)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i
-          - score: 75
-            term: /\b(stan)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i
-          - score: 75
-            term: /\b(vdl)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i
-          tags: []
-  quality:
-    definitions:
-      Bluray-1080p:
-        max: 227.0
-        min: 50.4
-        title: null
-      Bluray-1080p Remux:
-        max: null
-        min: 69.1
-        title: null
-      Bluray-2160p:
-        max: null
-        min: 94.6
-        title: null
-      Bluray-2160p Remux:
-        max: null
-        min: 204.4
-        title: null
-      Bluray-480p:
-        max: 100.0
-        min: 2.0
-        title: null
-      Bluray-720p:
-        max: 137.3
-        min: 17.1
-        title: null
-      DVD:
-        max: 100.0
-        min: 2.0
-        title: null
-      HDTV-1080p:
-        max: 137.3
-        min: 15.0
-        title: null
-      HDTV-2160p:
-        max: 350.0
-        min: 50.4
-        title: null
-      HDTV-720p:
-        max: 67.5
-        min: 10.0
-        title: null
-      Raw-HD:
-        max: null
-        min: 4.0
-        title: null
-      SDTV:
-        max: 100.0
-        min: 2.0
-        title: null
-      Unknown:
-        max: 199.9
-        min: 1.0
-        title: null
-      WEBDL-1080p:
-        max: 137.3
-        min: 15.0
-        title: null
-      WEBDL-2160p:
-        max: 350.0
-        min: 50.4
-        title: null
-      WEBDL-480p:
-        max: 100.0
-        min: 2.0
-        title: null
-      WEBDL-720p:
-        max: 137.3
-        min: 10.0
-        title: null
-      WEBRip-1080p:
-        max: 137.3
-        min: 15.0
-        title: null
-      WEBRip-2160p:
-        max: 350.0
-        min: 50.4
-        title: null
-      WEBRip-480p:
-        max: 100.0
-        min: 2.0
-        title: null
-      WEBRip-720p:
-        max: 137.3
-        min: 10.0
-        title: null
-  tags:
-    definitions: []
-  ui:
-    enable_color_impaired_mode: false
-    first_day_of_week: sunday
-    long_date_format: day-first
-    short_date_format: word-month-second
-    show_relative_dates: true
-    time_format: twentyfour-hour
-    week_column_header: day-first
-version: 3.0.9.1549</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nt">api_key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1a2b3c4d5e6f1a2b3c4d5e6f1a2b3c4d</span>
+<span class="nt">hostname</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">localhost</span>
+<span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8989</span>
+<span class="nt">protocol</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http</span>
+<span class="nt">settings</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">connect</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">definitions</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">Trakt</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">access_token</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1a2b3c4d5e6f1a2b3c4d5e6f1a2b3c4d5e6f1a2b3c4d5e6f1a2b3c4d5e6f1a2b</span>
+<span class="w">        </span><span class="nt">auth_user</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example</span>
+<span class="w">        </span><span class="nt">expires</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;2023-05-10T15:34:08.117451+00:00&#39;</span>
+<span class="w">        </span><span class="nt">notification_triggers</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">include_health_warnings</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">          </span><span class="nt">on_application_update</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">          </span><span class="nt">on_episode_file_delete</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">          </span><span class="nt">on_episode_file_delete_for_upgrade</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">          </span><span class="nt">on_grab</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">          </span><span class="nt">on_health_issue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">          </span><span class="nt">on_import</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">          </span><span class="nt">on_rename</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">          </span><span class="nt">on_series_delete</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">          </span><span class="nt">on_upgrade</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">        </span><span class="nt">refresh_token</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1a2b3c4d5e6f1a2b3c4d5e6f1a2b3c4d5e6f1a2b3c4d5e6f1a2b3c4d5e6f1a2b</span>
+<span class="w">        </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<span class="w">  </span><span class="nt">download_clients</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">definitions</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">Transmission</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">add_paused</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">        </span><span class="nt">category</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sonarr</span>
+<span class="w">        </span><span class="nt">directory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">        </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">        </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">transmission</span>
+<span class="w">        </span><span class="nt">older_priority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">last</span>
+<span class="w">        </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">        </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9091</span>
+<span class="w">        </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">        </span><span class="nt">recent_priority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">last</span>
+<span class="w">        </span><span class="nt">remove_completed_downloads</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">        </span><span class="nt">remove_failed_downloads</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">        </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<span class="w">        </span><span class="nt">url_base</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/transmission/</span>
+<span class="w">        </span><span class="nt">use_ssl</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">        </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">    </span><span class="nt">enable_completed_download_handling</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">redownload_failed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">remote_path_mappings</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">definitions</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<span class="w">  </span><span class="nt">general</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">analytics</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">send_anonymous_usage_data</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">backup</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">folder</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Backups</span>
+<span class="w">      </span><span class="nt">interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7</span>
+<span class="w">      </span><span class="nt">retention</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">28</span>
+<span class="w">    </span><span class="nt">host</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">bind_address</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;*&#39;</span>
+<span class="w">      </span><span class="nt">instance_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Sonarr (Example)</span>
+<span class="w">      </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8989</span>
+<span class="w">      </span><span class="nt">ssl_port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9898</span>
+<span class="w">      </span><span class="nt">url_base</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">      </span><span class="nt">use_ssl</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">logging</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">log_level</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">INFO</span>
+<span class="w">    </span><span class="nt">proxy</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">bypass_proxy_for_local_addresses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">      </span><span class="nt">hostname</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">      </span><span class="nt">ignored_addresses</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<span class="w">      </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">      </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080</span>
+<span class="w">      </span><span class="nt">proxy_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http</span>
+<span class="w">      </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">    </span><span class="nt">security</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">authentication</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">none</span>
+<span class="w">      </span><span class="nt">certificate_validation</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">enabled</span>
+<span class="w">      </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">      </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">    </span><span class="nt">updates</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">automatic</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">      </span><span class="nt">branch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span>
+<span class="w">      </span><span class="nt">mechanism</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">docker</span>
+<span class="w">      </span><span class="nt">script_path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">  </span><span class="nt">import_lists</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">definitions</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
+<span class="w">  </span><span class="nt">indexers</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">definitions</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
+<span class="w">    </span><span class="nt">maximum_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">minimum_age</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">retention</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">rss_sync_interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15</span>
+<span class="w">  </span><span class="nt">media_management</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">analyze_video_files</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">anime_episode_format</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{Series</span><span class="nv"> </span><span class="s">TitleYear}</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">S{season:00}E{episode:00}</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">{absolute:000}</span>
+<span class="w">      </span><span class="s">-</span><span class="nv"> </span><span class="s">{Episode</span><span class="nv"> </span><span class="s">CleanTitle}</span><span class="nv"> </span><span class="s">{[Preferred</span><span class="nv"> </span><span class="s">Words]}</span><span class="nv"> </span><span class="s">{[Quality</span><span class="nv"> </span><span class="s">Full]}</span><span class="nv"> </span><span class="s">{[MediaInfo</span><span class="nv"> </span><span class="s">VideoDynamicRangeType]}</span>
+<span class="w">      </span><span class="s">[{MediaInfo</span><span class="nv"> </span><span class="s">VideoBitDepth}bit]</span><span class="nv"> </span><span class="s">{[MediaInfo</span><span class="nv"> </span><span class="s">VideoCodec]}</span><span class="nv"> </span><span class="s">[{Mediainfo</span><span class="nv"> </span><span class="s">AudioCodec}</span>
+<span class="w">      </span><span class="s">{</span><span class="nv"> </span><span class="s">Mediainfo</span><span class="nv"> </span><span class="s">AudioChannels}]{MediaInfo</span><span class="nv"> </span><span class="s">AudioLanguages}</span><span class="nv"> </span><span class="s">{[Release</span><span class="nv"> </span><span class="s">Group]}</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">Default&#39;</span>
+<span class="w">    </span><span class="nt">change_file_date</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">none</span>
+<span class="w">    </span><span class="nt">chmod_folder</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drwxr-xr-x</span>
+<span class="w">    </span><span class="nt">chown_group</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">    </span><span class="nt">create_empty_series_folders</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">daily_episode_format</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{Series</span><span class="nv"> </span><span class="s">TitleYear}</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">{Air-Date}</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">{Episode</span><span class="nv"> </span><span class="s">CleanTitle}</span>
+<span class="w">      </span><span class="s">-</span><span class="nv"> </span><span class="s">{[Preferred</span><span class="nv"> </span><span class="s">Words]}</span><span class="nv"> </span><span class="s">{[Quality</span><span class="nv"> </span><span class="s">Full]}</span><span class="nv"> </span><span class="s">{[MediaInfo</span><span class="nv"> </span><span class="s">VideoDynamicRangeType]}</span><span class="nv"> </span><span class="s">[{MediaInfo</span>
+<span class="w">      </span><span class="s">VideoBitDepth}bit]</span><span class="nv"> </span><span class="s">{[MediaInfo</span><span class="nv"> </span><span class="s">VideoCodec]}</span><span class="nv"> </span><span class="s">[{Mediainfo</span><span class="nv"> </span><span class="s">AudioCodec}</span><span class="nv"> </span><span class="s">{Mediainfo</span>
+<span class="w">      </span><span class="s">AudioChannels}]</span><span class="nv"> </span><span class="s">{[MediaInfo</span><span class="nv"> </span><span class="s">AudioLanguages]}</span><span class="nv"> </span><span class="s">{[Release</span><span class="nv"> </span><span class="s">Group]}</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">Default&#39;</span>
+<span class="w">    </span><span class="nt">delete_empty_folders</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">episode_title_required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span>
+<span class="w">    </span><span class="nt">import_extra_files</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">minimum_free_space</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">    </span><span class="nt">multiepisode_style</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">range</span>
+<span class="w">    </span><span class="nt">propers_and_repacks</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">do-not-prefer</span>
+<span class="w">    </span><span class="nt">recycling_bin</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">    </span><span class="nt">recycling_bin_cleanup</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7</span>
+<span class="w">    </span><span class="nt">rename_episodes</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">replace_illegal_characters</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">rescan_series_folder_after_refresh</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span>
+<span class="w">    </span><span class="nt">root_folders</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<span class="w">    </span><span class="nt">season_folder_format</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Season {season:00}</span>
+<span class="w">    </span><span class="nt">series_folder_format</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{Series</span><span class="nv"> </span><span class="s">TitleYear}</span><span class="nv"> </span><span class="s">[imdbid-{ImdbId}]&#39;</span>
+<span class="w">    </span><span class="nt">set_permissions</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">skip_free_space_check</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">specials_folder_format</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Specials</span>
+<span class="w">    </span><span class="nt">standard_episode_format</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{Series</span><span class="nv"> </span><span class="s">TitleYear}</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">S{season:00}E{episode:00}</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">{Episode</span>
+<span class="w">      </span><span class="s">CleanTitle}</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">{[Preferred</span><span class="nv"> </span><span class="s">Words]}</span><span class="nv"> </span><span class="s">{[Quality</span><span class="nv"> </span><span class="s">Full]}</span><span class="nv"> </span><span class="s">{[MediaInfo</span><span class="nv"> </span><span class="s">VideoDynamicRangeType]}</span>
+<span class="w">      </span><span class="s">[{MediaInfo</span><span class="nv"> </span><span class="s">VideoBitDepth}bit]</span><span class="nv"> </span><span class="s">{[MediaInfo</span><span class="nv"> </span><span class="s">VideoCodec]}</span><span class="nv"> </span><span class="s">[{Mediainfo</span><span class="nv"> </span><span class="s">AudioCodec}</span>
+<span class="w">      </span><span class="s">{Mediainfo</span><span class="nv"> </span><span class="s">AudioChannels}]</span><span class="nv"> </span><span class="s">{[MediaInfo</span><span class="nv"> </span><span class="s">AudioLanguages]}</span><span class="nv"> </span><span class="s">{[Release</span><span class="nv"> </span><span class="s">Group]}</span><span class="nv"> </span><span class="s">-</span>
+<span class="w">      </span><span class="s">Default&#39;</span>
+<span class="w">    </span><span class="nt">use_hardlinks</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">metadata</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">kodi_emby</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">      </span><span class="nt">episode_images</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="nt">episode_metadata</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="nt">season_images</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="nt">series_images</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="nt">series_metadata</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="nt">series_metadata_url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">roksbox</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">      </span><span class="nt">episode_images</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="nt">episode_metadata</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="nt">season_images</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="nt">series_images</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">wdtv</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">      </span><span class="nt">episode_images</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="nt">episode_metadata</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="nt">season_images</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="nt">series_images</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">profiles</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">delay_profiles</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">definitions</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">bypass_if_highest_quality</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">        </span><span class="nt">preferred_protocol</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">usenet-prefer</span>
+<span class="w">        </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<span class="w">        </span><span class="nt">torrent_delay</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">        </span><span class="nt">usenet_delay</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">language_profiles</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">definitions</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">Shows</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">languages</span><span class="p">:</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">english</span>
+<span class="w">          </span><span class="nt">upgrade_until</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">english</span>
+<span class="w">          </span><span class="nt">upgrades_allowed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">quality_profiles</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">definitions</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">SD/HD</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">qualities</span><span class="p">:</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bluray-1080p</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">members</span><span class="p">:</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">WEBDL-1080p</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">WEBRip-1080p</span>
+<span class="w">            </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">WEB 1080p</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HDTV-1080p</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bluray-720p</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">members</span><span class="p">:</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">WEBDL-720p</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">WEBRip-720p</span>
+<span class="w">            </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">WEB 720p</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HDTV-720p</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Raw-HD</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bluray-480p</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DVD</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">members</span><span class="p">:</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">WEBDL-480p</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">WEBRip-480p</span>
+<span class="w">            </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">WEB 480p</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SDTV</span>
+<span class="w">          </span><span class="nt">upgrade_until</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bluray-1080p</span>
+<span class="w">          </span><span class="nt">upgrades_allowed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">release_profiles</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">definitions</span><span class="p">:</span>
+<span class="w">        </span><span class="s">&#39;[Trash]</span><span class="nv"> </span><span class="s">Low</span><span class="nv"> </span><span class="s">Quality</span><span class="nv"> </span><span class="s">Groups&#39;</span><span class="p p-Indicator">:</span>
+<span class="w">          </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">          </span><span class="nt">include_preferred_when_renaming</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">          </span><span class="nt">indexer</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">          </span><span class="nt">must_contain</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<span class="w">          </span><span class="nt">must_not_contain</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<span class="w">          </span><span class="nt">preferred</span><span class="p">:</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-10000</span>
+<span class="w">            </span><span class="nt">term</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/(-BRiNK|-CHX|-GHOSTS|-EVO|-FGT|JFF|PSA|MeGusta|-NERO|nhanc3|Pahe\.ph|Pahe\.in|TBS|-VIDEOHOLE|-worldmkv|-XLF)\b/i</span>
+<span class="w">          </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<span class="w">        </span><span class="s">&#39;[Trash]</span><span class="nv"> </span><span class="s">Optionals&#39;</span><span class="p p-Indicator">:</span>
+<span class="w">          </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">          </span><span class="nt">include_preferred_when_renaming</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">          </span><span class="nt">indexer</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">          </span><span class="nt">must_contain</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<span class="w">          </span><span class="nt">must_not_contain</span><span class="p">:</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/^(?=.*(1080|720))(?=.*((x|h)[ ._-]?265|hevc)).*/i</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/\b(-alfaHD|-BAT|-BNd|-C\.A\.A|-Cory|-EXTREME|-FF|-FOXX|-G4RiS|-GUEIRA|-N3G4N|-PD|-PTHome|-RiPER|-RK|-SiGLA|-Tars|-WTV|-Yatogam1|-YusukeFLA|-ZigZag)\b/i</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/\b(-scene)\b/i</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/^(?!.*(HDR|HULU|REMUX))(?=.*\b(DV|Dovi|Dolby[- .]?Vision)\b).*/i</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/\bAV1\b/i</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/^(?!.*(web[ ]dl|-deflate|-inflate))(?=.*([_. ]WEB[_. ]|-CAKES\b|-GGEZ\b|-GGWP\b|-GLHF\b|-GOSSIP\b|-KOGI\b|-PECULATE\b|-SLOT\b)).*/i</span>
+<span class="w">          </span><span class="nt">preferred</span><span class="p">:</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15</span>
+<span class="w">            </span><span class="nt">term</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/\bS\d+\b(?!E\d+\b)/i</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-10000</span>
+<span class="w">            </span><span class="nt">term</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/(-4P|-4Planet|-AsRequested|-BUYMORE|-CAPTCHA|-Chamele0n|-GEROV|-iNC0GNiTO|-NZBGeek|-Obfuscated|-postbot|-Rakuv|-Scrambled|-WhiteRev|-WRTEAM|-xpost)\b/i</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-10000</span>
+<span class="w">            </span><span class="nt">term</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/(?&lt;!\d\.)(1-.+)$/i</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-10000</span>
+<span class="w">            </span><span class="nt">term</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/(\[rartv\]|\[rarbg\]|\[eztv\]|\[TGx\])/i</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-10000</span>
+<span class="w">            </span><span class="nt">term</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/\s?\ben\b$/i</span>
+<span class="w">          </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<span class="w">        </span><span class="s">&#39;[Trash]</span><span class="nv"> </span><span class="s">P2P</span><span class="nv"> </span><span class="s">Groups</span><span class="nv"> </span><span class="s">+</span><span class="nv"> </span><span class="s">Repack/Proper&#39;</span><span class="p p-Indicator">:</span>
+<span class="w">          </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">          </span><span class="nt">include_preferred_when_renaming</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">          </span><span class="nt">indexer</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">          </span><span class="nt">must_contain</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<span class="w">          </span><span class="nt">must_not_contain</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<span class="w">          </span><span class="nt">preferred</span><span class="p">:</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1800</span>
+<span class="w">            </span><span class="nt">term</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/(-deflate|-inflate)\b/i</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1700</span>
+<span class="w">            </span><span class="nt">term</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/(-ABBIE|-AJP69|-APEX|-CasStudio|CRFW|-CtrlHD|-FLUX|\bHONE|-KiNGS|-monkee|NOSiViD|-NTb|-NTG|-PAXA|-PEXA|-QOQ|-RTN|-SiC|T6D|-TOMMY|-ViSUM|-XEPA)\b/i</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1650</span>
+<span class="w">            </span><span class="nt">term</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/(3CTWeB|BLUTONiUM|-BTW|-Chotab|-Cinefeel|-CiT|Coo7|-dB|-DEEP|-END|-ETHiCS|-FC|-Flights|-GNOME|-iJP|-iKA|-iT00NZ|-JETIX|-KHN|-KiMCHI|-LAZY|-MZABI|-NPMS|-NYH|-orbitron|playWEB|PSiG|-ROCCaT|RTFM|-SA89|-SDCC|-SIGMA|-SMURF|-SPiRiT|-TEPES|-TVSmash|-WELP)\b/i</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1600</span>
+<span class="w">            </span><span class="nt">term</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/(-DRACULA|SLiGNOME|T4H|-ViSiON|SwAgLaNdEr)\b/i</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">13</span>
+<span class="w">            </span><span class="nt">term</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/(repack3)/i</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">12</span>
+<span class="w">            </span><span class="nt">term</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/(repack2)/i</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">11</span>
+<span class="w">            </span><span class="nt">term</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/\b(repack|proper)\b/i</span>
+<span class="w">          </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<span class="w">        </span><span class="s">&#39;[Trash]</span><span class="nv"> </span><span class="s">Release</span><span class="nv"> </span><span class="s">Sources</span><span class="nv"> </span><span class="s">(Streaming</span><span class="nv"> </span><span class="s">Service)&#39;</span><span class="p p-Indicator">:</span>
+<span class="w">          </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">          </span><span class="nt">include_preferred_when_renaming</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">          </span><span class="nt">indexer</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">          </span><span class="nt">must_contain</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<span class="w">          </span><span class="nt">must_not_contain</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<span class="w">          </span><span class="nt">preferred</span><span class="p">:</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">            </span><span class="nt">term</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/\b(amzn|amazon)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">            </span><span class="nt">term</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/\b(atvp|aptv|Apple TV\+)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">95</span>
+<span class="w">            </span><span class="nt">term</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/\b(sho|showtime)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">90</span>
+<span class="w">            </span><span class="nt">term</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/\b(dsnp|dsny|disney|Disney\+)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">90</span>
+<span class="w">            </span><span class="nt">term</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/\b(hmax|hbom|hbo[ ._-]max)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">90</span>
+<span class="w">            </span><span class="nt">term</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/\b(nf|netflix)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">90</span>
+<span class="w">            </span><span class="nt">term</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/\b(qibi|quibi)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">85</span>
+<span class="w">            </span><span class="nt">term</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/\b(hulu)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">85</span>
+<span class="w">            </span><span class="nt">term</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/\b(pcok|Peacock TV)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">75</span>
+<span class="w">            </span><span class="nt">term</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/\b(dcu)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">75</span>
+<span class="w">            </span><span class="nt">term</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/\b(hbo)(?![ ._-]max)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">75</span>
+<span class="w">            </span><span class="nt">term</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/\b(it)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">75</span>
+<span class="w">            </span><span class="nt">term</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/\b(nlz)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">75</span>
+<span class="w">            </span><span class="nt">term</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/\b(pmtp)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">75</span>
+<span class="w">            </span><span class="nt">term</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/\b(red)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">75</span>
+<span class="w">            </span><span class="nt">term</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/\b(stan)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">75</span>
+<span class="w">            </span><span class="nt">term</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/\b(vdl)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i</span>
+<span class="w">          </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<span class="w">  </span><span class="nt">quality</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">definitions</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">Bluray-1080p</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">max</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">227.0</span>
+<span class="w">        </span><span class="nt">min</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50.4</span>
+<span class="w">        </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">      </span><span class="nt">Bluray-1080p Remux</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">max</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">        </span><span class="nt">min</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">69.1</span>
+<span class="w">        </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">      </span><span class="nt">Bluray-2160p</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">max</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">        </span><span class="nt">min</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">94.6</span>
+<span class="w">        </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">      </span><span class="nt">Bluray-2160p Remux</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">max</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">        </span><span class="nt">min</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">204.4</span>
+<span class="w">        </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">      </span><span class="nt">Bluray-480p</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">max</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100.0</span>
+<span class="w">        </span><span class="nt">min</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2.0</span>
+<span class="w">        </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">      </span><span class="nt">Bluray-720p</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">max</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">137.3</span>
+<span class="w">        </span><span class="nt">min</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">17.1</span>
+<span class="w">        </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">      </span><span class="nt">DVD</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">max</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100.0</span>
+<span class="w">        </span><span class="nt">min</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2.0</span>
+<span class="w">        </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">      </span><span class="nt">HDTV-1080p</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">max</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">137.3</span>
+<span class="w">        </span><span class="nt">min</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15.0</span>
+<span class="w">        </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">      </span><span class="nt">HDTV-2160p</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">max</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">350.0</span>
+<span class="w">        </span><span class="nt">min</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50.4</span>
+<span class="w">        </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">      </span><span class="nt">HDTV-720p</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">max</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">67.5</span>
+<span class="w">        </span><span class="nt">min</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10.0</span>
+<span class="w">        </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">      </span><span class="nt">Raw-HD</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">max</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">        </span><span class="nt">min</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4.0</span>
+<span class="w">        </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">      </span><span class="nt">SDTV</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">max</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100.0</span>
+<span class="w">        </span><span class="nt">min</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2.0</span>
+<span class="w">        </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">      </span><span class="nt">Unknown</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">max</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">199.9</span>
+<span class="w">        </span><span class="nt">min</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span>
+<span class="w">        </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">      </span><span class="nt">WEBDL-1080p</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">max</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">137.3</span>
+<span class="w">        </span><span class="nt">min</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15.0</span>
+<span class="w">        </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">      </span><span class="nt">WEBDL-2160p</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">max</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">350.0</span>
+<span class="w">        </span><span class="nt">min</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50.4</span>
+<span class="w">        </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">      </span><span class="nt">WEBDL-480p</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">max</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100.0</span>
+<span class="w">        </span><span class="nt">min</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2.0</span>
+<span class="w">        </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">      </span><span class="nt">WEBDL-720p</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">max</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">137.3</span>
+<span class="w">        </span><span class="nt">min</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10.0</span>
+<span class="w">        </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">      </span><span class="nt">WEBRip-1080p</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">max</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">137.3</span>
+<span class="w">        </span><span class="nt">min</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15.0</span>
+<span class="w">        </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">      </span><span class="nt">WEBRip-2160p</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">max</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">350.0</span>
+<span class="w">        </span><span class="nt">min</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50.4</span>
+<span class="w">        </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">      </span><span class="nt">WEBRip-480p</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">max</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100.0</span>
+<span class="w">        </span><span class="nt">min</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2.0</span>
+<span class="w">        </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">      </span><span class="nt">WEBRip-720p</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">max</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">137.3</span>
+<span class="w">        </span><span class="nt">min</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10.0</span>
+<span class="w">        </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">  </span><span class="nt">tags</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">definitions</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<span class="w">  </span><span class="nt">ui</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">enable_color_impaired_mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">first_day_of_week</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sunday</span>
+<span class="w">    </span><span class="nt">long_date_format</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">day-first</span>
+<span class="w">    </span><span class="nt">short_date_format</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">word-month-second</span>
+<span class="w">    </span><span class="nt">show_relative_dates</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">time_format</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">twentyfour-hour</span>
+<span class="w">    </span><span class="nt">week_column_header</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">day-first</span>
+<span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3.0.9.1549</span>
+</code></pre></div></div>
             </div>
         </div>
 

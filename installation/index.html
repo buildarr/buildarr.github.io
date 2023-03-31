@@ -55,11 +55,15 @@
 </li>
                                     
   <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">buildarr-sonarr</a>
+    <a href="#" class="dropdown-item">Buildarr Sonarr Plugin</a>
     <ul class="dropdown-menu">
             
 <li>
     <a href="../plugins/sonarr/" class="dropdown-item">Introduction</a>
+</li>
+            
+<li>
+    <a href="../plugins/sonarr/release-notes/" class="dropdown-item">Release Notes</a>
 </li>
             
   <li class="dropdown-submenu">
@@ -207,89 +211,108 @@
 <p>Buildarr can be installed as a standalone Python application using <code>pip</code>. Python 3.8 or later is required.</p>
 <p>Buildarr also runs natively on Windows.</p>
 <p>As Buildarr can be extended with external plugins, it is recommended to create a dedicated virtual environment to install Buildarr.</p>
-<pre class="highlight"><code class="language-bash">$ python3 -m venv buildarr-venv
-$ . buildarr-venv/bin/activate
-$ python3 -m pip install buildarr</code></pre>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>buildarr-venv
+$<span class="w"> </span>.<span class="w"> </span>buildarr-venv/bin/activate
+$<span class="w"> </span>python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>buildarr
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>As of Buildarr v0.4.0, plugins are no longer bundled with the Buildarr base package.</p>
+<p>For more information on the available plugins and installing them, see <a href="../plugins/">Plugins</a>.</p>
+</div>
 <p>Once installed and a configuration file has been created, you can execute an update of your stack by running the following command.</p>
-<pre class="highlight"><code class="language-bash"> $ buildarr run</code></pre>
+<div class="highlight"><pre><span></span><code><span class="w"> </span>$<span class="w"> </span>buildarr<span class="w"> </span>run
+</code></pre></div>
 <p>Buildar can also be run as a daemon to schedule periodic updates of your stack.</p>
-<pre class="highlight"><code class="language-bash">$ buildarr daemon</code></pre>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>buildarr<span class="w"> </span>daemon
+</code></pre></div>
 <h2 id="docker">Docker<a class="headerlink" href="#docker" title="Permanent link">#</a></h2>
 <p>Buildarr is available on Docker Hub as a Docker image.</p>
-<pre class="highlight"><code class="language-bash">$ docker pull callum027/buildarr:latest</code></pre>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>docker<span class="w"> </span>pull<span class="w"> </span>callum027/buildarr:latest
+</code></pre></div>
 <p>Once you have a configuration file, create a folder to store the configuration and auto-generated secrets files to mount into the Docker container.</p>
 <p>As API keys and login credentials are to be stored here, they should have strict permissions set, with ownership exclusively
 set to the <code>PUID</code> (process user ID) and <code>PGID</code> (process group ID) to be configured on the container.</p>
-<pre class="highlight"><code class="language-bash">$ mkdir --mode=700 /path/to/config
-$ sudo chown -R &lt;PUID&gt;:&lt;PGID&gt; /path/to/config</code></pre>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>mkdir<span class="w"> </span>--mode<span class="o">=</span><span class="m">700</span><span class="w"> </span>/path/to/config
+$<span class="w"> </span>sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span>&lt;PUID&gt;:&lt;PGID&gt;<span class="w"> </span>/path/to/config
+</code></pre></div>
 <p>You can start a Buildarr container by calling <code>docker run</code>, bind mounting the configuration directory as <code>/config</code>.</p>
 <p>By default, the Buildarr Docker container runs in daemon mode.</p>
-<pre class="highlight"><code class="language-bash">$ docker run -d --name buildarr --restart=always -v /path/to/config:/config -e PUID=&lt;PUID&gt; -e PGID=&lt;PGID&gt; callum027/buildarr:latest</code></pre>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>buildarr<span class="w"> </span>--restart<span class="o">=</span>always<span class="w"> </span>-v<span class="w"> </span>/path/to/config:/config<span class="w"> </span>-e<span class="w"> </span><span class="nv">PUID</span><span class="o">=</span>&lt;PUID&gt;<span class="w"> </span>-e<span class="w"> </span><span class="nv">PGID</span><span class="o">=</span>&lt;PGID&gt;<span class="w"> </span>callum027/buildarr:latest
+</code></pre></div>
 <p>For configuration testing purposes, you can call <code>buildarr run</code> using the Docker image to run an update of your stack and exit.</p>
-<pre class="highlight"><code class="language-bash">$ docker run --rm -v /path/to/config:/config -e PUID=&lt;PUID&gt; -e PGID=&lt;PGID&gt; callum027/buildarr:latest run</code></pre>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>-v<span class="w"> </span>/path/to/config:/config<span class="w"> </span>-e<span class="w"> </span><span class="nv">PUID</span><span class="o">=</span>&lt;PUID&gt;<span class="w"> </span>-e<span class="w"> </span><span class="nv">PGID</span><span class="o">=</span>&lt;PGID&gt;<span class="w"> </span>callum027/buildarr:latest<span class="w"> </span>run
+</code></pre></div>
+<p>The Docker container for Buildarr is bundled with the Sonarr plugin, so Sonarr instances can be managed out of the box.</p>
+<p>If you would like to install external plugins into the Docker container, see <a href="../plugins/#installing-plugins-into-the-docker-container">Installing plugins into the Docker container</a>.</p>
 <h2 id="docker-compose">Docker Compose<a class="headerlink" href="#docker-compose" title="Permanent link">#</a></h2>
 <p>Buildarr can be integrated into a Docker Compose environment containing your *Arr stack instances. <code>depends_on</code> should be used to ensure Docker Compose services are started in the correct order.</p>
 <p>Here is an example of a <code>docker-compose.yml</code> file with Buildarr managing one Sonarr instance.</p>
-<pre class="highlight"><code class="language-yaml">version: "3.7"
+<div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3.7&quot;</span>
 
-services:
-  sonarr:
-    image: linuxserver/sonarr:3.0.9
-    container_name: sonarr
-    restart: always
-    ports:
-      - 127.0.0.1:8989:8989
-    volumes:
-      - ./sonarr:/config
-      - /path/to/downloads:/downloads
-      - /path/to/videos:/videos
-    environment:
-      TZ: Pacific/Auckland
-      PUID: "1000"
-      PGID: "1000"
+<span class="nt">services</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">sonarr</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">linuxserver/sonarr:3.0.9</span>
+<span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sonarr</span>
+<span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span>
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">127.0.0.1:8989:8989</span>
+<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./sonarr:/config</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/path/to/downloads:/downloads</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/path/to/videos:/videos</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">TZ</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Pacific/Auckland</span>
+<span class="w">      </span><span class="nt">PUID</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1000&quot;</span>
+<span class="w">      </span><span class="nt">PGID</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1000&quot;</span>
 
-  buildarr:
-    image: callum027/buildarr:latest
-    container_name: buildarr
-    restart: always
-    volumes:
-      - ./buildarr:/config
-    environment:
-      TZ: Pacific/Auckland
-      PUID: "1000"
-      PGID: "1000"
-    depends_on:
-      - sonarr</code></pre>
+<span class="w">  </span><span class="nt">buildarr</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">callum027/buildarr:latest</span>
+<span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">buildarr</span>
+<span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span>
+<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bind</span>
+<span class="w">        </span><span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./buildarr</span>
+<span class="w">        </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/config</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">TZ</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Pacific/Auckland</span>
+<span class="w">      </span><span class="nt">PUID</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1000&quot;</span>
+<span class="w">      </span><span class="nt">PGID</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1000&quot;</span>
+<span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sonarr</span>
+</code></pre></div>
 <p>The corresponding instance configuration in <code>buildarr.yml</code> would look something like this:</p>
-<pre class="highlight"><code class="language-yaml">---
+<div class="highlight"><pre><span></span><code><span class="nn">---</span>
 
-buildarr:
-  watch_config: true
-  update_days:
-    - "monday"
-    - "tuesday"
-    - "wednesday"
-    - "thursday"
-    - "friday"
-    - "saturday"
-    - "sunday"
-  update_times:
-    - "03:00"
+<span class="nt">buildarr</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">watch_config</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">update_days</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;monday&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;tuesday&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;wednesday&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;thursday&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;friday&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;saturday&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;sunday&quot;</span>
+<span class="w">  </span><span class="nt">update_times</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;03:00&quot;</span>
 
-sonarr:
-  # Configuration common to all Sonarr instances can be defined here.
-  # settings:
-  #   ...
-  instances:
-    # Name of the instance as referred to by Buildarr.
-    # Assign instance-specific configuration to it.
-    sonarr:
-      host: "sonarr"
-      port: 8989
-      protocol: "http"
-      # Define instance-specific Sonarr settings here.
-      settings:
-        ...</code></pre>
+<span class="nt">sonarr</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Configuration common to all Sonarr instances can be defined here.</span>
+<span class="w">  </span><span class="c1"># settings:</span>
+<span class="w">  </span><span class="c1">#   ...</span>
+<span class="w">  </span><span class="nt">instances</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># Name of the instance as referred to by Buildarr.</span>
+<span class="w">    </span><span class="c1"># Assign instance-specific configuration to it.</span>
+<span class="w">    </span><span class="nt">sonarr</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;sonarr&quot;</span>
+<span class="w">      </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8989</span>
+<span class="w">      </span><span class="nt">protocol</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;http&quot;</span>
+<span class="w">      </span><span class="c1"># Define instance-specific Sonarr settings here.</span>
+<span class="w">      </span><span class="nt">settings</span><span class="p">:</span>
+<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+</code></pre></div>
+<p><em>New in version 0.4.0</em>: Buildarr now supports <a href="../usage/#generating-a-docker-compose-file">generating a Docker Compose file</a> from a Buildarr configuration file, using the <code>buildarr compose</code> command.</p>
 <h2 id="automatic-deployment-using-ansible">Automatic deployment using Ansible<a class="headerlink" href="#automatic-deployment-using-ansible" title="Permanent link">#</a></h2>
 <p>Buildarr is designed to be automatically deployed with your *Arr stack using tools such as <a href="https://www.ansible.com">Ansible</a>.</p>
 <p>The easiest way to do this is to create a Docker Compose environment, and deploy it using the <a href="https://docs.ansible.com/ansible/latest/collections/community/docker/docker_compose_module.html">community.docker.docker_compose</a> module.</p>

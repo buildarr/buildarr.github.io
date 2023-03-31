@@ -55,11 +55,15 @@
 </li>
                                     
   <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">buildarr-sonarr</a>
+    <a href="#" class="dropdown-item">Buildarr Sonarr Plugin</a>
     <ul class="dropdown-menu">
             
 <li>
     <a href="../../" class="dropdown-item">Introduction</a>
+</li>
+            
+<li>
+    <a href="../../release-notes/" class="dropdown-item">Release Notes</a>
 </li>
             
   <li class="dropdown-submenu">
@@ -215,30 +219,31 @@
 
 <h1 id="general">General<a class="headerlink" href="#general" title="Permanent link">#</a></h1>
 <p>General configuration for Sonarr are separated by category.</p>
-<pre class="highlight"><code class="language-yaml">sonarr:
-  settings:
-    general:
-      host:
-        bind_address: "*"
-        port: 8989
-        url_base: null
-        instance_name: "Sonarr (Example)"
-      security:
-        authentication: "none"
-      proxy:
-        enable: false
-      logging:
-        log_level: "INFO"
-      analytics:
-        send_anonymous_usage_data: false
-      updates:
-        branch: "main"
-        automatic: false
-        mechanism: "docker"
-      backup:
-        folder: "Backups"
-        interval: 7
-        retention: 28</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nt">sonarr</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">settings</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">general</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">host</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">bind_address</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;*&quot;</span>
+<span class="w">        </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8989</span>
+<span class="w">        </span><span class="nt">url_base</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">        </span><span class="nt">instance_name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Sonarr</span><span class="nv"> </span><span class="s">(Example)&quot;</span>
+<span class="w">      </span><span class="nt">security</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">authentication</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;none&quot;</span>
+<span class="w">      </span><span class="nt">proxy</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">      </span><span class="nt">logging</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">log_level</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;INFO&quot;</span>
+<span class="w">      </span><span class="nt">analytics</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">send_anonymous_usage_data</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">      </span><span class="nt">updates</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">branch</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;main&quot;</span>
+<span class="w">        </span><span class="nt">automatic</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">        </span><span class="nt">mechanism</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;docker&quot;</span>
+<span class="w">      </span><span class="nt">backup</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">folder</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Backups&quot;</span>
+<span class="w">        </span><span class="nt">interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7</span>
+<span class="w">        </span><span class="nt">retention</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">28</span>
+</code></pre></div>
 <p>Some of the settings may affect Buildarr's ability to connect with the Sonarr instance.
 Take care when changing these settings.</p>
 <h2 id="host">Host<a class="headerlink" href="#host" title="Permanent link">#</a></h2>
@@ -247,10 +252,10 @@ Take care when changing these settings.</p>
 <div class="doc doc-object doc-class">
 
 
-<a id="buildarr.plugins.sonarr.config.general.HostGeneralSettings"></a>
+<a id="buildarr_sonarr.config.general.HostGeneralSettings"></a>
   <div class="doc doc-contents first">
       <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr.plugins.sonarr.config.general.GeneralSettings">GeneralSettings</span></code></p>
+        Bases: <code><span title="buildarr_sonarr.config.general.GeneralSettings">GeneralSettings</span></code></p>
 
   
       <p>Sonarr instance connection and name configuration.</p>
@@ -275,14 +280,14 @@ Sonarr instance may need to be updated, so take care when modifying them.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.general.HostGeneralSettings.bind_address" class="doc doc-heading">
-<code class="highlight language-python">bind_address: Union[Literal['*'], IPv4Address] = '*'</code>
+<h5 id="buildarr_sonarr.config.general.HostGeneralSettings.bind_address" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">bind_address</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;*&#39;</span><span class="p">],</span> <span class="n">IPv4Address</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;*&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.general.HostGeneralSettings.bind_address" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.general.HostGeneralSettings.bind_address" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -300,14 +305,14 @@ this generally should be left untouched.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.general.HostGeneralSettings.port" class="doc doc-heading">
-<code class="highlight language-python">port: Port = 8989</code>
+<h5 id="buildarr_sonarr.config.general.HostGeneralSettings.port" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">8989</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.general.HostGeneralSettings.port" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.general.HostGeneralSettings.port" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -325,14 +330,14 @@ Instead, change the external port it is bound to using
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.general.HostGeneralSettings.ssl_port" class="doc doc-heading">
-<code class="highlight language-python">ssl_port: Port = 9898</code>
+<h5 id="buildarr_sonarr.config.general.HostGeneralSettings.ssl_port" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">ssl_port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">9898</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.general.HostGeneralSettings.ssl_port" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.general.HostGeneralSettings.ssl_port" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -350,14 +355,14 @@ Instead, change the external port it is bound to using
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.general.HostGeneralSettings.use_ssl" class="doc doc-heading">
-<code class="highlight language-python">use_ssl: bool = False</code>
+<h5 id="buildarr_sonarr.config.general.HostGeneralSettings.use_ssl" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.general.HostGeneralSettings.use_ssl" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.general.HostGeneralSettings.use_ssl" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -373,14 +378,14 @@ to put Sonarr behind a HTTPS-terminating reverse proxy such as Nginx, Caddy or T
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.general.HostGeneralSettings.url_base" class="doc doc-heading">
-<code class="highlight language-python">url_base: Optional[str] = None</code>
+<h5 id="buildarr_sonarr.config.general.HostGeneralSettings.url_base" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">url_base</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.general.HostGeneralSettings.url_base" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.general.HostGeneralSettings.url_base" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -397,14 +402,14 @@ is assigned to a subfolder, e.g. <code>https://example.com/sonarr</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.general.HostGeneralSettings.instance_name" class="doc doc-heading">
-<code class="highlight language-python">instance_name: NonEmptyStr = 'Sonarr'</code>
+<h5 id="buildarr_sonarr.config.general.HostGeneralSettings.instance_name" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">instance_name</span><span class="p">:</span> <span class="n">NonEmptyStr</span> <span class="o">=</span> <span class="s1">&#39;Sonarr&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.general.HostGeneralSettings.instance_name" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.general.HostGeneralSettings.instance_name" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -428,10 +433,10 @@ is assigned to a subfolder, e.g. <code>https://example.com/sonarr</code>.</p>
 <div class="doc doc-object doc-class">
 
 
-<a id="buildarr.plugins.sonarr.config.general.SecurityGeneralSettings"></a>
+<a id="buildarr_sonarr.config.general.SecurityGeneralSettings"></a>
   <div class="doc doc-contents first">
       <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr.plugins.sonarr.config.general.GeneralSettings">GeneralSettings</span></code></p>
+        Bases: <code><span title="buildarr_sonarr.config.general.GeneralSettings">GeneralSettings</span></code></p>
 
   
       <p>Sonarr instance security (authentication) settings.</p>
@@ -452,14 +457,14 @@ is assigned to a subfolder, e.g. <code>https://example.com/sonarr</code>.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.general.SecurityGeneralSettings.authentication" class="doc doc-heading">
-<code class="highlight language-python">authentication: AuthenticationMethod = AuthenticationMethod.none</code>
+<h5 id="buildarr_sonarr.config.general.SecurityGeneralSettings.authentication" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">authentication</span><span class="p">:</span> <span class="n">AuthenticationMethod</span> <span class="o">=</span> <span class="n">AuthenticationMethod</span><span class="o">.</span><span class="n">none</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.general.SecurityGeneralSettings.authentication" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.general.SecurityGeneralSettings.authentication" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -481,14 +486,14 @@ By default, do not require authentication.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.general.SecurityGeneralSettings.username" class="doc doc-heading">
-<code class="highlight language-python">username: Optional[str] = None</code>
+<h5 id="buildarr_sonarr.config.general.SecurityGeneralSettings.username" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.general.SecurityGeneralSettings.username" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.general.SecurityGeneralSettings.username" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -503,14 +508,14 @@ By default, do not require authentication.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.general.SecurityGeneralSettings.password" class="doc doc-heading">
-<code class="highlight language-python">password: Optional[Password] = None</code>
+<h5 id="buildarr_sonarr.config.general.SecurityGeneralSettings.password" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">password</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Password</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.general.SecurityGeneralSettings.password" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.general.SecurityGeneralSettings.password" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -525,14 +530,14 @@ By default, do not require authentication.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.general.SecurityGeneralSettings.certificate_validation" class="doc doc-heading">
-<code class="highlight language-python">certificate_validation: CertificateValidation = CertificateValidation.enabled</code>
+<h5 id="buildarr_sonarr.config.general.SecurityGeneralSettings.certificate_validation" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">certificate_validation</span><span class="p">:</span> <span class="n">CertificateValidation</span> <span class="o">=</span> <span class="n">CertificateValidation</span><span class="o">.</span><span class="n">enabled</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.general.SecurityGeneralSettings.certificate_validation" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.general.SecurityGeneralSettings.certificate_validation" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -563,10 +568,10 @@ Do not change unless you understand the risks.</p>
 <div class="doc doc-object doc-class">
 
 
-<a id="buildarr.plugins.sonarr.config.general.ProxyGeneralSettings"></a>
+<a id="buildarr_sonarr.config.general.ProxyGeneralSettings"></a>
   <div class="doc doc-contents first">
       <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr.plugins.sonarr.config.general.GeneralSettings">GeneralSettings</span></code></p>
+        Bases: <code><span title="buildarr_sonarr.config.general.GeneralSettings">GeneralSettings</span></code></p>
 
   
       <p>Proxy configuration for Sonarr.</p>
@@ -587,14 +592,14 @@ Do not change unless you understand the risks.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.general.ProxyGeneralSettings.enable" class="doc doc-heading">
-<code class="highlight language-python">enable: bool = False</code>
+<h5 id="buildarr_sonarr.config.general.ProxyGeneralSettings.enable" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">enable</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.general.ProxyGeneralSettings.enable" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.general.ProxyGeneralSettings.enable" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -608,14 +613,14 @@ Do not change unless you understand the risks.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.general.ProxyGeneralSettings.proxy_type" class="doc doc-heading">
-<code class="highlight language-python">proxy_type: ProxyType = ProxyType.http</code>
+<h5 id="buildarr_sonarr.config.general.ProxyGeneralSettings.proxy_type" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">proxy_type</span><span class="p">:</span> <span class="n">ProxyType</span> <span class="o">=</span> <span class="n">ProxyType</span><span class="o">.</span><span class="n">http</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.general.ProxyGeneralSettings.proxy_type" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.general.ProxyGeneralSettings.proxy_type" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -635,14 +640,14 @@ Do not change unless you understand the risks.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.general.ProxyGeneralSettings.hostname" class="doc doc-heading">
-<code class="highlight language-python">hostname: Optional[str] = None</code>
+<h5 id="buildarr_sonarr.config.general.ProxyGeneralSettings.hostname" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">hostname</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.general.ProxyGeneralSettings.hostname" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.general.ProxyGeneralSettings.hostname" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -657,14 +662,14 @@ Do not change unless you understand the risks.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.general.ProxyGeneralSettings.port" class="doc doc-heading">
-<code class="highlight language-python">port: Port = 8080</code>
+<h5 id="buildarr_sonarr.config.general.ProxyGeneralSettings.port" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">8080</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.general.ProxyGeneralSettings.port" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.general.ProxyGeneralSettings.port" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -678,14 +683,14 @@ Do not change unless you understand the risks.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.general.ProxyGeneralSettings.username" class="doc doc-heading">
-<code class="highlight language-python">username: Optional[str] = None</code>
+<h5 id="buildarr_sonarr.config.general.ProxyGeneralSettings.username" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.general.ProxyGeneralSettings.username" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.general.ProxyGeneralSettings.username" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -700,14 +705,14 @@ Only enter if authentication is required by the proxy.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.general.ProxyGeneralSettings.password" class="doc doc-heading">
-<code class="highlight language-python">password: Optional[Password] = None</code>
+<h5 id="buildarr_sonarr.config.general.ProxyGeneralSettings.password" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">password</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Password</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.general.ProxyGeneralSettings.password" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.general.ProxyGeneralSettings.password" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -722,14 +727,14 @@ Only enter if authentication is required by the proxy.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.general.ProxyGeneralSettings.ignored_addresses" class="doc doc-heading">
-<code class="highlight language-python">ignored_addresses: Set[NonEmptyStr] = set()</code>
+<h5 id="buildarr_sonarr.config.general.ProxyGeneralSettings.ignored_addresses" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">ignored_addresses</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.general.ProxyGeneralSettings.ignored_addresses" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.general.ProxyGeneralSettings.ignored_addresses" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -743,14 +748,14 @@ Only enter if authentication is required by the proxy.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.general.ProxyGeneralSettings.bypass_proxy_for_local_addresses" class="doc doc-heading">
-<code class="highlight language-python">bypass_proxy_for_local_addresses: bool = True</code>
+<h5 id="buildarr_sonarr.config.general.ProxyGeneralSettings.bypass_proxy_for_local_addresses" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">bypass_proxy_for_local_addresses</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.general.ProxyGeneralSettings.bypass_proxy_for_local_addresses" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.general.ProxyGeneralSettings.bypass_proxy_for_local_addresses" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -774,10 +779,10 @@ Only enter if authentication is required by the proxy.</p>
 <div class="doc doc-object doc-class">
 
 
-<a id="buildarr.plugins.sonarr.config.general.LoggingGeneralSettings"></a>
+<a id="buildarr_sonarr.config.general.LoggingGeneralSettings"></a>
   <div class="doc doc-contents first">
       <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr.plugins.sonarr.config.general.GeneralSettings">GeneralSettings</span></code></p>
+        Bases: <code><span title="buildarr_sonarr.config.general.GeneralSettings">GeneralSettings</span></code></p>
 
   
       <p>Logging configuration for the Sonarr application.</p>
@@ -798,14 +803,14 @@ Only enter if authentication is required by the proxy.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.general.LoggingGeneralSettings.log_level" class="doc doc-heading">
-<code class="highlight language-python">log_level: SonarrLogLevel = SonarrLogLevel.INFO</code>
+<h5 id="buildarr_sonarr.config.general.LoggingGeneralSettings.log_level" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">log_level</span><span class="p">:</span> <span class="n">SonarrLogLevel</span> <span class="o">=</span> <span class="n">SonarrLogLevel</span><span class="o">.</span><span class="n">INFO</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.general.LoggingGeneralSettings.log_level" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.general.LoggingGeneralSettings.log_level" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -835,10 +840,10 @@ Only enter if authentication is required by the proxy.</p>
 <div class="doc doc-object doc-class">
 
 
-<a id="buildarr.plugins.sonarr.config.general.AnalyticsGeneralSettings"></a>
+<a id="buildarr_sonarr.config.general.AnalyticsGeneralSettings"></a>
   <div class="doc doc-contents first">
       <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr.plugins.sonarr.config.general.GeneralSettings">GeneralSettings</span></code></p>
+        Bases: <code><span title="buildarr_sonarr.config.general.GeneralSettings">GeneralSettings</span></code></p>
 
   
       <p>Configuration of analytics and telemetry from within Sonarr.</p>
@@ -859,14 +864,14 @@ Only enter if authentication is required by the proxy.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.general.AnalyticsGeneralSettings.send_anonymous_usage_data" class="doc doc-heading">
-<code class="highlight language-python">send_anonymous_usage_data: bool = True</code>
+<h5 id="buildarr_sonarr.config.general.AnalyticsGeneralSettings.send_anonymous_usage_data" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">send_anonymous_usage_data</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.general.AnalyticsGeneralSettings.send_anonymous_usage_data" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.general.AnalyticsGeneralSettings.send_anonymous_usage_data" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -894,10 +899,10 @@ to prioritise features and bug fixes.</p>
 <div class="doc doc-object doc-class">
 
 
-<a id="buildarr.plugins.sonarr.config.general.UpdatesGeneralSettings"></a>
+<a id="buildarr_sonarr.config.general.UpdatesGeneralSettings"></a>
   <div class="doc doc-contents first">
       <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr.plugins.sonarr.config.general.GeneralSettings">GeneralSettings</span></code></p>
+        Bases: <code><span title="buildarr_sonarr.config.general.GeneralSettings">GeneralSettings</span></code></p>
 
   
       <p>Settings for updating Sonarr.</p>
@@ -918,14 +923,14 @@ to prioritise features and bug fixes.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.general.UpdatesGeneralSettings.branch" class="doc doc-heading">
-<code class="highlight language-python">branch: NonEmptyStr = 'main'</code>
+<h5 id="buildarr_sonarr.config.general.UpdatesGeneralSettings.branch" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">branch</span><span class="p">:</span> <span class="n">NonEmptyStr</span> <span class="o">=</span> <span class="s1">&#39;main&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.general.UpdatesGeneralSettings.branch" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.general.UpdatesGeneralSettings.branch" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -941,14 +946,14 @@ Changing this value has no effect on Docker installations.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.general.UpdatesGeneralSettings.automatic" class="doc doc-heading">
-<code class="highlight language-python">automatic: bool = False</code>
+<h5 id="buildarr_sonarr.config.general.UpdatesGeneralSettings.automatic" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">automatic</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.general.UpdatesGeneralSettings.automatic" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.general.UpdatesGeneralSettings.automatic" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -964,14 +969,14 @@ Manual updates can still be performed from System -&gt; Updates.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.general.UpdatesGeneralSettings.mechanism" class="doc doc-heading">
-<code class="highlight language-python">mechanism: UpdateMechanism = UpdateMechanism.docker</code>
+<h5 id="buildarr_sonarr.config.general.UpdatesGeneralSettings.mechanism" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">mechanism</span><span class="p">:</span> <span class="n">UpdateMechanism</span> <span class="o">=</span> <span class="n">UpdateMechanism</span><span class="o">.</span><span class="n">docker</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.general.UpdatesGeneralSettings.mechanism" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.general.UpdatesGeneralSettings.mechanism" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -994,14 +999,14 @@ Must be set to <code>docker</code> on Docker installations.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.general.UpdatesGeneralSettings.script_path" class="doc doc-heading">
-<code class="highlight language-python">script_path: Optional[str] = None</code>
+<h5 id="buildarr_sonarr.config.general.UpdatesGeneralSettings.script_path" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">script_path</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.general.UpdatesGeneralSettings.script_path" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.general.UpdatesGeneralSettings.script_path" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -1027,10 +1032,10 @@ and handles the remainder of the update process.</p>
 <div class="doc doc-object doc-class">
 
 
-<a id="buildarr.plugins.sonarr.config.general.BackupGeneralSettings"></a>
+<a id="buildarr_sonarr.config.general.BackupGeneralSettings"></a>
   <div class="doc doc-contents first">
       <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr.plugins.sonarr.config.general.GeneralSettings">GeneralSettings</span></code></p>
+        Bases: <code><span title="buildarr_sonarr.config.general.GeneralSettings">GeneralSettings</span></code></p>
 
   
       <p>Settings for Sonarr automatic backups.</p>
@@ -1051,14 +1056,14 @@ and handles the remainder of the update process.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.general.BackupGeneralSettings.folder" class="doc doc-heading">
-<code class="highlight language-python">folder: NonEmptyStr = 'Backups'</code>
+<h5 id="buildarr_sonarr.config.general.BackupGeneralSettings.folder" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">folder</span><span class="p">:</span> <span class="n">NonEmptyStr</span> <span class="o">=</span> <span class="s1">&#39;Backups&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.general.BackupGeneralSettings.folder" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.general.BackupGeneralSettings.folder" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -1073,14 +1078,14 @@ and handles the remainder of the update process.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.general.BackupGeneralSettings.interval" class="doc doc-heading">
-<code class="highlight language-python">interval: int = Field(7, ge=1, le=7)</code>
+<h5 id="buildarr_sonarr.config.general.BackupGeneralSettings.interval" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">interval</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">le</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.general.BackupGeneralSettings.interval" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.general.BackupGeneralSettings.interval" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
@@ -1095,14 +1100,14 @@ and handles the remainder of the update process.</p>
 
 
 
-<h5 id="buildarr.plugins.sonarr.config.general.BackupGeneralSettings.retention" class="doc doc-heading">
-<code class="highlight language-python">retention: int = Field(28, ge=1, le=90)</code>
+<h5 id="buildarr_sonarr.config.general.BackupGeneralSettings.retention" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">retention</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="mi">28</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">le</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr.plugins.sonarr.config.general.BackupGeneralSettings.retention" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.general.BackupGeneralSettings.retention" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
