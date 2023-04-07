@@ -1,0 +1,4355 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../../../img/favicon.ico">
+        <title>Download Clients - Buildarr</title>
+        <link href="../../../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link href="../../../../../assets/_mkdocstrings.css" rel="stylesheet">
+
+        <script src="../../../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../../../..">Buildarr</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../../../../release-notes/" class="nav-link">Release Notes</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../../installation/" class="nav-link">Installation</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../../configuration/" class="nav-link">Configuration</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Plugins <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../../" class="dropdown-item">Introduction</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Buildarr Sonarr Plugin</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../sonarr/" class="dropdown-item">Introduction</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/release-notes/" class="dropdown-item">Release Notes</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Configuration</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../sonarr/configuration/host/" class="dropdown-item">Host Configuration</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/media-management/" class="dropdown-item">Media Management</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Profiles</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../sonarr/configuration/profiles/quality/" class="dropdown-item">Quality Profiles</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/profiles/language/" class="dropdown-item">Language Profiles</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/profiles/delay/" class="dropdown-item">Delay Profiles</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/profiles/release/" class="dropdown-item">Release Profiles</a>
+</li>
+    </ul>
+  </li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/quality/" class="dropdown-item">Quality</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/indexers/" class="dropdown-item">Indexers</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/download-clients/" class="dropdown-item">Download Clients</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/import-lists/" class="dropdown-item">Import Lists</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/connect/" class="dropdown-item">Connect</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/metadata/" class="dropdown-item">Metadata</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/tags/" class="dropdown-item">Tags</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/general/" class="dropdown-item">General</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/ui/" class="dropdown-item">UI</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Buildarr Prowlarr Plugin</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../" class="dropdown-item">Introduction</a>
+</li>
+            
+<li>
+    <a href="../../../release-notes/" class="dropdown-item">Release Notes</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Configuration</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../host/" class="dropdown-item">Host Configuration</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Settings</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Indexers</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../indexers/indexers/" class="dropdown-item">Indexers</a>
+</li>
+            
+<li>
+    <a href="../indexers/proxies/" class="dropdown-item">Proxies</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Apps</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../apps/applications/" class="dropdown-item">Applications</a>
+</li>
+            
+<li>
+    <a href="../apps/sync-profiles/" class="dropdown-item">Sync Profiles</a>
+</li>
+    </ul>
+  </li>
+            
+<li>
+    <a href="./" class="dropdown-item active">Download Clients</a>
+</li>
+            
+<li>
+    <a href="../notifications/" class="dropdown-item">Notifications</a>
+</li>
+            
+<li>
+    <a href="../tags/" class="dropdown-item">Tags</a>
+</li>
+            
+<li>
+    <a href="../general/" class="dropdown-item">General</a>
+</li>
+            
+<li>
+    <a href="../ui/" class="dropdown-item">UI</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../../usage/" class="nav-link">Usage</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="https://github.com/buildarr/buildarr" class="nav-link">GitHub</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../apps/sync-profiles/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../notifications/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#download-clients" class="nav-link">Download Clients</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#configuring-download-clients" class="nav-link">Configuring download clients</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#usenet-download-clients" class="nav-link">Usenet download clients</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#download-station-usenet" class="nav-link">Download Station (Usenet)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#nzbget" class="nav-link">NZBGet</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#nzbvortex" class="nav-link">NZBVortex</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#pneumatic" class="nav-link">Pneumatic</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#sabnzbd" class="nav-link">SABnzbd</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#usenet-blackhole" class="nav-link">Usenet Blackhole</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#torrent-download-clients" class="nav-link">Torrent download clients</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#aria2" class="nav-link">Aria2</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#deluge" class="nav-link">Deluge</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#download-station-torrent" class="nav-link">Download Station (Torrent)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#flood" class="nav-link">Flood</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#freebox" class="nav-link">Freebox</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#hadouken" class="nav-link">Hadouken</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#qbittorrent" class="nav-link">qBittorrent</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#rtorrent-rutorrent" class="nav-link">RTorrent (ruTorrent)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#torrent-blackhole" class="nav-link">Torrent Blackhole</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#transmissionvuze" class="nav-link">Transmission/Vuze</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#utorrent" class="nav-link">uTorrent</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="download-clients">Download Clients<a class="headerlink" href="#download-clients" title="Permanent link">#</a></h1>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_prowlarr.config.settings.download_clients.ProwlarrDownloadClientsSettings"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr_prowlarr.config.types.ProwlarrConfigBase">ProwlarrConfigBase</span></code></p>
+
+  
+      <p>Download clients are entirely optional in Prowlarr, but are available
+so you can manually perform grabs entirely within Prowlarr.</p>
+<p>In Buildarr, download clients for Prowlarr are configured in
+<a href="https://buildarr.github.io/plugins/sonarr/configuration/download-clients">much the same way</a>
+as they are for Sonarr, although some attributes are different.</p>
+<p>The main differences are:</p>
+<ul>
+<li>All instances of the <code>recent_priority</code> attribute are renamed to <code>client_priority</code>.</li>
+<li>The <code>older_priority</code> attribute has been removed.</li>
+<li>Any attribute relating to post-import management has been removed.</li>
+</ul>
+<p>Download clients that use Usenet or BitTorrent can be configured.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">prowlarr</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">settings</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">download_clients</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">definitions</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">Transmission</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;transmission&quot;</span>
+<span class="w">          </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;transmission&quot;</span>
+<span class="w">          </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9091</span>
+<span class="w">          </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+</code></pre></div>
+<p>Some download clients support mapping categories within a download client
+to Prowlarr categories, to automatically classify downloads by content type.</p>
+<p>This can be defined in Buildarr using the <code>category_mappings</code> attribute.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">prowlarr</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">settings</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">download_clients</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">definitions</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">qBittorrent</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;qbittorrent&quot;</span>
+<span class="w">          </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+<span class="w">          </span><span class="nt">category_mappings</span><span class="p">:</span>
+<span class="w">            </span><span class="s">&quot;movies&quot;</span><span class="p p-Indicator">:</span>
+<span class="w">              </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;Movies/HD&quot;</span>
+<span class="w">              </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;Movies/SD&quot;</span>
+<span class="w">              </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+</code></pre></div>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.ProwlarrDownloadClientsSettings.delete_unmanaged" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">delete_unmanaged</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.ProwlarrDownloadClientsSettings.delete_unmanaged" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Automatically delete download clients not defined in Buildarr.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.ProwlarrDownloadClientsSettings.definitions" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">definitions</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Annotated</span><span class="p">[</span><span class="n">DownloadClientType</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">discriminator</span><span class="o">=</span><span class="nb">type</span><span class="p">)]]</span> <span class="o">=</span> <span class="p">{}</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.ProwlarrDownloadClientsSettings.definitions" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Define download clients under this attribute.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="configuring-download-clients">Configuring download clients<a class="headerlink" href="#configuring-download-clients" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_prowlarr.config.settings.download_clients.base.DownloadClient"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr_prowlarr.config.types.ProwlarrConfigBase">ProwlarrConfigBase</span></code></p>
+
+  
+      <p>Download clients are defined using the following format.
+Here is an example of a Transmission download client being configured.</p>
+<div class="highlight"><pre><span></span><code><span class="nn">---</span>
+
+<span class="nt">prowlarr</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">settings</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">download_clients</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">definitions</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">Transmission</span><span class="p">:</span><span class="w"> </span><span class="c1"># Name of the download client</span>
+<span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;transmission&quot;</span><span class="w"> </span><span class="c1"># Type of download client</span>
+<span class="w">          </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"> </span><span class="c1"># Enable the download client in Prowlarr</span>
+<span class="w">          </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;transmission&quot;</span>
+<span class="w">          </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9091</span>
+<span class="w">          </span><span class="nt">category</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;prowlarr&quot;</span>
+<span class="w">          </span><span class="c1"># Define any other type-specific or global</span>
+<span class="w">          </span><span class="c1"># download client attributes as needed.</span>
+</code></pre></div>
+<p>Every download client definition must have the correct <code>type</code> value defined,
+to tell Buildarr what type of download client to configure.
+The name of the download client definition is just a name, and has no meaning.</p>
+<p><code>enable</code> can be set to <code>False</code> to keep the download client configured on Prowlarr,
+but disabled so that it is inactive.</p>
+<p>The below attributes can be defined on any type of download client.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.base.DownloadClient.enable" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">enable</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.base.DownloadClient.enable" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>When <code>True</code>, this download client is active and Prowlarr is able to send requests to it.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.base.DownloadClient.priority" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">priority</span><span class="p">:</span> <span class="n">PositiveInt</span> <span class="o">=</span> <span class="mi">1</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.base.DownloadClient.priority" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Download client priority.</p>
+<p>Clients with a lower value are prioritised.
+Round-robin is used for clients with the same priority.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.base.DownloadClient.tags" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">tags</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.base.DownloadClient.tags" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Prowlarr tags to assign to the download clients.
+Only media under those tags will be assigned to this client.</p>
+<p>If no tags are assigned, all media can use the client.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="usenet-download-clients">Usenet download clients<a class="headerlink" href="#usenet-download-clients" title="Permanent link">#</a></h2>
+<p>These download clients retrieve media using the <a href="https://en.wikipedia.org/wiki/Usenet">Usenet</a> discussion and content delivery system.</p>
+<h2 id="download-station-usenet">Download Station (Usenet)<a class="headerlink" href="#download-station-usenet" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_prowlarr.config.settings.download_clients.usenet.DownloadstationUsenetDownloadClient"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr_prowlarr.config.settings.download_clients.usenet.UsenetDownloadClient">UsenetDownloadClient</span></code></p>
+
+  
+      <p>Download client which uses Usenet via Download Station.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.DownloadstationUsenetDownloadClient.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;downloadstation-usenet&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;downloadstation-usenet&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.usenet.DownloadstationUsenetDownloadClient.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.DownloadstationUsenetDownloadClient.host" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.usenet.DownloadstationUsenetDownloadClient.host" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Download Station host name.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.DownloadstationUsenetDownloadClient.port" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">5000</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.usenet.DownloadstationUsenetDownloadClient.port" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Download client access port.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.DownloadstationUsenetDownloadClient.use_ssl" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.usenet.DownloadstationUsenetDownloadClient.use_ssl" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Use a secure connection when connecting to the download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.DownloadstationUsenetDownloadClient.username" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.usenet.DownloadstationUsenetDownloadClient.username" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>User name to use when authenticating with the download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.DownloadstationUsenetDownloadClient.password" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">password</span><span class="p">:</span> <span class="n">Password</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.usenet.DownloadstationUsenetDownloadClient.password" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Password to use to authenticate the download client user.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.DownloadstationUsenetDownloadClient.category" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.usenet.DownloadstationUsenetDownloadClient.category" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Associate media from Prowlarr with a category.
+Creates a <code>[category]</code> subdirectory in the output directory.</p>
+<p>Adding a category specific to Prowlarr avoids conflicts with unrelated non-Prowlarr downloads.
+Using a category is optional, but strongly recommended.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.DownloadstationUsenetDownloadClient.directory" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">directory</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.usenet.DownloadstationUsenetDownloadClient.directory" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Optional shared folder to put downloads into.</p>
+<p>Leave blank, set to <code>null</code> or undefined to use the default download client location.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="nzbget">NZBGet<a class="headerlink" href="#nzbget" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_prowlarr.config.settings.download_clients.usenet.NzbgetDownloadClient"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr_prowlarr.config.settings.download_clients.usenet.UsenetDownloadClient">UsenetDownloadClient</span></code></p>
+
+  
+      <p>NZBGet download client.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.NzbgetDownloadClient.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;nzbget&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;nzbget&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.usenet.NzbgetDownloadClient.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.NzbgetDownloadClient.host" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.usenet.NzbgetDownloadClient.host" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>NZBGet host name.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.NzbgetDownloadClient.port" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">5000</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.usenet.NzbgetDownloadClient.port" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Download client access port.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.NzbgetDownloadClient.use_ssl" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.usenet.NzbgetDownloadClient.use_ssl" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Use a secure connection when connecting to the download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.NzbgetDownloadClient.url_base" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">url_base</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.usenet.NzbgetDownloadClient.url_base" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Adds a prefix to the NZBGet url, e.g. <code>http://[host]:[port]/[url_base]/jsonrpc</code>.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.NzbgetDownloadClient.username" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.usenet.NzbgetDownloadClient.username" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>User name to use when authenticating with the download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.NzbgetDownloadClient.password" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">password</span><span class="p">:</span> <span class="n">Password</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.usenet.NzbgetDownloadClient.password" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Password to use to authenticate the download client user.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.NzbgetDownloadClient.category" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.usenet.NzbgetDownloadClient.category" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Associate media from Prowlarr with a category.</p>
+<p>Adding a category specific to Prowlarr avoids conflicts with unrelated non-Prowlarr downloads.
+Using a category is optional, but strongly recommended.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.NzbgetDownloadClient.client_priority" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">client_priority</span><span class="p">:</span> <span class="n">NzbgetPriority</span> <span class="o">=</span> <span class="n">NzbgetPriority</span><span class="o">.</span><span class="n">normal</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.usenet.NzbgetDownloadClient.client_priority" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Priority to use when grabbing releases.</p>
+<p>Values:</p>
+<ul>
+<li><code>verylow</code></li>
+<li><code>low</code></li>
+<li><code>normal</code></li>
+<li><code>high</code></li>
+<li><code>veryhigh</code></li>
+<li><code>force</code></li>
+</ul>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.NzbgetDownloadClient.add_paused" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">add_paused</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.usenet.NzbgetDownloadClient.add_paused" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Add media to the download client in the paused state.</p>
+<p>This option requires NZBGet version 16.0 or later.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.NzbgetDownloadClient.category_mappings" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">category_mappings</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">,</span> <span class="n">Set</span><span class="p">[</span><span class="n">LowerCaseNonEmptyStr</span><span class="p">]]</span> <span class="o">=</span> <span class="p">{}</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.usenet.NzbgetDownloadClient.category_mappings" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Category mappings for associating a category on the download client
+with the selected Prowlarr categories.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="nzbvortex">NZBVortex<a class="headerlink" href="#nzbvortex" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_prowlarr.config.settings.download_clients.usenet.NzbvortexDownloadClient"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr_prowlarr.config.settings.download_clients.usenet.UsenetDownloadClient">UsenetDownloadClient</span></code></p>
+
+  
+      <p>NZBVortex download client.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.NzbvortexDownloadClient.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;nzbvortex&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;nzbvortex&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.usenet.NzbvortexDownloadClient.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.NzbvortexDownloadClient.host" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.usenet.NzbvortexDownloadClient.host" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>NZBVortex host name.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.NzbvortexDownloadClient.port" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">4321</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.usenet.NzbvortexDownloadClient.port" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Download client access port.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.NzbvortexDownloadClient.url_base" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">url_base</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.usenet.NzbvortexDownloadClient.url_base" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Adds a prefix to the NZBVortex url, e.g. <code>http://[host]:[port]/[url_base]/api</code>.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.NzbvortexDownloadClient.api_key" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">Password</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.usenet.NzbvortexDownloadClient.api_key" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>API key to use to authenticate with the download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.NzbvortexDownloadClient.category" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.usenet.NzbvortexDownloadClient.category" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Associate media from Prowlarr with a category.</p>
+<p>Adding a category specific to Prowlarr avoids conflicts with unrelated non-Prowlarr downloads.
+Using a category is optional, but strongly recommended.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.NzbvortexDownloadClient.client_priority" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">client_priority</span><span class="p">:</span> <span class="n">NzbvortexPriority</span> <span class="o">=</span> <span class="n">NzbvortexPriority</span><span class="o">.</span><span class="n">normal</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.usenet.NzbvortexDownloadClient.client_priority" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Priority to use when grabbing releases.</p>
+<p>Values:</p>
+<ul>
+<li><code>low</code></li>
+<li><code>normal</code></li>
+<li><code>high</code></li>
+</ul>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.NzbvortexDownloadClient.category_mappings" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">category_mappings</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">,</span> <span class="n">Set</span><span class="p">[</span><span class="n">LowerCaseNonEmptyStr</span><span class="p">]]</span> <span class="o">=</span> <span class="p">{}</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.usenet.NzbvortexDownloadClient.category_mappings" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Category mappings for associating a category on the download client
+with the selected Prowlarr categories.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="pneumatic">Pneumatic<a class="headerlink" href="#pneumatic" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_prowlarr.config.settings.download_clients.usenet.PneumaticDownloadClient"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr_prowlarr.config.settings.download_clients.usenet.UsenetDownloadClient">UsenetDownloadClient</span></code></p>
+
+  
+      <p>Download client for the Pneumatic NZB add-on for Kodi/XMBC.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.PneumaticDownloadClient.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;pneumatic&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;pneumatic&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.usenet.PneumaticDownloadClient.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.PneumaticDownloadClient.nzb_folder" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">nzb_folder</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.usenet.PneumaticDownloadClient.nzb_folder" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Folder in which Prowlarr will store <code>.nzb</code> files.</p>
+<p>This folder will need to be reachable from Kodi/XMBC.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="sabnzbd">SABnzbd<a class="headerlink" href="#sabnzbd" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_prowlarr.config.settings.download_clients.usenet.SabnzbdDownloadClient"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr_prowlarr.config.settings.download_clients.usenet.UsenetDownloadClient">UsenetDownloadClient</span></code></p>
+
+  
+      <p>SABnzbd download client.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.SabnzbdDownloadClient.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;sabnzbd&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;sabnzbd&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.usenet.SabnzbdDownloadClient.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.SabnzbdDownloadClient.host" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.usenet.SabnzbdDownloadClient.host" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>SABnzbd host name.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.SabnzbdDownloadClient.port" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">4321</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.usenet.SabnzbdDownloadClient.port" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Download client access port.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.SabnzbdDownloadClient.use_ssl" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.usenet.SabnzbdDownloadClient.use_ssl" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Use a secure connection when connecting to the download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.SabnzbdDownloadClient.url_base" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">url_base</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.usenet.SabnzbdDownloadClient.url_base" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Adds a prefix to the SABnzbd URL, e.g. <code>http://[host]:[port]/[url_base]/api/</code>.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.SabnzbdDownloadClient.api_key" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">SecretStr</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.usenet.SabnzbdDownloadClient.api_key" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>API key to use to authenticate with SABnzbd, if required.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.SabnzbdDownloadClient.category" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.usenet.SabnzbdDownloadClient.category" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Associate media from Prowlarr with a category.</p>
+<p>Adding a category specific to Prowlarr avoids conflicts with unrelated non-Prowlarr downloads.
+Using a category is optional, but strongly recommended.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.SabnzbdDownloadClient.client_priority" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">client_priority</span><span class="p">:</span> <span class="n">SabnzbdPriority</span> <span class="o">=</span> <span class="n">SabnzbdPriority</span><span class="o">.</span><span class="n">default</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.usenet.SabnzbdDownloadClient.client_priority" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Priority to use when grabbing releases.</p>
+<p>Values:</p>
+<ul>
+<li><code>default</code></li>
+<li><code>paused</code></li>
+<li><code>low</code></li>
+<li><code>normal</code></li>
+<li><code>high</code></li>
+<li><code>force</code></li>
+</ul>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.SabnzbdDownloadClient.category_mappings" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">category_mappings</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">,</span> <span class="n">Set</span><span class="p">[</span><span class="n">LowerCaseNonEmptyStr</span><span class="p">]]</span> <span class="o">=</span> <span class="p">{}</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.usenet.SabnzbdDownloadClient.category_mappings" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Category mappings for associating a category on the download client
+with the selected Prowlarr categories.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="usenet-blackhole">Usenet Blackhole<a class="headerlink" href="#usenet-blackhole" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_prowlarr.config.settings.download_clients.usenet.UsenetBlackholeDownloadClient"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr_prowlarr.config.settings.download_clients.usenet.UsenetDownloadClient">UsenetDownloadClient</span></code></p>
+
+  
+      <p>Usenet Blackhole download client.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.UsenetBlackholeDownloadClient.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;usenet-blackhole&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;usenet-blackhole&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.usenet.UsenetBlackholeDownloadClient.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.UsenetBlackholeDownloadClient.nzb_folder" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">nzb_folder</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.usenet.UsenetBlackholeDownloadClient.nzb_folder" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Folder in which Prowlarr will store <code>.nzb</code> files.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="torrent-download-clients">Torrent download clients<a class="headerlink" href="#torrent-download-clients" title="Permanent link">#</a></h2>
+<p>These download clients use the <a href="https://en.wikipedia.org/wiki/BitTorrent">BitTorrent</a>
+peer-to-peer file sharing protocol to retrieve media files.</p>
+<h2 id="aria2">Aria2<a class="headerlink" href="#aria2" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_prowlarr.config.settings.download_clients.torrent.Aria2DownloadClient"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr_prowlarr.config.settings.download_clients.torrent.TorrentDownloadClient">TorrentDownloadClient</span></code></p>
+
+  
+      <p>Aria2 download client.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.Aria2DownloadClient.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;aria2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;aria2&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.Aria2DownloadClient.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.Aria2DownloadClient.host" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.Aria2DownloadClient.host" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Aria2 host name.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.Aria2DownloadClient.port" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">6800</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.Aria2DownloadClient.port" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Download client access port.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.Aria2DownloadClient.use_ssl" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.Aria2DownloadClient.use_ssl" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Use a secure connection when connecting to the download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.Aria2DownloadClient.rpc_path" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">rpc_path</span><span class="p">:</span> <span class="n">NonEmptyStr</span> <span class="o">=</span> <span class="s1">&#39;/rpc&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.Aria2DownloadClient.rpc_path" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>XML RPC path in the Aria2 client URL.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.Aria2DownloadClient.secret_token" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">secret_token</span><span class="p">:</span> <span class="n">Password</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.Aria2DownloadClient.secret_token" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Secret token to use to authenticate with the download client.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="deluge">Deluge<a class="headerlink" href="#deluge" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_prowlarr.config.settings.download_clients.torrent.DelugeDownloadClient"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr_prowlarr.config.settings.download_clients.torrent.TorrentDownloadClient">TorrentDownloadClient</span></code></p>
+
+  
+      <p>Deluge download client.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.DelugeDownloadClient.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;deluge&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;deluge&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.DelugeDownloadClient.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.DelugeDownloadClient.host" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.DelugeDownloadClient.host" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Deluge host name.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.DelugeDownloadClient.port" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">8112</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.DelugeDownloadClient.port" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Download client access port.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.DelugeDownloadClient.use_ssl" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.DelugeDownloadClient.use_ssl" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Use a secure connection when connecting to the download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.DelugeDownloadClient.url_base" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">url_base</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.DelugeDownloadClient.url_base" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Adds a prefix to the Deluge JSON URL, e.g. <code>http://[host]:[port]/[url_base]/json</code>.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.DelugeDownloadClient.password" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">password</span><span class="p">:</span> <span class="n">Password</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.DelugeDownloadClient.password" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Password to use to authenticate the download client user.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.DelugeDownloadClient.category" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;prowlarr&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.DelugeDownloadClient.category" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Associate media from Prowlarr with a category.</p>
+<p>Adding a category specific to Prowlarr avoids conflicts with unrelated non-Prowlarr downloads.
+Using a category is optional, but strongly recommended.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.DelugeDownloadClient.client_priority" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">client_priority</span><span class="p">:</span> <span class="n">DelugePriority</span> <span class="o">=</span> <span class="n">DelugePriority</span><span class="o">.</span><span class="n">last</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.DelugeDownloadClient.client_priority" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Priority to use when grabbing releases.</p>
+<p>Values:</p>
+<ul>
+<li><code>last</code></li>
+<li><code>first</code></li>
+</ul>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.DelugeDownloadClient.category_mappings" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">category_mappings</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">,</span> <span class="n">Set</span><span class="p">[</span><span class="n">LowerCaseNonEmptyStr</span><span class="p">]]</span> <span class="o">=</span> <span class="p">{}</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.DelugeDownloadClient.category_mappings" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Category mappings for associating a category on the download client
+with the selected Prowlarr categories.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="download-station-torrent">Download Station (Torrent)<a class="headerlink" href="#download-station-torrent" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_prowlarr.config.settings.download_clients.torrent.DownloadstationTorrentDownloadClient"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr_prowlarr.config.settings.download_clients.torrent.TorrentDownloadClient">TorrentDownloadClient</span></code></p>
+
+  
+      <p>Download client which uses torrents via Download Station.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.DownloadstationTorrentDownloadClient.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;downloadstation-torrent&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;downloadstation-torrent&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.DownloadstationTorrentDownloadClient.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.DownloadstationTorrentDownloadClient.host" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.DownloadstationTorrentDownloadClient.host" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Download Station host name.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.DownloadstationTorrentDownloadClient.port" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">5000</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.DownloadstationTorrentDownloadClient.port" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Download client access port.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.DownloadstationTorrentDownloadClient.use_ssl" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.DownloadstationTorrentDownloadClient.use_ssl" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Use a secure connection when connecting to the download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.DownloadstationTorrentDownloadClient.username" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.DownloadstationTorrentDownloadClient.username" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>User name to use when authenticating with the download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.DownloadstationTorrentDownloadClient.password" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">password</span><span class="p">:</span> <span class="n">Password</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.DownloadstationTorrentDownloadClient.password" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Password to use to authenticate the download client user.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.DownloadstationTorrentDownloadClient.category" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.DownloadstationTorrentDownloadClient.category" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Associate media from Prowlarr with a category.
+Creates a <code>[category]</code> subdirectory in the output directory.</p>
+<p>Adding a category specific to Prowlarr avoids conflicts with unrelated non-Prowlarr downloads.
+Using a category is optional, but strongly recommended.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.DownloadstationTorrentDownloadClient.directory" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">directory</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.DownloadstationTorrentDownloadClient.directory" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Optional shared folder to put downloads into.</p>
+<p>Leave blank, set to <code>null</code> or undefined to use the default download client location.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="flood">Flood<a class="headerlink" href="#flood" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_prowlarr.config.settings.download_clients.torrent.FloodDownloadClient"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr_prowlarr.config.settings.download_clients.torrent.TorrentDownloadClient">TorrentDownloadClient</span></code></p>
+
+  
+      <p>Flood download client.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.FloodDownloadClient.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;flood&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;flood&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.FloodDownloadClient.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.FloodDownloadClient.host" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.FloodDownloadClient.host" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Flood host name.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.FloodDownloadClient.port" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">3000</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.FloodDownloadClient.port" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Download client access port.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.FloodDownloadClient.use_ssl" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.FloodDownloadClient.use_ssl" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Use a secure connection when connecting to the download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.FloodDownloadClient.url_base" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">url_base</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.FloodDownloadClient.url_base" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Optionally adds a prefix to Flood API, such as <code>[protocol]://[host]:[port]/[url_base]api</code>.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.FloodDownloadClient.username" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.FloodDownloadClient.username" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>User name to use when authenticating with the download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.FloodDownloadClient.password" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">password</span><span class="p">:</span> <span class="n">Password</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.FloodDownloadClient.password" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Password to use to authenticate the download client user.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.FloodDownloadClient.destination" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">destination</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.FloodDownloadClient.destination" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Manually specified download destination.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.FloodDownloadClient.flood_tags" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">flood_tags</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;prowlarr&#39;</span><span class="p">}</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.FloodDownloadClient.flood_tags" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Initial tags of a download within Flood.</p>
+<p>To be recognized, a download must have all initial tags.
+This avoids conflicts with unrelated downloads.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.FloodDownloadClient.additional_tags" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">additional_tags</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">FloodMediaTag</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.FloodDownloadClient.additional_tags" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Adds properties of media as tags within Flood.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.FloodDownloadClient.add_paused" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">add_paused</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.FloodDownloadClient.add_paused" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Add media to the download client in the Paused state.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.FloodDownloadClient.category_mappings" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">category_mappings</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">,</span> <span class="n">Set</span><span class="p">[</span><span class="n">LowerCaseNonEmptyStr</span><span class="p">]]</span> <span class="o">=</span> <span class="p">{}</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.FloodDownloadClient.category_mappings" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Category mappings for associating a category on the download client
+with the selected Prowlarr categories.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="freebox">Freebox<a class="headerlink" href="#freebox" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_prowlarr.config.settings.download_clients.torrent.FreeboxDownloadClient"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr_prowlarr.config.settings.download_clients.torrent.TorrentDownloadClient">TorrentDownloadClient</span></code></p>
+
+  
+      <p>Download client for connecting to a Freebox instance.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.FreeboxDownloadClient.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;freebox&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;freebox&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.FreeboxDownloadClient.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.FreeboxDownloadClient.host" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span> <span class="o">=</span> <span class="s1">&#39;mafreebox.freebox.fr&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.FreeboxDownloadClient.host" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Hostname or host IP address of the Freebox.</p>
+<p>The default of <code>mafreebox.freebox.fr</code> will only work if on the same network.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.FreeboxDownloadClient.port" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">443</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.FreeboxDownloadClient.port" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Freebox access port.</p>
+<p>Set to the HTTPS default port as Freebox uses HTTPS by default.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.FreeboxDownloadClient.use_ssl" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.FreeboxDownloadClient.use_ssl" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Use a secure connection when connecting to the Freebox API.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.FreeboxDownloadClient.api_url" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">api_url</span><span class="p">:</span> <span class="n">NonEmptyStr</span> <span class="o">=</span> <span class="s1">&#39;/api/v1&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.FreeboxDownloadClient.api_url" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Define Freebox API base URL with API version, e.g. <code>http[s]://&lt;host&gt;:&lt;port&gt;/&lt;api_url&gt;/</code>.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.FreeboxDownloadClient.app_id" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">app_id</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.FreeboxDownloadClient.app_id" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>App ID used to authenticate with the Freebox.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.FreeboxDownloadClient.app_token" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">app_token</span><span class="p">:</span> <span class="n">Password</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.FreeboxDownloadClient.app_token" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Unique token used to authenticate with the Freebox.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.FreeboxDownloadClient.destination_directory" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">destination_directory</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.FreeboxDownloadClient.destination_directory" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Optional location to put downloads in, on the Freebox node.</p>
+<p>Leave blank, undefined or set to <code>null</code> to use the default Freebox download location.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.FreeboxDownloadClient.category" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.FreeboxDownloadClient.category" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Default category to classify downloads under if no category mappings apply to it.</p>
+<p>This will create a <code>[category]</code> subdirectory in the output directory.
+Adding a category specific to Prowlarr avoids conflicts with unrelated non-Prowlarr downloads.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.FreeboxDownloadClient.priority" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">priority</span><span class="p">:</span> <span class="n">FreeboxPriority</span> <span class="o">=</span> <span class="n">FreeboxPriority</span><span class="o">.</span><span class="n">last</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.FreeboxDownloadClient.priority" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Priority to use when adding a download to the client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.FreeboxDownloadClient.add_paused" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">add_paused</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.FreeboxDownloadClient.add_paused" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Add media to the download client in the Paused state.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.FreeboxDownloadClient.category_mappings" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">category_mappings</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">,</span> <span class="n">Set</span><span class="p">[</span><span class="n">LowerCaseNonEmptyStr</span><span class="p">]]</span> <span class="o">=</span> <span class="p">{}</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.FreeboxDownloadClient.category_mappings" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Category mappings for associating a category on the download client
+with the selected Prowlarr categories.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="hadouken">Hadouken<a class="headerlink" href="#hadouken" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_prowlarr.config.settings.download_clients.torrent.HadoukenDownloadClient"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr_prowlarr.config.settings.download_clients.torrent.TorrentDownloadClient">TorrentDownloadClient</span></code></p>
+
+  
+      <p>Hadouken download client.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.HadoukenDownloadClient.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;hadouken&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;hadouken&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.HadoukenDownloadClient.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.HadoukenDownloadClient.host" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.HadoukenDownloadClient.host" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Hadouken host name.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.HadoukenDownloadClient.port" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">7070</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.HadoukenDownloadClient.port" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Download client access port.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.HadoukenDownloadClient.use_ssl" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.HadoukenDownloadClient.use_ssl" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Use a secure connection when connecting to the download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.HadoukenDownloadClient.url_base" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">url_base</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.HadoukenDownloadClient.url_base" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Adds a prefix to the Hadouken url, e.g. <code>http://[host]:[port]/[url_base]/api</code>.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.HadoukenDownloadClient.username" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.HadoukenDownloadClient.username" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>User name to use when authenticating with the download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.HadoukenDownloadClient.password" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">password</span><span class="p">:</span> <span class="n">Password</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.HadoukenDownloadClient.password" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Password to use to authenticate the download client user.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.HadoukenDownloadClient.category" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">category</span><span class="p">:</span> <span class="n">NonEmptyStr</span> <span class="o">=</span> <span class="s1">&#39;prowlarr&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.HadoukenDownloadClient.category" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Associate media from Prowlarr with a category.</p>
+<p>Adding a category specific to Prowlarr avoids conflicts with unrelated non-Prowlarr downloads.
+Using a category is optional, but strongly recommended.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.HadoukenDownloadClient.category_mappings" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">category_mappings</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">,</span> <span class="n">Set</span><span class="p">[</span><span class="n">LowerCaseNonEmptyStr</span><span class="p">]]</span> <span class="o">=</span> <span class="p">{}</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.HadoukenDownloadClient.category_mappings" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Category mappings for associating a category on the download client
+with the selected Prowlarr categories.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="qbittorrent">qBittorrent<a class="headerlink" href="#qbittorrent" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_prowlarr.config.settings.download_clients.torrent.QbittorrentDownloadClient"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr_prowlarr.config.settings.download_clients.torrent.TorrentDownloadClient">TorrentDownloadClient</span></code></p>
+
+  
+      <p>qBittorrent download client.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.QbittorrentDownloadClient.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;qbittorrent&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;qbittorrent&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.QbittorrentDownloadClient.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.QbittorrentDownloadClient.host" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.QbittorrentDownloadClient.host" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>qBittorrent host name.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.QbittorrentDownloadClient.port" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">8080</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.QbittorrentDownloadClient.port" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Download client access port.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.QbittorrentDownloadClient.use_ssl" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.QbittorrentDownloadClient.use_ssl" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Use a secure connection when connecting to the download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.QbittorrentDownloadClient.url_base" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">url_base</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.QbittorrentDownloadClient.url_base" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Adds a prefix to the qBittorrent URL, e.g. <code>http://[host]:[port]/[url_base]/api</code>.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.QbittorrentDownloadClient.username" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.QbittorrentDownloadClient.username" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>User name to use when authenticating with the download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.QbittorrentDownloadClient.password" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">password</span><span class="p">:</span> <span class="n">Password</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.QbittorrentDownloadClient.password" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Password to use to authenticate the download client user.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.QbittorrentDownloadClient.category" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;prowlarr&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.QbittorrentDownloadClient.category" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Associate media from Prowlarr with a category.</p>
+<p>Adding a category specific to Prowlarr avoids conflicts with unrelated non-Prowlarr downloads.
+Using a category is optional, but strongly recommended.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.QbittorrentDownloadClient.client_priority" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">client_priority</span><span class="p">:</span> <span class="n">QbittorrentPriority</span> <span class="o">=</span> <span class="n">QbittorrentPriority</span><span class="o">.</span><span class="n">last</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.QbittorrentDownloadClient.client_priority" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Priority to use when grabbing releases.</p>
+<p>Values:</p>
+<ul>
+<li><code>last</code></li>
+<li><code>first</code></li>
+</ul>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.QbittorrentDownloadClient.initial_state" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">initial_state</span><span class="p">:</span> <span class="n">QbittorrentState</span> <span class="o">=</span> <span class="n">QbittorrentState</span><span class="o">.</span><span class="n">start</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.QbittorrentDownloadClient.initial_state" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Initial state for torrents added to qBittorrent.</p>
+<p>Note that forced torrents do not abide by seed restrictions.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.QbittorrentDownloadClient.category_mappings" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">category_mappings</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">,</span> <span class="n">Set</span><span class="p">[</span><span class="n">LowerCaseNonEmptyStr</span><span class="p">]]</span> <span class="o">=</span> <span class="p">{}</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.QbittorrentDownloadClient.category_mappings" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Category mappings for associating a category on the download client
+with the selected Prowlarr categories.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="rtorrent-rutorrent">RTorrent (ruTorrent)<a class="headerlink" href="#rtorrent-rutorrent" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_prowlarr.config.settings.download_clients.torrent.RtorrentDownloadClient"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr_prowlarr.config.settings.download_clients.torrent.TorrentDownloadClient">TorrentDownloadClient</span></code></p>
+
+  
+      <p>RTorrent (ruTorrent) download client.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.RtorrentDownloadClient.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;rtorrent&#39;</span><span class="p">,</span> <span class="s1">&#39;rutorrent&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;rtorrent&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.RtorrentDownloadClient.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.RtorrentDownloadClient.host" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.RtorrentDownloadClient.host" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>RTorrent host name.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.RtorrentDownloadClient.port" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">8080</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.RtorrentDownloadClient.port" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Download client access port.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.RtorrentDownloadClient.use_ssl" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.RtorrentDownloadClient.use_ssl" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Use a secure connection when connecting to the download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.RtorrentDownloadClient.url_base" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">url_base</span><span class="p">:</span> <span class="n">NonEmptyStr</span> <span class="o">=</span> <span class="s1">&#39;RPC2&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.RtorrentDownloadClient.url_base" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Path to the XMLRPC endpoint, e.g. <code>http(s)://[host]:[port]/[url_base]</code>.</p>
+<p>When using RTorrent this usually is <code>RPC2</code> or <code>plugins/rpc/rpc.php</code>.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.RtorrentDownloadClient.username" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.RtorrentDownloadClient.username" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>User name to use when authenticating with the download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.RtorrentDownloadClient.password" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">password</span><span class="p">:</span> <span class="n">Password</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.RtorrentDownloadClient.password" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Password to use to authenticate the download client user.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.RtorrentDownloadClient.category" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;prowlarr&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.RtorrentDownloadClient.category" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Associate media from Prowlarr with a category.</p>
+<p>Adding a category specific to Prowlarr avoids conflicts with unrelated non-Prowlarr downloads.
+Using a category is optional, but strongly recommended.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.RtorrentDownloadClient.client_priority" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">client_priority</span><span class="p">:</span> <span class="n">RtorrentPriority</span> <span class="o">=</span> <span class="n">RtorrentPriority</span><span class="o">.</span><span class="n">normal</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.RtorrentDownloadClient.client_priority" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Priority to use when grabbing releases.</p>
+<p>Values:</p>
+<ul>
+<li><code>verylow</code></li>
+<li><code>low</code></li>
+<li><code>normal</code></li>
+<li><code>high</code></li>
+</ul>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.RtorrentDownloadClient.add_stopped" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">add_stopped</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.RtorrentDownloadClient.add_stopped" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Enabling will add torrents and magnets to RTorrent in a stopped state.</p>
+<p>This may break magnet files.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.RtorrentDownloadClient.category_mappings" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">category_mappings</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">,</span> <span class="n">Set</span><span class="p">[</span><span class="n">LowerCaseNonEmptyStr</span><span class="p">]]</span> <span class="o">=</span> <span class="p">{}</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.RtorrentDownloadClient.category_mappings" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Category mappings for associating a category on the download client
+with the selected Prowlarr categories.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="torrent-blackhole">Torrent Blackhole<a class="headerlink" href="#torrent-blackhole" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_prowlarr.config.settings.download_clients.torrent.TorrentBlackholeDownloadClient"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr_prowlarr.config.settings.download_clients.torrent.TorrentDownloadClient">TorrentDownloadClient</span></code></p>
+
+  
+      <p>Torrent Blackhole download client.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.TorrentBlackholeDownloadClient.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;torrent-blackhole&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;torrent-blackhole&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.TorrentBlackholeDownloadClient.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.TorrentBlackholeDownloadClient.torrent_folder" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">torrent_folder</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.TorrentBlackholeDownloadClient.torrent_folder" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Folder in which Prowlarr will store <code>.torrent</code> files.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.TorrentBlackholeDownloadClient.save_magnet_files" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">save_magnet_files</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.TorrentBlackholeDownloadClient.save_magnet_files" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Save the magnet link if no <code>.torrent</code> file is available.</p>
+<p>Only useful if the download client supports magnets saved to a file.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.TorrentBlackholeDownloadClient.magnet_file_extension" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">magnet_file_extension</span><span class="p">:</span> <span class="n">NonEmptyStr</span> <span class="o">=</span> <span class="s1">&#39;.magnet&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.TorrentBlackholeDownloadClient.magnet_file_extension" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Extension to use for magnet links.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="transmissionvuze">Transmission/Vuze<a class="headerlink" href="#transmissionvuze" title="Permanent link">#</a></h2>
+<p>Transmission and Vuze use the same configuration parameters.</p>
+<p>To use Transmission, set the <code>type</code> attribute in the download client to <code>transmission</code>.</p>
+<p>To use Vuze, set the <code>type</code> attribute in the download client to <code>vuze</code>.</p>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_prowlarr.config.settings.download_clients.torrent.TransmissionDownloadClientBase"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr_prowlarr.config.settings.download_clients.torrent.TorrentDownloadClient">TorrentDownloadClient</span></code></p>
+
+  
+      <p>Configuration options common to both Transmission and Vuze download clients:</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.TransmissionDownloadClientBase.host" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.TransmissionDownloadClientBase.host" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Transmission/Vuze host name.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.TransmissionDownloadClientBase.port" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">9091</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.TransmissionDownloadClientBase.port" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Download client access port.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.TransmissionDownloadClientBase.use_ssl" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.TransmissionDownloadClientBase.use_ssl" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Use a secure connection when connecting to the download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.TransmissionDownloadClientBase.url_base" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">url_base</span><span class="p">:</span> <span class="n">NonEmptyStr</span> <span class="o">=</span> <span class="s1">&#39;/transmission/&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.TransmissionDownloadClientBase.url_base" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Adds a prefix to the Transmission/Vuze RPC url, e.g.<code>http://[host]:[port][url_base]rpc</code>.</p>
+<p>This is set by default in most clients to <code>/transmission/</code>.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.TransmissionDownloadClientBase.username" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.TransmissionDownloadClientBase.username" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>User name to use when authenticating with the download client, if required.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.TransmissionDownloadClientBase.password" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">password</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Password</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.TransmissionDownloadClientBase.password" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Password to use to authenticate the download client user, if required.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.TransmissionDownloadClientBase.category" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.TransmissionDownloadClientBase.category" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Associate media from Prowlarr with a category.
+Creates a <code>[category]</code> subdirectory in the output directory.</p>
+<p>Adding a category specific to Prowlarr avoids conflicts with unrelated non-Prowlarr downloads.
+Using a category is optional, but strongly recommended.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.TransmissionDownloadClientBase.directory" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">directory</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.TransmissionDownloadClientBase.directory" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Optional shared folder to put downloads into.</p>
+<p>Leave blank, set to <code>null</code> or undefined to use the default download client location.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.TransmissionDownloadClientBase.client_priority" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">client_priority</span><span class="p">:</span> <span class="n">TransmissionPriority</span> <span class="o">=</span> <span class="n">TransmissionPriority</span><span class="o">.</span><span class="n">last</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.TransmissionDownloadClientBase.client_priority" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Priority to use when grabbing releases.</p>
+<p>Values:</p>
+<ul>
+<li><code>last</code></li>
+<li><code>first</code></li>
+</ul>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.TransmissionDownloadClientBase.add_paused" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">add_paused</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.TransmissionDownloadClientBase.add_paused" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Add media to the download client in the Paused state.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="utorrent">uTorrent<a class="headerlink" href="#utorrent" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_prowlarr.config.settings.download_clients.torrent.UtorrentDownloadClient"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr_prowlarr.config.settings.download_clients.torrent.TorrentDownloadClient">TorrentDownloadClient</span></code></p>
+
+  
+      <p>uTorrent download client.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.UtorrentDownloadClient.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;utorrent&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;utorrent&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.UtorrentDownloadClient.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.UtorrentDownloadClient.host" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.UtorrentDownloadClient.host" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>uTorrent host name.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.UtorrentDownloadClient.port" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">8080</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.UtorrentDownloadClient.port" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Download client access port.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.UtorrentDownloadClient.use_ssl" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.UtorrentDownloadClient.use_ssl" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Use a secure connection when connecting to the download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.UtorrentDownloadClient.url_base" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">url_base</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.UtorrentDownloadClient.url_base" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Adds a prefix to the uTorrent URL, e.g. <code>http://[host]:[port]/[url_base]/api</code>.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.UtorrentDownloadClient.username" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.UtorrentDownloadClient.username" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>User name to use when authenticating with the download client.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.UtorrentDownloadClient.password" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">password</span><span class="p">:</span> <span class="n">Password</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.UtorrentDownloadClient.password" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Password to use to authenticate the download client user.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.UtorrentDownloadClient.category" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;prowlarr&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.UtorrentDownloadClient.category" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Associate media from Prowlarr with a category.</p>
+<p>Adding a category specific to Prowlarr avoids conflicts with unrelated non-Prowlarr downloads.
+Using a category is optional, but strongly recommended.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.UtorrentDownloadClient.client_priority" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">client_priority</span><span class="p">:</span> <span class="n">UtorrentPriority</span> <span class="o">=</span> <span class="n">UtorrentPriority</span><span class="o">.</span><span class="n">last</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.UtorrentDownloadClient.client_priority" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Priority to use when grabbing releases.</p>
+<p>Values:</p>
+<ul>
+<li><code>last</code></li>
+<li><code>first</code></li>
+</ul>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.UtorrentDownloadClient.initial_state" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">initial_state</span><span class="p">:</span> <span class="n">UtorrentState</span> <span class="o">=</span> <span class="n">UtorrentState</span><span class="o">.</span><span class="n">start</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.UtorrentDownloadClient.initial_state" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Initial state for torrents added to uTorrent.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.UtorrentDownloadClient.category_mappings" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">category_mappings</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">,</span> <span class="n">Set</span><span class="p">[</span><span class="n">LowerCaseNonEmptyStr</span><span class="p">]]</span> <span class="o">=</span> <span class="p">{}</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.download_clients.torrent.UtorrentDownloadClient.category_mappings" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Category mappings for associating a category on the download client
+with the selected Prowlarr categories.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../../js/base.js" defer></script>
+        <script src="../../../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

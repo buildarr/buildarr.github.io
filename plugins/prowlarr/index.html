@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Introduction - Buildarr</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link href="../../assets/_mkdocstrings.css" rel="stylesheet">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Buildarr</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../release-notes/" class="nav-link">Release Notes</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../installation/" class="nav-link">Installation</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../configuration/" class="nav-link">Configuration</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Plugins <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../" class="dropdown-item">Introduction</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Buildarr Sonarr Plugin</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../sonarr/" class="dropdown-item">Introduction</a>
+</li>
+            
+<li>
+    <a href="../sonarr/release-notes/" class="dropdown-item">Release Notes</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Configuration</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../sonarr/configuration/host/" class="dropdown-item">Host Configuration</a>
+</li>
+            
+<li>
+    <a href="../sonarr/configuration/media-management/" class="dropdown-item">Media Management</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Profiles</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../sonarr/configuration/profiles/quality/" class="dropdown-item">Quality Profiles</a>
+</li>
+            
+<li>
+    <a href="../sonarr/configuration/profiles/language/" class="dropdown-item">Language Profiles</a>
+</li>
+            
+<li>
+    <a href="../sonarr/configuration/profiles/delay/" class="dropdown-item">Delay Profiles</a>
+</li>
+            
+<li>
+    <a href="../sonarr/configuration/profiles/release/" class="dropdown-item">Release Profiles</a>
+</li>
+    </ul>
+  </li>
+            
+<li>
+    <a href="../sonarr/configuration/quality/" class="dropdown-item">Quality</a>
+</li>
+            
+<li>
+    <a href="../sonarr/configuration/indexers/" class="dropdown-item">Indexers</a>
+</li>
+            
+<li>
+    <a href="../sonarr/configuration/download-clients/" class="dropdown-item">Download Clients</a>
+</li>
+            
+<li>
+    <a href="../sonarr/configuration/import-lists/" class="dropdown-item">Import Lists</a>
+</li>
+            
+<li>
+    <a href="../sonarr/configuration/connect/" class="dropdown-item">Connect</a>
+</li>
+            
+<li>
+    <a href="../sonarr/configuration/metadata/" class="dropdown-item">Metadata</a>
+</li>
+            
+<li>
+    <a href="../sonarr/configuration/tags/" class="dropdown-item">Tags</a>
+</li>
+            
+<li>
+    <a href="../sonarr/configuration/general/" class="dropdown-item">General</a>
+</li>
+            
+<li>
+    <a href="../sonarr/configuration/ui/" class="dropdown-item">UI</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Buildarr Prowlarr Plugin</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="./" class="dropdown-item active">Introduction</a>
+</li>
+            
+<li>
+    <a href="release-notes/" class="dropdown-item">Release Notes</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Configuration</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="configuration/host/" class="dropdown-item">Host Configuration</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Settings</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Indexers</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="configuration/settings/indexers/indexers/" class="dropdown-item">Indexers</a>
+</li>
+            
+<li>
+    <a href="configuration/settings/indexers/proxies/" class="dropdown-item">Proxies</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Apps</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="configuration/settings/apps/applications/" class="dropdown-item">Applications</a>
+</li>
+            
+<li>
+    <a href="configuration/settings/apps/sync-profiles/" class="dropdown-item">Sync Profiles</a>
+</li>
+    </ul>
+  </li>
+            
+<li>
+    <a href="configuration/settings/download-clients/" class="dropdown-item">Download Clients</a>
+</li>
+            
+<li>
+    <a href="configuration/settings/notifications/" class="dropdown-item">Notifications</a>
+</li>
+            
+<li>
+    <a href="configuration/settings/tags/" class="dropdown-item">Tags</a>
+</li>
+            
+<li>
+    <a href="configuration/settings/general/" class="dropdown-item">General</a>
+</li>
+            
+<li>
+    <a href="configuration/settings/ui/" class="dropdown-item">UI</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../usage/" class="nav-link">Usage</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="https://github.com/buildarr/buildarr" class="nav-link">GitHub</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../sonarr/configuration/ui/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="release-notes/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#buildarr-prowlarr-plugin" class="nav-link">Buildarr Prowlarr Plugin</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#installation" class="nav-link">Installation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#quick-start" class="nav-link">Quick Start</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#configuring-your-buildarr-instance" class="nav-link">Configuring your Buildarr instance</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#dumping-an-existing-prowlarr-instance-configuration" class="nav-link">Dumping an existing Prowlarr instance configuration</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="buildarr-prowlarr-plugin">Buildarr Prowlarr Plugin<a class="headerlink" href="#buildarr-prowlarr-plugin" title="Permanent link">#</a></h1>
+<p><a href="https://pypi.org/project/buildarr-prowlarr"><img alt="PyPI" src="https://img.shields.io/pypi/v/buildarr-prowlarr" /></a> <img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/buildarr-prowlarr" />  <a href="https://github.com/buildarr/buildarr-prowlarr/blob/main/LICENSE"><img alt="GitHub" src="https://img.shields.io/github/license/buildarr/buildarr-prowlarr" /></a> <img alt="Pre-commit hooks" src="https://github.com/buildarr/buildarr-prowlarr/actions/workflows/pre-commit.yml/badge.svg" /> <a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg" /></a></p>
+<p>The Buildarr Prowlarr plugin (<code>buildarr-prowlarr</code>) is a plugin for Buildarr that adds the capability to configure and manage <a href="http://prowlarr.com">Prowlarr</a> instances.</p>
+<p>Prowlarr is a manager/proxy for *Arr application Usenet and Torrent indexers. It handles communication with individual indexers for multiple instances on their behalf from a single client, allowing easier configuration of indexers by only setting them up once, and better management of traffic going to indexers to reduce the risk of running into rate limits.</p>
+<p>Prowlarr v1.0 and later are the only supported versions at this time. If you are using Prowlarr v0.4 or earlier, please upgrade in order to configure your instances with Buildarr.</p>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">#</a></h2>
+<p>When using Buildarr as a <a href="https://buildarr.github.io/installation/#standalone-application">standalone application</a>, the Prowlarr plugin can simply be installed using <code>pip</code>:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>buildarr<span class="w"> </span>buildarr-prowlarr
+</code></pre></div>
+<p>If you are linking a Prowlarr instance with another Buildarr-configured Sonarr instance, use the <code>sonarr</code> extra to also install a compatible version of the Sonarr plugin.</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>buildarr<span class="w"> </span>buildarr-prowlarr<span class="o">[</span>sonarr<span class="o">]</span>
+</code></pre></div>
+<p>When using Buildarr as a <a href="https://buildarr.github.io/installation/#docker">Docker container</a>, the Prowlarr plugin is bundled with the official container (<code>callum027/buildarr</code>), so there is no need to install it separately.</p>
+<p>You can upgrade, or pin the version of the plugin to a specific version, within the container by setting the <code>$BUILDARR_INSTALL_PACKAGES</code> environment variable in the <code>docker run</code> command using <code>--env</code>/<code>-e</code>:</p>
+<div class="highlight"><pre><span></span><code>-e<span class="w"> </span><span class="nv">BUILDARR_INSTALL_PACKAGES</span><span class="o">=</span><span class="s2">&quot;buildarr-prowlarr==&lt;version&gt;&quot;</span>
+</code></pre></div>
+<h2 id="quick-start">Quick Start<a class="headerlink" href="#quick-start" title="Permanent link">#</a></h2>
+<p>To use the Prowlarr plugin, create a <code>prowlarr</code> block within <code>buildarr.yml</code>, and enter the connection information required for the Buildarr instance to connect to the Prowlarr instance you'd like to manage.</p>
+<p>From version 1.0 onwards, Prowlarr enables authentication by default, preventing Buildarr from automatically retrieving the API key.</p>
+<p>If authentication is enabled on your Prowlarr configuration, manually retrieve the API key for Prowlarr by copying it from Settings -&gt; General -&gt; Security -&gt; API Key, and pasting it into the configuration file as shown below.</p>
+<div class="highlight"><pre><span></span><code><span class="nn">---</span>
+
+<span class="nt">buildarr</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">watch_config</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+
+<span class="nt">prowlarr</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">hostname</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;localhost&quot;</span><span class="w"> </span><span class="c1"># Defaults to `prowlarr`, or the instance name for instance-specific configs.</span>
+<span class="w">  </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9696</span><span class="w"> </span><span class="c1"># Defaults to 9696.</span>
+<span class="w">  </span><span class="nt">protocol</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;http&quot;</span><span class="w"> </span><span class="c1"># Defaults to `http`.</span>
+<span class="w">  </span><span class="nt">api_key</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;...&quot;</span><span class="w"> </span><span class="c1"># Required if authentication is enabled. Auto-fetch if authentication is disabled.</span>
+</code></pre></div>
+<p>Buildarr won't modify anything yet since no configuration has been defined, but you are able to test if Buildarr is able to connect to and authenticate with the Prowlarr instance.</p>
+<p>Try a <code>buildarr run</code>. If the output is similar to the below output, Buildarr was able to connect to your Prowlarr instance.</p>
+<div class="highlight"><pre><span></span><code>2023-03-29 20:39:50,856 buildarr:1 buildarr.cli.run [INFO] Buildarr version 0.4.0 (log level: INFO)
+2023-03-29 20:39:50,856 buildarr:1 buildarr.cli.run [INFO] Loading configuration file &#39;/config/buildarr.yml&#39;
+2023-03-29 20:39:50,872 buildarr:1 buildarr.cli.run [INFO] Finished loading configuration file
+2023-03-29 20:39:50,874 buildarr:1 buildarr.cli.run [INFO] Loaded plugins: prowlarr (0.1.0)
+2023-03-29 20:39:50,875 buildarr:1 buildarr.cli.run [INFO] Loading instance configurations
+2023-03-29 20:39:50,877 buildarr:1 buildarr.cli.run [INFO] Finished loading instance configurations
+2023-03-29 20:39:50,877 buildarr:1 buildarr.cli.run [INFO] Running with plugins: prowlarr
+2023-03-29 20:39:50,877 buildarr:1 buildarr.cli.run [INFO] Resolving instance dependencies
+2023-03-29 20:39:50,877 buildarr:1 buildarr.cli.run [INFO] Finished resolving instance dependencies
+2023-03-29 20:39:50,877 buildarr:1 buildarr.cli.run [INFO] Loading secrets file from &#39;/config/secrets.json&#39;
+2023-03-29 20:39:50,886 buildarr:1 buildarr.cli.run [INFO] Finished loading secrets file
+2023-03-29 20:39:50,886 buildarr:1 buildarr.cli.run [INFO] &lt;prowlarr&gt; (default) Checking secrets
+2023-03-29 20:39:50,912 buildarr:1 buildarr.cli.run [INFO] &lt;prowlarr&gt; (default) Connection test successful using cached secrets
+2023-03-29 20:39:50,912 buildarr:1 buildarr.cli.run [INFO] &lt;prowlarr&gt; (default) Finished checking secrets
+2023-03-29 20:39:50,912 buildarr:1 buildarr.cli.run [INFO] Saving updated secrets file to &#39;/config/secrets.json&#39;
+2023-03-29 20:39:50,914 buildarr:1 buildarr.cli.run [INFO] Finished saving updated secrets file
+2023-03-29 20:39:50,914 buildarr:1 buildarr.cli.run [INFO] Updating configuration on remote instances
+2023-03-29 20:39:50,914 buildarr:1 buildarr.cli.run [INFO] &lt;prowlarr&gt; (default) Getting remote configuration
+2023-03-29 20:39:51,406 buildarr:1 buildarr.cli.run [INFO] &lt;prowlarr&gt; (default) Finished getting remote configuration
+2023-03-29 20:39:51,463 buildarr:1 buildarr.cli.run [INFO] &lt;prowlarr&gt; (default) Updating remote configuration
+2023-03-29 20:39:52,019 buildarr:1 buildarr.cli.run [INFO] &lt;prowlarr&gt; (default) Remote configuration is up to date
+2023-03-29 20:39:52,019 buildarr:1 buildarr.cli.run [INFO] &lt;prowlarr&gt; (default) Finished updating remote configuration
+2023-03-29 20:39:52,019 buildarr:1 buildarr.cli.run [INFO] Finished updating configuration on remote instances
+</code></pre></div>
+<h2 id="configuring-your-buildarr-instance">Configuring your Buildarr instance<a class="headerlink" href="#configuring-your-buildarr-instance" title="Permanent link">#</a></h2>
+<p>The following sections cover comprehensive configuration of a Prowlarr instance.</p>
+<p>Note that these documents do not show how you <em>should</em> configure a Prowlarr instance. Rather, they show how you <em>can</em> configure a Prowlarr instance the way you want with Buildarr. For more information on how to optimally configure Prowlarr, you can refer to the excellent guides from <a href="https://wiki.servarr.com/prowlarr">WikiArr</a> and <a href="https://trash-guides.info/Prowlarr/">TRaSH-Guides</a>.</p>
+<ul>
+<li><a href="configuration/host/">Host Configuration</a></li>
+<li>Settings<ul>
+<li>Indexers<ul>
+<li><a href="configuration/settings/indexers/indexers/">Indexers</a></li>
+<li><a href="configuration/settings/indexers/proxies/">Proxies</a></li>
+</ul>
+</li>
+<li>Apps<ul>
+<li><a href="configuration/settings/apps/applications/">Applications</a></li>
+<li><a href="configuration/settings/apps/sync-profiles/">Sync Profiles</a></li>
+</ul>
+</li>
+<li><a href="configuration/settings/download-clients/">Download Clients</a></li>
+<li><a href="configuration/settings/notifications/">Notifications</a></li>
+<li><a href="configuration/settings/tags/">Tags</a></li>
+<li><a href="configuration/settings/general/">General</a></li>
+<li><a href="configuration/settings/ui/">UI</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="dumping-an-existing-prowlarr-instance-configuration">Dumping an existing Prowlarr instance configuration<a class="headerlink" href="#dumping-an-existing-prowlarr-instance-configuration" title="Permanent link">#</a></h2>
+<p>Buildarr is capable of dumping a running Prowlarr instance's configuration.</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>buildarr<span class="w"> </span>prowlarr<span class="w"> </span>dump-config<span class="w"> </span>http://localhost:9696<span class="w"> </span>&gt;<span class="w"> </span>prowlarr.yml
+Prowlarr<span class="w"> </span>instance<span class="w"> </span>API<span class="w"> </span>key:<span class="w"> </span>&lt;Paste<span class="w"> </span>API<span class="w"> </span>key<span class="w"> </span>here&gt;
+</code></pre></div>
+<p>The dumped YAML object can be placed directly under the <code>prowlarr</code> configuration block, or used as an <a href="https://buildarr.github.io/configuration/#multiple-instances-of-the-same-type">instance-specific configuration</a>.</p>
+<p>All possible values are explicitly defined in this dumped configuration.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">api_key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1a2b3c4d5e6f1a2b3c4d5e6f1a2b3c4d</span>
+<span class="nt">hostname</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">localhost</span>
+<span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lscr.io/linuxserver/prowlarr</span>
+<span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9697</span>
+<span class="nt">protocol</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http</span>
+<span class="nt">settings</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">apps</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">applications</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">definitions</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">Sonarr</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">anime_sync_categories</span><span class="p">:</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tv/anime</span>
+<span class="w">          </span><span class="nt">api_key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1a2b3c4d5e6f1a2b3c4d5e6f1a2b3c4d</span>
+<span class="w">          </span><span class="nt">base_url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://sonarr:8989</span>
+<span class="w">          </span><span class="nt">instance_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">          </span><span class="nt">prowlarr_url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://prowlarr:9696</span>
+<span class="w">          </span><span class="nt">sync_categories</span><span class="p">:</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tv/uhd</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tv/other</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tv/foreign</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tv/sd</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tv/web-dl</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tv/hd</span>
+<span class="w">          </span><span class="nt">sync_level</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">add-and-remove-only</span>
+<span class="w">          </span><span class="nt">tags</span><span class="p">:</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test</span>
+<span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sonarr</span>
+<span class="w">      </span><span class="nt">delete_unmanaged</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">sync_profiles</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">definitions</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">Standard</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">enable_automatic_search</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">          </span><span class="nt">enable_interactive_search</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">          </span><span class="nt">enable_rss</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">          </span><span class="nt">minimum_seeders</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">      </span><span class="nt">delete_unmanaged</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="nt">download_clients</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">definitions</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
+<span class="w">    </span><span class="nt">delete_unmanaged</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="nt">general</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">analytics</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">send_anonymous_usage_data</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">backup</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">folder</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Backups</span>
+<span class="w">      </span><span class="nt">interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7</span>
+<span class="w">      </span><span class="nt">retention</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">28</span>
+<span class="w">    </span><span class="nt">host</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">bind_address</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;*&#39;</span>
+<span class="w">      </span><span class="nt">instance_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Prowlarr (Buildarr Example)</span>
+<span class="w">      </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9696</span>
+<span class="w">      </span><span class="nt">ssl_cert_password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">      </span><span class="nt">ssl_cert_path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">      </span><span class="nt">ssl_port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">6969</span>
+<span class="w">      </span><span class="nt">url_base</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">      </span><span class="nt">use_ssl</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">logging</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">log_level</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">INFO</span>
+<span class="w">    </span><span class="nt">proxy</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">bypass_proxy_for_local_addresses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">      </span><span class="nt">hostname</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">      </span><span class="nt">ignored_addresses</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<span class="w">      </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">      </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080</span>
+<span class="w">      </span><span class="nt">proxy_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http</span>
+<span class="w">      </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">    </span><span class="nt">security</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">authentication</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">form</span>
+<span class="w">      </span><span class="nt">authentication_required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">local-disabled</span>
+<span class="w">      </span><span class="nt">certificate_validation</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">enabled</span>
+<span class="w">      </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mXkaCgbcm6LMVwSmj/aucXfRtYg18k7H+I4/6JPinSA=</span>
+<span class="w">      </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">callum</span>
+<span class="w">    </span><span class="nt">updates</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">automatic</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">      </span><span class="nt">branch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">master</span>
+<span class="w">      </span><span class="nt">mechanism</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">docker</span>
+<span class="w">      </span><span class="nt">script_path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">  </span><span class="nt">indexers</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">indexers</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">definitions</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">1337x</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">          </span><span class="nt">fields</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">baseUrl</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">            </span><span class="nt">definitionFile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1337x</span>
+<span class="w">            </span><span class="nt">downloadlink</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">iTorrents.org</span>
+<span class="w">            </span><span class="nt">downloadlink2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">magnet</span>
+<span class="w">            </span><span class="nt">sort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">created</span>
+<span class="w">            </span><span class="nt">torrentBaseSettings.appMinimumSeeders</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">            </span><span class="nt">torrentBaseSettings.packSeedTime</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">            </span><span class="nt">torrentBaseSettings.seedRatio</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">            </span><span class="nt">torrentBaseSettings.seedTime</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">desc</span>
+<span class="w">          </span><span class="nt">grab_limit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
+<span class="w">          </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">25</span>
+<span class="w">          </span><span class="nt">query_limit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
+<span class="w">          </span><span class="nt">redirect</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">          </span><span class="nt">secret_fields</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
+<span class="w">          </span><span class="nt">sync_profile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Standard</span>
+<span class="w">          </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1337x</span>
+<span class="w">        </span><span class="nt">Nyaa.si</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">          </span><span class="nt">fields</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">baseUrl</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">            </span><span class="nt">cat-id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">All categories</span>
+<span class="w">            </span><span class="nt">definitionFile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nyaasi</span>
+<span class="w">            </span><span class="nt">filter-id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">No filter</span>
+<span class="w">            </span><span class="nt">prefer_magnet_links</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">            </span><span class="nt">sort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">created</span>
+<span class="w">            </span><span class="nt">torrentBaseSettings.appMinimumSeeders</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">            </span><span class="nt">torrentBaseSettings.packSeedTime</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">            </span><span class="nt">torrentBaseSettings.seedRatio</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">            </span><span class="nt">torrentBaseSettings.seedTime</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">desc</span>
+<span class="w">          </span><span class="nt">grab_limit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
+<span class="w">          </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">25</span>
+<span class="w">          </span><span class="nt">query_limit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
+<span class="w">          </span><span class="nt">redirect</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">          </span><span class="nt">secret_fields</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
+<span class="w">          </span><span class="nt">sync_profile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Standard</span>
+<span class="w">          </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nyaasi</span>
+<span class="w">      </span><span class="nt">delete_unmanaged</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">proxies</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">definitions</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
+<span class="w">      </span><span class="nt">delete_unmanaged</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="nt">notifications</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">definitions</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
+<span class="w">    </span><span class="nt">delete_unmanaged</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="nt">tags</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">definitions</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test</span>
+<span class="w">    </span><span class="nt">delete_unused</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="nt">ui</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">enable_color_impaired_mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">first_day_of_week</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sunday</span>
+<span class="w">    </span><span class="nt">long_date_format</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">month-first</span>
+<span class="w">    </span><span class="nt">short_date_format</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">word-month-first</span>
+<span class="w">    </span><span class="nt">show_relative_dates</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">theme</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">light</span>
+<span class="w">    </span><span class="nt">time_format</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">twelve-hour</span>
+<span class="w">    </span><span class="nt">ui_language</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">en</span>
+<span class="w">    </span><span class="nt">week_column_header</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">month-first</span>
+<span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.2.2.2699</span>
+</code></pre></div></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

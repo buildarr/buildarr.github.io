@@ -1,0 +1,3220 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../../../img/favicon.ico">
+        <title>Notifications - Buildarr</title>
+        <link href="../../../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link href="../../../../../assets/_mkdocstrings.css" rel="stylesheet">
+
+        <script src="../../../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../../../..">Buildarr</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../../../../release-notes/" class="nav-link">Release Notes</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../../installation/" class="nav-link">Installation</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../../configuration/" class="nav-link">Configuration</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Plugins <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../../" class="dropdown-item">Introduction</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Buildarr Sonarr Plugin</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../sonarr/" class="dropdown-item">Introduction</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/release-notes/" class="dropdown-item">Release Notes</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Configuration</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../sonarr/configuration/host/" class="dropdown-item">Host Configuration</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/media-management/" class="dropdown-item">Media Management</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Profiles</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../sonarr/configuration/profiles/quality/" class="dropdown-item">Quality Profiles</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/profiles/language/" class="dropdown-item">Language Profiles</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/profiles/delay/" class="dropdown-item">Delay Profiles</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/profiles/release/" class="dropdown-item">Release Profiles</a>
+</li>
+    </ul>
+  </li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/quality/" class="dropdown-item">Quality</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/indexers/" class="dropdown-item">Indexers</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/download-clients/" class="dropdown-item">Download Clients</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/import-lists/" class="dropdown-item">Import Lists</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/connect/" class="dropdown-item">Connect</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/metadata/" class="dropdown-item">Metadata</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/tags/" class="dropdown-item">Tags</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/general/" class="dropdown-item">General</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/ui/" class="dropdown-item">UI</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Buildarr Prowlarr Plugin</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../" class="dropdown-item">Introduction</a>
+</li>
+            
+<li>
+    <a href="../../../release-notes/" class="dropdown-item">Release Notes</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Configuration</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../host/" class="dropdown-item">Host Configuration</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Settings</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Indexers</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../indexers/indexers/" class="dropdown-item">Indexers</a>
+</li>
+            
+<li>
+    <a href="../indexers/proxies/" class="dropdown-item">Proxies</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Apps</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../apps/applications/" class="dropdown-item">Applications</a>
+</li>
+            
+<li>
+    <a href="../apps/sync-profiles/" class="dropdown-item">Sync Profiles</a>
+</li>
+    </ul>
+  </li>
+            
+<li>
+    <a href="../download-clients/" class="dropdown-item">Download Clients</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active">Notifications</a>
+</li>
+            
+<li>
+    <a href="../tags/" class="dropdown-item">Tags</a>
+</li>
+            
+<li>
+    <a href="../general/" class="dropdown-item">General</a>
+</li>
+            
+<li>
+    <a href="../ui/" class="dropdown-item">UI</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../../usage/" class="nav-link">Usage</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="https://github.com/buildarr/buildarr" class="nav-link">GitHub</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../download-clients/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../tags/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#notifications" class="nav-link">Notifications</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#configuration" class="nav-link">Configuration</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#apprise" class="nav-link">Apprise</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#boxcar" class="nav-link">Boxcar</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#custom-script" class="nav-link">Custom Script</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#discord" class="nav-link">Discord</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#email" class="nav-link">Email</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#gotify" class="nav-link">Gotify</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#join" class="nav-link">Join</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#mailgun" class="nav-link">Mailgun</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#notifiarr" class="nav-link">Notifiarr</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#ntfy" class="nav-link">ntfy</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#prowl" class="nav-link">Prowl</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#pushbullet" class="nav-link">Pushbullet</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#pushover" class="nav-link">Pushover</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#sendgrid" class="nav-link">SendGrid</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#slack" class="nav-link">Slack</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#telegram" class="nav-link">Telegram</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#twitter" class="nav-link">Twitter</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#webhook" class="nav-link">Webhook</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="notifications">Notifications<a class="headerlink" href="#notifications" title="Permanent link">#</a></h1>
+<p>Prowlarr supports pushing notifications to external applications and services.</p>
+<p>These are not only for Prowlarr to communicate with the outside world, they can also be useful
+for monitoring since the user can be alerted, by a service of their choice, when
+some kind of event (or problem) occurs.</p>
+<h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_prowlarr.config.settings.notifications.NotificationTriggers"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr_prowlarr.config.types.ProwlarrConfigBase">ProwlarrConfigBase</span></code></p>
+
+  
+      <p>Notification connections are configured using the following syntax.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">prowlarr</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">settings</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">notifications</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">delete_unmanaged</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"> </span><span class="c1"># Optional</span>
+<span class="w">      </span><span class="nt">definitions</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">Email</span><span class="p">:</span><span class="w"> </span><span class="c1"># Name of notification connection in Prowlarr.</span>
+<span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;email&quot;</span><span class="w"> </span><span class="c1"># Required</span>
+<span class="w">          </span><span class="nt">notification_triggers</span><span class="p">:</span><span class="w"> </span><span class="c1"># When to send notifications.</span>
+<span class="w">            </span><span class="nt">on_health_issue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">            </span><span class="nt">include_health_warnings</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"> </span><span class="c1"># Do not send on just warnings.</span>
+<span class="w">            </span><span class="nt">on_application_update</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">          </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="c1"># Tags can also be assigned to connections.</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;example&quot;</span>
+<span class="w">          </span><span class="c1"># Connection-specific parameters.</span>
+<span class="w">          </span><span class="nt">server</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;smtp.example.com&quot;</span>
+<span class="w">          </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">465</span>
+<span class="w">          </span><span class="nt">use_encryption</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">          </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;prowlarr&quot;</span>
+<span class="w">          </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;fake-password&quot;</span>
+<span class="w">          </span><span class="nt">from_address</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;prowlarr@example.com&quot;</span>
+<span class="w">          </span><span class="nt">recipient_addresses</span><span class="p">:</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;admin@example.com&quot;</span>
+<span class="w">        </span><span class="c1"># Add additional connections here.</span>
+</code></pre></div>
+<p>A <code>type</code> attribute must be defined so Buildarr knows what type of connection to make.
+Each connection has a unique value for <code>type</code> documented below.</p>
+<p>The triggers enabled on a connection are defined under <code>notification_triggers</code>.
+Tags can be assigned to connections, to only allow notifications relating
+to media under those tags.</p>
+<p>The <code>delete_unmanaged</code> flag on the outer <code>connect</code> block can be set
+to remove connections not defined in Buildarr.
+Take care when using this option, as it can remove connections
+automatically managed by other applications.</p>
+<p>The following notification triggers can be enabled.
+Some connection types only allow a subset of these to be enabled,
+check the documentation the specific connection type for more information.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.NotificationTriggers.on_health_issue" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">on_health_issue</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.NotificationTriggers.on_health_issue" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Be notified on health check failures.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.NotificationTriggers.include_health_warnings" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">include_health_warnings</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.NotificationTriggers.include_health_warnings" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Be notified on health warnings in addition to errors.</p>
+<p>Requires <code>on_health_issue</code> to be enabled to have any effect.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.NotificationTriggers.on_application_update" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">on_application_update</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.NotificationTriggers.on_application_update" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Be notified when Prowlarr gets updated to a new version.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="apprise">Apprise<a class="headerlink" href="#apprise" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_prowlarr.config.settings.notifications.AppriseNotification"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr_prowlarr.config.settings.notifications.Notification">Notification</span></code></p>
+
+  
+      <p>Receive media update and health alert push notifications via an Apprise server.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.AppriseNotification.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;apprise&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;apprise&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.AppriseNotification.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of connection.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.AppriseNotification.base_url" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">base_url</span><span class="p">:</span> <span class="n">AnyHttpUrl</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.AppriseNotification.base_url" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Apprise server base URL, including <code>http[s]://</code> and port if needed.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.AppriseNotification.configuration_key" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">configuration_key</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">SecretStr</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.AppriseNotification.configuration_key" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Configuration key for the Persistent Storage Solution.</p>
+<p>Leave empty if Stateless URLs are used.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.AppriseNotification.stateless_urls" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">stateless_urls</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">AnyHttpUrl</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.AppriseNotification.stateless_urls" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>One or more URLs where notifications should be sent to.</p>
+<p>Leave undefined or empty if Persistent Storage is used.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.AppriseNotification.apprise_tags" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">apprise_tags</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.AppriseNotification.apprise_tags" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Optionally notify only targets with the defined tags.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.AppriseNotification.auth_username" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">auth_username</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.AppriseNotification.auth_username" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Username for authenticating with Apprise, if required.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.AppriseNotification.auth_password" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">auth_password</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">SecretStr</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.AppriseNotification.auth_password" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Password for authenticating with Apprise, if required.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="boxcar">Boxcar<a class="headerlink" href="#boxcar" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_prowlarr.config.settings.notifications.BoxcarNotification"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr_prowlarr.config.settings.notifications.Notification">Notification</span></code></p>
+
+  
+      <p>Receive media update and health alert push notifications via Boxcar.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.BoxcarNotification.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;boxcar&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;boxcar&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.BoxcarNotification.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of connection.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.BoxcarNotification.access_token" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">access_token</span><span class="p">:</span> <span class="n">Password</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.BoxcarNotification.access_token" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Access token for authenticating with Boxcar.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="custom-script">Custom Script<a class="headerlink" href="#custom-script" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_prowlarr.config.settings.notifications.CustomscriptNotification"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr_prowlarr.config.settings.notifications.Notification">Notification</span></code></p>
+
+  
+      <p>Execute a local script on the Prowlarr instance when events occur.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.CustomscriptNotification.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;customscript&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;customscript&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.CustomscriptNotification.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of connection.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.CustomscriptNotification.path" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">path</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.CustomscriptNotification.path" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Path of the script to execute.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="discord">Discord<a class="headerlink" href="#discord" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_prowlarr.config.settings.notifications.DiscordNotification"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr_prowlarr.config.settings.notifications.Notification">Notification</span></code></p>
+
+  
+      <p>Send media update and health alert messages to a Discord server.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.DiscordNotification.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;discord&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;discord&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.DiscordNotification.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of connection.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.DiscordNotification.username" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.DiscordNotification.username" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The username to post as.</p>
+<p>If unset, blank or set to <code>None</code>, use the default username set to the webhook URL.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.DiscordNotification.avatar" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">avatar</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.DiscordNotification.avatar" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Change the avatar that is used for messages from this connection.</p>
+<p>If unset, blank or set to <code>None</code>, use the default avatar for the user.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.DiscordNotification.host" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.DiscordNotification.host" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Override the host name that shows for this notification.</p>
+<p>If unset, blank or set to <code>None</code>, use the machine name.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.DiscordNotification.on_grab_fields" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">on_grab_fields</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">OnGrabField</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">OnGrabField</span><span class="o">.</span><span class="n">overview</span><span class="p">,</span> <span class="n">OnGrabField</span><span class="o">.</span><span class="n">rating</span><span class="p">,</span> <span class="n">OnGrabField</span><span class="o">.</span><span class="n">genres</span><span class="p">,</span> <span class="n">OnGrabField</span><span class="o">.</span><span class="n">quality</span><span class="p">,</span> <span class="n">OnGrabField</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="n">OnGrabField</span><span class="o">.</span><span class="n">links</span><span class="p">,</span> <span class="n">OnGrabField</span><span class="o">.</span><span class="n">release</span><span class="p">,</span> <span class="n">OnGrabField</span><span class="o">.</span><span class="n">poster</span><span class="p">,</span> <span class="n">OnGrabField</span><span class="o">.</span><span class="n">fanart</span><span class="p">}</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.DiscordNotification.on_grab_fields" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Set the fields that are passed in for this 'on grab' notification.
+By default, all fields are passed in.</p>
+<p>Values:</p>
+<ul>
+<li><code>overview</code></li>
+<li><code>rating</code></li>
+<li><code>genres</code></li>
+<li><code>quality</code></li>
+<li><code>group</code></li>
+<li><code>size</code></li>
+<li><code>links</code></li>
+<li><code>release</code></li>
+<li><code>poster</code></li>
+<li><code>fanart</code></li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="nn">...</span>
+<span class="w">  </span><span class="nt">connect</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">definitions</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">Discord</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;discord&quot;</span>
+<span class="w">        </span><span class="nt">webhook_url</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://...&quot;</span>
+<span class="w">        </span><span class="nt">on_grab_fields</span><span class="p">:</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;overview&quot;</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;quality&quot;</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;release&quot;</span>
+</code></pre></div>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.DiscordNotification.on_import_fields" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">on_import_fields</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">OnImportField</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">OnImportField</span><span class="o">.</span><span class="n">overview</span><span class="p">,</span> <span class="n">OnImportField</span><span class="o">.</span><span class="n">rating</span><span class="p">,</span> <span class="n">OnImportField</span><span class="o">.</span><span class="n">genres</span><span class="p">,</span> <span class="n">OnImportField</span><span class="o">.</span><span class="n">quality</span><span class="p">,</span> <span class="n">OnImportField</span><span class="o">.</span><span class="n">codecs</span><span class="p">,</span> <span class="n">OnImportField</span><span class="o">.</span><span class="n">group</span><span class="p">,</span> <span class="n">OnImportField</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="n">OnImportField</span><span class="o">.</span><span class="n">languages</span><span class="p">,</span> <span class="n">OnImportField</span><span class="o">.</span><span class="n">subtitles</span><span class="p">,</span> <span class="n">OnImportField</span><span class="o">.</span><span class="n">links</span><span class="p">,</span> <span class="n">OnImportField</span><span class="o">.</span><span class="n">release</span><span class="p">,</span> <span class="n">OnImportField</span><span class="o">.</span><span class="n">poster</span><span class="p">,</span> <span class="n">OnImportField</span><span class="o">.</span><span class="n">fanart</span><span class="p">}</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.DiscordNotification.on_import_fields" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Set the fields that are passed in for this 'on import' notification.
+By default, all fields are passed in.</p>
+<p>Values:</p>
+<ul>
+<li><code>overview</code></li>
+<li><code>rating</code></li>
+<li><code>genres</code></li>
+<li><code>quality</code></li>
+<li><code>codecs</code></li>
+<li><code>group</code></li>
+<li><code>size</code></li>
+<li><code>languages</code></li>
+<li><code>subtitles</code></li>
+<li><code>links</code></li>
+<li><code>release</code></li>
+<li><code>poster</code></li>
+<li><code>fanart</code></li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="nn">...</span>
+<span class="w">  </span><span class="nt">connect</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">definitions</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">Discord</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;discord&quot;</span>
+<span class="w">        </span><span class="nt">webhook_url</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://...&quot;</span>
+<span class="w">        </span><span class="nt">on_import_fields</span><span class="p">:</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;overview&quot;</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;quality&quot;</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;release&quot;</span>
+</code></pre></div>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="email">Email<a class="headerlink" href="#email" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_prowlarr.config.settings.notifications.EmailNotification"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr_prowlarr.config.settings.notifications.Notification">Notification</span></code></p>
+
+  
+      <p>Send media update and health alert messages to an email address.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.EmailNotification.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;email&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.EmailNotification.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of connection.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.EmailNotification.server" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">server</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.EmailNotification.server" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Hostname or IP address of the SMTP server to send outbound mail to.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.EmailNotification.port" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">587</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.EmailNotification.port" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The port number on the SMTP server to use to submit mail.</p>
+<p>The default is to use STARTTLS on the standard SMTP submission port.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.EmailNotification.use_encryption" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">use_encryption</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.EmailNotification.use_encryption" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Whether or not to use encryption when sending mail to the SMTP server.</p>
+<p>If the port number is set to 465, SMTPS (implicit TLS) will be used.
+Any other port number will result in STARTTLS being used.</p>
+<p>The default is to enable encryption.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.EmailNotification.username" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.EmailNotification.username" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>SMTP username of the account to send the mail from.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.EmailNotification.password" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">password</span><span class="p">:</span> <span class="n">Password</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.EmailNotification.password" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>SMTP password of the account to send the mail from.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.EmailNotification.from_address" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">from_address</span><span class="p">:</span> <span class="n">NameEmail</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.EmailNotification.from_address" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Email address to send the mail as.</p>
+<p>RFC-5322 formatted mailbox addresses are also supported,
+e.g. <code>Prowlarr Notifications &lt;prowlarr@example.com&gt;</code>.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.EmailNotification.recipient_addresses" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">recipient_addresses</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">NameEmail</span><span class="p">],</span> <span class="n">Field</span><span class="p">(</span><span class="n">min_items</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">unique_items</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.EmailNotification.recipient_addresses" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>List of email addresses to directly address the mail to.</p>
+<p>At least one address must be provided.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.EmailNotification.cc_addresses" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">cc_addresses</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">NameEmail</span><span class="p">],</span> <span class="n">Field</span><span class="p">(</span><span class="n">unique_items</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span> <span class="o">=</span> <span class="p">[]</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.EmailNotification.cc_addresses" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Optional list of email addresses to copy (CC) the mail to.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.EmailNotification.bcc_addresses" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">bcc_addresses</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">NameEmail</span><span class="p">],</span> <span class="n">Field</span><span class="p">(</span><span class="n">unique_items</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span> <span class="o">=</span> <span class="p">[]</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.EmailNotification.bcc_addresses" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Optional list of email addresses to blind copy (BCC) the mail to.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="gotify">Gotify<a class="headerlink" href="#gotify" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_prowlarr.config.settings.notifications.GotifyNotification"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr_prowlarr.config.settings.notifications.Notification">Notification</span></code></p>
+
+  
+      <p>Send media update and health alert push notifications via a Gotify server.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.GotifyNotification.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;gotify&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;gotify&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.GotifyNotification.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of connection.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.GotifyNotification.server" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">server</span><span class="p">:</span> <span class="n">AnyHttpUrl</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.GotifyNotification.server" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Gotify server URL. (e.g. <code>http://gotify.example.com:1234</code>)</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.GotifyNotification.app_token" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">app_token</span><span class="p">:</span> <span class="n">Password</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.GotifyNotification.app_token" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>App token to use to authenticate with Gotify.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.GotifyNotification.priority" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">priority</span><span class="p">:</span> <span class="n">GotifyPriority</span> <span class="o">=</span> <span class="n">GotifyPriority</span><span class="o">.</span><span class="n">normal</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.GotifyNotification.priority" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Gotify notification priority.</p>
+<p>Values:</p>
+<ul>
+<li><code>min</code></li>
+<li><code>low</code></li>
+<li><code>normal</code></li>
+<li><code>high</code></li>
+</ul>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="join">Join<a class="headerlink" href="#join" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_prowlarr.config.settings.notifications.JoinNotification"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr_prowlarr.config.settings.notifications.Notification">Notification</span></code></p>
+
+  
+      <p>Send media update and health alert push notifications via Join.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.JoinNotification.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;join&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;join&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.JoinNotification.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of connection.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.JoinNotification.api_key" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">Password</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.JoinNotification.api_key" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>API key to use to authenticate with Join.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.JoinNotification.device_names" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">device_names</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.JoinNotification.device_names" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>List of full or partial device names you'd like to send notifications to.</p>
+<p>If unset or empty, all devices will receive notifications.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.JoinNotification.priority" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">priority</span><span class="p">:</span> <span class="n">JoinPriority</span> <span class="o">=</span> <span class="n">JoinPriority</span><span class="o">.</span><span class="n">normal</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.JoinNotification.priority" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Join push notification priority.</p>
+<p>Values:</p>
+<ul>
+<li><code>silent</code></li>
+<li><code>quiet</code></li>
+<li><code>normal</code></li>
+<li><code>high</code></li>
+<li><code>emergency</code></li>
+</ul>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="mailgun">Mailgun<a class="headerlink" href="#mailgun" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_prowlarr.config.settings.notifications.MailgunNotification"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr_prowlarr.config.settings.notifications.Notification">Notification</span></code></p>
+
+  
+      <p>Send media update and health alert emails via the Mailgun delivery service.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.MailgunNotification.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;mailgun&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;mailgun&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.MailgunNotification.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of connection.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.MailgunNotification.api_key" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">Password</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.MailgunNotification.api_key" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>API key to use to authenticate with Mailgun.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.MailgunNotification.use_eu_endpoint" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">use_eu_endpoint</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.MailgunNotification.use_eu_endpoint" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Send mail via the EU endpoint instead of the US one.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.MailgunNotification.from_address" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">from_address</span><span class="p">:</span> <span class="n">NameEmail</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.MailgunNotification.from_address" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Email address to send the mail as.</p>
+<p>RFC-5322 formatted mailbox addresses are also supported,
+e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.MailgunNotification.sender_domain" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">sender_domain</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.MailgunNotification.sender_domain" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The domain from which the mail will be sent.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.MailgunNotification.recipient_addresses" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">recipient_addresses</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">NameEmail</span><span class="p">],</span> <span class="n">Field</span><span class="p">(</span><span class="n">min_items</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">unique_items</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.MailgunNotification.recipient_addresses" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The recipient email addresses of the notification mail.</p>
+<p>At least one recipient address is required.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="notifiarr">Notifiarr<a class="headerlink" href="#notifiarr" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_prowlarr.config.settings.notifications.NotifiarrNotification"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr_prowlarr.config.settings.notifications.Notification">Notification</span></code></p>
+
+  
+      <p>Send media update and health alert emails via the Notifiarr notification service.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.NotifiarrNotification.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;notifiarr&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;notifiarr&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.NotifiarrNotification.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of connection.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.NotifiarrNotification.api_key" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">Password</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.NotifiarrNotification.api_key" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>API key to use to authenticate with Notifiarr.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="ntfy">ntfy<a class="headerlink" href="#ntfy" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_prowlarr.config.settings.notifications.NtfyNotification"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr_prowlarr.config.settings.notifications.Notification">Notification</span></code></p>
+
+  
+      <p>Send media update and health alert emails via the ntfy.sh notification service,
+or a self-hosted server using the same software.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.NtfyNotification.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;ntfy&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;ntfy&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.NtfyNotification.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of connection.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.NtfyNotification.server_url" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">server_url</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">AnyHttpUrl</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.NtfyNotification.server_url" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Custom ntfy server URL.</p>
+<p>Leave blank, set to <code>null</code> or undefined to use the public server (<code>https://ntfy.sh</code>).</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.NtfyNotification.username" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.NtfyNotification.username" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Username to use to authenticate, if required.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.NtfyNotification.password" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">password</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">SecretStr</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.NtfyNotification.password" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Password to use to authenticate, if required.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.NtfyNotification.priority" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">priority</span><span class="p">:</span> <span class="n">NtfyshPriority</span> <span class="o">=</span> <span class="n">NtfyshPriority</span><span class="o">.</span><span class="n">default</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.NtfyNotification.priority" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Values:</p>
+<ul>
+<li><code>min</code></li>
+<li><code>low</code></li>
+<li><code>default</code></li>
+<li><code>high</code></li>
+<li><code>max</code></li>
+</ul>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.NtfyNotification.topics" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">topics</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.NtfyNotification.topics" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>List of Topics to send notifications to.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.NtfyNotification.ntfy_tags" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">ntfy_tags</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.NtfyNotification.ntfy_tags" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Optional list of tags or <a href="https://ntfy.sh/docs/emojis">emojis</a> to use.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.NtfyNotification.click_url" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">click_url</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">AnyHttpUrl</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.NtfyNotification.click_url" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Optional link for when the user clicks the notification.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="prowl">Prowl<a class="headerlink" href="#prowl" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_prowlarr.config.settings.notifications.ProwlNotification"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr_prowlarr.config.settings.notifications.Notification">Notification</span></code></p>
+
+  
+      <p>Send media update and health alert push notifications to a Prowl client.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.ProwlNotification.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;prowl&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;prowl&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.ProwlNotification.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of connection.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.ProwlNotification.api_key" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">Password</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.ProwlNotification.api_key" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>API key to use when authenticating with Prowl.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.ProwlNotification.priority" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">priority</span><span class="p">:</span> <span class="n">ProwlPriority</span> <span class="o">=</span> <span class="n">ProwlPriority</span><span class="o">.</span><span class="n">normal</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.ProwlNotification.priority" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Prowl push notification priority.</p>
+<p>Values:</p>
+<ul>
+<li><code>verylow</code></li>
+<li><code>low</code></li>
+<li><code>normal</code></li>
+<li><code>high</code></li>
+<li><code>emergency</code></li>
+</ul>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="pushbullet">Pushbullet<a class="headerlink" href="#pushbullet" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_prowlarr.config.settings.notifications.PushbulletNotification"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr_prowlarr.config.settings.notifications.Notification">Notification</span></code></p>
+
+  
+      <p>Send media update and health alert push notifications to 1 or more Pushbullet devices.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.PushbulletNotification.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;pushbullet&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;pushbullet&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.PushbulletNotification.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of connection.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.PushbulletNotification.api_key" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">Password</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.PushbulletNotification.api_key" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>API key to use when authenticating with Pushbullet.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.PushbulletNotification.device_ids" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">device_ids</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.PushbulletNotification.device_ids" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>List of device IDs to send notifications to.</p>
+<p>If unset or empty, send to all devices.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.PushbulletNotification.channel_tags" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">channel_tags</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.PushbulletNotification.channel_tags" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>List of Channel Tags to send notifications to.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.PushbulletNotification.sender_id" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">sender_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.PushbulletNotification.sender_id" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The device ID to send notifications from
+(<code>device_iden</code> in the device's URL on <a href="https://pushbullet.com">pushbullet.com</a>).</p>
+<p>Leave unset, blank or set to <code>None</code> to send from yourself.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="pushover">Pushover<a class="headerlink" href="#pushover" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_prowlarr.config.settings.notifications.PushoverNotification"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr_prowlarr.config.settings.notifications.Notification">Notification</span></code></p>
+
+  
+      <p>Send media update and health alert push notifications to 1 or more Pushover devices.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.PushoverNotification.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;pushover&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;pushover&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.PushoverNotification.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of connection.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.PushoverNotification.user_key" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">user_key</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="n">SecretStr</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">min_length</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">30</span><span class="p">)]</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.PushoverNotification.user_key" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>User key to use to authenticate with your Pushover account.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.PushoverNotification.api_key" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="n">SecretStr</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">min_length</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">30</span><span class="p">)]</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.PushoverNotification.api_key" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>API key assigned to Prowlarr in Pushover.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.PushoverNotification.devices" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">devices</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.PushoverNotification.devices" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>List of device names to send notifications to.</p>
+<p>If unset or empty, send to all devices.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.PushoverNotification.priority" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">priority</span><span class="p">:</span> <span class="n">PushoverPriority</span> <span class="o">=</span> <span class="n">PushoverPriority</span><span class="o">.</span><span class="n">normal</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.PushoverNotification.priority" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Pushover push notification priority.</p>
+<p>Values:</p>
+<ul>
+<li><code>silent</code></li>
+<li><code>quiet</code></li>
+<li><code>normal</code></li>
+<li><code>high</code></li>
+<li><code>emergency</code></li>
+</ul>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.PushoverNotification.retry" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">retry</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Literal</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">PushoverRetry</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.PushoverNotification.retry" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Interval to retry emergency alerts, in seconds.</p>
+<p>Minimum 30 seconds. Set to 0 to disable retrying emergency alerts.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.PushoverNotification.expire" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">expire</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">le</span><span class="o">=</span><span class="mi">86400</span><span class="p">)</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.PushoverNotification.expire" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Threshold for retrying emergency alerts, in seconds.
+If <code>retry</code> is set, this should be set to a higher value.</p>
+<p>Maximum 86400 seconds (1 day).</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.PushoverNotification.sound" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">sound</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.PushoverNotification.sound" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Notification sound to use on devices.</p>
+<p>Leave unset, blank or set to <code>None</code> to use the default.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="sendgrid">SendGrid<a class="headerlink" href="#sendgrid" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_prowlarr.config.settings.notifications.SendgridNotification"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr_prowlarr.config.settings.notifications.Notification">Notification</span></code></p>
+
+  
+      <p>Send media update and health alert emails via the SendGrid delivery service.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.SendgridNotification.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;sendgrid&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;sendgrid&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.SendgridNotification.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of connection.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.SendgridNotification.api_key" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">Password</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.SendgridNotification.api_key" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>API key to use to authenticate with SendGrid.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.SendgridNotification.from_address" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">from_address</span><span class="p">:</span> <span class="n">NameEmail</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.SendgridNotification.from_address" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Email address to send the mail as.</p>
+<p>RFC-5322 formatted mailbox addresses are also supported,
+e.g. <code>Prowlarr Notifications &lt;prowlarr@example.com&gt;</code>.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.SendgridNotification.recipient_addresses" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">recipient_addresses</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">NameEmail</span><span class="p">],</span> <span class="n">Field</span><span class="p">(</span><span class="n">min_items</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">unique_items</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.SendgridNotification.recipient_addresses" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The recipient email addresses of the notification mail.</p>
+<p>At least one recipient address is required.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="slack">Slack<a class="headerlink" href="#slack" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_prowlarr.config.settings.notifications.SlackNotification"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr_prowlarr.config.settings.notifications.Notification">Notification</span></code></p>
+
+  
+      <p>Send media update and health alert messages to a Slack channel.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.SlackNotification.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;slack&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;slack&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.SlackNotification.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of connection.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.SlackNotification.webhook_url" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">webhook_url</span><span class="p">:</span> <span class="n">AnyHttpUrl</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.SlackNotification.webhook_url" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Webhook URL for the Slack channel to send to.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.SlackNotification.username" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.SlackNotification.username" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Username to post as.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.SlackNotification.icon" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">icon</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.SlackNotification.icon" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The icon that is used for messages from this integration (emoji or URL).</p>
+<p>If unset, blank or set to <code>None</code>, use the default for the user.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.SlackNotification.channel" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">channel</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.SlackNotification.channel" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>If set, overrides the default channel in the webhook.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="telegram">Telegram<a class="headerlink" href="#telegram" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_prowlarr.config.settings.notifications.TelegramNotification"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr_prowlarr.config.settings.notifications.Notification">Notification</span></code></p>
+
+  
+      <p>Send media update and health alert messages to a Telegram chat room.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.TelegramNotification.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;telegram&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;telegram&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.TelegramNotification.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of connection.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.TelegramNotification.bot_token" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">bot_token</span><span class="p">:</span> <span class="n">Password</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.TelegramNotification.bot_token" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The bot token assigned to the Prowlarr instance.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.TelegramNotification.chat_id" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">chat_id</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.TelegramNotification.chat_id" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The ID of the chat room to send messages to.</p>
+<p>You must start a conversation with the bot or add it to your group to receive messages.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.TelegramNotification.send_silently" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">send_silently</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.TelegramNotification.send_silently" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Sends the message silently. Users will receive a notification with no sound.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="twitter">Twitter<a class="headerlink" href="#twitter" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_prowlarr.config.settings.notifications.TwitterNotification"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr_prowlarr.config.settings.notifications.Notification">Notification</span></code></p>
+
+  
+      <p>Send media update and health alert messages via Twitter.</p>
+<p>Twitter requires you to create an application for their API
+to generate the necessary keys and secrets.
+If unsure how to proceed, refer to these guides from
+<a href="https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret">Twitter</a>
+and <a href="https://wiki.servarr.com/useful-tools#twitter-connect">WikiArr</a>.</p>
+<p>Access tokens can be obtained using the prodecure documented <a href="https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens">here</a>.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.TwitterNotification.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;twitter&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;twitter&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.TwitterNotification.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of connection.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.TwitterNotification.consumer_key" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">consumer_key</span><span class="p">:</span> <span class="n">Password</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.TwitterNotification.consumer_key" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Consumer key from a Twitter application.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.TwitterNotification.consumer_secret" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">consumer_secret</span><span class="p">:</span> <span class="n">Password</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.TwitterNotification.consumer_secret" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Consumer key from a Twitter application.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.TwitterNotification.access_token" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">access_token</span><span class="p">:</span> <span class="n">Password</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.TwitterNotification.access_token" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Access token for a Twitter user.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.TwitterNotification.access_token_secret" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">access_token_secret</span><span class="p">:</span> <span class="n">Password</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.TwitterNotification.access_token_secret" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Access token secret for a Twitter user.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.TwitterNotification.mention" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">mention</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.TwitterNotification.mention" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Mention this user in sent tweets.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.TwitterNotification.direct_message" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">direct_message</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.TwitterNotification.direct_message" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Send a direct message instead of a public message.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="webhook">Webhook<a class="headerlink" href="#webhook" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_prowlarr.config.settings.notifications.WebhookNotification"></a>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="buildarr_prowlarr.config.settings.notifications.Notification">Notification</span></code></p>
+
+  
+      <p>Send media update and health alert notifications to a webhook API.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.WebhookNotification.type" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;webhook&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;webhook&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.WebhookNotification.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of connection.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.WebhookNotification.method" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">method</span><span class="p">:</span> <span class="n">WebhookMethod</span> <span class="o">=</span> <span class="n">WebhookMethod</span><span class="o">.</span><span class="n">POST</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.WebhookNotification.method" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>HTTP request method type to use.</p>
+<p>Values:</p>
+<ul>
+<li><code>POST</code></li>
+<li><code>PUT</code></li>
+</ul>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.WebhookNotification.username" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.WebhookNotification.username" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Webhook API username.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.notifications.WebhookNotification.password" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">password</span><span class="p">:</span> <span class="n">Password</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.notifications.WebhookNotification.password" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Webhook API password.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../../js/base.js" defer></script>
+        <script src="../../../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
