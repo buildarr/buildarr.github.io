@@ -636,41 +636,22 @@ or have not yet reached their cutoff.</p>
 
 
 
-<h5 id="buildarr_sonarr.config.indexers.Indexer.anime_standard_format_search" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">anime_standard_format_search</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+<h5 id="buildarr_sonarr.config.indexers.Indexer.priority" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">priority</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">le</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">alias</span><span class="o">=</span><span class="s1">&#39;indexer_priority&#39;</span><span class="p">)</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
-<a href="#buildarr_sonarr.config.indexers.Indexer.anime_standard_format_search" class="headerlink" title="Permanent link">#</a></h5>
-
-
-  <div class="doc doc-contents ">
-  
-      <p>Also search for anime using the standard numbering. Only applies for Anime series types.</p>
-  </div>
-
-</div>
-
-<div class="doc doc-object doc-attribute">
-
-
-
-<h5 id="buildarr_sonarr.config.indexers.Indexer.indexer_priority" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">indexer_priority</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">le</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span></code>
-  
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
-  </span>
-
-<a href="#buildarr_sonarr.config.indexers.Indexer.indexer_priority" class="headerlink" title="Permanent link">#</a></h5>
+<a href="#buildarr_sonarr.config.indexers.Indexer.priority" class="headerlink" title="Permanent link">#</a></h5>
 
 
   <div class="doc doc-contents ">
   
       <p>Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios.</p>
 <p>1 is highest priority and 50 is lowest priority.</p>
+<p><em>Changed in version 0.4.1</em>: Renamed from <code>indexer_priority</code> to <code>priority</code>.
+The original name is still available as an alias.</p>
   </div>
 
 </div>
@@ -790,6 +771,27 @@ Leave blank to use with all series.</p>
   <div class="doc doc-contents ">
   
       <p>A URL to a Fanzub compatible RSS feed.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_sonarr.config.indexers.FanzubIndexer.anime_standard_format_search" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">anime_standard_format_search</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_sonarr.config.indexers.FanzubIndexer.anime_standard_format_search" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Also search for anime using the standard numbering. Only applies for Anime series types.</p>
   </div>
 
 </div>
@@ -956,6 +958,27 @@ Define as empty to disable.</p>
 <li><code>TV-Anime</code></li>
 <li><code>TV-Documentary</code></li>
 </ul>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_sonarr.config.indexers.NewznabIndexer.anime_standard_format_search" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">anime_standard_format_search</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_sonarr.config.indexers.NewznabIndexer.anime_standard_format_search" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Also search for anime using the standard numbering. Only applies for Anime series types.</p>
   </div>
 
 </div>
@@ -1782,6 +1805,27 @@ you selected (HD, SD, x264, etc ...).</p>
 
 
 
+<h5 id="buildarr_sonarr.config.indexers.NyaaIndexer.anime_standard_format_search" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">anime_standard_format_search</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_sonarr.config.indexers.NyaaIndexer.anime_standard_format_search" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Also search for anime using the standard numbering. Only applies for Anime series types.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
 <h5 id="buildarr_sonarr.config.indexers.NyaaIndexer.additional_parameters" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">additional_parameters</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;&amp;cats=1_0&amp;filter=1&#39;</span></code>
   
@@ -2307,6 +2351,27 @@ Define as empty to disable.</p>
 <li><code>TV-Anime</code></li>
 <li><code>TV-Documentary</code></li>
 </ul>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_sonarr.config.indexers.TorznabIndexer.anime_standard_format_search" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">anime_standard_format_search</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_sonarr.config.indexers.TorznabIndexer.anime_standard_format_search" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Also search for anime using the standard numbering. Only applies for Anime series types.</p>
   </div>
 
 </div>

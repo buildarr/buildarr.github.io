@@ -260,6 +260,10 @@
             
             <li class="nav-item" data-level="1"><a href="#release-notes" class="nav-link">Release Notes</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#v011-2023-04-08" class="nav-link">v0.1.1 - 2023-04-08</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#v010-2023-04-08" class="nav-link">v0.1.0 - 2023-04-08</a>
               <ul class="nav flex-column">
               </ul>
@@ -272,6 +276,19 @@
                     <div class="col-md-9" role="main">
 
 <h1 id="release-notes">Release Notes<a class="headerlink" href="#release-notes" title="Permanent link">#</a></h1>
+<h2 id="v011-2023-04-08"><a href="https://github.com/buildarr/buildarr-prowlarr/releases/tag/v0.1.1">v0.1.1</a> - 2023-04-08<a class="headerlink" href="#v011-2023-04-08" title="Permanent link">#</a></h2>
+<p>This is a bugfix release to resolve problems with the first release, particularly when using Prowlarr to manage the indexers of Sonarr instances.</p>
+<ul>
+<li>Add an error message for when an invalid indexer type is provided</li>
+<li>Add mutual exclusion handling for the <code>category</code> and <code>directory</code> attributes in Transmission/Vuze download clients</li>
+<li>Fix updating app sync profiles</li>
+<li>Fix updating indexer proxies, download clients, application links and app sync profiles when not all type-specific resource values are defined in the configuration</li>
+<li>Require at least <a href="https://buildarr.github.io/plugins/sonarr/#v041-2023-04-08">version 0.4.1</a> of the Sonarr plugin for Buildarr, to fix bugs with instance linking</li>
+</ul>
+<h3 id="changed">Changed<a class="headerlink" href="#changed" title="Permanent link">#</a></h3>
+<ul>
+<li>Fix bugs from integration tests (<a href="https://github.com/buildarr/buildarr-prowlarr/pull/4">#4</a>)</li>
+</ul>
 <h2 id="v010-2023-04-08"><a href="https://github.com/buildarr/buildarr-prowlarr/releases/tag/v0.1.0">v0.1.0</a> - 2023-04-08<a class="headerlink" href="#v010-2023-04-08" title="Permanent link">#</a></h2>
 <p>First release of the Prowlarr plugin for Buildarr.</p></div>
             </div>
