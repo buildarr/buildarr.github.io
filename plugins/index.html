@@ -296,7 +296,8 @@
 <h2 id="supported-plugins">Supported plugins<a class="headerlink" href="#supported-plugins" title="Permanent link">#</a></h2>
 <p>At the time of this release the following plugins are available:</p>
 <ul>
-<li><a href="https://buildarr.github.io/plugins/sonarr">buildarr-sonarr</a> - <a href="https://sonarr.tv">Sonarr</a> PVR for TV shows</li>
+<li><a href="https://buildarr.github.io/plugins/sonarr"><code>buildarr-sonarr</code></a> - <a href="https://sonarr.tv">Sonarr</a> PVR for TV shows</li>
+<li><a href="https://buildarr.github.io/plugins/prowlarr"><code>buildarr-prowlarr</code></a> - <a href="https://prowlarr.com">Prowlarr</a> indexer manager for Arr applications</li>
 </ul>
 <h2 id="installing-plugins-for-a-standalone-application">Installing plugins for a standalone application<a class="headerlink" href="#installing-plugins-for-a-standalone-application" title="Permanent link">#</a></h2>
 <p>As Buildarr plugins are standard Python packages, they can simply be installed using <code>pip install</code> into the environment Buildarr is installed into, and Buildarr will automatically load them.</p>
@@ -309,6 +310,12 @@
 <p><code>$BUILDARR_INSTALL_PACKAGES</code> is a space-separated list of packages that gets passed directly to <code>pip install</code> on container startup, ensuring that any defined packages are ready before Buildarr starts running.</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>buildarr<span class="w"> </span>--restart<span class="o">=</span>always<span class="w"> </span>-v<span class="w"> </span>/path/to/config:/config<span class="w"> </span>-e<span class="w"> </span><span class="nv">PUID</span><span class="o">=</span>&lt;PUID&gt;<span class="w"> </span>-e<span class="w"> </span><span class="nv">PGID</span><span class="o">=</span>&lt;PGID&gt;<span class="w"> </span>-e<span class="w"> </span><span class="nv">BUILDARR_INSTALL_PLUGINS</span><span class="o">=</span><span class="s2">&quot;buildarr-sonarr&quot;</span><span class="w"> </span>callum027/buildarr:latest
 </code></pre></div>
+<p>If you would like to upgrade Buildarr itself or the bundled plugins within the container, set the following environment variables to the version you would like to install:</p>
+<ul>
+<li><code>$BUILDARR_VERSION</code></li>
+<li><code>$BUILDARR_SONARR_VERSION</code></li>
+<li><code>$BUILDARR_PROWLARR_VERSION</code></li>
+</ul>
 <p>For more information on installing Buildarr as a Docker container, see the <a href="../installation/#docker">Docker installation instructions</a>.</p></div>
             </div>
         </div>

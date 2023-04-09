@@ -308,6 +308,11 @@ $<span class="w"> </span>python3<span class="w"> </span>-m<span class="w"> </spa
 <p>Buildarr is available on Docker Hub as a Docker image.</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>docker<span class="w"> </span>pull<span class="w"> </span>callum027/buildarr:latest
 </code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Because the Docker container is a bundle of packages consisting of Buildarr and implementing plugins, it has a separate version number from Buildarr itself.</p>
+<p>For more information, check out the <a href="https://hub.docker.com/r/callum027/buildarr">Docker Hub page</a> for the Buildarr Docker container.</p>
+</div>
 <p>Once you have a configuration file, create a folder to store the configuration and auto-generated secrets files to mount into the Docker container.</p>
 <p>As API keys and login credentials are to be stored here, they should have strict permissions set, with ownership exclusively
 set to the <code>PUID</code> (process user ID) and <code>PGID</code> (process group ID) to be configured on the container.</p>
@@ -321,7 +326,7 @@ $<span class="w"> </span>sudo<span class="w"> </span>chown<span class="w"> </spa
 <p>For configuration testing purposes, you can call <code>buildarr run</code> using the Docker image to run an update of your stack and exit.</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>-v<span class="w"> </span>/path/to/config:/config<span class="w"> </span>-e<span class="w"> </span><span class="nv">PUID</span><span class="o">=</span>&lt;PUID&gt;<span class="w"> </span>-e<span class="w"> </span><span class="nv">PGID</span><span class="o">=</span>&lt;PGID&gt;<span class="w"> </span>callum027/buildarr:latest<span class="w"> </span>run
 </code></pre></div>
-<p>The Docker container for Buildarr is bundled with the Sonarr plugin, so Sonarr instances can be managed out of the box.</p>
+<p>The Docker container for Buildarr is bundled with the <a href="https://buildarr.github.io/plugins/sonarr">Sonarr plugin</a> and the <a href="https://buildarr.github.io/plugins/prowlarr">Prowlarr plugin</a>, so instances of those types can be managed out of the box.</p>
 <p>If you would like to install external plugins into the Docker container, see <a href="../plugins/#installing-plugins-into-the-docker-container">Installing plugins into the Docker container</a>.</p>
 <h2 id="docker-compose">Docker Compose<a class="headerlink" href="#docker-compose" title="Permanent link">#</a></h2>
 <p>Buildarr can be integrated into a Docker Compose environment containing your *Arr stack instances. <code>depends_on</code> should be used to ensure Docker Compose services are started in the correct order.</p>

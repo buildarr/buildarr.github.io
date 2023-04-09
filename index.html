@@ -311,7 +311,7 @@
 </ul>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">#</a></h2>
 <p>Buildarr is available on Docker Hub as a Docker image.</p>
-<p>A plugin for Sonarr is bundled into the official Docker container for Buildarr, so you can manage Sonarr instances right away.</p>
+<p>Plugins for Sonarr and Prowlarr are bundled into the official Docker container for Buildarr, so you can manage instances of those types right away.</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>docker<span class="w"> </span>pull<span class="w"> </span>callum027/buildarr:latest
 </code></pre></div>
 <p>Buildarr can also be installed using <code>pip</code>. Python 3.8 or later is required. Windows is natively supported.</p>
@@ -327,6 +327,7 @@ $<span class="w"> </span>python3<span class="w"> </span>-m<span class="w"> </spa
 <p>At the time of this release the following plugins are available:</p>
 <ul>
 <li><a href="https://buildarr.github.io/plugins/sonarr"><code>buildarr-sonarr</code></a> - <a href="https://sonarr.tv">Sonarr</a> PVR for TV shows</li>
+<li><a href="https://buildarr.github.io/plugins/prowlarr"><code>buildarr-prowlarr</code></a> - <a href="https://prowlarr.com">Prowlarr</a> indexer manager for Arr applications</li>
 </ul>
 <p>For more information on installing plugins, check the <a href="plugins/">plugin documentation</a>.</p>
 <h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">#</a></h2>
@@ -435,9 +436,8 @@ After this initial run, Buildarr will wake up at the scheduled times to periodic
 <li>Create plugins for the following applications:<ul>
 <li>Sonarr V4</li>
 <li>Radarr</li>
-<li>Prowlarr</li>
+<li>Prowlarr (now available as <a href="https://buildarr.github.io/plugins/prowlarr"><code>buildarr-prowlarr</code></a>)</li>
 <li>Bazarr</li>
-<li>FlareSolverr</li>
 <li>Unmanic</li>
 <li>Tdarr (maybe)</li>
 <li>Unpackerr</li>
@@ -569,5 +569,5 @@ After this initial run, Buildarr will wake up at the scheduled times to periodic
 
 <!--
 MkDocs version : 1.4.2
-Build Date UTC : 2023-04-08 11:04:45.891405+00:00
+Build Date UTC : 2023-04-09 01:11:56.581407+00:00
 -->
