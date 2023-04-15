@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Introduction - Buildarr</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link href="../../assets/_mkdocstrings.css" rel="stylesheet">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Buildarr</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Release Notes <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../release-notes/" class="dropdown-item">Buildarr Core</a>
+</li>
+                                    
+<li>
+    <a href="../sonarr/release-notes/" class="dropdown-item">Buildarr Sonarr Plugin</a>
+</li>
+                                    
+<li>
+    <a href="../prowlarr/release-notes/" class="dropdown-item">Buildarr Prowlarr Plugin</a>
+</li>
+                                    
+<li>
+    <a href="release-notes/" class="dropdown-item">Buildarr Jellyseerr Plugin</a>
+</li>
+                                    
+<li>
+    <a href="../../docker/release-notes/" class="dropdown-item">Buildarr Docker Container</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../installation/" class="nav-link">Installation</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../configuration/" class="nav-link">Configuration</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Plugins <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../" class="dropdown-item">Introduction</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Buildarr Sonarr Plugin</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../sonarr/" class="dropdown-item">Introduction</a>
+</li>
+            
+<li>
+    <a href="../sonarr/release-notes/" class="dropdown-item">Release Notes</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Configuration</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../sonarr/configuration/host/" class="dropdown-item">Host Configuration</a>
+</li>
+            
+<li>
+    <a href="../sonarr/configuration/media-management/" class="dropdown-item">Media Management</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Profiles</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../sonarr/configuration/profiles/quality/" class="dropdown-item">Quality Profiles</a>
+</li>
+            
+<li>
+    <a href="../sonarr/configuration/profiles/language/" class="dropdown-item">Language Profiles</a>
+</li>
+            
+<li>
+    <a href="../sonarr/configuration/profiles/delay/" class="dropdown-item">Delay Profiles</a>
+</li>
+            
+<li>
+    <a href="../sonarr/configuration/profiles/release/" class="dropdown-item">Release Profiles</a>
+</li>
+    </ul>
+  </li>
+            
+<li>
+    <a href="../sonarr/configuration/quality/" class="dropdown-item">Quality</a>
+</li>
+            
+<li>
+    <a href="../sonarr/configuration/indexers/" class="dropdown-item">Indexers</a>
+</li>
+            
+<li>
+    <a href="../sonarr/configuration/download-clients/" class="dropdown-item">Download Clients</a>
+</li>
+            
+<li>
+    <a href="../sonarr/configuration/import-lists/" class="dropdown-item">Import Lists</a>
+</li>
+            
+<li>
+    <a href="../sonarr/configuration/connect/" class="dropdown-item">Connect</a>
+</li>
+            
+<li>
+    <a href="../sonarr/configuration/metadata/" class="dropdown-item">Metadata</a>
+</li>
+            
+<li>
+    <a href="../sonarr/configuration/tags/" class="dropdown-item">Tags</a>
+</li>
+            
+<li>
+    <a href="../sonarr/configuration/general/" class="dropdown-item">General</a>
+</li>
+            
+<li>
+    <a href="../sonarr/configuration/ui/" class="dropdown-item">UI</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Buildarr Prowlarr Plugin</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../prowlarr/" class="dropdown-item">Introduction</a>
+</li>
+            
+<li>
+    <a href="../prowlarr/release-notes/" class="dropdown-item">Release Notes</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Configuration</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../prowlarr/configuration/host/" class="dropdown-item">Host Configuration</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Settings</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Indexers</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../prowlarr/configuration/settings/indexers/indexers/" class="dropdown-item">Indexers</a>
+</li>
+            
+<li>
+    <a href="../prowlarr/configuration/settings/indexers/proxies/" class="dropdown-item">Proxies</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Apps</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../prowlarr/configuration/settings/apps/applications/" class="dropdown-item">Applications</a>
+</li>
+            
+<li>
+    <a href="../prowlarr/configuration/settings/apps/sync-profiles/" class="dropdown-item">Sync Profiles</a>
+</li>
+    </ul>
+  </li>
+            
+<li>
+    <a href="../prowlarr/configuration/settings/download-clients/" class="dropdown-item">Download Clients</a>
+</li>
+            
+<li>
+    <a href="../prowlarr/configuration/settings/notifications/" class="dropdown-item">Notifications</a>
+</li>
+            
+<li>
+    <a href="../prowlarr/configuration/settings/tags/" class="dropdown-item">Tags</a>
+</li>
+            
+<li>
+    <a href="../prowlarr/configuration/settings/general/" class="dropdown-item">General</a>
+</li>
+            
+<li>
+    <a href="../prowlarr/configuration/settings/ui/" class="dropdown-item">UI</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Buildarr Jellyseerr Plugin</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="./" class="dropdown-item active">Introduction</a>
+</li>
+            
+<li>
+    <a href="release-notes/" class="dropdown-item">Release Notes</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Configuration</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="configuration/host/" class="dropdown-item">Host Configuration</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Settings</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="configuration/settings/general/" class="dropdown-item">General</a>
+</li>
+            
+<li>
+    <a href="configuration/settings/users/" class="dropdown-item">Users</a>
+</li>
+            
+<li>
+    <a href="configuration/settings/jellyfin/" class="dropdown-item">Jellyfin</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Services</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="configuration/settings/services/sonarr/" class="dropdown-item">Sonarr</a>
+</li>
+            
+<li>
+    <a href="configuration/settings/services/radarr/" class="dropdown-item">Radarr</a>
+</li>
+    </ul>
+  </li>
+            
+<li>
+    <a href="configuration/settings/notifications/" class="dropdown-item">Notifications</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../usage/" class="nav-link">Usage</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="https://github.com/buildarr/buildarr" class="nav-link">GitHub</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../prowlarr/configuration/settings/ui/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="release-notes/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#buildarr-jellyseerr-plugin" class="nav-link">Buildarr Jellyseerr Plugin</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#installation" class="nav-link">Installation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#quick-start" class="nav-link">Quick Start</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#configuring-your-jellyseerr-instance" class="nav-link">Configuring your Jellyseerr instance</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#dumping-an-existing-jellyseerr-instance-configuration" class="nav-link">Dumping an existing Jellyseerr instance configuration</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="buildarr-jellyseerr-plugin">Buildarr Jellyseerr Plugin<a class="headerlink" href="#buildarr-jellyseerr-plugin" title="Permanent link">#</a></h1>
+<p><a href="https://pypi.org/project/buildarr-jellyseerr"><img alt="PyPI" src="https://img.shields.io/pypi/v/buildarr-jellyseerr" /></a> <img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/buildarr-jellyseerr" />  <a href="https://github.com/buildarr/buildarr-jellyseerr/blob/main/LICENSE"><img alt="GitHub" src="https://img.shields.io/github/license/buildarr/buildarr-jellyseerr" /></a> <img alt="Pre-commit hooks" src="https://github.com/buildarr/buildarr-jellyseerr/actions/workflows/pre-commit.yml/badge.svg" /> <a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg" /></a></p>
+<p>The Buildarr Jellyseerr plugin (<code>buildarr-jellyseerr</code>) is a plugin for Buildarr that adds the capability to configure and manage <a href="https://github.com/Fallenbagel/jellyseerr">Jellyseerr</a> instances.</p>
+<p>Jellyseerr is an application that links with both Jellyfin/Plex and your Sonarr/Radarr instances. It allows your users to login using their Jellyfin/Plex credentials, browse available media online, and make media requests for new content.</p>
+<p>Once these requests are approved, Jellyseerr will then make the requests to Sonarr/Radarr to download them, monitor the progress, and report back to the user when the media is available in Jellyfin/Plex.</p>
+<p>Buildarr can be used to initialise a new Jellyseerr install with Jellyfin server credentials (Plex is not supported at this time), manage the Jellyseerr server settings, and connect it with Sonarr and Radarr servers.</p>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">#</a></h2>
+<p>When using Buildarr as a <a href="https://buildarr.github.io/installation/#standalone-application">standalone application</a>, the Jellyseerr plugin can simply be installed using <code>pip</code>:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>buildarr<span class="w"> </span>buildarr-jellyseerr
+</code></pre></div>
+<p>If you are linking a Jellyseerr instance with another Buildarr-configured Sonarr instance, use the <code>sonarr</code> extra to also install a compatible version of the Sonarr plugin.</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>buildarr<span class="w"> </span>buildarr-jellyseerr<span class="o">[</span>sonarr<span class="o">]</span>
+</code></pre></div>
+<p>When using Buildarr as a <a href="https://buildarr.github.io/installation/#docker">Docker container</a>, the Jellyseerr plugin is bundled with the official container (<code>callum027/buildarr</code>), so there is no need to install it separately.</p>
+<p>You can upgrade or pin the version of the plugin to a specific version within the container by setting the <code>$BUILDARR_JELLYSEERR_VERSION</code> environment variable in the <code>docker run</code> command using <code>--env</code>/<code>-e</code>:</p>
+<div class="highlight"><pre><span></span><code>-e<span class="w"> </span><span class="nv">BUILDARR_JELLYSEERR_VERSION</span><span class="o">=</span><span class="s2">&quot;&lt;version&gt;&quot;</span>
+</code></pre></div>
+<h2 id="quick-start">Quick Start<a class="headerlink" href="#quick-start" title="Permanent link">#</a></h2>
+<p>Brand new Jellyseerr instances require initialisation for Buildarr to be able to manage it.</p>
+<p>This is usually done manually by navigating to <code>http://localhost:5055/setup</code> on the Jellyseerr host, logging in with Jellyfin or Plex credentials, and then selecting libraries to monitor.</p>
+<p>As of this release, automatically initialising Jellyseerr for Plex is not yet supported. Please initialise the Jellyseerr instance manually.</p>
+<p>For Jellyseerr instances being connected to Jellyfin only, Buildarr can perform this initialisation automatically.</p>
+<p>To do this, set the following parameters under the <code>jellyfin</code> configuration section, which are required when initialisting a new instance (they are otherwise optional):</p>
+<div class="highlight"><pre><span></span><code><span class="nn">---</span>
+
+<span class="nt">jellyseerr</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">hostname</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;localhost&quot;</span>
+<span class="w">  </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5055</span>
+<span class="w">  </span><span class="nt">protocol</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;http&quot;</span>
+<span class="w">  </span><span class="nt">api_key</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;API</span><span class="nv"> </span><span class="s">key&gt;&quot;</span><span class="w">  </span><span class="c1"># Required. Check `settings.json` in the config volume to get the value.</span>
+<span class="w">  </span><span class="nt">settings</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">jellyfin</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">server_url</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;http://localhost:8096&quot;</span><span class="w">  </span><span class="c1"># Jellyfin server URL, preferably direct (no proxy).</span>
+<span class="w">      </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;admin&quot;</span><span class="w">  </span><span class="c1"># Jellyfin server admin user.</span>
+<span class="w">      </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;secure-password&quot;</span><span class="w">  </span><span class="c1"># Jellyfin server admin user password.</span>
+<span class="w">      </span><span class="nt">email_address</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;admin@example.com&quot;</span><span class="w">  </span><span class="c1"># Jellyfin server admin email address.</span>
+<span class="w">      </span><span class="c1"># Jellyfin media libraries to monitor.</span>
+<span class="w">      </span><span class="c1"># This can be used to change what libraries Jellyseerr monitors,</span>
+<span class="w">      </span><span class="c1"># even after it is initialised.</span>
+<span class="w">      </span><span class="nt">libraries</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;Shows&quot;</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;Movies&quot;</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;Anime&quot;</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;Anime</span><span class="nv"> </span><span class="s">Movies&quot;</span>
+</code></pre></div>
+<p>After that, configure and run Buildarr as normal, and setup desired settings for Jellyseerr.</p>
+<p>For more information on configuring Jellyseerr, see <a href="#configuring-your-jellyseerr-instance">Configuring your Jellyseerr instance</a>.</p>
+<p>Once you have a complete configuration file, test it against the Jellyseerr instance using <code>buildarr run</code>.</p>
+<p>The output should contain messages about checking, performing and finishing the initialisation. If no errors were found, congratulations, your Jellyseerr instance is now managed by Buildarr!</p>
+<div class="highlight"><pre><span></span><code>2023-04-15 09:44:20,386 buildarr:1 buildarr.cli.run [INFO] Buildarr version 0.4.2 (log level: INFO)
+2023-04-15 09:44:20,386 buildarr:1 buildarr.cli.run [INFO] Loading configuration file &#39;/config/buildarr.yml&#39;
+2023-04-15 09:44:20,458 buildarr:1 buildarr.cli.run [INFO] Finished loading configuration file
+2023-04-15 09:44:20,461 buildarr:1 buildarr.cli.run [INFO] Loaded plugins: jellyseerr (0.1.0), prowlarr (0.1.1), sonarr (0.4.1)
+2023-04-15 09:44:20,461 buildarr:1 buildarr.cli.run [INFO] Loading instance configurations
+2023-04-15 09:44:20,464 buildarr:1 buildarr.cli.run [INFO] Finished loading instance configurations
+2023-04-15 09:44:20,464 buildarr:1 buildarr.cli.run [INFO] Running with plugins: sonarr, jellyseerr
+2023-04-15 09:44:20,464 buildarr:1 buildarr.cli.run [INFO] Resolving instance dependencies
+2023-04-15 09:44:20,464 buildarr:1 buildarr.cli.run [INFO] Finished resolving instance dependencies
+2023-04-15 09:44:20,464 buildarr:1 buildarr.cli.run [INFO] Rendering instance configuration dynamic attributes
+2023-04-15 09:44:20,465 buildarr:1 buildarr.cli.run [INFO] Finished rendering instance configuration dynamic attributes
+2023-04-15 09:44:20,599 buildarr:1 buildarr.cli.run [INFO] &lt;jellyseerr&gt; (default) Instance has not been initialised
+2023-04-15 09:44:20,600 buildarr:1 buildarr.cli.run [INFO] &lt;jellyseerr&gt; (default) Initialising instance
+2023-04-15 09:44:20,600 buildarr:1 buildarr_jellyseerr.config.settings.jellyfin [INFO] &lt;jellyseerr&gt; (default) Checking if required attributes are defined
+2023-04-15 09:44:20,600 buildarr:1 buildarr_jellyseerr.config.settings.jellyfin [INFO] &lt;jellyseerr&gt; (default) Finished checking if required attributes are defined
+2023-04-15 09:44:20,600 buildarr:1 buildarr_jellyseerr.config.settings.jellyfin [INFO] &lt;jellyseerr&gt; (default) Authenticating Jellyseerr with Jellyfin
+2023-04-15 09:44:20,842 buildarr:1 buildarr_jellyseerr.config.settings.jellyfin [INFO] &lt;jellyseerr&gt; (default) Finished authenticating Jellyseerr with Jellyfin
+2023-04-15 09:44:20,842 buildarr:1 buildarr_jellyseerr.config.settings.jellyfin [INFO] &lt;jellyseerr&gt; (default) Syncing Jellyfin libraries to Jellyseerr
+2023-04-15 09:44:21,027 buildarr:1 buildarr_jellyseerr.config.settings.jellyfin [INFO] &lt;jellyseerr&gt; (default) Finished syncing Jellyfin libraries to Jellyseerr
+2023-04-15 09:44:21,027 buildarr:1 buildarr_jellyseerr.config.settings.jellyfin [INFO] &lt;jellyseerr&gt; (default) Enabling Jellyfin libraries in Jellyseerr: &#39;TV Shows&#39;
+2023-04-15 09:44:21,083 buildarr:1 buildarr_jellyseerr.config.settings.jellyfin [INFO] &lt;jellyseerr&gt; (default) Finished enabling Jellyfin libraries in Jellyseerr
+2023-04-15 09:44:21,083 buildarr:1 buildarr_jellyseerr.config.settings.jellyfin [INFO] &lt;jellyseerr&gt; (default) Finalising initialisation
+2023-04-15 09:44:21,191 buildarr:1 buildarr_jellyseerr.config.settings.jellyfin [INFO] &lt;jellyseerr&gt; (default) Finished finalising initialisation
+2023-04-15 09:44:21,192 buildarr:1 buildarr.cli.run [INFO] &lt;jellyseerr&gt; (default) Finished initialising instance
+2023-04-15 09:44:21,192 buildarr:1 buildarr.cli.run [INFO] Loading secrets file from &#39;/config/secrets.json&#39;
+2023-04-15 09:44:21,196 buildarr:1 buildarr.cli.run [INFO] Finished loading secrets file
+2023-04-15 09:44:21,196 buildarr:1 buildarr.cli.run [INFO] &lt;sonarr&gt; (default) Checking secrets
+2023-04-15 09:44:21,201 buildarr:1 buildarr.cli.run [INFO] &lt;sonarr&gt; (default) Connection test successful using cached secrets
+2023-04-15 09:44:21,201 buildarr:1 buildarr.cli.run [INFO] &lt;sonarr&gt; (default) Finished checking secrets
+2023-04-15 09:44:21,201 buildarr:1 buildarr.cli.run [INFO] &lt;jellyseerr&gt; (default) Checking secrets
+2023-04-15 09:44:21,223 buildarr:1 buildarr.cli.run [INFO] &lt;jellyseerr&gt; (default) Connection test failed using cached secrets (or not cached), fetching secrets
+2023-04-15 09:44:21,231 buildarr:1 buildarr.cli.run [INFO] &lt;jellyseerr&gt; (default) Connection test successful using fetched secrets
+2023-04-15 09:44:21,231 buildarr:1 buildarr.cli.run [INFO] &lt;jellyseerr&gt; (default) Finished checking secrets
+2023-04-15 09:44:21,231 buildarr:1 buildarr.cli.run [INFO] Saving updated secrets file to &#39;/config/secrets.json&#39;
+2023-04-15 09:44:21,232 buildarr:1 buildarr.cli.run [INFO] Finished saving updated secrets file
+2023-04-15 09:44:21,232 buildarr:1 buildarr.cli.run [INFO] Updating configuration on remote instances
+2023-04-15 09:44:21,232 buildarr:1 buildarr.cli.run [INFO] &lt;sonarr&gt; (default) Fetching remote configuration to check if updates are required
+2023-04-15 09:44:21,363 buildarr:1 buildarr.cli.run [INFO] &lt;sonarr&gt; (default) Finished fetching remote configuration
+2023-04-15 09:44:21,402 buildarr:1 buildarr.cli.run [INFO] &lt;sonarr&gt; (default) Updating remote configuration
+2023-04-15 09:44:21,491 buildarr:1 buildarr.cli.run [INFO] &lt;sonarr&gt; (default) Remote configuration is up to date
+2023-04-15 09:44:21,491 buildarr:1 buildarr.cli.run [INFO] &lt;sonarr&gt; (default) Finished updating remote configuration
+2023-04-15 09:44:21,491 buildarr:1 buildarr.cli.run [INFO] &lt;jellyseerr&gt; (default) Fetching remote configuration to check if updates are required
+2023-04-15 09:44:22,496 buildarr:1 buildarr.cli.run [INFO] &lt;jellyseerr&gt; (default) Finished fetching remote configuration
+2023-04-15 09:44:22,507 buildarr:1 buildarr.cli.run [INFO] &lt;jellyseerr&gt; (default) Updating remote configuration
+2023-04-15 09:44:22,629 buildarr:1 buildarr.cli.run [INFO] &lt;jellyseerr&gt; (default) Remote configuration successfully updated
+2023-04-15 09:44:22,629 buildarr:1 buildarr.cli.run [INFO] &lt;jellyseerr&gt; (default) Finished updating remote configuration
+2023-04-15 09:44:22,629 buildarr:1 buildarr.cli.run [INFO] Finished updating configuration on remote instances
+2023-04-15 09:44:22,629 buildarr:1 buildarr.cli.run [INFO] Deleting unmanaged/unused resources on remote instances
+2023-04-15 09:44:22,630 buildarr:1 buildarr.cli.run [INFO] &lt;jellyseerr&gt; (default) Refetching remote configuration to delete unused resources
+2023-04-15 09:44:22,735 buildarr:1 buildarr.cli.run [INFO] &lt;jellyseerr&gt; (default) Finished refetching remote configuration
+2023-04-15 09:44:22,749 buildarr:1 buildarr.cli.run [INFO] &lt;jellyseerr&gt; (default) Deleting unmanaged/unused resources on the remote instance
+2023-04-15 09:44:22,760 buildarr:1 buildarr.cli.run [INFO] &lt;jellyseerr&gt; (default) Remote configuration is clean
+2023-04-15 09:44:22,760 buildarr:1 buildarr.cli.run [INFO] &lt;jellyseerr&gt; (default) Finished deleting unmanaged/unused resources on the remote instance
+2023-04-15 09:44:22,760 buildarr:1 buildarr.cli.run [INFO] &lt;sonarr&gt; (default) Refetching remote configuration to delete unused resources
+2023-04-15 09:44:22,874 buildarr:1 buildarr.cli.run [INFO] &lt;sonarr&gt; (default) Finished refetching remote configuration
+2023-04-15 09:44:22,909 buildarr:1 buildarr.cli.run [INFO] &lt;sonarr&gt; (default) Deleting unmanaged/unused resources on the remote instance
+2023-04-15 09:44:22,910 buildarr:1 buildarr.cli.run [INFO] &lt;sonarr&gt; (default) Remote configuration is clean
+2023-04-15 09:44:22,910 buildarr:1 buildarr.cli.run [INFO] &lt;sonarr&gt; (default) Finished deleting unmanaged/unused resources on the remote instance
+2023-04-15 09:44:22,910 buildarr:1 buildarr.cli.run [INFO] Finished deleting unmanaged/unused resources on remote instances
+</code></pre></div>
+<h2 id="configuring-your-jellyseerr-instance">Configuring your Jellyseerr instance<a class="headerlink" href="#configuring-your-jellyseerr-instance" title="Permanent link">#</a></h2>
+<p>The following sections cover all of the possible configuration attributes for a Jellyseerr instance.</p>
+<ul>
+<li><a href="configuration/host/">Host Configuration</a></li>
+<li>Settings<ul>
+<li><a href="configuration/settings/general/">General</a></li>
+<li><a href="configuration/settings/users/">Users</a></li>
+<li><a href="configuration/settings/jellyfin/">Jellyfin</a></li>
+<li>Services<ul>
+<li><a href="configuration/settings/services/sonarr/">Sonarr</a></li>
+<li><a href="configuration/settings/services/radarr/">Radarr</a></li>
+</ul>
+</li>
+<li><a href="configuration/settings/notifications/">Notifications</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="dumping-an-existing-jellyseerr-instance-configuration">Dumping an existing Jellyseerr instance configuration<a class="headerlink" href="#dumping-an-existing-jellyseerr-instance-configuration" title="Permanent link">#</a></h2>
+<p>Buildarr is capable of dumping a running Jellyseerr instance's configuration.</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>buildarr<span class="w"> </span>jellyseerr<span class="w"> </span>dump-config<span class="w"> </span>http://localhost:5055<span class="w"> </span>&gt;<span class="w"> </span>jellyseerr.yml
+Jellyseerr<span class="w"> </span>instance<span class="w"> </span>API<span class="w"> </span>key:<span class="w"> </span>&lt;Paste<span class="w"> </span>API<span class="w"> </span>key<span class="w"> </span>here&gt;
+</code></pre></div>
+<p>The dumped YAML object can be placed directly under the <code>jellyseerr</code> configuration block, or used as an <a href="https://buildarr.github.io/configuration/#multiple-instances-of-the-same-type">instance-specific configuration</a>.</p>
+<p>All possible values are explicitly defined in this dumped configuration.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">hostname</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">localhost</span>
+<span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5055</span>
+<span class="nt">protocol</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http</span>
+<span class="nt">api_key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AbCdEfGhIjKlMnOpQrStUvWxYzaBcDeFgHiJkLmNoPqRsTuVwXyZ123456789012345=</span>
+<span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fallenbagel/jellyseerr</span>
+<span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.4.1</span>
+<span class="nt">settings</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">general</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">application_title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Jellyseerr</span>
+<span class="w">    </span><span class="nt">application_url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">    </span><span class="nt">enable_proxy_support</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">enable_csrf_protection</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">enable_image_caching</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">display_language</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">en</span>
+<span class="w">    </span><span class="nt">discover_region</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;&#39;</span>
+<span class="w">    </span><span class="nt">discover_languages</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">en</span>
+<span class="w">    </span><span class="nt">hide_available_media</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">allow_partial_series_requests</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">jellyfin</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">server_url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">    </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">    </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">    </span><span class="nt">email_address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">    </span><span class="nt">external_url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">    </span><span class="nt">libraries</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TV Shows</span>
+<span class="w">  </span><span class="nt">users</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">enable_local_signin</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">enable_new_jellyfin_signin</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">global_movie_request_limit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">global_movie_request_days</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7</span>
+<span class="w">    </span><span class="nt">global_series_request_limit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">global_series_request_days</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7</span>
+<span class="w">    </span><span class="nt">default_permissions</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">request</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">request-4k</span>
+<span class="w">  </span><span class="nt">services</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">radarr</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">delete_unmanaged</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">      </span><span class="nt">definitions</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
+<span class="w">    </span><span class="nt">sonarr</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">delete_unmanaged</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">      </span><span class="nt">definitions</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">Sonarr</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">is_default_server</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">          </span><span class="nt">is_4k_server</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">          </span><span class="nt">hostname</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">localhost</span>
+<span class="w">          </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8989</span>
+<span class="w">          </span><span class="nt">use_ssl</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">          </span><span class="nt">url_base</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">          </span><span class="nt">external_url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://localhost:8989</span>
+<span class="w">          </span><span class="nt">enable_scan</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">          </span><span class="nt">enable_automatic_search</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">          </span><span class="nt">instance_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">          </span><span class="nt">api_key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1a2b3c4d5e6f1a2b3c4d5e6f1a2b3c4d</span>
+<span class="w">          </span><span class="nt">root_folder</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/data/media/tv</span>
+<span class="w">          </span><span class="nt">quality_profile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TV Shows</span>
+<span class="w">          </span><span class="nt">language_profile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">English</span>
+<span class="w">          </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<span class="w">          </span><span class="nt">anime_root_folder</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">          </span><span class="nt">anime_quality_profile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">          </span><span class="nt">anime_language_profile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">          </span><span class="nt">anime_tags</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<span class="w">          </span><span class="nt">enable_season_folders</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">notifications</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">discord</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">      </span><span class="nt">notification_types</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<span class="w">      </span><span class="nt">webhook_url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">      </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">      </span><span class="nt">avatar_url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">      </span><span class="nt">enable_mentions</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">email</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">      </span><span class="nt">require_user_email</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">      </span><span class="nt">sender_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Jellyseerr</span>
+<span class="w">      </span><span class="nt">sender_address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">      </span><span class="nt">smtp_host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">      </span><span class="nt">smtp_port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">587</span>
+<span class="w">      </span><span class="nt">encryption_method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">starttls-prefer</span>
+<span class="w">      </span><span class="nt">allow_selfsigned_certificates</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">      </span><span class="nt">smtp_username</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">      </span><span class="nt">smtp_password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">      </span><span class="nt">pgp_private_key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">      </span><span class="nt">pgp_password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">    </span><span class="nt">gotify</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">      </span><span class="nt">notification_types</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<span class="w">      </span><span class="nt">server_url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">      </span><span class="nt">access_token</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">    </span><span class="nt">lunasea</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">      </span><span class="nt">notification_types</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<span class="w">      </span><span class="nt">webhook_url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">      </span><span class="nt">profile_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">    </span><span class="nt">pushbullet</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">      </span><span class="nt">notification_types</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<span class="w">      </span><span class="nt">access_token</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">      </span><span class="nt">channel_tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">    </span><span class="nt">pushover</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">      </span><span class="nt">notification_types</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<span class="w">      </span><span class="nt">api_key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">      </span><span class="nt">user_key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">    </span><span class="nt">slack</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">      </span><span class="nt">notification_types</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<span class="w">      </span><span class="nt">webhook_url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">    </span><span class="nt">telegram</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">      </span><span class="nt">notification_types</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<span class="w">      </span><span class="nt">access_token</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">      </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">      </span><span class="nt">chat_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">      </span><span class="nt">send_silently</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">webhook</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">      </span><span class="nt">notification_types</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<span class="w">      </span><span class="nt">webhook_url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">      </span><span class="nt">authorization_header</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">      </span><span class="nt">payload_template</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{\n</span><span class="nv">    </span><span class="s">\&quot;notification_type\&quot;:</span><span class="nv"> </span><span class="s">\&quot;{{notification_type}}\&quot;,\n\</span>
+<span class="w">        </span><span class="s">\ </span><span class="nv">   </span><span class="s">\&quot;event\&quot;:</span><span class="nv"> </span><span class="s">\&quot;{{event}}\&quot;,\n</span><span class="nv">    </span><span class="s">\&quot;subject\&quot;:</span><span class="nv"> </span><span class="s">\&quot;{{subject}}\&quot;,\n</span><span class="nv">    </span><span class="s">\&quot;\</span>
+<span class="w">        </span><span class="s">message\&quot;:</span><span class="nv"> </span><span class="s">\&quot;{{message}}\&quot;,\n</span><span class="nv">    </span><span class="s">\&quot;image\&quot;:</span><span class="nv"> </span><span class="s">\&quot;{{image}}\&quot;,\n</span><span class="nv">    </span><span class="s">\&quot;{{media}}\&quot;\</span>
+<span class="w">        </span><span class="s">:</span><span class="nv"> </span><span class="s">{\n</span><span class="nv">        </span><span class="s">\&quot;media_type\&quot;:</span><span class="nv"> </span><span class="s">\&quot;{{media_type}}\&quot;,\n</span><span class="nv">        </span><span class="s">\&quot;tmdbId\&quot;:</span><span class="nv"> </span><span class="s">\&quot;{{media_tmdbid}}\&quot;\</span>
+<span class="w">        </span><span class="s">,\n</span><span class="nv">        </span><span class="s">\&quot;tvdbId\&quot;:</span><span class="nv"> </span><span class="s">\&quot;{{media_tvdbid}}\&quot;,\n</span><span class="nv">        </span><span class="s">\&quot;status\&quot;:</span><span class="nv"> </span><span class="s">\&quot;{{media_status}}\&quot;\</span>
+<span class="w">        </span><span class="s">,\n</span><span class="nv">        </span><span class="s">\&quot;status4k\&quot;:</span><span class="nv"> </span><span class="s">\&quot;{{media_status4k}}\&quot;\n</span><span class="nv">    </span><span class="s">},\n</span><span class="nv">    </span><span class="s">\&quot;{{request}}\&quot;\</span>
+<span class="w">        </span><span class="s">:</span><span class="nv"> </span><span class="s">{\n</span><span class="nv">        </span><span class="s">\&quot;request_id\&quot;:</span><span class="nv"> </span><span class="s">\&quot;{{request_id}}\&quot;,\n</span><span class="nv">        </span><span class="s">\&quot;requestedBy_email\&quot;\</span>
+<span class="w">        </span><span class="s">:</span><span class="nv"> </span><span class="s">\&quot;{{requestedBy_email}}\&quot;,\n</span><span class="nv">        </span><span class="s">\&quot;requestedBy_username\&quot;:</span><span class="nv"> </span><span class="s">\&quot;{{requestedBy_username}}\&quot;\</span>
+<span class="w">        </span><span class="s">,\n</span><span class="nv">        </span><span class="s">\&quot;requestedBy_avatar\&quot;:</span><span class="nv"> </span><span class="s">\&quot;{{requestedBy_avatar}}\&quot;\n</span><span class="nv">    </span><span class="s">},\n</span><span class="nv">  </span><span class="s">\</span>
+<span class="w">        </span><span class="s">\ </span><span class="nv"> </span><span class="s">\&quot;{{issue}}\&quot;:</span><span class="nv"> </span><span class="s">{\n</span><span class="nv">        </span><span class="s">\&quot;issue_id\&quot;:</span><span class="nv"> </span><span class="s">\&quot;{{issue_id}}\&quot;,\n</span><span class="nv">        </span><span class="s">\&quot;issue_type\&quot;\</span>
+<span class="w">        </span><span class="s">:</span><span class="nv"> </span><span class="s">\&quot;{{issue_type}}\&quot;,\n</span><span class="nv">        </span><span class="s">\&quot;issue_status\&quot;:</span><span class="nv"> </span><span class="s">\&quot;{{issue_status}}\&quot;,\n</span><span class="nv"> </span><span class="s">\</span>
+<span class="w">        </span><span class="s">\ </span><span class="nv">      </span><span class="s">\&quot;reportedBy_email\&quot;:</span><span class="nv"> </span><span class="s">\&quot;{{reportedBy_email}}\&quot;,\n</span><span class="nv">        </span><span class="s">\&quot;reportedBy_username\&quot;\</span>
+<span class="w">        </span><span class="s">:</span><span class="nv"> </span><span class="s">\&quot;{{reportedBy_username}}\&quot;,\n</span><span class="nv">        </span><span class="s">\&quot;reportedBy_avatar\&quot;:</span><span class="nv"> </span><span class="s">\&quot;{{reportedBy_avatar}}\&quot;\</span>
+<span class="w">        </span><span class="s">\n</span><span class="nv">    </span><span class="s">},\n</span><span class="nv">    </span><span class="s">\&quot;{{comment}}\&quot;:</span><span class="nv"> </span><span class="s">{\n</span><span class="nv">        </span><span class="s">\&quot;comment_message\&quot;:</span><span class="nv"> </span><span class="s">\&quot;{{comment_message}}\&quot;\</span>
+<span class="w">        </span><span class="s">,\n</span><span class="nv">        </span><span class="s">\&quot;commentedBy_email\&quot;:</span><span class="nv"> </span><span class="s">\&quot;{{commentedBy_email}}\&quot;,\n</span><span class="nv">        </span><span class="s">\&quot;commentedBy_username\&quot;\</span>
+<span class="w">        </span><span class="s">:</span><span class="nv"> </span><span class="s">\&quot;{{commentedBy_username}}\&quot;,\n</span><span class="nv">        </span><span class="s">\&quot;commentedBy_avatar\&quot;:</span><span class="nv"> </span><span class="s">\&quot;{{commentedBy_avatar}}\&quot;\</span>
+<span class="w">        </span><span class="s">\n</span><span class="nv">    </span><span class="s">},\n</span><span class="nv">    </span><span class="s">\&quot;{{extra}}\&quot;:</span><span class="nv"> </span><span class="s">[]\n}&quot;</span>
+<span class="w">    </span><span class="nt">webpush</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+</code></pre></div></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

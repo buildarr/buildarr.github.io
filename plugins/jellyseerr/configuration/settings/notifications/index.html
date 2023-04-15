@@ -1,0 +1,2144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../../../img/favicon.ico">
+        <title>Notifications - Buildarr</title>
+        <link href="../../../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link href="../../../../../assets/_mkdocstrings.css" rel="stylesheet">
+
+        <script src="../../../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../../../..">Buildarr</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Release Notes <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../../../release-notes/" class="dropdown-item">Buildarr Core</a>
+</li>
+                                    
+<li>
+    <a href="../../../../sonarr/release-notes/" class="dropdown-item">Buildarr Sonarr Plugin</a>
+</li>
+                                    
+<li>
+    <a href="../../../../prowlarr/release-notes/" class="dropdown-item">Buildarr Prowlarr Plugin</a>
+</li>
+                                    
+<li>
+    <a href="../../../release-notes/" class="dropdown-item">Buildarr Jellyseerr Plugin</a>
+</li>
+                                    
+<li>
+    <a href="../../../../../docker/release-notes/" class="dropdown-item">Buildarr Docker Container</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../../installation/" class="nav-link">Installation</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../../configuration/" class="nav-link">Configuration</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Plugins <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../../" class="dropdown-item">Introduction</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Buildarr Sonarr Plugin</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../sonarr/" class="dropdown-item">Introduction</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/release-notes/" class="dropdown-item">Release Notes</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Configuration</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../sonarr/configuration/host/" class="dropdown-item">Host Configuration</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/media-management/" class="dropdown-item">Media Management</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Profiles</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../sonarr/configuration/profiles/quality/" class="dropdown-item">Quality Profiles</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/profiles/language/" class="dropdown-item">Language Profiles</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/profiles/delay/" class="dropdown-item">Delay Profiles</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/profiles/release/" class="dropdown-item">Release Profiles</a>
+</li>
+    </ul>
+  </li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/quality/" class="dropdown-item">Quality</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/indexers/" class="dropdown-item">Indexers</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/download-clients/" class="dropdown-item">Download Clients</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/import-lists/" class="dropdown-item">Import Lists</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/connect/" class="dropdown-item">Connect</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/metadata/" class="dropdown-item">Metadata</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/tags/" class="dropdown-item">Tags</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/general/" class="dropdown-item">General</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/ui/" class="dropdown-item">UI</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Buildarr Prowlarr Plugin</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../prowlarr/" class="dropdown-item">Introduction</a>
+</li>
+            
+<li>
+    <a href="../../../../prowlarr/release-notes/" class="dropdown-item">Release Notes</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Configuration</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../prowlarr/configuration/host/" class="dropdown-item">Host Configuration</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Settings</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Indexers</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../prowlarr/configuration/settings/indexers/indexers/" class="dropdown-item">Indexers</a>
+</li>
+            
+<li>
+    <a href="../../../../prowlarr/configuration/settings/indexers/proxies/" class="dropdown-item">Proxies</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Apps</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../prowlarr/configuration/settings/apps/applications/" class="dropdown-item">Applications</a>
+</li>
+            
+<li>
+    <a href="../../../../prowlarr/configuration/settings/apps/sync-profiles/" class="dropdown-item">Sync Profiles</a>
+</li>
+    </ul>
+  </li>
+            
+<li>
+    <a href="../../../../prowlarr/configuration/settings/download-clients/" class="dropdown-item">Download Clients</a>
+</li>
+            
+<li>
+    <a href="../../../../prowlarr/configuration/settings/notifications/" class="dropdown-item">Notifications</a>
+</li>
+            
+<li>
+    <a href="../../../../prowlarr/configuration/settings/tags/" class="dropdown-item">Tags</a>
+</li>
+            
+<li>
+    <a href="../../../../prowlarr/configuration/settings/general/" class="dropdown-item">General</a>
+</li>
+            
+<li>
+    <a href="../../../../prowlarr/configuration/settings/ui/" class="dropdown-item">UI</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Buildarr Jellyseerr Plugin</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../" class="dropdown-item">Introduction</a>
+</li>
+            
+<li>
+    <a href="../../../release-notes/" class="dropdown-item">Release Notes</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Configuration</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../host/" class="dropdown-item">Host Configuration</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Settings</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../general/" class="dropdown-item">General</a>
+</li>
+            
+<li>
+    <a href="../users/" class="dropdown-item">Users</a>
+</li>
+            
+<li>
+    <a href="../jellyfin/" class="dropdown-item">Jellyfin</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Services</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../services/sonarr/" class="dropdown-item">Sonarr</a>
+</li>
+            
+<li>
+    <a href="../services/radarr/" class="dropdown-item">Radarr</a>
+</li>
+    </ul>
+  </li>
+            
+<li>
+    <a href="./" class="dropdown-item active">Notifications</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../../usage/" class="nav-link">Usage</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="https://github.com/buildarr/buildarr" class="nav-link">GitHub</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../services/radarr/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../../../../usage/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#notifications" class="nav-link">Notifications</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#enabling-notifications" class="nav-link">Enabling notifications</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#configuring-notification-types" class="nav-link">Configuring notification types</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#discord" class="nav-link">Discord</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#email" class="nav-link">Email</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#gotify" class="nav-link">Gotify</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#lunasea" class="nav-link">LunaSea</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#pushbullet" class="nav-link">Pushbullet</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#pushover" class="nav-link">Pushover</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#slack" class="nav-link">Slack</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#telegram" class="nav-link">Telegram</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#webhook" class="nav-link">Webhook</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#webpush-browser-push-notifiations" class="nav-link">Webpush (Browser Push Notifiations)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="notifications">Notifications<a class="headerlink" href="#notifications" title="Permanent link">#</a></h1>
+<p>Jellyseerr supports pushing notifications to external applications and services.</p>
+<p>These are not only for Jellyseerr to communicate with the outside world, they can also be useful
+for monitoring since the user can be alerted, by a service of their choice, when
+some kind of event (or problem) occurs.</p>
+<p>For more information on configuring push notifications for Jellyseerr, refer to <a href="https://docs.overseerr.dev/using-overseerr/notifications">this guide</a> in the Overseerr documentation.</p>
+<h2 id="enabling-notifications">Enabling notifications<a class="headerlink" href="#enabling-notifications" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_jellyseerr.config.settings.notifications.base.NotificationsSettingsBase"></a>
+  <div class="doc doc-contents first">
+
+  
+      <p>To enable push notifications to a service, simply set <code>enable: true</code> in the settings,
+as shown below.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">jellyseerr</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">settings</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">notifications</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">webpush</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</code></pre></div>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_jellyseerr.config.settings.notifications.base.NotificationsSettingsBase.enable" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">enable</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_jellyseerr.config.settings.notifications.base.NotificationsSettingsBase.enable" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Enable sending notifications to a service.</p>
+<p>If enabled, some configuration attributes for the service will be required.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="configuring-notification-types">Configuring notification types<a class="headerlink" href="#configuring-notification-types" title="Permanent link">#</a></h2>
+<p>Some service types support fine-grained configuration of the type of notifications that get sent.</p>
+<p>This is done by defining the optional <code>notification_types</code> configuration attribute
+in the settings for that service.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">jellyseerr</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">settings</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">notifications</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">slack</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">        </span><span class="nt">webhook_url</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;...&quot;</span>
+<span class="w">        </span><span class="nt">notification_types</span><span class="p">:</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;media-pending&quot;</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;media-approved&quot;</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;media-available&quot;</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;media-failed&quot;</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;test-notification&quot;</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;media-declined&quot;</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;media-auto-approved&quot;</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;issue-created&quot;</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;issue-comment&quot;</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;issue-resolved&quot;</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;issue-reopened&quot;</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;media-auto-requested&quot;</span>
+</code></pre></div>
+<h2 id="discord">Discord<a class="headerlink" href="#discord" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_jellyseerr.config.settings.notifications.discord.DiscordSettings"></a>
+  <div class="doc doc-contents first">
+
+  
+      <p>Send notifications to a Discord server using a webhook URL.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_jellyseerr.config.settings.notifications.discord.DiscordSettings.webhook_url" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">webhook_url</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">AnyHttpUrl</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_jellyseerr.config.settings.notifications.discord.DiscordSettings.webhook_url" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Discord server webhook URL.</p>
+<p><strong>Required if Discord notifications are enabled.</strong></p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_jellyseerr.config.settings.notifications.discord.DiscordSettings.username" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_jellyseerr.config.settings.notifications.discord.DiscordSettings.username" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The username to post as.</p>
+<p>If unset, blank or set to <code>None</code>, use the default username set to the webhook URL.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_jellyseerr.config.settings.notifications.discord.DiscordSettings.avatar_url" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">avatar_url</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">AnyHttpUrl</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_jellyseerr.config.settings.notifications.discord.DiscordSettings.avatar_url" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>A URL to an custom avatar to use when posting.</p>
+<p>If unset, blank or set to <code>None</code>, use the default avatar for the user.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_jellyseerr.config.settings.notifications.discord.DiscordSettings.enable_mentions" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">enable_mentions</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_jellyseerr.config.settings.notifications.discord.DiscordSettings.enable_mentions" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Allow the user to mention when posting.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_jellyseerr.config.settings.notifications.notification_types.NotificationTypesSettingsBase"></a>
+  <div class="doc doc-contents first">
+
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_jellyseerr.config.settings.notifications.notification_types.NotificationTypesSettingsBase.notification_types" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">notification_types</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NotificationType</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_jellyseerr.config.settings.notifications.notification_types.NotificationTypesSettingsBase.notification_types" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The notification types to send to the service.</p>
+<p>By default no notifications are sent, even if enabled, so remember to set
+the types of events you'd like to get notified for.</p>
+<p>Values:</p>
+<ul>
+<li><code>media-pending</code></li>
+<li><code>media-approved</code></li>
+<li><code>media-available</code></li>
+<li><code>media-failed</code></li>
+<li><code>test-notification</code></li>
+<li><code>media-declined</code></li>
+<li><code>media-auto-approved</code></li>
+<li><code>issue-created</code></li>
+<li><code>issue-comment</code></li>
+<li><code>issue-resolved</code></li>
+<li><code>issue-reopened</code></li>
+<li><code>media-auto-requested</code></li>
+</ul>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="email">Email<a class="headerlink" href="#email" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_jellyseerr.config.settings.notifications.email.EmailSettings"></a>
+  <div class="doc doc-contents first">
+
+  
+      <p>Send notification emails via an SMTP server.</p>
+<p>In order for Jellyseerr to send emails to Jellyseerr users, an SMTP server
+needs to be configured here.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the <a href="../general/#buildarr_jellyseerr.config.settings.general
+.JellyseerrGeneralSettings.application_url"><code>jellyseerr.settings.general.application_url</code></a> attribute is configured, Jellyseerr will explicitly
+set the origin server hostname when connecting to the SMTP host.</p>
+</div>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_jellyseerr.config.settings.notifications.email.EmailSettings.require_user_email" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">require_user_email</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_jellyseerr.config.settings.notifications.email.EmailSettings.require_user_email" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Require Jellyseerr users to have an email address configured, so emails can be sent to it.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_jellyseerr.config.settings.notifications.email.EmailSettings.sender_name" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">sender_name</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Jellyseerr&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_jellyseerr.config.settings.notifications.email.EmailSettings.sender_name" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Configure a friendly name for the email sender.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_jellyseerr.config.settings.notifications.email.EmailSettings.sender_address" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">sender_address</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">EmailStr</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_jellyseerr.config.settings.notifications.email.EmailSettings.sender_address" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The <code>From</code> email address to send the email as.</p>
+<p>If sending email to public mailboxes, this should be set to an email address
+owned/controlled by the server being used to send the mail.</p>
+<p><strong>Required if email notifications are enabled.</strong></p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_jellyseerr.config.settings.notifications.email.EmailSettings.smtp_host" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">smtp_host</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_jellyseerr.config.settings.notifications.email.EmailSettings.smtp_host" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The SMTP server to sent mail from.</p>
+<p><strong>Required if email notifications are enabled.</strong></p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_jellyseerr.config.settings.notifications.email.EmailSettings.smtp_port" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">smtp_port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">587</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_jellyseerr.config.settings.notifications.email.EmailSettings.smtp_port" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The mail submission port of the SMTP server.</p>
+<p>The default is the standard SMTP submission port, used for STARTTLS.
+If using implicit TLS (SMTPS), this should be set to the standard port of <code>465</code>.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_jellyseerr.config.settings.notifications.email.EmailSettings.encryption_method" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">encryption_method</span><span class="p">:</span> <span class="n">EncryptionMethod</span> <span class="o">=</span> <span class="n">EncryptionMethod</span><span class="o">.</span><span class="n">starttls_prefer</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_jellyseerr.config.settings.notifications.email.EmailSettings.encryption_method" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The encryption method to use to communicate with the SMTP server.</p>
+<p>Values (in order of security):</p>
+<ul>
+<li><code>smtps</code> - Implicit TLS (SMTPS)</li>
+<li><code>starttls-strict</code> - Require STARTTLS</li>
+<li><code>starttls-prefer</code> - Use STARTTLS if available, unencrypted fallback (<strong>not recommended</strong>)</li>
+<li><code>none</code> - No encryption (<strong>not recommended</strong>)</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The <code>starttls-prefer</code> and <code>none</code> encryption methods send (or can send)
+username and password credentials unencrypted over the network.</p>
+<p><strong>Do not use them unless you know what you are doing.</strong></p>
+</div>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_jellyseerr.config.settings.notifications.email.EmailSettings.allow_selfsigned_certificates" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">allow_selfsigned_certificates</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_jellyseerr.config.settings.notifications.email.EmailSettings.allow_selfsigned_certificates" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Allow self-signed certificates for the SMTP server host certificate.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Generally this option shouldn't be enabled, even on a private mail server,
+as any mail server can get free TLS certificates using services such as
+<a href="https://letsencrypt.org">Let's Encrypt</a>.</p>
+<p><strong>Never enable this option when using a public email service.</strong></p>
+</div>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_jellyseerr.config.settings.notifications.email.EmailSettings.smtp_username" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">smtp_username</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_jellyseerr.config.settings.notifications.email.EmailSettings.smtp_username" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>SMTP server username, if required (which is usually the case).</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_jellyseerr.config.settings.notifications.email.EmailSettings.smtp_password" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">smtp_password</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">SecretStr</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_jellyseerr.config.settings.notifications.email.EmailSettings.smtp_password" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>SMTP server user password, if required (which is usually the case).</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_jellyseerr.config.settings.notifications.email.EmailSettings.pgp_private_key" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">pgp_private_key</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">SecretStr</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_jellyseerr.config.settings.notifications.email.EmailSettings.pgp_private_key" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>An optional PGP private key to use to sign (and if configured by users, encrypt) sent emails.</p>
+<p>When configuring the PGP keys, be sure to keep the entire contents of the key intact.
+For example, private keys always begin with <code>-----BEGIN PGP PRIVATE KEY BLOCK-----</code>
+and end with <code>-----END PGP PRIVATE KEY BLOCK-----</code>.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_jellyseerr.config.settings.notifications.email.EmailSettings.pgp_password" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">pgp_password</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">SecretStr</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_jellyseerr.config.settings.notifications.email.EmailSettings.pgp_password" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>An optional password for unlocking the PGP private key.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="gotify">Gotify<a class="headerlink" href="#gotify" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_jellyseerr.config.settings.notifications.gotify.GotifySettings"></a>
+  <div class="doc doc-contents first">
+
+  
+      <p>Send Jellyseerrr notifications to a Gotify server.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_jellyseerr.config.settings.notifications.gotify.GotifySettings.server_url" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">server_url</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">AnyHttpUrl</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_jellyseerr.config.settings.notifications.gotify.GotifySettings.server_url" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The URL that Jellyseerr will use to access the Gotify server.</p>
+<p><strong>Required if Gotify notifications are enabled.</strong></p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_jellyseerr.config.settings.notifications.gotify.GotifySettings.access_token" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">access_token</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">SecretStr</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_jellyseerr.config.settings.notifications.gotify.GotifySettings.access_token" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The generated application token for Jellyseerr in Gotify.</p>
+<p><strong>Required if Gotify notifications are enabled.</strong></p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_jellyseerr.config.settings.notifications.notification_types.NotificationTypesSettingsBase"></a>
+  <div class="doc doc-contents first">
+
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_jellyseerr.config.settings.notifications.notification_types.NotificationTypesSettingsBase.notification_types" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">notification_types</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NotificationType</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_jellyseerr.config.settings.notifications.notification_types.NotificationTypesSettingsBase.notification_types" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The notification types to send to the service.</p>
+<p>By default no notifications are sent, even if enabled, so remember to set
+the types of events you'd like to get notified for.</p>
+<p>Values:</p>
+<ul>
+<li><code>media-pending</code></li>
+<li><code>media-approved</code></li>
+<li><code>media-available</code></li>
+<li><code>media-failed</code></li>
+<li><code>test-notification</code></li>
+<li><code>media-declined</code></li>
+<li><code>media-auto-approved</code></li>
+<li><code>issue-created</code></li>
+<li><code>issue-comment</code></li>
+<li><code>issue-resolved</code></li>
+<li><code>issue-reopened</code></li>
+<li><code>media-auto-requested</code></li>
+</ul>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="lunasea">LunaSea<a class="headerlink" href="#lunasea" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_jellyseerr.config.settings.notifications.lunasea.LunaseaSettings"></a>
+  <div class="doc doc-contents first">
+
+  
+      <p>Send notifications to the LunaSea app.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_jellyseerr.config.settings.notifications.lunasea.LunaseaSettings.webhook_url" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">webhook_url</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">AnyHttpUrl</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_jellyseerr.config.settings.notifications.lunasea.LunaseaSettings.webhook_url" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The device- or user based LunaSea webhook URL to send notifications to.</p>
+<p><strong>Required if LunaSea notifications are enabled.</strong></p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_jellyseerr.config.settings.notifications.lunasea.LunaseaSettings.profile_name" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">profile_name</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_jellyseerr.config.settings.notifications.lunasea.LunaseaSettings.profile_name" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The LunaSea profile to send notications to.</p>
+<p>If set to <code>null</code>, uses the <code>default</code> profile.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_jellyseerr.config.settings.notifications.notification_types.NotificationTypesSettingsBase"></a>
+  <div class="doc doc-contents first">
+
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_jellyseerr.config.settings.notifications.notification_types.NotificationTypesSettingsBase.notification_types" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">notification_types</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NotificationType</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_jellyseerr.config.settings.notifications.notification_types.NotificationTypesSettingsBase.notification_types" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The notification types to send to the service.</p>
+<p>By default no notifications are sent, even if enabled, so remember to set
+the types of events you'd like to get notified for.</p>
+<p>Values:</p>
+<ul>
+<li><code>media-pending</code></li>
+<li><code>media-approved</code></li>
+<li><code>media-available</code></li>
+<li><code>media-failed</code></li>
+<li><code>test-notification</code></li>
+<li><code>media-declined</code></li>
+<li><code>media-auto-approved</code></li>
+<li><code>issue-created</code></li>
+<li><code>issue-comment</code></li>
+<li><code>issue-resolved</code></li>
+<li><code>issue-reopened</code></li>
+<li><code>media-auto-requested</code></li>
+</ul>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="pushbullet">Pushbullet<a class="headerlink" href="#pushbullet" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_jellyseerr.config.settings.notifications.pushbullet.PushbulletSettings"></a>
+  <div class="doc doc-contents first">
+
+  
+      <p>Send notifications to one or more devices via Pushbullet.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_jellyseerr.config.settings.notifications.pushbullet.PushbulletSettings.access_token" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">access_token</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">SecretStr</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_jellyseerr.config.settings.notifications.pushbullet.PushbulletSettings.access_token" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The generated application token for Jellyseerr in Pushbullet.</p>
+<p><strong>Required if Pushbullet notifications are enabled.</strong></p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_jellyseerr.config.settings.notifications.pushbullet.PushbulletSettings.channel_tag" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">channel_tag</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_jellyseerr.config.settings.notifications.pushbullet.PushbulletSettings.channel_tag" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Optional <a href="https://pushbullet.com/my-channel">channel tag</a> for pushing notifications
+to any devices subscribed to it.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_jellyseerr.config.settings.notifications.notification_types.NotificationTypesSettingsBase"></a>
+  <div class="doc doc-contents first">
+
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_jellyseerr.config.settings.notifications.notification_types.NotificationTypesSettingsBase.notification_types" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">notification_types</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NotificationType</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_jellyseerr.config.settings.notifications.notification_types.NotificationTypesSettingsBase.notification_types" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The notification types to send to the service.</p>
+<p>By default no notifications are sent, even if enabled, so remember to set
+the types of events you'd like to get notified for.</p>
+<p>Values:</p>
+<ul>
+<li><code>media-pending</code></li>
+<li><code>media-approved</code></li>
+<li><code>media-available</code></li>
+<li><code>media-failed</code></li>
+<li><code>test-notification</code></li>
+<li><code>media-declined</code></li>
+<li><code>media-auto-approved</code></li>
+<li><code>issue-created</code></li>
+<li><code>issue-comment</code></li>
+<li><code>issue-resolved</code></li>
+<li><code>issue-reopened</code></li>
+<li><code>media-auto-requested</code></li>
+</ul>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="pushover">Pushover<a class="headerlink" href="#pushover" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_jellyseerr.config.settings.notifications.pushover.PushoverSettings"></a>
+  <div class="doc doc-contents first">
+
+  
+      <p>Send notifications to one or more devices via Pushover.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_jellyseerr.config.settings.notifications.pushover.PushoverSettings.api_key" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">PushoverApiKey</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_jellyseerr.config.settings.notifications.pushover.PushoverSettings.api_key" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>API key registered for Jellyseerr in Pushover.</p>
+<p><strong>Required if Pushover notifications are enabled.</strong></p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_jellyseerr.config.settings.notifications.pushover.PushoverSettings.user_key" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">user_key</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">PushoverApiKey</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_jellyseerr.config.settings.notifications.pushover.PushoverSettings.user_key" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>User key to authenticate with on Pushover.</p>
+<p><strong>Required if Pushover notifications are enabled.</strong></p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_jellyseerr.config.settings.notifications.notification_types.NotificationTypesSettingsBase"></a>
+  <div class="doc doc-contents first">
+
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_jellyseerr.config.settings.notifications.notification_types.NotificationTypesSettingsBase.notification_types" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">notification_types</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NotificationType</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_jellyseerr.config.settings.notifications.notification_types.NotificationTypesSettingsBase.notification_types" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The notification types to send to the service.</p>
+<p>By default no notifications are sent, even if enabled, so remember to set
+the types of events you'd like to get notified for.</p>
+<p>Values:</p>
+<ul>
+<li><code>media-pending</code></li>
+<li><code>media-approved</code></li>
+<li><code>media-available</code></li>
+<li><code>media-failed</code></li>
+<li><code>test-notification</code></li>
+<li><code>media-declined</code></li>
+<li><code>media-auto-approved</code></li>
+<li><code>issue-created</code></li>
+<li><code>issue-comment</code></li>
+<li><code>issue-resolved</code></li>
+<li><code>issue-reopened</code></li>
+<li><code>media-auto-requested</code></li>
+</ul>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="slack">Slack<a class="headerlink" href="#slack" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_jellyseerr.config.settings.notifications.slack.SlackSettings"></a>
+  <div class="doc doc-contents first">
+
+  
+      <p>Send notifications to a Slack channel.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_jellyseerr.config.settings.notifications.slack.SlackSettings.webhook_url" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">webhook_url</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">AnyHttpUrl</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_jellyseerr.config.settings.notifications.slack.SlackSettings.webhook_url" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Slack server webhook URL.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_jellyseerr.config.settings.notifications.notification_types.NotificationTypesSettingsBase"></a>
+  <div class="doc doc-contents first">
+
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_jellyseerr.config.settings.notifications.notification_types.NotificationTypesSettingsBase.notification_types" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">notification_types</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NotificationType</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_jellyseerr.config.settings.notifications.notification_types.NotificationTypesSettingsBase.notification_types" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The notification types to send to the service.</p>
+<p>By default no notifications are sent, even if enabled, so remember to set
+the types of events you'd like to get notified for.</p>
+<p>Values:</p>
+<ul>
+<li><code>media-pending</code></li>
+<li><code>media-approved</code></li>
+<li><code>media-available</code></li>
+<li><code>media-failed</code></li>
+<li><code>test-notification</code></li>
+<li><code>media-declined</code></li>
+<li><code>media-auto-approved</code></li>
+<li><code>issue-created</code></li>
+<li><code>issue-comment</code></li>
+<li><code>issue-resolved</code></li>
+<li><code>issue-reopened</code></li>
+<li><code>media-auto-requested</code></li>
+</ul>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="telegram">Telegram<a class="headerlink" href="#telegram" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_jellyseerr.config.settings.notifications.telegram.TelegramSettings"></a>
+  <div class="doc doc-contents first">
+
+  
+      <p>Send notifications to a group chat in Telegram.</p>
+<p>If <code>username</code> is set, also allows Jellyseerr users to setup their own chats
+with the Jellyseerr Telegram bot to receive notifications.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_jellyseerr.config.settings.notifications.telegram.TelegramSettings.access_token" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">access_token</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">SecretStr</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_jellyseerr.config.settings.notifications.telegram.TelegramSettings.access_token" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Access token provided for the Telegram bot by BotFather at the end of the creation process.</p>
+<p><strong>Required if Telegram notifications are enabled.</strong></p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_jellyseerr.config.settings.notifications.telegram.TelegramSettings.username" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_jellyseerr.config.settings.notifications.telegram.TelegramSettings.username" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The username of the Telegram bot.</p>
+<p>If this value is configured, Jellyseerr users will be able to click a link to start a chat
+with your bot and configure their own personal notifications.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_jellyseerr.config.settings.notifications.telegram.TelegramSettings.chat_id" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">chat_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_jellyseerr.config.settings.notifications.telegram.TelegramSettings.chat_id" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Chat ID of the group chat to send messages to.</p>
+<p><strong>Required if Telegram notifications are enabled.</strong></p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_jellyseerr.config.settings.notifications.telegram.TelegramSettings.send_silently" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">send_silently</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_jellyseerr.config.settings.notifications.telegram.TelegramSettings.send_silently" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>When set to <code>true</code>, sends messages without notification sounds.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_jellyseerr.config.settings.notifications.notification_types.NotificationTypesSettingsBase"></a>
+  <div class="doc doc-contents first">
+
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_jellyseerr.config.settings.notifications.notification_types.NotificationTypesSettingsBase.notification_types" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">notification_types</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NotificationType</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_jellyseerr.config.settings.notifications.notification_types.NotificationTypesSettingsBase.notification_types" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The notification types to send to the service.</p>
+<p>By default no notifications are sent, even if enabled, so remember to set
+the types of events you'd like to get notified for.</p>
+<p>Values:</p>
+<ul>
+<li><code>media-pending</code></li>
+<li><code>media-approved</code></li>
+<li><code>media-available</code></li>
+<li><code>media-failed</code></li>
+<li><code>test-notification</code></li>
+<li><code>media-declined</code></li>
+<li><code>media-auto-approved</code></li>
+<li><code>issue-created</code></li>
+<li><code>issue-comment</code></li>
+<li><code>issue-resolved</code></li>
+<li><code>issue-reopened</code></li>
+<li><code>media-auto-requested</code></li>
+</ul>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="webhook">Webhook<a class="headerlink" href="#webhook" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_jellyseerr.config.settings.notifications.webhook.WebhookSettings"></a>
+  <div class="doc doc-contents first">
+
+  
+      <p>Send a custom JSON payload to any endpoint for specific notification events.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_jellyseerr.config.settings.notifications.webhook.WebhookSettings.webhook_url" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">webhook_url</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">AnyHttpUrl</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_jellyseerr.config.settings.notifications.webhook.WebhookSettings.webhook_url" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The webhook URL to post notifications to.</p>
+<p>The rendered payload template will be the body of the request.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_jellyseerr.config.settings.notifications.webhook.WebhookSettings.authorization_header" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">authorization_header</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">SecretStr</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_jellyseerr.config.settings.notifications.webhook.WebhookSettings.authorization_header" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Thie value to be set in the <code>Authorization</code> HTTP header.</p>
+<p>This is not always required by the webhook provider.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_jellyseerr.config.settings.notifications.webhook.WebhookSettings.payload_template" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">payload_template</span><span class="p">:</span> <span class="n">NonEmptyStr</span> <span class="o">=</span> <span class="s1">&#39;&lt;JSON template&gt;&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_jellyseerr.config.settings.notifications.webhook.WebhookSettings.payload_template" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The template for the JSON payload sent to the webhook URL.</p>
+<p>For help on configuring this option, refer to
+<a href="https://docs.overseerr.dev/using-overseerr/notifications/webhooks#json-payload">this guide</a>
+in the Overseerr documentation.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_jellyseerr.config.settings.notifications.notification_types.NotificationTypesSettingsBase"></a>
+  <div class="doc doc-contents first">
+
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="buildarr_jellyseerr.config.settings.notifications.notification_types.NotificationTypesSettingsBase.notification_types" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">notification_types</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NotificationType</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+<a href="#buildarr_jellyseerr.config.settings.notifications.notification_types.NotificationTypesSettingsBase.notification_types" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The notification types to send to the service.</p>
+<p>By default no notifications are sent, even if enabled, so remember to set
+the types of events you'd like to get notified for.</p>
+<p>Values:</p>
+<ul>
+<li><code>media-pending</code></li>
+<li><code>media-approved</code></li>
+<li><code>media-available</code></li>
+<li><code>media-failed</code></li>
+<li><code>test-notification</code></li>
+<li><code>media-declined</code></li>
+<li><code>media-auto-approved</code></li>
+<li><code>issue-created</code></li>
+<li><code>issue-comment</code></li>
+<li><code>issue-resolved</code></li>
+<li><code>issue-reopened</code></li>
+<li><code>media-auto-requested</code></li>
+</ul>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="webpush-browser-push-notifiations">Webpush (Browser Push Notifiations)<a class="headerlink" href="#webpush-browser-push-notifiations" title="Permanent link">#</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="buildarr_jellyseerr.config.settings.notifications.webpush.WebpushSettings"></a>
+  <div class="doc doc-contents first">
+
+  
+      <p>To send push notifications to your browser, simply enable it in the Buildarr configuration.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In order to receive web push notifications, Jellyseerr must be served over HTTPS.</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="nt">jellyseerr</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">settings</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">notifications</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">webpush</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</code></pre></div>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../../js/base.js" defer></script>
+        <script src="../../../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
