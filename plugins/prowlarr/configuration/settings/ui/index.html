@@ -34,8 +34,26 @@
                 <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li class="navitem">
-                                <a href="../../../../../release-notes/" class="nav-link">Release Notes</a>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Release Notes <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../../../release-notes/" class="dropdown-item">Buildarr Core</a>
+</li>
+                                    
+<li>
+    <a href="../../../../sonarr/release-notes/" class="dropdown-item">Buildarr Sonarr Plugin</a>
+</li>
+                                    
+<li>
+    <a href="../../../release-notes/" class="dropdown-item">Buildarr Prowlarr Plugin</a>
+</li>
+                                    
+<li>
+    <a href="../../../../../docker/release-notes/" class="dropdown-item">Buildarr Docker Container</a>
+</li>
+                                </ul>
                             </li>
                             <li class="navitem">
                                 <a href="../../../../../installation/" class="nav-link">Installation</a>
@@ -275,8 +293,6 @@
 
 <a id="buildarr_prowlarr.config.settings.ui.ProwlarrUISettings"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_prowlarr.config.types.ProwlarrConfigBase">ProwlarrConfigBase</span></code></p>
 
   
       <p>Prowlarr user interface configuration can also be set directly from Buildarr.</p>

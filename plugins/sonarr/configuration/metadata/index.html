@@ -34,8 +34,26 @@
                 <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li class="navitem">
-                                <a href="../../../../release-notes/" class="nav-link">Release Notes</a>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Release Notes <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../../release-notes/" class="dropdown-item">Buildarr Core</a>
+</li>
+                                    
+<li>
+    <a href="../../release-notes/" class="dropdown-item">Buildarr Sonarr Plugin</a>
+</li>
+                                    
+<li>
+    <a href="../../../prowlarr/release-notes/" class="dropdown-item">Buildarr Prowlarr Plugin</a>
+</li>
+                                    
+<li>
+    <a href="../../../../docker/release-notes/" class="dropdown-item">Buildarr Docker Container</a>
+</li>
+                                </ul>
                             </li>
                             <li class="navitem">
                                 <a href="../../../../installation/" class="nav-link">Installation</a>
@@ -291,8 +309,6 @@
 
 <a id="buildarr_sonarr.config.metadata.KodiEmbyMetadata"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_sonarr.config.metadata.Metadata">Metadata</span></code></p>
 
   
       <p>Output metadata files in a format suitable for Kodi (XBMC) or Emby.</p>
@@ -464,8 +480,6 @@ and <code>season##-banner.jpg</code>/<code>season-specials-banner.jpg</code>.</p
 
 <a id="buildarr_sonarr.config.metadata.RoksboxMetadata"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_sonarr.config.metadata.Metadata">Metadata</span></code></p>
 
   
       <p>Output metadata files in a format suitable for Roksbox.</p>
@@ -592,8 +606,6 @@ and <code>season##-banner.jpg</code>/<code>season-specials-banner.jpg</code>.</p
 
 <a id="buildarr_sonarr.config.metadata.WdtvMetadata"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_sonarr.config.metadata.Metadata">Metadata</span></code></p>
 
   
       <p>Output metadata files in a format suitable for WDTV.</p>

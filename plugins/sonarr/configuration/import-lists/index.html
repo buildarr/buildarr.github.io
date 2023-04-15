@@ -34,8 +34,26 @@
                 <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li class="navitem">
-                                <a href="../../../../release-notes/" class="nav-link">Release Notes</a>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Release Notes <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../../release-notes/" class="dropdown-item">Buildarr Core</a>
+</li>
+                                    
+<li>
+    <a href="../../release-notes/" class="dropdown-item">Buildarr Sonarr Plugin</a>
+</li>
+                                    
+<li>
+    <a href="../../../prowlarr/release-notes/" class="dropdown-item">Buildarr Prowlarr Plugin</a>
+</li>
+                                    
+<li>
+    <a href="../../../../docker/release-notes/" class="dropdown-item">Buildarr Docker Container</a>
+</li>
+                                </ul>
                             </li>
                             <li class="navitem">
                                 <a href="../../../../installation/" class="nav-link">Installation</a>
@@ -291,8 +309,6 @@
 
 <a id="buildarr_sonarr.config.import_lists.SonarrImportListsSettingsConfig"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_sonarr.config.types.SonarrConfigBase">SonarrConfigBase</span></code></p>
 
   
       <p>Using import lists, Sonarr can monitor and import episodes from external sources.</p>
@@ -437,8 +453,6 @@ a title to give the series in the Sonarr UI.</p>
 
 <a id="buildarr_sonarr.config.import_lists.ImportList"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_sonarr.config.types.SonarrConfigBase">SonarrConfigBase</span></code></p>
 
   
       <p>For more information on how an import list should be setup,
@@ -662,8 +676,6 @@ This option affects how Sonarr handles the media, such as renaming.</p>
 
 <a id="buildarr_sonarr.config.import_lists.SonarrImportList"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_sonarr.config.import_lists.ProgramImportList">ProgramImportList</span></code></p>
 
   
       <p>Import items from another Sonarr instance.</p>
@@ -924,8 +936,6 @@ If linking to a Sonarr instance outside Buildarr, IDs must be used.</p>
 
 <a id="buildarr_sonarr.config.import_lists.PlexWatchlistImportList"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_sonarr.config.import_lists.PlexImportList">PlexImportList</span></code></p>
 
   
       <p>Import items from a Plex watchlist.</p>
@@ -1002,8 +1012,6 @@ If linking to a Sonarr instance outside Buildarr, IDs must be used.</p>
 
 <a id="buildarr_sonarr.config.import_lists.TraktImportList"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><a class="autorefs autorefs-internal" title="buildarr_sonarr.config.import_lists.ImportList" href="#buildarr_sonarr.config.import_lists.ImportList">ImportList</a></code></p>
 
   
       <p>Import added media from a list on the Trakt media tracker.</p>
@@ -1260,8 +1268,6 @@ are required.</p>
 
 <a id="buildarr_sonarr.config.import_lists.TraktListImportList"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><a class="autorefs autorefs-internal" title="buildarr_sonarr.config.import_lists.TraktImportList" href="#buildarr_sonarr.config.import_lists.TraktImportList">TraktImportList</a></code></p>
 
   
       <p>Import an arbitrary list from Trakt into Sonarr.</p>
@@ -1337,8 +1343,6 @@ are required.</p>
 
 <a id="buildarr_sonarr.config.import_lists.TraktPopularlistImportList"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><a class="autorefs autorefs-internal" title="buildarr_sonarr.config.import_lists.TraktImportList" href="#buildarr_sonarr.config.import_lists.TraktImportList">TraktImportList</a></code></p>
 
   
       <p>Import media according to popularity-based lists on Trakt.</p>
@@ -1427,8 +1431,6 @@ are required.</p>
 
 <a id="buildarr_sonarr.config.import_lists.TraktUserImportList"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><a class="autorefs autorefs-internal" title="buildarr_sonarr.config.import_lists.TraktImportList" href="#buildarr_sonarr.config.import_lists.TraktImportList">TraktImportList</a></code></p>
 
   
       <p>Import a user-level list from Trakt.</p>

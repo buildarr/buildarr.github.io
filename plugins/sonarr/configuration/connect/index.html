@@ -34,8 +34,26 @@
                 <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li class="navitem">
-                                <a href="../../../../release-notes/" class="nav-link">Release Notes</a>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Release Notes <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../../release-notes/" class="dropdown-item">Buildarr Core</a>
+</li>
+                                    
+<li>
+    <a href="../../release-notes/" class="dropdown-item">Buildarr Sonarr Plugin</a>
+</li>
+                                    
+<li>
+    <a href="../../../prowlarr/release-notes/" class="dropdown-item">Buildarr Prowlarr Plugin</a>
+</li>
+                                    
+<li>
+    <a href="../../../../docker/release-notes/" class="dropdown-item">Buildarr Docker Container</a>
+</li>
+                                </ul>
                             </li>
                             <li class="navitem">
                                 <a href="../../../../installation/" class="nav-link">Installation</a>
@@ -372,8 +390,6 @@ occurs in Sonarr.</p>
 
 <a id="buildarr_sonarr.config.connect.NotificationTriggers"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_sonarr.config.types.SonarrConfigBase">SonarrConfigBase</span></code></p>
 
   
       <p>Connections are configured using the following syntax.</p>
@@ -660,8 +676,6 @@ check the documentation the specific connection type for more information.</p>
 
 <a id="buildarr_sonarr.config.connect.BoxcarConnection"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_sonarr.config.connect.Connection">Connection</span></code></p>
 
   
       <p>Receive media update and health alert push notifications via Boxcar.</p>
@@ -737,8 +751,6 @@ check the documentation the specific connection type for more information.</p>
 
 <a id="buildarr_sonarr.config.connect.CustomscriptConnection"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_sonarr.config.connect.Connection">Connection</span></code></p>
 
   
       <p>Execute a local script on the Sonarr instance when events occur.</p>
@@ -814,8 +826,6 @@ check the documentation the specific connection type for more information.</p>
 
 <a id="buildarr_sonarr.config.connect.DiscordConnection"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_sonarr.config.connect.Connection">Connection</span></code></p>
 
   
       <p>Send media update and health alert messages to a Discord server.</p>
@@ -1033,8 +1043,6 @@ By default, all fields are passed in.</p>
 
 <a id="buildarr_sonarr.config.connect.EmailConnection"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_sonarr.config.connect.Connection">Connection</span></code></p>
 
   
       <p>Send media update and health alert messages to an email address.</p>
@@ -1285,8 +1293,6 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 <a id="buildarr_sonarr.config.connect.EmbyConnection"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_sonarr.config.connect.Connection">Connection</span></code></p>
 
   
       <p>Send media update and health alert notifications to an Emby server.</p>
@@ -1467,8 +1473,6 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 <a id="buildarr_sonarr.config.connect.GotifyConnection"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_sonarr.config.connect.Connection">Connection</span></code></p>
 
   
       <p>Send media update and health alert push notifications via a Gotify server.</p>
@@ -1593,8 +1597,6 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 <a id="buildarr_sonarr.config.connect.JoinConnection"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_sonarr.config.connect.Connection">Connection</span></code></p>
 
   
       <p>Send media update and health alert push notifications via Join.</p>
@@ -1721,8 +1723,6 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 <a id="buildarr_sonarr.config.connect.KodiConnection"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_sonarr.config.connect.Connection">Connection</span></code></p>
 
   
       <p>Send media update and health alert notifications to a Kodi (XBMC) instance.</p>
@@ -1987,8 +1987,6 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 <a id="buildarr_sonarr.config.connect.MailgunConnection"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_sonarr.config.connect.Connection">Connection</span></code></p>
 
   
       <p>Send media update and health alert emails via the Mailgun delivery service.</p>
@@ -2151,8 +2149,6 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 <a id="buildarr_sonarr.config.connect.PlexHomeTheaterConnection"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_sonarr.config.connect.Connection">Connection</span></code></p>
 
   
       <p>Send media update notifications to a Plex Home Theater instance.</p>
@@ -2417,8 +2413,6 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 <a id="buildarr_sonarr.config.connect.PlexMediaCenterConnection"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_sonarr.config.connect.Connection">Connection</span></code></p>
 
   
       <p>Send media update notifications to a Plex Media Center instance.</p>
@@ -2557,8 +2551,6 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 <a id="buildarr_sonarr.config.connect.PlexMediaServerConnection"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_sonarr.config.connect.Connection">Connection</span></code></p>
 
   
       <p>Send media update notifications to a Plex Media Server instance.</p>
@@ -2721,8 +2713,6 @@ and <code>on_application_update</code></p>
 
 <a id="buildarr_sonarr.config.connect.ProwlConnection"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_sonarr.config.connect.Connection">Connection</span></code></p>
 
   
       <p>Send media update and health alert push notifications to a Prowl client.</p>
@@ -2827,8 +2817,6 @@ and <code>on_application_update</code></p>
 
 <a id="buildarr_sonarr.config.connect.PushbulletConnection"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_sonarr.config.connect.Connection">Connection</span></code></p>
 
   
       <p>Send media update and health alert push notifications to 1 or more Pushbullet devices.</p>
@@ -2970,8 +2958,6 @@ and <code>on_application_update</code></p>
 
 <a id="buildarr_sonarr.config.connect.PushoverConnection"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_sonarr.config.connect.Connection">Connection</span></code></p>
 
   
       <p>Send media update and health alert push notifications to 1 or more Pushover devices.</p>
@@ -3186,8 +3172,6 @@ If <code>retry</code> is set, this should be set to a higher value.</p>
 
 <a id="buildarr_sonarr.config.connect.SendgridConnection"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_sonarr.config.connect.Connection">Connection</span></code></p>
 
   
       <p>Send media update and health alert emails via the SendGrid delivery service.</p>
@@ -3308,8 +3292,6 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 <a id="buildarr_sonarr.config.connect.SlackConnection"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_sonarr.config.connect.Connection">Connection</span></code></p>
 
   
       <p>Send media update and health alert messages to a Slack channel.</p>
@@ -3449,8 +3431,6 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 <a id="buildarr_sonarr.config.connect.SynologyIndexerConnection"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_sonarr.config.connect.Connection">Connection</span></code></p>
 
   
       <p>Send media update notifications to the local Synology Indexer.</p>
@@ -3527,8 +3507,6 @@ and <code>on_application_update</code></p>
 
 <a id="buildarr_sonarr.config.connect.TelegramConnection"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_sonarr.config.connect.Connection">Connection</span></code></p>
 
   
       <p>Send media update and health alert messages to a Telegram chat room.</p>
@@ -3647,8 +3625,6 @@ and <code>on_application_update</code></p>
 
 <a id="buildarr_sonarr.config.connect.TraktConnection"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_sonarr.config.connect.Connection">Connection</span></code></p>
 
   
       <p>Send media update and health alert messages to the Trakt media tracker.</p>
@@ -3798,8 +3774,6 @@ shell command to retrieve the generated configuration.</p>
 
 <a id="buildarr_sonarr.config.connect.TwitterConnection"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_sonarr.config.connect.Connection">Connection</span></code></p>
 
   
       <p>Send media update and health alert messages via Twitter.</p>
@@ -3986,8 +3960,6 @@ and <a href="https://wiki.servarr.com/useful-tools#twitter-connect">WikiArr</a>.
 
 <a id="buildarr_sonarr.config.connect.WebhookConnection"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_sonarr.config.connect.Connection">Connection</span></code></p>
 
   
       <p>Send media update and health alert notifications to a webhook API.</p>

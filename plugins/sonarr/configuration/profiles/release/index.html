@@ -34,8 +34,26 @@
                 <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li class="navitem">
-                                <a href="../../../../../release-notes/" class="nav-link">Release Notes</a>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Release Notes <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../../../release-notes/" class="dropdown-item">Buildarr Core</a>
+</li>
+                                    
+<li>
+    <a href="../../../release-notes/" class="dropdown-item">Buildarr Sonarr Plugin</a>
+</li>
+                                    
+<li>
+    <a href="../../../../prowlarr/release-notes/" class="dropdown-item">Buildarr Prowlarr Plugin</a>
+</li>
+                                    
+<li>
+    <a href="../../../../../docker/release-notes/" class="dropdown-item">Buildarr Docker Container</a>
+</li>
+                                </ul>
                             </li>
                             <li class="navitem">
                                 <a href="../../../../../installation/" class="nav-link">Installation</a>
@@ -323,8 +341,6 @@ or a reference to an external provider of pre-made release profiles like TRaSH-G
 
 <a id="buildarr_sonarr.config.profiles.release.SonarrReleaseProfilesSettingsConfig"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_sonarr.config.types.SonarrConfigBase">SonarrConfigBase</span></code></p>
 
   
       <p>Configuration parameters for controlling how Buildarr handles release profiles.</p>
@@ -420,8 +436,6 @@ Buildarr will not modify existing release profiles, but if <code>delete_unmanage
 
 <a id="buildarr_sonarr.config.profiles.release.ReleaseProfile"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_sonarr.config.types.SonarrConfigBase">SonarrConfigBase</span></code></p>
 
 
 
@@ -545,8 +559,6 @@ the release profile using the following parameters.</p>
 
 <a id="buildarr_sonarr.config.profiles.release.ReleaseProfile"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_sonarr.config.types.SonarrConfigBase">SonarrConfigBase</span></code></p>
 
 
 
@@ -680,8 +692,6 @@ provided by
 
 <a id="buildarr_sonarr.config.profiles.release.ReleaseProfile"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_sonarr.config.types.SonarrConfigBase">SonarrConfigBase</span></code></p>
 
 
 
@@ -739,8 +749,6 @@ provided by
 
 <a id="buildarr_sonarr.config.profiles.release.TrashFilter"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_sonarr.config.types.SonarrConfigBase">SonarrConfigBase</span></code></p>
 
   
       <p>Defines various ways that release profile terms from the guide are synchronised with Sonarr.

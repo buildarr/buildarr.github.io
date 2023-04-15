@@ -34,8 +34,26 @@
                 <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li class="navitem">
-                                <a href="../../../../../release-notes/" class="nav-link">Release Notes</a>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Release Notes <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../../../release-notes/" class="dropdown-item">Buildarr Core</a>
+</li>
+                                    
+<li>
+    <a href="../../../../sonarr/release-notes/" class="dropdown-item">Buildarr Sonarr Plugin</a>
+</li>
+                                    
+<li>
+    <a href="../../../release-notes/" class="dropdown-item">Buildarr Prowlarr Plugin</a>
+</li>
+                                    
+<li>
+    <a href="../../../../../docker/release-notes/" class="dropdown-item">Buildarr Docker Container</a>
+</li>
+                                </ul>
                             </li>
                             <li class="navitem">
                                 <a href="../../../../../installation/" class="nav-link">Installation</a>
@@ -356,8 +374,6 @@ some kind of event (or problem) occurs.</p>
 
 <a id="buildarr_prowlarr.config.settings.notifications.NotificationTriggers"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_prowlarr.config.types.ProwlarrConfigBase">ProwlarrConfigBase</span></code></p>
 
   
       <p>Notification connections are configured using the following syntax.</p>
@@ -490,8 +506,6 @@ check the documentation the specific connection type for more information.</p>
 
 <a id="buildarr_prowlarr.config.settings.notifications.AppriseNotification"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_prowlarr.config.settings.notifications.Notification">Notification</span></code></p>
 
   
       <p>Receive media update and health alert push notifications via an Apprise server.</p>
@@ -673,8 +687,6 @@ check the documentation the specific connection type for more information.</p>
 
 <a id="buildarr_prowlarr.config.settings.notifications.BoxcarNotification"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_prowlarr.config.settings.notifications.Notification">Notification</span></code></p>
 
   
       <p>Receive media update and health alert push notifications via Boxcar.</p>
@@ -749,8 +761,6 @@ check the documentation the specific connection type for more information.</p>
 
 <a id="buildarr_prowlarr.config.settings.notifications.CustomscriptNotification"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_prowlarr.config.settings.notifications.Notification">Notification</span></code></p>
 
   
       <p>Execute a local script on the Prowlarr instance when events occur.</p>
@@ -825,8 +835,6 @@ check the documentation the specific connection type for more information.</p>
 
 <a id="buildarr_prowlarr.config.settings.notifications.DiscordNotification"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_prowlarr.config.settings.notifications.Notification">Notification</span></code></p>
 
   
       <p>Send media update and health alert messages to a Discord server.</p>
@@ -1043,8 +1051,6 @@ By default, all fields are passed in.</p>
 
 <a id="buildarr_prowlarr.config.settings.notifications.EmailNotification"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_prowlarr.config.settings.notifications.Notification">Notification</span></code></p>
 
   
       <p>Send media update and health alert messages to an email address.</p>
@@ -1294,8 +1300,6 @@ e.g. <code>Prowlarr Notifications &lt;prowlarr@example.com&gt;</code>.</p>
 
 <a id="buildarr_prowlarr.config.settings.notifications.GotifyNotification"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_prowlarr.config.settings.notifications.Notification">Notification</span></code></p>
 
   
       <p>Send media update and health alert push notifications via a Gotify server.</p>
@@ -1419,8 +1423,6 @@ e.g. <code>Prowlarr Notifications &lt;prowlarr@example.com&gt;</code>.</p>
 
 <a id="buildarr_prowlarr.config.settings.notifications.JoinNotification"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_prowlarr.config.settings.notifications.Notification">Notification</span></code></p>
 
   
       <p>Send media update and health alert push notifications via Join.</p>
@@ -1546,8 +1548,6 @@ e.g. <code>Prowlarr Notifications &lt;prowlarr@example.com&gt;</code>.</p>
 
 <a id="buildarr_prowlarr.config.settings.notifications.MailgunNotification"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_prowlarr.config.settings.notifications.Notification">Notification</span></code></p>
 
   
       <p>Send media update and health alert emails via the Mailgun delivery service.</p>
@@ -1709,8 +1709,6 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 <a id="buildarr_prowlarr.config.settings.notifications.NotifiarrNotification"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_prowlarr.config.settings.notifications.Notification">Notification</span></code></p>
 
   
       <p>Send media update and health alert emails via the Notifiarr notification service.</p>
@@ -1785,8 +1783,6 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 <a id="buildarr_prowlarr.config.settings.notifications.NtfyNotification"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_prowlarr.config.settings.notifications.Notification">Notification</span></code></p>
 
   
       <p>Send media update and health alert emails via the ntfy.sh notification service,
@@ -1996,8 +1992,6 @@ or a self-hosted server using the same software.</p>
 
 <a id="buildarr_prowlarr.config.settings.notifications.ProwlNotification"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_prowlarr.config.settings.notifications.Notification">Notification</span></code></p>
 
   
       <p>Send media update and health alert push notifications to a Prowl client.</p>
@@ -2101,8 +2095,6 @@ or a self-hosted server using the same software.</p>
 
 <a id="buildarr_prowlarr.config.settings.notifications.PushbulletNotification"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_prowlarr.config.settings.notifications.Notification">Notification</span></code></p>
 
   
       <p>Send media update and health alert push notifications to 1 or more Pushbullet devices.</p>
@@ -2243,8 +2235,6 @@ or a self-hosted server using the same software.</p>
 
 <a id="buildarr_prowlarr.config.settings.notifications.PushoverNotification"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_prowlarr.config.settings.notifications.Notification">Notification</span></code></p>
 
   
       <p>Send media update and health alert push notifications to 1 or more Pushover devices.</p>
@@ -2458,8 +2448,6 @@ If <code>retry</code> is set, this should be set to a higher value.</p>
 
 <a id="buildarr_prowlarr.config.settings.notifications.SendgridNotification"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_prowlarr.config.settings.notifications.Notification">Notification</span></code></p>
 
   
       <p>Send media update and health alert emails via the SendGrid delivery service.</p>
@@ -2579,8 +2567,6 @@ e.g. <code>Prowlarr Notifications &lt;prowlarr@example.com&gt;</code>.</p>
 
 <a id="buildarr_prowlarr.config.settings.notifications.SlackNotification"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_prowlarr.config.settings.notifications.Notification">Notification</span></code></p>
 
   
       <p>Send media update and health alert messages to a Slack channel.</p>
@@ -2719,8 +2705,6 @@ e.g. <code>Prowlarr Notifications &lt;prowlarr@example.com&gt;</code>.</p>
 
 <a id="buildarr_prowlarr.config.settings.notifications.TelegramNotification"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_prowlarr.config.settings.notifications.Notification">Notification</span></code></p>
 
   
       <p>Send media update and health alert messages to a Telegram chat room.</p>
@@ -2838,8 +2822,6 @@ e.g. <code>Prowlarr Notifications &lt;prowlarr@example.com&gt;</code>.</p>
 
 <a id="buildarr_prowlarr.config.settings.notifications.TwitterNotification"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_prowlarr.config.settings.notifications.Notification">Notification</span></code></p>
 
   
       <p>Send media update and health alert messages via Twitter.</p>
@@ -3025,8 +3007,6 @@ and <a href="https://wiki.servarr.com/useful-tools#twitter-connect">WikiArr</a>.
 
 <a id="buildarr_prowlarr.config.settings.notifications.WebhookNotification"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_prowlarr.config.settings.notifications.Notification">Notification</span></code></p>
 
   
       <p>Send media update and health alert notifications to a webhook API.</p>

@@ -34,8 +34,26 @@
                 <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li class="navitem">
-                                <a href="../../../../../release-notes/" class="nav-link">Release Notes</a>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Release Notes <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../../../release-notes/" class="dropdown-item">Buildarr Core</a>
+</li>
+                                    
+<li>
+    <a href="../../../../sonarr/release-notes/" class="dropdown-item">Buildarr Sonarr Plugin</a>
+</li>
+                                    
+<li>
+    <a href="../../../release-notes/" class="dropdown-item">Buildarr Prowlarr Plugin</a>
+</li>
+                                    
+<li>
+    <a href="../../../../../docker/release-notes/" class="dropdown-item">Buildarr Docker Container</a>
+</li>
+                                </ul>
                             </li>
                             <li class="navitem">
                                 <a href="../../../../../installation/" class="nav-link">Installation</a>
@@ -333,8 +351,6 @@ Take care when changing these settings.</p>
 
 <a id="buildarr_prowlarr.config.settings.general.HostGeneralSettings"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_prowlarr.config.settings.general.GeneralSettings">GeneralSettings</span></code></p>
 
   
       <p>Prowlarr instance connection and name configuration.</p>
@@ -514,8 +530,6 @@ is assigned to a subfolder, e.g. <code>https://example.com/prowlarr</code>.</p>
 
 <a id="buildarr_prowlarr.config.settings.general.SecurityGeneralSettings"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_prowlarr.config.settings.general.GeneralSettings">GeneralSettings</span></code></p>
 
   
       <p>Prowlarr instance security (authentication) settings.</p>
@@ -649,8 +663,6 @@ Do not change unless you understand the risks.</p>
 
 <a id="buildarr_prowlarr.config.settings.general.ProxyGeneralSettings"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_prowlarr.config.settings.general.GeneralSettings">GeneralSettings</span></code></p>
 
   
       <p>Proxy configuration for Prowlarr.</p>
@@ -860,8 +872,6 @@ Only enter if authentication is required by the proxy.</p>
 
 <a id="buildarr_prowlarr.config.settings.general.LoggingGeneralSettings"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_prowlarr.config.settings.general.GeneralSettings">GeneralSettings</span></code></p>
 
   
       <p>Logging configuration for the Prowlarr application.</p>
@@ -921,8 +931,6 @@ Only enter if authentication is required by the proxy.</p>
 
 <a id="buildarr_prowlarr.config.settings.general.AnalyticsGeneralSettings"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_prowlarr.config.settings.general.GeneralSettings">GeneralSettings</span></code></p>
 
   
       <p>Configuration of analytics and telemetry from within Prowlarr.</p>
@@ -980,8 +988,6 @@ to prioritise features and bug fixes.</p>
 
 <a id="buildarr_prowlarr.config.settings.general.UpdatesGeneralSettings"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_prowlarr.config.settings.general.GeneralSettings">GeneralSettings</span></code></p>
 
   
       <p>Settings for updating Prowlarr.</p>
@@ -1113,8 +1119,6 @@ and handles the remainder of the update process.</p>
 
 <a id="buildarr_prowlarr.config.settings.general.BackupGeneralSettings"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_prowlarr.config.settings.general.GeneralSettings">GeneralSettings</span></code></p>
 
   
       <p>Settings for Prowlarr automatic backups.</p>

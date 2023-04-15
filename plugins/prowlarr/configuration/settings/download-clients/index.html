@@ -34,8 +34,26 @@
                 <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li class="navitem">
-                                <a href="../../../../../release-notes/" class="nav-link">Release Notes</a>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Release Notes <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../../../release-notes/" class="dropdown-item">Buildarr Core</a>
+</li>
+                                    
+<li>
+    <a href="../../../../sonarr/release-notes/" class="dropdown-item">Buildarr Sonarr Plugin</a>
+</li>
+                                    
+<li>
+    <a href="../../../release-notes/" class="dropdown-item">Buildarr Prowlarr Plugin</a>
+</li>
+                                    
+<li>
+    <a href="../../../../../docker/release-notes/" class="dropdown-item">Buildarr Docker Container</a>
+</li>
+                                </ul>
                             </li>
                             <li class="navitem">
                                 <a href="../../../../../installation/" class="nav-link">Installation</a>
@@ -355,8 +373,6 @@
 
 <a id="buildarr_prowlarr.config.settings.download_clients.ProwlarrDownloadClientsSettings"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_prowlarr.config.types.ProwlarrConfigBase">ProwlarrConfigBase</span></code></p>
 
   
       <p>Download clients are entirely optional in Prowlarr, but are available
@@ -468,8 +484,6 @@ to Prowlarr categories, to automatically classify downloads by content type.</p>
 
 <a id="buildarr_prowlarr.config.settings.download_clients.base.DownloadClient"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_prowlarr.config.types.ProwlarrConfigBase">ProwlarrConfigBase</span></code></p>
 
   
       <p>Download clients are defined using the following format.
@@ -593,8 +607,6 @@ Only media under those tags will be assigned to this client.</p>
 
 <a id="buildarr_prowlarr.config.settings.download_clients.usenet.DownloadstationUsenetDownloadClient"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_prowlarr.config.settings.download_clients.usenet.UsenetDownloadClient">UsenetDownloadClient</span></code></p>
 
   
       <p>Download client which uses Usenet via Download Station.</p>
@@ -799,8 +811,6 @@ Using a category is optional, but strongly recommended.</p>
 
 <a id="buildarr_prowlarr.config.settings.download_clients.usenet.NzbgetDownloadClient"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_prowlarr.config.settings.download_clients.usenet.UsenetDownloadClient">UsenetDownloadClient</span></code></p>
 
   
       <p>NZBGet download client.</p>
@@ -1077,8 +1087,6 @@ with the selected Prowlarr categories.</p>
 
 <a id="buildarr_prowlarr.config.settings.download_clients.usenet.NzbvortexDownloadClient"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_prowlarr.config.settings.download_clients.usenet.UsenetDownloadClient">UsenetDownloadClient</span></code></p>
 
   
       <p>NZBVortex download client.</p>
@@ -1288,8 +1296,6 @@ with the selected Prowlarr categories.</p>
 
 <a id="buildarr_prowlarr.config.settings.download_clients.usenet.PneumaticDownloadClient"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_prowlarr.config.settings.download_clients.usenet.UsenetDownloadClient">UsenetDownloadClient</span></code></p>
 
   
       <p>Download client for the Pneumatic NZB add-on for Kodi/XMBC.</p>
@@ -1365,8 +1371,6 @@ with the selected Prowlarr categories.</p>
 
 <a id="buildarr_prowlarr.config.settings.download_clients.usenet.SabnzbdDownloadClient"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_prowlarr.config.settings.download_clients.usenet.UsenetDownloadClient">UsenetDownloadClient</span></code></p>
 
   
       <p>SABnzbd download client.</p>
@@ -1600,8 +1604,6 @@ with the selected Prowlarr categories.</p>
 
 <a id="buildarr_prowlarr.config.settings.download_clients.usenet.UsenetBlackholeDownloadClient"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_prowlarr.config.settings.download_clients.usenet.UsenetDownloadClient">UsenetDownloadClient</span></code></p>
 
   
       <p>Usenet Blackhole download client.</p>
@@ -1679,8 +1681,6 @@ peer-to-peer file sharing protocol to retrieve media files.</p>
 
 <a id="buildarr_prowlarr.config.settings.download_clients.torrent.Aria2DownloadClient"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_prowlarr.config.settings.download_clients.torrent.TorrentDownloadClient">TorrentDownloadClient</span></code></p>
 
   
       <p>Aria2 download client.</p>
@@ -1839,8 +1839,6 @@ peer-to-peer file sharing protocol to retrieve media files.</p>
 
 <a id="buildarr_prowlarr.config.settings.download_clients.torrent.DelugeDownloadClient"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_prowlarr.config.settings.download_clients.torrent.TorrentDownloadClient">TorrentDownloadClient</span></code></p>
 
   
       <p>Deluge download client.</p>
@@ -2070,8 +2068,6 @@ with the selected Prowlarr categories.</p>
 
 <a id="buildarr_prowlarr.config.settings.download_clients.torrent.DownloadstationTorrentDownloadClient"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_prowlarr.config.settings.download_clients.torrent.TorrentDownloadClient">TorrentDownloadClient</span></code></p>
 
   
       <p>Download client which uses torrents via Download Station.</p>
@@ -2276,8 +2272,6 @@ Using a category is optional, but strongly recommended.</p>
 
 <a id="buildarr_prowlarr.config.settings.download_clients.torrent.FloodDownloadClient"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_prowlarr.config.settings.download_clients.torrent.TorrentDownloadClient">TorrentDownloadClient</span></code></p>
 
   
       <p>Flood download client.</p>
@@ -2565,8 +2559,6 @@ with the selected Prowlarr categories.</p>
 
 <a id="buildarr_prowlarr.config.settings.download_clients.torrent.FreeboxDownloadClient"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_prowlarr.config.settings.download_clients.torrent.TorrentDownloadClient">TorrentDownloadClient</span></code></p>
 
   
       <p>Download client for connecting to a Freebox instance.</p>
@@ -2857,8 +2849,6 @@ with the selected Prowlarr categories.</p>
 
 <a id="buildarr_prowlarr.config.settings.download_clients.torrent.HadoukenDownloadClient"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_prowlarr.config.settings.download_clients.torrent.TorrentDownloadClient">TorrentDownloadClient</span></code></p>
 
   
       <p>Hadouken download client.</p>
@@ -3083,8 +3073,6 @@ with the selected Prowlarr categories.</p>
 
 <a id="buildarr_prowlarr.config.settings.download_clients.torrent.QbittorrentDownloadClient"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_prowlarr.config.settings.download_clients.torrent.TorrentDownloadClient">TorrentDownloadClient</span></code></p>
 
   
       <p>qBittorrent download client.</p>
@@ -3357,8 +3345,6 @@ with the selected Prowlarr categories.</p>
 
 <a id="buildarr_prowlarr.config.settings.download_clients.torrent.RtorrentDownloadClient"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_prowlarr.config.settings.download_clients.torrent.TorrentDownloadClient">TorrentDownloadClient</span></code></p>
 
   
       <p>RTorrent (ruTorrent) download client.</p>
@@ -3634,8 +3620,6 @@ with the selected Prowlarr categories.</p>
 
 <a id="buildarr_prowlarr.config.settings.download_clients.torrent.TorrentBlackholeDownloadClient"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_prowlarr.config.settings.download_clients.torrent.TorrentDownloadClient">TorrentDownloadClient</span></code></p>
 
   
       <p>Torrent Blackhole download client.</p>
@@ -3756,8 +3740,6 @@ with the selected Prowlarr categories.</p>
 
 <a id="buildarr_prowlarr.config.settings.download_clients.torrent.TransmissionDownloadClientBase"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_prowlarr.config.settings.download_clients.torrent.TorrentDownloadClient">TorrentDownloadClient</span></code></p>
 
   
       <p>Configuration options common to both Transmission and Vuze download clients:</p>
@@ -4010,8 +3992,6 @@ Using a category is optional, but strongly recommended.</p>
 
 <a id="buildarr_prowlarr.config.settings.download_clients.torrent.UtorrentDownloadClient"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_prowlarr.config.settings.download_clients.torrent.TorrentDownloadClient">TorrentDownloadClient</span></code></p>
 
   
       <p>uTorrent download client.</p>

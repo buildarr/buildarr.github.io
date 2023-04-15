@@ -34,8 +34,26 @@
                 <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li class="navitem">
-                                <a href="../../../../../../release-notes/" class="nav-link">Release Notes</a>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Release Notes <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../../../../release-notes/" class="dropdown-item">Buildarr Core</a>
+</li>
+                                    
+<li>
+    <a href="../../../../../sonarr/release-notes/" class="dropdown-item">Buildarr Sonarr Plugin</a>
+</li>
+                                    
+<li>
+    <a href="../../../../release-notes/" class="dropdown-item">Buildarr Prowlarr Plugin</a>
+</li>
+                                    
+<li>
+    <a href="../../../../../../docker/release-notes/" class="dropdown-item">Buildarr Docker Container</a>
+</li>
+                                </ul>
                             </li>
                             <li class="navitem">
                                 <a href="../../../../../../installation/" class="nav-link">Installation</a>
@@ -307,8 +325,6 @@
 
 <a id="buildarr_prowlarr.config.settings.apps.applications.ApplicationsSettings"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_prowlarr.config.types.ProwlarrConfigBase">ProwlarrConfigBase</span></code></p>
 
   
       <p>Prowlarr syncs indexer configuration with connected applications, and performs requests
@@ -442,8 +458,6 @@ managed by other applications.</p>
 
 <a id="buildarr_prowlarr.config.settings.apps.applications.Application"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="buildarr_prowlarr.config.types.ProwlarrConfigBase">ProwlarrConfigBase</span></code></p>
 
   
       <p>Prowlarr application links have the following common configuration attributes.</p>
@@ -594,8 +608,6 @@ including <code>http[s]://</code>, port, and URL base (if needed).</p>
 
 <a id="buildarr_prowlarr.config.settings.apps.applications.LazylibrarianApplication"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><a class="autorefs autorefs-internal" title="buildarr_prowlarr.config.settings.apps.applications.Application" href="#buildarr_prowlarr.config.settings.apps.applications.Application">Application</a></code></p>
 
   
       <p>Add a <a href="https://lazylibrarian.gitlab.io">LazyLibrarian</a> instance to sync with Prowlarr.</p>
@@ -691,8 +703,6 @@ including <code>http[s]://</code>, port, and URL base (if needed).</p>
 
 <a id="buildarr_prowlarr.config.settings.apps.applications.LidarrApplication"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><a class="autorefs autorefs-internal" title="buildarr_prowlarr.config.settings.apps.applications.Application" href="#buildarr_prowlarr.config.settings.apps.applications.Application">Application</a></code></p>
 
   
       <p>Add a <a href="https://lidarr.audio">Lidarr</a> instance to sync with Prowlarr.</p>
@@ -788,8 +798,6 @@ including <code>http[s]://</code>, port, and URL base (if needed).</p>
 
 <a id="buildarr_prowlarr.config.settings.apps.applications.MylarApplication"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><a class="autorefs autorefs-internal" title="buildarr_prowlarr.config.settings.apps.applications.Application" href="#buildarr_prowlarr.config.settings.apps.applications.Application">Application</a></code></p>
 
   
       <p>Add a <a href="https://github.com/mylar3/mylar3">Mylar</a> instance to sync with Prowlarr.</p>
@@ -885,8 +893,6 @@ including <code>http[s]://</code>, port, and URL base (if needed).</p>
 
 <a id="buildarr_prowlarr.config.settings.apps.applications.RadarrApplication"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><a class="autorefs autorefs-internal" title="buildarr_prowlarr.config.settings.apps.applications.Application" href="#buildarr_prowlarr.config.settings.apps.applications.Application">Application</a></code></p>
 
   
       <p>Add a <a href="https://radarr.video">Radarr</a> instance to sync with Prowlarr.</p>
@@ -982,8 +988,6 @@ including <code>http[s]://</code>, port, and URL base (if needed).</p>
 
 <a id="buildarr_prowlarr.config.settings.apps.applications.ReadarrApplication"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><a class="autorefs autorefs-internal" title="buildarr_prowlarr.config.settings.apps.applications.Application" href="#buildarr_prowlarr.config.settings.apps.applications.Application">Application</a></code></p>
 
   
       <p>Add a <a href="https://readarr.com">Readarr</a> instance to sync with Prowlarr.</p>
@@ -1079,8 +1083,6 @@ including <code>http[s]://</code>, port, and URL base (if needed).</p>
 
 <a id="buildarr_prowlarr.config.settings.apps.applications.SonarrApplication"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><a class="autorefs autorefs-internal" title="buildarr_prowlarr.config.settings.apps.applications.Application" href="#buildarr_prowlarr.config.settings.apps.applications.Application">Application</a></code></p>
 
   
       <p>Add a <a href="https://sonarr.tv">Sonarr</a> instance to sync with Prowlarr.</p>
@@ -1228,8 +1230,6 @@ this attribute is required.</p>
 
 <a id="buildarr_prowlarr.config.settings.apps.applications.WhisparrApplication"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><a class="autorefs autorefs-internal" title="buildarr_prowlarr.config.settings.apps.applications.Application" href="#buildarr_prowlarr.config.settings.apps.applications.Application">Application</a></code></p>
 
   
       <p>Add a <a href="https://github.com/Whisparr/Whisparr">Whisparr</a> instance to sync with Prowlarr.</p>
