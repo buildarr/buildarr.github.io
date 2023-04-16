@@ -454,12 +454,7 @@ This is useful to test configuration files before formally deploying Buildarr.</
 </code></pre></div>
 <p>When Buildarr detects that the remote configuration differs from the locally defined configuration, the remote configuration will be updated. In this case, Buildarr detected that on the <code>default</code> instance configured in the Sonarr plugin, the configured GUI instance name is different from the locally defined value, so it updated the Sonarr instance to reflect the change.</p>
 <p>If the run fails for one reason or another, an error message will be logged and Buildarr will exit with a non-zero status code.</p>
-<h3 id="dry-runs">Dry runs<a class="headerlink" href="#dry-runs" title="Permanent link">#</a></h3>
-<p><em>New in version 0.4.0.</em></p>
-<p>Buildarr ad-hoc runs support a dry-run mode, so you can check what <em>would</em> change on configured instances, before actually applying them. Under this mode, the output of Buildarr itself is almost exactly the same, but any actions logged in the output are not actually performed.</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>buildarr<span class="w"> </span>run<span class="w"> </span>--dry-run
-</code></pre></div>
-<p>This allows you to test changes in the configuration, or check the current state of remote instances against the configuration before actually committing changes.</p>
+<p><em>Changed in version 0.5.0</em>: Dry runs have been removed from Buildarr. If <a href="#testing-configuration">testing your configuration</a> does not cover your needs, consider creating a staging environment for your Arr stack, and test changes there before rolling it out to your production stack.</p>
 <h2 id="as-a-service-daemon-mode">As a service (daemon mode)<a class="headerlink" href="#as-a-service-daemon-mode" title="Permanent link">#</a></h2>
 <p>This is the mode in which that Buildarr is intended to run in most cases.</p>
 <p>Buildarr will run as a daemon in the foreground. First, an initial update run is performed, similar to <code>buildarr run</code>. If the initial run is successful, Buildarr will then schedule updates to run at specific times according to the configuration,
@@ -541,7 +536,6 @@ logging when the next scheduled run will occur.</p>
 2023-03-19 10:59:32,053 buildarr:1 buildarr.main [INFO] Configuration test successful.
 </code></pre></div>
 <p>Since Buildarr does not connect to any remote instances in this mode, even if a configuration file passes the tests performed by <code>buildarr test-config</code>, it will not necessarily successfully communicate with them.</p>
-<p>To test the configuration against live remote instances, without modifying them, you can use <code>buildarr run --dry-run</code> as documented in <a href="#dry-runs">Dry runs</a>.</p>
 <h2 id="generating-a-docker-compose-file">Generating a Docker Compose file<a class="headerlink" href="#generating-a-docker-compose-file" title="Permanent link">#</a></h2>
 <p><em>New in version 0.4.0.</em></p>
 <p>This is an ad-hoc command that can be used to automatically generate a Docker Compose file from a given Buildarr configuration file.</p>
