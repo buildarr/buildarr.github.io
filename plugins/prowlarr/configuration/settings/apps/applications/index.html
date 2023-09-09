@@ -12,13 +12,10 @@
         <link href="../../../../../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../../../../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../../../../../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
         <link href="../../../../../../assets/_mkdocstrings.css" rel="stylesheet">
-
-        <script src="../../../../../../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../../../../../../js/bootstrap.min.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
     </head>
 
     <body>
@@ -44,6 +41,10 @@
                                     
 <li>
     <a href="../../../../../sonarr/release-notes/" class="dropdown-item">Buildarr Sonarr Plugin</a>
+</li>
+                                    
+<li>
+    <a href="../../../../../radarr/release-notes/" class="dropdown-item">Buildarr Radarr Plugin</a>
 </li>
                                     
 <li>
@@ -154,6 +155,86 @@
 <li>
     <a href="../../../../../sonarr/configuration/ui/" class="dropdown-item">UI</a>
 </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Buildarr Radarr Plugin</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../../radarr/" class="dropdown-item">Introduction</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Configuration</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../../radarr/configuration/host/" class="dropdown-item">Host Configuration</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Settings</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../../radarr/configuration/settings/media-management/" class="dropdown-item">Media Management</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Profiles</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../../radarr/configuration/settings/profiles/quality-profiles/" class="dropdown-item">Quality Profiles</a>
+</li>
+            
+<li>
+    <a href="../../../../../radarr/configuration/settings/profiles/delay-profiles/" class="dropdown-item">Delay Profiles</a>
+</li>
+    </ul>
+  </li>
+            
+<li>
+    <a href="../../../../../radarr/configuration/settings/quality/" class="dropdown-item">Quality</a>
+</li>
+            
+<li>
+    <a href="../../../../../radarr/configuration/settings/custom-formats/" class="dropdown-item">Custom Formats</a>
+</li>
+            
+<li>
+    <a href="../../../../../radarr/configuration/settings/indexers/" class="dropdown-item">Indexers</a>
+</li>
+            
+<li>
+    <a href="../../../../../radarr/configuration/settings/download-clients/" class="dropdown-item">Download Clients</a>
+</li>
+            
+<li>
+    <a href="../../../../../radarr/configuration/settings/notifications/" class="dropdown-item">Notifications (Connect)</a>
+</li>
+            
+<li>
+    <a href="../../../../../radarr/configuration/settings/metadata/" class="dropdown-item">Metadata</a>
+</li>
+            
+<li>
+    <a href="../../../../../radarr/configuration/settings/tags/" class="dropdown-item">Tags</a>
+</li>
+            
+<li>
+    <a href="../../../../../radarr/configuration/settings/general/" class="dropdown-item">General</a>
+</li>
+            
+<li>
+    <a href="../../../../../radarr/configuration/settings/ui/" class="dropdown-item">UI</a>
+</li>
+    </ul>
+  </li>
     </ul>
   </li>
     </ul>
@@ -387,6 +468,7 @@
 <div class="doc doc-object doc-class">
 
 
+
 <a id="buildarr_prowlarr.config.settings.apps.applications.ApplicationsSettings"></a>
   <div class="doc doc-contents first">
 
@@ -451,7 +533,6 @@ refer to the <a href="https://wiki.servarr.com/prowlarr/settings#applications">g
 on WikiArr.</p>
 
 
-
   
 
   <div class="doc doc-children">
@@ -466,11 +547,13 @@ on WikiArr.</p>
 
 
 
+
 <h5 id="buildarr_prowlarr.config.settings.apps.applications.ApplicationsSettings.delete_unmanaged" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">delete_unmanaged</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+          <code class="highlight language-python"><span class="n">delete_unmanaged</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_prowlarr.config.settings.apps.applications.ApplicationsSettings.delete_unmanaged" class="headerlink" title="Permanent link">#</a></h5>
@@ -489,11 +572,13 @@ managed by other applications.</p>
 
 
 
+
 <h5 id="buildarr_prowlarr.config.settings.apps.applications.ApplicationsSettings.definitions" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">definitions</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Annotated</span><span class="p">[</span><span class="n">ApplicationType</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">discriminator</span><span class="o">=</span><span class="nb">type</span><span class="p">)]]</span> <span class="o">=</span> <span class="p">{}</span></code>
+          <code class="highlight language-python"><span class="n">definitions</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Annotated</span><span class="p">[</span><span class="n">ApplicationType</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">discriminator</span><span class="o">=</span><span class="s1">&#39;type&#39;</span><span class="p">)]]</span> <span class="o">=</span> <span class="p">{}</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_prowlarr.config.settings.apps.applications.ApplicationsSettings.definitions" class="headerlink" title="Permanent link">#</a></h5>
@@ -520,12 +605,12 @@ managed by other applications.</p>
 <div class="doc doc-object doc-class">
 
 
+
 <a id="buildarr_prowlarr.config.settings.apps.applications.Application"></a>
   <div class="doc doc-contents first">
 
   
       <p>Prowlarr application links have the following common configuration attributes.</p>
-
 
 
   
@@ -542,11 +627,12 @@ managed by other applications.</p>
 
 
 
+
 <h5 id="buildarr_prowlarr.config.settings.apps.applications.Application.prowlarr_url" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">prowlarr_url</span><span class="p">:</span> <span class="n">AnyHttpUrl</span></code>
+          <code class="highlight language-python"><span class="n">prowlarr_url</span><span class="p">:</span> <span class="n">AnyHttpUrl</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_prowlarr.config.settings.apps.applications.Application.prowlarr_url" class="headerlink" title="Permanent link">#</a></h5>
@@ -565,11 +651,12 @@ including <code>http[s]://</code>, port, and URL base (if needed).</p>
 
 
 
+
 <h5 id="buildarr_prowlarr.config.settings.apps.applications.Application.base_url" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">base_url</span><span class="p">:</span> <span class="n">AnyHttpUrl</span></code>
+          <code class="highlight language-python"><span class="n">base_url</span><span class="p">:</span> <span class="n">AnyHttpUrl</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_prowlarr.config.settings.apps.applications.Application.base_url" class="headerlink" title="Permanent link">#</a></h5>
@@ -588,11 +675,13 @@ including <code>http[s]://</code>, port, and URL base (if needed).</p>
 
 
 
+
 <h5 id="buildarr_prowlarr.config.settings.apps.applications.Application.sync_level" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">sync_level</span><span class="p">:</span> <span class="n">SyncLevel</span> <span class="o">=</span> <span class="n">SyncLevel</span><span class="o">.</span><span class="n">add_and_remove_only</span></code>
+          <code class="highlight language-python"><span class="n">sync_level</span><span class="p">:</span> <span class="n">SyncLevel</span> <span class="o">=</span> <span class="n">SyncLevel</span><span class="o">.</span><span class="n">add_and_remove_only</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_prowlarr.config.settings.apps.applications.Application.sync_level" class="headerlink" title="Permanent link">#</a></h5>
@@ -615,11 +704,12 @@ including <code>http[s]://</code>, port, and URL base (if needed).</p>
 
 
 
+
 <h5 id="buildarr_prowlarr.config.settings.apps.applications.Application.sync_categories" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">sync_categories</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">LowerCaseNonEmptyStr</span><span class="p">]</span></code>
+          <code class="highlight language-python"><span class="n">sync_categories</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">LowerCaseNonEmptyStr</span><span class="p">]</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_prowlarr.config.settings.apps.applications.Application.sync_categories" class="headerlink" title="Permanent link">#</a></h5>
@@ -638,11 +728,13 @@ including <code>http[s]://</code>, port, and URL base (if needed).</p>
 
 
 
+
 <h5 id="buildarr_prowlarr.config.settings.apps.applications.Application.tags" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">tags</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
+          <code class="highlight language-python"><span class="n">tags</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_prowlarr.config.settings.apps.applications.Application.tags" class="headerlink" title="Permanent link">#</a></h5>
@@ -670,12 +762,12 @@ including <code>http[s]://</code>, port, and URL base (if needed).</p>
 <div class="doc doc-object doc-class">
 
 
+
 <a id="buildarr_prowlarr.config.settings.apps.applications.LazylibrarianApplication"></a>
   <div class="doc doc-contents first">
 
   
       <p>Add a <a href="https://lazylibrarian.gitlab.io">LazyLibrarian</a> instance to sync with Prowlarr.</p>
-
 
 
   
@@ -692,11 +784,13 @@ including <code>http[s]://</code>, port, and URL base (if needed).</p>
 
 
 
+
 <h5 id="buildarr_prowlarr.config.settings.apps.applications.LazylibrarianApplication.type" class="doc doc-heading">
-<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;lazylibrarian&#39;</span><span class="p">,</span> <span class="s1">&#39;lazylibrary&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;lazylibrarian&#39;</span></code>
+          <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;lazylibrarian&#39;</span><span class="p">,</span> <span class="s1">&#39;lazylibrary&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;lazylibrarian&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_prowlarr.config.settings.apps.applications.LazylibrarianApplication.type" class="headerlink" title="Permanent link">#</a></h5>
@@ -713,11 +807,12 @@ including <code>http[s]://</code>, port, and URL base (if needed).</p>
 
 
 
+
 <h5 id="buildarr_prowlarr.config.settings.apps.applications.LazylibrarianApplication.api_key" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">Password</span></code>
+          <code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">Password</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_prowlarr.config.settings.apps.applications.LazylibrarianApplication.api_key" class="headerlink" title="Permanent link">#</a></h5>
@@ -734,11 +829,13 @@ including <code>http[s]://</code>, port, and URL base (if needed).</p>
 
 
 
+
 <h5 id="buildarr_prowlarr.config.settings.apps.applications.LazylibrarianApplication.sync_categories" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">sync_categories</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">LowerCaseNonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Books/Mags&#39;</span><span class="p">,</span> <span class="s1">&#39;Books/EBook&#39;</span><span class="p">,</span> <span class="s1">&#39;Books/Comics&#39;</span><span class="p">,</span> <span class="s1">&#39;Books/Technical&#39;</span><span class="p">,</span> <span class="s1">&#39;Books/Other&#39;</span><span class="p">,</span> <span class="s1">&#39;Books/Foreign&#39;</span><span class="p">}</span></code>
+          <code class="highlight language-python"><span class="n">sync_categories</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">LowerCaseNonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Books/Mags&#39;</span><span class="p">,</span> <span class="s1">&#39;Books/EBook&#39;</span><span class="p">,</span> <span class="s1">&#39;Books/Comics&#39;</span><span class="p">,</span> <span class="s1">&#39;Books/Technical&#39;</span><span class="p">,</span> <span class="s1">&#39;Books/Other&#39;</span><span class="p">,</span> <span class="s1">&#39;Books/Foreign&#39;</span><span class="p">}</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_prowlarr.config.settings.apps.applications.LazylibrarianApplication.sync_categories" class="headerlink" title="Permanent link">#</a></h5>
@@ -765,12 +862,12 @@ including <code>http[s]://</code>, port, and URL base (if needed).</p>
 <div class="doc doc-object doc-class">
 
 
+
 <a id="buildarr_prowlarr.config.settings.apps.applications.LidarrApplication"></a>
   <div class="doc doc-contents first">
 
   
       <p>Add a <a href="https://lidarr.audio">Lidarr</a> instance to sync with Prowlarr.</p>
-
 
 
   
@@ -787,11 +884,13 @@ including <code>http[s]://</code>, port, and URL base (if needed).</p>
 
 
 
+
 <h5 id="buildarr_prowlarr.config.settings.apps.applications.LidarrApplication.type" class="doc doc-heading">
-<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;lidarr&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;lidarr&#39;</span></code>
+          <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;lidarr&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;lidarr&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_prowlarr.config.settings.apps.applications.LidarrApplication.type" class="headerlink" title="Permanent link">#</a></h5>
@@ -808,11 +907,12 @@ including <code>http[s]://</code>, port, and URL base (if needed).</p>
 
 
 
+
 <h5 id="buildarr_prowlarr.config.settings.apps.applications.LidarrApplication.api_key" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">ArrApiKey</span></code>
+          <code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">ArrApiKey</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_prowlarr.config.settings.apps.applications.LidarrApplication.api_key" class="headerlink" title="Permanent link">#</a></h5>
@@ -829,11 +929,13 @@ including <code>http[s]://</code>, port, and URL base (if needed).</p>
 
 
 
+
 <h5 id="buildarr_prowlarr.config.settings.apps.applications.LidarrApplication.sync_categories" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">sync_categories</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">LowerCaseNonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Audio/MP3&#39;</span><span class="p">,</span> <span class="s1">&#39;Audio/Audiobook&#39;</span><span class="p">,</span> <span class="s1">&#39;Audio/Lossless&#39;</span><span class="p">,</span> <span class="s1">&#39;Audio/Other&#39;</span><span class="p">,</span> <span class="s1">&#39;Audio/Foreign&#39;</span><span class="p">}</span></code>
+          <code class="highlight language-python"><span class="n">sync_categories</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">LowerCaseNonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Audio/MP3&#39;</span><span class="p">,</span> <span class="s1">&#39;Audio/Audiobook&#39;</span><span class="p">,</span> <span class="s1">&#39;Audio/Lossless&#39;</span><span class="p">,</span> <span class="s1">&#39;Audio/Other&#39;</span><span class="p">,</span> <span class="s1">&#39;Audio/Foreign&#39;</span><span class="p">}</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_prowlarr.config.settings.apps.applications.LidarrApplication.sync_categories" class="headerlink" title="Permanent link">#</a></h5>
@@ -860,12 +962,12 @@ including <code>http[s]://</code>, port, and URL base (if needed).</p>
 <div class="doc doc-object doc-class">
 
 
+
 <a id="buildarr_prowlarr.config.settings.apps.applications.MylarApplication"></a>
   <div class="doc doc-contents first">
 
   
       <p>Add a <a href="https://github.com/mylar3/mylar3">Mylar</a> instance to sync with Prowlarr.</p>
-
 
 
   
@@ -882,11 +984,13 @@ including <code>http[s]://</code>, port, and URL base (if needed).</p>
 
 
 
+
 <h5 id="buildarr_prowlarr.config.settings.apps.applications.MylarApplication.type" class="doc doc-heading">
-<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;mylar&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;mylar&#39;</span></code>
+          <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;mylar&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;mylar&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_prowlarr.config.settings.apps.applications.MylarApplication.type" class="headerlink" title="Permanent link">#</a></h5>
@@ -903,11 +1007,12 @@ including <code>http[s]://</code>, port, and URL base (if needed).</p>
 
 
 
+
 <h5 id="buildarr_prowlarr.config.settings.apps.applications.MylarApplication.api_key" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">Password</span></code>
+          <code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">Password</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_prowlarr.config.settings.apps.applications.MylarApplication.api_key" class="headerlink" title="Permanent link">#</a></h5>
@@ -924,11 +1029,13 @@ including <code>http[s]://</code>, port, and URL base (if needed).</p>
 
 
 
+
 <h5 id="buildarr_prowlarr.config.settings.apps.applications.MylarApplication.sync_categories" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">sync_categories</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">LowerCaseNonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Books/Comics&#39;</span><span class="p">}</span></code>
+          <code class="highlight language-python"><span class="n">sync_categories</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">LowerCaseNonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Books/Comics&#39;</span><span class="p">}</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_prowlarr.config.settings.apps.applications.MylarApplication.sync_categories" class="headerlink" title="Permanent link">#</a></h5>
@@ -955,12 +1062,12 @@ including <code>http[s]://</code>, port, and URL base (if needed).</p>
 <div class="doc doc-object doc-class">
 
 
+
 <a id="buildarr_prowlarr.config.settings.apps.applications.RadarrApplication"></a>
   <div class="doc doc-contents first">
 
   
       <p>Add a <a href="https://radarr.video">Radarr</a> instance to sync with Prowlarr.</p>
-
 
 
   
@@ -977,11 +1084,13 @@ including <code>http[s]://</code>, port, and URL base (if needed).</p>
 
 
 
+
 <h5 id="buildarr_prowlarr.config.settings.apps.applications.RadarrApplication.type" class="doc doc-heading">
-<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;radarr&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;radarr&#39;</span></code>
+          <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;radarr&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;radarr&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_prowlarr.config.settings.apps.applications.RadarrApplication.type" class="headerlink" title="Permanent link">#</a></h5>
@@ -998,11 +1107,12 @@ including <code>http[s]://</code>, port, and URL base (if needed).</p>
 
 
 
+
 <h5 id="buildarr_prowlarr.config.settings.apps.applications.RadarrApplication.api_key" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">ArrApiKey</span></code>
+          <code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">ArrApiKey</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_prowlarr.config.settings.apps.applications.RadarrApplication.api_key" class="headerlink" title="Permanent link">#</a></h5>
@@ -1019,11 +1129,13 @@ including <code>http[s]://</code>, port, and URL base (if needed).</p>
 
 
 
+
 <h5 id="buildarr_prowlarr.config.settings.apps.applications.RadarrApplication.sync_categories" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">sync_categories</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">LowerCaseNonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Movies/Foreign&#39;</span><span class="p">,</span> <span class="s1">&#39;Movies/Other&#39;</span><span class="p">,</span> <span class="s1">&#39;Movies/SD&#39;</span><span class="p">,</span> <span class="s1">&#39;Movies/HD&#39;</span><span class="p">,</span> <span class="s1">&#39;Movies/UHD&#39;</span><span class="p">,</span> <span class="s1">&#39;Movies/BluRay&#39;</span><span class="p">,</span> <span class="s1">&#39;Movies/3D&#39;</span><span class="p">,</span> <span class="s1">&#39;Movies/DVD&#39;</span><span class="p">,</span> <span class="s1">&#39;Movies/WEB-DL&#39;</span><span class="p">}</span></code>
+          <code class="highlight language-python"><span class="n">sync_categories</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">LowerCaseNonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Movies/Foreign&#39;</span><span class="p">,</span> <span class="s1">&#39;Movies/Other&#39;</span><span class="p">,</span> <span class="s1">&#39;Movies/SD&#39;</span><span class="p">,</span> <span class="s1">&#39;Movies/HD&#39;</span><span class="p">,</span> <span class="s1">&#39;Movies/UHD&#39;</span><span class="p">,</span> <span class="s1">&#39;Movies/BluRay&#39;</span><span class="p">,</span> <span class="s1">&#39;Movies/3D&#39;</span><span class="p">,</span> <span class="s1">&#39;Movies/DVD&#39;</span><span class="p">,</span> <span class="s1">&#39;Movies/WEB-DL&#39;</span><span class="p">}</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_prowlarr.config.settings.apps.applications.RadarrApplication.sync_categories" class="headerlink" title="Permanent link">#</a></h5>
@@ -1050,12 +1162,12 @@ including <code>http[s]://</code>, port, and URL base (if needed).</p>
 <div class="doc doc-object doc-class">
 
 
+
 <a id="buildarr_prowlarr.config.settings.apps.applications.ReadarrApplication"></a>
   <div class="doc doc-contents first">
 
   
       <p>Add a <a href="https://readarr.com">Readarr</a> instance to sync with Prowlarr.</p>
-
 
 
   
@@ -1072,11 +1184,13 @@ including <code>http[s]://</code>, port, and URL base (if needed).</p>
 
 
 
+
 <h5 id="buildarr_prowlarr.config.settings.apps.applications.ReadarrApplication.type" class="doc doc-heading">
-<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;readarr&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;readarr&#39;</span></code>
+          <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;readarr&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;readarr&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_prowlarr.config.settings.apps.applications.ReadarrApplication.type" class="headerlink" title="Permanent link">#</a></h5>
@@ -1093,11 +1207,12 @@ including <code>http[s]://</code>, port, and URL base (if needed).</p>
 
 
 
+
 <h5 id="buildarr_prowlarr.config.settings.apps.applications.ReadarrApplication.api_key" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">ArrApiKey</span></code>
+          <code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">ArrApiKey</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_prowlarr.config.settings.apps.applications.ReadarrApplication.api_key" class="headerlink" title="Permanent link">#</a></h5>
@@ -1114,11 +1229,13 @@ including <code>http[s]://</code>, port, and URL base (if needed).</p>
 
 
 
+
 <h5 id="buildarr_prowlarr.config.settings.apps.applications.ReadarrApplication.sync_categories" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">sync_categories</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">LowerCaseNonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Audio/Audiobook&#39;</span><span class="p">,</span> <span class="s1">&#39;Books/Mags&#39;</span><span class="p">,</span> <span class="s1">&#39;Books/EBook&#39;</span><span class="p">,</span> <span class="s1">&#39;Books/Comics&#39;</span><span class="p">,</span> <span class="s1">&#39;Books/Technical&#39;</span><span class="p">,</span> <span class="s1">&#39;Books/Other&#39;</span><span class="p">,</span> <span class="s1">&#39;Books/Foreign&#39;</span><span class="p">}</span></code>
+          <code class="highlight language-python"><span class="n">sync_categories</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">LowerCaseNonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Audio/Audiobook&#39;</span><span class="p">,</span> <span class="s1">&#39;Books/Mags&#39;</span><span class="p">,</span> <span class="s1">&#39;Books/EBook&#39;</span><span class="p">,</span> <span class="s1">&#39;Books/Comics&#39;</span><span class="p">,</span> <span class="s1">&#39;Books/Technical&#39;</span><span class="p">,</span> <span class="s1">&#39;Books/Other&#39;</span><span class="p">,</span> <span class="s1">&#39;Books/Foreign&#39;</span><span class="p">}</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_prowlarr.config.settings.apps.applications.ReadarrApplication.sync_categories" class="headerlink" title="Permanent link">#</a></h5>
@@ -1145,6 +1262,7 @@ including <code>http[s]://</code>, port, and URL base (if needed).</p>
 <div class="doc doc-object doc-class">
 
 
+
 <a id="buildarr_prowlarr.config.settings.apps.applications.SonarrApplication"></a>
   <div class="doc doc-contents first">
 
@@ -1156,7 +1274,6 @@ including <code>http[s]://</code>, port, and URL base (if needed).</p>
 that can be used to link Sonarr instances with Prowlarr using the <code>instance_name</code>
 attribute.</p>
 </div>
-
 
 
   
@@ -1173,11 +1290,13 @@ attribute.</p>
 
 
 
+
 <h5 id="buildarr_prowlarr.config.settings.apps.applications.SonarrApplication.type" class="doc doc-heading">
-<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;sonarr&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;sonarr&#39;</span></code>
+          <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;sonarr&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;sonarr&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_prowlarr.config.settings.apps.applications.SonarrApplication.type" class="headerlink" title="Permanent link">#</a></h5>
@@ -1194,11 +1313,13 @@ attribute.</p>
 
 
 
+
 <h5 id="buildarr_prowlarr.config.settings.apps.applications.SonarrApplication.instance_name" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">instance_name</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">InstanceName</span><span class="p">]</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">plugin</span><span class="o">=</span><span class="s1">&#39;sonarr&#39;</span><span class="p">)</span></code>
+          <code class="highlight language-python"><span class="n">instance_name</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">InstanceName</span><span class="p">]</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">plugin</span><span class="o">=</span><span class="s1">&#39;sonarr&#39;</span><span class="p">)</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_prowlarr.config.settings.apps.applications.SonarrApplication.instance_name" class="headerlink" title="Permanent link">#</a></h5>
@@ -1216,11 +1337,13 @@ a Buildarr-defined Sonarr instance to this Prowlarr instance.</p>
 
 
 
+
 <h5 id="buildarr_prowlarr.config.settings.apps.applications.SonarrApplication.api_key" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ArrApiKey</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+          <code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ArrApiKey</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_prowlarr.config.settings.apps.applications.SonarrApplication.api_key" class="headerlink" title="Permanent link">#</a></h5>
@@ -1239,11 +1362,13 @@ this attribute is required.</p>
 
 
 
+
 <h5 id="buildarr_prowlarr.config.settings.apps.applications.SonarrApplication.sync_categories" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">sync_categories</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">LowerCaseNonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;TV/WEB-DL&#39;</span><span class="p">,</span> <span class="s1">&#39;TV/Foreign&#39;</span><span class="p">,</span> <span class="s1">&#39;TV/SD&#39;</span><span class="p">,</span> <span class="s1">&#39;TV/HD&#39;</span><span class="p">,</span> <span class="s1">&#39;TV/UHD&#39;</span><span class="p">,</span> <span class="s1">&#39;TV/Other&#39;</span><span class="p">}</span></code>
+          <code class="highlight language-python"><span class="n">sync_categories</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">LowerCaseNonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;TV/WEB-DL&#39;</span><span class="p">,</span> <span class="s1">&#39;TV/Foreign&#39;</span><span class="p">,</span> <span class="s1">&#39;TV/SD&#39;</span><span class="p">,</span> <span class="s1">&#39;TV/HD&#39;</span><span class="p">,</span> <span class="s1">&#39;TV/UHD&#39;</span><span class="p">,</span> <span class="s1">&#39;TV/Other&#39;</span><span class="p">}</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_prowlarr.config.settings.apps.applications.SonarrApplication.sync_categories" class="headerlink" title="Permanent link">#</a></h5>
@@ -1260,11 +1385,13 @@ this attribute is required.</p>
 
 
 
+
 <h5 id="buildarr_prowlarr.config.settings.apps.applications.SonarrApplication.anime_sync_categories" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">anime_sync_categories</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">LowerCaseNonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;TV/Anime&#39;</span><span class="p">}</span></code>
+          <code class="highlight language-python"><span class="n">anime_sync_categories</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">LowerCaseNonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;TV/Anime&#39;</span><span class="p">}</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_prowlarr.config.settings.apps.applications.SonarrApplication.anime_sync_categories" class="headerlink" title="Permanent link">#</a></h5>
@@ -1292,12 +1419,12 @@ this attribute is required.</p>
 <div class="doc doc-object doc-class">
 
 
+
 <a id="buildarr_prowlarr.config.settings.apps.applications.WhisparrApplication"></a>
   <div class="doc doc-contents first">
 
   
       <p>Add a <a href="https://github.com/Whisparr/Whisparr">Whisparr</a> instance to sync with Prowlarr.</p>
-
 
 
   
@@ -1314,11 +1441,13 @@ this attribute is required.</p>
 
 
 
+
 <h5 id="buildarr_prowlarr.config.settings.apps.applications.WhisparrApplication.type" class="doc doc-heading">
-<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;whisparr&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;whisparr&#39;</span></code>
+          <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;whisparr&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;whisparr&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_prowlarr.config.settings.apps.applications.WhisparrApplication.type" class="headerlink" title="Permanent link">#</a></h5>
@@ -1335,11 +1464,12 @@ this attribute is required.</p>
 
 
 
+
 <h5 id="buildarr_prowlarr.config.settings.apps.applications.WhisparrApplication.api_key" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">ArrApiKey</span></code>
+          <code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">ArrApiKey</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_prowlarr.config.settings.apps.applications.WhisparrApplication.api_key" class="headerlink" title="Permanent link">#</a></h5>
@@ -1356,11 +1486,13 @@ this attribute is required.</p>
 
 
 
+
 <h5 id="buildarr_prowlarr.config.settings.apps.applications.WhisparrApplication.sync_categories" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">sync_categories</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">LowerCaseNonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;XXX/DVD&#39;</span><span class="p">,</span> <span class="s1">&#39;XXX/WMV&#39;</span><span class="p">,</span> <span class="s1">&#39;XXX/XviD&#39;</span><span class="p">,</span> <span class="s1">&#39;XXX/x264&#39;</span><span class="p">,</span> <span class="s1">&#39;XXX/Pack&#39;</span><span class="p">,</span> <span class="s1">&#39;XXX/Other&#39;</span><span class="p">,</span> <span class="s1">&#39;XXX/SD&#39;</span><span class="p">,</span> <span class="s1">&#39;XXX/WEB-DL&#39;</span><span class="p">}</span></code>
+          <code class="highlight language-python"><span class="n">sync_categories</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">LowerCaseNonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;XXX/DVD&#39;</span><span class="p">,</span> <span class="s1">&#39;XXX/WMV&#39;</span><span class="p">,</span> <span class="s1">&#39;XXX/XviD&#39;</span><span class="p">,</span> <span class="s1">&#39;XXX/x264&#39;</span><span class="p">,</span> <span class="s1">&#39;XXX/Pack&#39;</span><span class="p">,</span> <span class="s1">&#39;XXX/Other&#39;</span><span class="p">,</span> <span class="s1">&#39;XXX/SD&#39;</span><span class="p">,</span> <span class="s1">&#39;XXX/WEB-DL&#39;</span><span class="p">}</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_prowlarr.config.settings.apps.applications.WhisparrApplication.sync_categories" class="headerlink" title="Permanent link">#</a></h5>
@@ -1389,12 +1521,14 @@ this attribute is required.</p>
             <hr>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
+        <script src="../../../../../../js/jquery-3.6.0.min.js"></script>
+        <script src="../../../../../../js/bootstrap.min.js"></script>
         <script>
             var base_url = "../../../../../..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="../../../../../../js/base.js" defer></script>
-        <script src="../../../../../../search/main.js" defer></script>
+        <script src="../../../../../../js/base.js"></script>
+        <script src="../../../../../../search/main.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">

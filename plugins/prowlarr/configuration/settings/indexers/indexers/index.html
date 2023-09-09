@@ -12,13 +12,10 @@
         <link href="../../../../../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../../../../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../../../../../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
         <link href="../../../../../../assets/_mkdocstrings.css" rel="stylesheet">
-
-        <script src="../../../../../../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../../../../../../js/bootstrap.min.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
     </head>
 
     <body>
@@ -44,6 +41,10 @@
                                     
 <li>
     <a href="../../../../../sonarr/release-notes/" class="dropdown-item">Buildarr Sonarr Plugin</a>
+</li>
+                                    
+<li>
+    <a href="../../../../../radarr/release-notes/" class="dropdown-item">Buildarr Radarr Plugin</a>
 </li>
                                     
 <li>
@@ -154,6 +155,86 @@
 <li>
     <a href="../../../../../sonarr/configuration/ui/" class="dropdown-item">UI</a>
 </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Buildarr Radarr Plugin</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../../radarr/" class="dropdown-item">Introduction</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Configuration</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../../radarr/configuration/host/" class="dropdown-item">Host Configuration</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Settings</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../../radarr/configuration/settings/media-management/" class="dropdown-item">Media Management</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Profiles</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../../radarr/configuration/settings/profiles/quality-profiles/" class="dropdown-item">Quality Profiles</a>
+</li>
+            
+<li>
+    <a href="../../../../../radarr/configuration/settings/profiles/delay-profiles/" class="dropdown-item">Delay Profiles</a>
+</li>
+    </ul>
+  </li>
+            
+<li>
+    <a href="../../../../../radarr/configuration/settings/quality/" class="dropdown-item">Quality</a>
+</li>
+            
+<li>
+    <a href="../../../../../radarr/configuration/settings/custom-formats/" class="dropdown-item">Custom Formats</a>
+</li>
+            
+<li>
+    <a href="../../../../../radarr/configuration/settings/indexers/" class="dropdown-item">Indexers</a>
+</li>
+            
+<li>
+    <a href="../../../../../radarr/configuration/settings/download-clients/" class="dropdown-item">Download Clients</a>
+</li>
+            
+<li>
+    <a href="../../../../../radarr/configuration/settings/notifications/" class="dropdown-item">Notifications (Connect)</a>
+</li>
+            
+<li>
+    <a href="../../../../../radarr/configuration/settings/metadata/" class="dropdown-item">Metadata</a>
+</li>
+            
+<li>
+    <a href="../../../../../radarr/configuration/settings/tags/" class="dropdown-item">Tags</a>
+</li>
+            
+<li>
+    <a href="../../../../../radarr/configuration/settings/general/" class="dropdown-item">General</a>
+</li>
+            
+<li>
+    <a href="../../../../../radarr/configuration/settings/ui/" class="dropdown-item">UI</a>
+</li>
+    </ul>
+  </li>
     </ul>
   </li>
     </ul>
@@ -363,6 +444,7 @@
 <div class="doc doc-object doc-class">
 
 
+
 <a id="buildarr_prowlarr.config.settings.indexers.indexers.IndexersSettings"></a>
   <div class="doc doc-contents first">
 
@@ -391,7 +473,6 @@ schedule grabs with their own configured download clients.</p>
 </code></pre></div>
 
 
-
   
 
   <div class="doc doc-children">
@@ -406,11 +487,13 @@ schedule grabs with their own configured download clients.</p>
 
 
 
+
 <h5 id="buildarr_prowlarr.config.settings.indexers.indexers.IndexersSettings.delete_unmanaged" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">delete_unmanaged</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+          <code class="highlight language-python"><span class="n">delete_unmanaged</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_prowlarr.config.settings.indexers.indexers.IndexersSettings.delete_unmanaged" class="headerlink" title="Permanent link">#</a></h5>
@@ -428,11 +511,13 @@ schedule grabs with their own configured download clients.</p>
 
 
 
+
 <h5 id="buildarr_prowlarr.config.settings.indexers.indexers.IndexersSettings.definitions" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">definitions</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Indexer</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span></code>
+          <code class="highlight language-python"><span class="n">definitions</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Indexer</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_prowlarr.config.settings.indexers.indexers.IndexersSettings.definitions" class="headerlink" title="Permanent link">#</a></h5>
@@ -496,6 +581,7 @@ configuration attributes that are actually changed from default.</p>
 <div class="doc doc-object doc-class">
 
 
+
 <a id="buildarr_prowlarr.config.settings.indexers.indexers.Indexer"></a>
   <div class="doc doc-contents first">
 
@@ -548,7 +634,6 @@ such as API keys.</p>
 <p>Attributes common to all indexer types are documented below.</p>
 
 
-
   
 
   <div class="doc doc-children">
@@ -563,11 +648,12 @@ such as API keys.</p>
 
 
 
+
 <h5 id="buildarr_prowlarr.config.settings.indexers.indexers.Indexer.type" class="doc doc-heading">
-<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">LowerCaseNonEmptyStr</span></code>
+          <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">LowerCaseNonEmptyStr</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_prowlarr.config.settings.indexers.indexers.Indexer.type" class="headerlink" title="Permanent link">#</a></h5>
@@ -584,11 +670,13 @@ such as API keys.</p>
 
 
 
+
 <h5 id="buildarr_prowlarr.config.settings.indexers.indexers.Indexer.enable" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">enable</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
+          <code class="highlight language-python"><span class="n">enable</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_prowlarr.config.settings.indexers.indexers.Indexer.enable" class="headerlink" title="Permanent link">#</a></h5>
@@ -605,11 +693,12 @@ such as API keys.</p>
 
 
 
+
 <h5 id="buildarr_prowlarr.config.settings.indexers.indexers.Indexer.sync_profile" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">sync_profile</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+          <code class="highlight language-python"><span class="n">sync_profile</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_prowlarr.config.settings.indexers.indexers.Indexer.sync_profile" class="headerlink" title="Permanent link">#</a></h5>
@@ -628,11 +717,13 @@ using it in an indexer.</p>
 
 
 
+
 <h5 id="buildarr_prowlarr.config.settings.indexers.indexers.Indexer.redirect" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">redirect</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+          <code class="highlight language-python"><span class="n">redirect</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_prowlarr.config.settings.indexers.indexers.Indexer.redirect" class="headerlink" title="Permanent link">#</a></h5>
@@ -651,11 +742,13 @@ instead of proxying the request via Prowlarr.</p>
 
 
 
+
 <h5 id="buildarr_prowlarr.config.settings.indexers.indexers.Indexer.priority" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">priority</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">le</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span></code>
+          <code class="highlight language-python"><span class="n">priority</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">le</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_prowlarr.config.settings.indexers.indexers.Indexer.priority" class="headerlink" title="Permanent link">#</a></h5>
@@ -673,11 +766,13 @@ instead of proxying the request via Prowlarr.</p>
 
 
 
+
 <h5 id="buildarr_prowlarr.config.settings.indexers.indexers.Indexer.query_limit" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">query_limit</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Annotated</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">)]]</span> <span class="o">=</span> <span class="kc">None</span></code>
+          <code class="highlight language-python"><span class="n">query_limit</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Annotated</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">)]]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_prowlarr.config.settings.indexers.indexers.Indexer.query_limit" class="headerlink" title="Permanent link">#</a></h5>
@@ -695,11 +790,13 @@ instead of proxying the request via Prowlarr.</p>
 
 
 
+
 <h5 id="buildarr_prowlarr.config.settings.indexers.indexers.Indexer.grab_limit" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">grab_limit</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Annotated</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">)]]</span> <span class="o">=</span> <span class="kc">None</span></code>
+          <code class="highlight language-python"><span class="n">grab_limit</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Annotated</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">)]]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_prowlarr.config.settings.indexers.indexers.Indexer.grab_limit" class="headerlink" title="Permanent link">#</a></h5>
@@ -717,11 +814,13 @@ instead of proxying the request via Prowlarr.</p>
 
 
 
+
 <h5 id="buildarr_prowlarr.config.settings.indexers.indexers.Indexer.tags" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">tags</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
+          <code class="highlight language-python"><span class="n">tags</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_prowlarr.config.settings.indexers.indexers.Indexer.tags" class="headerlink" title="Permanent link">#</a></h5>
@@ -739,11 +838,13 @@ instead of proxying the request via Prowlarr.</p>
 
 
 
+
 <h5 id="buildarr_prowlarr.config.settings.indexers.indexers.Indexer.fields" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">fields</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span></code>
+          <code class="highlight language-python"><span class="n">fields</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_prowlarr.config.settings.indexers.indexers.Indexer.fields" class="headerlink" title="Permanent link">#</a></h5>
@@ -761,11 +862,13 @@ instead of proxying the request via Prowlarr.</p>
 
 
 
+
 <h5 id="buildarr_prowlarr.config.settings.indexers.indexers.Indexer.secret_fields" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">secret_fields</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Password</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span></code>
+          <code class="highlight language-python"><span class="n">secret_fields</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Password</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_prowlarr.config.settings.indexers.indexers.Indexer.secret_fields" class="headerlink" title="Permanent link">#</a></h5>
@@ -796,12 +899,14 @@ such as API keys.</p>
             <hr>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
+        <script src="../../../../../../js/jquery-3.6.0.min.js"></script>
+        <script src="../../../../../../js/bootstrap.min.js"></script>
         <script>
             var base_url = "../../../../../..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="../../../../../../js/base.js" defer></script>
-        <script src="../../../../../../search/main.js" defer></script>
+        <script src="../../../../../../js/base.js"></script>
+        <script src="../../../../../../search/main.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">

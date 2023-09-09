@@ -12,13 +12,10 @@
         <link href="../../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
         <link href="../../../assets/_mkdocstrings.css" rel="stylesheet">
-
-        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../../../js/bootstrap.min.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
     </head>
 
     <body>
@@ -44,6 +41,10 @@
                                     
 <li>
     <a href="../../sonarr/release-notes/" class="dropdown-item">Buildarr Sonarr Plugin</a>
+</li>
+                                    
+<li>
+    <a href="../../radarr/release-notes/" class="dropdown-item">Buildarr Radarr Plugin</a>
 </li>
                                     
 <li>
@@ -154,6 +155,86 @@
 <li>
     <a href="../../sonarr/configuration/ui/" class="dropdown-item">UI</a>
 </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Buildarr Radarr Plugin</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../radarr/" class="dropdown-item">Introduction</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Configuration</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../radarr/configuration/host/" class="dropdown-item">Host Configuration</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Settings</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../radarr/configuration/settings/media-management/" class="dropdown-item">Media Management</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Profiles</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../radarr/configuration/settings/profiles/quality-profiles/" class="dropdown-item">Quality Profiles</a>
+</li>
+            
+<li>
+    <a href="../../radarr/configuration/settings/profiles/delay-profiles/" class="dropdown-item">Delay Profiles</a>
+</li>
+    </ul>
+  </li>
+            
+<li>
+    <a href="../../radarr/configuration/settings/quality/" class="dropdown-item">Quality</a>
+</li>
+            
+<li>
+    <a href="../../radarr/configuration/settings/custom-formats/" class="dropdown-item">Custom Formats</a>
+</li>
+            
+<li>
+    <a href="../../radarr/configuration/settings/indexers/" class="dropdown-item">Indexers</a>
+</li>
+            
+<li>
+    <a href="../../radarr/configuration/settings/download-clients/" class="dropdown-item">Download Clients</a>
+</li>
+            
+<li>
+    <a href="../../radarr/configuration/settings/notifications/" class="dropdown-item">Notifications (Connect)</a>
+</li>
+            
+<li>
+    <a href="../../radarr/configuration/settings/metadata/" class="dropdown-item">Metadata</a>
+</li>
+            
+<li>
+    <a href="../../radarr/configuration/settings/tags/" class="dropdown-item">Tags</a>
+</li>
+            
+<li>
+    <a href="../../radarr/configuration/settings/general/" class="dropdown-item">General</a>
+</li>
+            
+<li>
+    <a href="../../radarr/configuration/settings/ui/" class="dropdown-item">UI</a>
+</li>
+    </ul>
+  </li>
     </ul>
   </li>
     </ul>
@@ -342,6 +423,10 @@
             
             <li class="nav-item" data-level="1"><a href="#release-notes-buildarr-jellyseerr-plugin" class="nav-link">Release Notes (Buildarr Jellyseerr Plugin)</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#v020-2023-09-09" class="nav-link">v0.2.0 - 2023-09-09</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#v010-2023-04-15" class="nav-link">v0.1.0 - 2023-04-15</a>
               <ul class="nav flex-column">
               </ul>
@@ -354,6 +439,19 @@
                     <div class="col-md-9" role="main">
 
 <h1 id="release-notes-buildarr-jellyseerr-plugin">Release Notes (Buildarr Jellyseerr Plugin)<a class="headerlink" href="#release-notes-buildarr-jellyseerr-plugin" title="Permanent link">#</a></h1>
+<h2 id="v020-2023-09-09"><a href="https://github.com/buildarr/buildarr-jellyseerr/releases/tag/v0.2.0">v0.2.0</a> - 2023-09-09<a class="headerlink" href="#v020-2023-09-09" title="Permanent link">#</a></h2>
+<p>This release updates the Jellyseerr plugin so that it is compatible with <a href="https://buildarr.github.io/release-notes/#v060-2023-09-02">Buildarr v0.6.0</a>.</p>
+<p>This version is backwards compatible with all versions of Buildarr supported by v0.1.0 of the plugin.</p>
+<p>An optional extra dependency has been added to the plugin for the new <a href="https://buildarr.github.io/plugins/radarr">Radarr plugin for Buildarr</a>, for convenient installation when using Jellyseerr.</p>
+<p>Other changes:</p>
+<ul>
+<li>Fix the plugin's internal name for <code>announced</code> in the minimum availability field. Shouldn't have caused any problems when using the plugin previously, but fixed anyway.</li>
+</ul>
+<h3 id="changed">Changed<a class="headerlink" href="#changed" title="Permanent link">#</a></h3>
+<ul>
+<li>Update package metadata and dependencies (<a href="https://github.com/buildarr/buildarr-prowlarr/pull/5">#5</a>)</li>
+<li>Fix internal name for 'announced' minimum availability (<a href="https://github.com/buildarr/buildarr-prowlarr/pull/6">#6</a>)</li>
+</ul>
 <h2 id="v010-2023-04-15"><a href="https://github.com/buildarr/buildarr-jellyseerr/releases/tag/v0.1.0">v0.1.0</a> - 2023-04-15<a class="headerlink" href="#v010-2023-04-15" title="Permanent link">#</a></h2>
 <p>First release of the Jellyseerr plugin for Buildarr.</p></div>
             </div>
@@ -363,12 +461,14 @@
             <hr>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
+        <script src="../../../js/jquery-3.6.0.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
         <script>
             var base_url = "../../..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="../../../js/base.js" defer></script>
-        <script src="../../../search/main.js" defer></script>
+        <script src="../../../js/base.js"></script>
+        <script src="../../../search/main.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">

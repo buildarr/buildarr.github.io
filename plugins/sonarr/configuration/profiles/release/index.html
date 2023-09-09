@@ -12,13 +12,10 @@
         <link href="../../../../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../../../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../../../../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
         <link href="../../../../../assets/_mkdocstrings.css" rel="stylesheet">
-
-        <script src="../../../../../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../../../../../js/bootstrap.min.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
     </head>
 
     <body>
@@ -44,6 +41,10 @@
                                     
 <li>
     <a href="../../../release-notes/" class="dropdown-item">Buildarr Sonarr Plugin</a>
+</li>
+                                    
+<li>
+    <a href="../../../../radarr/release-notes/" class="dropdown-item">Buildarr Radarr Plugin</a>
 </li>
                                     
 <li>
@@ -154,6 +155,86 @@
 <li>
     <a href="../../ui/" class="dropdown-item">UI</a>
 </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Buildarr Radarr Plugin</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../radarr/" class="dropdown-item">Introduction</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Configuration</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../radarr/configuration/host/" class="dropdown-item">Host Configuration</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Settings</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../radarr/configuration/settings/media-management/" class="dropdown-item">Media Management</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Profiles</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../radarr/configuration/settings/profiles/quality-profiles/" class="dropdown-item">Quality Profiles</a>
+</li>
+            
+<li>
+    <a href="../../../../radarr/configuration/settings/profiles/delay-profiles/" class="dropdown-item">Delay Profiles</a>
+</li>
+    </ul>
+  </li>
+            
+<li>
+    <a href="../../../../radarr/configuration/settings/quality/" class="dropdown-item">Quality</a>
+</li>
+            
+<li>
+    <a href="../../../../radarr/configuration/settings/custom-formats/" class="dropdown-item">Custom Formats</a>
+</li>
+            
+<li>
+    <a href="../../../../radarr/configuration/settings/indexers/" class="dropdown-item">Indexers</a>
+</li>
+            
+<li>
+    <a href="../../../../radarr/configuration/settings/download-clients/" class="dropdown-item">Download Clients</a>
+</li>
+            
+<li>
+    <a href="../../../../radarr/configuration/settings/notifications/" class="dropdown-item">Notifications (Connect)</a>
+</li>
+            
+<li>
+    <a href="../../../../radarr/configuration/settings/metadata/" class="dropdown-item">Metadata</a>
+</li>
+            
+<li>
+    <a href="../../../../radarr/configuration/settings/tags/" class="dropdown-item">Tags</a>
+</li>
+            
+<li>
+    <a href="../../../../radarr/configuration/settings/general/" class="dropdown-item">General</a>
+</li>
+            
+<li>
+    <a href="../../../../radarr/configuration/settings/ui/" class="dropdown-item">UI</a>
+</li>
+    </ul>
+  </li>
     </ul>
   </li>
     </ul>
@@ -403,12 +484,12 @@ or a reference to an external provider of pre-made release profiles like TRaSH-G
 <div class="doc doc-object doc-class">
 
 
+
 <a id="buildarr_sonarr.config.profiles.release.SonarrReleaseProfilesSettingsConfig"></a>
   <div class="doc doc-contents first">
 
   
       <p>Configuration parameters for controlling how Buildarr handles release profiles.</p>
-
 
 
   
@@ -425,11 +506,13 @@ or a reference to an external provider of pre-made release profiles like TRaSH-G
 
 
 
+
 <h5 id="buildarr_sonarr.config.profiles.release.SonarrReleaseProfilesSettingsConfig.delete_unmanaged" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">delete_unmanaged</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+          <code class="highlight language-python"><span class="n">delete_unmanaged</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.profiles.release.SonarrReleaseProfilesSettingsConfig.delete_unmanaged" class="headerlink" title="Permanent link">#</a></h5>
@@ -446,11 +529,13 @@ or a reference to an external provider of pre-made release profiles like TRaSH-G
 
 
 
+
 <h5 id="buildarr_sonarr.config.profiles.release.SonarrReleaseProfilesSettingsConfig.definitions" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">definitions</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">ReleaseProfile</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span></code>
+          <code class="highlight language-python"><span class="n">definitions</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">ReleaseProfile</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.profiles.release.SonarrReleaseProfilesSettingsConfig.definitions" class="headerlink" title="Permanent link">#</a></h5>
@@ -498,9 +583,9 @@ Buildarr will not modify existing release profiles, but if <code>delete_unmanage
 <div class="doc doc-object doc-class">
 
 
+
 <a id="buildarr_sonarr.config.profiles.release.ReleaseProfile"></a>
   <div class="doc doc-contents first">
-
 
 
 
@@ -518,11 +603,13 @@ Buildarr will not modify existing release profiles, but if <code>delete_unmanage
 
 
 
+
 <h5 id="buildarr_sonarr.config.profiles.release.ReleaseProfile.enable" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">enable</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
+          <code class="highlight language-python"><span class="n">enable</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.profiles.release.ReleaseProfile.enable" class="headerlink" title="Permanent link">#</a></h5>
@@ -540,11 +627,13 @@ Buildarr will not modify existing release profiles, but if <code>delete_unmanage
 
 
 
+
 <h5 id="buildarr_sonarr.config.profiles.release.ReleaseProfile.include_preferred_when_renaming" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">include_preferred_when_renaming</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+          <code class="highlight language-python"><span class="n">include_preferred_when_renaming</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.profiles.release.ReleaseProfile.include_preferred_when_renaming" class="headerlink" title="Permanent link">#</a></h5>
@@ -562,11 +651,13 @@ when doing automatic renaming in Sonarr.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.profiles.release.ReleaseProfile.indexer" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">indexer</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+          <code class="highlight language-python"><span class="n">indexer</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.profiles.release.ReleaseProfile.indexer" class="headerlink" title="Permanent link">#</a></h5>
@@ -583,11 +674,13 @@ when doing automatic renaming in Sonarr.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.profiles.release.ReleaseProfile.tags" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">tags</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
+          <code class="highlight language-python"><span class="n">tags</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.profiles.release.ReleaseProfile.tags" class="headerlink" title="Permanent link">#</a></h5>
@@ -621,9 +714,9 @@ the release profile using the following parameters.</p>
 <div class="doc doc-object doc-class">
 
 
+
 <a id="buildarr_sonarr.config.profiles.release.ReleaseProfile"></a>
   <div class="doc doc-contents first">
-
 
 
 
@@ -641,11 +734,13 @@ the release profile using the following parameters.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.profiles.release.ReleaseProfile.must_contain" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">must_contain</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
+          <code class="highlight language-python"><span class="n">must_contain</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.profiles.release.ReleaseProfile.must_contain" class="headerlink" title="Permanent link">#</a></h5>
@@ -664,11 +759,13 @@ the release profile using the following parameters.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.profiles.release.ReleaseProfile.must_not_contain" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">must_not_contain</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
+          <code class="highlight language-python"><span class="n">must_not_contain</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.profiles.release.ReleaseProfile.must_not_contain" class="headerlink" title="Permanent link">#</a></h5>
@@ -687,11 +784,13 @@ or regular expressions.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.profiles.release.ReleaseProfile.preferred" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">preferred</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">PreferredWord</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span></code>
+          <code class="highlight language-python"><span class="n">preferred</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">PreferredWord</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.profiles.release.ReleaseProfile.preferred" class="headerlink" title="Permanent link">#</a></h5>
@@ -754,9 +853,9 @@ provided by
 <div class="doc doc-object doc-class">
 
 
+
 <a id="buildarr_sonarr.config.profiles.release.ReleaseProfile"></a>
   <div class="doc doc-contents first">
-
 
 
 
@@ -774,11 +873,13 @@ provided by
 
 
 
+
 <h5 id="buildarr_sonarr.config.profiles.release.ReleaseProfile.trash_id" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">trash_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TrashID</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+          <code class="highlight language-python"><span class="n">trash_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TrashID</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.profiles.release.ReleaseProfile.trash_id" class="headerlink" title="Permanent link">#</a></h5>
@@ -796,11 +897,13 @@ provided by
 
 
 
+
 <h5 id="buildarr_sonarr.config.profiles.release.ReleaseProfile.filter" class="doc doc-heading">
-<code class="highlight language-python"><span class="nb">filter</span><span class="p">:</span> <span class="n">TrashFilter</span> <span class="o">=</span> <span class="n">TrashFilter</span><span class="p">()</span></code>
+          <code class="highlight language-python"><span class="nb">filter</span><span class="p">:</span> <span class="n">TrashFilter</span> <span class="o">=</span> <span class="n">TrashFilter</span><span class="p">()</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.profiles.release.ReleaseProfile.filter" class="headerlink" title="Permanent link">#</a></h5>
@@ -809,6 +912,7 @@ provided by
   <div class="doc doc-contents ">
   
       <div class="doc doc-object doc-class">
+
 
 
 <a id="buildarr_sonarr.config.profiles.release.TrashFilter"></a>
@@ -834,7 +938,6 @@ pick and choose which parts of the release profile you want to use.</p>
 If both are defined, <code>include</code> is used.</p>
 
 
-
   
 
   <div class="doc doc-children">
@@ -849,11 +952,13 @@ If both are defined, <code>include</code> is used.</p>
 
 
 
+
 <h6 id="buildarr_sonarr.config.profiles.release.TrashFilter.include" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">include</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">TrashID</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span></code>
+          <code class="highlight language-python"><span class="n">include</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">TrashID</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.profiles.release.TrashFilter.include" class="headerlink" title="Permanent link">#</a></h6>
@@ -872,11 +977,13 @@ that should be included in the created Release Profile in Sonarr.</p>
 
 
 
+
 <h6 id="buildarr_sonarr.config.profiles.release.TrashFilter.exclude" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">exclude</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">TrashID</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span></code>
+          <code class="highlight language-python"><span class="n">exclude</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">TrashID</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.profiles.release.TrashFilter.exclude" class="headerlink" title="Permanent link">#</a></h6>
@@ -908,11 +1015,13 @@ that should be excluded from the created Release Profile in Sonarr.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.profiles.release.ReleaseProfile.strict_negative_scores" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">strict_negative_scores</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+          <code class="highlight language-python"><span class="n">strict_negative_scores</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.profiles.release.ReleaseProfile.strict_negative_scores" class="headerlink" title="Permanent link">#</a></h5>
@@ -992,12 +1101,14 @@ be put in the "Must Not Contain" section of the uploaded release profile.</p>
             <hr>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
+        <script src="../../../../../js/jquery-3.6.0.min.js"></script>
+        <script src="../../../../../js/bootstrap.min.js"></script>
         <script>
             var base_url = "../../../../..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="../../../../../js/base.js" defer></script>
-        <script src="../../../../../search/main.js" defer></script>
+        <script src="../../../../../js/base.js"></script>
+        <script src="../../../../../search/main.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">

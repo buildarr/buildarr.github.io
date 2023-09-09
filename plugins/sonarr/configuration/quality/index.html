@@ -12,13 +12,10 @@
         <link href="../../../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../../../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
         <link href="../../../../assets/_mkdocstrings.css" rel="stylesheet">
-
-        <script src="../../../../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../../../../js/bootstrap.min.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
     </head>
 
     <body>
@@ -44,6 +41,10 @@
                                     
 <li>
     <a href="../../release-notes/" class="dropdown-item">Buildarr Sonarr Plugin</a>
+</li>
+                                    
+<li>
+    <a href="../../../radarr/release-notes/" class="dropdown-item">Buildarr Radarr Plugin</a>
 </li>
                                     
 <li>
@@ -154,6 +155,86 @@
 <li>
     <a href="../ui/" class="dropdown-item">UI</a>
 </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Buildarr Radarr Plugin</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../radarr/" class="dropdown-item">Introduction</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Configuration</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../radarr/configuration/host/" class="dropdown-item">Host Configuration</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Settings</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../radarr/configuration/settings/media-management/" class="dropdown-item">Media Management</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Profiles</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../radarr/configuration/settings/profiles/quality-profiles/" class="dropdown-item">Quality Profiles</a>
+</li>
+            
+<li>
+    <a href="../../../radarr/configuration/settings/profiles/delay-profiles/" class="dropdown-item">Delay Profiles</a>
+</li>
+    </ul>
+  </li>
+            
+<li>
+    <a href="../../../radarr/configuration/settings/quality/" class="dropdown-item">Quality</a>
+</li>
+            
+<li>
+    <a href="../../../radarr/configuration/settings/custom-formats/" class="dropdown-item">Custom Formats</a>
+</li>
+            
+<li>
+    <a href="../../../radarr/configuration/settings/indexers/" class="dropdown-item">Indexers</a>
+</li>
+            
+<li>
+    <a href="../../../radarr/configuration/settings/download-clients/" class="dropdown-item">Download Clients</a>
+</li>
+            
+<li>
+    <a href="../../../radarr/configuration/settings/notifications/" class="dropdown-item">Notifications (Connect)</a>
+</li>
+            
+<li>
+    <a href="../../../radarr/configuration/settings/metadata/" class="dropdown-item">Metadata</a>
+</li>
+            
+<li>
+    <a href="../../../radarr/configuration/settings/tags/" class="dropdown-item">Tags</a>
+</li>
+            
+<li>
+    <a href="../../../radarr/configuration/settings/general/" class="dropdown-item">General</a>
+</li>
+            
+<li>
+    <a href="../../../radarr/configuration/settings/ui/" class="dropdown-item">UI</a>
+</li>
+    </ul>
+  </li>
     </ul>
   </li>
     </ul>
@@ -363,6 +444,7 @@
 <div class="doc doc-object doc-class">
 
 
+
 <a id="buildarr_sonarr.config.quality.SonarrQualitySettingsConfig"></a>
   <div class="doc doc-contents first">
 
@@ -388,7 +470,6 @@ on an update run.</p>
 and <a href="https://trash-guides.info/Sonarr/Sonarr-Quality-Settings-File-Size/">TRaSH-Guides</a>.</p>
 
 
-
   
 
   <div class="doc doc-children">
@@ -403,11 +484,13 @@ and <a href="https://trash-guides.info/Sonarr/Sonarr-Quality-Settings-File-Size/
 
 
 
+
 <h5 id="buildarr_sonarr.config.quality.SonarrQualitySettingsConfig.trash_id" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">trash_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TrashID</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+          <code class="highlight language-python"><span class="n">trash_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TrashID</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.quality.SonarrQualitySettingsConfig.trash_id" class="headerlink" title="Permanent link">#</a></h5>
@@ -425,11 +508,13 @@ and <a href="https://trash-guides.info/Sonarr/Sonarr-Quality-Settings-File-Size/
 
 
 
+
 <h5 id="buildarr_sonarr.config.quality.SonarrQualitySettingsConfig.definitions" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">definitions</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">QualityDefinition</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span></code>
+          <code class="highlight language-python"><span class="n">definitions</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">QualityDefinition</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.quality.SonarrQualitySettingsConfig.definitions" class="headerlink" title="Permanent link">#</a></h5>
@@ -462,12 +547,12 @@ and quality definitions not set within Buildarr are left unmodified.</p>
 <div class="doc doc-object doc-class">
 
 
+
 <a id="buildarr_sonarr.config.quality.QualityDefinition"></a>
   <div class="doc doc-contents first">
 
   
       <p>Manually set quality definitions can have the following parameters.</p>
-
 
 
   
@@ -484,11 +569,13 @@ and quality definitions not set within Buildarr are left unmodified.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.quality.QualityDefinition.title" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">title</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+          <code class="highlight language-python"><span class="n">title</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.quality.QualityDefinition.title" class="headerlink" title="Permanent link">#</a></h5>
@@ -508,11 +595,13 @@ will also be <code>Bluray-480p</code>)</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.quality.QualityDefinition.min" class="doc doc-heading">
-<code class="highlight language-python"><span class="nb">min</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="bp">Ellipsis</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">le</span><span class="o">=</span><span class="n">QUALITYDEFINITION_MAX</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span></code>
+          <code class="highlight language-python"><span class="nb">min</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">le</span><span class="o">=</span><span class="n">QUALITYDEFINITION_MAX</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.quality.QualityDefinition.min" class="headerlink" title="Permanent link">#</a></h5>
@@ -531,11 +620,13 @@ Must be set at least 1MB/min lower than <code>max</code>.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.quality.QualityDefinition.max" class="doc doc-heading">
-<code class="highlight language-python"><span class="nb">max</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="bp">Ellipsis</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">le</span><span class="o">=</span><span class="n">QUALITYDEFINITION_MAX</span><span class="p">)</span></code>
+          <code class="highlight language-python"><span class="nb">max</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">le</span><span class="o">=</span><span class="n">QUALITYDEFINITION_MAX</span><span class="p">)</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.quality.QualityDefinition.max" class="headerlink" title="Permanent link">#</a></h5>
@@ -574,12 +665,14 @@ Must be set at least 1MB/min higher than <code>min</code>.</p>
             <hr>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
+        <script src="../../../../js/jquery-3.6.0.min.js"></script>
+        <script src="../../../../js/bootstrap.min.js"></script>
         <script>
             var base_url = "../../../..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="../../../../js/base.js" defer></script>
-        <script src="../../../../search/main.js" defer></script>
+        <script src="../../../../js/base.js"></script>
+        <script src="../../../../search/main.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">

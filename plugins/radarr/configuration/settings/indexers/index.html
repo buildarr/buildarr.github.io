@@ -1,0 +1,5186 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../../../img/favicon.ico">
+        <title>Indexers - Buildarr</title>
+        <link href="../../../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <link href="../../../../../assets/_mkdocstrings.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../../../..">Buildarr</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Release Notes <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../../../release-notes/" class="dropdown-item">Buildarr Core</a>
+</li>
+                                    
+<li>
+    <a href="../../../../sonarr/release-notes/" class="dropdown-item">Buildarr Sonarr Plugin</a>
+</li>
+                                    
+<li>
+    <a href="../../../release-notes/" class="dropdown-item">Buildarr Radarr Plugin</a>
+</li>
+                                    
+<li>
+    <a href="../../../../prowlarr/release-notes/" class="dropdown-item">Buildarr Prowlarr Plugin</a>
+</li>
+                                    
+<li>
+    <a href="../../../../jellyseerr/release-notes/" class="dropdown-item">Buildarr Jellyseerr Plugin</a>
+</li>
+                                    
+<li>
+    <a href="../../../../../docker/release-notes/" class="dropdown-item">Buildarr Docker Container</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../../installation/" class="nav-link">Installation</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../../configuration/" class="nav-link">Configuration</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Plugins <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../../" class="dropdown-item">Introduction</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Buildarr Sonarr Plugin</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../sonarr/" class="dropdown-item">Introduction</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/release-notes/" class="dropdown-item">Release Notes</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Configuration</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../sonarr/configuration/host/" class="dropdown-item">Host Configuration</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/media-management/" class="dropdown-item">Media Management</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Profiles</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../sonarr/configuration/profiles/quality/" class="dropdown-item">Quality Profiles</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/profiles/language/" class="dropdown-item">Language Profiles</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/profiles/delay/" class="dropdown-item">Delay Profiles</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/profiles/release/" class="dropdown-item">Release Profiles</a>
+</li>
+    </ul>
+  </li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/quality/" class="dropdown-item">Quality</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/indexers/" class="dropdown-item">Indexers</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/download-clients/" class="dropdown-item">Download Clients</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/import-lists/" class="dropdown-item">Import Lists</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/connect/" class="dropdown-item">Connect</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/metadata/" class="dropdown-item">Metadata</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/tags/" class="dropdown-item">Tags</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/general/" class="dropdown-item">General</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/ui/" class="dropdown-item">UI</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Buildarr Radarr Plugin</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../" class="dropdown-item">Introduction</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Configuration</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../host/" class="dropdown-item">Host Configuration</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Settings</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../media-management/" class="dropdown-item">Media Management</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Profiles</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../profiles/quality-profiles/" class="dropdown-item">Quality Profiles</a>
+</li>
+            
+<li>
+    <a href="../profiles/delay-profiles/" class="dropdown-item">Delay Profiles</a>
+</li>
+    </ul>
+  </li>
+            
+<li>
+    <a href="../quality/" class="dropdown-item">Quality</a>
+</li>
+            
+<li>
+    <a href="../custom-formats/" class="dropdown-item">Custom Formats</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active">Indexers</a>
+</li>
+            
+<li>
+    <a href="../download-clients/" class="dropdown-item">Download Clients</a>
+</li>
+            
+<li>
+    <a href="../notifications/" class="dropdown-item">Notifications (Connect)</a>
+</li>
+            
+<li>
+    <a href="../metadata/" class="dropdown-item">Metadata</a>
+</li>
+            
+<li>
+    <a href="../tags/" class="dropdown-item">Tags</a>
+</li>
+            
+<li>
+    <a href="../general/" class="dropdown-item">General</a>
+</li>
+            
+<li>
+    <a href="../ui/" class="dropdown-item">UI</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Buildarr Prowlarr Plugin</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../prowlarr/" class="dropdown-item">Introduction</a>
+</li>
+            
+<li>
+    <a href="../../../../prowlarr/release-notes/" class="dropdown-item">Release Notes</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Configuration</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../prowlarr/configuration/host/" class="dropdown-item">Host Configuration</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Settings</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Indexers</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../prowlarr/configuration/settings/indexers/indexers/" class="dropdown-item">Indexers</a>
+</li>
+            
+<li>
+    <a href="../../../../prowlarr/configuration/settings/indexers/proxies/" class="dropdown-item">Proxies</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Apps</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../prowlarr/configuration/settings/apps/applications/" class="dropdown-item">Applications</a>
+</li>
+            
+<li>
+    <a href="../../../../prowlarr/configuration/settings/apps/sync-profiles/" class="dropdown-item">Sync Profiles</a>
+</li>
+    </ul>
+  </li>
+            
+<li>
+    <a href="../../../../prowlarr/configuration/settings/download-clients/" class="dropdown-item">Download Clients</a>
+</li>
+            
+<li>
+    <a href="../../../../prowlarr/configuration/settings/notifications/" class="dropdown-item">Notifications</a>
+</li>
+            
+<li>
+    <a href="../../../../prowlarr/configuration/settings/tags/" class="dropdown-item">Tags</a>
+</li>
+            
+<li>
+    <a href="../../../../prowlarr/configuration/settings/general/" class="dropdown-item">General</a>
+</li>
+            
+<li>
+    <a href="../../../../prowlarr/configuration/settings/ui/" class="dropdown-item">UI</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Buildarr Jellyseerr Plugin</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../jellyseerr/" class="dropdown-item">Introduction</a>
+</li>
+            
+<li>
+    <a href="../../../../jellyseerr/release-notes/" class="dropdown-item">Release Notes</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Configuration</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../jellyseerr/configuration/host/" class="dropdown-item">Host Configuration</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Settings</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../jellyseerr/configuration/settings/general/" class="dropdown-item">General</a>
+</li>
+            
+<li>
+    <a href="../../../../jellyseerr/configuration/settings/users/" class="dropdown-item">Users</a>
+</li>
+            
+<li>
+    <a href="../../../../jellyseerr/configuration/settings/jellyfin/" class="dropdown-item">Jellyfin</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Services</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../jellyseerr/configuration/settings/services/sonarr/" class="dropdown-item">Sonarr</a>
+</li>
+            
+<li>
+    <a href="../../../../jellyseerr/configuration/settings/services/radarr/" class="dropdown-item">Radarr</a>
+</li>
+    </ul>
+  </li>
+            
+<li>
+    <a href="../../../../jellyseerr/configuration/settings/notifications/" class="dropdown-item">Notifications</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../../usage/" class="nav-link">Usage</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="https://github.com/buildarr/buildarr" class="nav-link">GitHub</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../custom-formats/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../download-clients/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#indexers" class="nav-link">Indexers</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#filelist" class="nav-link">FileList</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#hdbits" class="nav-link">HDBits</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#iptorrents" class="nav-link">IPTorrents</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#newznab" class="nav-link">Newznab</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#nyaa" class="nav-link">Nyaa</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#passthepopcorn" class="nav-link">PassThePopcorn</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#torrentpotato" class="nav-link">TorrentPotato</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#torrent-rss-feed" class="nav-link">Torrent RSS Feed</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#torznab" class="nav-link">Torznab</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="indexers">Indexers<a class="headerlink" href="#indexers" title="Permanent link">#</a></h1>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.indexers.RadarrIndexersSettings"></a>
+  <div class="doc doc-contents first">
+
+  
+      <div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Instead of manually configuring indexers for each of your Radarr instances,
+it is highly recommended to setup a <a href="https://prowlarr.com">Prowlarr</a>
+indexer manager, and manage it using the
+<a href="https://buildarr.github.io/plugins/prowlarr">Prowlarr plugin for Buildarr</a>.</p>
+<p>This is particularly convenient when managing more than one Radarr instance.</p>
+<p>When managing indexers using Prowlarr, do not add any indexer definitions
+to this Radarr instance in Buildarr, and ensure <code>delete_unmanaged</code> is set to <code>false</code>.</p>
+</div>
+<p>Indexers are used to monitor for new releases of media on external trackers.
+When a suitable release has been found, Radarr registers it for download
+on one of the configured download clients.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">radarr</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">settings</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">indexers</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">minimum_age</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span><span class="w">  </span><span class="c1"># minutes</span>
+<span class="w">      </span><span class="nt">retention</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span><span class="w">  </span><span class="c1"># days</span>
+<span class="w">      </span><span class="nt">maximum_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span><span class="w">  </span><span class="c1"># MB</span>
+<span class="w">      </span><span class="nt">rss_sync_interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15</span><span class="w">  </span><span class="c1"># minutes</span>
+<span class="w">      </span><span class="nt">delete_unmanaged</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w">  </span><span class="c1"># Better to leave off for the most part.</span>
+<span class="w">      </span><span class="nt">definitions</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">Nyaa</span><span class="p">:</span><span class="w">  </span><span class="c1"># Indexer name</span>
+<span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nyaa</span><span class="w">  </span><span class="c1"># Type of indexer</span>
+<span class="w">          </span><span class="nt">enable_rss</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">          </span><span class="nt">enable_automatic_search</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">          </span><span class="nt">enable_interactive_search</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">          </span><span class="nt">indexer_priority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">25</span>
+<span class="w">          </span><span class="nt">download_client</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">          </span><span class="nt">website_url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://example.com</span>
+<span class="w">          </span><span class="nt">tags</span><span class="p">:</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">anime-movies</span>
+</code></pre></div>
+<p>The following parameters are available for configuring indexers and
+how they are handled by Radarr.</p>
+<p>For more information on how Radarr finds movies, refer to the FAQ on
+<a href="https://wiki.servarr.com/radarr/faq#how-does-radarr-work">WikiArr</a>.</p>
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.RadarrIndexersSettings.minimum_age" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">minimum_age</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.RadarrIndexersSettings.minimum_age" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Minimum age (in minutes) of NZBs before they are grabbed. Applies to Usenet only.</p>
+<p>Use this to give new releases time to propagate to your Usenet provider.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.RadarrIndexersSettings.retention" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">retention</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.RadarrIndexersSettings.retention" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Retention of releases (in days). Applies to Usenet only.</p>
+<p>Set to <code>0</code> for unlimited retention.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.RadarrIndexersSettings.maximum_size" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">maximum_size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.RadarrIndexersSettings.maximum_size" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Maximum size for a release to be grabbed, in megabytes (MB).</p>
+<p>Set to <code>0</code> to set for unlimited size.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.RadarrIndexersSettings.rss_sync_interval" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">rss_sync_interval</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.RadarrIndexersSettings.rss_sync_interval" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Interval (in minutes) to sync RSS feeds with indexers.</p>
+<p>Set to <code>0</code> to disable syncing. <strong>WARNING: This also disables automatic release grabbing.</strong></p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.RadarrIndexersSettings.delete_unmanaged" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">delete_unmanaged</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.RadarrIndexersSettings.delete_unmanaged" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Automatically delete indexers not configured by Buildarr.</p>
+<p>Take care when enabling this option, as it will also delete indexers
+created by external applications such as Prowlarr.</p>
+<p>If unsure, leave set at the default of <code>false</code>.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.RadarrIndexersSettings.definitions" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">definitions</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Annotated</span><span class="p">[</span><span class="n">IndexerType</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">discriminator</span><span class="o">=</span><span class="s1">&#39;type&#39;</span><span class="p">)]]</span> <span class="o">=</span> <span class="p">{}</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.RadarrIndexersSettings.definitions" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Indexers to manage via Buildarr are defined here.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="filelist">FileList<a class="headerlink" href="#filelist" title="Permanent link">#</a></h2>
+<p>Monitor for new releases on the FileList.io private torrent tracker.</p>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.indexers.torrent.filelist.FilelistIndexer"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.filelist.FilelistIndexer.type" class="doc doc-heading">
+          <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;filelist&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;filelist&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.filelist.FilelistIndexer.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of indexer.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.indexers.base.Indexer"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.base.Indexer.enable_rss" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">enable_rss</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.base.Indexer.enable_rss" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>If enabled, use this indexer to watch for files that are wanted and missing
+or have not yet reached their cutoff.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.base.Indexer.enable_automatic_search" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">enable_automatic_search</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.base.Indexer.enable_automatic_search" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>If enabled, use this indexer for automatic searches, including Search on Add.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.base.Indexer.enable_interactive_search" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">enable_interactive_search</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.base.Indexer.enable_interactive_search" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>If enabled, use this indexer for manual interactive searches.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.base.Indexer.priority" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">priority</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">le</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.base.Indexer.priority" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios.</p>
+<p>1 is highest priority and 50 is lowest priority.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.base.Indexer.download_client" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">download_client</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.base.Indexer.download_client" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The name of the download client to use for grabs from this indexer.</p>
+<p>If unset, use any compatible download client.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.indexers.base.Indexer"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.base.Indexer.tags" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">tags</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.base.Indexer.tags" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Only monitor releases that match at least one of the defined tags.</p>
+<p>If unset, monitor all releases using this indexer.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.minimum_seeders" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">minimum_seeders</span><span class="p">:</span> <span class="n">PositiveInt</span> <span class="o">=</span> <span class="mi">1</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.minimum_seeders" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The minimum number of seeders required before downloading a release.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.required_flags" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">required_flags</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.required_flags" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Require one or more indexer flags to be set on candidate releases.</p>
+<p>If the required flags are not set, the release will be rejected.</p>
+<p>All values supported by your Radarr instance version can be defined.
+As of Radarr v4.7.5, the following flags are available:</p>
+<ul>
+<li><code>g-freeleech</code></li>
+<li><code>g-halfleech</code></li>
+<li><code>g-doubleupload</code></li>
+<li><code>ptp-golden</code></li>
+<li><code>ptp-approved</code></li>
+<li><code>hdb-internal</code></li>
+<li><code>ahd-internal</code></li>
+<li><code>g-scene</code></li>
+<li><code>g-freeleech75</code></li>
+<li><code>g-freeleech25</code></li>
+<li><code>ahd-userrelease</code></li>
+</ul>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.seed_ratio" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">seed_ratio</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.seed_ratio" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The seed ratio a torrent should reach before stopping.</p>
+<p>If unset or set to <code>null</code>, use the download client's defaults.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.seed_time" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">seed_time</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.seed_time" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The amount of time (in minutes) a torrent should be seeded before stopping.</p>
+<p>If unset or set to <code>null</code>, use the download client's defaults.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.indexers.torrent.filelist.FilelistIndexer"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.filelist.FilelistIndexer.base_url" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">base_url</span><span class="p">:</span> <span class="n">AnyHttpUrl</span> <span class="o">=</span> <span class="s1">&#39;https://filelist.io&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.filelist.FilelistIndexer.base_url" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>FileList API URL.</p>
+<p>Do not change this unless you know what you're doing,
+as your API key will be sent to this host.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.filelist.FilelistIndexer.username" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.filelist.FilelistIndexer.username" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>FileList username.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.filelist.FilelistIndexer.passkey" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">passkey</span><span class="p">:</span> <span class="n">Password</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.filelist.FilelistIndexer.passkey" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>FileList account API key.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.filelist.FilelistIndexer.categories" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">categories</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">FilelistCategory</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">FilelistCategory</span><span class="o">.</span><span class="n">MOVIES_HD</span><span class="p">,</span> <span class="n">FilelistCategory</span><span class="o">.</span><span class="n">MOVIES_SD</span><span class="p">,</span> <span class="n">FilelistCategory</span><span class="o">.</span><span class="n">MOVIES_4K</span><span class="p">}</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.filelist.FilelistIndexer.categories" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Categories to monitor for standard/daily show new releases.</p>
+<p>Set to an empty list to not monitor for standard/daily shows.</p>
+<p>Values:</p>
+<ul>
+<li><code>Movies SD</code></li>
+<li><code>Movies DVD</code></li>
+<li><code>Movies DVD-RO</code></li>
+<li><code>Movies HD</code></li>
+<li><code>Movies HD-RO</code></li>
+<li><code>Movies 4K</code></li>
+<li><code>Movies Blu-Ray</code></li>
+<li><code>Movies 4K Blu-Ray</code></li>
+<li><code>Movies 3D</code></li>
+<li><code>XXX</code></li>
+</ul>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.indexers.base.Indexer"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.base.Indexer.tags" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">tags</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.base.Indexer.tags" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Only monitor releases that match at least one of the defined tags.</p>
+<p>If unset, monitor all releases using this indexer.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="hdbits">HDBits<a class="headerlink" href="#hdbits" title="Permanent link">#</a></h2>
+<p>Monitor for new releases on the HDBits private torrent tracker.</p>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.indexers.torrent.hdbits.HdbitsIndexer"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.hdbits.HdbitsIndexer.type" class="doc doc-heading">
+          <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;hdbits&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;hdbits&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.hdbits.HdbitsIndexer.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of indexer.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.indexers.base.Indexer"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.base.Indexer.enable_rss" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">enable_rss</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.base.Indexer.enable_rss" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>If enabled, use this indexer to watch for files that are wanted and missing
+or have not yet reached their cutoff.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.base.Indexer.enable_automatic_search" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">enable_automatic_search</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.base.Indexer.enable_automatic_search" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>If enabled, use this indexer for automatic searches, including Search on Add.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.base.Indexer.enable_interactive_search" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">enable_interactive_search</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.base.Indexer.enable_interactive_search" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>If enabled, use this indexer for manual interactive searches.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.base.Indexer.priority" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">priority</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">le</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.base.Indexer.priority" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios.</p>
+<p>1 is highest priority and 50 is lowest priority.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.base.Indexer.download_client" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">download_client</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.base.Indexer.download_client" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The name of the download client to use for grabs from this indexer.</p>
+<p>If unset, use any compatible download client.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.minimum_seeders" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">minimum_seeders</span><span class="p">:</span> <span class="n">PositiveInt</span> <span class="o">=</span> <span class="mi">1</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.minimum_seeders" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The minimum number of seeders required before downloading a release.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.required_flags" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">required_flags</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.required_flags" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Require one or more indexer flags to be set on candidate releases.</p>
+<p>If the required flags are not set, the release will be rejected.</p>
+<p>All values supported by your Radarr instance version can be defined.
+As of Radarr v4.7.5, the following flags are available:</p>
+<ul>
+<li><code>g-freeleech</code></li>
+<li><code>g-halfleech</code></li>
+<li><code>g-doubleupload</code></li>
+<li><code>ptp-golden</code></li>
+<li><code>ptp-approved</code></li>
+<li><code>hdb-internal</code></li>
+<li><code>ahd-internal</code></li>
+<li><code>g-scene</code></li>
+<li><code>g-freeleech75</code></li>
+<li><code>g-freeleech25</code></li>
+<li><code>ahd-userrelease</code></li>
+</ul>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.seed_ratio" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">seed_ratio</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.seed_ratio" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The seed ratio a torrent should reach before stopping.</p>
+<p>If unset or set to <code>null</code>, use the download client's defaults.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.seed_time" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">seed_time</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.seed_time" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The amount of time (in minutes) a torrent should be seeded before stopping.</p>
+<p>If unset or set to <code>null</code>, use the download client's defaults.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.indexers.torrent.hdbits.HdbitsIndexer"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.hdbits.HdbitsIndexer.base_url" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">base_url</span><span class="p">:</span> <span class="n">AnyHttpUrl</span> <span class="o">=</span> <span class="s1">&#39;https://hdbits.org&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.hdbits.HdbitsIndexer.base_url" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>HDBits API URL.</p>
+<p>Do not change this unless you know what you're doing,
+as your API key will be sent to this host.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.hdbits.HdbitsIndexer.username" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.hdbits.HdbitsIndexer.username" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>HDBits account username.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.hdbits.HdbitsIndexer.api_key" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">Password</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.hdbits.HdbitsIndexer.api_key" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>HDBits API key assigned to the account.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.indexers.base.Indexer"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.base.Indexer.tags" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">tags</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.base.Indexer.tags" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Only monitor releases that match at least one of the defined tags.</p>
+<p>If unset, monitor all releases using this indexer.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="iptorrents">IPTorrents<a class="headerlink" href="#iptorrents" title="Permanent link">#</a></h2>
+<p>Monitor for releases using the legacy API for the IPTorrents private torrent tracker.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>IPTorrents' legacy API does not support automatic searching.
+It is recommended to instead configure IPTorrents as a <a href="#torznab">Torznab indexer</a>.</p>
+</div>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.indexers.torrent.iptorrents.IptorrentsIndexer"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.iptorrents.IptorrentsIndexer.type" class="doc doc-heading">
+          <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;iptorrents&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;iptorrents&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.iptorrents.IptorrentsIndexer.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of indexer.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.indexers.base.Indexer"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.base.Indexer.enable_rss" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">enable_rss</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.base.Indexer.enable_rss" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>If enabled, use this indexer to watch for files that are wanted and missing
+or have not yet reached their cutoff.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.base.Indexer.enable_automatic_search" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">enable_automatic_search</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.base.Indexer.enable_automatic_search" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>If enabled, use this indexer for automatic searches, including Search on Add.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.base.Indexer.enable_interactive_search" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">enable_interactive_search</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.base.Indexer.enable_interactive_search" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>If enabled, use this indexer for manual interactive searches.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.base.Indexer.priority" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">priority</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">le</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.base.Indexer.priority" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios.</p>
+<p>1 is highest priority and 50 is lowest priority.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.base.Indexer.download_client" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">download_client</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.base.Indexer.download_client" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The name of the download client to use for grabs from this indexer.</p>
+<p>If unset, use any compatible download client.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.minimum_seeders" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">minimum_seeders</span><span class="p">:</span> <span class="n">PositiveInt</span> <span class="o">=</span> <span class="mi">1</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.minimum_seeders" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The minimum number of seeders required before downloading a release.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.required_flags" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">required_flags</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.required_flags" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Require one or more indexer flags to be set on candidate releases.</p>
+<p>If the required flags are not set, the release will be rejected.</p>
+<p>All values supported by your Radarr instance version can be defined.
+As of Radarr v4.7.5, the following flags are available:</p>
+<ul>
+<li><code>g-freeleech</code></li>
+<li><code>g-halfleech</code></li>
+<li><code>g-doubleupload</code></li>
+<li><code>ptp-golden</code></li>
+<li><code>ptp-approved</code></li>
+<li><code>hdb-internal</code></li>
+<li><code>ahd-internal</code></li>
+<li><code>g-scene</code></li>
+<li><code>g-freeleech75</code></li>
+<li><code>g-freeleech25</code></li>
+<li><code>ahd-userrelease</code></li>
+</ul>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.seed_ratio" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">seed_ratio</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.seed_ratio" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The seed ratio a torrent should reach before stopping.</p>
+<p>If unset or set to <code>null</code>, use the download client's defaults.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.seed_time" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">seed_time</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.seed_time" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The amount of time (in minutes) a torrent should be seeded before stopping.</p>
+<p>If unset or set to <code>null</code>, use the download client's defaults.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.indexers.torrent.iptorrents.IptorrentsIndexer"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.iptorrents.IptorrentsIndexer.feed_url" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">feed_url</span><span class="p">:</span> <span class="n">RssUrl</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.iptorrents.IptorrentsIndexer.feed_url" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The full RSS feed url generated by IPTorrents, using only the categories
+you selected (HD, SD, x264, etc ...).</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.indexers.base.Indexer"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.base.Indexer.tags" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">tags</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.base.Indexer.tags" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Only monitor releases that match at least one of the defined tags.</p>
+<p>If unset, monitor all releases using this indexer.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="newznab">Newznab<a class="headerlink" href="#newznab" title="Permanent link">#</a></h2>
+<p>Monitor for new releases using a Newznab-compatible Usenet indexer.</p>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.indexers.usenet.newznab.NewznabIndexer"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.usenet.newznab.NewznabIndexer.type" class="doc doc-heading">
+          <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;newznab&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;newznab&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.usenet.newznab.NewznabIndexer.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of indexer.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.indexers.base.Indexer"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.base.Indexer.enable_rss" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">enable_rss</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.base.Indexer.enable_rss" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>If enabled, use this indexer to watch for files that are wanted and missing
+or have not yet reached their cutoff.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.base.Indexer.enable_automatic_search" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">enable_automatic_search</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.base.Indexer.enable_automatic_search" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>If enabled, use this indexer for automatic searches, including Search on Add.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.base.Indexer.enable_interactive_search" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">enable_interactive_search</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.base.Indexer.enable_interactive_search" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>If enabled, use this indexer for manual interactive searches.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.base.Indexer.priority" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">priority</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">le</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.base.Indexer.priority" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios.</p>
+<p>1 is highest priority and 50 is lowest priority.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.base.Indexer.download_client" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">download_client</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.base.Indexer.download_client" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The name of the download client to use for grabs from this indexer.</p>
+<p>If unset, use any compatible download client.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.indexers.usenet.newznab.NewznabIndexer"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.usenet.newznab.NewznabIndexer.base_url" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">base_url</span><span class="p">:</span> <span class="n">AnyHttpUrl</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.usenet.newznab.NewznabIndexer.base_url" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>URL of the Newznab-compatible indexing site.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.usenet.newznab.NewznabIndexer.api_path" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">api_path</span><span class="p">:</span> <span class="n">NonEmptyStr</span> <span class="o">=</span> <span class="s1">&#39;/api&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.usenet.newznab.NewznabIndexer.api_path" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Newznab API endpoint. Usually <code>/api</code>.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.usenet.newznab.NewznabIndexer.api_key" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">Password</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.usenet.newznab.NewznabIndexer.api_key" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>API key for use with the Newznab API.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.usenet.newznab.NewznabIndexer.categories" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">categories</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NabCategory</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">NabCategory</span><span class="o">.</span><span class="n">MOVIES_FOREIGN</span><span class="p">,</span> <span class="n">NabCategory</span><span class="o">.</span><span class="n">MOVIES_OTHER</span><span class="p">,</span> <span class="n">NabCategory</span><span class="o">.</span><span class="n">MOVIES_SD</span><span class="p">,</span> <span class="n">NabCategory</span><span class="o">.</span><span class="n">MOVIES_HD</span><span class="p">,</span> <span class="n">NabCategory</span><span class="o">.</span><span class="n">MOVIES_UHD</span><span class="p">,</span> <span class="n">NabCategory</span><span class="o">.</span><span class="n">MOVIES_BLURAY</span><span class="p">,</span> <span class="n">NabCategory</span><span class="o">.</span><span class="n">MOVIES_3D</span><span class="p">}</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.usenet.newznab.NewznabIndexer.categories" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Categories to monitor for release.
+Define as empty to disable.</p>
+<p>Values:</p>
+<ul>
+<li><code>Movies-Foreign</code></li>
+<li><code>Movies-Other</code></li>
+<li><code>Movies-SD</code></li>
+<li><code>Movies-HD</code></li>
+<li><code>Movies-UHD</code></li>
+<li><code>Movies-Bluray</code></li>
+<li><code>Movies-3D</code></li>
+</ul>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.usenet.newznab.NewznabIndexer.remove_year" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">remove_year</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.usenet.newznab.NewznabIndexer.remove_year" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>When set to <code>true</code>, excludes the release year of the media when searching the indexer.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.usenet.newznab.NewznabIndexer.additional_parameters" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">additional_parameters</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.usenet.newznab.NewznabIndexer.additional_parameters" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Additional Newznab API parameters.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.indexers.base.Indexer"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.base.Indexer.tags" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">tags</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.base.Indexer.tags" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Only monitor releases that match at least one of the defined tags.</p>
+<p>If unset, monitor all releases using this indexer.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="nyaa">Nyaa<a class="headerlink" href="#nyaa" title="Permanent link">#</a></h2>
+<p>Monitor for new releases on the configured Nyaa torrent tracker domain.</p>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.indexers.torrent.nyaa.NyaaIndexer"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.nyaa.NyaaIndexer.type" class="doc doc-heading">
+          <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;nyaa&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;nyaa&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.nyaa.NyaaIndexer.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of indexer.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.indexers.base.Indexer"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.base.Indexer.enable_rss" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">enable_rss</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.base.Indexer.enable_rss" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>If enabled, use this indexer to watch for files that are wanted and missing
+or have not yet reached their cutoff.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.base.Indexer.enable_automatic_search" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">enable_automatic_search</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.base.Indexer.enable_automatic_search" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>If enabled, use this indexer for automatic searches, including Search on Add.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.base.Indexer.enable_interactive_search" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">enable_interactive_search</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.base.Indexer.enable_interactive_search" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>If enabled, use this indexer for manual interactive searches.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.base.Indexer.priority" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">priority</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">le</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.base.Indexer.priority" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios.</p>
+<p>1 is highest priority and 50 is lowest priority.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.base.Indexer.download_client" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">download_client</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.base.Indexer.download_client" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The name of the download client to use for grabs from this indexer.</p>
+<p>If unset, use any compatible download client.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.minimum_seeders" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">minimum_seeders</span><span class="p">:</span> <span class="n">PositiveInt</span> <span class="o">=</span> <span class="mi">1</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.minimum_seeders" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The minimum number of seeders required before downloading a release.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.required_flags" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">required_flags</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.required_flags" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Require one or more indexer flags to be set on candidate releases.</p>
+<p>If the required flags are not set, the release will be rejected.</p>
+<p>All values supported by your Radarr instance version can be defined.
+As of Radarr v4.7.5, the following flags are available:</p>
+<ul>
+<li><code>g-freeleech</code></li>
+<li><code>g-halfleech</code></li>
+<li><code>g-doubleupload</code></li>
+<li><code>ptp-golden</code></li>
+<li><code>ptp-approved</code></li>
+<li><code>hdb-internal</code></li>
+<li><code>ahd-internal</code></li>
+<li><code>g-scene</code></li>
+<li><code>g-freeleech75</code></li>
+<li><code>g-freeleech25</code></li>
+<li><code>ahd-userrelease</code></li>
+</ul>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.seed_ratio" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">seed_ratio</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.seed_ratio" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The seed ratio a torrent should reach before stopping.</p>
+<p>If unset or set to <code>null</code>, use the download client's defaults.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.seed_time" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">seed_time</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.seed_time" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The amount of time (in minutes) a torrent should be seeded before stopping.</p>
+<p>If unset or set to <code>null</code>, use the download client's defaults.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.indexers.torrent.nyaa.NyaaIndexer"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.nyaa.NyaaIndexer.additional_parameters" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">additional_parameters</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;&amp;cats=1_0&amp;filter=1&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.nyaa.NyaaIndexer.additional_parameters" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Parameters to send in the Nyaa search request.</p>
+<p>Note that if you change the category, you will have to add
+required/restricted rules about the subgroups to avoid foreign language releases.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.indexers.base.Indexer"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.base.Indexer.tags" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">tags</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.base.Indexer.tags" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Only monitor releases that match at least one of the defined tags.</p>
+<p>If unset, monitor all releases using this indexer.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="passthepopcorn">PassThePopcorn<a class="headerlink" href="#passthepopcorn" title="Permanent link">#</a></h2>
+<p>Monitor for new releases using the PassThePopcorn private torrent tracker.</p>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.indexers.torrent.passthepopcorn.PassthepopcornIndexer"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.passthepopcorn.PassthepopcornIndexer.type" class="doc doc-heading">
+          <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;passthepopcorn&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;passthepopcorn&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.passthepopcorn.PassthepopcornIndexer.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of indexer.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.indexers.base.Indexer"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.base.Indexer.enable_rss" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">enable_rss</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.base.Indexer.enable_rss" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>If enabled, use this indexer to watch for files that are wanted and missing
+or have not yet reached their cutoff.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.base.Indexer.enable_automatic_search" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">enable_automatic_search</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.base.Indexer.enable_automatic_search" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>If enabled, use this indexer for automatic searches, including Search on Add.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.base.Indexer.enable_interactive_search" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">enable_interactive_search</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.base.Indexer.enable_interactive_search" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>If enabled, use this indexer for manual interactive searches.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.base.Indexer.priority" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">priority</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">le</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.base.Indexer.priority" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios.</p>
+<p>1 is highest priority and 50 is lowest priority.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.base.Indexer.download_client" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">download_client</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.base.Indexer.download_client" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The name of the download client to use for grabs from this indexer.</p>
+<p>If unset, use any compatible download client.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.minimum_seeders" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">minimum_seeders</span><span class="p">:</span> <span class="n">PositiveInt</span> <span class="o">=</span> <span class="mi">1</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.minimum_seeders" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The minimum number of seeders required before downloading a release.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.required_flags" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">required_flags</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.required_flags" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Require one or more indexer flags to be set on candidate releases.</p>
+<p>If the required flags are not set, the release will be rejected.</p>
+<p>All values supported by your Radarr instance version can be defined.
+As of Radarr v4.7.5, the following flags are available:</p>
+<ul>
+<li><code>g-freeleech</code></li>
+<li><code>g-halfleech</code></li>
+<li><code>g-doubleupload</code></li>
+<li><code>ptp-golden</code></li>
+<li><code>ptp-approved</code></li>
+<li><code>hdb-internal</code></li>
+<li><code>ahd-internal</code></li>
+<li><code>g-scene</code></li>
+<li><code>g-freeleech75</code></li>
+<li><code>g-freeleech25</code></li>
+<li><code>ahd-userrelease</code></li>
+</ul>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.seed_ratio" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">seed_ratio</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.seed_ratio" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The seed ratio a torrent should reach before stopping.</p>
+<p>If unset or set to <code>null</code>, use the download client's defaults.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.seed_time" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">seed_time</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.seed_time" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The amount of time (in minutes) a torrent should be seeded before stopping.</p>
+<p>If unset or set to <code>null</code>, use the download client's defaults.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.indexers.torrent.passthepopcorn.PassthepopcornIndexer"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.passthepopcorn.PassthepopcornIndexer.base_url" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">base_url</span><span class="p">:</span> <span class="n">AnyHttpUrl</span> <span class="o">=</span> <span class="s1">&#39;https://passthepopcorn.me&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.passthepopcorn.PassthepopcornIndexer.base_url" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>PassThePopcorn API URL.</p>
+<p>Do not change this unless you know what you're doing,
+as your API key will be sent to this host.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.passthepopcorn.PassthepopcornIndexer.api_user" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">api_user</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.passthepopcorn.PassthepopcornIndexer.api_user" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The API user of the PassThePopcorn account, as shown in Edit Profile &gt; Security.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.passthepopcorn.PassthepopcornIndexer.api_key" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">Password</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.passthepopcorn.PassthepopcornIndexer.api_key" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>PassThePopcorn API key associated with the account.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.indexers.base.Indexer"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.base.Indexer.tags" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">tags</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.base.Indexer.tags" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Only monitor releases that match at least one of the defined tags.</p>
+<p>If unset, monitor all releases using this indexer.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="torrentpotato">TorrentPotato<a class="headerlink" href="#torrentpotato" title="Permanent link">#</a></h2>
+<p>Monitor for new releases using a legacy CouchPotato-compatible torrent tracker.</p>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.indexers.torrent.torrentpotato.TorrentpotatoIndexer"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.torrentpotato.TorrentpotatoIndexer.type" class="doc doc-heading">
+          <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;torrentpotato&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;torrentpotato&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.torrentpotato.TorrentpotatoIndexer.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of indexer.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.indexers.base.Indexer"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.base.Indexer.enable_rss" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">enable_rss</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.base.Indexer.enable_rss" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>If enabled, use this indexer to watch for files that are wanted and missing
+or have not yet reached their cutoff.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.base.Indexer.enable_automatic_search" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">enable_automatic_search</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.base.Indexer.enable_automatic_search" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>If enabled, use this indexer for automatic searches, including Search on Add.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.base.Indexer.enable_interactive_search" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">enable_interactive_search</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.base.Indexer.enable_interactive_search" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>If enabled, use this indexer for manual interactive searches.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.base.Indexer.priority" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">priority</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">le</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.base.Indexer.priority" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios.</p>
+<p>1 is highest priority and 50 is lowest priority.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.base.Indexer.download_client" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">download_client</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.base.Indexer.download_client" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The name of the download client to use for grabs from this indexer.</p>
+<p>If unset, use any compatible download client.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.minimum_seeders" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">minimum_seeders</span><span class="p">:</span> <span class="n">PositiveInt</span> <span class="o">=</span> <span class="mi">1</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.minimum_seeders" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The minimum number of seeders required before downloading a release.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.required_flags" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">required_flags</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.required_flags" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Require one or more indexer flags to be set on candidate releases.</p>
+<p>If the required flags are not set, the release will be rejected.</p>
+<p>All values supported by your Radarr instance version can be defined.
+As of Radarr v4.7.5, the following flags are available:</p>
+<ul>
+<li><code>g-freeleech</code></li>
+<li><code>g-halfleech</code></li>
+<li><code>g-doubleupload</code></li>
+<li><code>ptp-golden</code></li>
+<li><code>ptp-approved</code></li>
+<li><code>hdb-internal</code></li>
+<li><code>ahd-internal</code></li>
+<li><code>g-scene</code></li>
+<li><code>g-freeleech75</code></li>
+<li><code>g-freeleech25</code></li>
+<li><code>ahd-userrelease</code></li>
+</ul>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.seed_ratio" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">seed_ratio</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.seed_ratio" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The seed ratio a torrent should reach before stopping.</p>
+<p>If unset or set to <code>null</code>, use the download client's defaults.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.seed_time" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">seed_time</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.seed_time" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The amount of time (in minutes) a torrent should be seeded before stopping.</p>
+<p>If unset or set to <code>null</code>, use the download client's defaults.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.indexers.torrent.torrentpotato.TorrentpotatoIndexer"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.torrentpotato.TorrentpotatoIndexer.base_url" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">base_url</span><span class="p">:</span> <span class="n">AnyHttpUrl</span> <span class="o">=</span> <span class="s1">&#39;https://passthepopcorn.me&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.torrentpotato.TorrentpotatoIndexer.base_url" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>TorrentPotato indexer API URL.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.torrentpotato.TorrentpotatoIndexer.username" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.torrentpotato.TorrentpotatoIndexer.username" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>TorrentPotato indexer username.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.torrentpotato.TorrentpotatoIndexer.passkey" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">passkey</span><span class="p">:</span> <span class="n">Password</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.torrentpotato.TorrentpotatoIndexer.passkey" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Password for the TorrentPotato indexer user.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.indexers.base.Indexer"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.base.Indexer.tags" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">tags</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.base.Indexer.tags" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Only monitor releases that match at least one of the defined tags.</p>
+<p>If unset, monitor all releases using this indexer.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="torrent-rss-feed">Torrent RSS Feed<a class="headerlink" href="#torrent-rss-feed" title="Permanent link">#</a></h2>
+<p>Monitor for new releases from a torrent tracker RSS feed.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This indexer does not support automatic searching.
+It is recommended to use an indexer that natively communicates with a tracker using an API.</p>
+</div>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.indexers.torrent.rss.TorrentRssIndexer"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.rss.TorrentRssIndexer.type" class="doc doc-heading">
+          <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;torrent-rss&#39;</span><span class="p">,</span> <span class="s1">&#39;torrent-rss-feed&#39;</span><span class="p">,</span> <span class="s1">&#39;torrent_rss&#39;</span><span class="p">,</span> <span class="s1">&#39;torrent_rss_feed&#39;</span><span class="p">,</span> <span class="s1">&#39;torrentrss&#39;</span><span class="p">,</span> <span class="s1">&#39;torrentrssfeed&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;torrent-rss&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.rss.TorrentRssIndexer.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type values associated with this kind of indexer.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.indexers.base.Indexer"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.base.Indexer.enable_rss" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">enable_rss</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.base.Indexer.enable_rss" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>If enabled, use this indexer to watch for files that are wanted and missing
+or have not yet reached their cutoff.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.base.Indexer.enable_automatic_search" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">enable_automatic_search</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.base.Indexer.enable_automatic_search" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>If enabled, use this indexer for automatic searches, including Search on Add.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.base.Indexer.enable_interactive_search" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">enable_interactive_search</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.base.Indexer.enable_interactive_search" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>If enabled, use this indexer for manual interactive searches.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.base.Indexer.priority" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">priority</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">le</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.base.Indexer.priority" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios.</p>
+<p>1 is highest priority and 50 is lowest priority.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.base.Indexer.download_client" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">download_client</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.base.Indexer.download_client" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The name of the download client to use for grabs from this indexer.</p>
+<p>If unset, use any compatible download client.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.minimum_seeders" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">minimum_seeders</span><span class="p">:</span> <span class="n">PositiveInt</span> <span class="o">=</span> <span class="mi">1</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.minimum_seeders" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The minimum number of seeders required before downloading a release.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.required_flags" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">required_flags</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.required_flags" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Require one or more indexer flags to be set on candidate releases.</p>
+<p>If the required flags are not set, the release will be rejected.</p>
+<p>All values supported by your Radarr instance version can be defined.
+As of Radarr v4.7.5, the following flags are available:</p>
+<ul>
+<li><code>g-freeleech</code></li>
+<li><code>g-halfleech</code></li>
+<li><code>g-doubleupload</code></li>
+<li><code>ptp-golden</code></li>
+<li><code>ptp-approved</code></li>
+<li><code>hdb-internal</code></li>
+<li><code>ahd-internal</code></li>
+<li><code>g-scene</code></li>
+<li><code>g-freeleech75</code></li>
+<li><code>g-freeleech25</code></li>
+<li><code>ahd-userrelease</code></li>
+</ul>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.seed_ratio" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">seed_ratio</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.seed_ratio" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The seed ratio a torrent should reach before stopping.</p>
+<p>If unset or set to <code>null</code>, use the download client's defaults.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.seed_time" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">seed_time</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.seed_time" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The amount of time (in minutes) a torrent should be seeded before stopping.</p>
+<p>If unset or set to <code>null</code>, use the download client's defaults.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.indexers.torrent.rss.TorrentRssIndexer"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.rss.TorrentRssIndexer.cookie" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">cookie</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.rss.TorrentRssIndexer.cookie" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Session cookie for accessing the RSS feed.</p>
+<p>If the RSS feed requires one, this should be retrieved manually via a web browser.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.rss.TorrentRssIndexer.allow_zero_size" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">allow_zero_size</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.rss.TorrentRssIndexer.allow_zero_size" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Allow access to releases that don't specify release size.</p>
+<p>As size checks will not be performed, be careful when enabling this option.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.indexers.base.Indexer"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.base.Indexer.tags" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">tags</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.base.Indexer.tags" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Only monitor releases that match at least one of the defined tags.</p>
+<p>If unset, monitor all releases using this indexer.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="torznab">Torznab<a class="headerlink" href="#torznab" title="Permanent link">#</a></h2>
+<p>Monitor for new releases using a Torznab-compatible torrent tracker or indexer application.</p>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.indexers.torrent.torznab.TorznabIndexer"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.torznab.TorznabIndexer.type" class="doc doc-heading">
+          <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;torznab&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;torznab&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.torznab.TorznabIndexer.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Type value associated with this kind of indexer.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.indexers.base.Indexer"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.base.Indexer.enable_rss" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">enable_rss</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.base.Indexer.enable_rss" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>If enabled, use this indexer to watch for files that are wanted and missing
+or have not yet reached their cutoff.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.base.Indexer.enable_automatic_search" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">enable_automatic_search</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.base.Indexer.enable_automatic_search" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>If enabled, use this indexer for automatic searches, including Search on Add.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.base.Indexer.enable_interactive_search" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">enable_interactive_search</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.base.Indexer.enable_interactive_search" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>If enabled, use this indexer for manual interactive searches.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.base.Indexer.priority" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">priority</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">le</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.base.Indexer.priority" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Priority of this indexer to prefer one indexer over another in release tiebreaker scenarios.</p>
+<p>1 is highest priority and 50 is lowest priority.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.base.Indexer.download_client" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">download_client</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.base.Indexer.download_client" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The name of the download client to use for grabs from this indexer.</p>
+<p>If unset, use any compatible download client.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.minimum_seeders" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">minimum_seeders</span><span class="p">:</span> <span class="n">PositiveInt</span> <span class="o">=</span> <span class="mi">1</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.minimum_seeders" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The minimum number of seeders required before downloading a release.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.required_flags" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">required_flags</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.required_flags" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Require one or more indexer flags to be set on candidate releases.</p>
+<p>If the required flags are not set, the release will be rejected.</p>
+<p>All values supported by your Radarr instance version can be defined.
+As of Radarr v4.7.5, the following flags are available:</p>
+<ul>
+<li><code>g-freeleech</code></li>
+<li><code>g-halfleech</code></li>
+<li><code>g-doubleupload</code></li>
+<li><code>ptp-golden</code></li>
+<li><code>ptp-approved</code></li>
+<li><code>hdb-internal</code></li>
+<li><code>ahd-internal</code></li>
+<li><code>g-scene</code></li>
+<li><code>g-freeleech75</code></li>
+<li><code>g-freeleech25</code></li>
+<li><code>ahd-userrelease</code></li>
+</ul>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.seed_ratio" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">seed_ratio</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.seed_ratio" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The seed ratio a torrent should reach before stopping.</p>
+<p>If unset or set to <code>null</code>, use the download client's defaults.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.seed_time" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">seed_time</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.base.TorrentIndexer.seed_time" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The amount of time (in minutes) a torrent should be seeded before stopping.</p>
+<p>If unset or set to <code>null</code>, use the download client's defaults.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.indexers.torrent.torznab.TorznabIndexer"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.torznab.TorznabIndexer.base_url" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">base_url</span><span class="p">:</span> <span class="n">AnyHttpUrl</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.torznab.TorznabIndexer.base_url" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>URL of the Torznab-compatible indexing site.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.torznab.TorznabIndexer.api_path" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">api_path</span><span class="p">:</span> <span class="n">NonEmptyStr</span> <span class="o">=</span> <span class="s1">&#39;/api&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.torznab.TorznabIndexer.api_path" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Torznab API endpoint. Usually <code>/api</code>.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.torznab.TorznabIndexer.api_key" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">Password</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.torznab.TorznabIndexer.api_key" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>API key for use with the Torznab API.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.torznab.TorznabIndexer.categories" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">categories</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NabCategory</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">NabCategory</span><span class="o">.</span><span class="n">MOVIES_FOREIGN</span><span class="p">,</span> <span class="n">NabCategory</span><span class="o">.</span><span class="n">MOVIES_OTHER</span><span class="p">,</span> <span class="n">NabCategory</span><span class="o">.</span><span class="n">MOVIES_SD</span><span class="p">,</span> <span class="n">NabCategory</span><span class="o">.</span><span class="n">MOVIES_HD</span><span class="p">,</span> <span class="n">NabCategory</span><span class="o">.</span><span class="n">MOVIES_UHD</span><span class="p">,</span> <span class="n">NabCategory</span><span class="o">.</span><span class="n">MOVIES_BLURAY</span><span class="p">,</span> <span class="n">NabCategory</span><span class="o">.</span><span class="n">MOVIES_3D</span><span class="p">}</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.torznab.TorznabIndexer.categories" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Categories to monitor for standard/daily shows.
+Define as empty to disable.</p>
+<p>Values:</p>
+<ul>
+<li><code>TV-WEBDL</code></li>
+<li><code>TV-Foreign</code></li>
+<li><code>TV-SD</code></li>
+<li><code>TV-HD</code></li>
+<li><code>TV-UHD</code></li>
+<li><code>TV-Other</code></li>
+<li><code>TV-Sports</code></li>
+<li><code>TV-Anime</code></li>
+<li><code>TV-Documentary</code></li>
+</ul>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.torznab.TorznabIndexer.remove_year" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">remove_year</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.torznab.TorznabIndexer.remove_year" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>When set to <code>true</code>, excludes the release year of the media when searching the indexer.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.torrent.torznab.TorznabIndexer.additional_parameters" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">additional_parameters</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.torrent.torznab.TorznabIndexer.additional_parameters" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Additional Torznab API parameters.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.indexers.base.Indexer"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.indexers.base.Indexer.tags" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">tags</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.indexers.base.Indexer.tags" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Only monitor releases that match at least one of the defined tags.</p>
+<p>If unset, monitor all releases using this indexer.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../../../js/jquery-3.6.0.min.js"></script>
+        <script src="../../../../../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "../../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../../js/base.js"></script>
+        <script src="../../../../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

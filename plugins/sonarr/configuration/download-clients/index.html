@@ -12,13 +12,10 @@
         <link href="../../../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../../../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
         <link href="../../../../assets/_mkdocstrings.css" rel="stylesheet">
-
-        <script src="../../../../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../../../../js/bootstrap.min.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
     </head>
 
     <body>
@@ -44,6 +41,10 @@
                                     
 <li>
     <a href="../../release-notes/" class="dropdown-item">Buildarr Sonarr Plugin</a>
+</li>
+                                    
+<li>
+    <a href="../../../radarr/release-notes/" class="dropdown-item">Buildarr Radarr Plugin</a>
 </li>
                                     
 <li>
@@ -154,6 +155,86 @@
 <li>
     <a href="../ui/" class="dropdown-item">UI</a>
 </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Buildarr Radarr Plugin</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../radarr/" class="dropdown-item">Introduction</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Configuration</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../radarr/configuration/host/" class="dropdown-item">Host Configuration</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Settings</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../radarr/configuration/settings/media-management/" class="dropdown-item">Media Management</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Profiles</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../radarr/configuration/settings/profiles/quality-profiles/" class="dropdown-item">Quality Profiles</a>
+</li>
+            
+<li>
+    <a href="../../../radarr/configuration/settings/profiles/delay-profiles/" class="dropdown-item">Delay Profiles</a>
+</li>
+    </ul>
+  </li>
+            
+<li>
+    <a href="../../../radarr/configuration/settings/quality/" class="dropdown-item">Quality</a>
+</li>
+            
+<li>
+    <a href="../../../radarr/configuration/settings/custom-formats/" class="dropdown-item">Custom Formats</a>
+</li>
+            
+<li>
+    <a href="../../../radarr/configuration/settings/indexers/" class="dropdown-item">Indexers</a>
+</li>
+            
+<li>
+    <a href="../../../radarr/configuration/settings/download-clients/" class="dropdown-item">Download Clients</a>
+</li>
+            
+<li>
+    <a href="../../../radarr/configuration/settings/notifications/" class="dropdown-item">Notifications (Connect)</a>
+</li>
+            
+<li>
+    <a href="../../../radarr/configuration/settings/metadata/" class="dropdown-item">Metadata</a>
+</li>
+            
+<li>
+    <a href="../../../radarr/configuration/settings/tags/" class="dropdown-item">Tags</a>
+</li>
+            
+<li>
+    <a href="../../../radarr/configuration/settings/general/" class="dropdown-item">General</a>
+</li>
+            
+<li>
+    <a href="../../../radarr/configuration/settings/ui/" class="dropdown-item">UI</a>
+</li>
+    </ul>
+  </li>
     </ul>
   </li>
     </ul>
@@ -435,6 +516,7 @@
 <div class="doc doc-object doc-class">
 
 
+
 <a id="buildarr_sonarr.config.download_clients.SonarrDownloadClientsSettingsConfig"></a>
   <div class="doc doc-contents first">
 
@@ -467,7 +549,6 @@ as well as remote path mappings and other related options.</p>
 </code></pre></div>
 
 
-
   
 
   <div class="doc doc-children">
@@ -482,11 +563,13 @@ as well as remote path mappings and other related options.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.SonarrDownloadClientsSettingsConfig.enable_completed_download_handling" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">enable_completed_download_handling</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
+          <code class="highlight language-python"><span class="n">enable_completed_download_handling</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.SonarrDownloadClientsSettingsConfig.enable_completed_download_handling" class="headerlink" title="Permanent link">#</a></h5>
@@ -503,11 +586,13 @@ as well as remote path mappings and other related options.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.SonarrDownloadClientsSettingsConfig.redownload_failed" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">redownload_failed</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
+          <code class="highlight language-python"><span class="n">redownload_failed</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.SonarrDownloadClientsSettingsConfig.redownload_failed" class="headerlink" title="Permanent link">#</a></h5>
@@ -524,11 +609,13 @@ as well as remote path mappings and other related options.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.SonarrDownloadClientsSettingsConfig.delete_unmanaged" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">delete_unmanaged</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+          <code class="highlight language-python"><span class="n">delete_unmanaged</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.SonarrDownloadClientsSettingsConfig.delete_unmanaged" class="headerlink" title="Permanent link">#</a></h5>
@@ -545,11 +632,13 @@ as well as remote path mappings and other related options.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.SonarrDownloadClientsSettingsConfig.definitions" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">definitions</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Annotated</span><span class="p">[</span><span class="n">DownloadClientType</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">discriminator</span><span class="o">=</span><span class="nb">type</span><span class="p">)]]</span> <span class="o">=</span> <span class="p">{}</span></code>
+          <code class="highlight language-python"><span class="n">definitions</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Annotated</span><span class="p">[</span><span class="n">DownloadClientType</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">discriminator</span><span class="o">=</span><span class="s1">&#39;type&#39;</span><span class="p">)]]</span> <span class="o">=</span> <span class="p">{}</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.SonarrDownloadClientsSettingsConfig.definitions" class="headerlink" title="Permanent link">#</a></h5>
@@ -566,11 +655,13 @@ as well as remote path mappings and other related options.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.SonarrDownloadClientsSettingsConfig.remote_path_mappings" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">remote_path_mappings</span> <span class="o">=</span> <span class="n">SonarrRemotePathMappingsSettingsConfig</span><span class="p">()</span></code>
+          <code class="highlight language-python"><span class="n">remote_path_mappings</span> <span class="o">=</span> <span class="n">SonarrRemotePathMappingsSettingsConfig</span><span class="p">()</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.SonarrDownloadClientsSettingsConfig.remote_path_mappings" class="headerlink" title="Permanent link">#</a></h5>
@@ -606,6 +697,7 @@ or the download client the indexer has been assigned to.</p>
 <div class="doc doc-object doc-class">
 
 
+
 <a id="buildarr_sonarr.config.download_clients.download_clients.DownloadClient"></a>
   <div class="doc doc-contents first">
 
@@ -635,7 +727,6 @@ but disabled so that it is inactive.</p>
 <p>The below attributes can be defined on any type of download client.</p>
 
 
-
   
 
   <div class="doc doc-children">
@@ -650,11 +741,13 @@ but disabled so that it is inactive.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.DownloadClient.enable" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">enable</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
+          <code class="highlight language-python"><span class="n">enable</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.DownloadClient.enable" class="headerlink" title="Permanent link">#</a></h5>
@@ -671,11 +764,13 @@ but disabled so that it is inactive.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.DownloadClient.priority" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">priority</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span></code>
+          <code class="highlight language-python"><span class="n">priority</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.DownloadClient.priority" class="headerlink" title="Permanent link">#</a></h5>
@@ -694,11 +789,13 @@ Round-robin is used for clients with the same priority.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.DownloadClient.remove_completed_downloads" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">remove_completed_downloads</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
+          <code class="highlight language-python"><span class="n">remove_completed_downloads</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.DownloadClient.remove_completed_downloads" class="headerlink" title="Permanent link">#</a></h5>
@@ -716,11 +813,13 @@ Round-robin is used for clients with the same priority.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.DownloadClient.remove_failed_downloads" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">remove_failed_downloads</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
+          <code class="highlight language-python"><span class="n">remove_failed_downloads</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.DownloadClient.remove_failed_downloads" class="headerlink" title="Permanent link">#</a></h5>
@@ -737,11 +836,13 @@ Round-robin is used for clients with the same priority.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.DownloadClient.tags" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">tags</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
+          <code class="highlight language-python"><span class="n">tags</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.DownloadClient.tags" class="headerlink" title="Permanent link">#</a></h5>
@@ -772,12 +873,12 @@ Only media under those tags will be assigned to this client.</p>
 <div class="doc doc-object doc-class">
 
 
+
 <a id="buildarr_sonarr.config.download_clients.download_clients.DownloadstationUsenetDownloadClient"></a>
   <div class="doc doc-contents first">
 
   
       <p>Download client which uses Usenet via Download Station.</p>
-
 
 
   
@@ -794,11 +895,13 @@ Only media under those tags will be assigned to this client.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.DownloadstationUsenetDownloadClient.type" class="doc doc-heading">
-<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;downloadstation-usenet&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;downloadstation-usenet&#39;</span></code>
+          <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;downloadstation-usenet&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;downloadstation-usenet&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.DownloadstationUsenetDownloadClient.type" class="headerlink" title="Permanent link">#</a></h5>
@@ -815,11 +918,12 @@ Only media under those tags will be assigned to this client.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.DownloadstationUsenetDownloadClient.host" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+          <code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.DownloadstationUsenetDownloadClient.host" class="headerlink" title="Permanent link">#</a></h5>
@@ -836,11 +940,13 @@ Only media under those tags will be assigned to this client.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.DownloadstationUsenetDownloadClient.port" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">5000</span></code>
+          <code class="highlight language-python"><span class="n">port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">5000</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.DownloadstationUsenetDownloadClient.port" class="headerlink" title="Permanent link">#</a></h5>
@@ -857,11 +963,13 @@ Only media under those tags will be assigned to this client.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.DownloadstationUsenetDownloadClient.use_ssl" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+          <code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.DownloadstationUsenetDownloadClient.use_ssl" class="headerlink" title="Permanent link">#</a></h5>
@@ -878,11 +986,12 @@ Only media under those tags will be assigned to this client.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.DownloadstationUsenetDownloadClient.username" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+          <code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.DownloadstationUsenetDownloadClient.username" class="headerlink" title="Permanent link">#</a></h5>
@@ -899,11 +1008,12 @@ Only media under those tags will be assigned to this client.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.DownloadstationUsenetDownloadClient.password" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">password</span><span class="p">:</span> <span class="n">Password</span></code>
+          <code class="highlight language-python"><span class="n">password</span><span class="p">:</span> <span class="n">Password</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.DownloadstationUsenetDownloadClient.password" class="headerlink" title="Permanent link">#</a></h5>
@@ -920,11 +1030,13 @@ Only media under those tags will be assigned to this client.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.DownloadstationUsenetDownloadClient.category" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+          <code class="highlight language-python"><span class="n">category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.DownloadstationUsenetDownloadClient.category" class="headerlink" title="Permanent link">#</a></h5>
@@ -944,11 +1056,13 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.DownloadstationUsenetDownloadClient.directory" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">directory</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+          <code class="highlight language-python"><span class="n">directory</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.DownloadstationUsenetDownloadClient.directory" class="headerlink" title="Permanent link">#</a></h5>
@@ -976,12 +1090,12 @@ Using a category is optional, but strongly recommended.</p>
 <div class="doc doc-object doc-class">
 
 
+
 <a id="buildarr_sonarr.config.download_clients.download_clients.NzbgetDownloadClient"></a>
   <div class="doc doc-contents first">
 
   
       <p>NZBGet download client.</p>
-
 
 
   
@@ -998,11 +1112,13 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.NzbgetDownloadClient.type" class="doc doc-heading">
-<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;nzbget&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;nzbget&#39;</span></code>
+          <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;nzbget&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;nzbget&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.NzbgetDownloadClient.type" class="headerlink" title="Permanent link">#</a></h5>
@@ -1019,11 +1135,12 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.NzbgetDownloadClient.host" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+          <code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.NzbgetDownloadClient.host" class="headerlink" title="Permanent link">#</a></h5>
@@ -1040,11 +1157,13 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.NzbgetDownloadClient.port" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">5000</span></code>
+          <code class="highlight language-python"><span class="n">port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">5000</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.NzbgetDownloadClient.port" class="headerlink" title="Permanent link">#</a></h5>
@@ -1061,11 +1180,13 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.NzbgetDownloadClient.use_ssl" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+          <code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.NzbgetDownloadClient.use_ssl" class="headerlink" title="Permanent link">#</a></h5>
@@ -1082,11 +1203,13 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.NzbgetDownloadClient.url_base" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">url_base</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+          <code class="highlight language-python"><span class="n">url_base</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.NzbgetDownloadClient.url_base" class="headerlink" title="Permanent link">#</a></h5>
@@ -1103,11 +1226,12 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.NzbgetDownloadClient.username" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+          <code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.NzbgetDownloadClient.username" class="headerlink" title="Permanent link">#</a></h5>
@@ -1124,11 +1248,12 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.NzbgetDownloadClient.password" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">password</span><span class="p">:</span> <span class="n">Password</span></code>
+          <code class="highlight language-python"><span class="n">password</span><span class="p">:</span> <span class="n">Password</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.NzbgetDownloadClient.password" class="headerlink" title="Permanent link">#</a></h5>
@@ -1145,11 +1270,13 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.NzbgetDownloadClient.category" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+          <code class="highlight language-python"><span class="n">category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.NzbgetDownloadClient.category" class="headerlink" title="Permanent link">#</a></h5>
@@ -1168,11 +1295,13 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.NzbgetDownloadClient.recent_priority" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">recent_priority</span><span class="p">:</span> <span class="n">NzbgetPriority</span> <span class="o">=</span> <span class="n">NzbgetPriority</span><span class="o">.</span><span class="n">normal</span></code>
+          <code class="highlight language-python"><span class="n">recent_priority</span><span class="p">:</span> <span class="n">NzbgetPriority</span> <span class="o">=</span> <span class="n">NzbgetPriority</span><span class="o">.</span><span class="n">normal</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.NzbgetDownloadClient.recent_priority" class="headerlink" title="Permanent link">#</a></h5>
@@ -1198,11 +1327,13 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.NzbgetDownloadClient.older_priority" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">older_priority</span><span class="p">:</span> <span class="n">NzbgetPriority</span> <span class="o">=</span> <span class="n">NzbgetPriority</span><span class="o">.</span><span class="n">normal</span></code>
+          <code class="highlight language-python"><span class="n">older_priority</span><span class="p">:</span> <span class="n">NzbgetPriority</span> <span class="o">=</span> <span class="n">NzbgetPriority</span><span class="o">.</span><span class="n">normal</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.NzbgetDownloadClient.older_priority" class="headerlink" title="Permanent link">#</a></h5>
@@ -1228,11 +1359,13 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.NzbgetDownloadClient.add_paused" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">add_paused</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+          <code class="highlight language-python"><span class="n">add_paused</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.NzbgetDownloadClient.add_paused" class="headerlink" title="Permanent link">#</a></h5>
@@ -1260,12 +1393,12 @@ Using a category is optional, but strongly recommended.</p>
 <div class="doc doc-object doc-class">
 
 
+
 <a id="buildarr_sonarr.config.download_clients.download_clients.NzbvortexDownloadClient"></a>
   <div class="doc doc-contents first">
 
   
       <p>NZBVortex download client.</p>
-
 
 
   
@@ -1282,11 +1415,13 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.NzbvortexDownloadClient.type" class="doc doc-heading">
-<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;nzbvortex&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;nzbvortex&#39;</span></code>
+          <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;nzbvortex&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;nzbvortex&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.NzbvortexDownloadClient.type" class="headerlink" title="Permanent link">#</a></h5>
@@ -1303,11 +1438,12 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.NzbvortexDownloadClient.host" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+          <code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.NzbvortexDownloadClient.host" class="headerlink" title="Permanent link">#</a></h5>
@@ -1324,11 +1460,13 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.NzbvortexDownloadClient.port" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">4321</span></code>
+          <code class="highlight language-python"><span class="n">port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">4321</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.NzbvortexDownloadClient.port" class="headerlink" title="Permanent link">#</a></h5>
@@ -1345,11 +1483,13 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.NzbvortexDownloadClient.use_ssl" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+          <code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.NzbvortexDownloadClient.use_ssl" class="headerlink" title="Permanent link">#</a></h5>
@@ -1366,11 +1506,13 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.NzbvortexDownloadClient.url_base" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">url_base</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+          <code class="highlight language-python"><span class="n">url_base</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.NzbvortexDownloadClient.url_base" class="headerlink" title="Permanent link">#</a></h5>
@@ -1387,11 +1529,12 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.NzbvortexDownloadClient.api_key" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">Password</span></code>
+          <code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">Password</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.NzbvortexDownloadClient.api_key" class="headerlink" title="Permanent link">#</a></h5>
@@ -1408,11 +1551,13 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.NzbvortexDownloadClient.category" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+          <code class="highlight language-python"><span class="n">category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.NzbvortexDownloadClient.category" class="headerlink" title="Permanent link">#</a></h5>
@@ -1431,11 +1576,13 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.NzbvortexDownloadClient.recent_priority" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">recent_priority</span><span class="p">:</span> <span class="n">NzbvortexPriority</span> <span class="o">=</span> <span class="n">NzbvortexPriority</span><span class="o">.</span><span class="n">normal</span></code>
+          <code class="highlight language-python"><span class="n">recent_priority</span><span class="p">:</span> <span class="n">NzbvortexPriority</span> <span class="o">=</span> <span class="n">NzbvortexPriority</span><span class="o">.</span><span class="n">normal</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.NzbvortexDownloadClient.recent_priority" class="headerlink" title="Permanent link">#</a></h5>
@@ -1458,11 +1605,13 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.NzbvortexDownloadClient.older_priority" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">older_priority</span><span class="p">:</span> <span class="n">NzbvortexPriority</span> <span class="o">=</span> <span class="n">NzbvortexPriority</span><span class="o">.</span><span class="n">normal</span></code>
+          <code class="highlight language-python"><span class="n">older_priority</span><span class="p">:</span> <span class="n">NzbvortexPriority</span> <span class="o">=</span> <span class="n">NzbvortexPriority</span><span class="o">.</span><span class="n">normal</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.NzbvortexDownloadClient.older_priority" class="headerlink" title="Permanent link">#</a></h5>
@@ -1495,12 +1644,12 @@ Using a category is optional, but strongly recommended.</p>
 <div class="doc doc-object doc-class">
 
 
+
 <a id="buildarr_sonarr.config.download_clients.download_clients.PneumaticDownloadClient"></a>
   <div class="doc doc-contents first">
 
   
       <p>Download client for the Pneumatic NZB add-on for Kodi/XMBC.</p>
-
 
 
   
@@ -1517,11 +1666,13 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.PneumaticDownloadClient.type" class="doc doc-heading">
-<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;pneumatic&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;pneumatic&#39;</span></code>
+          <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;pneumatic&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;pneumatic&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.PneumaticDownloadClient.type" class="headerlink" title="Permanent link">#</a></h5>
@@ -1538,11 +1689,12 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.PneumaticDownloadClient.nzb_folder" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">nzb_folder</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+          <code class="highlight language-python"><span class="n">nzb_folder</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.PneumaticDownloadClient.nzb_folder" class="headerlink" title="Permanent link">#</a></h5>
@@ -1560,11 +1712,12 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.PneumaticDownloadClient.strm_folder" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">strm_folder</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+          <code class="highlight language-python"><span class="n">strm_folder</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.PneumaticDownloadClient.strm_folder" class="headerlink" title="Permanent link">#</a></h5>
@@ -1591,12 +1744,12 @@ Using a category is optional, but strongly recommended.</p>
 <div class="doc doc-object doc-class">
 
 
+
 <a id="buildarr_sonarr.config.download_clients.download_clients.SabnzbdDownloadClient"></a>
   <div class="doc doc-contents first">
 
   
       <p>SABnzbd download client.</p>
-
 
 
   
@@ -1613,11 +1766,13 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.SabnzbdDownloadClient.type" class="doc doc-heading">
-<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;sabnzbd&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;sabnzbd&#39;</span></code>
+          <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;sabnzbd&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;sabnzbd&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.SabnzbdDownloadClient.type" class="headerlink" title="Permanent link">#</a></h5>
@@ -1634,11 +1789,12 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.SabnzbdDownloadClient.host" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+          <code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.SabnzbdDownloadClient.host" class="headerlink" title="Permanent link">#</a></h5>
@@ -1655,11 +1811,13 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.SabnzbdDownloadClient.port" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">4321</span></code>
+          <code class="highlight language-python"><span class="n">port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">4321</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.SabnzbdDownloadClient.port" class="headerlink" title="Permanent link">#</a></h5>
@@ -1676,11 +1834,13 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.SabnzbdDownloadClient.use_ssl" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+          <code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.SabnzbdDownloadClient.use_ssl" class="headerlink" title="Permanent link">#</a></h5>
@@ -1697,11 +1857,13 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.SabnzbdDownloadClient.url_base" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">url_base</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+          <code class="highlight language-python"><span class="n">url_base</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.SabnzbdDownloadClient.url_base" class="headerlink" title="Permanent link">#</a></h5>
@@ -1718,11 +1880,12 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.SabnzbdDownloadClient.api_key" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">Password</span></code>
+          <code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">Password</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.SabnzbdDownloadClient.api_key" class="headerlink" title="Permanent link">#</a></h5>
@@ -1739,11 +1902,13 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.SabnzbdDownloadClient.category" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+          <code class="highlight language-python"><span class="n">category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.SabnzbdDownloadClient.category" class="headerlink" title="Permanent link">#</a></h5>
@@ -1762,11 +1927,13 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.SabnzbdDownloadClient.recent_priority" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">recent_priority</span><span class="p">:</span> <span class="n">SabnzbdPriority</span> <span class="o">=</span> <span class="n">SabnzbdPriority</span><span class="o">.</span><span class="n">default</span></code>
+          <code class="highlight language-python"><span class="n">recent_priority</span><span class="p">:</span> <span class="n">SabnzbdPriority</span> <span class="o">=</span> <span class="n">SabnzbdPriority</span><span class="o">.</span><span class="n">default</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.SabnzbdDownloadClient.recent_priority" class="headerlink" title="Permanent link">#</a></h5>
@@ -1792,11 +1959,13 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.SabnzbdDownloadClient.older_priority" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">older_priority</span><span class="p">:</span> <span class="n">SabnzbdPriority</span> <span class="o">=</span> <span class="n">SabnzbdPriority</span><span class="o">.</span><span class="n">default</span></code>
+          <code class="highlight language-python"><span class="n">older_priority</span><span class="p">:</span> <span class="n">SabnzbdPriority</span> <span class="o">=</span> <span class="n">SabnzbdPriority</span><span class="o">.</span><span class="n">default</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.SabnzbdDownloadClient.older_priority" class="headerlink" title="Permanent link">#</a></h5>
@@ -1832,12 +2001,12 @@ Using a category is optional, but strongly recommended.</p>
 <div class="doc doc-object doc-class">
 
 
+
 <a id="buildarr_sonarr.config.download_clients.download_clients.UsenetBlackholeDownloadClient"></a>
   <div class="doc doc-contents first">
 
   
       <p>Usenet Blackhole download client.</p>
-
 
 
   
@@ -1854,11 +2023,13 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.UsenetBlackholeDownloadClient.type" class="doc doc-heading">
-<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;usenet-blackhole&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;usenet-blackhole&#39;</span></code>
+          <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;usenet-blackhole&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;usenet-blackhole&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.UsenetBlackholeDownloadClient.type" class="headerlink" title="Permanent link">#</a></h5>
@@ -1875,11 +2046,12 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.UsenetBlackholeDownloadClient.nzb_folder" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">nzb_folder</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+          <code class="highlight language-python"><span class="n">nzb_folder</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.UsenetBlackholeDownloadClient.nzb_folder" class="headerlink" title="Permanent link">#</a></h5>
@@ -1896,11 +2068,12 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.UsenetBlackholeDownloadClient.watch_folder" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">watch_folder</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+          <code class="highlight language-python"><span class="n">watch_folder</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.UsenetBlackholeDownloadClient.watch_folder" class="headerlink" title="Permanent link">#</a></h5>
@@ -1930,12 +2103,12 @@ peer-to-peer file sharing protocol to retrieve media files.</p>
 <div class="doc doc-object doc-class">
 
 
+
 <a id="buildarr_sonarr.config.download_clients.download_clients.Aria2DownloadClient"></a>
   <div class="doc doc-contents first">
 
   
       <p>Aria2 download client.</p>
-
 
 
   
@@ -1952,11 +2125,13 @@ peer-to-peer file sharing protocol to retrieve media files.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.Aria2DownloadClient.type" class="doc doc-heading">
-<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;aria2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;aria2&#39;</span></code>
+          <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;aria2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;aria2&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.Aria2DownloadClient.type" class="headerlink" title="Permanent link">#</a></h5>
@@ -1973,11 +2148,12 @@ peer-to-peer file sharing protocol to retrieve media files.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.Aria2DownloadClient.host" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+          <code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.Aria2DownloadClient.host" class="headerlink" title="Permanent link">#</a></h5>
@@ -1994,11 +2170,13 @@ peer-to-peer file sharing protocol to retrieve media files.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.Aria2DownloadClient.port" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">6800</span></code>
+          <code class="highlight language-python"><span class="n">port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">6800</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.Aria2DownloadClient.port" class="headerlink" title="Permanent link">#</a></h5>
@@ -2015,11 +2193,13 @@ peer-to-peer file sharing protocol to retrieve media files.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.Aria2DownloadClient.use_ssl" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+          <code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.Aria2DownloadClient.use_ssl" class="headerlink" title="Permanent link">#</a></h5>
@@ -2036,11 +2216,13 @@ peer-to-peer file sharing protocol to retrieve media files.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.Aria2DownloadClient.rpc_path" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">rpc_path</span><span class="p">:</span> <span class="n">NonEmptyStr</span> <span class="o">=</span> <span class="s1">&#39;/rpc&#39;</span></code>
+          <code class="highlight language-python"><span class="n">rpc_path</span><span class="p">:</span> <span class="n">NonEmptyStr</span> <span class="o">=</span> <span class="s1">&#39;/rpc&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.Aria2DownloadClient.rpc_path" class="headerlink" title="Permanent link">#</a></h5>
@@ -2057,11 +2239,12 @@ peer-to-peer file sharing protocol to retrieve media files.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.Aria2DownloadClient.secret_token" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">secret_token</span><span class="p">:</span> <span class="n">Password</span></code>
+          <code class="highlight language-python"><span class="n">secret_token</span><span class="p">:</span> <span class="n">Password</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.Aria2DownloadClient.secret_token" class="headerlink" title="Permanent link">#</a></h5>
@@ -2088,12 +2271,12 @@ peer-to-peer file sharing protocol to retrieve media files.</p>
 <div class="doc doc-object doc-class">
 
 
+
 <a id="buildarr_sonarr.config.download_clients.download_clients.DelugeDownloadClient"></a>
   <div class="doc doc-contents first">
 
   
       <p>Deluge download client.</p>
-
 
 
   
@@ -2110,11 +2293,13 @@ peer-to-peer file sharing protocol to retrieve media files.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.DelugeDownloadClient.type" class="doc doc-heading">
-<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;deluge&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;deluge&#39;</span></code>
+          <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;deluge&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;deluge&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.DelugeDownloadClient.type" class="headerlink" title="Permanent link">#</a></h5>
@@ -2131,11 +2316,12 @@ peer-to-peer file sharing protocol to retrieve media files.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.DelugeDownloadClient.host" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+          <code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.DelugeDownloadClient.host" class="headerlink" title="Permanent link">#</a></h5>
@@ -2152,11 +2338,13 @@ peer-to-peer file sharing protocol to retrieve media files.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.DelugeDownloadClient.port" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">8112</span></code>
+          <code class="highlight language-python"><span class="n">port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">8112</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.DelugeDownloadClient.port" class="headerlink" title="Permanent link">#</a></h5>
@@ -2173,11 +2361,13 @@ peer-to-peer file sharing protocol to retrieve media files.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.DelugeDownloadClient.use_ssl" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+          <code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.DelugeDownloadClient.use_ssl" class="headerlink" title="Permanent link">#</a></h5>
@@ -2194,11 +2384,13 @@ peer-to-peer file sharing protocol to retrieve media files.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.DelugeDownloadClient.url_base" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">url_base</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+          <code class="highlight language-python"><span class="n">url_base</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.DelugeDownloadClient.url_base" class="headerlink" title="Permanent link">#</a></h5>
@@ -2215,11 +2407,12 @@ peer-to-peer file sharing protocol to retrieve media files.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.DelugeDownloadClient.password" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">password</span><span class="p">:</span> <span class="n">Password</span></code>
+          <code class="highlight language-python"><span class="n">password</span><span class="p">:</span> <span class="n">Password</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.DelugeDownloadClient.password" class="headerlink" title="Permanent link">#</a></h5>
@@ -2236,11 +2429,13 @@ peer-to-peer file sharing protocol to retrieve media files.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.DelugeDownloadClient.category" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;tv-sonarr&#39;</span></code>
+          <code class="highlight language-python"><span class="n">category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;tv-sonarr&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.DelugeDownloadClient.category" class="headerlink" title="Permanent link">#</a></h5>
@@ -2259,11 +2454,13 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.DelugeDownloadClient.postimport_category" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">postimport_category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+          <code class="highlight language-python"><span class="n">postimport_category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.DelugeDownloadClient.postimport_category" class="headerlink" title="Permanent link">#</a></h5>
@@ -2282,11 +2479,13 @@ Leave blank, set to <code>null</code> or undefined to keep the same category.</p
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.DelugeDownloadClient.recent_priority" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">recent_priority</span><span class="p">:</span> <span class="n">DelugePriority</span> <span class="o">=</span> <span class="n">DelugePriority</span><span class="o">.</span><span class="n">last</span></code>
+          <code class="highlight language-python"><span class="n">recent_priority</span><span class="p">:</span> <span class="n">DelugePriority</span> <span class="o">=</span> <span class="n">DelugePriority</span><span class="o">.</span><span class="n">last</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.DelugeDownloadClient.recent_priority" class="headerlink" title="Permanent link">#</a></h5>
@@ -2308,11 +2507,13 @@ Leave blank, set to <code>null</code> or undefined to keep the same category.</p
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.DelugeDownloadClient.older_priority" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">older_priority</span><span class="p">:</span> <span class="n">DelugePriority</span> <span class="o">=</span> <span class="n">DelugePriority</span><span class="o">.</span><span class="n">last</span></code>
+          <code class="highlight language-python"><span class="n">older_priority</span><span class="p">:</span> <span class="n">DelugePriority</span> <span class="o">=</span> <span class="n">DelugePriority</span><span class="o">.</span><span class="n">last</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.DelugeDownloadClient.older_priority" class="headerlink" title="Permanent link">#</a></h5>
@@ -2344,12 +2545,12 @@ Leave blank, set to <code>null</code> or undefined to keep the same category.</p
 <div class="doc doc-object doc-class">
 
 
+
 <a id="buildarr_sonarr.config.download_clients.download_clients.DownloadstationTorrentDownloadClient"></a>
   <div class="doc doc-contents first">
 
   
       <p>Download client which uses torrents via Download Station.</p>
-
 
 
   
@@ -2366,11 +2567,13 @@ Leave blank, set to <code>null</code> or undefined to keep the same category.</p
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.DownloadstationTorrentDownloadClient.type" class="doc doc-heading">
-<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;downloadstation-torrent&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;downloadstation-torrent&#39;</span></code>
+          <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;downloadstation-torrent&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;downloadstation-torrent&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.DownloadstationTorrentDownloadClient.type" class="headerlink" title="Permanent link">#</a></h5>
@@ -2387,11 +2590,12 @@ Leave blank, set to <code>null</code> or undefined to keep the same category.</p
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.DownloadstationTorrentDownloadClient.host" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+          <code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.DownloadstationTorrentDownloadClient.host" class="headerlink" title="Permanent link">#</a></h5>
@@ -2408,11 +2612,13 @@ Leave blank, set to <code>null</code> or undefined to keep the same category.</p
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.DownloadstationTorrentDownloadClient.port" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">5000</span></code>
+          <code class="highlight language-python"><span class="n">port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">5000</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.DownloadstationTorrentDownloadClient.port" class="headerlink" title="Permanent link">#</a></h5>
@@ -2429,11 +2635,13 @@ Leave blank, set to <code>null</code> or undefined to keep the same category.</p
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.DownloadstationTorrentDownloadClient.use_ssl" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+          <code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.DownloadstationTorrentDownloadClient.use_ssl" class="headerlink" title="Permanent link">#</a></h5>
@@ -2450,11 +2658,12 @@ Leave blank, set to <code>null</code> or undefined to keep the same category.</p
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.DownloadstationTorrentDownloadClient.username" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+          <code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.DownloadstationTorrentDownloadClient.username" class="headerlink" title="Permanent link">#</a></h5>
@@ -2471,11 +2680,12 @@ Leave blank, set to <code>null</code> or undefined to keep the same category.</p
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.DownloadstationTorrentDownloadClient.password" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">password</span><span class="p">:</span> <span class="n">Password</span></code>
+          <code class="highlight language-python"><span class="n">password</span><span class="p">:</span> <span class="n">Password</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.DownloadstationTorrentDownloadClient.password" class="headerlink" title="Permanent link">#</a></h5>
@@ -2492,11 +2702,13 @@ Leave blank, set to <code>null</code> or undefined to keep the same category.</p
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.DownloadstationTorrentDownloadClient.category" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+          <code class="highlight language-python"><span class="n">category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.DownloadstationTorrentDownloadClient.category" class="headerlink" title="Permanent link">#</a></h5>
@@ -2516,11 +2728,13 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.DownloadstationTorrentDownloadClient.directory" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">directory</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+          <code class="highlight language-python"><span class="n">directory</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.DownloadstationTorrentDownloadClient.directory" class="headerlink" title="Permanent link">#</a></h5>
@@ -2548,12 +2762,12 @@ Using a category is optional, but strongly recommended.</p>
 <div class="doc doc-object doc-class">
 
 
+
 <a id="buildarr_sonarr.config.download_clients.download_clients.FloodDownloadClient"></a>
   <div class="doc doc-contents first">
 
   
       <p>Flood download client.</p>
-
 
 
   
@@ -2570,11 +2784,13 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.FloodDownloadClient.type" class="doc doc-heading">
-<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;flood&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;flood&#39;</span></code>
+          <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;flood&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;flood&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.FloodDownloadClient.type" class="headerlink" title="Permanent link">#</a></h5>
@@ -2591,11 +2807,12 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.FloodDownloadClient.host" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+          <code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.FloodDownloadClient.host" class="headerlink" title="Permanent link">#</a></h5>
@@ -2612,11 +2829,13 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.FloodDownloadClient.port" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">3000</span></code>
+          <code class="highlight language-python"><span class="n">port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">3000</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.FloodDownloadClient.port" class="headerlink" title="Permanent link">#</a></h5>
@@ -2633,11 +2852,13 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.FloodDownloadClient.use_ssl" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+          <code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.FloodDownloadClient.use_ssl" class="headerlink" title="Permanent link">#</a></h5>
@@ -2654,11 +2875,13 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.FloodDownloadClient.url_base" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">url_base</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+          <code class="highlight language-python"><span class="n">url_base</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.FloodDownloadClient.url_base" class="headerlink" title="Permanent link">#</a></h5>
@@ -2675,11 +2898,12 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.FloodDownloadClient.username" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+          <code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.FloodDownloadClient.username" class="headerlink" title="Permanent link">#</a></h5>
@@ -2696,11 +2920,12 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.FloodDownloadClient.password" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">password</span><span class="p">:</span> <span class="n">Password</span></code>
+          <code class="highlight language-python"><span class="n">password</span><span class="p">:</span> <span class="n">Password</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.FloodDownloadClient.password" class="headerlink" title="Permanent link">#</a></h5>
@@ -2717,11 +2942,13 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.FloodDownloadClient.destination" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">destination</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+          <code class="highlight language-python"><span class="n">destination</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.FloodDownloadClient.destination" class="headerlink" title="Permanent link">#</a></h5>
@@ -2738,11 +2965,13 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.FloodDownloadClient.flood_tags" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">flood_tags</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;sonarr&#39;</span><span class="p">}</span></code>
+          <code class="highlight language-python"><span class="n">flood_tags</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;sonarr&#39;</span><span class="p">}</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.FloodDownloadClient.flood_tags" class="headerlink" title="Permanent link">#</a></h5>
@@ -2761,11 +2990,13 @@ This avoids conflicts with unrelated downloads.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.FloodDownloadClient.postimport_tags" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">postimport_tags</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
+          <code class="highlight language-python"><span class="n">postimport_tags</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.FloodDownloadClient.postimport_tags" class="headerlink" title="Permanent link">#</a></h5>
@@ -2782,11 +3013,13 @@ This avoids conflicts with unrelated downloads.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.FloodDownloadClient.additional_tags" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">additional_tags</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">FloodMediaTag</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
+          <code class="highlight language-python"><span class="n">additional_tags</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">FloodMediaTag</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.FloodDownloadClient.additional_tags" class="headerlink" title="Permanent link">#</a></h5>
@@ -2803,11 +3036,13 @@ This avoids conflicts with unrelated downloads.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.FloodDownloadClient.start_on_add" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">start_on_add</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
+          <code class="highlight language-python"><span class="n">start_on_add</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.FloodDownloadClient.start_on_add" class="headerlink" title="Permanent link">#</a></h5>
@@ -2834,12 +3069,12 @@ This avoids conflicts with unrelated downloads.</p>
 <div class="doc doc-object doc-class">
 
 
+
 <a id="buildarr_sonarr.config.download_clients.download_clients.HadoukenDownloadClient"></a>
   <div class="doc doc-contents first">
 
   
       <p>Hadouken download client.</p>
-
 
 
   
@@ -2856,11 +3091,13 @@ This avoids conflicts with unrelated downloads.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.HadoukenDownloadClient.type" class="doc doc-heading">
-<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;hadouken&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;hadouken&#39;</span></code>
+          <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;hadouken&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;hadouken&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.HadoukenDownloadClient.type" class="headerlink" title="Permanent link">#</a></h5>
@@ -2877,11 +3114,12 @@ This avoids conflicts with unrelated downloads.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.HadoukenDownloadClient.host" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+          <code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.HadoukenDownloadClient.host" class="headerlink" title="Permanent link">#</a></h5>
@@ -2898,11 +3136,13 @@ This avoids conflicts with unrelated downloads.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.HadoukenDownloadClient.port" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">7070</span></code>
+          <code class="highlight language-python"><span class="n">port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">7070</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.HadoukenDownloadClient.port" class="headerlink" title="Permanent link">#</a></h5>
@@ -2919,11 +3159,13 @@ This avoids conflicts with unrelated downloads.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.HadoukenDownloadClient.use_ssl" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+          <code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.HadoukenDownloadClient.use_ssl" class="headerlink" title="Permanent link">#</a></h5>
@@ -2940,11 +3182,13 @@ This avoids conflicts with unrelated downloads.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.HadoukenDownloadClient.url_base" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">url_base</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+          <code class="highlight language-python"><span class="n">url_base</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.HadoukenDownloadClient.url_base" class="headerlink" title="Permanent link">#</a></h5>
@@ -2961,11 +3205,12 @@ This avoids conflicts with unrelated downloads.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.HadoukenDownloadClient.username" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+          <code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.HadoukenDownloadClient.username" class="headerlink" title="Permanent link">#</a></h5>
@@ -2982,11 +3227,12 @@ This avoids conflicts with unrelated downloads.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.HadoukenDownloadClient.password" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">password</span><span class="p">:</span> <span class="n">Password</span></code>
+          <code class="highlight language-python"><span class="n">password</span><span class="p">:</span> <span class="n">Password</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.HadoukenDownloadClient.password" class="headerlink" title="Permanent link">#</a></h5>
@@ -3003,11 +3249,13 @@ This avoids conflicts with unrelated downloads.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.HadoukenDownloadClient.category" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">category</span><span class="p">:</span> <span class="n">NonEmptyStr</span> <span class="o">=</span> <span class="s1">&#39;sonarr-tv&#39;</span></code>
+          <code class="highlight language-python"><span class="n">category</span><span class="p">:</span> <span class="n">NonEmptyStr</span> <span class="o">=</span> <span class="s1">&#39;sonarr-tv&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.HadoukenDownloadClient.category" class="headerlink" title="Permanent link">#</a></h5>
@@ -3036,12 +3284,12 @@ Using a category is optional, but strongly recommended.</p>
 <div class="doc doc-object doc-class">
 
 
+
 <a id="buildarr_sonarr.config.download_clients.download_clients.QbittorrentDownloadClient"></a>
   <div class="doc doc-contents first">
 
   
       <p>qBittorrent download client.</p>
-
 
 
   
@@ -3058,11 +3306,13 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.type" class="doc doc-heading">
-<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;qbittorrent&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;qbittorrent&#39;</span></code>
+          <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;qbittorrent&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;qbittorrent&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.type" class="headerlink" title="Permanent link">#</a></h5>
@@ -3079,11 +3329,12 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.host" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+          <code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.host" class="headerlink" title="Permanent link">#</a></h5>
@@ -3100,11 +3351,13 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.port" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">8080</span></code>
+          <code class="highlight language-python"><span class="n">port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">8080</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.port" class="headerlink" title="Permanent link">#</a></h5>
@@ -3121,11 +3374,13 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.use_ssl" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+          <code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.use_ssl" class="headerlink" title="Permanent link">#</a></h5>
@@ -3142,11 +3397,13 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.url_base" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">url_base</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+          <code class="highlight language-python"><span class="n">url_base</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.url_base" class="headerlink" title="Permanent link">#</a></h5>
@@ -3163,11 +3420,12 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.username" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+          <code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.username" class="headerlink" title="Permanent link">#</a></h5>
@@ -3184,11 +3442,12 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.password" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">password</span><span class="p">:</span> <span class="n">Password</span></code>
+          <code class="highlight language-python"><span class="n">password</span><span class="p">:</span> <span class="n">Password</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.password" class="headerlink" title="Permanent link">#</a></h5>
@@ -3205,11 +3464,13 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.category" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;tv-sonarr&#39;</span></code>
+          <code class="highlight language-python"><span class="n">category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;tv-sonarr&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.category" class="headerlink" title="Permanent link">#</a></h5>
@@ -3228,11 +3489,13 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.postimport_category" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">postimport_category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+          <code class="highlight language-python"><span class="n">postimport_category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.postimport_category" class="headerlink" title="Permanent link">#</a></h5>
@@ -3251,11 +3514,13 @@ Leave blank, set to <code>null</code> or undefined to keep the same category.</p
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.recent_priority" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">recent_priority</span><span class="p">:</span> <span class="n">QbittorrentPriority</span> <span class="o">=</span> <span class="n">QbittorrentPriority</span><span class="o">.</span><span class="n">last</span></code>
+          <code class="highlight language-python"><span class="n">recent_priority</span><span class="p">:</span> <span class="n">QbittorrentPriority</span> <span class="o">=</span> <span class="n">QbittorrentPriority</span><span class="o">.</span><span class="n">last</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.recent_priority" class="headerlink" title="Permanent link">#</a></h5>
@@ -3277,11 +3542,13 @@ Leave blank, set to <code>null</code> or undefined to keep the same category.</p
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.older_priority" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">older_priority</span><span class="p">:</span> <span class="n">QbittorrentPriority</span> <span class="o">=</span> <span class="n">QbittorrentPriority</span><span class="o">.</span><span class="n">last</span></code>
+          <code class="highlight language-python"><span class="n">older_priority</span><span class="p">:</span> <span class="n">QbittorrentPriority</span> <span class="o">=</span> <span class="n">QbittorrentPriority</span><span class="o">.</span><span class="n">last</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.older_priority" class="headerlink" title="Permanent link">#</a></h5>
@@ -3303,11 +3570,13 @@ Leave blank, set to <code>null</code> or undefined to keep the same category.</p
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.initial_state" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">initial_state</span><span class="p">:</span> <span class="n">QbittorrentState</span> <span class="o">=</span> <span class="n">QbittorrentState</span><span class="o">.</span><span class="n">start</span></code>
+          <code class="highlight language-python"><span class="n">initial_state</span><span class="p">:</span> <span class="n">QbittorrentState</span> <span class="o">=</span> <span class="n">QbittorrentState</span><span class="o">.</span><span class="n">start</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.initial_state" class="headerlink" title="Permanent link">#</a></h5>
@@ -3325,11 +3594,13 @@ Leave blank, set to <code>null</code> or undefined to keep the same category.</p
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.sequential_order" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">sequential_order</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+          <code class="highlight language-python"><span class="n">sequential_order</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.sequential_order" class="headerlink" title="Permanent link">#</a></h5>
@@ -3347,11 +3618,13 @@ Leave blank, set to <code>null</code> or undefined to keep the same category.</p
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.first_and_last_first" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">first_and_last_first</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+          <code class="highlight language-python"><span class="n">first_and_last_first</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.first_and_last_first" class="headerlink" title="Permanent link">#</a></h5>
@@ -3379,12 +3652,12 @@ Leave blank, set to <code>null</code> or undefined to keep the same category.</p
 <div class="doc doc-object doc-class">
 
 
+
 <a id="buildarr_sonarr.config.download_clients.download_clients.RtorrentDownloadClient"></a>
   <div class="doc doc-contents first">
 
   
       <p>RTorrent (ruTorrent) download client.</p>
-
 
 
   
@@ -3401,11 +3674,13 @@ Leave blank, set to <code>null</code> or undefined to keep the same category.</p
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.RtorrentDownloadClient.type" class="doc doc-heading">
-<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;rtorrent&#39;</span><span class="p">,</span> <span class="s1">&#39;rutorrent&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;rtorrent&#39;</span></code>
+          <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;rtorrent&#39;</span><span class="p">,</span> <span class="s1">&#39;rutorrent&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;rtorrent&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.RtorrentDownloadClient.type" class="headerlink" title="Permanent link">#</a></h5>
@@ -3422,11 +3697,12 @@ Leave blank, set to <code>null</code> or undefined to keep the same category.</p
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.RtorrentDownloadClient.host" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+          <code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.RtorrentDownloadClient.host" class="headerlink" title="Permanent link">#</a></h5>
@@ -3443,11 +3719,13 @@ Leave blank, set to <code>null</code> or undefined to keep the same category.</p
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.RtorrentDownloadClient.port" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">8080</span></code>
+          <code class="highlight language-python"><span class="n">port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">8080</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.RtorrentDownloadClient.port" class="headerlink" title="Permanent link">#</a></h5>
@@ -3464,11 +3742,13 @@ Leave blank, set to <code>null</code> or undefined to keep the same category.</p
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.RtorrentDownloadClient.use_ssl" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+          <code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.RtorrentDownloadClient.use_ssl" class="headerlink" title="Permanent link">#</a></h5>
@@ -3485,11 +3765,13 @@ Leave blank, set to <code>null</code> or undefined to keep the same category.</p
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.RtorrentDownloadClient.url_base" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">url_base</span><span class="p">:</span> <span class="n">NonEmptyStr</span> <span class="o">=</span> <span class="s1">&#39;RPC2&#39;</span></code>
+          <code class="highlight language-python"><span class="n">url_base</span><span class="p">:</span> <span class="n">NonEmptyStr</span> <span class="o">=</span> <span class="s1">&#39;RPC2&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.RtorrentDownloadClient.url_base" class="headerlink" title="Permanent link">#</a></h5>
@@ -3507,11 +3789,12 @@ Leave blank, set to <code>null</code> or undefined to keep the same category.</p
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.RtorrentDownloadClient.username" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+          <code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.RtorrentDownloadClient.username" class="headerlink" title="Permanent link">#</a></h5>
@@ -3528,11 +3811,12 @@ Leave blank, set to <code>null</code> or undefined to keep the same category.</p
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.RtorrentDownloadClient.password" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">password</span><span class="p">:</span> <span class="n">Password</span></code>
+          <code class="highlight language-python"><span class="n">password</span><span class="p">:</span> <span class="n">Password</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.RtorrentDownloadClient.password" class="headerlink" title="Permanent link">#</a></h5>
@@ -3549,11 +3833,13 @@ Leave blank, set to <code>null</code> or undefined to keep the same category.</p
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.RtorrentDownloadClient.category" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;tv-sonarr&#39;</span></code>
+          <code class="highlight language-python"><span class="n">category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;tv-sonarr&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.RtorrentDownloadClient.category" class="headerlink" title="Permanent link">#</a></h5>
@@ -3572,11 +3858,13 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.RtorrentDownloadClient.postimport_category" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">postimport_category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+          <code class="highlight language-python"><span class="n">postimport_category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.RtorrentDownloadClient.postimport_category" class="headerlink" title="Permanent link">#</a></h5>
@@ -3595,11 +3883,13 @@ Leave blank, set to <code>null</code> or undefined to keep the same category.</p
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.RtorrentDownloadClient.recent_priority" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">recent_priority</span><span class="p">:</span> <span class="n">RtorrentPriority</span> <span class="o">=</span> <span class="n">RtorrentPriority</span><span class="o">.</span><span class="n">normal</span></code>
+          <code class="highlight language-python"><span class="n">recent_priority</span><span class="p">:</span> <span class="n">RtorrentPriority</span> <span class="o">=</span> <span class="n">RtorrentPriority</span><span class="o">.</span><span class="n">normal</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.RtorrentDownloadClient.recent_priority" class="headerlink" title="Permanent link">#</a></h5>
@@ -3623,11 +3913,13 @@ Leave blank, set to <code>null</code> or undefined to keep the same category.</p
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.RtorrentDownloadClient.older_priority" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">older_priority</span><span class="p">:</span> <span class="n">RtorrentPriority</span> <span class="o">=</span> <span class="n">RtorrentPriority</span><span class="o">.</span><span class="n">normal</span></code>
+          <code class="highlight language-python"><span class="n">older_priority</span><span class="p">:</span> <span class="n">RtorrentPriority</span> <span class="o">=</span> <span class="n">RtorrentPriority</span><span class="o">.</span><span class="n">normal</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.RtorrentDownloadClient.older_priority" class="headerlink" title="Permanent link">#</a></h5>
@@ -3651,11 +3943,13 @@ Leave blank, set to <code>null</code> or undefined to keep the same category.</p
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.RtorrentDownloadClient.add_stopped" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">add_stopped</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+          <code class="highlight language-python"><span class="n">add_stopped</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.RtorrentDownloadClient.add_stopped" class="headerlink" title="Permanent link">#</a></h5>
@@ -3683,12 +3977,12 @@ Leave blank, set to <code>null</code> or undefined to keep the same category.</p
 <div class="doc doc-object doc-class">
 
 
+
 <a id="buildarr_sonarr.config.download_clients.download_clients.TorrentBlackholeDownloadClient"></a>
   <div class="doc doc-contents first">
 
   
       <p>Torrent Blackhole download client.</p>
-
 
 
   
@@ -3705,11 +3999,13 @@ Leave blank, set to <code>null</code> or undefined to keep the same category.</p
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.TorrentBlackholeDownloadClient.type" class="doc doc-heading">
-<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;torrent-blackhole&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;torrent-blackhole&#39;</span></code>
+          <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;torrent-blackhole&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;torrent-blackhole&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.TorrentBlackholeDownloadClient.type" class="headerlink" title="Permanent link">#</a></h5>
@@ -3726,11 +4022,12 @@ Leave blank, set to <code>null</code> or undefined to keep the same category.</p
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.TorrentBlackholeDownloadClient.torrent_folder" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">torrent_folder</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+          <code class="highlight language-python"><span class="n">torrent_folder</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.TorrentBlackholeDownloadClient.torrent_folder" class="headerlink" title="Permanent link">#</a></h5>
@@ -3747,11 +4044,12 @@ Leave blank, set to <code>null</code> or undefined to keep the same category.</p
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.TorrentBlackholeDownloadClient.watch_folder" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">watch_folder</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+          <code class="highlight language-python"><span class="n">watch_folder</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.TorrentBlackholeDownloadClient.watch_folder" class="headerlink" title="Permanent link">#</a></h5>
@@ -3768,11 +4066,13 @@ Leave blank, set to <code>null</code> or undefined to keep the same category.</p
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.TorrentBlackholeDownloadClient.save_magnet_files" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">save_magnet_files</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+          <code class="highlight language-python"><span class="n">save_magnet_files</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.TorrentBlackholeDownloadClient.save_magnet_files" class="headerlink" title="Permanent link">#</a></h5>
@@ -3790,11 +4090,13 @@ Leave blank, set to <code>null</code> or undefined to keep the same category.</p
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.TorrentBlackholeDownloadClient.magnet_file_extension" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">magnet_file_extension</span><span class="p">:</span> <span class="n">NonEmptyStr</span> <span class="o">=</span> <span class="s1">&#39;.magnet&#39;</span></code>
+          <code class="highlight language-python"><span class="n">magnet_file_extension</span><span class="p">:</span> <span class="n">NonEmptyStr</span> <span class="o">=</span> <span class="s1">&#39;.magnet&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.TorrentBlackholeDownloadClient.magnet_file_extension" class="headerlink" title="Permanent link">#</a></h5>
@@ -3811,11 +4113,13 @@ Leave blank, set to <code>null</code> or undefined to keep the same category.</p
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.TorrentBlackholeDownloadClient.read_only" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">read_only</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
+          <code class="highlight language-python"><span class="n">read_only</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.TorrentBlackholeDownloadClient.read_only" class="headerlink" title="Permanent link">#</a></h5>
@@ -3846,12 +4150,12 @@ Leave blank, set to <code>null</code> or undefined to keep the same category.</p
 <div class="doc doc-object doc-class">
 
 
+
 <a id="buildarr_sonarr.config.download_clients.download_clients.TransmissionDownloadClientBase"></a>
   <div class="doc doc-contents first">
 
   
       <p>Configuration options common to both Transmission and Vuze download clients:</p>
-
 
 
   
@@ -3868,11 +4172,12 @@ Leave blank, set to <code>null</code> or undefined to keep the same category.</p
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.TransmissionDownloadClientBase.host" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+          <code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.TransmissionDownloadClientBase.host" class="headerlink" title="Permanent link">#</a></h5>
@@ -3889,11 +4194,13 @@ Leave blank, set to <code>null</code> or undefined to keep the same category.</p
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.TransmissionDownloadClientBase.port" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">9091</span></code>
+          <code class="highlight language-python"><span class="n">port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">9091</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.TransmissionDownloadClientBase.port" class="headerlink" title="Permanent link">#</a></h5>
@@ -3910,11 +4217,13 @@ Leave blank, set to <code>null</code> or undefined to keep the same category.</p
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.TransmissionDownloadClientBase.use_ssl" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+          <code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.TransmissionDownloadClientBase.use_ssl" class="headerlink" title="Permanent link">#</a></h5>
@@ -3931,11 +4240,13 @@ Leave blank, set to <code>null</code> or undefined to keep the same category.</p
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.TransmissionDownloadClientBase.url_base" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">url_base</span><span class="p">:</span> <span class="n">NonEmptyStr</span> <span class="o">=</span> <span class="s1">&#39;/transmission/&#39;</span></code>
+          <code class="highlight language-python"><span class="n">url_base</span><span class="p">:</span> <span class="n">NonEmptyStr</span> <span class="o">=</span> <span class="s1">&#39;/transmission/&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.TransmissionDownloadClientBase.url_base" class="headerlink" title="Permanent link">#</a></h5>
@@ -3953,11 +4264,13 @@ Leave blank, set to <code>null</code> or undefined to keep the same category.</p
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.TransmissionDownloadClientBase.username" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+          <code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.TransmissionDownloadClientBase.username" class="headerlink" title="Permanent link">#</a></h5>
@@ -3974,11 +4287,13 @@ Leave blank, set to <code>null</code> or undefined to keep the same category.</p
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.TransmissionDownloadClientBase.password" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">password</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Password</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+          <code class="highlight language-python"><span class="n">password</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Password</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.TransmissionDownloadClientBase.password" class="headerlink" title="Permanent link">#</a></h5>
@@ -3995,11 +4310,13 @@ Leave blank, set to <code>null</code> or undefined to keep the same category.</p
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.TransmissionDownloadClientBase.category" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+          <code class="highlight language-python"><span class="n">category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.TransmissionDownloadClientBase.category" class="headerlink" title="Permanent link">#</a></h5>
@@ -4020,11 +4337,13 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.TransmissionDownloadClientBase.directory" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">directory</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+          <code class="highlight language-python"><span class="n">directory</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.TransmissionDownloadClientBase.directory" class="headerlink" title="Permanent link">#</a></h5>
@@ -4043,11 +4362,13 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.TransmissionDownloadClientBase.recent_priority" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">recent_priority</span><span class="p">:</span> <span class="n">TransmissionPriority</span> <span class="o">=</span> <span class="n">TransmissionPriority</span><span class="o">.</span><span class="n">last</span></code>
+          <code class="highlight language-python"><span class="n">recent_priority</span><span class="p">:</span> <span class="n">TransmissionPriority</span> <span class="o">=</span> <span class="n">TransmissionPriority</span><span class="o">.</span><span class="n">last</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.TransmissionDownloadClientBase.recent_priority" class="headerlink" title="Permanent link">#</a></h5>
@@ -4069,11 +4390,13 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.TransmissionDownloadClientBase.older_priority" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">older_priority</span><span class="p">:</span> <span class="n">TransmissionPriority</span> <span class="o">=</span> <span class="n">TransmissionPriority</span><span class="o">.</span><span class="n">last</span></code>
+          <code class="highlight language-python"><span class="n">older_priority</span><span class="p">:</span> <span class="n">TransmissionPriority</span> <span class="o">=</span> <span class="n">TransmissionPriority</span><span class="o">.</span><span class="n">last</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.TransmissionDownloadClientBase.older_priority" class="headerlink" title="Permanent link">#</a></h5>
@@ -4095,11 +4418,13 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.TransmissionDownloadClientBase.add_paused" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">add_paused</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+          <code class="highlight language-python"><span class="n">add_paused</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.TransmissionDownloadClientBase.add_paused" class="headerlink" title="Permanent link">#</a></h5>
@@ -4126,12 +4451,12 @@ Using a category is optional, but strongly recommended.</p>
 <div class="doc doc-object doc-class">
 
 
+
 <a id="buildarr_sonarr.config.download_clients.download_clients.UtorrentDownloadClient"></a>
   <div class="doc doc-contents first">
 
   
       <p>uTorrent download client.</p>
-
 
 
   
@@ -4148,11 +4473,13 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.UtorrentDownloadClient.type" class="doc doc-heading">
-<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;utorrent&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;utorrent&#39;</span></code>
+          <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;utorrent&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;utorrent&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.UtorrentDownloadClient.type" class="headerlink" title="Permanent link">#</a></h5>
@@ -4169,11 +4496,12 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.UtorrentDownloadClient.host" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+          <code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.UtorrentDownloadClient.host" class="headerlink" title="Permanent link">#</a></h5>
@@ -4190,11 +4518,13 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.UtorrentDownloadClient.port" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">8080</span></code>
+          <code class="highlight language-python"><span class="n">port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">8080</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.UtorrentDownloadClient.port" class="headerlink" title="Permanent link">#</a></h5>
@@ -4211,11 +4541,13 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.UtorrentDownloadClient.use_ssl" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+          <code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.UtorrentDownloadClient.use_ssl" class="headerlink" title="Permanent link">#</a></h5>
@@ -4232,11 +4564,13 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.UtorrentDownloadClient.url_base" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">url_base</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+          <code class="highlight language-python"><span class="n">url_base</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.UtorrentDownloadClient.url_base" class="headerlink" title="Permanent link">#</a></h5>
@@ -4253,11 +4587,12 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.UtorrentDownloadClient.username" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+          <code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.UtorrentDownloadClient.username" class="headerlink" title="Permanent link">#</a></h5>
@@ -4274,11 +4609,12 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.UtorrentDownloadClient.password" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">password</span><span class="p">:</span> <span class="n">Password</span></code>
+          <code class="highlight language-python"><span class="n">password</span><span class="p">:</span> <span class="n">Password</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.UtorrentDownloadClient.password" class="headerlink" title="Permanent link">#</a></h5>
@@ -4295,11 +4631,13 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.UtorrentDownloadClient.category" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;tv-sonarr&#39;</span></code>
+          <code class="highlight language-python"><span class="n">category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;tv-sonarr&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.UtorrentDownloadClient.category" class="headerlink" title="Permanent link">#</a></h5>
@@ -4318,11 +4656,13 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.UtorrentDownloadClient.postimport_category" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">postimport_category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+          <code class="highlight language-python"><span class="n">postimport_category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.UtorrentDownloadClient.postimport_category" class="headerlink" title="Permanent link">#</a></h5>
@@ -4341,11 +4681,13 @@ Leave blank, set to <code>null</code> or undefined to keep the same category.</p
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.UtorrentDownloadClient.recent_priority" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">recent_priority</span><span class="p">:</span> <span class="n">UtorrentPriority</span> <span class="o">=</span> <span class="n">UtorrentPriority</span><span class="o">.</span><span class="n">last</span></code>
+          <code class="highlight language-python"><span class="n">recent_priority</span><span class="p">:</span> <span class="n">UtorrentPriority</span> <span class="o">=</span> <span class="n">UtorrentPriority</span><span class="o">.</span><span class="n">last</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.UtorrentDownloadClient.recent_priority" class="headerlink" title="Permanent link">#</a></h5>
@@ -4367,11 +4709,13 @@ Leave blank, set to <code>null</code> or undefined to keep the same category.</p
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.UtorrentDownloadClient.older_priority" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">older_priority</span><span class="p">:</span> <span class="n">UtorrentPriority</span> <span class="o">=</span> <span class="n">UtorrentPriority</span><span class="o">.</span><span class="n">last</span></code>
+          <code class="highlight language-python"><span class="n">older_priority</span><span class="p">:</span> <span class="n">UtorrentPriority</span> <span class="o">=</span> <span class="n">UtorrentPriority</span><span class="o">.</span><span class="n">last</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.UtorrentDownloadClient.older_priority" class="headerlink" title="Permanent link">#</a></h5>
@@ -4393,11 +4737,13 @@ Leave blank, set to <code>null</code> or undefined to keep the same category.</p
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.UtorrentDownloadClient.initial_state" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">initial_state</span><span class="p">:</span> <span class="n">UtorrentState</span> <span class="o">=</span> <span class="n">UtorrentState</span><span class="o">.</span><span class="n">start</span></code>
+          <code class="highlight language-python"><span class="n">initial_state</span><span class="p">:</span> <span class="n">UtorrentState</span> <span class="o">=</span> <span class="n">UtorrentState</span><span class="o">.</span><span class="n">start</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.download_clients.UtorrentDownloadClient.initial_state" class="headerlink" title="Permanent link">#</a></h5>
@@ -4422,6 +4768,7 @@ Leave blank, set to <code>null</code> or undefined to keep the same category.</p
 
 
 <div class="doc doc-object doc-class">
+
 
 
 <a id="buildarr_sonarr.config.download_clients.remote_path_mappings.SonarrRemotePathMappingsSettingsConfig"></a>
@@ -4455,7 +4802,6 @@ TRaSH-Guides provides an
 that explains what they are for, and how to use them.</p>
 
 
-
   
 
   <div class="doc doc-children">
@@ -4470,11 +4816,13 @@ that explains what they are for, and how to use them.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.remote_path_mappings.SonarrRemotePathMappingsSettingsConfig.delete_unmanaged" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">delete_unmanaged</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+          <code class="highlight language-python"><span class="n">delete_unmanaged</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.remote_path_mappings.SonarrRemotePathMappingsSettingsConfig.delete_unmanaged" class="headerlink" title="Permanent link">#</a></h5>
@@ -4493,11 +4841,13 @@ Sonarr instance. Think carefully before you enable this option.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.remote_path_mappings.SonarrRemotePathMappingsSettingsConfig.definitions" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">definitions</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">RemotePathMapping</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span></code>
+          <code class="highlight language-python"><span class="n">definitions</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">RemotePathMapping</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.remote_path_mappings.SonarrRemotePathMappingsSettingsConfig.definitions" class="headerlink" title="Permanent link">#</a></h5>
@@ -4524,6 +4874,7 @@ Sonarr instance. Think carefully before you enable this option.</p>
 <div class="doc doc-object doc-class">
 
 
+
 <a id="buildarr_sonarr.config.download_clients.remote_path_mappings.RemotePathMapping"></a>
   <div class="doc doc-contents first">
 
@@ -4532,7 +4883,6 @@ Sonarr instance. Think carefully before you enable this option.</p>
 <p>They can be configured with a desired <code>ensure</code> state, however, which
 Buildarr uses to control whether to create or delete the remote path mapping.
 Ensure this value is set appropriately.</p>
-
 
 
   
@@ -4549,11 +4899,12 @@ Ensure this value is set appropriately.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.remote_path_mappings.RemotePathMapping.host" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+          <code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.remote_path_mappings.RemotePathMapping.host" class="headerlink" title="Permanent link">#</a></h5>
@@ -4570,11 +4921,12 @@ Ensure this value is set appropriately.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.remote_path_mappings.RemotePathMapping.remote_path" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">remote_path</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+          <code class="highlight language-python"><span class="n">remote_path</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.remote_path_mappings.RemotePathMapping.remote_path" class="headerlink" title="Permanent link">#</a></h5>
@@ -4591,11 +4943,12 @@ Ensure this value is set appropriately.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.remote_path_mappings.RemotePathMapping.local_path" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">local_path</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+          <code class="highlight language-python"><span class="n">local_path</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.remote_path_mappings.RemotePathMapping.local_path" class="headerlink" title="Permanent link">#</a></h5>
@@ -4612,11 +4965,13 @@ Ensure this value is set appropriately.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.download_clients.remote_path_mappings.RemotePathMapping.ensure" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">ensure</span><span class="p">:</span> <span class="n">Ensure</span> <span class="o">=</span> <span class="n">Ensure</span><span class="o">.</span><span class="n">present</span></code>
+          <code class="highlight language-python"><span class="n">ensure</span><span class="p">:</span> <span class="n">Ensure</span> <span class="o">=</span> <span class="n">Ensure</span><span class="o">.</span><span class="n">present</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.download_clients.remote_path_mappings.RemotePathMapping.ensure" class="headerlink" title="Permanent link">#</a></h5>
@@ -4649,12 +5004,14 @@ for all remote path mappings.</p>
             <hr>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
+        <script src="../../../../js/jquery-3.6.0.min.js"></script>
+        <script src="../../../../js/bootstrap.min.js"></script>
         <script>
             var base_url = "../../../..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="../../../../js/base.js" defer></script>
-        <script src="../../../../search/main.js" defer></script>
+        <script src="../../../../js/base.js"></script>
+        <script src="../../../../search/main.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">

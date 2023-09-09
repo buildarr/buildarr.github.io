@@ -1,0 +1,2597 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../../../img/favicon.ico">
+        <title>Custom Formats - Buildarr</title>
+        <link href="../../../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <link href="../../../../../assets/_mkdocstrings.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../../../..">Buildarr</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Release Notes <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../../../release-notes/" class="dropdown-item">Buildarr Core</a>
+</li>
+                                    
+<li>
+    <a href="../../../../sonarr/release-notes/" class="dropdown-item">Buildarr Sonarr Plugin</a>
+</li>
+                                    
+<li>
+    <a href="../../../release-notes/" class="dropdown-item">Buildarr Radarr Plugin</a>
+</li>
+                                    
+<li>
+    <a href="../../../../prowlarr/release-notes/" class="dropdown-item">Buildarr Prowlarr Plugin</a>
+</li>
+                                    
+<li>
+    <a href="../../../../jellyseerr/release-notes/" class="dropdown-item">Buildarr Jellyseerr Plugin</a>
+</li>
+                                    
+<li>
+    <a href="../../../../../docker/release-notes/" class="dropdown-item">Buildarr Docker Container</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../../installation/" class="nav-link">Installation</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../../configuration/" class="nav-link">Configuration</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Plugins <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../../" class="dropdown-item">Introduction</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Buildarr Sonarr Plugin</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../sonarr/" class="dropdown-item">Introduction</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/release-notes/" class="dropdown-item">Release Notes</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Configuration</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../sonarr/configuration/host/" class="dropdown-item">Host Configuration</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/media-management/" class="dropdown-item">Media Management</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Profiles</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../sonarr/configuration/profiles/quality/" class="dropdown-item">Quality Profiles</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/profiles/language/" class="dropdown-item">Language Profiles</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/profiles/delay/" class="dropdown-item">Delay Profiles</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/profiles/release/" class="dropdown-item">Release Profiles</a>
+</li>
+    </ul>
+  </li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/quality/" class="dropdown-item">Quality</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/indexers/" class="dropdown-item">Indexers</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/download-clients/" class="dropdown-item">Download Clients</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/import-lists/" class="dropdown-item">Import Lists</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/connect/" class="dropdown-item">Connect</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/metadata/" class="dropdown-item">Metadata</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/tags/" class="dropdown-item">Tags</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/general/" class="dropdown-item">General</a>
+</li>
+            
+<li>
+    <a href="../../../../sonarr/configuration/ui/" class="dropdown-item">UI</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Buildarr Radarr Plugin</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../" class="dropdown-item">Introduction</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Configuration</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../host/" class="dropdown-item">Host Configuration</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Settings</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../media-management/" class="dropdown-item">Media Management</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Profiles</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../profiles/quality-profiles/" class="dropdown-item">Quality Profiles</a>
+</li>
+            
+<li>
+    <a href="../profiles/delay-profiles/" class="dropdown-item">Delay Profiles</a>
+</li>
+    </ul>
+  </li>
+            
+<li>
+    <a href="../quality/" class="dropdown-item">Quality</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active">Custom Formats</a>
+</li>
+            
+<li>
+    <a href="../indexers/" class="dropdown-item">Indexers</a>
+</li>
+            
+<li>
+    <a href="../download-clients/" class="dropdown-item">Download Clients</a>
+</li>
+            
+<li>
+    <a href="../notifications/" class="dropdown-item">Notifications (Connect)</a>
+</li>
+            
+<li>
+    <a href="../metadata/" class="dropdown-item">Metadata</a>
+</li>
+            
+<li>
+    <a href="../tags/" class="dropdown-item">Tags</a>
+</li>
+            
+<li>
+    <a href="../general/" class="dropdown-item">General</a>
+</li>
+            
+<li>
+    <a href="../ui/" class="dropdown-item">UI</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Buildarr Prowlarr Plugin</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../prowlarr/" class="dropdown-item">Introduction</a>
+</li>
+            
+<li>
+    <a href="../../../../prowlarr/release-notes/" class="dropdown-item">Release Notes</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Configuration</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../prowlarr/configuration/host/" class="dropdown-item">Host Configuration</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Settings</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Indexers</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../prowlarr/configuration/settings/indexers/indexers/" class="dropdown-item">Indexers</a>
+</li>
+            
+<li>
+    <a href="../../../../prowlarr/configuration/settings/indexers/proxies/" class="dropdown-item">Proxies</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Apps</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../prowlarr/configuration/settings/apps/applications/" class="dropdown-item">Applications</a>
+</li>
+            
+<li>
+    <a href="../../../../prowlarr/configuration/settings/apps/sync-profiles/" class="dropdown-item">Sync Profiles</a>
+</li>
+    </ul>
+  </li>
+            
+<li>
+    <a href="../../../../prowlarr/configuration/settings/download-clients/" class="dropdown-item">Download Clients</a>
+</li>
+            
+<li>
+    <a href="../../../../prowlarr/configuration/settings/notifications/" class="dropdown-item">Notifications</a>
+</li>
+            
+<li>
+    <a href="../../../../prowlarr/configuration/settings/tags/" class="dropdown-item">Tags</a>
+</li>
+            
+<li>
+    <a href="../../../../prowlarr/configuration/settings/general/" class="dropdown-item">General</a>
+</li>
+            
+<li>
+    <a href="../../../../prowlarr/configuration/settings/ui/" class="dropdown-item">UI</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Buildarr Jellyseerr Plugin</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../jellyseerr/" class="dropdown-item">Introduction</a>
+</li>
+            
+<li>
+    <a href="../../../../jellyseerr/release-notes/" class="dropdown-item">Release Notes</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Configuration</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../jellyseerr/configuration/host/" class="dropdown-item">Host Configuration</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Settings</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../jellyseerr/configuration/settings/general/" class="dropdown-item">General</a>
+</li>
+            
+<li>
+    <a href="../../../../jellyseerr/configuration/settings/users/" class="dropdown-item">Users</a>
+</li>
+            
+<li>
+    <a href="../../../../jellyseerr/configuration/settings/jellyfin/" class="dropdown-item">Jellyfin</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Services</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../jellyseerr/configuration/settings/services/sonarr/" class="dropdown-item">Sonarr</a>
+</li>
+            
+<li>
+    <a href="../../../../jellyseerr/configuration/settings/services/radarr/" class="dropdown-item">Radarr</a>
+</li>
+    </ul>
+  </li>
+            
+<li>
+    <a href="../../../../jellyseerr/configuration/settings/notifications/" class="dropdown-item">Notifications</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../../usage/" class="nav-link">Usage</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="https://github.com/buildarr/buildarr" class="nav-link">GitHub</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../quality/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../indexers/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#custom-formats" class="nav-link">Custom Formats</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#quality-profiles" class="nav-link">Quality Profiles</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#importing-from-trash-guides" class="nav-link">Importing from TRaSH-Guides</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#manual-definitions" class="nav-link">Manual Definitions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#edition" class="nav-link">Edition</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#indexer-flag" class="nav-link">Indexer Flag</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#language" class="nav-link">Language</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#quality-modifier" class="nav-link">Quality Modifier</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#release-group" class="nav-link">Release Group</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#release-title" class="nav-link">Release Title</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#resolution" class="nav-link">Resolution</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#size" class="nav-link">Size</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#source" class="nav-link">Source</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="custom-formats">Custom Formats<a class="headerlink" href="#custom-formats" title="Permanent link">#</a></h1>
+<p>Custom formats are the primary method for controlling how releases are selected and prioritised in Radarr.</p>
+<p>Criteria can be something as simple as a single preferred word, or as complex as multiple regular expressions
+matching for a variety of complementing media attributes, and in any case, Radarr allows you to flexibly determine
+how releases should be picked when managing movies.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For more information on how to use custom formats in Radarr, refer to
+<a href="https://trash-guides.info/Radarr/radarr-setup-quality-profiles">How to setup Quality Profiles</a>.</p>
+</div>
+<p>In Buildarr, custom formats can be configured using two different methods:
+<a href="#importing-from-trash-guides">importing from TRaSH-Guides</a>, or <a href="#manual-definitions">manually definitions</a>.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">radarr</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">settings</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">custom_formats</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">delete_unmanaged</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="nt">definitions</span><span class="p">:</span>
+<span class="w">        </span><span class="c1"># Import custom formats from TRaSH-Guides.</span>
+<span class="w">        </span><span class="nt">remaster</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">trash_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">570bc9ebecd92723d2d21500f4be314c</span>
+<span class="w">          </span><span class="c1"># `default_score` is 25, as set in the TRaSH-Guides custom format.</span>
+<span class="w">        </span><span class="nt">4k-remaster</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">trash_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">eca37840c13c6ef2dd0262b141a5482f</span>
+<span class="w">          </span><span class="nt">default_score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">26</span><span class="w">  </span><span class="c1"># Override default score from TRaSH-Guides custom format.</span>
+<span class="w">        </span><span class="c1"># Manually define custom formats.</span>
+<span class="w">        </span><span class="nt">br-disk</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">default_score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-10000</span>
+<span class="w">          </span><span class="nt">conditions</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">br-disk</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">quality-modifier</span>
+<span class="w">              </span><span class="nt">modifier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BRDISK</span>
+<span class="w">              </span><span class="nt">negate</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">              </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">        </span><span class="nt">3d</span><span class="p">:</span>
+<span class="w">          </span><span class="c1"># No `default_score` defined on manually defined custom format: default to 0.</span>
+<span class="w">          </span><span class="nt">conditions</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">bluray-3d</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">release-title</span>
+<span class="w">              </span><span class="nt">regex</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;\\b(BluRay3D)\\b&#39;</span>
+<span class="w">              </span><span class="nt">negate</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">              </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+</code></pre></div>
+<p>The following attributes determine how custom formats are managed by Buildarr.</p>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.custom_formats.RadarrCustomFormatsSettings"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.custom_formats.RadarrCustomFormatsSettings.delete_unmanaged" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">delete_unmanaged</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.custom_formats.RadarrCustomFormatsSettings.delete_unmanaged" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Automatically delete custom formats not defined in Buildarr.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.custom_formats.RadarrCustomFormatsSettings.definitions" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">definitions</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">CustomFormat</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.custom_formats.RadarrCustomFormatsSettings.definitions" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Define download clients under this attribute.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="quality-profiles">Quality Profiles<a class="headerlink" href="#quality-profiles" title="Permanent link">#</a></h2>
+<p>When using custom formats in quality profiles, they are assigned a score value to configure how releases are prioritised.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">radarr</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">settings</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">profiles</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">quality_profiles</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">definitions</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">HD</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">upgrades_allowed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">            </span><span class="nt">upgrade_until_quality</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bluray-1080p</span>
+<span class="w">            </span><span class="nt">qualities</span><span class="p">:</span>
+<span class="w">              </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bluray-1080p</span>
+<span class="w">              </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">WEB 1080p</span>
+<span class="w">                </span><span class="nt">members</span><span class="p">:</span>
+<span class="w">                  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">WEBDL-1080p</span>
+<span class="w">                  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">WEBRip-1080p</span>
+<span class="w">            </span><span class="nt">minimum_custom_format_score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">            </span><span class="nt">upgrade_until_custom_format_score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10000</span>
+<span class="w">            </span><span class="nt">custom_formats</span><span class="p">:</span>
+<span class="w">              </span><span class="c1"># Wanted</span>
+<span class="w">              </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">remaster</span><span class="w">  </span><span class="c1"># No `score` defined: Use `default_score` from the custom format.</span>
+<span class="w">              </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4k-remaster</span>
+<span class="w">              </span><span class="c1"># Unwanted</span>
+<span class="w">              </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">br-disk</span>
+<span class="w">              </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3d</span>
+<span class="w">                </span><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-10000</span><span class="w">  </span><span class="c1"># Inverse of maximum allowed score, to ensure it is never selected.</span>
+<span class="w">            </span><span class="nt">language</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">english</span>
+</code></pre></div>
+<p>For more information on how to use custom formats to filter and prioritise media in Buildarr,
+check the <a href="../profiles/quality-profiles/#custom-formats">Quality Profiles</a> documentation.</p>
+<h2 id="importing-from-trash-guides">Importing from TRaSH-Guides<a class="headerlink" href="#importing-from-trash-guides" title="Permanent link">#</a></h2>
+<p>TRaSH-Guides contains a large collection of pre-made
+<a href="https://trash-guides.info/Radarr/Radarr-collection-of-custom-formats">custom formats</a>,
+to make it easier for new users to get started with configuring Radarr correctly.</p>
+<p>Buildarr makes it even easier by providing a convenient way to automatically
+import these custom formats, using the <code>trash_id</code> attribute.</p>
+<p>Simply create a custom format with any desired name, set the corresponding <code>trash_id</code> attribute,
+and Buildarr will take care of everything.</p>
+<p>Using Buildarr daemon, these custom formats are also kept automatically up to date
+whenever they are changed in the guides, eliminating the need to manually check
+and update your configuration.</p>
+<div class="highlight"><pre><span></span><code><span class="nn">...</span>
+<span class="w">  </span><span class="nt">custom_formats</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">delete_unmanaged</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">definitions</span><span class="p">:</span>
+<span class="w">      </span><span class="c1"># Import custom formats from TRaSH-Guides.</span>
+<span class="w">      </span><span class="nt">remaster</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">trash_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">570bc9ebecd92723d2d21500f4be314c</span>
+<span class="w">        </span><span class="c1"># `default_score` is 25, as set in the TRaSH-Guides custom format.</span>
+<span class="w">      </span><span class="nt">4k-remaster</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">trash_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">eca37840c13c6ef2dd0262b141a5482f</span>
+<span class="w">        </span><span class="nt">default_score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">26</span><span class="w">  </span><span class="c1"># Override default score from TRaSH-Guides custom format.</span>
+</code></pre></div>
+<p>When using only the <code>trash_id</code> parameter, Buildarr will set the default score
+and all conditions using sane defaults from TRaSH-Guides.</p>
+<p>However, all aspects of a TRaSH-Guides imported custom format can be overridden
+using the same parameters as available in <a href="#manual-definitions">manually defining custom formats</a>.
+When overriding conditions, make sure to use the same name for the condition
+as in the TRaSH-Guides definition.</p>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.custom_formats.custom_format.CustomFormat"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.custom_formats.custom_format.CustomFormat.trash_id" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">trash_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TrashID</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.custom_formats.custom_format.CustomFormat.trash_id" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Trash ID of the TRaSH-Guides custom format profile to load default values from.</p>
+<p>If there is an update in the profile, the custom format conditions will be updated accordingly.</p>
+<p>If a condition that is explicitly defined on this custom format in Buildarr has the same name
+as a condition in the TRaSH-Guides profile, the explicitly defined condition takes precedence.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="manual-definitions">Manual Definitions<a class="headerlink" href="#manual-definitions" title="Permanent link">#</a></h2>
+<p>If the pre-made custom formats available online are not sufficient for your needs,
+you can define a custom format completely manually in Buildarr, using the following syntax.</p>
+<div class="highlight"><pre><span></span><code><span class="nn">...</span>
+<span class="w">  </span><span class="nt">custom_formats</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">delete_unmanaged</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">definitions</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">br-disk</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">default_score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-10000</span>
+<span class="w">        </span><span class="nt">conditions</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">br-disk</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">quality-modifier</span>
+<span class="w">            </span><span class="nt">modifier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BRDISK</span>
+<span class="w">            </span><span class="nt">negate</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">            </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">      </span><span class="nt">3d</span><span class="p">:</span>
+<span class="w">        </span><span class="c1"># No `default_score` defined on manually defined custom format: default to 0.</span>
+<span class="w">        </span><span class="nt">include_when_renaming</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w">  </span><span class="c1"># Set to false by default.</span>
+<span class="w">        </span><span class="nt">delete_unmanaged_conditions</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w">  </span><span class="c1"># Set to true by default, and should be most of the time.</span>
+<span class="w">        </span><span class="nt">conditions</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">bluray-3d</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">release-title</span>
+<span class="w">            </span><span class="nt">regex</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;\\b(BluRay3D)\\b&#39;</span>
+<span class="w">            </span><span class="nt">negate</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">            </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+</code></pre></div>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.custom_formats.custom_format.CustomFormat"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.custom_formats.custom_format.CustomFormat.default_score" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">default_score</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.custom_formats.custom_format.CustomFormat.default_score" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The default score assigned to this custom format when it is assigned to a quality profile.</p>
+<p>If this attribute is explicitly defined on the custom format, the defined value will always
+be used as the default score.</p>
+<p>If <code>default_score</code> is not defined, the default value used by Buildarr depends on the
+type of custom format:</p>
+<ul>
+<li>If this is a custom format imported from a Trash ID, this will default to the default
+  score TRaSH-Guides has assigned this custom format (<code>trash_score</code> in the metadata).
+  If the custom format does not have a default score defined, the default score will be 0.</li>
+<li>If this is a manually defined custom format, the default score will be 0.</li>
+</ul>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.custom_formats.custom_format.CustomFormat.include_when_renaming" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">include_when_renaming</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.custom_formats.custom_format.CustomFormat.include_when_renaming" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Make the custom format available in the <code>{Custom Formats}</code> template when renaming media titles.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.custom_formats.custom_format.CustomFormat.delete_unmanaged_conditions" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">delete_unmanaged_conditions</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.custom_formats.custom_format.CustomFormat.delete_unmanaged_conditions" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Delete conditions defined on this custom format on the remote instance
+not managed by Buildarr.</p>
+<p>It is recommended to keep this option enabled, particularly for
+custom formats imported from TRaSH-Guides.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.custom_formats.custom_format.CustomFormat.conditions" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">conditions</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Annotated</span><span class="p">[</span><span class="n">ConditionType</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">discriminator</span><span class="o">=</span><span class="s1">&#39;type&#39;</span><span class="p">)]]</span> <span class="o">=</span> <span class="p">{}</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.custom_formats.custom_format.CustomFormat.conditions" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>A list of conditions that will cause the custom format to be applied to a release
+if matches are found.</p>
+<p>By default, only one of the defined conditions need to match for the custom format
+to be applied. If one or more conditions have <code>required</code> set to <code>true</code>, those conditions
+must <strong>all</strong> match in order for the custom format to be applied.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><p>The following sections document the custom format condition types available for use in Buildarr.</p>
+<h2 id="edition">Edition<a class="headerlink" href="#edition" title="Permanent link">#</a></h2>
+<p>Custom format condition for matching based on media edition.</p>
+<div class="highlight"><pre><span></span><code><span class="nn">...</span>
+<span class="w">  </span><span class="nt">custom_formats</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">definitions</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">edition</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">default_score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">        </span><span class="nt">conditions</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">extended-edition</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">edition</span>
+<span class="w">            </span><span class="nt">regex</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;(?&lt;!^|{)\\b(extended|uncut|directors|special|unrated|uncensored|cut|version|edition)(\\b|\\d)&#39;</span>
+<span class="w">            </span><span class="nt">negate</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">            </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+</code></pre></div>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.custom_formats.conditions.edition.EditionCondition"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.custom_formats.conditions.edition.EditionCondition.type" class="doc doc-heading">
+          <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;edition&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;edition&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.custom_formats.conditions.edition.EditionCondition.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Buildarr type keyword associated with this condition type.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.custom_formats.conditions.edition.EditionCondition.regex" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">regex</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.custom_formats.conditions.edition.EditionCondition.regex" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The regular expression to use to match editions to the custom format.</p>
+<p>Regular expression matching is case-insensitive.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.custom_formats.conditions.base.Condition"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.custom_formats.conditions.base.Condition.negate" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">negate</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.custom_formats.conditions.base.Condition.negate" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>When set to <code>true</code>, negates the condition on the custom format.</p>
+<p>If a condition with this field set to <code>true</code> matches, the custom format
+will <strong>not</strong> apply to the media.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.custom_formats.conditions.base.Condition.required" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">required</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.custom_formats.conditions.base.Condition.required" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>When set to <code>true</code>, this condition <strong>must</strong> match in order for the custom format to apply
+to media.</p>
+<p>If this field is <code>false</code> on all conditions in a custom format, it will apply
+if any one of the defined conditions match.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="indexer-flag">Indexer Flag<a class="headerlink" href="#indexer-flag" title="Permanent link">#</a></h2>
+<p>Custom format condition for matching based on indexer flags.</p>
+<div class="highlight"><pre><span></span><code><span class="nn">...</span>
+<span class="w">  </span><span class="nt">custom_formats</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">definitions</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">indexer-flags</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">default_score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">        </span><span class="nt">conditions</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">freeleech</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">indexer-flag</span>
+<span class="w">            </span><span class="nt">flag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">g-freeleech</span>
+<span class="w">            </span><span class="nt">negate</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">            </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+</code></pre></div>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.custom_formats.conditions.indexer_flag.IndexerFlagCondition"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.custom_formats.conditions.indexer_flag.IndexerFlagCondition.type" class="doc doc-heading">
+          <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;indexer-flag&#39;</span><span class="p">,</span> <span class="s1">&#39;indexer_flag&#39;</span><span class="p">,</span> <span class="s1">&#39;indexerflag&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;indexer-flag&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.custom_formats.conditions.indexer_flag.IndexerFlagCondition.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Buildarr type keywords associated with this condition type.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.custom_formats.conditions.indexer_flag.IndexerFlagCondition.flag" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">flag</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.custom_formats.conditions.indexer_flag.IndexerFlagCondition.flag" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The indexer flag to match against.</p>
+<p>All values supported by your Radarr instance version can be defined.
+As of Radarr v4.7.5, the following flags are available:</p>
+<ul>
+<li><code>g-freeleech</code></li>
+<li><code>g-halfleech</code></li>
+<li><code>g-doubleupload</code></li>
+<li><code>ptp-golden</code></li>
+<li><code>ptp-approved</code></li>
+<li><code>hdb-internal</code></li>
+<li><code>ahd-internal</code></li>
+<li><code>g-scene</code></li>
+<li><code>g-freeleech75</code></li>
+<li><code>g-freeleech25</code></li>
+<li><code>ahd-userrelease</code></li>
+</ul>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.custom_formats.conditions.base.Condition"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.custom_formats.conditions.base.Condition.negate" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">negate</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.custom_formats.conditions.base.Condition.negate" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>When set to <code>true</code>, negates the condition on the custom format.</p>
+<p>If a condition with this field set to <code>true</code> matches, the custom format
+will <strong>not</strong> apply to the media.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.custom_formats.conditions.base.Condition.required" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">required</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.custom_formats.conditions.base.Condition.required" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>When set to <code>true</code>, this condition <strong>must</strong> match in order for the custom format to apply
+to media.</p>
+<p>If this field is <code>false</code> on all conditions in a custom format, it will apply
+if any one of the defined conditions match.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="language">Language<a class="headerlink" href="#language" title="Permanent link">#</a></h2>
+<p>Custom format condition for matching based on language.</p>
+<div class="highlight"><pre><span></span><code><span class="nn">...</span>
+<span class="w">  </span><span class="nt">custom_formats</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">definitions</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">english</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">default_score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
+<span class="w">        </span><span class="nt">conditions</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">english</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">language</span>
+<span class="w">            </span><span class="nt">language</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">english</span>
+<span class="w">            </span><span class="nt">negate</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">            </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">      </span><span class="nt">japanese</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">default_score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">        </span><span class="nt">conditions</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">japanese</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">language</span>
+<span class="w">            </span><span class="nt">language</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">japanese</span>
+<span class="w">            </span><span class="nt">negate</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">            </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">      </span><span class="nt">portuguese</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">default_score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">        </span><span class="nt">conditions</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">portuguese</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">language</span>
+<span class="w">            </span><span class="nt">language</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">portuguese</span>
+<span class="w">            </span><span class="nt">negate</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">            </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">          </span><span class="nt">portuguese-brazil</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">language</span>
+<span class="w">            </span><span class="nt">language</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">portuguese-brazil</span>
+<span class="w">            </span><span class="nt">negate</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">            </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+</code></pre></div>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.custom_formats.conditions.language.LanguageCondition"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.custom_formats.conditions.language.LanguageCondition.type" class="doc doc-heading">
+          <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;language&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;language&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.custom_formats.conditions.language.LanguageCondition.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Buildarr type keyword associated with this condition type.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.custom_formats.conditions.language.LanguageCondition.language" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">language</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.custom_formats.conditions.language.LanguageCondition.language" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The language to match against, written in English.</p>
+<p>Use the <code>any</code> keyword to match any language.
+Use the <code>original</code> keyword to match for the original language of the media.</p>
+<p>All languages supported by your Radarr instance version can be defined
+in this condition.</p>
+<p>Examples:</p>
+<ul>
+<li><code>english</code></li>
+<li><code>portuguese-brazil</code></li>
+</ul>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.custom_formats.conditions.base.Condition"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.custom_formats.conditions.base.Condition.negate" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">negate</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.custom_formats.conditions.base.Condition.negate" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>When set to <code>true</code>, negates the condition on the custom format.</p>
+<p>If a condition with this field set to <code>true</code> matches, the custom format
+will <strong>not</strong> apply to the media.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.custom_formats.conditions.base.Condition.required" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">required</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.custom_formats.conditions.base.Condition.required" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>When set to <code>true</code>, this condition <strong>must</strong> match in order for the custom format to apply
+to media.</p>
+<p>If this field is <code>false</code> on all conditions in a custom format, it will apply
+if any one of the defined conditions match.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="quality-modifier">Quality Modifier<a class="headerlink" href="#quality-modifier" title="Permanent link">#</a></h2>
+<p>Custom format condition for matching based on quality modifiers.</p>
+<div class="highlight"><pre><span></span><code><span class="nn">...</span>
+<span class="w">  </span><span class="nt">custom_formats</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">definitions</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">br-disk</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">default_score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-10000</span>
+<span class="w">        </span><span class="nt">conditions</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">br-disk</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">quality-modifier</span>
+<span class="w">            </span><span class="nt">modifier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BRDISK</span>
+<span class="w">            </span><span class="nt">negate</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">            </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+</code></pre></div>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.custom_formats.conditions.quality_modifier.QualityModifierCondition"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.custom_formats.conditions.quality_modifier.QualityModifierCondition.type" class="doc doc-heading">
+          <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;quality-modifier&#39;</span><span class="p">,</span> <span class="s1">&#39;quality_modifier&#39;</span><span class="p">,</span> <span class="s1">&#39;qualitymodifier&#39;</span><span class="p">,</span> <span class="s1">&#39;quality&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;quality-modifier&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.custom_formats.conditions.quality_modifier.QualityModifierCondition.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Buildarr type keywords associated with this condition type.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.custom_formats.conditions.quality_modifier.QualityModifierCondition.modifier" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">modifier</span><span class="p">:</span> <span class="n">UpperCaseNonEmptyStr</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.custom_formats.conditions.quality_modifier.QualityModifierCondition.modifier" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The modifier to match against.</p>
+<p>All values supported by your Radarr instance version can be defined.
+As of Radarr v4.7.5, the following modifiers are available:</p>
+<ul>
+<li><code>NONE</code></li>
+<li><code>REGIONAL</code></li>
+<li><code>SCREENER</code></li>
+<li><code>RAWHD</code></li>
+<li><code>BRDISK</code></li>
+<li><code>REMUX</code></li>
+</ul>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.custom_formats.conditions.base.Condition"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.custom_formats.conditions.base.Condition.negate" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">negate</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.custom_formats.conditions.base.Condition.negate" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>When set to <code>true</code>, negates the condition on the custom format.</p>
+<p>If a condition with this field set to <code>true</code> matches, the custom format
+will <strong>not</strong> apply to the media.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.custom_formats.conditions.base.Condition.required" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">required</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.custom_formats.conditions.base.Condition.required" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>When set to <code>true</code>, this condition <strong>must</strong> match in order for the custom format to apply
+to media.</p>
+<p>If this field is <code>false</code> on all conditions in a custom format, it will apply
+if any one of the defined conditions match.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="release-group">Release Group<a class="headerlink" href="#release-group" title="Permanent link">#</a></h2>
+<p>Custom format condition for matching based on release group.</p>
+<div class="highlight"><pre><span></span><code><span class="nn">...</span>
+<span class="w">  </span><span class="nt">custom_formats</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">definitions</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">release-groups</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">default_score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1800</span>
+<span class="w">        </span><span class="nt">conditions</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">chotab</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">release-group</span>
+<span class="w">            </span><span class="nt">regex</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;^(Chotab)$&#39;</span>
+<span class="w">            </span><span class="nt">negate</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">            </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">          </span><span class="nt">ctrlhd</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">release-group</span>
+<span class="w">            </span><span class="nt">regex</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;^(CtrlHD)$&#39;</span>
+<span class="w">            </span><span class="nt">negate</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">            </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+</code></pre></div>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.custom_formats.conditions.release_group.ReleaseGroupCondition"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.custom_formats.conditions.release_group.ReleaseGroupCondition.type" class="doc doc-heading">
+          <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;release-group&#39;</span><span class="p">,</span> <span class="s1">&#39;release_group&#39;</span><span class="p">,</span> <span class="s1">&#39;releasegroup&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;release-group&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.custom_formats.conditions.release_group.ReleaseGroupCondition.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Buildarr type keywords associated with this condition type.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.custom_formats.conditions.release_group.ReleaseGroupCondition.regex" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">regex</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.custom_formats.conditions.release_group.ReleaseGroupCondition.regex" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The regular expression to use to match release groups to the custom format.</p>
+<p>Regular expression matching is case-insensitive.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.custom_formats.conditions.base.Condition"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.custom_formats.conditions.base.Condition.negate" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">negate</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.custom_formats.conditions.base.Condition.negate" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>When set to <code>true</code>, negates the condition on the custom format.</p>
+<p>If a condition with this field set to <code>true</code> matches, the custom format
+will <strong>not</strong> apply to the media.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.custom_formats.conditions.base.Condition.required" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">required</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.custom_formats.conditions.base.Condition.required" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>When set to <code>true</code>, this condition <strong>must</strong> match in order for the custom format to apply
+to media.</p>
+<p>If this field is <code>false</code> on all conditions in a custom format, it will apply
+if any one of the defined conditions match.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="release-title">Release Title<a class="headerlink" href="#release-title" title="Permanent link">#</a></h2>
+<p>Custom format condition for matching based on release title contents.</p>
+<div class="highlight"><pre><span></span><code><span class="nn">...</span>
+<span class="w">  </span><span class="nt">custom_formats</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">definitions</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">anime-groups</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">default_score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">500</span>
+<span class="w">        </span><span class="nt">conditions</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">asakura</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">release-title</span>
+<span class="w">            </span><span class="nt">regex</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;\\[Asakura\\]|-Asakura\\b&#39;</span>
+<span class="w">            </span><span class="nt">negate</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">            </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">          </span><span class="nt">tenshi</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">release-title</span>
+<span class="w">            </span><span class="nt">regex</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;\\[tenshi\\]|-tenshi\\b&#39;</span>
+<span class="w">            </span><span class="nt">negate</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">            </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+</code></pre></div>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.custom_formats.conditions.release_title.ReleaseTitleCondition"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.custom_formats.conditions.release_title.ReleaseTitleCondition.type" class="doc doc-heading">
+          <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;release-title&#39;</span><span class="p">,</span> <span class="s1">&#39;release_title&#39;</span><span class="p">,</span> <span class="s1">&#39;releasetitle&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;release-title&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.custom_formats.conditions.release_title.ReleaseTitleCondition.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Buildarr type keywords associated with this condition type.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.custom_formats.conditions.release_title.ReleaseTitleCondition.regex" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">regex</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.custom_formats.conditions.release_title.ReleaseTitleCondition.regex" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The regular expression to use to match release titles to the custom format.</p>
+<p>Regular expression matching is case-insensitive.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.custom_formats.conditions.base.Condition"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.custom_formats.conditions.base.Condition.negate" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">negate</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.custom_formats.conditions.base.Condition.negate" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>When set to <code>true</code>, negates the condition on the custom format.</p>
+<p>If a condition with this field set to <code>true</code> matches, the custom format
+will <strong>not</strong> apply to the media.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.custom_formats.conditions.base.Condition.required" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">required</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.custom_formats.conditions.base.Condition.required" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>When set to <code>true</code>, this condition <strong>must</strong> match in order for the custom format to apply
+to media.</p>
+<p>If this field is <code>false</code> on all conditions in a custom format, it will apply
+if any one of the defined conditions match.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="resolution">Resolution<a class="headerlink" href="#resolution" title="Permanent link">#</a></h2>
+<p>Custom format condition for matching based on media resolution.</p>
+<div class="highlight"><pre><span></span><code><span class="nn">...</span>
+<span class="w">  </span><span class="nt">custom_formats</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">definitions</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">1080p</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">default_score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">        </span><span class="nt">conditions</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">chotab</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">resolution</span>
+<span class="w">            </span><span class="nt">resolution</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">r1080p</span>
+<span class="w">            </span><span class="nt">negate</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">            </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">      </span><span class="nt">4k</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">default_score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-10000</span>
+<span class="w">        </span><span class="nt">conditions</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">ctrlhd</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">resoltuion</span>
+<span class="w">            </span><span class="nt">resolution</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">r2160p</span>
+<span class="w">            </span><span class="nt">negate</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">            </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+</code></pre></div>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.custom_formats.conditions.resolution.ResolutionCondition"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.custom_formats.conditions.resolution.ResolutionCondition.type" class="doc doc-heading">
+          <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;resolution&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;resolution&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.custom_formats.conditions.resolution.ResolutionCondition.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Buildarr type keyword associated with this condition type.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.custom_formats.conditions.resolution.ResolutionCondition.resolution" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">resolution</span><span class="p">:</span> <span class="n">LowerCaseNonEmptyStr</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.custom_formats.conditions.resolution.ResolutionCondition.resolution" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The resolution to match against.</p>
+<p>All values supported by your Radarr instance version can be defined.
+As of Radarr v4.7.5, the following resolutions are available:</p>
+<ul>
+<li><code>r360p</code> (360p)</li>
+<li><code>r480p</code> (480p)</li>
+<li><code>r576p</code> (576p)</li>
+<li><code>r720p</code> (720p)</li>
+<li><code>r1080p</code> (1080p HD)</li>
+<li><code>r2160p</code> (2160p Ultra-HD)</li>
+</ul>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.custom_formats.conditions.base.Condition"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.custom_formats.conditions.base.Condition.negate" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">negate</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.custom_formats.conditions.base.Condition.negate" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>When set to <code>true</code>, negates the condition on the custom format.</p>
+<p>If a condition with this field set to <code>true</code> matches, the custom format
+will <strong>not</strong> apply to the media.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.custom_formats.conditions.base.Condition.required" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">required</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.custom_formats.conditions.base.Condition.required" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>When set to <code>true</code>, this condition <strong>must</strong> match in order for the custom format to apply
+to media.</p>
+<p>If this field is <code>false</code> on all conditions in a custom format, it will apply
+if any one of the defined conditions match.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="size">Size<a class="headerlink" href="#size" title="Permanent link">#</a></h2>
+<p>Custom format condition for matching based on media file size.</p>
+<div class="highlight"><pre><span></span><code><span class="nn">...</span>
+<span class="w">  </span><span class="nt">custom_formats</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">definitions</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">allowed-size</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">default_score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">        </span><span class="nt">conditions</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">allowed-size</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">size</span>
+<span class="w">            </span><span class="nt">min</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span><span class="w">  </span><span class="c1"># GB</span>
+<span class="w">            </span><span class="nt">max</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span><span class="w">  </span><span class="c1"># GB</span>
+<span class="w">            </span><span class="nt">negate</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">            </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+</code></pre></div>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.custom_formats.conditions.size.SizeCondition"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.custom_formats.conditions.size.SizeCondition.type" class="doc doc-heading">
+          <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;size&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;size&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.custom_formats.conditions.size.SizeCondition.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Buildarr type keyword associated with this condition type.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.custom_formats.conditions.size.SizeCondition.min" class="doc doc-heading">
+          <code class="highlight language-python"><span class="nb">min</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.custom_formats.conditions.size.SizeCondition.min" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The minimum size, in gigabytes (GB).</p>
+<p>In order to match, the media must be larger than this size.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.custom_formats.conditions.size.SizeCondition.max" class="doc doc-heading">
+          <code class="highlight language-python"><span class="nb">max</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.custom_formats.conditions.size.SizeCondition.max" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The maximum size, in gigabytes (GB).</p>
+<p>In order to match, the media must be smaller than, or equal to, this size.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.custom_formats.conditions.base.Condition"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.custom_formats.conditions.base.Condition.negate" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">negate</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.custom_formats.conditions.base.Condition.negate" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>When set to <code>true</code>, negates the condition on the custom format.</p>
+<p>If a condition with this field set to <code>true</code> matches, the custom format
+will <strong>not</strong> apply to the media.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.custom_formats.conditions.base.Condition.required" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">required</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.custom_formats.conditions.base.Condition.required" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>When set to <code>true</code>, this condition <strong>must</strong> match in order for the custom format to apply
+to media.</p>
+<p>If this field is <code>false</code> on all conditions in a custom format, it will apply
+if any one of the defined conditions match.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="source">Source<a class="headerlink" href="#source" title="Permanent link">#</a></h2>
+<p>Custom format condition for matching based on media source type.</p>
+<div class="highlight"><pre><span></span><code><span class="nn">...</span>
+<span class="w">  </span><span class="nt">custom_formats</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">definitions</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">allowed-sources</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">default_score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">        </span><span class="nt">conditions</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">blu-ray</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">source</span>
+<span class="w">            </span><span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BLURAY</span>
+<span class="w">            </span><span class="nt">negate</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">            </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</code></pre></div>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.custom_formats.conditions.source.SourceCondition"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.custom_formats.conditions.source.SourceCondition.type" class="doc doc-heading">
+          <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;source&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;source&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.custom_formats.conditions.source.SourceCondition.type" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Buildarr type keyword associated with this condition type.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.custom_formats.conditions.source.SourceCondition.source" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">source</span><span class="p">:</span> <span class="n">UpperCaseNonEmptyStr</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.custom_formats.conditions.source.SourceCondition.source" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The source type to match against.</p>
+<p>All values supported by your Radarr instance version can be defined.
+As of Radarr v4.7.5, the following source types are available:</p>
+<ul>
+<li><code>UNKNOWN</code></li>
+<li><code>CAM</code></li>
+<li><code>TELESYNC</code></li>
+<li><code>TELECINE</code></li>
+<li><code>WORKPRINT</code></li>
+<li><code>DVD</code></li>
+<li><code>TV</code></li>
+<li><code>WEBDL</code></li>
+<li><code>WEBRIP</code></li>
+<li><code>BLURAY</code></li>
+</ul>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="buildarr_radarr.config.settings.custom_formats.conditions.base.Condition"></a>
+  <div class="doc doc-contents first">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.custom_formats.conditions.base.Condition.negate" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">negate</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.custom_formats.conditions.base.Condition.negate" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>When set to <code>true</code>, negates the condition on the custom format.</p>
+<p>If a condition with this field set to <code>true</code> matches, the custom format
+will <strong>not</strong> apply to the media.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_radarr.config.settings.custom_formats.conditions.base.Condition.required" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">required</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_radarr.config.settings.custom_formats.conditions.base.Condition.required" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>When set to <code>true</code>, this condition <strong>must</strong> match in order for the custom format to apply
+to media.</p>
+<p>If this field is <code>false</code> on all conditions in a custom format, it will apply
+if any one of the defined conditions match.</p>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../../../js/jquery-3.6.0.min.js"></script>
+        <script src="../../../../../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "../../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../../js/base.js"></script>
+        <script src="../../../../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

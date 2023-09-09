@@ -12,13 +12,10 @@
         <link href="../../../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../../../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
         <link href="../../../../assets/_mkdocstrings.css" rel="stylesheet">
-
-        <script src="../../../../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../../../../js/bootstrap.min.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
     </head>
 
     <body>
@@ -44,6 +41,10 @@
                                     
 <li>
     <a href="../../release-notes/" class="dropdown-item">Buildarr Sonarr Plugin</a>
+</li>
+                                    
+<li>
+    <a href="../../../radarr/release-notes/" class="dropdown-item">Buildarr Radarr Plugin</a>
 </li>
                                     
 <li>
@@ -154,6 +155,86 @@
 <li>
     <a href="../ui/" class="dropdown-item">UI</a>
 </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Buildarr Radarr Plugin</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../radarr/" class="dropdown-item">Introduction</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Configuration</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../radarr/configuration/host/" class="dropdown-item">Host Configuration</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Settings</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../radarr/configuration/settings/media-management/" class="dropdown-item">Media Management</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Profiles</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../radarr/configuration/settings/profiles/quality-profiles/" class="dropdown-item">Quality Profiles</a>
+</li>
+            
+<li>
+    <a href="../../../radarr/configuration/settings/profiles/delay-profiles/" class="dropdown-item">Delay Profiles</a>
+</li>
+    </ul>
+  </li>
+            
+<li>
+    <a href="../../../radarr/configuration/settings/quality/" class="dropdown-item">Quality</a>
+</li>
+            
+<li>
+    <a href="../../../radarr/configuration/settings/custom-formats/" class="dropdown-item">Custom Formats</a>
+</li>
+            
+<li>
+    <a href="../../../radarr/configuration/settings/indexers/" class="dropdown-item">Indexers</a>
+</li>
+            
+<li>
+    <a href="../../../radarr/configuration/settings/download-clients/" class="dropdown-item">Download Clients</a>
+</li>
+            
+<li>
+    <a href="../../../radarr/configuration/settings/notifications/" class="dropdown-item">Notifications (Connect)</a>
+</li>
+            
+<li>
+    <a href="../../../radarr/configuration/settings/metadata/" class="dropdown-item">Metadata</a>
+</li>
+            
+<li>
+    <a href="../../../radarr/configuration/settings/tags/" class="dropdown-item">Tags</a>
+</li>
+            
+<li>
+    <a href="../../../radarr/configuration/settings/general/" class="dropdown-item">General</a>
+</li>
+            
+<li>
+    <a href="../../../radarr/configuration/settings/ui/" class="dropdown-item">UI</a>
+</li>
+    </ul>
+  </li>
     </ul>
   </li>
     </ul>
@@ -411,6 +492,7 @@
 <div class="doc doc-object doc-class">
 
 
+
 <a id="buildarr_sonarr.config.indexers.SonarrIndexersSettingsConfig"></a>
   <div class="doc doc-contents first">
 
@@ -448,7 +530,6 @@ how they are handled by Sonarr.</p>
 <a href="https://wiki.servarr.com/sonarr/faq#how-does-sonarr-find-episodes">WikiArr</a>.</p>
 
 
-
   
 
   <div class="doc doc-children">
@@ -463,11 +544,13 @@ how they are handled by Sonarr.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.SonarrIndexersSettingsConfig.minimum_age" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">minimum_age</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></code>
+          <code class="highlight language-python"><span class="n">minimum_age</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.SonarrIndexersSettingsConfig.minimum_age" class="headerlink" title="Permanent link">#</a></h5>
@@ -485,11 +568,13 @@ how they are handled by Sonarr.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.SonarrIndexersSettingsConfig.retention" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">retention</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></code>
+          <code class="highlight language-python"><span class="n">retention</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.SonarrIndexersSettingsConfig.retention" class="headerlink" title="Permanent link">#</a></h5>
@@ -507,11 +592,13 @@ how they are handled by Sonarr.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.SonarrIndexersSettingsConfig.maximum_size" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">maximum_size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></code>
+          <code class="highlight language-python"><span class="n">maximum_size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.SonarrIndexersSettingsConfig.maximum_size" class="headerlink" title="Permanent link">#</a></h5>
@@ -529,11 +616,13 @@ how they are handled by Sonarr.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.SonarrIndexersSettingsConfig.rss_sync_interval" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">rss_sync_interval</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></code>
+          <code class="highlight language-python"><span class="n">rss_sync_interval</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.SonarrIndexersSettingsConfig.rss_sync_interval" class="headerlink" title="Permanent link">#</a></h5>
@@ -551,11 +640,13 @@ how they are handled by Sonarr.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.SonarrIndexersSettingsConfig.delete_unmanaged" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">delete_unmanaged</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+          <code class="highlight language-python"><span class="n">delete_unmanaged</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.SonarrIndexersSettingsConfig.delete_unmanaged" class="headerlink" title="Permanent link">#</a></h5>
@@ -575,11 +666,13 @@ created by external applications such as Prowlarr.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.SonarrIndexersSettingsConfig.definitions" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">definitions</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Annotated</span><span class="p">[</span><span class="n">IndexerType</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">discriminator</span><span class="o">=</span><span class="nb">type</span><span class="p">)]]</span> <span class="o">=</span> <span class="p">{}</span></code>
+          <code class="highlight language-python"><span class="n">definitions</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Annotated</span><span class="p">[</span><span class="n">IndexerType</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">discriminator</span><span class="o">=</span><span class="s1">&#39;type&#39;</span><span class="p">)]]</span> <span class="o">=</span> <span class="p">{}</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.SonarrIndexersSettingsConfig.definitions" class="headerlink" title="Permanent link">#</a></h5>
@@ -604,6 +697,7 @@ created by external applications such as Prowlarr.</p>
 
 
 <div class="doc doc-object doc-class">
+
 
 
 <a id="buildarr_sonarr.config.indexers.Indexer"></a>
@@ -635,7 +729,6 @@ and parameters common to only specific types of indexers.</p>
 <p>The following configuration attributes can be defined on all indexer types.</p>
 
 
-
   
 
   <div class="doc doc-children">
@@ -650,11 +743,13 @@ and parameters common to only specific types of indexers.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.Indexer.enable_rss" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">enable_rss</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
+          <code class="highlight language-python"><span class="n">enable_rss</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.Indexer.enable_rss" class="headerlink" title="Permanent link">#</a></h5>
@@ -672,11 +767,13 @@ or have not yet reached their cutoff.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.Indexer.enable_automatic_search" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">enable_automatic_search</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
+          <code class="highlight language-python"><span class="n">enable_automatic_search</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.Indexer.enable_automatic_search" class="headerlink" title="Permanent link">#</a></h5>
@@ -693,11 +790,13 @@ or have not yet reached their cutoff.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.Indexer.enable_interactive_search" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">enable_interactive_search</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
+          <code class="highlight language-python"><span class="n">enable_interactive_search</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.Indexer.enable_interactive_search" class="headerlink" title="Permanent link">#</a></h5>
@@ -714,11 +813,13 @@ or have not yet reached their cutoff.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.Indexer.priority" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">priority</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">le</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">alias</span><span class="o">=</span><span class="s1">&#39;indexer_priority&#39;</span><span class="p">)</span></code>
+          <code class="highlight language-python"><span class="n">priority</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">le</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">alias</span><span class="o">=</span><span class="s1">&#39;indexer_priority&#39;</span><span class="p">)</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.Indexer.priority" class="headerlink" title="Permanent link">#</a></h5>
@@ -738,11 +839,13 @@ The original name is still available as an alias.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.Indexer.download_client" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">download_client</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+          <code class="highlight language-python"><span class="n">download_client</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.Indexer.download_client" class="headerlink" title="Permanent link">#</a></h5>
@@ -759,11 +862,13 @@ The original name is still available as an alias.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.Indexer.tags" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">tags</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span></code>
+          <code class="highlight language-python"><span class="n">tags</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.Indexer.tags" class="headerlink" title="Permanent link">#</a></h5>
@@ -791,12 +896,12 @@ Leave blank to use with all series.</p>
 <div class="doc doc-object doc-class">
 
 
+
 <a id="buildarr_sonarr.config.indexers.FanzubIndexer"></a>
   <div class="doc doc-contents first">
 
   
       <p>An indexer which uses a Fanzub-compatible RSS feed to monitor for releases.</p>
-
 
 
   
@@ -813,11 +918,13 @@ Leave blank to use with all series.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.FanzubIndexer.type" class="doc doc-heading">
-<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;fanzub&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;fanzub&#39;</span></code>
+          <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;fanzub&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;fanzub&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.FanzubIndexer.type" class="headerlink" title="Permanent link">#</a></h5>
@@ -834,11 +941,12 @@ Leave blank to use with all series.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.FanzubIndexer.rss_url" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">rss_url</span><span class="p">:</span> <span class="n">RssUrl</span></code>
+          <code class="highlight language-python"><span class="n">rss_url</span><span class="p">:</span> <span class="n">RssUrl</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.FanzubIndexer.rss_url" class="headerlink" title="Permanent link">#</a></h5>
@@ -855,11 +963,13 @@ Leave blank to use with all series.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.FanzubIndexer.anime_standard_format_search" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">anime_standard_format_search</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+          <code class="highlight language-python"><span class="n">anime_standard_format_search</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.FanzubIndexer.anime_standard_format_search" class="headerlink" title="Permanent link">#</a></h5>
@@ -886,13 +996,13 @@ Leave blank to use with all series.</p>
 <div class="doc doc-object doc-class">
 
 
+
 <a id="buildarr_sonarr.config.indexers.NewznabIndexer"></a>
   <div class="doc doc-contents first">
 
   
       <p>An indexer for monitoring a Newznab-compliant Usenet indexing site.</p>
 <p>Sonarr defines presets for several popular sites.</p>
-
 
 
   
@@ -909,11 +1019,13 @@ Leave blank to use with all series.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.NewznabIndexer.type" class="doc doc-heading">
-<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;newznab&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;newznab&#39;</span></code>
+          <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;newznab&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;newznab&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.NewznabIndexer.type" class="headerlink" title="Permanent link">#</a></h5>
@@ -930,11 +1042,12 @@ Leave blank to use with all series.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.NewznabIndexer.url" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">url</span><span class="p">:</span> <span class="n">AnyHttpUrl</span></code>
+          <code class="highlight language-python"><span class="n">url</span><span class="p">:</span> <span class="n">AnyHttpUrl</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.NewznabIndexer.url" class="headerlink" title="Permanent link">#</a></h5>
@@ -951,11 +1064,13 @@ Leave blank to use with all series.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.NewznabIndexer.api_path" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">api_path</span><span class="p">:</span> <span class="n">NonEmptyStr</span> <span class="o">=</span> <span class="s1">&#39;/api&#39;</span></code>
+          <code class="highlight language-python"><span class="n">api_path</span><span class="p">:</span> <span class="n">NonEmptyStr</span> <span class="o">=</span> <span class="s1">&#39;/api&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.NewznabIndexer.api_path" class="headerlink" title="Permanent link">#</a></h5>
@@ -972,11 +1087,13 @@ Leave blank to use with all series.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.NewznabIndexer.categories" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">categories</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NabCategory</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">NabCategory</span><span class="o">.</span><span class="n">TV_SD</span><span class="p">,</span> <span class="n">NabCategory</span><span class="o">.</span><span class="n">TV_HD</span><span class="p">}</span></code>
+          <code class="highlight language-python"><span class="n">categories</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NabCategory</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">NabCategory</span><span class="o">.</span><span class="n">TV_SD</span><span class="p">,</span> <span class="n">NabCategory</span><span class="o">.</span><span class="n">TV_HD</span><span class="p">}</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.NewznabIndexer.categories" class="headerlink" title="Permanent link">#</a></h5>
@@ -1006,11 +1123,13 @@ Define as empty to disable.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.NewznabIndexer.anime_categories" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">anime_categories</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NabCategory</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
+          <code class="highlight language-python"><span class="n">anime_categories</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NabCategory</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.NewznabIndexer.anime_categories" class="headerlink" title="Permanent link">#</a></h5>
@@ -1040,11 +1159,13 @@ Define as empty to disable.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.NewznabIndexer.anime_standard_format_search" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">anime_standard_format_search</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+          <code class="highlight language-python"><span class="n">anime_standard_format_search</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.NewznabIndexer.anime_standard_format_search" class="headerlink" title="Permanent link">#</a></h5>
@@ -1061,11 +1182,13 @@ Define as empty to disable.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.NewznabIndexer.additional_parameters" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">additional_parameters</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+          <code class="highlight language-python"><span class="n">additional_parameters</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.NewznabIndexer.additional_parameters" class="headerlink" title="Permanent link">#</a></h5>
@@ -1092,12 +1215,12 @@ Define as empty to disable.</p>
 <div class="doc doc-object doc-class">
 
 
+
 <a id="buildarr_sonarr.config.indexers.OmgwtfnzbsIndexer"></a>
   <div class="doc doc-contents first">
 
   
       <p>An indexer for monitoring OmgWtfNZBs.</p>
-
 
 
   
@@ -1114,11 +1237,13 @@ Define as empty to disable.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.OmgwtfnzbsIndexer.type" class="doc doc-heading">
-<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;omgwtfnzbs&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;omgwtfnzbs&#39;</span></code>
+          <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;omgwtfnzbs&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;omgwtfnzbs&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.OmgwtfnzbsIndexer.type" class="headerlink" title="Permanent link">#</a></h5>
@@ -1135,11 +1260,12 @@ Define as empty to disable.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.OmgwtfnzbsIndexer.username" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+          <code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.OmgwtfnzbsIndexer.username" class="headerlink" title="Permanent link">#</a></h5>
@@ -1156,11 +1282,12 @@ Define as empty to disable.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.OmgwtfnzbsIndexer.api_key" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">Password</span></code>
+          <code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">Password</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.OmgwtfnzbsIndexer.api_key" class="headerlink" title="Permanent link">#</a></h5>
@@ -1177,11 +1304,13 @@ Define as empty to disable.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.OmgwtfnzbsIndexer.delay" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">delay</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></code>
+          <code class="highlight language-python"><span class="n">delay</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.OmgwtfnzbsIndexer.delay" class="headerlink" title="Permanent link">#</a></h5>
@@ -1208,12 +1337,12 @@ Define as empty to disable.</p>
 <div class="doc doc-object doc-class">
 
 
+
 <a id="buildarr_sonarr.config.indexers.TorrentIndexer"></a>
   <div class="doc doc-contents first">
 
   
       <p>Configuration attributes common to all torrent indexers.</p>
-
 
 
   
@@ -1230,11 +1359,13 @@ Define as empty to disable.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.TorrentIndexer.minimum_seeders" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">minimum_seeders</span><span class="p">:</span> <span class="n">PositiveInt</span> <span class="o">=</span> <span class="mi">1</span></code>
+          <code class="highlight language-python"><span class="n">minimum_seeders</span><span class="p">:</span> <span class="n">PositiveInt</span> <span class="o">=</span> <span class="mi">1</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.TorrentIndexer.minimum_seeders" class="headerlink" title="Permanent link">#</a></h5>
@@ -1251,11 +1382,13 @@ Define as empty to disable.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.TorrentIndexer.seed_ratio" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">seed_ratio</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+          <code class="highlight language-python"><span class="n">seed_ratio</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.TorrentIndexer.seed_ratio" class="headerlink" title="Permanent link">#</a></h5>
@@ -1273,11 +1406,13 @@ Define as empty to disable.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.TorrentIndexer.seed_time" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">seed_time</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+          <code class="highlight language-python"><span class="n">seed_time</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.TorrentIndexer.seed_time" class="headerlink" title="Permanent link">#</a></h5>
@@ -1295,11 +1430,13 @@ Define as empty to disable.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.TorrentIndexer.seasonpack_seed_time" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">seasonpack_seed_time</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+          <code class="highlight language-python"><span class="n">seasonpack_seed_time</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.TorrentIndexer.seasonpack_seed_time" class="headerlink" title="Permanent link">#</a></h5>
@@ -1327,12 +1464,12 @@ Define as empty to disable.</p>
 <div class="doc doc-object doc-class">
 
 
+
 <a id="buildarr_sonarr.config.indexers.BroadcasthenetIndexer"></a>
   <div class="doc doc-contents first">
 
   
       <p>Indexer for monitoring for new releases on BroacasTheNet.</p>
-
 
 
   
@@ -1349,11 +1486,13 @@ Define as empty to disable.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.BroadcasthenetIndexer.type" class="doc doc-heading">
-<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;broadcasthenet&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;broadcasthenet&#39;</span></code>
+          <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;broadcasthenet&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;broadcasthenet&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.BroadcasthenetIndexer.type" class="headerlink" title="Permanent link">#</a></h5>
@@ -1370,11 +1509,13 @@ Define as empty to disable.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.BroadcasthenetIndexer.api_url" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">api_url</span><span class="p">:</span> <span class="n">AnyHttpUrl</span> <span class="o">=</span> <span class="s1">&#39;https://api.broadcasthe.net&#39;</span></code>
+          <code class="highlight language-python"><span class="n">api_url</span><span class="p">:</span> <span class="n">AnyHttpUrl</span> <span class="o">=</span> <span class="s1">&#39;https://api.broadcasthe.net&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.BroadcasthenetIndexer.api_url" class="headerlink" title="Permanent link">#</a></h5>
@@ -1391,11 +1532,12 @@ Define as empty to disable.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.BroadcasthenetIndexer.api_key" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">Password</span></code>
+          <code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">Password</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.BroadcasthenetIndexer.api_key" class="headerlink" title="Permanent link">#</a></h5>
@@ -1422,12 +1564,12 @@ Define as empty to disable.</p>
 <div class="doc doc-object doc-class">
 
 
+
 <a id="buildarr_sonarr.config.indexers.FilelistIndexer"></a>
   <div class="doc doc-contents first">
 
   
       <p>Monitor for new releases on FileList.io.</p>
-
 
 
   
@@ -1444,11 +1586,13 @@ Define as empty to disable.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.FilelistIndexer.type" class="doc doc-heading">
-<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;filelist&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;filelist&#39;</span></code>
+          <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;filelist&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;filelist&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.FilelistIndexer.type" class="headerlink" title="Permanent link">#</a></h5>
@@ -1465,11 +1609,12 @@ Define as empty to disable.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.FilelistIndexer.username" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+          <code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.FilelistIndexer.username" class="headerlink" title="Permanent link">#</a></h5>
@@ -1486,11 +1631,12 @@ Define as empty to disable.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.FilelistIndexer.passkey" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">passkey</span><span class="p">:</span> <span class="n">Password</span></code>
+          <code class="highlight language-python"><span class="n">passkey</span><span class="p">:</span> <span class="n">Password</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.FilelistIndexer.passkey" class="headerlink" title="Permanent link">#</a></h5>
@@ -1507,11 +1653,13 @@ Define as empty to disable.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.FilelistIndexer.api_url" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">api_url</span><span class="p">:</span> <span class="n">AnyHttpUrl</span> <span class="o">=</span> <span class="s1">&#39;https://filelist.io&#39;</span></code>
+          <code class="highlight language-python"><span class="n">api_url</span><span class="p">:</span> <span class="n">AnyHttpUrl</span> <span class="o">=</span> <span class="s1">&#39;https://filelist.io&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.FilelistIndexer.api_url" class="headerlink" title="Permanent link">#</a></h5>
@@ -1530,11 +1678,13 @@ as your API key will be sent to this host.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.FilelistIndexer.categories" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">categories</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">FilelistCategory</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">FilelistCategory</span><span class="o">.</span><span class="n">TV_SD</span><span class="p">,</span> <span class="n">FilelistCategory</span><span class="o">.</span><span class="n">TV_HD</span><span class="p">,</span> <span class="n">FilelistCategory</span><span class="o">.</span><span class="n">TV_4K</span><span class="p">}</span></code>
+          <code class="highlight language-python"><span class="n">categories</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">FilelistCategory</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">FilelistCategory</span><span class="o">.</span><span class="n">TV_SD</span><span class="p">,</span> <span class="n">FilelistCategory</span><span class="o">.</span><span class="n">TV_HD</span><span class="p">,</span> <span class="n">FilelistCategory</span><span class="o">.</span><span class="n">TV_4K</span><span class="p">}</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.FilelistIndexer.categories" class="headerlink" title="Permanent link">#</a></h5>
@@ -1561,11 +1711,13 @@ as your API key will be sent to this host.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.FilelistIndexer.anime_categories" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">anime_categories</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">FilelistCategory</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
+          <code class="highlight language-python"><span class="n">anime_categories</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">FilelistCategory</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.FilelistIndexer.anime_categories" class="headerlink" title="Permanent link">#</a></h5>
@@ -1602,12 +1754,12 @@ as your API key will be sent to this host.</p>
 <div class="doc doc-object doc-class">
 
 
+
 <a id="buildarr_sonarr.config.indexers.HdbitsIndexer"></a>
   <div class="doc doc-contents first">
 
   
       <p>Monitor for new releases on HDBits.</p>
-
 
 
   
@@ -1624,11 +1776,13 @@ as your API key will be sent to this host.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.HdbitsIndexer.type" class="doc doc-heading">
-<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;hdbits&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;hdbits&#39;</span></code>
+          <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;hdbits&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;hdbits&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.HdbitsIndexer.type" class="headerlink" title="Permanent link">#</a></h5>
@@ -1645,11 +1799,12 @@ as your API key will be sent to this host.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.HdbitsIndexer.username" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+          <code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.HdbitsIndexer.username" class="headerlink" title="Permanent link">#</a></h5>
@@ -1666,11 +1821,12 @@ as your API key will be sent to this host.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.HdbitsIndexer.api_key" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">Password</span></code>
+          <code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">Password</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.HdbitsIndexer.api_key" class="headerlink" title="Permanent link">#</a></h5>
@@ -1687,11 +1843,13 @@ as your API key will be sent to this host.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.HdbitsIndexer.api_url" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">api_url</span><span class="p">:</span> <span class="n">AnyHttpUrl</span> <span class="o">=</span> <span class="s1">&#39;https://hdbits.org&#39;</span></code>
+          <code class="highlight language-python"><span class="n">api_url</span><span class="p">:</span> <span class="n">AnyHttpUrl</span> <span class="o">=</span> <span class="s1">&#39;https://hdbits.org&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.HdbitsIndexer.api_url" class="headerlink" title="Permanent link">#</a></h5>
@@ -1720,6 +1878,7 @@ as your API key will be sent to this host.</p>
 <div class="doc doc-object doc-class">
 
 
+
 <a id="buildarr_sonarr.config.indexers.IptorrentsIndexer"></a>
   <div class="doc doc-contents first">
 
@@ -1730,7 +1889,6 @@ as your API key will be sent to this host.</p>
 <p>IP Torrents' native API does not support automatic searching.
 It is recommended to instead configure IP Torrents as a Torznab indexer.</p>
 </div>
-
 
 
   
@@ -1747,11 +1905,13 @@ It is recommended to instead configure IP Torrents as a Torznab indexer.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.IptorrentsIndexer.type" class="doc doc-heading">
-<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;iptorrents&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;iptorrents&#39;</span></code>
+          <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;iptorrents&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;iptorrents&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.IptorrentsIndexer.type" class="headerlink" title="Permanent link">#</a></h5>
@@ -1768,11 +1928,12 @@ It is recommended to instead configure IP Torrents as a Torznab indexer.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.IptorrentsIndexer.feed_url" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">feed_url</span><span class="p">:</span> <span class="n">RssUrl</span></code>
+          <code class="highlight language-python"><span class="n">feed_url</span><span class="p">:</span> <span class="n">RssUrl</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.IptorrentsIndexer.feed_url" class="headerlink" title="Permanent link">#</a></h5>
@@ -1800,13 +1961,13 @@ you selected (HD, SD, x264, etc ...).</p>
 <div class="doc doc-object doc-class">
 
 
+
 <a id="buildarr_sonarr.config.indexers.NyaaIndexer"></a>
   <div class="doc doc-contents first">
 
   
       <p>Monitor for new anime releases on the configured Nyaa domain.</p>
 <p>Nyaa only supports searching for Anime series type releases.</p>
-
 
 
   
@@ -1823,11 +1984,13 @@ you selected (HD, SD, x264, etc ...).</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.NyaaIndexer.type" class="doc doc-heading">
-<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;nyaa&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;nyaa&#39;</span></code>
+          <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;nyaa&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;nyaa&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.NyaaIndexer.type" class="headerlink" title="Permanent link">#</a></h5>
@@ -1844,11 +2007,12 @@ you selected (HD, SD, x264, etc ...).</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.NyaaIndexer.website_url" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">website_url</span><span class="p">:</span> <span class="n">AnyHttpUrl</span></code>
+          <code class="highlight language-python"><span class="n">website_url</span><span class="p">:</span> <span class="n">AnyHttpUrl</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.NyaaIndexer.website_url" class="headerlink" title="Permanent link">#</a></h5>
@@ -1865,11 +2029,13 @@ you selected (HD, SD, x264, etc ...).</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.NyaaIndexer.anime_standard_format_search" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">anime_standard_format_search</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+          <code class="highlight language-python"><span class="n">anime_standard_format_search</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.NyaaIndexer.anime_standard_format_search" class="headerlink" title="Permanent link">#</a></h5>
@@ -1886,11 +2052,13 @@ you selected (HD, SD, x264, etc ...).</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.NyaaIndexer.additional_parameters" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">additional_parameters</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;&amp;cats=1_0&amp;filter=1&#39;</span></code>
+          <code class="highlight language-python"><span class="n">additional_parameters</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;&amp;cats=1_0&amp;filter=1&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.NyaaIndexer.additional_parameters" class="headerlink" title="Permanent link">#</a></h5>
@@ -1919,12 +2087,12 @@ required/restricted rules about the subgroups to avoid foreign language releases
 <div class="doc doc-object doc-class">
 
 
+
 <a id="buildarr_sonarr.config.indexers.RarbgIndexer"></a>
   <div class="doc doc-contents first">
 
   
       <p>Monitor for new releases on the RARBG torrent tracker.</p>
-
 
 
   
@@ -1941,11 +2109,13 @@ required/restricted rules about the subgroups to avoid foreign language releases
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.RarbgIndexer.type" class="doc doc-heading">
-<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;rarbg&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;rarbg&#39;</span></code>
+          <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;rarbg&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;rarbg&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.RarbgIndexer.type" class="headerlink" title="Permanent link">#</a></h5>
@@ -1962,11 +2132,12 @@ required/restricted rules about the subgroups to avoid foreign language releases
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.RarbgIndexer.api_url" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">api_url</span><span class="p">:</span> <span class="n">AnyHttpUrl</span></code>
+          <code class="highlight language-python"><span class="n">api_url</span><span class="p">:</span> <span class="n">AnyHttpUrl</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.RarbgIndexer.api_url" class="headerlink" title="Permanent link">#</a></h5>
@@ -1983,11 +2154,13 @@ required/restricted rules about the subgroups to avoid foreign language releases
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.RarbgIndexer.ranked_only" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">ranked_only</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+          <code class="highlight language-python"><span class="n">ranked_only</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.RarbgIndexer.ranked_only" class="headerlink" title="Permanent link">#</a></h5>
@@ -2004,11 +2177,13 @@ required/restricted rules about the subgroups to avoid foreign language releases
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.RarbgIndexer.captcha_token" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">captcha_token</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+          <code class="highlight language-python"><span class="n">captcha_token</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.RarbgIndexer.captcha_token" class="headerlink" title="Permanent link">#</a></h5>
@@ -2035,6 +2210,7 @@ required/restricted rules about the subgroups to avoid foreign language releases
 <div class="doc doc-object doc-class">
 
 
+
 <a id="buildarr_sonarr.config.indexers.TorrentrssfeedIndexer"></a>
   <div class="doc doc-contents first">
 
@@ -2046,7 +2222,6 @@ required/restricted rules about the subgroups to avoid foreign language releases
 It is recommended to use an indexer that natively communicates with
 a tracker using an API.</p>
 </div>
-
 
 
   
@@ -2063,11 +2238,13 @@ a tracker using an API.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.TorrentrssfeedIndexer.type" class="doc doc-heading">
-<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;torrentrssfeed&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;torrentrssfeed&#39;</span></code>
+          <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;torrentrssfeed&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;torrentrssfeed&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.TorrentrssfeedIndexer.type" class="headerlink" title="Permanent link">#</a></h5>
@@ -2084,11 +2261,12 @@ a tracker using an API.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.TorrentrssfeedIndexer.full_rss_feed_url" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">full_rss_feed_url</span><span class="p">:</span> <span class="n">RssUrl</span></code>
+          <code class="highlight language-python"><span class="n">full_rss_feed_url</span><span class="p">:</span> <span class="n">RssUrl</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.TorrentrssfeedIndexer.full_rss_feed_url" class="headerlink" title="Permanent link">#</a></h5>
@@ -2105,11 +2283,13 @@ a tracker using an API.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.TorrentrssfeedIndexer.cookie" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">cookie</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+          <code class="highlight language-python"><span class="n">cookie</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.TorrentrssfeedIndexer.cookie" class="headerlink" title="Permanent link">#</a></h5>
@@ -2127,11 +2307,13 @@ a tracker using an API.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.TorrentrssfeedIndexer.allow_zero_size" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">allow_zero_size</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+          <code class="highlight language-python"><span class="n">allow_zero_size</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.TorrentrssfeedIndexer.allow_zero_size" class="headerlink" title="Permanent link">#</a></h5>
@@ -2159,6 +2341,7 @@ a tracker using an API.</p>
 <div class="doc doc-object doc-class">
 
 
+
 <a id="buildarr_sonarr.config.indexers.TorrentleechIndexer"></a>
   <div class="doc doc-contents first">
 
@@ -2168,7 +2351,6 @@ a tracker using an API.</p>
 <p class="admonition-title">Note</p>
 <p>This indexer does not support automatic searching.</p>
 </div>
-
 
 
   
@@ -2185,11 +2367,13 @@ a tracker using an API.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.TorrentleechIndexer.type" class="doc doc-heading">
-<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;torrentleech&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;torrentleech&#39;</span></code>
+          <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;torrentleech&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;torrentleech&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.TorrentleechIndexer.type" class="headerlink" title="Permanent link">#</a></h5>
@@ -2206,11 +2390,13 @@ a tracker using an API.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.TorrentleechIndexer.website_url" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">website_url</span><span class="p">:</span> <span class="n">AnyHttpUrl</span> <span class="o">=</span> <span class="s1">&#39;http://rss.torrentleech.org&#39;</span></code>
+          <code class="highlight language-python"><span class="n">website_url</span><span class="p">:</span> <span class="n">AnyHttpUrl</span> <span class="o">=</span> <span class="s1">&#39;http://rss.torrentleech.org&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.TorrentleechIndexer.website_url" class="headerlink" title="Permanent link">#</a></h5>
@@ -2227,11 +2413,12 @@ a tracker using an API.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.TorrentleechIndexer.api_key" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">Password</span></code>
+          <code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">Password</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.TorrentleechIndexer.api_key" class="headerlink" title="Permanent link">#</a></h5>
@@ -2258,13 +2445,13 @@ a tracker using an API.</p>
 <div class="doc doc-object doc-class">
 
 
+
 <a id="buildarr_sonarr.config.indexers.TorznabIndexer"></a>
   <div class="doc doc-contents first">
 
   
       <p>Monitor and search for new releases on a Torznab-compliant torrent indexing site.</p>
 <p>Sonarr defines presets for several popular sites.</p>
-
 
 
   
@@ -2281,11 +2468,13 @@ a tracker using an API.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.TorznabIndexer.type" class="doc doc-heading">
-<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;torznab&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;torznab&#39;</span></code>
+          <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;torznab&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;torznab&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.TorznabIndexer.type" class="headerlink" title="Permanent link">#</a></h5>
@@ -2302,11 +2491,12 @@ a tracker using an API.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.TorznabIndexer.url" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">url</span><span class="p">:</span> <span class="n">AnyHttpUrl</span></code>
+          <code class="highlight language-python"><span class="n">url</span><span class="p">:</span> <span class="n">AnyHttpUrl</span></code>
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.TorznabIndexer.url" class="headerlink" title="Permanent link">#</a></h5>
@@ -2323,11 +2513,13 @@ a tracker using an API.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.TorznabIndexer.api_path" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">api_path</span><span class="p">:</span> <span class="n">NonEmptyStr</span> <span class="o">=</span> <span class="s1">&#39;/api&#39;</span></code>
+          <code class="highlight language-python"><span class="n">api_path</span><span class="p">:</span> <span class="n">NonEmptyStr</span> <span class="o">=</span> <span class="s1">&#39;/api&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.TorznabIndexer.api_path" class="headerlink" title="Permanent link">#</a></h5>
@@ -2344,11 +2536,13 @@ a tracker using an API.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.TorznabIndexer.categories" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">categories</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NabCategory</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">NabCategory</span><span class="o">.</span><span class="n">TV_SD</span><span class="p">,</span> <span class="n">NabCategory</span><span class="o">.</span><span class="n">TV_HD</span><span class="p">}</span></code>
+          <code class="highlight language-python"><span class="n">categories</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NabCategory</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">NabCategory</span><span class="o">.</span><span class="n">TV_SD</span><span class="p">,</span> <span class="n">NabCategory</span><span class="o">.</span><span class="n">TV_HD</span><span class="p">}</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.TorznabIndexer.categories" class="headerlink" title="Permanent link">#</a></h5>
@@ -2378,11 +2572,13 @@ Define as empty to disable.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.TorznabIndexer.anime_categories" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">anime_categories</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NabCategory</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
+          <code class="highlight language-python"><span class="n">anime_categories</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NabCategory</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.TorznabIndexer.anime_categories" class="headerlink" title="Permanent link">#</a></h5>
@@ -2411,11 +2607,13 @@ Define as empty to disable.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.TorznabIndexer.anime_standard_format_search" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">anime_standard_format_search</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
+          <code class="highlight language-python"><span class="n">anime_standard_format_search</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.TorznabIndexer.anime_standard_format_search" class="headerlink" title="Permanent link">#</a></h5>
@@ -2432,11 +2630,13 @@ Define as empty to disable.</p>
 
 
 
+
 <h5 id="buildarr_sonarr.config.indexers.TorznabIndexer.additional_parameters" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">additional_parameters</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+          <code class="highlight language-python"><span class="n">additional_parameters</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
 <a href="#buildarr_sonarr.config.indexers.TorznabIndexer.additional_parameters" class="headerlink" title="Permanent link">#</a></h5>
@@ -2465,12 +2665,14 @@ Define as empty to disable.</p>
             <hr>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
+        <script src="../../../../js/jquery-3.6.0.min.js"></script>
+        <script src="../../../../js/bootstrap.min.js"></script>
         <script>
             var base_url = "../../../..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="../../../../js/base.js" defer></script>
-        <script src="../../../../search/main.js" defer></script>
+        <script src="../../../../js/base.js"></script>
+        <script src="../../../../search/main.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
