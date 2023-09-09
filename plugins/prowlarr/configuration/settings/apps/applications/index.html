@@ -1068,6 +1068,12 @@ including <code>http[s]://</code>, port, and URL base (if needed).</p>
 
   
       <p>Add a <a href="https://radarr.video">Radarr</a> instance to sync with Prowlarr.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There is a <a href="https://buidarr.github.io/plugins/radarr">Radarr plugin for Buildarr</a>
+that can be used to link Radarr instances with Prowlarr using the <code>instance_name</code>
+attribute.</p>
+</div>
 
 
   
@@ -1108,10 +1114,35 @@ including <code>http[s]://</code>, port, and URL base (if needed).</p>
 
 
 
-<h5 id="buildarr_prowlarr.config.settings.apps.applications.RadarrApplication.api_key" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">ArrApiKey</span></code>
+<h5 id="buildarr_prowlarr.config.settings.apps.applications.RadarrApplication.instance_name" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">instance_name</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">InstanceName</span><span class="p">]</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">plugin</span><span class="o">=</span><span class="s1">&#39;radarr&#39;</span><span class="p">)</span></code>
   
   <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.apps.applications.RadarrApplication.instance_name" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The name of the Radarr instance within Buildarr, if adding
+a Buildarr-defined Radarr instance to this Prowlarr instance.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.apps.applications.RadarrApplication.api_key" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ArrApiKey</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
@@ -1120,7 +1151,9 @@ including <code>http[s]://</code>, port, and URL base (if needed).</p>
 
   <div class="doc doc-contents ">
   
-      <p>API key used to access the target instance.</p>
+      <p>API key used to access the target Radarr instance.</p>
+<p>If a Radarr instance managed by Buildarr is not referenced using <code>instance_name</code>,
+this attribute is required.</p>
   </div>
 
 </div>
@@ -1304,7 +1337,7 @@ attribute.</p>
 
   <div class="doc doc-contents ">
   
-      <p>Type value associated with this kind of application</p>
+      <p>Type value associated with this kind of application.</p>
   </div>
 
 </div>
