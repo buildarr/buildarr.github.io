@@ -1410,7 +1410,7 @@ Any other port number will result in STARTTLS being used.</p>
 
 
 <h5 id="buildarr_sonarr.config.connect.EmailConnection.from_address" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">from_address</span><span class="p">:</span> <span class="n">NameEmail</span></code>
+          <code class="highlight language-python"><span class="n">from_address</span><span class="p">:</span> <span class="n">EmailStr</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
@@ -1422,8 +1422,9 @@ Any other port number will result in STARTTLS being used.</p>
   <div class="doc doc-contents ">
   
       <p>Email address to send the mail as.</p>
-<p>RFC-5322 formatted mailbox addresses are also supported,
-e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
+<p><em>Changed in version 0.5.3</em>: Disallow RFC-5322 formatted mailbox addresses
+(e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>), as they are <strong>not</strong>
+supported by Sonarr V3 (the currently supported version).</p>
   </div>
 
 </div>
@@ -1434,7 +1435,7 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 <h5 id="buildarr_sonarr.config.connect.EmailConnection.recipient_addresses" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">recipient_addresses</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">NameEmail</span><span class="p">],</span> <span class="n">Field</span><span class="p">(</span><span class="n">min_items</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">unique_items</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span></code>
+          <code class="highlight language-python"><span class="n">recipient_addresses</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">EmailStr</span><span class="p">],</span> <span class="n">Field</span><span class="p">(</span><span class="n">min_items</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">unique_items</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
@@ -1447,6 +1448,9 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
   
       <p>List of email addresses to directly address the mail to.</p>
 <p>At least one address must be provided.</p>
+<p><em>Changed in version 0.5.3</em>: Disallow RFC-5322 formatted mailbox addresses
+(e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>), as they are <strong>not</strong>
+supported by Sonarr V3 (the currently supported version).</p>
   </div>
 
 </div>
@@ -1457,7 +1461,7 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 <h5 id="buildarr_sonarr.config.connect.EmailConnection.cc_addresses" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">cc_addresses</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">NameEmail</span><span class="p">],</span> <span class="n">Field</span><span class="p">(</span><span class="n">unique_items</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span> <span class="o">=</span> <span class="p">[]</span></code>
+          <code class="highlight language-python"><span class="n">cc_addresses</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">EmailStr</span><span class="p">],</span> <span class="n">Field</span><span class="p">(</span><span class="n">unique_items</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span> <span class="o">=</span> <span class="p">[]</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
@@ -1470,6 +1474,9 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
   <div class="doc doc-contents ">
   
       <p>Optional list of email addresses to copy (CC) the mail to.</p>
+<p><em>Changed in version 0.5.3</em>: Disallow RFC-5322 formatted mailbox addresses
+(e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>), as they are <strong>not</strong>
+supported by Sonarr V3 (the currently supported version).</p>
   </div>
 
 </div>
@@ -1480,7 +1487,7 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 <h5 id="buildarr_sonarr.config.connect.EmailConnection.bcc_addresses" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">bcc_addresses</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">NameEmail</span><span class="p">],</span> <span class="n">Field</span><span class="p">(</span><span class="n">unique_items</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span> <span class="o">=</span> <span class="p">[]</span></code>
+          <code class="highlight language-python"><span class="n">bcc_addresses</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">EmailStr</span><span class="p">],</span> <span class="n">Field</span><span class="p">(</span><span class="n">unique_items</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span> <span class="o">=</span> <span class="p">[]</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
@@ -1493,6 +1500,9 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
   <div class="doc doc-contents ">
   
       <p>Optional list of email addresses to blind copy (BCC) the mail to.</p>
+<p><em>Changed in version 0.5.3</em>: Disallow RFC-5322 formatted mailbox addresses
+(e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>), as they are <strong>not</strong>
+supported by Sonarr V3 (the currently supported version).</p>
   </div>
 
 </div>
@@ -2342,7 +2352,7 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 <h5 id="buildarr_sonarr.config.connect.MailgunConnection.from_address" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">from_address</span><span class="p">:</span> <span class="n">NameEmail</span></code>
+          <code class="highlight language-python"><span class="n">from_address</span><span class="p">:</span> <span class="n">EmailStr</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
@@ -2354,8 +2364,9 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
   <div class="doc doc-contents ">
   
       <p>Email address to send the mail as.</p>
-<p>RFC-5322 formatted mailbox addresses are also supported,
-e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
+<p><em>Changed in version 0.5.3</em>: Disallow RFC-5322 formatted mailbox addresses
+(e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>), as they are <strong>not</strong>
+supported by Sonarr V3 (the currently supported version).</p>
   </div>
 
 </div>
@@ -2388,7 +2399,7 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 <h5 id="buildarr_sonarr.config.connect.MailgunConnection.recipient_addresses" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">recipient_addresses</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">NameEmail</span><span class="p">],</span> <span class="n">Field</span><span class="p">(</span><span class="n">min_items</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">unique_items</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span></code>
+          <code class="highlight language-python"><span class="n">recipient_addresses</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">EmailStr</span><span class="p">],</span> <span class="n">Field</span><span class="p">(</span><span class="n">min_items</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">unique_items</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
@@ -2401,6 +2412,9 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
   
       <p>The recipient email addresses of the notification mail.</p>
 <p>At least one recipient address is required.</p>
+<p><em>Changed in version 0.5.3</em>: Disallow RFC-5322 formatted mailbox addresses
+(e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>), as they are <strong>not</strong>
+supported by Sonarr V3 (the currently supported version).</p>
   </div>
 
 </div>
@@ -3576,7 +3590,7 @@ If <code>retry</code> is set, this should be set to a higher value.</p>
 
 
 <h5 id="buildarr_sonarr.config.connect.SendgridConnection.from_address" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">from_address</span><span class="p">:</span> <span class="n">NameEmail</span></code>
+          <code class="highlight language-python"><span class="n">from_address</span><span class="p">:</span> <span class="n">EmailStr</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
@@ -3588,8 +3602,9 @@ If <code>retry</code> is set, this should be set to a higher value.</p>
   <div class="doc doc-contents ">
   
       <p>Email address to send the mail as.</p>
-<p>RFC-5322 formatted mailbox addresses are also supported,
-e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
+<p><em>Changed in version 0.5.3</em>: Disallow RFC-5322 formatted mailbox addresses
+(e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>), as they are <strong>not</strong>
+supported by Sonarr V3 (the currently supported version).</p>
   </div>
 
 </div>
@@ -3600,7 +3615,7 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
 
 
 <h5 id="buildarr_sonarr.config.connect.SendgridConnection.recipient_addresses" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">recipient_addresses</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">NameEmail</span><span class="p">],</span> <span class="n">Field</span><span class="p">(</span><span class="n">min_items</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">unique_items</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span></code>
+          <code class="highlight language-python"><span class="n">recipient_addresses</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">EmailStr</span><span class="p">],</span> <span class="n">Field</span><span class="p">(</span><span class="n">min_items</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">unique_items</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
@@ -3613,6 +3628,9 @@ e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>.</p>
   
       <p>The recipient email addresses of the notification mail.</p>
 <p>At least one recipient address is required.</p>
+<p><em>Changed in version 0.5.3</em>: Disallow RFC-5322 formatted mailbox addresses
+(e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>), as they are <strong>not</strong>
+supported by Sonarr V3 (the currently supported version).</p>
   </div>
 
 </div>
