@@ -423,6 +423,10 @@
             
             <li class="nav-item" data-level="1"><a href="#release-notes-buildarr-core" class="nav-link">Release Notes (Buildarr Core)</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#v062-2023-11-07" class="nav-link">v0.6.2 - 2023-11-07</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#v061-2023-09-11" class="nav-link">v0.6.1 - 2023-09-11</a>
               <ul class="nav flex-column">
               </ul>
@@ -475,6 +479,70 @@
                     <div class="col-md-9" role="main">
 
 <h1 id="release-notes-buildarr-core">Release Notes (Buildarr Core)<a class="headerlink" href="#release-notes-buildarr-core" title="Permanent link">#</a></h1>
+<h2 id="v062-2023-11-07"><a href="https://github.com/buildarr/buildarr/releases/tag/v0.6.2">v0.6.2</a> - 2023-11-07<a class="headerlink" href="#v062-2023-11-07" title="Permanent link">#</a></h2>
+<p>This is a backwards-compatible feature release that makes using multiple configuration files more flexible.</p>
+<p>Buildarr allows you to split your configuration into multiple files using the <code>includes</code> option.</p>
+<p>Before this release, however, there was a limitation to this functionality: each individual file had to be a valid configuration file on its own, and each file had to parse correctly when validated.</p>
+<p><code>prowlarr.yml</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="nn">---</span>
+
+<span class="nt">includes</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">prowlarr-2.yml</span>
+
+<span class="nt">prowlarr</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">instances</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">prowlarr</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">api_key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">xxxx</span>
+<span class="w">      </span><span class="nt">settings</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">indexers</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">indexers</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">definitions</span><span class="p">:</span>
+<span class="w">              </span><span class="s">&quot;Nyaa.si&quot;</span><span class="p p-Indicator">:</span>
+<span class="w">                </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nyaasi</span>
+<span class="w">                </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">                </span><span class="nt">sync_profile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Standard</span>
+<span class="w">                </span><span class="nt">redirect</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">                </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15</span>
+<span class="w">                </span><span class="nt">grab_limit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50</span><span class="w">  </span><span class="c1"># Overridden in the included file.</span>
+<span class="w">                </span><span class="nt">query_limit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10010</span>
+<span class="w">                </span><span class="nt">fields</span><span class="p">:</span>
+<span class="w">                  </span><span class="nt">torrentBaseSettings.seedRatio</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">                  </span><span class="nt">prefer_magnet_links</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</code></pre></div>
+<p><code>prowlarr-2.yml</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="nn">---</span>
+
+<span class="nt">prowlarr</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">instances</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">prowlarr</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">settings</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">indexers</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">indexers</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">definitions</span><span class="p">:</span>
+<span class="w">              </span><span class="s">&quot;Nyaa.si&quot;</span><span class="p p-Indicator">:</span>
+<span class="w">                </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nyaasi</span><span class="w">  </span><span class="c1"># Already defined, but must be defined here to work.</span>
+<span class="w">                </span><span class="nt">sync_profile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Standard</span><span class="w">  </span><span class="c1"># Already defined, but must be defined here to work as well.</span>
+<span class="w">                </span><span class="nt">grab_limit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">104</span><span class="w">  </span><span class="c1"># Override the value in the original file.</span>
+</code></pre></div>
+<p>With this release, this limitation has now been eliminated. The above example can now be simplified to the following, and it will work as expected:</p>
+<div class="highlight"><pre><span></span><code><span class="nn">---</span>
+
+<span class="nt">prowlarr</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">instances</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">prowlarr</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">settings</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">indexers</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">indexers</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">definitions</span><span class="p">:</span>
+<span class="w">              </span><span class="s">&quot;Nyaa.si&quot;</span><span class="p p-Indicator">:</span>
+<span class="w">                </span><span class="nt">grab_limit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">104</span><span class="w">  </span><span class="c1"># Override the value in the original file.</span>
+</code></pre></div>
+<p>This makes it possible to more freely structure your configuration files, e.g. splitting secret parameters (e.g. API keys and passwords) into a separate file from the main configuration.</p>
+<p>For more information, check the configuration documentation.</p>
+<h3 id="changed">Changed<a class="headerlink" href="#changed" title="Permanent link">#</a></h3>
+<ul>
+<li>Allow any configuration value to be defined in any file (<a href="https://github.com/buildarr/buildarr/pull/146">#146</a>)</li>
+</ul>
 <h2 id="v061-2023-09-11"><a href="https://github.com/buildarr/buildarr/releases/tag/v0.6.1">v0.6.1</a> - 2023-09-11<a class="headerlink" href="#v061-2023-09-11" title="Permanent link">#</a></h2>
 <p>This is a backwards-compatible feature release that adds built-in support for parsing, decoding and encoding email attribute types that include a name (e.g. <code>Example Admin &lt;admin@example.com&gt;</code>).</p>
 <p>Some plugins use this attribute type (<code>NameEmail</code> in Pydantic) without explicitly defining parameters for parsing it, so this adds sane defaults for that attribute type to ensure parsing works appropriately.</p>
@@ -495,7 +563,7 @@
 <ul>
 <li>Add post-initialisation rendering step (<a href="https://github.com/buildarr/buildarr/pull/126">#126</a>)</li>
 </ul>
-<h3 id="changed">Changed<a class="headerlink" href="#changed" title="Permanent link">#</a></h3>
+<h3 id="changed_1">Changed<a class="headerlink" href="#changed_1" title="Permanent link">#</a></h3>
 <ul>
 <li>Detect plugins that do not use config rendering (<a href="https://github.com/buildarr/buildarr/pull/116">#116</a>)</li>
 <li>Fix running plugins that do not perform config rendering (<a href="https://github.com/buildarr/buildarr/pull/132">#132</a>)</li>
@@ -513,7 +581,7 @@
 <ul>
 <li>Add <code>request_timeout</code> global state attribute (<a href="https://github.com/buildarr/buildarr/pull/114">#114</a>)</li>
 </ul>
-<h3 id="changed_1">Changed<a class="headerlink" href="#changed_1" title="Permanent link">#</a></h3>
+<h3 id="changed_2">Changed<a class="headerlink" href="#changed_2" title="Permanent link">#</a></h3>
 <ul>
 <li>Set <code>validate_assignment</code> to <code>True</code> by default for config models (<a href="https://github.com/buildarr/buildarr/pull/115">#115</a>)</li>
 <li>Change <code>ConfigBase.uses_trash_metadata</code> to a function (<a href="https://github.com/buildarr/buildarr/pull/116">#116</a>)</li>
@@ -559,7 +627,7 @@
 <li>Add generic configuration rendering stage (<a href="https://github.com/buildarr/buildarr/pull/101">#101</a>)</li>
 <li>Add resource deletion stage after configuration updates (<a href="https://github.com/buildarr/buildarr/pull/102">#102</a>)</li>
 </ul>
-<h3 id="changed_2">Changed<a class="headerlink" href="#changed_2" title="Permanent link">#</a></h3>
+<h3 id="changed_3">Changed<a class="headerlink" href="#changed_3" title="Permanent link">#</a></h3>
 <ul>
 <li>Deprecate <code>BaseIntEnum</code> (<a href="https://github.com/buildarr/buildarr/pull/95">#95</a>)</li>
 <li>Allow the default instance to be used in instance links (<a href="https://github.com/buildarr/buildarr/pull/98">#98</a>)</li>
@@ -579,7 +647,7 @@
 <ul>
 <li>Add overriding the value compare function to remote maps (<a href="https://github.com/buildarr/buildarr/pull/84">#84</a>)</li>
 </ul>
-<h3 id="changed_3">Changed<a class="headerlink" href="#changed_3" title="Permanent link">#</a></h3>
+<h3 id="changed_4">Changed<a class="headerlink" href="#changed_4" title="Permanent link">#</a></h3>
 <ul>
 <li>Fix config file monitoring in the Docker container (<a href="https://github.com/buildarr/buildarr/pull/82">#82</a>)</li>
 <li>Fix mistakes in error messages (<a href="https://github.com/buildarr/buildarr/pull/85">#85</a>)</li>
@@ -617,7 +685,7 @@
 <li>Reintroduce <code>buildarr.__version__</code> and use it internally (<a href="https://github.com/buildarr/buildarr/pull/75">#75</a>)</li>
 <li>Add <code>version</code> attribute to plugin metadata object (<a href="https://github.com/buildarr/buildarr/pull/78">#78</a>)</li>
 </ul>
-<h3 id="changed_4">Changed<a class="headerlink" href="#changed_4" title="Permanent link">#</a></h3>
+<h3 id="changed_5">Changed<a class="headerlink" href="#changed_5" title="Permanent link">#</a></h3>
 <ul>
 <li>Convert most root validators to attribute-specific validators (<a href="https://github.com/buildarr/buildarr/pull/54">#54</a>)</li>
 <li>Remove unused code and fix pre-commit job (<a href="https://github.com/buildarr/buildarr/pull/58">#58</a>)</li>
@@ -680,7 +748,7 @@
 <li>Improve Sonarr quality definition <a href="https://buildarr.github.io/plugins/sonarr/configuration/quality/#buildarr_sonarr.config.quality.QualityDefinition.min"><code>min</code> and <code>max</code></a> validation so that <code>400</code> is also a valid value for <code>max</code>, and enforce <code>min</code>-<code>max</code> value difference constraints</li>
 <li>Major internal code refactor through the introduction of <a href="https://beta.ruff.rs/docs">Ruff</a> to the development pipeline, fixing a large number of minor code quality issues</li>
 </ul>
-<h3 id="changed_5">Changed<a class="headerlink" href="#changed_5" title="Permanent link">#</a></h3>
+<h3 id="changed_6">Changed<a class="headerlink" href="#changed_6" title="Permanent link">#</a></h3>
 <ul>
 <li>Fix fetching new instance secrets (<a href="https://github.com/buildarr/buildarr/pull/44">#44</a>)</li>
 <li>Accept local and non-qualified domain names in URLs (<a href="https://github.com/buildarr/buildarr/pull/46">#46</a>)</li>
@@ -706,7 +774,7 @@
 <li>Implement testing of cached and fetched instance secrets (<a href="https://github.com/buildarr/buildarr/pull/32">#32</a>)</li>
 <li>Refactor the internals of Buildarr to improve maintainability (<a href="https://github.com/buildarr/buildarr/pull/30">#30</a>)</li>
 </ul>
-<h3 id="changed_6">Changed<a class="headerlink" href="#changed_6" title="Permanent link">#</a></h3>
+<h3 id="changed_7">Changed<a class="headerlink" href="#changed_7" title="Permanent link">#</a></h3>
 <ul>
 <li>Convert <code>Password</code> and <code>SonarrApiKey</code> to subclasses of <code>SecretStr</code> (<a href="https://github.com/buildarr/buildarr/pull/34">#34</a>)</li>
 <li>Fix CLI exception class inheritance (<a href="https://github.com/buildarr/buildarr/pull/35">#35</a>)</li>
@@ -762,7 +830,7 @@
 <ul>
 <li>Added the <code>sonarr.settings.media_management.delete_unmanaged_root_folders</code> configuration attribute (<a href="https://github.com/buildarr/buildarr/pull/24">#24</a>)</li>
 </ul>
-<h3 id="changed_7">Changed<a class="headerlink" href="#changed_7" title="Permanent link">#</a></h3>
+<h3 id="changed_8">Changed<a class="headerlink" href="#changed_8" title="Permanent link">#</a></h3>
 <ul>
 <li>Improve and fix Sonarr general settings configuration updates (<a href="https://github.com/buildarr/buildarr/pull/19">#19</a>)</li>
 <li>Fix Sonarr UI settings updates (<a href="https://github.com/buildarr/buildarr/pull/20">#20</a>)</li>
@@ -785,7 +853,7 @@ and add more detail.</p>
 <li>Add a GitHub Action to push releases to PyPI (<a href="https://github.com/buildarr/buildarr/pull/11">#11</a>)</li>
 <li>Create a <code>buildarr-dummy</code> plugin for testing the Buildarr plugin API (<a href="https://github.com/buildarr/buildarr/pull/12">#12</a>)</li>
 </ul>
-<h3 id="changed_8">Changed<a class="headerlink" href="#changed_8" title="Permanent link">#</a></h3>
+<h3 id="changed_9">Changed<a class="headerlink" href="#changed_9" title="Permanent link">#</a></h3>
 <ul>
 <li>Fix $PUID and $GUID declarations (<a href="https://github.com/buildarr/buildarr/commit/b5110f3">b5110f3</a>)</li>
 <li>Fix Docker Hub link (<a href="https://github.com/buildarr/buildarr/commit/be0ba12">be0ba12</a>)</li>

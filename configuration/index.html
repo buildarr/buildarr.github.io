@@ -474,21 +474,71 @@
 </code></pre></div>
 <h2 id="multiple-configuration-files">Multiple configuration files<a class="headerlink" href="#multiple-configuration-files" title="Permanent link">#</a></h2>
 <p>Using the <code>includes</code> block, multiple configuration files can be included and read from one <code>buildarr.yml</code> file.</p>
-<p>Nested inclusion is allowed (included files can include other files). All the loaded configuration files are merged into a single structure in a <a href="https://en.wikipedia.org/wiki/Breadth-first_search">breadth-first</a> fashion.</p>
-<p>If any configuration attributes in files overlap, the last-read value will take precedence. Note that any overlapping attributes that are lists will be overwritten, rather than combined.</p>
+<p>This is useful for logical seperation of configuration structures, for example:</p>
+<ul>
+<li>By instance type (Sonarr, Radarr, and so on)</li>
+<li>Defining secrets (API keys and passwords) in separate, encrypted configuration files (e.g. for secrets management in Kubernetes)</li>
+</ul>
+<p>Nested inclusion is allowed (included files can include other files). All the loaded configuration files are merged into a single structure using <a href="https://en.wikipedia.org/wiki/Breadth-first_search">breadth-first search</a>.</p>
+<p>Each configuration file will be combined according to the following rules:</p>
+<ul>
+<li>If there are any overlapping configuration attributes defined in multiple files, the value in the last-read file will take precedence.</li>
+<li>Overlapping <code>list</code>-type attributes will be overwritten, rather than combined.</li>
+<li>If a local path attribute defined in the configuration file (e.g. <a href="#buildarr.config.buildarr.BuildarrConfig.secrets_file_path"><code>secrets_file_path</code></a>) is a relative path, that path will be resolved relative to the parent directory of the configuration file it is defined in. If they are not defined in <em>any</em> file, the default value will be resolved relative to the parent directory of the <em>first</em> configuration file loaded.</li>
+</ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>In order to evaluate per-file relative paths, configuration files will be parsed and validated individually first, and then validated again as a combined configuration structure.</p>
-<p>Take care to ensure that the individual configuration files do not depend on each other being combined to become valid.</p>
-<p>Instances that depend on other instances via e.g. <code>instance_name</code> are not subject to this limitation, and can freely be defined in separate files.</p>
-<p>To make troubleshooting easier and to ensure readability, overly complicated include structures in configuration files should be avoided.</p>
+<p>To make troubleshooting easier and to ensure readability, overly complicated include structures in configuration files should be avoided, if possible.</p>
 </div>
-<p>Here is an example of a global <code>buildarr.yml</code> configuration file including two Sonarr instance configuration from separate files in the same directory as <code>buildarr.yml</code>:</p>
+<h3 id="separating-by-instance-type">Separating by instance type<a class="headerlink" href="#separating-by-instance-type" title="Permanent link">#</a></h3>
+<p>Here is an example where Sonarr and Radarr instances are configured in separate files.</p>
 <p><code>buildarr.yml</code>:
 <div class="highlight"><pre><span></span><code><span class="nn">---</span>
+
 <span class="nt">includes</span><span class="p">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sonarr1.yml</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sonarr2.yml</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sonarr.yml</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">radarr.yml</span>
+
+<span class="nt">buildarr</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">watch_config</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">update_days</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;monday&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;tuesday&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;wednesday&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;thursday&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;friday&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;saturday&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;sunday&quot;</span>
+<span class="w">  </span><span class="nt">update_times</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;03:00&quot;</span>
+</code></pre></div></p>
+<p><code>sonarr.yml</code>:
+<div class="highlight"><pre><span></span><code><span class="nn">---</span>
+
+<span class="nt">sonarr</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;sonarr.example.com&quot;</span>
+<span class="w">  </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8989</span>
+<span class="w">  </span><span class="nt">protocol</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;http&quot;</span>
+<span class="w">  </span><span class="nt">settings</span><span class="p">:</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+</code></pre></div></p>
+<p><code>radarr.yml</code>:
+<div class="highlight"><pre><span></span><code><span class="nn">---</span>
+
+<span class="nt">radarr</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;radarr.example.com&quot;</span>
+<span class="w">  </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7878</span>
+<span class="w">  </span><span class="nt">protocol</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;http&quot;</span>
+<span class="w">  </span><span class="nt">settings</span><span class="p">:</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+</code></pre></div></p>
+<h3 id="separating-secret-and-non-secret-configuration">Separating secret and non-secret configuration<a class="headerlink" href="#separating-secret-and-non-secret-configuration" title="Permanent link">#</a></h3>
+<p>Here is an example where Sonarr instance API keys are configured in a separate file from the standard (non-secret) settings.</p>
+<p><code>buildarr.yml</code>:
+<div class="highlight"><pre><span></span><code><span class="nn">---</span>
+
+<span class="nt">includes</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">buildarr-secret.yml</span>
 
 <span class="nt">buildarr</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">watch_config</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
@@ -504,35 +554,17 @@
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;03:00&quot;</span>
 
 <span class="nt">sonarr</span><span class="p">:</span>
-<span class="w">  </span><span class="c1"># Configuration common to all Sonarr instances.</span>
+<span class="w">  </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;sonarr.example.com&quot;</span>
+<span class="w">  </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8989</span>
+<span class="w">  </span><span class="nt">protocol</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;http&quot;</span>
 <span class="w">  </span><span class="nt">settings</span><span class="p">:</span>
 <span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">...</span>
 </code></pre></div></p>
-<p><code>sonarr1.yml</code>:
+<p><code>buildarr-secret.yml</code>:
 <div class="highlight"><pre><span></span><code><span class="nn">---</span>
 
 <span class="nt">sonarr</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">instances</span><span class="p">:</span>
-<span class="w">    </span><span class="c1"># Sonarr instance 1 connection information and configuration.</span>
-<span class="w">    </span><span class="nt">sonarr1</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;sonarr1.example.com&quot;</span>
-<span class="w">      </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8989</span>
-<span class="w">      </span><span class="nt">protocol</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;http&quot;</span>
-<span class="w">      </span><span class="nt">settings</span><span class="p">:</span>
-<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">...</span>
-</code></pre></div></p>
-<p><code>sonarr2.yml</code>:
-<div class="highlight"><pre><span></span><code><span class="nn">---</span>
-
-<span class="nt">sonarr</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">instances</span><span class="p">:</span>
-<span class="w">    </span><span class="c1"># Sonarr instance 2 connection information and configuration.</span>
-<span class="w">    </span><span class="nt">sonarr2</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;sonarr2.example.com&quot;</span>
-<span class="w">      </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8989</span>
-<span class="w">      </span><span class="nt">protocol</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;http&quot;</span>
-<span class="w">      </span><span class="nt">settings</span><span class="p">:</span>
-<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+<span class="w">  </span><span class="nt">api_key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1a2b3c4d5e1a2b3c4d5e1a</span>
 </code></pre></div></p>
 <h2 id="multiple-instances-of-the-same-type">Multiple instances of the same type<a class="headerlink" href="#multiple-instances-of-the-same-type" title="Permanent link">#</a></h2>
 <p>Using the <code>instances</code> attribute, multiple instances of the same type can be administered using a single Buildarr instance. Globally set configuration will apply to all defined instances, and settings defined under a single instance only apply to that instance.</p>
@@ -713,7 +745,7 @@ The days do not need to be in order.</p>
 
 
 <h5 id="buildarr.config.buildarr.BuildarrConfig.secrets_file_path" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">secrets_file_path</span><span class="p">:</span> <span class="n">LocalPath</span> <span class="o">=</span> <span class="n">LocalPath</span><span class="p">(</span><span class="s1">&#39;secrets.json&#39;</span><span class="p">)</span></code>
+          <code class="highlight language-python"><span class="n">secrets_file_path</span><span class="p">:</span> <span class="n">LocalPath</span> <span class="o">=</span> <span class="s1">&#39;secrets.json&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
@@ -793,7 +825,7 @@ originally loaded configuration file is located.</p>
 
 
 <h5 id="buildarr.config.buildarr.BuildarrConfig.trash_metadata_dir_prefix" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">trash_metadata_dir_prefix</span><span class="p">:</span> <span class="n">Path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;Guides-master&#39;</span><span class="p">)</span></code>
+          <code class="highlight language-python"><span class="n">trash_metadata_dir_prefix</span><span class="p">:</span> <span class="n">Path</span> <span class="o">=</span> <span class="s1">&#39;Guides-master&#39;</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
