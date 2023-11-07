@@ -709,7 +709,7 @@ is assigned to a subfolder, e.g. <code>https://example.com/prowlarr</code>.</p>
 
 
 <h5 id="buildarr_prowlarr.config.settings.general.SecurityGeneralSettings.authentication" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">authentication</span><span class="p">:</span> <span class="n">AuthenticationMethod</span> <span class="o">=</span> <span class="n">AuthenticationMethod</span><span class="o">.</span><span class="n">none</span></code>
+          <code class="highlight language-python"><span class="n">authentication</span><span class="p">:</span> <span class="n">AuthenticationMethod</span> <span class="o">=</span> <span class="n">AuthenticationMethod</span><span class="o">.</span><span class="n">form</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
@@ -721,15 +721,49 @@ is assigned to a subfolder, e.g. <code>https://example.com/prowlarr</code>.</p>
 
   <div class="doc doc-contents ">
   
-      <p>Authentication method for logging into Prowlarr.
-By default, do not require authentication.</p>
+      <p>Authentication method for logging into Prowlarr.</p>
 <p>Values:</p>
 <ul>
-<li><code>none</code> - No authentication</li>
 <li><code>basic</code> - Authentication using HTTP basic auth (browser popup)</li>
-<li><code>form</code> - Authentication using a login page</li>
+<li><code>form</code>/<code>forms</code> - Authentication using a login page</li>
+<li><code>external</code> - External authentication using a reverse proxy (set to disable authentication)</li>
 </ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>When the authentication method is set to <code>external</code>,
+<strong>authentication is disabled within Prowlarr itself.</strong></p>
+<p><strong>Make sure access to Prowlarr is secured</strong>, either by using a reverse proxy with
+forward authentication configured, or not exposing Prowlarr to the public Internet.</p>
+</div>
 <p>Requires a restart of Prowlarr to take effect.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_prowlarr.config.settings.general.SecurityGeneralSettings.authentication_required" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">authentication_required</span><span class="p">:</span> <span class="n">AuthenticationRequired</span> <span class="o">=</span> <span class="n">AuthenticationRequired</span><span class="o">.</span><span class="n">enabled</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.settings.general.SecurityGeneralSettings.authentication_required" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Authentication requirement settings for accessing Prowlarr.</p>
+<p>Values:</p>
+<ul>
+<li><code>enabled</code> - Enabled</li>
+<li><code>local-disabled</code> - Disabled for Local Addresses</li>
+</ul>
   </div>
 
 </div>
