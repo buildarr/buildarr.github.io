@@ -479,12 +479,12 @@
 <li>By instance type (Sonarr, Radarr, and so on)</li>
 <li>Defining secrets (API keys and passwords) in separate, encrypted configuration files (e.g. for secrets management in Kubernetes)</li>
 </ul>
-<p>Nested inclusion is allowed (included files can include other files). All the loaded configuration files are merged into a single structure using <a href="https://en.wikipedia.org/wiki/Breadth-first_search">breadth-first search</a>.</p>
+<p>Nested inclusion is allowed (included files can include other files). All the loaded configuration files are combined into a single structure using <a href="https://en.wikipedia.org/wiki/Depth-first_search">depth-first search</a>.</p>
 <p>Each configuration file will be combined according to the following rules:</p>
 <ul>
 <li>If there are any overlapping configuration attributes defined in multiple files, the value in the last-read file will take precedence.</li>
 <li>Overlapping <code>list</code>-type attributes will be overwritten, rather than combined.</li>
-<li>If a local path attribute defined in the configuration file (e.g. <a href="#buildarr.config.buildarr.BuildarrConfig.secrets_file_path"><code>secrets_file_path</code></a>) is a relative path, that path will be resolved relative to the parent directory of the configuration file it is defined in. If they are not defined in <em>any</em> file, the default value will be resolved relative to the parent directory of the <em>first</em> configuration file loaded.</li>
+<li>If a local path attribute defined in the configuration file is a relative path, that path will be resolved relative to the parent directory of the configuration file it is defined in. If they are not defined in <em>any</em> file, the default value will be resolved relative to the parent directory of the <em>first</em> configuration file loaded.</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -629,7 +629,6 @@ or using the <code>--log-level</code> command line argument.</p>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;sunday&quot;</span>
 <span class="w">  </span><span class="nt">update_times</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;03:00&quot;</span>
-<span class="w">  </span><span class="nt">secrets_file_path</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;secrets.json&quot;</span>
 </code></pre></div>
 
 
@@ -735,38 +734,6 @@ The days do not need to be in order.</p>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;00:00&quot;</span>
 </code></pre></div>
 <p>This configuration option can be overridden using the <code>--update-times</code> command line argument.</p>
-  </div>
-
-</div>
-
-<div class="doc doc-object doc-attribute">
-
-
-
-
-<h5 id="buildarr.config.buildarr.BuildarrConfig.secrets_file_path" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">secrets_file_path</span><span class="p">:</span> <span class="n">LocalPath</span> <span class="o">=</span> <span class="s1">&#39;secrets.json&#39;</span></code>
-  
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
-      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
-  </span>
-
-<a href="#buildarr.config.buildarr.BuildarrConfig.secrets_file_path" class="headerlink" title="Permanent link">#</a></h5>
-
-
-  <div class="doc doc-contents ">
-  
-      <p>Path to store the Buildarr instance secrets file.</p>
-<p>By default, this will create a file called <code>secrets.json</code> in the same folder
-the first loaded configuration file is located.</p>
-<p><em>New in version 0.4.0</em>: This configuration option can now be overridden
-using the <code>--secrets-file</code> command line argument.</p>
-<p><em>Changed in version 0.4.0</em>: Relative file paths are now evaluated relative
-to the directory the configuration file that defined the attribute is located,
-not the current working directory of the Buildarr process. If the attribute
-is undefined, the secrets file will be created in the directory the
-originally loaded configuration file is located.</p>
   </div>
 
 </div>
