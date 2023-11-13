@@ -2496,7 +2496,7 @@ or have not yet reached their cutoff.</p>
 
 
 <h5 id="buildarr_radarr.config.settings.indexers.usenet.newznab.NewznabIndexer.categories" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">categories</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NabCategory</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">NabCategory</span><span class="o">.</span><span class="n">MOVIES_FOREIGN</span><span class="p">,</span> <span class="n">NabCategory</span><span class="o">.</span><span class="n">MOVIES_OTHER</span><span class="p">,</span> <span class="n">NabCategory</span><span class="o">.</span><span class="n">MOVIES_SD</span><span class="p">,</span> <span class="n">NabCategory</span><span class="o">.</span><span class="n">MOVIES_HD</span><span class="p">,</span> <span class="n">NabCategory</span><span class="o">.</span><span class="n">MOVIES_UHD</span><span class="p">,</span> <span class="n">NabCategory</span><span class="o">.</span><span class="n">MOVIES_BLURAY</span><span class="p">,</span> <span class="n">NabCategory</span><span class="o">.</span><span class="n">MOVIES_3D</span><span class="p">}</span></code>
+          <code class="highlight language-python"><span class="n">categories</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">NabCategory</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="p">{</span><span class="n">NabCategory</span><span class="o">.</span><span class="n">MOVIES_FOREIGN</span><span class="p">,</span> <span class="n">NabCategory</span><span class="o">.</span><span class="n">MOVIES_OTHER</span><span class="p">,</span> <span class="n">NabCategory</span><span class="o">.</span><span class="n">MOVIES_SD</span><span class="p">,</span> <span class="n">NabCategory</span><span class="o">.</span><span class="n">MOVIES_HD</span><span class="p">,</span> <span class="n">NabCategory</span><span class="o">.</span><span class="n">MOVIES_UHD</span><span class="p">,</span> <span class="n">NabCategory</span><span class="o">.</span><span class="n">MOVIES_BLURAY</span><span class="p">,</span> <span class="n">NabCategory</span><span class="o">.</span><span class="n">MOVIES_3D</span><span class="p">}</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
@@ -2513,14 +2513,20 @@ Define as empty to disable.</p>
 <p>Values:</p>
 <ul>
 <li><code>Movies</code></li>
-<li><code>Movies-Foreign</code></li>
-<li><code>Movies-Other</code></li>
-<li><code>Movies-SD</code></li>
-<li><code>Movies-HD</code></li>
-<li><code>Movies-UHD</code></li>
-<li><code>Movies-Bluray</code></li>
-<li><code>Movies-3D</code></li>
+<li><code>Movies/Foreign</code></li>
+<li><code>Movies/Other</code></li>
+<li><code>Movies/SD</code></li>
+<li><code>Movies/HD</code></li>
+<li><code>Movies/UHD</code></li>
+<li><code>Movies/BluRay</code></li>
+<li><code>Movies/3D</code></li>
+<li><code>Movies/DVD</code></li>
+<li><code>Movies/WEB-DL</code></li>
+<li><code>Movies/x265</code></li>
 </ul>
+<p><em>Changed in version 0.2.1</em>: The Radarr-native values for Newznab/Torznab categories
+(e.g. <code>Movies/WEB-DL</code>) can now be specified, instead of the Buildarr-native values
+(e.g. <code>Movies-WEBDL</code>). The old values can still be used.</p>
   </div>
 
 </div>
@@ -4968,7 +4974,7 @@ As of Radarr v4.7.5, the following flags are available:</p>
 
 
 <h5 id="buildarr_radarr.config.settings.indexers.torrent.torznab.TorznabIndexer.categories" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">categories</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NabCategory</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">NabCategory</span><span class="o">.</span><span class="n">MOVIES_FOREIGN</span><span class="p">,</span> <span class="n">NabCategory</span><span class="o">.</span><span class="n">MOVIES_OTHER</span><span class="p">,</span> <span class="n">NabCategory</span><span class="o">.</span><span class="n">MOVIES_SD</span><span class="p">,</span> <span class="n">NabCategory</span><span class="o">.</span><span class="n">MOVIES_HD</span><span class="p">,</span> <span class="n">NabCategory</span><span class="o">.</span><span class="n">MOVIES_UHD</span><span class="p">,</span> <span class="n">NabCategory</span><span class="o">.</span><span class="n">MOVIES_BLURAY</span><span class="p">,</span> <span class="n">NabCategory</span><span class="o">.</span><span class="n">MOVIES_3D</span><span class="p">}</span></code>
+          <code class="highlight language-python"><span class="n">categories</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">NabCategory</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="p">{</span><span class="n">NabCategory</span><span class="o">.</span><span class="n">MOVIES_FOREIGN</span><span class="p">,</span> <span class="n">NabCategory</span><span class="o">.</span><span class="n">MOVIES_OTHER</span><span class="p">,</span> <span class="n">NabCategory</span><span class="o">.</span><span class="n">MOVIES_SD</span><span class="p">,</span> <span class="n">NabCategory</span><span class="o">.</span><span class="n">MOVIES_HD</span><span class="p">,</span> <span class="n">NabCategory</span><span class="o">.</span><span class="n">MOVIES_UHD</span><span class="p">,</span> <span class="n">NabCategory</span><span class="o">.</span><span class="n">MOVIES_BLURAY</span><span class="p">,</span> <span class="n">NabCategory</span><span class="o">.</span><span class="n">MOVIES_3D</span><span class="p">}</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
@@ -4985,14 +4991,20 @@ Define as empty to disable.</p>
 <p>Values:</p>
 <ul>
 <li><code>Movies</code></li>
-<li><code>Movies-Foreign</code></li>
-<li><code>Movies-Other</code></li>
-<li><code>Movies-SD</code></li>
-<li><code>Movies-HD</code></li>
-<li><code>Movies-UHD</code></li>
-<li><code>Movies-Bluray</code></li>
-<li><code>Movies-3D</code></li>
+<li><code>Movies/Foreign</code></li>
+<li><code>Movies/Other</code></li>
+<li><code>Movies/SD</code></li>
+<li><code>Movies/HD</code></li>
+<li><code>Movies/UHD</code></li>
+<li><code>Movies/BluRay</code></li>
+<li><code>Movies/3D</code></li>
+<li><code>Movies/DVD</code></li>
+<li><code>Movies/WEB-DL</code></li>
+<li><code>Movies/x265</code></li>
 </ul>
+<p><em>Changed in version 0.2.1</em>: The Radarr-native values for Newznab/Torznab categories
+(e.g. <code>Movies/WEB-DL</code>) can now be specified, instead of the Buildarr-native values
+(e.g. <code>Movies-WEBDL</code>). The old values can still be used.</p>
   </div>
 
 </div>

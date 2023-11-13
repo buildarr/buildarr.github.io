@@ -423,6 +423,10 @@
             
             <li class="nav-item" data-level="1"><a href="#release-notes-buildarr-radarr-plugin" class="nav-link">Release Notes (Buildarr Radarr Plugin)</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#v021-2023-11-13" class="nav-link">v0.2.1 - 2023-11-13</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#v020-2023-11-12" class="nav-link">v0.2.0 - 2023-11-12</a>
               <ul class="nav flex-column">
               </ul>
@@ -447,6 +451,23 @@
                     <div class="col-md-9" role="main">
 
 <h1 id="release-notes-buildarr-radarr-plugin">Release Notes (Buildarr Radarr Plugin)<a class="headerlink" href="#release-notes-buildarr-radarr-plugin" title="Permanent link">#</a></h1>
+<h2 id="v021-2023-11-13"><a href="https://github.com/buildarr/buildarr-radarr/releases/tag/v0.2.1">v0.2.1</a> - 2023-11-13<a class="headerlink" href="#v021-2023-11-13" title="Permanent link">#</a></h2>
+<p>This release fixes the following issues:</p>
+<ul>
+<li>Fix loading the default score of custom formats from TRaSH-Guides metadata, which was broken due to a deprecated metadata field Buildarr was using that was removed.</li>
+<li>Permanently fix Torznab/Newznab indexer category parsing by making it not error when an unknown category ID is found on the remote instance.</li>
+<li>Allow the Radarr-native category name (e.g. <code>Movies/BluRay</code>) to be defined directly in Buildarr, instead of the Buildarr-native names (e.g. <code>Movies-Bluray</code>). The old names are still supported.</li>
+<li>Fix managing the <code>remove_year</code> attribute on Newznab/Torznab indexers, which was being ignored in previous releases.</li>
+<li>Fix dumping Radarr instance configurations using the CLI, which was failing due to a validation regression introduced in the previous release.</li>
+</ul>
+<p>The CLI command for dumping Radarr instance configurations has also been improved, and can now auto-fetch Radarr instance API keys by simply leaving the API key blank, and pressing Enter when prompted. Note that this will only work on Radarr instances that have authentication disabled.</p>
+<p>As this release of the Radarr plugin uses the latest plugin API features, Buildarr v0.7.1 or later is required for this release.</p>
+<h3 id="changed">Changed<a class="headerlink" href="#changed" title="Permanent link">#</a></h3>
+<ul>
+<li>Fix and improve configuration dumping (<a href="https://github.com/buildarr/buildarr-radarr/pull/26">#26</a>)</li>
+<li>Fix getting TRaSH-Guides custom format default score (<a href="https://github.com/buildarr/buildarr-radarr/pull/28">#28</a>)</li>
+<li>Fix Newznab/Torznab indexer bugs (<a href="https://github.com/buildarr/buildarr-radarr/pull/25">#25</a>)</li>
+</ul>
 <h2 id="v020-2023-11-12"><a href="https://github.com/buildarr/buildarr-radarr/releases/tag/v0.2.0">v0.2.0</a> - 2023-11-12<a class="headerlink" href="#v020-2023-11-12" title="Permanent link">#</a></h2>
 <p>This release introduces basic support for managing Radarr V5 instances.</p>
 <p>All configuration parameter types currently supported by this plugin can be used with Radarr V5.</p>
@@ -468,7 +489,7 @@ making it easier to automatically integrate with external authentication provide
 <ul>
 <li>Add basic Radarr V5 support (<a href="https://github.com/buildarr/buildarr-radarr/pull/16">#16</a>)</li>
 </ul>
-<h3 id="changed">Changed<a class="headerlink" href="#changed" title="Permanent link">#</a></h3>
+<h3 id="changed_1">Changed<a class="headerlink" href="#changed_1" title="Permanent link">#</a></h3>
 <ul>
 <li>Add Buildarr v0.7.0 support (<a href="https://github.com/buildarr/buildarr-radarr/pull/19">#19</a>)</li>
 <li>Remove custom handlers for <code>NameEmail</code> attributes (<a href="https://github.com/buildarr/buildarr-radarr/pull/21">#21</a>)</li>
@@ -478,14 +499,14 @@ making it easier to automatically integrate with external authentication provide
 <ul>
 <li>Allow the <code>Movies</code> category group to be defined on Newznab/Torznab indexers (and Prowlarr managed indexers)</li>
 </ul>
-<h3 id="changed_1">Changed<a class="headerlink" href="#changed_1" title="Permanent link">#</a></h3>
+<h3 id="changed_2">Changed<a class="headerlink" href="#changed_2" title="Permanent link">#</a></h3>
 <ul>
-<li>Add support for the <code>Movies</code> category in Newznab/Torznab indexers (<a href="https://github.com/buildarr/buildarr-prowlarr/pull/11">#11</a>)</li>
+<li>Add support for the <code>Movies</code> category in Newznab/Torznab indexers (<a href="https://github.com/buildarr/buildarr-radarr/pull/11">#11</a>)</li>
 </ul>
 <h2 id="v011-2023-09-09"><a href="https://github.com/buildarr/buildarr-radarr/releases/tag/v0.1.1">v0.1.1</a> - 2023-09-09<a class="headerlink" href="#v011-2023-09-09" title="Permanent link">#</a></h2>
 <p>This release fixes an issue where if you have unmanaged root folders on a Buildarr instance that are not defined in Buildarr, Buildarr would print a misleading log message about it being modified in some way.</p>
 <p>These root folders are not being changed, and the logging has been improved to reflect that.</p>
-<h3 id="changed_2">Changed<a class="headerlink" href="#changed_2" title="Permanent link">#</a></h3>
+<h3 id="changed_3">Changed<a class="headerlink" href="#changed_3" title="Permanent link">#</a></h3>
 <ul>
 <li>Improve CLI and secrets type handling (<a href="https://github.com/buildarr/buildarr-radarr/pull/5">#5</a>)</li>
 <li>Fix misleading root folder state logging (<a href="https://github.com/buildarr/buildarr-radarr/pull/6">#6</a>)</li>

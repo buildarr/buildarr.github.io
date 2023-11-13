@@ -1089,7 +1089,7 @@ Leave blank to use with all series.</p>
 
 
 <h5 id="buildarr_sonarr.config.indexers.NewznabIndexer.categories" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">categories</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NabCategory</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">NabCategory</span><span class="o">.</span><span class="n">TV_SD</span><span class="p">,</span> <span class="n">NabCategory</span><span class="o">.</span><span class="n">TV_HD</span><span class="p">}</span></code>
+          <code class="highlight language-python"><span class="n">categories</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">NabCategory</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="p">{</span><span class="n">NabCategory</span><span class="o">.</span><span class="n">TV_SD</span><span class="p">,</span> <span class="n">NabCategory</span><span class="o">.</span><span class="n">TV_HD</span><span class="p">}</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
@@ -1105,16 +1105,21 @@ Leave blank to use with all series.</p>
 Define as empty to disable.</p>
 <p>Values:</p>
 <ul>
-<li><code>TV-WEBDL</code></li>
-<li><code>TV-Foreign</code></li>
-<li><code>TV-SD</code></li>
-<li><code>TV-HD</code></li>
-<li><code>TV-UHD</code></li>
-<li><code>TV-Other</code></li>
-<li><code>TV-Sports</code></li>
-<li><code>TV-Anime</code></li>
-<li><code>TV-Documentary</code></li>
+<li><code>TV</code></li>
+<li><code>TV/WEB-DL</code></li>
+<li><code>TV/Foreign</code></li>
+<li><code>TV/SD</code></li>
+<li><code>TV/HD</code></li>
+<li><code>TV/UHD</code></li>
+<li><code>TV/Other</code></li>
+<li><code>TV/Sport</code></li>
+<li><code>TV/Anime</code></li>
+<li><code>TV/Documentary</code></li>
+<li><code>TV/x265</code></li>
 </ul>
+<p><em>Changed in version 0.6.1</em>: The Sonarr-native values for Newznab/Torznab categories
+(e.g. <code>TV/WEB-DL</code>) can now be specified, instead of the Buildarr-native values
+(e.g. <code>TV-WEBDL</code>). The old values can still be used.</p>
   </div>
 
 </div>
@@ -1141,16 +1146,21 @@ Define as empty to disable.</p>
 Define as empty to disable.</p>
 <p>Values:</p>
 <ul>
-<li><code>TV-WEBDL</code></li>
-<li><code>TV-Foreign</code></li>
-<li><code>TV-SD</code></li>
-<li><code>TV-HD</code></li>
-<li><code>TV-UHD</code></li>
-<li><code>TV-Other</code></li>
-<li><code>TV-Sports</code></li>
-<li><code>TV-Anime</code></li>
-<li><code>TV-Documentary</code></li>
+<li><code>TV</code></li>
+<li><code>TV/WEB-DL</code></li>
+<li><code>TV/Foreign</code></li>
+<li><code>TV/SD</code></li>
+<li><code>TV/HD</code></li>
+<li><code>TV/UHD</code></li>
+<li><code>TV/Other</code></li>
+<li><code>TV/Sport</code></li>
+<li><code>TV/Anime</code></li>
+<li><code>TV/Documentary</code></li>
+<li><code>TV/x265</code></li>
 </ul>
+<p><em>Changed in version 0.6.1</em>: The Sonarr-native values for Newznab/Torznab categories
+(e.g. <code>TV/WEB-DL</code>) can now be specified, instead of the Buildarr-native values
+(e.g. <code>TV-WEBDL</code>). The old values can still be used.</p>
   </div>
 
 </div>
@@ -2554,16 +2564,21 @@ a tracker using an API.</p>
 Define as empty to disable.</p>
 <p>Values:</p>
 <ul>
-<li><code>TV-WEBDL</code></li>
-<li><code>TV-Foreign</code></li>
-<li><code>TV-SD</code></li>
-<li><code>TV-HD</code></li>
-<li><code>TV-UHD</code></li>
-<li><code>TV-Other</code></li>
-<li><code>TV-Sports</code></li>
-<li><code>TV-Anime</code></li>
-<li><code>TV-Documentary</code></li>
+<li><code>TV</code></li>
+<li><code>TV/WEB-DL</code></li>
+<li><code>TV/Foreign</code></li>
+<li><code>TV/SD</code></li>
+<li><code>TV/HD</code></li>
+<li><code>TV/UHD</code></li>
+<li><code>TV/Other</code></li>
+<li><code>TV/Sport</code></li>
+<li><code>TV/Anime</code></li>
+<li><code>TV/Documentary</code></li>
+<li><code>TV/x265</code></li>
 </ul>
+<p><em>Changed in version 0.6.1</em>: The Sonarr-native values for Newznab/Torznab categories
+(e.g. <code>TV/WEB-DL</code>) can now be specified, instead of the Buildarr-native values
+(e.g. <code>TV-WEBDL</code>). The old values can still be used.</p>
   </div>
 
 </div>
@@ -2589,16 +2604,21 @@ Define as empty to disable.</p>
       <p>Categories to monitor for anime.</p>
 <p>Values:</p>
 <ul>
-<li><code>TV-WEBDL</code></li>
-<li><code>TV-Foreign</code></li>
-<li><code>TV-SD</code></li>
-<li><code>TV-HD</code></li>
-<li><code>TV-UHD</code></li>
-<li><code>TV-Other</code></li>
-<li><code>TV-Sports</code></li>
-<li><code>TV-Anime</code></li>
-<li><code>TV-Documentary</code></li>
+<li><code>TV</code></li>
+<li><code>TV/WEB-DL</code></li>
+<li><code>TV/Foreign</code></li>
+<li><code>TV/SD</code></li>
+<li><code>TV/HD</code></li>
+<li><code>TV/UHD</code></li>
+<li><code>TV/Other</code></li>
+<li><code>TV/Sport</code></li>
+<li><code>TV/Anime</code></li>
+<li><code>TV/Documentary</code></li>
+<li><code>TV/x265</code></li>
 </ul>
+<p><em>Changed in version 0.6.1</em>: The Sonarr-native values for Newznab/Torznab categories
+(e.g. <code>TV/WEB-DL</code>) can now be specified, instead of the Buildarr-native values
+(e.g. <code>TV-WEBDL</code>). The old values can still be used.</p>
   </div>
 
 </div>

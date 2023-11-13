@@ -423,6 +423,10 @@
             
             <li class="nav-item" data-level="1"><a href="#release-notes-buildarr-core" class="nav-link">Release Notes (Buildarr Core)</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#v071-2023-11-13" class="nav-link">v0.7.1 - 2023-11-13</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#v070-2023-11-12" class="nav-link">v0.7.0 - 2023-11-12</a>
               <ul class="nav flex-column">
               </ul>
@@ -483,6 +487,16 @@
                     <div class="col-md-9" role="main">
 
 <h1 id="release-notes-buildarr-core">Release Notes (Buildarr Core)<a class="headerlink" href="#release-notes-buildarr-core" title="Permanent link">#</a></h1>
+<h2 id="v071-2023-11-13"><a href="https://github.com/buildarr/buildarr/releases/tag/v0.7.1">v0.7.1</a> - 2023-11-13<a class="headerlink" href="#v071-2023-11-13" title="Permanent link">#</a></h2>
+<p>This is a backwards-compatible release that improves the Buildarr plugin API.</p>
+<p>When using the <code>BaseEnum</code> attribute type, plugins are now able to specify multiple possible values for an enumeration by setting a <code>tuple</code> with all values defined in it.</p>
+<p>This allows more flexibility in the range of values users can define in the Buildarr configuration file, and makes it possible to control how those values are serialised when dumping remote instance configurations.</p>
+<p>It also makes it possible to add JSON/YAML encoders for custom types in the Buildarr configuration model from the plugin side, when custom types that are not appropriate to add to Buildarr Core directly are required.</p>
+<h3 id="changed">Changed<a class="headerlink" href="#changed" title="Permanent link">#</a></h3>
+<ul>
+<li>Configuration encoding and type improvements (<a href="https://github.com/buildarr/buildarr/pull/164">#164</a>)</li>
+<li>Fix bugs in multi-value <code>BaseEnum</code> (<a href="https://github.com/buildarr/buildarr/pull/165">#165</a>)</li>
+</ul>
 <h2 id="v070-2023-11-12"><a href="https://github.com/buildarr/buildarr/releases/tag/v0.7.0">v0.7.0</a> - 2023-11-12<a class="headerlink" href="#v070-2023-11-12" title="Permanent link">#</a></h2>
 <p>This is a <strong>backwards-incompatible</strong> feature and bugfix release.</p>
 <p>From a user perspective, the main change in this release is that <code>secrets.json</code> is no longer generated, and no longer used by Buildarr.</p>
@@ -524,7 +538,7 @@
 <li>Add new constrained string types (<a href="https://github.com/buildarr/buildarr/pull/157">#157</a>)</li>
 <li>Add the <code>ConfigBase.log_delete_remote_attrs</code> method (<a href="https://github.com/buildarr/buildarr/pull/158">#158</a>)</li>
 </ul>
-<h3 id="changed">Changed<a class="headerlink" href="#changed" title="Permanent link">#</a></h3>
+<h3 id="changed_1">Changed<a class="headerlink" href="#changed_1" title="Permanent link">#</a></h3>
 <ul>
 <li>Log errors during daemon update runs without exiting (<a href="https://github.com/buildarr/buildarr/pull/151">#151</a>)</li>
 <li>Fix the next run time after scheduled runs (<a href="https://github.com/buildarr/buildarr/pull/152">#152</a>)</li>
@@ -595,7 +609,7 @@
 </code></pre></div>
 <p>This makes it possible to more freely structure your configuration files, e.g. splitting secret parameters (e.g. API keys and passwords) into a separate file from the main configuration.</p>
 <p>For more information, check the configuration documentation.</p>
-<h3 id="changed_1">Changed<a class="headerlink" href="#changed_1" title="Permanent link">#</a></h3>
+<h3 id="changed_2">Changed<a class="headerlink" href="#changed_2" title="Permanent link">#</a></h3>
 <ul>
 <li>Allow any configuration value to be defined in any file (<a href="https://github.com/buildarr/buildarr/pull/146">#146</a>)</li>
 </ul>
@@ -619,7 +633,7 @@
 <ul>
 <li>Add post-initialisation rendering step (<a href="https://github.com/buildarr/buildarr/pull/126">#126</a>)</li>
 </ul>
-<h3 id="changed_2">Changed<a class="headerlink" href="#changed_2" title="Permanent link">#</a></h3>
+<h3 id="changed_3">Changed<a class="headerlink" href="#changed_3" title="Permanent link">#</a></h3>
 <ul>
 <li>Detect plugins that do not use config rendering (<a href="https://github.com/buildarr/buildarr/pull/116">#116</a>)</li>
 <li>Fix running plugins that do not perform config rendering (<a href="https://github.com/buildarr/buildarr/pull/132">#132</a>)</li>
@@ -637,7 +651,7 @@
 <ul>
 <li>Add <code>request_timeout</code> global state attribute (<a href="https://github.com/buildarr/buildarr/pull/114">#114</a>)</li>
 </ul>
-<h3 id="changed_3">Changed<a class="headerlink" href="#changed_3" title="Permanent link">#</a></h3>
+<h3 id="changed_4">Changed<a class="headerlink" href="#changed_4" title="Permanent link">#</a></h3>
 <ul>
 <li>Set <code>validate_assignment</code> to <code>True</code> by default for config models (<a href="https://github.com/buildarr/buildarr/pull/115">#115</a>)</li>
 <li>Change <code>ConfigBase.uses_trash_metadata</code> to a function (<a href="https://github.com/buildarr/buildarr/pull/116">#116</a>)</li>
@@ -683,7 +697,7 @@
 <li>Add generic configuration rendering stage (<a href="https://github.com/buildarr/buildarr/pull/101">#101</a>)</li>
 <li>Add resource deletion stage after configuration updates (<a href="https://github.com/buildarr/buildarr/pull/102">#102</a>)</li>
 </ul>
-<h3 id="changed_4">Changed<a class="headerlink" href="#changed_4" title="Permanent link">#</a></h3>
+<h3 id="changed_5">Changed<a class="headerlink" href="#changed_5" title="Permanent link">#</a></h3>
 <ul>
 <li>Deprecate <code>BaseIntEnum</code> (<a href="https://github.com/buildarr/buildarr/pull/95">#95</a>)</li>
 <li>Allow the default instance to be used in instance links (<a href="https://github.com/buildarr/buildarr/pull/98">#98</a>)</li>
@@ -703,7 +717,7 @@
 <ul>
 <li>Add overriding the value compare function to remote maps (<a href="https://github.com/buildarr/buildarr/pull/84">#84</a>)</li>
 </ul>
-<h3 id="changed_5">Changed<a class="headerlink" href="#changed_5" title="Permanent link">#</a></h3>
+<h3 id="changed_6">Changed<a class="headerlink" href="#changed_6" title="Permanent link">#</a></h3>
 <ul>
 <li>Fix config file monitoring in the Docker container (<a href="https://github.com/buildarr/buildarr/pull/82">#82</a>)</li>
 <li>Fix mistakes in error messages (<a href="https://github.com/buildarr/buildarr/pull/85">#85</a>)</li>
@@ -741,7 +755,7 @@
 <li>Reintroduce <code>buildarr.__version__</code> and use it internally (<a href="https://github.com/buildarr/buildarr/pull/75">#75</a>)</li>
 <li>Add <code>version</code> attribute to plugin metadata object (<a href="https://github.com/buildarr/buildarr/pull/78">#78</a>)</li>
 </ul>
-<h3 id="changed_6">Changed<a class="headerlink" href="#changed_6" title="Permanent link">#</a></h3>
+<h3 id="changed_7">Changed<a class="headerlink" href="#changed_7" title="Permanent link">#</a></h3>
 <ul>
 <li>Convert most root validators to attribute-specific validators (<a href="https://github.com/buildarr/buildarr/pull/54">#54</a>)</li>
 <li>Remove unused code and fix pre-commit job (<a href="https://github.com/buildarr/buildarr/pull/58">#58</a>)</li>
@@ -804,7 +818,7 @@
 <li>Improve Sonarr quality definition <a href="https://buildarr.github.io/plugins/sonarr/configuration/quality/#buildarr_sonarr.config.quality.QualityDefinition.min"><code>min</code> and <code>max</code></a> validation so that <code>400</code> is also a valid value for <code>max</code>, and enforce <code>min</code>-<code>max</code> value difference constraints</li>
 <li>Major internal code refactor through the introduction of <a href="https://beta.ruff.rs/docs">Ruff</a> to the development pipeline, fixing a large number of minor code quality issues</li>
 </ul>
-<h3 id="changed_7">Changed<a class="headerlink" href="#changed_7" title="Permanent link">#</a></h3>
+<h3 id="changed_8">Changed<a class="headerlink" href="#changed_8" title="Permanent link">#</a></h3>
 <ul>
 <li>Fix fetching new instance secrets (<a href="https://github.com/buildarr/buildarr/pull/44">#44</a>)</li>
 <li>Accept local and non-qualified domain names in URLs (<a href="https://github.com/buildarr/buildarr/pull/46">#46</a>)</li>
@@ -830,7 +844,7 @@
 <li>Implement testing of cached and fetched instance secrets (<a href="https://github.com/buildarr/buildarr/pull/32">#32</a>)</li>
 <li>Refactor the internals of Buildarr to improve maintainability (<a href="https://github.com/buildarr/buildarr/pull/30">#30</a>)</li>
 </ul>
-<h3 id="changed_8">Changed<a class="headerlink" href="#changed_8" title="Permanent link">#</a></h3>
+<h3 id="changed_9">Changed<a class="headerlink" href="#changed_9" title="Permanent link">#</a></h3>
 <ul>
 <li>Convert <code>Password</code> and <code>SonarrApiKey</code> to subclasses of <code>SecretStr</code> (<a href="https://github.com/buildarr/buildarr/pull/34">#34</a>)</li>
 <li>Fix CLI exception class inheritance (<a href="https://github.com/buildarr/buildarr/pull/35">#35</a>)</li>
@@ -886,7 +900,7 @@
 <ul>
 <li>Added the <code>sonarr.settings.media_management.delete_unmanaged_root_folders</code> configuration attribute (<a href="https://github.com/buildarr/buildarr/pull/24">#24</a>)</li>
 </ul>
-<h3 id="changed_9">Changed<a class="headerlink" href="#changed_9" title="Permanent link">#</a></h3>
+<h3 id="changed_10">Changed<a class="headerlink" href="#changed_10" title="Permanent link">#</a></h3>
 <ul>
 <li>Improve and fix Sonarr general settings configuration updates (<a href="https://github.com/buildarr/buildarr/pull/19">#19</a>)</li>
 <li>Fix Sonarr UI settings updates (<a href="https://github.com/buildarr/buildarr/pull/20">#20</a>)</li>
@@ -909,7 +923,7 @@ and add more detail.</p>
 <li>Add a GitHub Action to push releases to PyPI (<a href="https://github.com/buildarr/buildarr/pull/11">#11</a>)</li>
 <li>Create a <code>buildarr-dummy</code> plugin for testing the Buildarr plugin API (<a href="https://github.com/buildarr/buildarr/pull/12">#12</a>)</li>
 </ul>
-<h3 id="changed_10">Changed<a class="headerlink" href="#changed_10" title="Permanent link">#</a></h3>
+<h3 id="changed_11">Changed<a class="headerlink" href="#changed_11" title="Permanent link">#</a></h3>
 <ul>
 <li>Fix $PUID and $GUID declarations (<a href="https://github.com/buildarr/buildarr/commit/b5110f3">b5110f3</a>)</li>
 <li>Fix Docker Hub link (<a href="https://github.com/buildarr/buildarr/commit/be0ba12">be0ba12</a>)</li>
