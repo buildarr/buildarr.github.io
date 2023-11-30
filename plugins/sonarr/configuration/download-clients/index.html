@@ -3422,9 +3422,10 @@ Using a category is optional, but strongly recommended.</p>
 
 
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.username" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
+          <code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
@@ -3433,7 +3434,7 @@ Using a category is optional, but strongly recommended.</p>
 
   <div class="doc doc-contents ">
   
-      <p>User name to use when authenticating with the download client.</p>
+      <p>User name to use when authenticating with the download client, if required.</p>
   </div>
 
 </div>
@@ -3444,9 +3445,10 @@ Using a category is optional, but strongly recommended.</p>
 
 
 <h5 id="buildarr_sonarr.config.download_clients.download_clients.QbittorrentDownloadClient.password" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">password</span><span class="p">:</span> <span class="n">Password</span></code>
+          <code class="highlight language-python"><span class="n">password</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">SecretStr</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
   <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
@@ -3455,7 +3457,7 @@ Using a category is optional, but strongly recommended.</p>
 
   <div class="doc doc-contents ">
   
-      <p>Password to use to authenticate the download client user.</p>
+      <p>Password to use to authenticate the download client user, if required.</p>
   </div>
 
 </div>
