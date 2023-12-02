@@ -423,6 +423,10 @@
             
             <li class="nav-item" data-level="1"><a href="#release-notes-buildarr-prowlarr-plugin" class="nav-link">Release Notes (Buildarr Prowlarr Plugin)</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#v051-2023-12-02" class="nav-link">v0.5.1 - 2023-12-02</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#v050-2023-11-12" class="nav-link">v0.5.0 - 2023-11-12</a>
               <ul class="nav flex-column">
               </ul>
@@ -471,9 +475,30 @@
                     <div class="col-md-9" role="main">
 
 <h1 id="release-notes-buildarr-prowlarr-plugin">Release Notes (Buildarr Prowlarr Plugin)<a class="headerlink" href="#release-notes-buildarr-prowlarr-plugin" title="Permanent link">#</a></h1>
+<h2 id="v051-2023-12-02"><a href="https://github.com/buildarr/buildarr-prowlarr/releases/tag/v0.5.1">v0.5.1</a> - 2023-12-02<a class="headerlink" href="#v051-2023-12-02" title="Permanent link">#</a></h2>
+<p>This release adds the following new features:</p>
+<ul>
+<li>Support defining a URL base for the Prowlarr instance in the Buildarr configuration, using the <code>url_base</code> host configuration attribute.<ul>
+<li>This allows Prowlarr instances with APIs available under a custom path (e.g. <code>http://localhost:9696/prowlarr</code>) to be managed by Buildarr.</li>
+</ul>
+</li>
+<li>Add support for auto-fetching the Prowlarr API key when dumping instance configurations, by pressing the Enter key without specifying an API key when prompted.<ul>
+<li>This brings the Prowlarr plugin in line with other Buildarr plugins which already support this.</li>
+</ul>
+</li>
+<li>Add support for auto-fetching the Prowlarr API key from newer versions of Prowlarr which use the <code>initialize.json</code> endpoint.</li>
+</ul>
+<p>The following issues have also been fixed:</p>
+<ul>
+<li>Use the Buildarr-global API request timeout setting as the timeout for Prowlarr API requests, instead of not using a timeout.</li>
+</ul>
+<h3 id="changed">Changed<a class="headerlink" href="#changed" title="Permanent link">#</a></h3>
+<ul>
+<li>Add Prowlarr instance URL base support (<a href="https://github.com/buildarr/buildarr-prowlarr/pull/54">#54</a>)</li>
+</ul>
 <h2 id="v050-2023-11-12"><a href="https://github.com/buildarr/buildarr-prowlarr/releases/tag/v0.5.0">v0.5.0</a> - 2023-11-12<a class="headerlink" href="#v050-2023-11-12" title="Permanent link">#</a></h2>
 <p>This updates the Prowlarr plugin so that it is compatible with <a href="https://buildarr.github.io/release-notes/#v070-2023-11-12">Buildarr v0.7.0</a>.</p>
-<h3 id="changed">Changed<a class="headerlink" href="#changed" title="Permanent link">#</a></h3>
+<h3 id="changed_1">Changed<a class="headerlink" href="#changed_1" title="Permanent link">#</a></h3>
 <ul>
 <li>Add Buildarr v0.7.0 support (<a href="https://github.com/buildarr/buildarr-prowlarr/pull/48">#48</a>)</li>
 </ul>
@@ -482,7 +507,7 @@
 <ul>
 <li>Fix a username/password related parsing error when the authentication method is not explicitly defined in the Buildarr configuration</li>
 </ul>
-<h3 id="changed_1">Changed<a class="headerlink" href="#changed_1" title="Permanent link">#</a></h3>
+<h3 id="changed_2">Changed<a class="headerlink" href="#changed_2" title="Permanent link">#</a></h3>
 <ul>
 <li>Remove validation for username/password (<a href="https://github.com/buildarr/buildarr-prowlarr/pull/44">#44</a>)</li>
 </ul>
@@ -498,7 +523,7 @@
 <ul>
 <li>Add support for external authentication (<a href="https://github.com/buildarr/buildarr-prowlarr/pull/37">#37</a>)</li>
 </ul>
-<h3 id="changed_2">Changed<a class="headerlink" href="#changed_2" title="Permanent link">#</a></h3>
+<h3 id="changed_3">Changed<a class="headerlink" href="#changed_3" title="Permanent link">#</a></h3>
 <ul>
 <li>FIx creating application definitions (<a href="https://github.com/buildarr/buildarr-prowlarr/pull/39">#39</a>)</li>
 <li>Fix Sonarr/Radarr plugin links in docs (<a href="https://github.com/buildarr/buildarr-prowlarr/pull/40">#40</a>)</li>
@@ -512,7 +537,7 @@
 <ul>
 <li>Fix indexer URL handling, so indexers with explicitly defined base URLs (instead of using the default) can be managed</li>
 </ul>
-<h3 id="changed_3">Changed<a class="headerlink" href="#changed_3" title="Permanent link">#</a></h3>
+<h3 id="changed_4">Changed<a class="headerlink" href="#changed_4" title="Permanent link">#</a></h3>
 <ul>
 <li>Fix indexer URL field handling (<a href="https://github.com/buildarr/buildarr-prowlarr/pull/31">#31</a>)</li>
 </ul>
@@ -528,7 +553,7 @@
 <li>Add support for defining and managing the <code>sync_anime_standard_format_search</code> parameter for Sonarr applications (previously unmanaged)</li>
 <li>Allow category groups (e.g. <code>TV</code>, <code>Movies</code>) to be defined in <code>sync_categories</code> to allow all categories under a group for applications</li>
 </ul>
-<h3 id="changed_4">Changed<a class="headerlink" href="#changed_4" title="Permanent link">#</a></h3>
+<h3 id="changed_5">Changed<a class="headerlink" href="#changed_5" title="Permanent link">#</a></h3>
 <ul>
 <li>Fix application profile sync category and paramater issues (<a href="https://github.com/buildarr/buildarr-prowlarr/pull/27">#27</a>)</li>
 <li>Update Buildarr version requirements (<a href="https://github.com/buildarr/buildarr-prowlarr/pull/28">#28</a>)</li>
@@ -540,7 +565,7 @@
 <ul>
 <li>Implement instance links with Radarr instances (<a href="https://github.com/buildarr/buildarr-prowlarr/pull/20">#20</a>)</li>
 </ul>
-<h3 id="changed_5">Changed<a class="headerlink" href="#changed_5" title="Permanent link">#</a></h3>
+<h3 id="changed_6">Changed<a class="headerlink" href="#changed_6" title="Permanent link">#</a></h3>
 <ul>
 <li>Directly parse URL in the CLI command (<a href="https://github.com/buildarr/buildarr-prowlarr/pull/21">#21</a>)</li>
 </ul>
@@ -551,7 +576,7 @@ This version is also backwards compatible with <a href="https://buildarr.github.
 <ul>
 <li>Relax URL parsing on the <code>buildarr prowlarr dump-config</code> command, fixing configuration dumping from Prowlarr instances without a canonical domain name (e.g. IP addresses and <code>localhost</code>)</li>
 </ul>
-<h3 id="changed_6">Changed<a class="headerlink" href="#changed_6" title="Permanent link">#</a></h3>
+<h3 id="changed_7">Changed<a class="headerlink" href="#changed_7" title="Permanent link">#</a></h3>
 <ul>
 <li>Update package metadata and dependencies (<a href="https://github.com/buildarr/buildarr-prowlarr/pull/15">#15</a>)</li>
 </ul>
@@ -563,7 +588,7 @@ This version is also backwards compatible with <a href="https://buildarr.github.
 <li>Improve support for deleting resources with <code>delete_unmanaged</code>, by using the new <code>delete_remote</code> API function</li>
 <li>Remove the <code>prowlarr.tags.delete_unused</code> attribute (for deleting Prowlarr tags not used in Buildarr), as it was unimplemented and Prowlarr automatically cleans up unused tags anyway</li>
 </ul>
-<h3 id="changed_7">Changed<a class="headerlink" href="#changed_7" title="Permanent link">#</a></h3>
+<h3 id="changed_8">Changed<a class="headerlink" href="#changed_8" title="Permanent link">#</a></h3>
 <ul>
 <li>Update plugin to newer Buildarr API standards (<a href="https://github.com/buildarr/buildarr-prowlarr/pull/10">#10</a>)</li>
 </ul>
@@ -576,7 +601,7 @@ This version is also backwards compatible with <a href="https://buildarr.github.
 <li>Fix updating indexer proxies, download clients, application links and app sync profiles when not all type-specific resource values are defined in the configuration</li>
 <li>Require at least <a href="https://buildarr.github.io/plugins/sonarr/release-notes/#v041-2023-04-08">version 0.4.1</a> of the Sonarr plugin for Buildarr, to fix bugs with instance linking</li>
 </ul>
-<h3 id="changed_8">Changed<a class="headerlink" href="#changed_8" title="Permanent link">#</a></h3>
+<h3 id="changed_9">Changed<a class="headerlink" href="#changed_9" title="Permanent link">#</a></h3>
 <ul>
 <li>Fix bugs from integration tests (<a href="https://github.com/buildarr/buildarr-prowlarr/pull/4">#4</a>)</li>
 </ul>

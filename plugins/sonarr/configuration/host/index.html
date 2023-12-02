@@ -566,6 +566,33 @@ is the name given to the instance in the <code>instances</code> attribute.</p>
 
 
 
+<h5 id="buildarr_sonarr.config.SonarrInstanceConfig.url_base" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">url_base</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_sonarr.config.SonarrInstanceConfig.url_base" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The URL path the Sonarr instance API is available under, if behind a reverse proxy.</p>
+<p>API URLs are rendered like this: <code>&lt;protocol&gt;://&lt;hostname&gt;:&lt;port&gt;&lt;url_base&gt;/api/v3/...</code></p>
+<p>When unset, the URL root will be used as the API endpoint
+(e.g. <code>&lt;protocol&gt;://&lt;hostname&gt;:&lt;port&gt;/api/v3/...</code>).</p>
+<p><em>Added in version 0.6.3.</em></p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
 <h5 id="buildarr_sonarr.config.SonarrInstanceConfig.api_key" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">SonarrApiKey</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   

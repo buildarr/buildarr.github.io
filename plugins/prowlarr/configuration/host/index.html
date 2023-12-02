@@ -571,6 +571,33 @@ is the name given to the instance in the <code>instances</code> attribute.</p>
 
 
 
+<h5 id="buildarr_prowlarr.config.ProwlarrInstanceConfig.url_base" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">url_base</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.ProwlarrInstanceConfig.url_base" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The URL path the Prowlarr instance API is available under, if behind a reverse proxy.</p>
+<p>API URLs are rendered like this: <code>&lt;protocol&gt;://&lt;hostname&gt;:&lt;port&gt;&lt;url_base&gt;/api/v1/...</code></p>
+<p>When unset, the URL root will be used as the API endpoint
+(e.g. <code>&lt;protocol&gt;://&lt;hostname&gt;:&lt;port&gt;/api/v1/...</code>).</p>
+<p><em>Added in version 0.5.1.</em></p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
 <h5 id="buildarr_prowlarr.config.ProwlarrInstanceConfig.api_key" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ArrApiKey</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
@@ -613,6 +640,29 @@ This can only be done on Prowlarr instances with authentication disabled.</p>
 If undefined or set to <code>None</code>, the version is auto-detected.</p>
 <p>This value is also used when generating a Docker Compose file.
 When undefined or set to <code>None</code>, the version tag will be set to <code>latest</code>.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h5 id="buildarr_prowlarr.config.ProwlarrInstanceConfig.image" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">image</span><span class="p">:</span> <span class="n">NonEmptyStr</span> <span class="o">=</span> <span class="s1">&#39;lscr.io/linuxserver/prowlarr&#39;</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#buildarr_prowlarr.config.ProwlarrInstanceConfig.image" class="headerlink" title="Permanent link">#</a></h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The default Docker image URI when generating a Docker Compose file.</p>
   </div>
 
 </div>
