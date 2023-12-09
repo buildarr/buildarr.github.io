@@ -501,7 +501,7 @@ It is recommended to select "Install for anyone using this computer".</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>You will need to create a <code>buildarr.yml</code> file to start using Buildarr.</p>
-<p>For more information on how to create <code>buildarr.yml</code>, refer to <a href="../../configuration/">Configuration</a>.</p>
+<p>For more information on how to create <code>buildarr.yml</code>, refer to <a href="../../configuration/">Configuring Buildarr</a>.</p>
 </div>
 <p>Buildarr will install the following shortcuts to the Windows start menu:</p>
 <ul>
@@ -515,7 +515,7 @@ It is recommended to select "Install for anyone using this computer".</p>
 To check that it works, open your terminal and run the following command:</p>
 <div class="highlight"><pre><span></span><code>buildarr --help
 </code></pre></div>
-<p>For more information on the available Buildarr CLI commands, refer to <a href="#usage">Usage</a>.</p>
+<p>For more information on the available Buildarr CLI commands, refer to <a href="../../usage/">Using Buildarr</a>.</p>
 <h3 id="plugins">Plugins<a class="headerlink" href="#plugins" title="Permanent link">#</a></h3>
 <p>Buildarr Installer bundles all currently available first-party Buildarr plugins, so there is usually no need to install plugins separately.</p>
 <p>However, if you would like to install a Buildarr plugin that is not bundled, this can be done using the following procedure.</p>
@@ -532,14 +532,14 @@ To check that it works, open your terminal and run the following command:</p>
 <p>Simply run <code>buildarr-update.bat</code> <strong>as an administrator</strong> to update Buildarr Core, and the installed plugins to the latest version.</p>
 <p>You may need to open an administrator command prompt/terminal at this location to run the script properly.</p>
 <h3 id="uninstallation">Uninstallation<a class="headerlink" href="#uninstallation" title="Permanent link">#</a></h3>
-<p>Buildarr will be listed in "Add or Remove Programs" as a standard application, and can be uninstalled there like any other application.</p>
+<p>Buildarr will be listed in "Add or Remove Programs" as a standard application, and can be uninstalled from there like any other application.</p>
 <p><img alt="Look for &quot;Buildarr&quot; in &quot;Add or Remove Programs&quot;, and uninstall it from there." src="../buildarr-installer-8.png" /></p>
 <h2 id="as-a-windows-service">As a Windows service<a class="headerlink" href="#as-a-windows-service" title="Permanent link">#</a></h2>
 <p>Buildarr currently does not natively support running as a Windows service.</p>
 <p>However, <a href="https://nssm.cc">NSSM (the Non-Sucking Service Manager)</a> can be used to register Buildarr as a Windows service.</p>
 <h3 id="installation_1">Installation<a class="headerlink" href="#installation_1" title="Permanent link">#</a></h3>
 <p><a href="https://nssm.cc/download">Download NSSM</a> and save the EXE to a path that is accessible using the command prompt (the <code>PATH</code> environment variable).</p>
-<p>Install Buildarr using the <a href="#installer">Buildarr Installer for Windows</a>, and then run the following commands
+<p>Install Buildarr using the <a href="#using-the-buildarr-installer">Buildarr Installer for Windows</a>, and then run the following commands
 (substituting <code>C:\path\to</code> and <code>C:\path\to\buildarr.yml</code> for the location of your <a href="../../configuration/">Buildarr configuration file</a>).</p>
 <div class="highlight"><pre><span></span><code>nssm install Buildarr
 nssm set Buildarr Application <span class="s2">&quot;C:\Program Files\Buildarr\bin\buildarr.exe&quot;</span>
