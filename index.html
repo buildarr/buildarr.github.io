@@ -496,8 +496,8 @@
 <p>Buildarr can be installed using a variety of methods, on all of the same platforms as the *Arr stack applications:</p>
 <ul>
 <li><a href="installation/docker/">As a Docker container</a></li>
-<li><a href="installer/python.md">As a standard Python application</a></li>
-<li><a href="installer/windows.md">On Windows (either using an installer, or as a standard Python application)</a></li>
+<li><a href="installation/python/">As a standard Python application</a></li>
+<li><a href="installation/windows/">On Windows (either using an installer, or as a standard Python application)</a></li>
 </ul>
 <p>Buildarr uses a plugin architecture to allow additional applications to be supported.</p>
 <p>The following plugins are currently available:</p>
@@ -512,7 +512,7 @@
 <p>Buildarr uses YAML as its configuration file format. By default, Buildarr looks for <code>buildarr.yml</code> in the current directory.</p>
 <p>It contains not only the settings for Buildarr itself, but also the application instances to be managed. Multiple instances of the same application type can be defined (for example, a common use case would be separate Sonarr instances for HD TV shows, 4K TV shows, and anime).</p>
 <p>Any configuration on the remote instance not explicitly defined in the Buildarr configuration is not modified.</p>
-<p>For more information on how Buildarr uses configuration and how to configure Buildarr itself, check the <a href="configuration/">configuration documentation</a>.</p>
+<p>For more information on how Buildarr uses configuration and how to configure Buildarr itself, refer to <a href="configuration/">Configuring Buildarr</a>.</p>
 <p>Here is an example of a simple Buildarr configuration that changes some settings on a Sonarr instance:</p>
 <div class="highlight"><pre><span></span><code><span class="nn">---</span>
 <span class="c1"># buildarr.yml</span>
@@ -607,18 +607,18 @@ After this initial run, Buildarr will wake up at scheduled times to periodically
 2023-11-12 10:00:52,875 buildarr:1 buildarr.cli.daemon [INFO] The next run will be at 2023-11-13 03:00
 2023-11-12 10:00:52,875 buildarr:1 buildarr.cli.daemon [INFO] Buildarr ready.
 </code></pre></div>
-<p>For more information on how to interfact with Buildarr, check the <a href="usage/">usage documentation</a>.</p>
+<p>For more information on how to interfact with Buildarr, refer to <a href="usage/">Using Buildarr</a>.</p>
 <h2 id="milestones">Milestones<a class="headerlink" href="#milestones" title="Permanent link">#</a></h2>
 <ul>
-<li>~~Instance linking (e.g. Prowlarr-to-Sonarr/Radarr) and dependency resolution~~ (added in <a href="release-notes/#v030-2023-03-15">version 0.3.0</a>)</li>
-<li>~~Auto-generation of Docker Compose environment files reflecting the Buildarr configuration~~ (added in <a href="release-notes/#v040-2023-03-31">version 0.4.0</a>)</li>
-<li>~~Split Sonarr plugin to its own repository~~ (completed in <a href="release-notes/#v040-2023-03-31">version 0.4.0</a>)</li>
+<li><del>Instance linking (e.g. Prowlarr-to-Sonarr/Radarr) and dependency resolution</del> (added in <a href="release-notes/#v030-2023-03-15">version 0.3.0</a>)</li>
+<li><del>Auto-generation of Docker Compose environment files reflecting the Buildarr configuration</del> (added in <a href="release-notes/#v040-2023-03-31">version 0.4.0</a>)</li>
+<li><del>Split Sonarr plugin to its own repository</del> (completed in <a href="release-notes/#v040-2023-03-31">version 0.4.0</a>)</li>
 <li>Unit tests and code coverage</li>
 <li>Create plugins for the following applications:<ul>
 <li>Sonarr V4</li>
-<li>~~Radarr~~ (now available as <a href="plugins/radarr/"><code>buildarr-radarr</code></a>)</li>
-<li>~~Prowlarr~~ (now available as <a href="plugins/prowlarr/"><code>buildarr-prowlarr</code></a>)</li>
-<li>~~Jellyseerr~~ (now available as <a href="plugins/jellyseerr.md"><code>buildarr-jellyseerr</code></a>)</li>
+<li><del>Radarr</del> (now available as <a href="plugins/radarr/"><code>buildarr-radarr</code></a>)</li>
+<li><del>Prowlarr</del> (now available as <a href="plugins/prowlarr/"><code>buildarr-prowlarr</code></a>)</li>
+<li><del>Jellyseerr</del> (now available as <a href="plugins/jellyseerr/"><code>buildarr-jellyseerr</code></a>)</li>
 <li>Bazarr</li>
 <li>Unmanic</li>
 <li>Unpackerr</li>
@@ -765,5 +765,5 @@ After this initial run, Buildarr will wake up at scheduled times to periodically
 
 <!--
 MkDocs version : 1.5.3
-Build Date UTC : 2023-12-09 11:00:55.485354+00:00
+Build Date UTC : 2023-12-09 11:11:08.258467+00:00
 -->
