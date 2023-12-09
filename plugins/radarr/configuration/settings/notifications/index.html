@@ -7174,9 +7174,11 @@ or a self-hosted server using the same software.</p>
 </div><h2 id="plex-media-server">Plex Media Server<a class="headerlink" href="#plex-media-server" title="Permanent link">#</a></h2>
 <p>Buildarr is unable to manage Plex Media Server notification connections at this time, due to Plex requiring external authentication using OAuth2.</p>
 <p>Please add the Plex Media Server notification connection manually in the Radarr UI.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Ensure <code>delete_unmanaged</code> is set to <code>false</code> in Buildarr, otherwise the Plex Media Server notification connection will be removed from Radarr whenever Buildarr performs an update run.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When a Plex Media Server notification connection exists on the Radarr instance,
+Buildarr will log warnings recognising it as an unsupported type.</p>
+<p>These warnings can be ignored, as Buildarr will not modify the notification connection in any way.</p>
 </div>
 <h2 id="prowl">Prowl<a class="headerlink" href="#prowl" title="Permanent link">#</a></h2>
 
@@ -12166,16 +12168,20 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div><h2 id="trakt">Trakt<a class="headerlink" href="#trakt" title="Permanent link">#</a></h2>
 <p>Buildarr is unable to manage Trakt notification connections at this time, due to Plex requiring external authentication using OAuth2.</p>
 <p>Please add the Trakt notification connection manually in the Radarr UI.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Ensure <code>delete_unmanaged</code> is set to <code>false</code> in Buildarr, otherwise the Trakt notification connection will be removed from Radarr whenever Buildarr performs an update run.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When a Trakt notification connection exists on the Radarr instance,
+Buildarr will log warnings recognising it as an unsupported type.</p>
+<p>These warnings can be ignored, as Buildarr will not modify the notification connection in any way.</p>
 </div>
 <h2 id="twitter">Twitter<a class="headerlink" href="#twitter" title="Permanent link">#</a></h2>
 <p>Buildarr is unable to manage Twitter notification connections at this time, due to Plex requiring external authentication using OAuth2.</p>
 <p>Please add the Twitter notification connection manually in the Radarr UI.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Ensure <code>delete_unmanaged</code> is set to <code>false</code> in Buildarr, otherwise the Twitter notification connection will be removed from Radarr whenever Buildarr performs an update run.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When a Twitter notification connection exists on the Radarr instance,
+Buildarr will log warnings recognising it as an unsupported type.</p>
+<p>These warnings can be ignored, as Buildarr will not modify the notification connection in any way.</p>
 </div>
 <h2 id="webhook">Webhook<a class="headerlink" href="#webhook" title="Permanent link">#</a></h2>
 
