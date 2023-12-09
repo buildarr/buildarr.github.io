@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Buildarr Docker Container - Buildarr</title>
+        <title>Windows - Buildarr</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -31,7 +31,7 @@
                 <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li class="dropdown active">
+                            <li class="dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Release Notes <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
@@ -56,7 +56,7 @@
 </li>
                                     
 <li>
-    <a href="./" class="dropdown-item active">Buildarr Docker Container</a>
+    <a href="../../docker/release-notes/" class="dropdown-item">Buildarr Docker Container</a>
 </li>
                                     
 <li>
@@ -64,20 +64,20 @@
 </li>
                                 </ul>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown active">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Installation <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../../installation/docker/" class="dropdown-item">Docker Container</a>
+    <a href="../docker/" class="dropdown-item">Docker Container</a>
 </li>
                                     
 <li>
-    <a href="../../installation/python/" class="dropdown-item">Python Application</a>
+    <a href="../python/" class="dropdown-item">Python Application</a>
 </li>
                                     
 <li>
-    <a href="../../installation/windows/" class="dropdown-item">Windows</a>
+    <a href="./" class="dropdown-item active">Windows</a>
 </li>
                                 </ul>
                             </li>
@@ -412,12 +412,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../../plugins/jellyseerr/release-notes/" class="nav-link">
+                                <a rel="prev" href="../python/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../../installer/release-notes/" class="nav-link">
+                                <a rel="next" href="../../configuration/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -439,81 +439,21 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#release-notes-buildarr-docker-container" class="nav-link">Release Notes (Buildarr Docker Container)</a>
+            <li class="nav-item" data-level="1"><a href="#install-buildarr-on-windows" class="nav-link">Install Buildarr on Windows</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#v074-2023-12-02" class="nav-link">v0.7.4 - 2023-12-02</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#v073-2023-12-01" class="nav-link">v0.7.3 - 2023-12-01</a>
+            <li class="nav-item" data-level="2"><a href="#as-a-docker-container" class="nav-link">As a Docker container</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#v072-2023-11-27" class="nav-link">v0.7.2 - 2023-11-27</a>
+            <li class="nav-item" data-level="2"><a href="#using-the-buildarr-installer" class="nav-link">Using the Buildarr Installer</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#v071-2023-11-13" class="nav-link">v0.7.1 - 2023-11-13</a>
+            <li class="nav-item" data-level="2"><a href="#as-a-windows-service" class="nav-link">As a Windows service</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#v070-2023-11-12" class="nav-link">v0.7.0 - 2023-11-12</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#v066-2023-11-07" class="nav-link">v0.6.6 - 2023-11-07</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#v065-2023-11-07" class="nav-link">v0.6.5 - 2023-11-07</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#v064-2023-11-05" class="nav-link">v0.6.4 - 2023-11-05</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#v063-2023-11-05" class="nav-link">v0.6.3 - 2023-11-05</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#v062-2023-09-11" class="nav-link">v0.6.2 - 2023-09-11</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#v061-2023-09-09" class="nav-link">v0.6.1 - 2023-09-09</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#v060-2023-09-09" class="nav-link">v0.6.0 - 2023-09-09</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#v050-2023-04-16" class="nav-link">v0.5.0 - 2023-04-16</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#v045-2023-04-15" class="nav-link">v0.4.5 - 2023-04-15</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#v044-2023-04-14" class="nav-link">v0.4.4 - 2023-04-14</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#v043-2023-04-09" class="nav-link">v0.4.3 - 2023-04-09</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#v042-2023-04-08" class="nav-link">v0.4.2 - 2023-04-08</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#v041-2023-04-08" class="nav-link">v0.4.1 - 2023-04-08</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#v040-2023-03-31" class="nav-link">v0.4.0 - 2023-03-31</a>
+            <li class="nav-item" data-level="2"><a href="#as-a-python-application" class="nav-link">As a Python application</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -524,106 +464,113 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="release-notes-buildarr-docker-container">Release Notes (Buildarr Docker Container)<a class="headerlink" href="#release-notes-buildarr-docker-container" title="Permanent link">#</a></h1>
-<h2 id="v074-2023-12-02">v0.7.4 - 2023-12-02<a class="headerlink" href="#v074-2023-12-02" title="Permanent link">#</a></h2>
+<h1 id="install-buildarr-on-windows">Install Buildarr on Windows<a class="headerlink" href="#install-buildarr-on-windows" title="Permanent link">#</a></h1>
+<p>Like many of the *Arr stack applications it was designed to manage, Buildarr is capable of running on Windows.</p>
+<p>There are many ways of running Buildarr on Windows.</p>
+<h2 id="as-a-docker-container">As a Docker container<a class="headerlink" href="#as-a-docker-container" title="Permanent link">#</a></h2>
+<p>The <a href="../docker/">Docker container for Buildarr</a> can be run on Windows using <a href="https://www.docker.com/products/docker-desktop">Docker Desktop</a>.</p>
+<h2 id="using-the-buildarr-installer">Using the Buildarr Installer<a class="headerlink" href="#using-the-buildarr-installer" title="Permanent link">#</a></h2>
+<p>A Buildarr Installer for Windows is now available, which bundles:</p>
 <ul>
-<li>Update the Sonarr plugin for Buildarr to <a href="https://buildarr.github.io/plugins/sonarr/release-notes#v063-2023-12-02">v0.6.3</a></li>
-<li>Update the Radarr plugin for Buildarr to <a href="https://buildarr.github.io/plugins/radarr/release-notes#v023-2023-12-02">v0.2.3</a></li>
-<li>Update the Prowlarr plugin for Buildarr to <a href="https://buildarr.github.io/plugins/prowlarr/release-notes#v051-2023-12-02">v0.5.1</a></li>
-<li>Update the Jellyseerr plugin for Buildarr to <a href="https://buildarr.github.io/plugins/jellyseerr/release-notes#v031-2023-12-02">v0.3.1</a></li>
+<li>Python</li>
+<li>The Buildarr application</li>
+<li>All currently available first-party plugins</li>
+<li>A basic script for updating Buildarr and plugins to the latest version</li>
 </ul>
-<h2 id="v073-2023-12-01">v0.7.3 - 2023-12-01<a class="headerlink" href="#v073-2023-12-01" title="Permanent link">#</a></h2>
+<h3 id="download">Download<a class="headerlink" href="#download" title="Permanent link">#</a></h3>
+<p>You can download the latest version of the Buildarr installer from the <a href="https://github.com/buildarr/buildarr-installer/releases">Buildarr Installer releases page on GitHub</a>.</p>
+<h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">#</a></h3>
+<p>Run <code>buildarr-installer-&lt;version&gt;-&lt;arch&gt;.exe</code> to start the installation process.</p>
+<p>You may get a prompt from Microsoft Defender SmartScreen when trying to run the installer, as shown below.
+This is because the installer is not yet code signed, for a variety of reasons (primarily cost, and difficulty of getting keys for individuals).</p>
+<p>To continue with the installation, click "More info" to reveal the information on the program to be run.</p>
+<p><img alt="You may get a SmartScreen prompt when starting the installer." src="../buildarr-installer-1.png" />.</p>
+<p>Check that the Buildarr installer is the program to be run, and click "Run anyway".</p>
+<p><img alt="Click &quot;More info&quot;, then &quot;Run anyway&quot; to continue with installation." src="../buildarr-installer-2.png" /></p>
+<p>User Account Control will now prompt you to allow Buildarr Installer to make changes to your computer. Click "Yes" to continue to the installer.</p>
+<p>Once the Buildarr Installer has opened, click "Next" and follow the on-screen instructions.</p>
+<p><img alt="Click &quot;Next&quot; and follow the on-screen instructions." src="../buildarr-installer-3.png" /></p>
+<p>The installer provides an option to either install it just for the current user, or for anyone using the computer.
+It is recommended to select "Install for anyone using this computer".</p>
+<p><img alt="&quot;Install for anyone using this computer&quot; is recommended." src="../buildarr-installer-4.png" /></p>
+<p>Buildarr can be installed to any location, if the user desires to change where it is installed from the default.</p>
+<p>This documentation assumes Buildarr will be installed at <code>C:\Program Files\Buildarr</code>.</p>
+<p><img alt="This documentation assumes Buildarr will be installed at this location." src="../buildarr-installer-5.png" /></p>
+<p>Continue following the on-screen instructions until installation is complete.</p>
+<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">#</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You will need to create a <code>buildarr.yml</code> file to start using Buildarr.</p>
+<p>For more information on how to create <code>buildarr.yml</code>, refer to <a href="../../configuration/">Configuration</a>.</p>
+</div>
+<p>Buildarr will install the following shortcuts to the Windows start menu:</p>
 <ul>
-<li>Update the Sonarr plugin for Buildarr to <a href="https://buildarr.github.io/plugins/sonarr/release-notes#v062-2023-12-01">v0.6.2</a></li>
+<li><code>Buildarr</code> - Run Buildarr daemon in the foreground (with an open console window).</li>
+<li><code>Buildarr (No Console)</code> - Run Buildarr daemon in the background (no console window).</li>
+<li><code>Buildarr (Ad-hoc Run)</code> - Perform a single Buildarr run in the foreground (with an open console window), and exit.</li>
+<li><code>Buildarr (Test Config)</code> - Test the Buildarr configuration file (<code>buildarr.yml</code>) for errors, and exit.</li>
 </ul>
-<h2 id="v072-2023-11-27">v0.7.2 - 2023-11-27<a class="headerlink" href="#v072-2023-11-27" title="Permanent link">#</a></h2>
-<ul>
-<li>Update the Radarr plugin for Buildarr to <a href="https://buildarr.github.io/plugins/radarr/release-notes#v022-2023-11-27">v0.2.2</a></li>
-</ul>
-<h2 id="v071-2023-11-13">v0.7.1 - 2023-11-13<a class="headerlink" href="#v071-2023-11-13" title="Permanent link">#</a></h2>
-<ul>
-<li>Update Buildarr Core to <a href="https://buildarr.github.io/release-notes#v071-2023-11-13">v0.7.1</a></li>
-<li>Update the Sonarr plugin for Buildarr to <a href="https://buildarr.github.io/plugins/sonarr/release-notes#v061-2023-11-13">v0.6.1</a></li>
-<li>Update the Radarr plugin for Buildarr to <a href="https://buildarr.github.io/plugins/radarr/release-notes#v021-2023-11-13">v0.2.1</a></li>
-</ul>
-<h2 id="v070-2023-11-12">v0.7.0 - 2023-11-12<a class="headerlink" href="#v070-2023-11-12" title="Permanent link">#</a></h2>
-<ul>
-<li>Update Buildarr Core to <a href="https://buildarr.github.io/release-notes#v070-2023-11-12">v0.7.0</a></li>
-<li>Update the Sonarr plugin for Buildarr to <a href="https://buildarr.github.io/plugins/sonarr/release-notes#v060-2023-11-12">v0.6.0</a></li>
-<li>Update the Radarr plugin for Buildarr to <a href="https://buildarr.github.io/plugins/radarr/release-notes#v020-2023-11-12">v0.2.0</a></li>
-<li>Update the Prowlarr plugin for Buildarr to <a href="https://buildarr.github.io/plugins/prowlarr/release-notes#v050-2023-11-12">v0.5.0</a></li>
-<li>Update the Jellyseerr plugin for Buildarr to <a href="https://buildarr.github.io/plugins/jellyseerr/release-notes#v030-2023-11-12">v0.3.0</a></li>
-</ul>
-<h2 id="v066-2023-11-07">v0.6.6 - 2023-11-07<a class="headerlink" href="#v066-2023-11-07" title="Permanent link">#</a></h2>
-<ul>
-<li>Update Buildarr Core to <a href="https://buildarr.github.io/release-notes#v062-2023-11-07">v0.6.2</a></li>
-<li>Update the Prowlarr plugin for Buildarr to <a href="https://buildarr.github.io/plugins/prowlarr/release-notes#v043-2023-11-07">v0.4.3</a></li>
-</ul>
-<h2 id="v065-2023-11-07">v0.6.5 - 2023-11-07<a class="headerlink" href="#v065-2023-11-07" title="Permanent link">#</a></h2>
-<ul>
-<li>Update the Prowlarr plugin for Buildarr to <a href="https://buildarr.github.io/plugins/prowlarr/release-notes#v042-2023-11-07">v0.4.2</a></li>
-</ul>
-<h2 id="v064-2023-11-05">v0.6.4 - 2023-11-05<a class="headerlink" href="#v064-2023-11-05" title="Permanent link">#</a></h2>
-<ul>
-<li>Update the Radarr plugin for Buildarr to <a href="https://buildarr.github.io/plugins/radarr/release-notes#v012-2023-11-05">v0.1.2</a></li>
-<li>Update the Prowlarr plugin for Buildarr to <a href="https://buildarr.github.io/plugins/prowlarr/release-notes#v041-2023-11-05">v0.4.1</a></li>
-</ul>
-<h2 id="v063-2023-11-05">v0.6.3 - 2023-11-05<a class="headerlink" href="#v063-2023-11-05" title="Permanent link">#</a></h2>
-<ul>
-<li>Update the Sonarr plugin for Buildarr to <a href="https://buildarr.github.io/plugins/sonarr/release-notes#v054-2023-11-05">v0.5.4</a></li>
-<li>Update the Prowlarr plugin for Buildarr to <a href="https://buildarr.github.io/plugins/prowlarr/release-notes#v040-2023-11-05">v0.4.0</a></li>
-</ul>
-<h2 id="v062-2023-09-11">v0.6.2 - 2023-09-11<a class="headerlink" href="#v062-2023-09-11" title="Permanent link">#</a></h2>
-<ul>
-<li>Update Buildarr Core to v0.6.1 <a href="https://buildarr.github.io/release-notes#v061-2023-09-11">v0.6.1</a></li>
-<li>Update the Sonarr plugin for Buildarr to <a href="https://buildarr.github.io/plugins/sonarr/release-notes#v053-2023-09-11">v0.5.3</a></li>
-</ul>
-<h2 id="v061-2023-09-09">v0.6.1 - 2023-09-09<a class="headerlink" href="#v061-2023-09-09" title="Permanent link">#</a></h2>
-<ul>
-<li>Update the Radarr plugin for Buildarr to <a href="https://buildarr.github.io/plugins/radarr/release-notes#v011-2023-09-09">v0.1.1</a></li>
-<li>Update the Prowlarr plugin for Buildarr to <a href="https://buildarr.github.io/plugins/prowlarr/release-notes#v031-2023-09-09">v0.3.1</a></li>
-</ul>
-<h2 id="v060-2023-09-09">v0.6.0 - 2023-09-09<a class="headerlink" href="#v060-2023-09-09" title="Permanent link">#</a></h2>
-<ul>
-<li>Update Buildarr Core to <a href="../../release-notes/#v060-2023-09-02">v0.6.0</a></li>
-<li>Update the Sonarr plugin for Buildarr to <a href="../../plugins/sonarr/release-notes/#v052-2023-09-09">v0.5.2</a></li>
-<li>Update the Prowlarr plugin for Buildarr to <a href="../../plugins/prowlarr/release-notes/#v030-2023-09-09">v0.3.0</a></li>
-<li>Update the Jellyseerr plugin for Buildarr to <a href="../../plugins/prowlarr/release-notes/#v020-2023-09-09">v0.2.0</a></li>
-<li>Add the new <a href="../../plugins/radarr/">Radarr plugin for Buildarr</a> to the container</li>
-</ul>
-<h2 id="v050-2023-04-16">v0.5.0 - 2023-04-16<a class="headerlink" href="#v050-2023-04-16" title="Permanent link">#</a></h2>
-<ul>
-<li>Update Buildarr to <a href="../../release-notes/#v050-2023-04-16">v0.5.0</a></li>
-<li>Update the Sonarr plugin to <a href="../../plugins/sonarr/release-notes/#v050-2023-04-16">v0.5.0</a></li>
-<li>Update the Prowlarr plugin to <a href="../../plugins/prowlarr/release-notes/#v020-2023-04-16">v0.2.0</a></li>
-</ul>
-<h2 id="v045-2023-04-15">v0.4.5 - 2023-04-15<a class="headerlink" href="#v045-2023-04-15" title="Permanent link">#</a></h2>
-<ul>
-<li>Add the <a href="../../plugins/jellyseerr/">Jellyseerr plugin</a> to the container</li>
-</ul>
-<h2 id="v044-2023-04-14">v0.4.4 - 2023-04-14<a class="headerlink" href="#v044-2023-04-14" title="Permanent link">#</a></h2>
-<ul>
-<li>Update Buildarr to <a href="../../release-notes/#v042-2023-04-14">v0.4.2</a></li>
-</ul>
-<h2 id="v043-2023-04-09">v0.4.3 - 2023-04-09<a class="headerlink" href="#v043-2023-04-09" title="Permanent link">#</a></h2>
-<ul>
-<li>Update Buildarr to <a href="../../release-notes/#v041-2023-04-09">v0.4.1</a></li>
-<li>Fix a bug where Buildarr was not being made PID 1, resulting in exit/reload signalling not working</li>
-</ul>
-<h2 id="v042-2023-04-08">v0.4.2 - 2023-04-08<a class="headerlink" href="#v042-2023-04-08" title="Permanent link">#</a></h2>
-<ul>
-<li>Update the Sonarr plugin to <a href="../../plugins/sonarr/release-notes/#v041-2023-04-08">v0.4.1</a></li>
-<li>Update the Prowlarr plugin to <a href="../../plugins/prowlarr/release-notes/#v011-2023-04-08">v0.1.1</a></li>
-</ul>
-<h2 id="v041-2023-04-08">v0.4.1 - 2023-04-08<a class="headerlink" href="#v041-2023-04-08" title="Permanent link">#</a></h2>
-<ul>
-<li>Add the <a href="../../plugins/prowlarr/">Prowlarr plugin</a> to the container</li>
-</ul>
-<h2 id="v040-2023-03-31">v0.4.0 - 2023-03-31<a class="headerlink" href="#v040-2023-03-31" title="Permanent link">#</a></h2>
-<ul>
-<li>Update Buildarr to <a href="../../release-notes/#v040-2023-03-31">v0.4.0</a></li>
-<li>Add the newly separated Sonarr plugin to the container at <a href="../../plugins/sonarr/release-notes/#v040-2023-03-31">v0.4.0</a></li>
-</ul></div>
+<p>These Buildarr shortcuts read <code>buildarr.yml</code> from your home folder (e.g. <code>C:\Users\&lt;username&gt;\buildarr.yml</code>).</p>
+<p>Buildarr is also available as a standard CLI command from Command Prompt, or Windows Terminal.
+To check that it works, open your terminal and run the following command:</p>
+<div class="highlight"><pre><span></span><code>buildarr --help
+</code></pre></div>
+<p>For more information on the available Buildarr CLI commands, refer to <a href="#usage">Usage</a>.</p>
+<h3 id="plugins">Plugins<a class="headerlink" href="#plugins" title="Permanent link">#</a></h3>
+<p>Buildarr Installer bundles all currently available first-party Buildarr plugins, so there is usually no need to install plugins separately.</p>
+<p>However, if you would like to install a Buildarr plugin that is not bundled, this can be done using the following procedure.</p>
+<p>First, open a command prompt/terminal session at the Buildarr installation folder (e.g. <code>C:\Program Files\Buildarr</code>), <strong>as an administrator</strong>.</p>
+<p><img alt="Open an administrator Terminal to the Buildarr folder, then run the shown command." src="../buildarr-installer-6.png" /></p>
+<p>Then run the following command to install the package:</p>
+<div class="highlight"><pre><span></span><code>Python\python.exe -m pip install <span class="p">&lt;</span>plugin package name&gt;
+</code></pre></div>
+<p>Once this is done, restart Buildarr if it is already running. The plugin should automatically be loaded on startup, and it will be usable in <code>buildarr.yml</code>.</p>
+<h3 id="updating">Updating<a class="headerlink" href="#updating" title="Permanent link">#</a></h3>
+<p>The recommended method for updating Buildarr is to download the installer for the latest version, and install it on top of the existing Buildarr installation.</p>
+<p>However, if you wish to only update the Python packages that constitute Buildarr, the installation bundles a rudimentary update script called <code>buildarr-update.bat</code>, found in the Buildarr installation folder (e.g. <code>C:\Program Files\Buildarr\buildarr-update.bat</code>).</p>
+<p><img alt="Run &quot;buildarr-update.bat&quot; to update Buildarr Core and plugins." src="../buildarr-installer-7.png" /></p>
+<p>Simply run <code>buildarr-update.bat</code> <strong>as an administrator</strong> to update Buildarr Core, and the installed plugins to the latest version.</p>
+<p>You may need to open an administrator command prompt/terminal at this location to run the script properly.</p>
+<h3 id="uninstallation">Uninstallation<a class="headerlink" href="#uninstallation" title="Permanent link">#</a></h3>
+<p>Buildarr will be listed in "Add or Remove Programs" as a standard application, and can be uninstalled there like any other application.</p>
+<p><img alt="Look for &quot;Buildarr&quot; in &quot;Add or Remove Programs&quot;, and uninstall it from there." src="../buildarr-installer-8.png" /></p>
+<h2 id="as-a-windows-service">As a Windows service<a class="headerlink" href="#as-a-windows-service" title="Permanent link">#</a></h2>
+<p>Buildarr currently does not natively support running as a Windows service.</p>
+<p>However, <a href="https://nssm.cc">NSSM (the Non-Sucking Service Manager)</a> can be used to register Buildarr as a Windows service.</p>
+<h3 id="installation_1">Installation<a class="headerlink" href="#installation_1" title="Permanent link">#</a></h3>
+<p><a href="https://nssm.cc/download">Download NSSM</a> and save the EXE to a path that is accessible using the command prompt (the <code>PATH</code> environment variable).</p>
+<p>Install Buildarr using the <a href="#installer">Buildarr Installer for Windows</a>, and then run the following commands
+(substituting <code>C:\path\to</code> and <code>C:\path\to\buildarr.yml</code> for the location of your <a href="../../configuration/">Buildarr configuration file</a>).</p>
+<div class="highlight"><pre><span></span><code>nssm install Buildarr
+nssm set Buildarr Application <span class="s2">&quot;C:\Program Files\Buildarr\bin\buildarr.exe&quot;</span>
+nssm set Buildarr AppParameters <span class="s2">&quot;daemon&quot;</span> <span class="s2">&quot;C:\path\to\buildarr.yml&quot;</span>
+nssm set Buildarr AppDirectory <span class="s2">&quot;C:\path\to&quot;</span>
+nssm set Buildarr AppStdout <span class="s2">&quot;C:\path\to\buildarr.log&quot;</span>
+nssm set Buildarr AppStderr <span class="s2">&quot;C:\path\to\buildarr.log&quot;</span>
+nssm set Buildarr DisplayName Buildarr
+nssm set Buildarr Description Buildarr Arr Stack Manager
+nssm set Buildarr AppStopMethodSkip 0
+nssm set Buildarr AppStopMethodConsole 3000
+nssm set Buildarr AppStopMethodWindow 3000
+nssm set Buildarr AppStopMethodThreads 3000
+nssm set Buildarr AppThrottle 5000
+nssm set Buildarr AppExit Default Restart
+nssm set Buildarr AppRestartDelay 0
+</code></pre></div>
+<p>If Sonarr and other applications Buildarr will manage are also registered as Windows services, run the following command (for each service) to set Buildarr as dependencies of those services:</p>
+<div class="highlight"><pre><span></span><code>nssm set Buildarr DependOnSvc <span class="p">&lt;</span>Service-Name&gt;
+</code></pre></div>
+<p>If all of these commands have successfully run, you can either start Buildarr from the Windows service manager, or run the following command to start it using <code>nssm</code>:</p>
+<div class="highlight"><pre><span></span><code>nssm start Buildarr
+</code></pre></div>
+<h3 id="uninstallation_1">Uninstallation<a class="headerlink" href="#uninstallation_1" title="Permanent link">#</a></h3>
+<p>Stop the Buildarr service, then run the following command to remove it as a service.</p>
+<div class="highlight"><pre><span></span><code>nssm remove Buildarr
+</code></pre></div>
+<p>After that, simply follow the <a href="#uninstallation">uninstallation instructions for Buildarr Installer</a>.</p>
+<h2 id="as-a-python-application">As a Python application<a class="headerlink" href="#as-a-python-application" title="Permanent link">#</a></h2>
+<p>If you have <a href="https://www.python.org/downloads/windows">Python for Windows</a> already installed, then you can <a href="../python/">install Buildarr and its plugins as Python packages</a>.</p>
+<p>Both the <code>pipx</code> method and the virtual environment method will work. The <code>pipx</code> method is recommended for ease of use, as it provides a way to more easily install <code>buildarr</code> as a global command to your shell environment.</p></div>
             </div>
         </div>
 

@@ -58,10 +58,28 @@
 <li>
     <a href="../docker/release-notes/" class="dropdown-item">Buildarr Docker Container</a>
 </li>
+                                    
+<li>
+    <a href="../installer/release-notes/" class="dropdown-item">Buildarr Installer for Windows</a>
+</li>
                                 </ul>
                             </li>
-                            <li class="navitem">
-                                <a href="../installation/" class="nav-link">Installation</a>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Installation <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../installation/docker/" class="dropdown-item">Docker Container</a>
+</li>
+                                    
+<li>
+    <a href="../installation/python/" class="dropdown-item">Python Application</a>
+</li>
+                                    
+<li>
+    <a href="../installation/windows/" class="dropdown-item">Windows</a>
+</li>
+                                </ul>
                             </li>
                             <li class="navitem">
                                 <a href="../configuration/" class="nav-link">Configuration</a>
@@ -427,11 +445,7 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#installing-plugins-for-a-standalone-application" class="nav-link">Installing plugins for a standalone application</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#installing-plugins-into-the-docker-container" class="nav-link">Installing plugins into the Docker container</a>
+            <li class="nav-item" data-level="2"><a href="#installation" class="nav-link">Installation</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -443,47 +457,48 @@
                     <div class="col-md-9" role="main">
 
 <h1 id="plugins">Plugins<a class="headerlink" href="#plugins" title="Permanent link">#</a></h1>
-<p>Buildarr supports external plugins to allow support for additional *Arr stack applications to be added.</p>
-<p>Successfully installed plugins will be loaded when Buildarr is run, with the plugin's version output. Configured plugins will be listed under <code>Running with plugins</code>.</p>
-<div class="highlight"><pre><span></span><code>$ buildarr run
-2023-03-29 20:39:50,856 buildarr:1 buildarr.cli.run [INFO] Buildarr version 0.4.0 (log level: INFO)
-2023-03-29 20:39:50,856 buildarr:1 buildarr.cli.run [INFO] Loading configuration file &#39;/config/buildarr.yml&#39;
-2023-03-29 20:39:50,872 buildarr:1 buildarr.cli.run [INFO] Finished loading configuration file
-2023-03-29 20:39:50,874 buildarr:1 buildarr.cli.run [INFO] Loaded plugins: sonarr (0.4.0)
-2023-03-29 20:39:50,875 buildarr:1 buildarr.cli.run [INFO] Loading instance configurations
-2023-03-29 20:39:50,877 buildarr:1 buildarr.cli.run [INFO] Finished loading instance configurations
-2023-03-29 20:39:50,877 buildarr:1 buildarr.cli.run [INFO] Running with plugins: sonarr
+<p>Buildarr utilises a plugin architecture to allow for modular installation of support for different types of *Arr stack applications.</p>
+<p>Successfully installed plugins will be loaded when Buildarr is run (listed under <code>Loaded plugins: PLUGIN[, PLUGIN...]</code>), with the plugin's version also being logged.</p>
+<p>Plugins that are actually being used by the loaded configuration file are output as <code>Running with plugins: PLUGIN-NAME[, PLUGIN-NAME...]</code>.</p>
+<div class="highlight"><pre><span></span><code>2023-11-12 10:00:29,220 buildarr:1 buildarr.cli.daemon [INFO] Buildarr version 0.7.0 (log level: INFO)
+2023-11-12 10:00:29,220 buildarr:1 buildarr.cli.daemon [INFO] Loading configuration file &#39;/config/buildarr.yml&#39;
+2023-11-12 10:00:29,775 buildarr:1 buildarr.cli.daemon [INFO] Finished loading configuration file
+2023-11-12 10:00:29,775 buildarr:1 buildarr.cli.daemon [INFO] Daemon configuration:
+2023-11-12 10:00:29,776 buildarr:1 buildarr.cli.daemon [INFO]  - Watch configuration files: No
+2023-11-12 10:00:29,776 buildarr:1 buildarr.cli.daemon [INFO]  - Update at:
+2023-11-12 10:00:29,776 buildarr:1 buildarr.cli.daemon [INFO]    - Monday 03:00
+2023-11-12 10:00:29,776 buildarr:1 buildarr.cli.daemon [INFO]    - Tuesday 03:00
+2023-11-12 10:00:29,777 buildarr:1 buildarr.cli.daemon [INFO]    - Wednesday 03:00
+2023-11-12 10:00:29,777 buildarr:1 buildarr.cli.daemon [INFO]    - Thursday 03:00
+2023-11-12 10:00:29,778 buildarr:1 buildarr.cli.daemon [INFO]    - Friday 03:00
+2023-11-12 10:00:29,778 buildarr:1 buildarr.cli.daemon [INFO]    - Saturday 03:00
+2023-11-12 10:00:29,778 buildarr:1 buildarr.cli.daemon [INFO]    - Sunday 03:00
+2023-11-12 10:00:29,778 buildarr:1 buildarr.cli.daemon [INFO] Scheduling update jobs
+2023-11-12 10:00:29,779 buildarr:1 buildarr.cli.daemon [INFO] Finished scheduling update jobs
+2023-11-12 10:00:29,779 buildarr:1 buildarr.cli.daemon [INFO] Config file monitoring is already disabled
+2023-11-12 10:00:29,779 buildarr:1 buildarr.cli.daemon [INFO] Applying initial configuration
+2023-11-12 10:00:29,932 buildarr:1 buildarr.cli.run [INFO] Loaded plugins: jellyseerr (0.3.0), prowlarr (0.5.0), radarr (0.2.0), sonarr (0.6.0)
+2023-11-12 10:00:29,932 buildarr:1 buildarr.cli.run [INFO] Loading instance configurations
+2023-11-12 10:00:29,973 buildarr:1 buildarr.cli.run [INFO] Finished loading instance configurations
+2023-11-12 10:00:29,973 buildarr:1 buildarr.cli.run [INFO] Running with plugins: sonarr
 ...
 </code></pre></div>
 <p>Buildarr plugins are installed as Python packages, just like Buildarr itself.</p>
 <h2 id="supported-plugins">Supported plugins<a class="headerlink" href="#supported-plugins" title="Permanent link">#</a></h2>
 <p>At the time of this release the following plugins are available:</p>
 <ul>
-<li><a href="https://buildarr.github.io/plugins/sonarr"><code>buildarr-sonarr</code></a> - <a href="https://sonarr.tv">Sonarr</a> PVR for TV shows</li>
-<li><a href="https://buildarr.github.io/plugins/radarr"><code>buildarr-radarr</code></a> - <a href="https://radarr.video">Radarr</a> PVR for movies</li>
-<li><a href="https://buildarr.github.io/plugins/prowlarr"><code>buildarr-prowlarr</code></a> - <a href="https://prowlarr.com">Prowlarr</a> indexer manager for Arr applications</li>
-<li><a href="https://buildarr.github.io/plugins/jellyseerr"><code>buildarr-jellyseerr</code></a> - <a href="https://github.com/Fallenbagel/jellyseerr">Jellyseerr</a> media request manager for Jellyfin, Sonarr and Radarr</li>
+<li><a href="sonarr/"><code>buildarr-sonarr</code></a> - <a href="https://sonarr.tv">Sonarr</a> PVR for TV shows</li>
+<li><a href="radarr/"><code>buildarr-radarr</code></a> - <a href="https://radarr.video">Radarr</a> PVR for movies</li>
+<li><a href="prowlarr/"><code>buildarr-prowlarr</code></a> - <a href="https://prowlarr.com">Prowlarr</a> indexer manager for Arr applications</li>
+<li><a href="jellyseerr/"><code>buildarr-jellyseerr</code></a> - <a href="https://github.com/Fallenbagel/jellyseerr">Jellyseerr</a> media request manager for Jellyfin, Sonarr and Radarr</li>
 </ul>
-<h2 id="installing-plugins-for-a-standalone-application">Installing plugins for a standalone application<a class="headerlink" href="#installing-plugins-for-a-standalone-application" title="Permanent link">#</a></h2>
-<p>As Buildarr plugins are standard Python packages, they can simply be installed using <code>pip install</code> into the environment Buildarr is installed into, and Buildarr will automatically load them.</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>buildarr-sonarr
-</code></pre></div>
-<p>For more information on installing Buildarr as a standalone application, see the <a href="../installation/#standalone-application">installation instructions</a>.</p>
-<h2 id="installing-plugins-into-the-docker-container">Installing plugins into the Docker container<a class="headerlink" href="#installing-plugins-into-the-docker-container" title="Permanent link">#</a></h2>
-<p>The official Buildarr container, <code>callum027/buildarr</code>, bundles the Sonarr plugin into the image, so there is no need to install the plugin separately if you wish to manage Sonarr instances.</p>
-<p>If you would like to install an external plugin that is not bundled, the Buildarr Docker container supports installing plugins at runtime by defining the <code>$BUILDARR_INSTALL_PACKAGES</code> environment variable.</p>
-<p><code>$BUILDARR_INSTALL_PACKAGES</code> is a space-separated list of packages that gets passed directly to <code>pip install</code> on container startup, ensuring that any defined packages are ready before Buildarr starts running.</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>buildarr<span class="w"> </span>--restart<span class="o">=</span>always<span class="w"> </span>-v<span class="w"> </span>/path/to/config:/config<span class="w"> </span>-e<span class="w"> </span><span class="nv">PUID</span><span class="o">=</span>&lt;PUID&gt;<span class="w"> </span>-e<span class="w"> </span><span class="nv">PGID</span><span class="o">=</span>&lt;PGID&gt;<span class="w"> </span>-e<span class="w"> </span><span class="nv">BUILDARR_INSTALL_PLUGINS</span><span class="o">=</span><span class="s2">&quot;buildarr-sonarr&quot;</span><span class="w"> </span>callum027/buildarr:latest
-</code></pre></div>
-<p>If you would like to upgrade Buildarr itself or the bundled plugins within the container, set the following environment variables to the version you would like to install:</p>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">#</a></h2>
+<p>When running Buildarr <a href="../installation/python/">as a Python application</a>, simply install the plugin's Python package alongside Buildarr in your respective environment.</p>
+<p>For other installation methods, refer to the following pages:</p>
 <ul>
-<li><code>$BUILDARR_VERSION</code></li>
-<li><code>$BUILDARR_SONARR_VERSION</code></li>
-<li><code>$BUILDARR_RADARR_VERSION</code></li>
-<li><code>$BUILDARR_PROWLARR_VERSION</code></li>
-<li><code>$BUILDARR_JELLYSEERR_VERSION</code></li>
-</ul>
-<p>For more information on installing Buildarr as a Docker container, see the <a href="../installation/#docker">Docker installation instructions</a>.</p></div>
+<li><a href="../installation/docker/#plugins">Docker Container</a></li>
+<li><a href="../installation/windows/#plugins">Buildarr Installer for Windows</a></li>
+</ul></div>
             </div>
         </div>
 
