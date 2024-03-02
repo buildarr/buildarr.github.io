@@ -441,6 +441,10 @@
             
             <li class="nav-item" data-level="1"><a href="#release-notes-buildarr-sonarr-plugin" class="nav-link">Release Notes (Buildarr Sonarr Plugin)</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#v064-2024-03-02" class="nav-link">v0.6.4 - 2024-03-02</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#v063-2023-12-02" class="nav-link">v0.6.3 - 2023-12-02</a>
               <ul class="nav flex-column">
               </ul>
@@ -513,10 +517,21 @@
                     <div class="col-md-9" role="main">
 
 <h1 id="release-notes-buildarr-sonarr-plugin">Release Notes (Buildarr Sonarr Plugin)<a class="headerlink" href="#release-notes-buildarr-sonarr-plugin" title="Permanent link">#</a></h1>
+<h2 id="v064-2024-03-02"><a href="https://github.com/buildarr/buildarr-sonarr/releases/tag/v0.6.4">v0.6.4</a> - 2024-03-02<a class="headerlink" href="#v064-2024-03-02" title="Permanent link">#</a></h2>
+<p>This release addresses an issue where Buildarr would try to always try to create new remote path mappings on a Sonarr instance in certain cases, even if they already existed, resulting in an API error.
+Path handling for remote path mappings within Buildarr has also been improved, making sure that Buildarr will handle them correctly for both POSIX paths and Windows paths (for Sonarr instances running on Windows).</p>
+<p>It also improves error handling for Sonarr API responses, making error messages output from the API easier to understand when output by Buildarr.</p>
+<h3 id="changed">Changed<a class="headerlink" href="#changed" title="Permanent link">#</a></h3>
+<ul>
+<li>Functionise host URL generation in secrets (<a href="https://github.com/buildarr/buildarr-sonarr/pull/47">#47</a>)</li>
+<li>Improve JSON API response error handling (<a href="https://github.com/buildarr/buildarr-sonarr/pull/48">#48</a>)</li>
+<li>Update Poetry and lock file (<a href="https://github.com/buildarr/buildarr-sonarr/pull/54">#54</a>)</li>
+<li>Fix remote path mapping checking edge cases (<a href="https://github.com/buildarr/buildarr-sonarr/pull/56">#56</a>)</li>
+</ul>
 <h2 id="v063-2023-12-02"><a href="https://github.com/buildarr/buildarr-sonarr/releases/tag/v0.6.3">v0.6.3</a> - 2023-12-02<a class="headerlink" href="#v063-2023-12-02" title="Permanent link">#</a></h2>
 <p>This release adds support for defining a URL base for the Sonarr instance in the Buildarr configuration, using the <code>url_base</code> host configuration attribute.</p>
 <p>This allows Sonarr instances with APIs available under a custom path (e.g. <code>http://localhost:8989/sonarr</code>) to be managed by Buildarr.</p>
-<h3 id="changed">Changed<a class="headerlink" href="#changed" title="Permanent link">#</a></h3>
+<h3 id="changed_1">Changed<a class="headerlink" href="#changed_1" title="Permanent link">#</a></h3>
 <ul>
 <li>Add Sonarr instance URL base support (<a href="https://github.com/buildarr/buildarr-sonarr/pull/44">#44</a>)</li>
 </ul>
@@ -525,7 +540,7 @@
 <ul>
 <li>Fix an issue where default values for attributes in qBittorrent download clients were not used when the value is not provided by Sonarr API, resulting in qBittorrent download clients being unable to be managed.</li>
 </ul>
-<h3 id="changed_1">Changed<a class="headerlink" href="#changed_1" title="Permanent link">#</a></h3>
+<h3 id="changed_2">Changed<a class="headerlink" href="#changed_2" title="Permanent link">#</a></h3>
 <ul>
 <li>Fix reading remote attributes for qBittorrent download clients (<a href="https://github.com/buildarr/buildarr-sonarr/pull/40">#40</a>)</li>
 </ul>
@@ -538,14 +553,14 @@
 </ul>
 <p>The CLI command for dumping Sonarr instance configurations has also been improved, and can now auto-fetch Sonarr instance API keys by simply leaving the API key blank, and pressing Enter when prompted. Note that this will only work on Sonarr instances that have authentication disabled.</p>
 <p>As this release of the Sonarr plugin uses the latest plugin API features, Buildarr v0.7.1 or later is required for this release.</p>
-<h3 id="changed_2">Changed<a class="headerlink" href="#changed_2" title="Permanent link">#</a></h3>
+<h3 id="changed_3">Changed<a class="headerlink" href="#changed_3" title="Permanent link">#</a></h3>
 <ul>
 <li>Auto-fetch API key when dumping configuration if not specified (<a href="https://github.com/buildarr/buildarr-sonarr/pull/35">#35</a>)</li>
 <li>Fix Newznab/Torznab indexer bugs (<a href="https://github.com/buildarr/buildarr-sonarr/pull/36">#36</a>)</li>
 </ul>
 <h2 id="v060-2023-11-12"><a href="https://github.com/buildarr/buildarr-sonarr/releases/tag/v0.6.0">v0.6.0</a> - 2023-11-12<a class="headerlink" href="#v060-2023-11-12" title="Permanent link">#</a></h2>
 <p>This updates the Sonarr plugin so that it is compatible with <a href="https://buildarr.github.io/release-notes/#v070-2023-11-12">Buildarr v0.7.0</a>.</p>
-<h3 id="changed_3">Changed<a class="headerlink" href="#changed_3" title="Permanent link">#</a></h3>
+<h3 id="changed_4">Changed<a class="headerlink" href="#changed_4" title="Permanent link">#</a></h3>
 <ul>
 <li>Add Buildarr v0.7.0 support (<a href="https://github.com/buildarr/buildarr-sonarr/pull/31">#31</a>)</li>
 </ul>
@@ -554,7 +569,7 @@
 <ul>
 <li>Fix managing Newznab/Torznab indexers that have the <code>TV</code> global category enabled (including Prowlarr-managed indexers).</li>
 </ul>
-<h3 id="changed_4">Changed<a class="headerlink" href="#changed_4" title="Permanent link">#</a></h3>
+<h3 id="changed_5">Changed<a class="headerlink" href="#changed_5" title="Permanent link">#</a></h3>
 <ul>
 <li>Add the <code>TV</code> group as a selectable Newznab/Torznab category (<a href="https://github.com/buildarr/buildarr-sonarr/pull/27">#27</a>)</li>
 </ul>
@@ -563,7 +578,7 @@
 <ul>
 <li>Fix managing e-mail, Mailgun and SendGrid notification connections by enforcing that email address attributes consist only of an email address, and do not contain a name (e.g. <code>Sonarr Notifications &lt;sonarr@example.com&gt;</code>). Sonarr V3 does not support this style of email address definition.</li>
 </ul>
-<h3 id="changed_5">Changed<a class="headerlink" href="#changed_5" title="Permanent link">#</a></h3>
+<h3 id="changed_6">Changed<a class="headerlink" href="#changed_6" title="Permanent link">#</a></h3>
 <ul>
 <li>Fix parsing email addresses for notification connections (<a href="https://github.com/buildarr/buildarr-sonarr/pull/23">#23</a>)</li>
 </ul>
@@ -572,14 +587,14 @@
 <ul>
 <li>Fix Sonarr instance configuration dumping via the CLI for some instances, by changing URL parsing for the Sonarr instance URL to accept any valid URL (not just instances with actual FQDNs).</li>
 </ul>
-<h3 id="changed_6">Changed<a class="headerlink" href="#changed_6" title="Permanent link">#</a></h3>
+<h3 id="changed_7">Changed<a class="headerlink" href="#changed_7" title="Permanent link">#</a></h3>
 <ul>
 <li>Fix URL parsing for configuration dumping (<a href="https://github.com/buildarr/buildarr-sonarr/pull/19">#19</a>)</li>
 </ul>
 <h2 id="v051-2023-09-09"><a href="https://github.com/buildarr/buildarr-sonarr/releases/tag/v0.5.1">v0.5.1</a> - 2023-09-09<a class="headerlink" href="#v051-2023-09-09" title="Permanent link">#</a></h2>
 <p>This is a minor release that enables support for Buildarr v0.6.0.</p>
 <p>Buildarr v0.5.0 is still supported in this release.</p>
-<h3 id="changed_7">Changed<a class="headerlink" href="#changed_7" title="Permanent link">#</a></h3>
+<h3 id="changed_8">Changed<a class="headerlink" href="#changed_8" title="Permanent link">#</a></h3>
 <ul>
 <li>Update package metadata and dependencies (<a href="https://github.com/buildarr/buildarr-sonarr/pull/15">#15</a>)</li>
 </ul>
@@ -591,7 +606,7 @@
 <li>Improve support for deleting resources with <code>delete_unmanaged</code>, by using the new <code>delete_remote</code> API function</li>
 <li>Remove the <code>sonarr.tags.delete_unused</code> attribute (for deleting Sonarr tags not used in Buildarr), as it was unimplemented and Sonarr automatically cleans up unused tags anyway</li>
 </ul>
-<h3 id="changed_8">Changed<a class="headerlink" href="#changed_8" title="Permanent link">#</a></h3>
+<h3 id="changed_9">Changed<a class="headerlink" href="#changed_9" title="Permanent link">#</a></h3>
 <ul>
 <li>Update plugin to newer Buildarr API standards (<a href="https://github.com/buildarr/buildarr-sonarr/pull/11">#11</a>)</li>
 </ul>
@@ -610,7 +625,7 @@ for the first time, or linking a Sonarr instance with a Prowlarr instance using 
 <li>Fix updating Media Management naming configuration</li>
 <li>Fix an issue where UI settings updating was not idempotent</li>
 </ul>
-<h3 id="changed_9">Changed<a class="headerlink" href="#changed_9" title="Permanent link">#</a></h3>
+<h3 id="changed_10">Changed<a class="headerlink" href="#changed_10" title="Permanent link">#</a></h3>
 <ul>
 <li>Fix bugs from integration tests (<a href="https://github.com/buildarr/buildarr-sonarr/pull/4">#4</a>)</li>
 </ul>
@@ -638,7 +653,7 @@ for the first time, or linking a Sonarr instance with a Prowlarr instance using 
 <li>Reintroduce <code>buildarr.__version__</code> and use it internally (<a href="https://github.com/buildarr/buildarr/pull/75">buildarr/buildarr#75</a>)</li>
 <li>Add <code>version</code> attribute to plugin metadata object (<a href="https://github.com/buildarr/buildarr/pull/78">buildarr/buildarr#78</a>)</li>
 </ul>
-<h3 id="changed_10">Changed<a class="headerlink" href="#changed_10" title="Permanent link">#</a></h3>
+<h3 id="changed_11">Changed<a class="headerlink" href="#changed_11" title="Permanent link">#</a></h3>
 <ul>
 <li>Convert most root validators to attribute-specific validators (<a href="https://github.com/buildarr/buildarr/pull/54">buildarr/buildarr#54</a>)</li>
 <li>Remove unused code and fix pre-commit job (<a href="https://github.com/buildarr/buildarr/pull/58">buildarr/buildarr#58</a>)</li>
@@ -701,7 +716,7 @@ for the first time, or linking a Sonarr instance with a Prowlarr instance using 
 <li>Improve Sonarr quality definition <a href="../configuration/quality/#buildarr_sonarr.config.quality.QualityDefinition.min"><code>min</code> and <code>max</code></a> validation so that <code>400</code> is also a valid value for <code>max</code>, and enforce <code>min</code>-<code>max</code> value difference constraints</li>
 <li>Major internal code refactor through the introduction of <a href="https://beta.ruff.rs/docs">Ruff</a> to the development pipeline, fixing a large number of minor code quality issues</li>
 </ul>
-<h3 id="changed_11">Changed<a class="headerlink" href="#changed_11" title="Permanent link">#</a></h3>
+<h3 id="changed_12">Changed<a class="headerlink" href="#changed_12" title="Permanent link">#</a></h3>
 <ul>
 <li>Fix fetching new instance secrets (<a href="https://github.com/buildarr/buildarr/pull/44">buildarr/buildarr#44</a>)</li>
 <li>Accept local and non-qualified domain names in URLs (<a href="https://github.com/buildarr/buildarr/pull/46">buildarr/buildarr#46</a>)</li>
@@ -727,7 +742,7 @@ for the first time, or linking a Sonarr instance with a Prowlarr instance using 
 <li>Implement testing of cached and fetched instance secrets (<a href="https://github.com/buildarr/buildarr/pull/32">buildarr/buildarr#32</a>)</li>
 <li>Refactor the internals of Buildarr to improve maintainability (<a href="https://github.com/buildarr/buildarr/pull/30">buildarr/buildarr#30</a>)</li>
 </ul>
-<h3 id="changed_12">Changed<a class="headerlink" href="#changed_12" title="Permanent link">#</a></h3>
+<h3 id="changed_13">Changed<a class="headerlink" href="#changed_13" title="Permanent link">#</a></h3>
 <ul>
 <li>Convert <code>Password</code> and <code>SonarrApiKey</code> to subclasses of <code>SecretStr</code> (<a href="https://github.com/buildarr/buildarr/pull/34">buildarr/buildarr#34</a>)</li>
 <li>Fix CLI exception class inheritance (<a href="https://github.com/buildarr/buildarr/pull/35">buildarr/buildarr#35</a>)</li>
@@ -783,7 +798,7 @@ for the first time, or linking a Sonarr instance with a Prowlarr instance using 
 <ul>
 <li>Added the <code>sonarr.settings.media_management.delete_unmanaged_root_folders</code> configuration attribute (<a href="https://github.com/buildarr/buildarr/pull/24">buildarr/buildarr#24</a>)</li>
 </ul>
-<h3 id="changed_13">Changed<a class="headerlink" href="#changed_13" title="Permanent link">#</a></h3>
+<h3 id="changed_14">Changed<a class="headerlink" href="#changed_14" title="Permanent link">#</a></h3>
 <ul>
 <li>Improve and fix Sonarr general settings configuration updates (<a href="https://github.com/buildarr/buildarr/pull/19">buildarr/buildarr#19</a>)</li>
 <li>Fix Sonarr UI settings updates (<a href="https://github.com/buildarr/buildarr/pull/20">buildarr/buildarr#20</a>)</li>
@@ -806,7 +821,7 @@ and add more detail.</p>
 <li>Add a GitHub Action to push releases to PyPI (<a href="https://github.com/buildarr/buildarr/pull/11">buildarr/buildarr#11</a>)</li>
 <li>Create a <code>buildarr-dummy</code> plugin for testing the Buildarr plugin API (<a href="https://github.com/buildarr/buildarr/pull/12">buildarr/buildarr#12</a>)</li>
 </ul>
-<h3 id="changed_14">Changed<a class="headerlink" href="#changed_14" title="Permanent link">#</a></h3>
+<h3 id="changed_15">Changed<a class="headerlink" href="#changed_15" title="Permanent link">#</a></h3>
 <ul>
 <li>Fix $PUID and $GUID declarations (<a href="https://github.com/buildarr/buildarr/commit/b5110f3">b5110f3</a>)</li>
 <li>Fix Docker Hub link (<a href="https://github.com/buildarr/buildarr/commit/be0ba12">be0ba12</a>)</li>

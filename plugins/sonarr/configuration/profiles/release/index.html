@@ -524,7 +524,6 @@ or a reference to an external provider of pre-made release profiles like TRaSH-G
 
 
 
-
 <h5 id="buildarr_sonarr.config.profiles.release.SonarrReleaseProfilesSettingsConfig.delete_unmanaged" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">delete_unmanaged</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -544,7 +543,6 @@ or a reference to an external provider of pre-made release profiles like TRaSH-G
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -576,6 +574,7 @@ Buildarr will not modify existing release profiles, but if <code>delete_unmanage
   </div>
 
   </div>
+
 
 </div><h2 id="creating-a-release-profile">Creating a release profile<a class="headerlink" href="#creating-a-release-profile" title="Permanent link">#</a></h2>
 <p>Release profiles are defined in Sonarr like this.</p>
@@ -621,7 +620,6 @@ Buildarr will not modify existing release profiles, but if <code>delete_unmanage
 
 
 
-
 <h5 id="buildarr_sonarr.config.profiles.release.ReleaseProfile.enable" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">enable</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
   
@@ -642,7 +640,6 @@ Buildarr will not modify existing release profiles, but if <code>delete_unmanage
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -669,7 +666,6 @@ when doing automatic renaming in Sonarr.</p>
 
 
 
-
 <h5 id="buildarr_sonarr.config.profiles.release.ReleaseProfile.indexer" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">indexer</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
@@ -689,7 +685,6 @@ when doing automatic renaming in Sonarr.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -723,6 +718,7 @@ and any existing tags (if present) are removed.</p>
 
   </div>
 
+
 </div><h2 id="manually-defining-filters">Manually defining filters<a class="headerlink" href="#manually-defining-filters" title="Permanent link">#</a></h2>
 <p>When not importing release profiles from external sources like TRaSH-Guides,
 settings for how to prefer and ignore releases must be defined within
@@ -752,7 +748,6 @@ the release profile using the following parameters.</p>
 
 
 
-
 <h5 id="buildarr_sonarr.config.profiles.release.ReleaseProfile.must_contain" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">must_contain</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
   
@@ -777,7 +772,6 @@ the release profile using the following parameters.</p>
 
 
 
-
 <h5 id="buildarr_sonarr.config.profiles.release.ReleaseProfile.must_not_contain" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">must_not_contain</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
   
@@ -799,7 +793,6 @@ or regular expressions.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -841,6 +834,7 @@ Positive scores will be more preferred, and negative scores will be less preferr
   </div>
 
   </div>
+
 
 </div><h2 id="importing-release-profiles-from-trash-guides">Importing release profiles from TRaSH-Guides<a class="headerlink" href="#importing-release-profiles-from-trash-guides" title="Permanent link">#</a></h2>
 <p>TRaSH-Guides maintains a list of release profiles for a variety of use cases.</p>
@@ -891,7 +885,6 @@ provided by
 
 
 
-
 <h5 id="buildarr_sonarr.config.profiles.release.ReleaseProfile.trash_id" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">trash_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TrashID</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
@@ -912,7 +905,6 @@ provided by
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -970,7 +962,6 @@ If both are defined, <code>include</code> is used.</p>
 
 
 
-
 <h6 id="buildarr_sonarr.config.profiles.release.TrashFilter.include" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">include</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">TrashID</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span></code>
   
@@ -992,7 +983,6 @@ that should be included in the created Release Profile in Sonarr.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1024,13 +1014,13 @@ that should be excluded from the created Release Profile in Sonarr.</p>
 
   </div>
 
+
 </div>
   </div>
 
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1062,6 +1052,7 @@ be put in the "Must Not Contain" section of the uploaded release profile.</p>
   </div>
 
   </div>
+
 
 </div><h2 id="trash-guides-release-profile-import-examples">TRaSH-Guides release profile import examples<a class="headerlink" href="#trash-guides-release-profile-import-examples" title="Permanent link">#</a></h2>
 <p>Here are some examples of importing well used release profiles from TRaSH-Guides.</p>

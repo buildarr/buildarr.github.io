@@ -542,7 +542,6 @@ where the name of the definition becomes the name of the quality profile in Rada
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.profiles.quality_profiles.RadarrQualityProfilesSettings.delete_unmanaged" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">delete_unmanaged</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -566,7 +565,6 @@ Be careful when using <code>delete_unmanaged</code>.</strong></p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -595,6 +593,7 @@ Be careful when using <code>delete_unmanaged</code>.</strong></p>
   </div>
 
   </div>
+
 
 </div><h2 id="creating-a-quality-profile">Creating a quality profile<a class="headerlink" href="#creating-a-quality-profile" title="Permanent link">#</a></h2>
 <p>A basic quality profile looks something like this.</p>
@@ -645,7 +644,6 @@ and TRaSH-Guides (<a href="https://trash-guides.info/Radarr/radarr-setup-quality
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.profiles.quality_profiles.QualityProfile.upgrades_allowed" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">upgrades_allowed</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -672,6 +670,7 @@ and TRaSH-Guides (<a href="https://trash-guides.info/Radarr/radarr-setup-quality
   </div>
 
   </div>
+
 
 </div><h2 id="quality-levels">Quality Levels<a class="headerlink" href="#quality-levels" title="Permanent link">#</a></h2>
 <p>Quality levels are used to prioritise media releases by resolution, bitrate and
@@ -717,7 +716,6 @@ member quality levels under the <code>members</code> attribute.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.profiles.quality_profiles.QualityProfile.upgrade_until_quality" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">upgrade_until_quality</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
@@ -740,7 +738,6 @@ based on quality level.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -770,6 +767,7 @@ The order determines the priority (highest priority first, lowest priority last)
   </div>
 
   </div>
+
 
 </div><h2 id="custom-formats">Custom Formats<a class="headerlink" href="#custom-formats" title="Permanent link">#</a></h2>
 <p>Custom formats allow for finer control of filtering and prioritising media releases.</p>
@@ -842,7 +840,6 @@ and do not influence release selection.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.profiles.quality_profiles.QualityProfile.minimum_custom_format_score" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">minimum_custom_format_score</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span></code>
   
@@ -864,7 +861,6 @@ for the release to be considered for download.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -897,6 +893,7 @@ based on custom format score.</p>
 
   </div>
 
+
 </div><h3 id="score-definitions">Score Definitions<a class="headerlink" href="#score-definitions" title="Permanent link">#</a></h3>
 
 
@@ -926,7 +923,6 @@ following attributes assigned to them.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.profiles.quality_profiles.CustomFormatScore.name" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">name</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
@@ -945,7 +941,6 @@ following attributes assigned to them.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -980,6 +975,7 @@ shared between multiple quality profiles.</p>
 
   </div>
 
+
 </div><h2 id="language">Language<a class="headerlink" href="#language" title="Permanent link">#</a></h2>
 <p>Quality profiles also allow for explicit filtering by media language.</p>
 <p>Prioritisation based on language (e.g. prefer Japanese but also allow English),
@@ -1006,7 +1002,6 @@ however, should be done using custom formats.</p>
 
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1047,6 +1042,7 @@ Use the <code>original</code> keyword to require the original language of the me
   </div>
 
   </div>
+
 
 </div></div>
             </div>

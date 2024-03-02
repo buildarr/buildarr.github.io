@@ -537,7 +537,6 @@ as shown below.</p>
 
 
 
-
 <h5 id="buildarr_jellyseerr.config.settings.notifications.base.NotificationsSettingsBase.enable" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">enable</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -564,6 +563,7 @@ as shown below.</p>
   </div>
 
   </div>
+
 
 </div><h2 id="configuring-notification-types">Configuring notification types<a class="headerlink" href="#configuring-notification-types" title="Permanent link">#</a></h2>
 <p>Some service types support fine-grained configuration of the type of notifications that get sent.</p>
@@ -617,7 +617,6 @@ in the settings for that service.</p>
 
 
 
-
 <h5 id="buildarr_jellyseerr.config.settings.notifications.discord.DiscordSettings.webhook_url" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">webhook_url</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">AnyHttpUrl</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
@@ -638,7 +637,6 @@ in the settings for that service.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -665,7 +663,6 @@ in the settings for that service.</p>
 
 
 
-
 <h5 id="buildarr_jellyseerr.config.settings.notifications.discord.DiscordSettings.avatar_url" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">avatar_url</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">AnyHttpUrl</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
@@ -686,7 +683,6 @@ in the settings for that service.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -716,6 +712,7 @@ in the settings for that service.</p>
 
   </div>
 
+
 </div>
 
 <div class="doc doc-object doc-class">
@@ -738,7 +735,6 @@ in the settings for that service.</p>
 
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -785,6 +781,7 @@ the types of events you'd like to get notified for.</p>
 
   </div>
 
+
 </div><h2 id="email">Email<a class="headerlink" href="#email" title="Permanent link">#</a></h2>
 
 
@@ -820,7 +817,6 @@ set the origin server hostname when connecting to the SMTP host.</p>
 
 
 
-
 <h5 id="buildarr_jellyseerr.config.settings.notifications.email.EmailSettings.require_user_email" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">require_user_email</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -843,7 +839,6 @@ set the origin server hostname when connecting to the SMTP host.</p>
 
 
 
-
 <h5 id="buildarr_jellyseerr.config.settings.notifications.email.EmailSettings.sender_name" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">sender_name</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Jellyseerr&#39;</span></code>
   
@@ -863,7 +858,6 @@ set the origin server hostname when connecting to the SMTP host.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -892,7 +886,6 @@ owned/controlled by the server being used to send the mail.</p>
 
 
 
-
 <h5 id="buildarr_jellyseerr.config.settings.notifications.email.EmailSettings.smtp_host" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">smtp_host</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
@@ -913,7 +906,6 @@ owned/controlled by the server being used to send the mail.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -938,7 +930,6 @@ If using implicit TLS (SMTPS), this should be set to the standard port of <code>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -977,7 +968,6 @@ username and password credentials unencrypted over the network.</p>
 
 
 
-
 <h5 id="buildarr_jellyseerr.config.settings.notifications.email.EmailSettings.allow_selfsigned_certificates" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">allow_selfsigned_certificates</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -1007,7 +997,6 @@ as any mail server can get free TLS certificates using services such as
 
 
 
-
 <h5 id="buildarr_jellyseerr.config.settings.notifications.email.EmailSettings.smtp_username" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">smtp_username</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
@@ -1027,7 +1016,6 @@ as any mail server can get free TLS certificates using services such as
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1053,7 +1041,6 @@ as any mail server can get free TLS certificates using services such as
 
 
 
-
 <h5 id="buildarr_jellyseerr.config.settings.notifications.email.EmailSettings.pgp_private_key" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">pgp_private_key</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">SecretStr</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
@@ -1076,7 +1063,6 @@ and end with <code>-----END PGP PRIVATE KEY BLOCK-----</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1106,6 +1092,7 @@ and end with <code>-----END PGP PRIVATE KEY BLOCK-----</code>.</p>
 
   </div>
 
+
 </div><h2 id="gotify">Gotify<a class="headerlink" href="#gotify" title="Permanent link">#</a></h2>
 
 
@@ -1134,7 +1121,6 @@ and end with <code>-----END PGP PRIVATE KEY BLOCK-----</code>.</p>
 
 
 
-
 <h5 id="buildarr_jellyseerr.config.settings.notifications.gotify.GotifySettings.server_url" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">server_url</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">AnyHttpUrl</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
@@ -1155,7 +1141,6 @@ and end with <code>-----END PGP PRIVATE KEY BLOCK-----</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1186,6 +1171,7 @@ and end with <code>-----END PGP PRIVATE KEY BLOCK-----</code>.</p>
 
   </div>
 
+
 </div>
 
 <div class="doc doc-object doc-class">
@@ -1208,7 +1194,6 @@ and end with <code>-----END PGP PRIVATE KEY BLOCK-----</code>.</p>
 
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1255,6 +1240,7 @@ the types of events you'd like to get notified for.</p>
 
   </div>
 
+
 </div><h2 id="lunasea">LunaSea<a class="headerlink" href="#lunasea" title="Permanent link">#</a></h2>
 
 
@@ -1283,7 +1269,6 @@ the types of events you'd like to get notified for.</p>
 
 
 
-
 <h5 id="buildarr_jellyseerr.config.settings.notifications.lunasea.LunaseaSettings.webhook_url" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">webhook_url</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">AnyHttpUrl</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
@@ -1304,7 +1289,6 @@ the types of events you'd like to get notified for.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1335,6 +1319,7 @@ the types of events you'd like to get notified for.</p>
 
   </div>
 
+
 </div>
 
 <div class="doc doc-object doc-class">
@@ -1357,7 +1342,6 @@ the types of events you'd like to get notified for.</p>
 
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1404,6 +1388,7 @@ the types of events you'd like to get notified for.</p>
 
   </div>
 
+
 </div><h2 id="pushbullet">Pushbullet<a class="headerlink" href="#pushbullet" title="Permanent link">#</a></h2>
 
 
@@ -1432,7 +1417,6 @@ the types of events you'd like to get notified for.</p>
 
 
 
-
 <h5 id="buildarr_jellyseerr.config.settings.notifications.pushbullet.PushbulletSettings.access_token" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">access_token</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">SecretStr</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
@@ -1453,7 +1437,6 @@ the types of events you'd like to get notified for.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1484,6 +1467,7 @@ to any devices subscribed to it.</p>
 
   </div>
 
+
 </div>
 
 <div class="doc doc-object doc-class">
@@ -1506,7 +1490,6 @@ to any devices subscribed to it.</p>
 
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1553,6 +1536,7 @@ the types of events you'd like to get notified for.</p>
 
   </div>
 
+
 </div><h2 id="pushover">Pushover<a class="headerlink" href="#pushover" title="Permanent link">#</a></h2>
 
 
@@ -1581,7 +1565,6 @@ the types of events you'd like to get notified for.</p>
 
 
 
-
 <h5 id="buildarr_jellyseerr.config.settings.notifications.pushover.PushoverSettings.api_key" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">PushoverApiKey</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
@@ -1602,7 +1585,6 @@ the types of events you'd like to get notified for.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1633,6 +1615,7 @@ the types of events you'd like to get notified for.</p>
 
   </div>
 
+
 </div>
 
 <div class="doc doc-object doc-class">
@@ -1655,7 +1638,6 @@ the types of events you'd like to get notified for.</p>
 
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1701,6 +1683,7 @@ the types of events you'd like to get notified for.</p>
   </div>
 
   </div>
+
 
 </div><h2 id="slack">Slack<a class="headerlink" href="#slack" title="Permanent link">#</a></h2>
 
@@ -1730,7 +1713,6 @@ the types of events you'd like to get notified for.</p>
 
 
 
-
 <h5 id="buildarr_jellyseerr.config.settings.notifications.slack.SlackSettings.webhook_url" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">webhook_url</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">AnyHttpUrl</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
@@ -1757,6 +1739,7 @@ the types of events you'd like to get notified for.</p>
 
   </div>
 
+
 </div>
 
 <div class="doc doc-object doc-class">
@@ -1779,7 +1762,6 @@ the types of events you'd like to get notified for.</p>
 
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1825,6 +1807,7 @@ the types of events you'd like to get notified for.</p>
   </div>
 
   </div>
+
 
 </div><h2 id="telegram">Telegram<a class="headerlink" href="#telegram" title="Permanent link">#</a></h2>
 
@@ -1856,7 +1839,6 @@ with the Jellyseerr Telegram bot to receive notifications.</p>
 
 
 
-
 <h5 id="buildarr_jellyseerr.config.settings.notifications.telegram.TelegramSettings.access_token" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">access_token</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">SecretStr</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
@@ -1877,7 +1859,6 @@ with the Jellyseerr Telegram bot to receive notifications.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1905,7 +1886,6 @@ with your bot and configure their own personal notifications.</p>
 
 
 
-
 <h5 id="buildarr_jellyseerr.config.settings.notifications.telegram.TelegramSettings.chat_id" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">chat_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
@@ -1926,7 +1906,6 @@ with your bot and configure their own personal notifications.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1956,6 +1935,7 @@ with your bot and configure their own personal notifications.</p>
 
   </div>
 
+
 </div>
 
 <div class="doc doc-object doc-class">
@@ -1978,7 +1958,6 @@ with your bot and configure their own personal notifications.</p>
 
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -2025,6 +2004,7 @@ the types of events you'd like to get notified for.</p>
 
   </div>
 
+
 </div><h2 id="webhook">Webhook<a class="headerlink" href="#webhook" title="Permanent link">#</a></h2>
 
 
@@ -2053,7 +2033,6 @@ the types of events you'd like to get notified for.</p>
 
 
 
-
 <h5 id="buildarr_jellyseerr.config.settings.notifications.webhook.WebhookSettings.webhook_url" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">webhook_url</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">AnyHttpUrl</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
@@ -2077,7 +2056,6 @@ the types of events you'd like to get notified for.</p>
 
 
 
-
 <h5 id="buildarr_jellyseerr.config.settings.notifications.webhook.WebhookSettings.authorization_header" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">authorization_header</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">SecretStr</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
@@ -2098,7 +2076,6 @@ the types of events you'd like to get notified for.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -2131,6 +2108,7 @@ in the Overseerr documentation.</p>
 
   </div>
 
+
 </div>
 
 <div class="doc doc-object doc-class">
@@ -2153,7 +2131,6 @@ in the Overseerr documentation.</p>
 
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -2199,6 +2176,7 @@ the types of events you'd like to get notified for.</p>
   </div>
 
   </div>
+
 
 </div><h2 id="webpush-browser-push-notifiations">Webpush (Browser Push Notifiations)<a class="headerlink" href="#webpush-browser-push-notifiations" title="Permanent link">#</a></h2>
 
@@ -2241,6 +2219,7 @@ the types of events you'd like to get notified for.</p>
   </div>
 
   </div>
+
 
 </div></div>
             </div>

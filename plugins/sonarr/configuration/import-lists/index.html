@@ -517,7 +517,6 @@ attribute.</p>
 
 
 
-
 <h5 id="buildarr_sonarr.config.import_lists.SonarrImportListsSettingsConfig.delete_unmanaged" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">delete_unmanaged</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -537,7 +536,6 @@ attribute.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -563,7 +561,6 @@ attribute.</p>
 
 
 
-
 <h5 id="buildarr_sonarr.config.import_lists.SonarrImportListsSettingsConfig.definitions" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">definitions</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Annotated</span><span class="p">[</span><span class="n">ImportListType</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">discriminator</span><span class="o">=</span><span class="s1">&#39;type&#39;</span><span class="p">)]]</span> <span class="o">=</span> <span class="p">{}</span></code>
   
@@ -583,7 +580,6 @@ attribute.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -614,6 +610,7 @@ a title to give the series in the Sonarr UI.</p>
   </div>
 
   </div>
+
 
 </div><h2 id="configuring-import-lists">Configuring import lists<a class="headerlink" href="#configuring-import-lists" title="Permanent link">#</a></h2>
 <p>The following</p>
@@ -646,7 +643,6 @@ refer to this guide on <a href="https://wiki.servarr.com/en/sonarr/settings#impo
 
 
 
-
 <h5 id="buildarr_sonarr.config.import_lists.ImportList.enable_automatic_add" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">enable_automatic_add</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
   
@@ -666,7 +662,6 @@ refer to this guide on <a href="https://wiki.servarr.com/en/sonarr/settings#impo
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -703,7 +698,6 @@ refer to this guide on <a href="https://wiki.servarr.com/en/sonarr/settings#impo
 
 
 
-
 <h5 id="buildarr_sonarr.config.import_lists.ImportList.root_folder" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">root_folder</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
@@ -723,7 +717,6 @@ refer to this guide on <a href="https://wiki.servarr.com/en/sonarr/settings#impo
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -749,7 +742,6 @@ refer to this guide on <a href="https://wiki.servarr.com/en/sonarr/settings#impo
 
 
 
-
 <h5 id="buildarr_sonarr.config.import_lists.ImportList.language_profile" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">language_profile</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
@@ -769,7 +761,6 @@ refer to this guide on <a href="https://wiki.servarr.com/en/sonarr/settings#impo
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -802,7 +793,6 @@ This option affects how Sonarr handles the media, such as renaming.</p>
 
 
 
-
 <h5 id="buildarr_sonarr.config.import_lists.ImportList.season_folder" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">season_folder</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
   
@@ -822,7 +812,6 @@ This option affects how Sonarr handles the media, such as renaming.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -851,6 +840,7 @@ This option affects how Sonarr handles the media, such as renaming.</p>
   </div>
 
   </div>
+
 
 </div><h2 id="sonarr">Sonarr<a class="headerlink" href="#sonarr" title="Permanent link">#</a></h2>
 
@@ -942,7 +932,6 @@ set to what the Sonarr instance itself will use to link to the target instance.<
 
 
 
-
 <h5 id="buildarr_sonarr.config.import_lists.SonarrImportList.type" class="doc doc-heading">
           <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;sonarr&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;sonarr&#39;</span></code>
   
@@ -962,7 +951,6 @@ set to what the Sonarr instance itself will use to link to the target instance.<
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -990,7 +978,6 @@ with another Buildarr-defined Sonarr instance.</p>
 
 
 
-
 <h5 id="buildarr_sonarr.config.import_lists.SonarrImportList.full_url" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">full_url</span><span class="p">:</span> <span class="n">AnyHttpUrl</span></code>
   
@@ -1009,7 +996,6 @@ with another Buildarr-defined Sonarr instance.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1034,7 +1020,6 @@ this attribute is required.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1065,7 +1050,6 @@ If linking to a Sonarr instance outside Buildarr, IDs must be used.</p>
 
 
 
-
 <h5 id="buildarr_sonarr.config.import_lists.SonarrImportList.source_language_profiles" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">source_language_profiles</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">PositiveInt</span><span class="p">,</span> <span class="n">NonEmptyStr</span><span class="p">]]</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="nb">set</span><span class="p">(),</span> <span class="n">alias</span><span class="o">=</span><span class="s1">&#39;source_language_profile_ids&#39;</span><span class="p">)</span></code>
   
@@ -1090,7 +1074,6 @@ If linking to a Sonarr instance outside Buildarr, IDs must be used.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1125,6 +1108,7 @@ If linking to a Sonarr instance outside Buildarr, IDs must be used.</p>
 
   </div>
 
+
 </div><h2 id="plex">Plex<a class="headerlink" href="#plex" title="Permanent link">#</a></h2>
 
 
@@ -1153,7 +1137,6 @@ If linking to a Sonarr instance outside Buildarr, IDs must be used.</p>
 
 
 
-
 <h5 id="buildarr_sonarr.config.import_lists.PlexWatchlistImportList.type" class="doc doc-heading">
           <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;plex-watchlist&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;plex-watchlist&#39;</span></code>
   
@@ -1173,7 +1156,6 @@ If linking to a Sonarr instance outside Buildarr, IDs must be used.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1203,6 +1185,7 @@ If linking to a Sonarr instance outside Buildarr, IDs must be used.</p>
   </div>
 
   </div>
+
 
 </div><h2 id="trakt">Trakt<a class="headerlink" href="#trakt" title="Permanent link">#</a></h2>
 
@@ -1244,7 +1227,6 @@ are required.</p>
 
 
 
-
 <h5 id="buildarr_sonarr.config.import_lists.TraktImportList.access_token" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">access_token</span><span class="p">:</span> <span class="n">Password</span></code>
   
@@ -1266,7 +1248,6 @@ are required.</p>
 
 
 
-
 <h5 id="buildarr_sonarr.config.import_lists.TraktImportList.refresh_token" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">refresh_token</span><span class="p">:</span> <span class="n">Password</span></code>
   
@@ -1285,7 +1266,6 @@ are required.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1311,7 +1291,6 @@ are required.</p>
 
 
 
-
 <h5 id="buildarr_sonarr.config.import_lists.TraktImportList.auth_user" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">auth_user</span><span class="p">:</span> <span class="n">TraktAuthUser</span></code>
   
@@ -1330,7 +1309,6 @@ are required.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1353,7 +1331,6 @@ are required.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1380,7 +1357,6 @@ are required.</p>
 
 
 
-
 <h5 id="buildarr_sonarr.config.import_lists.TraktImportList.genres" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">genres</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
   
@@ -1400,7 +1376,6 @@ are required.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1426,7 +1401,6 @@ are required.</p>
 
 
 
-
 <h5 id="buildarr_sonarr.config.import_lists.TraktImportList.limit" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">limit</span><span class="p">:</span> <span class="n">PositiveInt</span> <span class="o">=</span> <span class="mi">100</span></code>
   
@@ -1446,7 +1420,6 @@ are required.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1476,6 +1449,7 @@ are required.</p>
 
   </div>
 
+
 </div><h3 id="list">List<a class="headerlink" href="#list" title="Permanent link">#</a></h3>
 
 
@@ -1504,7 +1478,6 @@ are required.</p>
 
 
 
-
 <h5 id="buildarr_sonarr.config.import_lists.TraktListImportList.type" class="doc doc-heading">
           <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;trakt-list&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;trakt-list&#39;</span></code>
   
@@ -1524,7 +1497,6 @@ are required.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1554,6 +1526,7 @@ are required.</p>
 
   </div>
 
+
 </div><h3 id="popular-list">Popular List<a class="headerlink" href="#popular-list" title="Permanent link">#</a></h3>
 
 
@@ -1582,7 +1555,6 @@ are required.</p>
 
 
 
-
 <h5 id="buildarr_sonarr.config.import_lists.TraktPopularlistImportList.type" class="doc doc-heading">
           <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;trakt-popularlist&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;trakt-popularlist&#39;</span></code>
   
@@ -1602,7 +1574,6 @@ are required.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1646,6 +1617,7 @@ are required.</p>
 
   </div>
 
+
 </div><h3 id="user">User<a class="headerlink" href="#user" title="Permanent link">#</a></h3>
 
 
@@ -1674,7 +1646,6 @@ are required.</p>
 
 
 
-
 <h5 id="buildarr_sonarr.config.import_lists.TraktUserImportList.type" class="doc doc-heading">
           <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;trakt-user&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;trakt-user&#39;</span></code>
   
@@ -1694,7 +1665,6 @@ are required.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1729,6 +1699,7 @@ are required.</p>
   </div>
 
   </div>
+
 
 </div></div>
             </div>

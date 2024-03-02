@@ -564,7 +564,6 @@ how releases should be picked when managing movies.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.custom_formats.RadarrCustomFormatsSettings.delete_unmanaged" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">delete_unmanaged</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -584,7 +583,6 @@ how releases should be picked when managing movies.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -613,6 +611,7 @@ how releases should be picked when managing movies.</p>
   </div>
 
   </div>
+
 
 </div><h2 id="quality-profiles">Quality Profiles<a class="headerlink" href="#quality-profiles" title="Permanent link">#</a></h2>
 <p>When using custom formats in quality profiles, they are assigned a score value to configure how releases are prioritised.</p>
@@ -698,7 +697,6 @@ as in the TRaSH-Guides definition.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.custom_formats.custom_format.CustomFormat.trash_id" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">trash_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TrashID</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
@@ -727,6 +725,7 @@ as a condition in the TRaSH-Guides profile, the explicitly defined condition tak
   </div>
 
   </div>
+
 
 </div><h2 id="manual-definitions">Manual Definitions<a class="headerlink" href="#manual-definitions" title="Permanent link">#</a></h2>
 <p>If the pre-made custom formats available online are not sufficient for your needs,
@@ -779,7 +778,6 @@ you can define a custom format completely manually in Buildarr, using the follow
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.custom_formats.custom_format.CustomFormat.default_score" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">default_score</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
@@ -812,7 +810,6 @@ type of custom format:</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.custom_formats.custom_format.CustomFormat.include_when_renaming" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">include_when_renaming</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -832,7 +829,6 @@ type of custom format:</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -858,7 +854,6 @@ custom formats imported from TRaSH-Guides.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -891,6 +886,7 @@ must <strong>all</strong> match in order for the custom format to be applied.</p
   </div>
 
   </div>
+
 
 </div><p>The following sections document the custom format condition types available for use in Buildarr.</p>
 <h2 id="edition">Edition<a class="headerlink" href="#edition" title="Permanent link">#</a></h2>
@@ -932,7 +928,6 @@ must <strong>all</strong> match in order for the custom format to be applied.</p
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.custom_formats.conditions.edition.EditionCondition.type" class="doc doc-heading">
           <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;edition&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;edition&#39;</span></code>
   
@@ -952,7 +947,6 @@ must <strong>all</strong> match in order for the custom format to be applied.</p
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -982,6 +976,7 @@ must <strong>all</strong> match in order for the custom format to be applied.</p
 
   </div>
 
+
 </div>
 
 <div class="doc doc-object doc-class">
@@ -1007,7 +1002,6 @@ must <strong>all</strong> match in order for the custom format to be applied.</p
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.custom_formats.conditions.base.Condition.negate" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">negate</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -1029,7 +1023,6 @@ will <strong>not</strong> apply to the media.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1061,6 +1054,7 @@ if any one of the defined conditions match.</p>
   </div>
 
   </div>
+
 
 </div><h2 id="indexer-flag">Indexer Flag<a class="headerlink" href="#indexer-flag" title="Permanent link">#</a></h2>
 <p>Custom format condition for matching based on indexer flags.</p>
@@ -1101,7 +1095,6 @@ if any one of the defined conditions match.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.custom_formats.conditions.indexer_flag.IndexerFlagCondition.type" class="doc doc-heading">
           <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;indexer-flag&#39;</span><span class="p">,</span> <span class="s1">&#39;indexer_flag&#39;</span><span class="p">,</span> <span class="s1">&#39;indexerflag&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;indexer-flag&#39;</span></code>
   
@@ -1121,7 +1114,6 @@ if any one of the defined conditions match.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1165,6 +1157,7 @@ As of Radarr v4.7.5, the following flags are available:</p>
 
   </div>
 
+
 </div>
 
 <div class="doc doc-object doc-class">
@@ -1190,7 +1183,6 @@ As of Radarr v4.7.5, the following flags are available:</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.custom_formats.conditions.base.Condition.negate" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">negate</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -1212,7 +1204,6 @@ will <strong>not</strong> apply to the media.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1244,6 +1235,7 @@ if any one of the defined conditions match.</p>
   </div>
 
   </div>
+
 
 </div><h2 id="language">Language<a class="headerlink" href="#language" title="Permanent link">#</a></h2>
 <p>Custom format condition for matching based on language.</p>
@@ -1305,7 +1297,6 @@ if any one of the defined conditions match.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.custom_formats.conditions.language.LanguageCondition.type" class="doc doc-heading">
           <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;language&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;language&#39;</span></code>
   
@@ -1325,7 +1316,6 @@ if any one of the defined conditions match.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1363,6 +1353,7 @@ in this condition.</p>
 
   </div>
 
+
 </div>
 
 <div class="doc doc-object doc-class">
@@ -1388,7 +1379,6 @@ in this condition.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.custom_formats.conditions.base.Condition.negate" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">negate</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -1410,7 +1400,6 @@ will <strong>not</strong> apply to the media.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1442,6 +1431,7 @@ if any one of the defined conditions match.</p>
   </div>
 
   </div>
+
 
 </div><h2 id="quality-modifier">Quality Modifier<a class="headerlink" href="#quality-modifier" title="Permanent link">#</a></h2>
 <p>Custom format condition for matching based on quality modifiers.</p>
@@ -1482,7 +1472,6 @@ if any one of the defined conditions match.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.custom_formats.conditions.quality_modifier.QualityModifierCondition.type" class="doc doc-heading">
           <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;quality-modifier&#39;</span><span class="p">,</span> <span class="s1">&#39;quality_modifier&#39;</span><span class="p">,</span> <span class="s1">&#39;qualitymodifier&#39;</span><span class="p">,</span> <span class="s1">&#39;quality&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;quality-modifier&#39;</span></code>
   
@@ -1502,7 +1491,6 @@ if any one of the defined conditions match.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1541,6 +1529,7 @@ As of Radarr v4.7.5, the following modifiers are available:</p>
 
   </div>
 
+
 </div>
 
 <div class="doc doc-object doc-class">
@@ -1566,7 +1555,6 @@ As of Radarr v4.7.5, the following modifiers are available:</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.custom_formats.conditions.base.Condition.negate" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">negate</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -1588,7 +1576,6 @@ will <strong>not</strong> apply to the media.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1620,6 +1607,7 @@ if any one of the defined conditions match.</p>
   </div>
 
   </div>
+
 
 </div><h2 id="release-group">Release Group<a class="headerlink" href="#release-group" title="Permanent link">#</a></h2>
 <p>Custom format condition for matching based on release group.</p>
@@ -1665,7 +1653,6 @@ if any one of the defined conditions match.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.custom_formats.conditions.release_group.ReleaseGroupCondition.type" class="doc doc-heading">
           <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;release-group&#39;</span><span class="p">,</span> <span class="s1">&#39;release_group&#39;</span><span class="p">,</span> <span class="s1">&#39;releasegroup&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;release-group&#39;</span></code>
   
@@ -1685,7 +1672,6 @@ if any one of the defined conditions match.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1715,6 +1701,7 @@ if any one of the defined conditions match.</p>
 
   </div>
 
+
 </div>
 
 <div class="doc doc-object doc-class">
@@ -1740,7 +1727,6 @@ if any one of the defined conditions match.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.custom_formats.conditions.base.Condition.negate" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">negate</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -1762,7 +1748,6 @@ will <strong>not</strong> apply to the media.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1794,6 +1779,7 @@ if any one of the defined conditions match.</p>
   </div>
 
   </div>
+
 
 </div><h2 id="release-title">Release Title<a class="headerlink" href="#release-title" title="Permanent link">#</a></h2>
 <p>Custom format condition for matching based on release title contents.</p>
@@ -1839,7 +1825,6 @@ if any one of the defined conditions match.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.custom_formats.conditions.release_title.ReleaseTitleCondition.type" class="doc doc-heading">
           <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;release-title&#39;</span><span class="p">,</span> <span class="s1">&#39;release_title&#39;</span><span class="p">,</span> <span class="s1">&#39;releasetitle&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;release-title&#39;</span></code>
   
@@ -1859,7 +1844,6 @@ if any one of the defined conditions match.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1890,6 +1874,7 @@ if any one of the defined conditions match.</p>
 
   </div>
 
+
 </div>
 
 <div class="doc doc-object doc-class">
@@ -1915,7 +1900,6 @@ if any one of the defined conditions match.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.custom_formats.conditions.base.Condition.negate" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">negate</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -1937,7 +1921,6 @@ will <strong>not</strong> apply to the media.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1969,6 +1952,7 @@ if any one of the defined conditions match.</p>
   </div>
 
   </div>
+
 
 </div><h2 id="resolution">Resolution<a class="headerlink" href="#resolution" title="Permanent link">#</a></h2>
 <p>Custom format condition for matching based on media resolution.</p>
@@ -2017,7 +2001,6 @@ if any one of the defined conditions match.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.custom_formats.conditions.resolution.ResolutionCondition.type" class="doc doc-heading">
           <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;resolution&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;resolution&#39;</span></code>
   
@@ -2037,7 +2020,6 @@ if any one of the defined conditions match.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -2076,6 +2058,7 @@ As of Radarr v4.7.5, the following resolutions are available:</p>
 
   </div>
 
+
 </div>
 
 <div class="doc doc-object doc-class">
@@ -2101,7 +2084,6 @@ As of Radarr v4.7.5, the following resolutions are available:</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.custom_formats.conditions.base.Condition.negate" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">negate</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -2123,7 +2105,6 @@ will <strong>not</strong> apply to the media.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -2155,6 +2136,7 @@ if any one of the defined conditions match.</p>
   </div>
 
   </div>
+
 
 </div><h2 id="size">Size<a class="headerlink" href="#size" title="Permanent link">#</a></h2>
 <p>Custom format condition for matching based on media file size.</p>
@@ -2196,7 +2178,6 @@ if any one of the defined conditions match.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.custom_formats.conditions.size.SizeCondition.type" class="doc doc-heading">
           <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;size&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;size&#39;</span></code>
   
@@ -2216,7 +2197,6 @@ if any one of the defined conditions match.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -2240,7 +2220,6 @@ if any one of the defined conditions match.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -2271,6 +2250,7 @@ if any one of the defined conditions match.</p>
 
   </div>
 
+
 </div>
 
 <div class="doc doc-object doc-class">
@@ -2296,7 +2276,6 @@ if any one of the defined conditions match.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.custom_formats.conditions.base.Condition.negate" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">negate</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -2318,7 +2297,6 @@ will <strong>not</strong> apply to the media.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -2350,6 +2328,7 @@ if any one of the defined conditions match.</p>
   </div>
 
   </div>
+
 
 </div><h2 id="source">Source<a class="headerlink" href="#source" title="Permanent link">#</a></h2>
 <p>Custom format condition for matching based on media source type.</p>
@@ -2390,7 +2369,6 @@ if any one of the defined conditions match.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.custom_formats.conditions.source.SourceCondition.type" class="doc doc-heading">
           <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;source&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;source&#39;</span></code>
   
@@ -2410,7 +2388,6 @@ if any one of the defined conditions match.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -2453,6 +2430,7 @@ As of Radarr v4.7.5, the following source types are available:</p>
 
   </div>
 
+
 </div>
 
 <div class="doc doc-object doc-class">
@@ -2478,7 +2456,6 @@ As of Radarr v4.7.5, the following source types are available:</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.custom_formats.conditions.base.Condition.negate" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">negate</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -2500,7 +2477,6 @@ will <strong>not</strong> apply to the media.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -2532,6 +2508,7 @@ if any one of the defined conditions match.</p>
   </div>
 
   </div>
+
 
 </div></div>
             </div>

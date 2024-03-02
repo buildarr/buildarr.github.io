@@ -538,7 +538,6 @@ Radarr instance may need to be updated, so take care when modifying them.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.general.HostGeneralSettings.bind_address" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">bind_address</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;*&#39;</span><span class="p">],</span> <span class="n">IPv4Address</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;*&#39;</span></code>
   
@@ -562,7 +561,6 @@ this generally should be left untouched.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -592,7 +590,6 @@ Instead, change the external port it is bound to using
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.general.HostGeneralSettings.ssl_port" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">ssl_port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">9898</span></code>
   
@@ -616,7 +613,6 @@ Instead, change the external port it is bound to using
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -644,7 +640,6 @@ to put Radarr behind a HTTPS-terminating reverse proxy such as Nginx, Caddy or T
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.general.HostGeneralSettings.ssl_cert_path" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">ssl_cert_path</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
@@ -665,7 +660,6 @@ to put Radarr behind a HTTPS-terminating reverse proxy such as Nginx, Caddy or T
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -691,7 +685,6 @@ to put Radarr behind a HTTPS-terminating reverse proxy such as Nginx, Caddy or T
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.general.HostGeneralSettings.url_base" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">url_base</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
@@ -714,7 +707,6 @@ is assigned to a subfolder, e.g. <code>https://example.com/radarr</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -744,6 +736,7 @@ is assigned to a subfolder, e.g. <code>https://example.com/radarr</code>.</p>
 
   </div>
 
+
 </div><h2 id="security">Security<a class="headerlink" href="#security" title="Permanent link">#</a></h2>
 
 
@@ -769,7 +762,6 @@ is assigned to a subfolder, e.g. <code>https://example.com/radarr</code>.</p>
 
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -811,7 +803,6 @@ forward authentication configured, or not exposing Radarr to the public Internet
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.general.SecurityGeneralSettings.authentication_required" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">authentication_required</span><span class="p">:</span> <span class="n">AuthenticationRequired</span> <span class="o">=</span> <span class="n">AuthenticationRequired</span><span class="o">.</span><span class="n">enabled</span></code>
   
@@ -841,7 +832,6 @@ forward authentication configured, or not exposing Radarr to the public Internet
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.general.SecurityGeneralSettings.username" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
@@ -865,7 +855,6 @@ forward authentication configured, or not exposing Radarr to the public Internet
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.general.SecurityGeneralSettings.password" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">password</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Password</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
@@ -886,7 +875,6 @@ forward authentication configured, or not exposing Radarr to the public Internet
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -923,6 +911,7 @@ Do not change unless you understand the risks.</p>
 
   </div>
 
+
 </div><h2 id="proxy">Proxy<a class="headerlink" href="#proxy" title="Permanent link">#</a></h2>
 
 
@@ -951,7 +940,6 @@ Do not change unless you understand the risks.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.general.ProxyGeneralSettings.enable" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">enable</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -971,7 +959,6 @@ Do not change unless you understand the risks.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1003,7 +990,6 @@ Do not change unless you understand the risks.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.general.ProxyGeneralSettings.hostname" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">hostname</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
@@ -1027,7 +1013,6 @@ Do not change unless you understand the risks.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.general.ProxyGeneralSettings.port" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">8080</span></code>
   
@@ -1047,7 +1032,6 @@ Do not change unless you understand the risks.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1074,7 +1058,6 @@ Only enter if authentication is required by the proxy.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.general.ProxyGeneralSettings.password" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">password</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Password</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
@@ -1098,7 +1081,6 @@ Only enter if authentication is required by the proxy.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.general.ProxyGeneralSettings.ignored_addresses" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">ignored_addresses</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
   
@@ -1118,7 +1100,6 @@ Only enter if authentication is required by the proxy.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1148,6 +1129,7 @@ Only enter if authentication is required by the proxy.</p>
 
   </div>
 
+
 </div><h2 id="logging">Logging<a class="headerlink" href="#logging" title="Permanent link">#</a></h2>
 
 
@@ -1173,7 +1155,6 @@ Only enter if authentication is required by the proxy.</p>
 
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1209,6 +1190,7 @@ Only enter if authentication is required by the proxy.</p>
 
   </div>
 
+
 </div><h2 id="analytics">Analytics<a class="headerlink" href="#analytics" title="Permanent link">#</a></h2>
 
 
@@ -1234,7 +1216,6 @@ Only enter if authentication is required by the proxy.</p>
 
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1268,6 +1249,7 @@ to prioritise features and bug fixes.</p>
 
   </div>
 
+
 </div><h2 id="updates">Updates<a class="headerlink" href="#updates" title="Permanent link">#</a></h2>
 
 
@@ -1296,7 +1278,6 @@ to prioritise features and bug fixes.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.general.UpdatesGeneralSettings.branch" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">branch</span><span class="p">:</span> <span class="n">NonEmptyStr</span> <span class="o">=</span> <span class="s1">&#39;master&#39;</span></code>
   
@@ -1321,7 +1302,6 @@ Changing this value has no effect on Docker installations.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.general.UpdatesGeneralSettings.automatic" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">automatic</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -1343,7 +1323,6 @@ Manual updates can still be performed from System -&gt; Updates.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1378,7 +1357,6 @@ Must be set to <code>docker</code> on Docker installations.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.general.UpdatesGeneralSettings.script_path" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">script_path</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
@@ -1406,6 +1384,7 @@ and handles the remainder of the update process.</p>
   </div>
 
   </div>
+
 
 </div><h2 id="backup">Backup<a class="headerlink" href="#backup" title="Permanent link">#</a></h2>
 
@@ -1435,7 +1414,6 @@ and handles the remainder of the update process.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.general.BackupGeneralSettings.folder" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">folder</span><span class="p">:</span> <span class="n">NonEmptyStr</span> <span class="o">=</span> <span class="s1">&#39;Backups&#39;</span></code>
   
@@ -1459,7 +1437,6 @@ and handles the remainder of the update process.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.general.BackupGeneralSettings.interval" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">interval</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">le</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span></code>
   
@@ -1480,7 +1457,6 @@ and handles the remainder of the update process.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1511,6 +1487,7 @@ Backups older than the retention period will be cleaned up automatically.</p>
   </div>
 
   </div>
+
 
 </div></div>
             </div>

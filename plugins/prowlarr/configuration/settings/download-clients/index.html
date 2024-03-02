@@ -593,7 +593,6 @@ to Prowlarr categories, to automatically classify downloads by content type.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.ProwlarrDownloadClientsSettings.delete_unmanaged" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">delete_unmanaged</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -613,7 +612,6 @@ to Prowlarr categories, to automatically classify downloads by content type.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -642,6 +640,7 @@ to Prowlarr categories, to automatically classify downloads by content type.</p>
   </div>
 
   </div>
+
 
 </div><h2 id="configuring-download-clients">Configuring download clients<a class="headerlink" href="#configuring-download-clients" title="Permanent link">#</a></h2>
 
@@ -693,7 +692,6 @@ but disabled so that it is inactive.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.base.DownloadClient.enable" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">enable</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span></code>
   
@@ -713,7 +711,6 @@ but disabled so that it is inactive.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -738,7 +735,6 @@ Round-robin is used for clients with the same priority.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -770,6 +766,7 @@ Only media under those tags will be assigned to this client.</p>
 
   </div>
 
+
 </div><h2 id="usenet-download-clients">Usenet download clients<a class="headerlink" href="#usenet-download-clients" title="Permanent link">#</a></h2>
 <p>These download clients retrieve media using the <a href="https://en.wikipedia.org/wiki/Usenet">Usenet</a> discussion and content delivery system.</p>
 <h2 id="download-station-usenet">Download Station (Usenet)<a class="headerlink" href="#download-station-usenet" title="Permanent link">#</a></h2>
@@ -800,7 +797,6 @@ Only media under those tags will be assigned to this client.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.DownloadstationUsenetDownloadClient.type" class="doc doc-heading">
           <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;downloadstation-usenet&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;downloadstation-usenet&#39;</span></code>
   
@@ -823,7 +819,6 @@ Only media under those tags will be assigned to this client.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.DownloadstationUsenetDownloadClient.host" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
@@ -842,7 +837,6 @@ Only media under those tags will be assigned to this client.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -868,7 +862,6 @@ Only media under those tags will be assigned to this client.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.DownloadstationUsenetDownloadClient.use_ssl" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -888,7 +881,6 @@ Only media under those tags will be assigned to this client.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -913,7 +905,6 @@ Only media under those tags will be assigned to this client.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.DownloadstationUsenetDownloadClient.password" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">password</span><span class="p">:</span> <span class="n">Password</span></code>
   
@@ -932,7 +923,6 @@ Only media under those tags will be assigned to this client.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -958,7 +948,6 @@ Using a category is optional, but strongly recommended.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -989,6 +978,7 @@ Using a category is optional, but strongly recommended.</p>
 
   </div>
 
+
 </div><h2 id="nzbget">NZBGet<a class="headerlink" href="#nzbget" title="Permanent link">#</a></h2>
 
 
@@ -1017,7 +1007,6 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.NzbgetDownloadClient.type" class="doc doc-heading">
           <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;nzbget&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;nzbget&#39;</span></code>
   
@@ -1040,7 +1029,6 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.NzbgetDownloadClient.host" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
@@ -1059,7 +1047,6 @@ Using a category is optional, but strongly recommended.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1085,7 +1072,6 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.NzbgetDownloadClient.use_ssl" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -1105,7 +1091,6 @@ Using a category is optional, but strongly recommended.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1131,7 +1116,6 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.NzbgetDownloadClient.username" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
@@ -1150,7 +1134,6 @@ Using a category is optional, but strongly recommended.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1175,7 +1158,6 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.NzbgetDownloadClient.category" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
@@ -1197,7 +1179,6 @@ Using a category is optional, but strongly recommended.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1232,7 +1213,6 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.NzbgetDownloadClient.add_paused" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">add_paused</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -1253,7 +1233,6 @@ Using a category is optional, but strongly recommended.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1284,6 +1263,7 @@ with the selected Prowlarr categories.</p>
 
   </div>
 
+
 </div><h2 id="nzbvortex">NZBVortex<a class="headerlink" href="#nzbvortex" title="Permanent link">#</a></h2>
 
 
@@ -1312,7 +1292,6 @@ with the selected Prowlarr categories.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.NzbvortexDownloadClient.type" class="doc doc-heading">
           <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;nzbvortex&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;nzbvortex&#39;</span></code>
   
@@ -1335,7 +1314,6 @@ with the selected Prowlarr categories.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.NzbvortexDownloadClient.host" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
@@ -1354,7 +1332,6 @@ with the selected Prowlarr categories.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1380,7 +1357,6 @@ with the selected Prowlarr categories.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.NzbvortexDownloadClient.url_base" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">url_base</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
@@ -1400,7 +1376,6 @@ with the selected Prowlarr categories.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1425,7 +1400,6 @@ with the selected Prowlarr categories.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.NzbvortexDownloadClient.category" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
@@ -1447,7 +1421,6 @@ Using a category is optional, but strongly recommended.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1479,7 +1452,6 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.NzbvortexDownloadClient.category_mappings" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">category_mappings</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">,</span> <span class="n">Set</span><span class="p">[</span><span class="n">LowerCaseNonEmptyStr</span><span class="p">]]</span> <span class="o">=</span> <span class="p">{}</span></code>
   
@@ -1506,6 +1478,7 @@ with the selected Prowlarr categories.</p>
   </div>
 
   </div>
+
 
 </div><h2 id="pneumatic">Pneumatic<a class="headerlink" href="#pneumatic" title="Permanent link">#</a></h2>
 
@@ -1535,7 +1508,6 @@ with the selected Prowlarr categories.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.PneumaticDownloadClient.type" class="doc doc-heading">
           <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;pneumatic&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;pneumatic&#39;</span></code>
   
@@ -1555,7 +1527,6 @@ with the selected Prowlarr categories.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1585,6 +1556,7 @@ with the selected Prowlarr categories.</p>
 
   </div>
 
+
 </div><h2 id="sabnzbd">SABnzbd<a class="headerlink" href="#sabnzbd" title="Permanent link">#</a></h2>
 
 
@@ -1613,7 +1585,6 @@ with the selected Prowlarr categories.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.SabnzbdDownloadClient.type" class="doc doc-heading">
           <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;sabnzbd&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;sabnzbd&#39;</span></code>
   
@@ -1636,7 +1607,6 @@ with the selected Prowlarr categories.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.SabnzbdDownloadClient.host" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
@@ -1655,7 +1625,6 @@ with the selected Prowlarr categories.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1681,7 +1650,6 @@ with the selected Prowlarr categories.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.SabnzbdDownloadClient.use_ssl" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -1701,7 +1669,6 @@ with the selected Prowlarr categories.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1727,7 +1694,6 @@ with the selected Prowlarr categories.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.SabnzbdDownloadClient.api_key" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">SecretStr</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
@@ -1747,7 +1713,6 @@ with the selected Prowlarr categories.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1772,7 +1737,6 @@ Using a category is optional, but strongly recommended.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1807,7 +1771,6 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.SabnzbdDownloadClient.category_mappings" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">category_mappings</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">,</span> <span class="n">Set</span><span class="p">[</span><span class="n">LowerCaseNonEmptyStr</span><span class="p">]]</span> <span class="o">=</span> <span class="p">{}</span></code>
   
@@ -1834,6 +1797,7 @@ with the selected Prowlarr categories.</p>
   </div>
 
   </div>
+
 
 </div><h2 id="usenet-blackhole">Usenet Blackhole<a class="headerlink" href="#usenet-blackhole" title="Permanent link">#</a></h2>
 
@@ -1863,7 +1827,6 @@ with the selected Prowlarr categories.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.usenet.UsenetBlackholeDownloadClient.type" class="doc doc-heading">
           <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;usenet-blackhole&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;usenet-blackhole&#39;</span></code>
   
@@ -1883,7 +1846,6 @@ with the selected Prowlarr categories.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1911,6 +1873,7 @@ with the selected Prowlarr categories.</p>
   </div>
 
   </div>
+
 
 </div><h2 id="torrent-download-clients">Torrent download clients<a class="headerlink" href="#torrent-download-clients" title="Permanent link">#</a></h2>
 <p>These download clients use the <a href="https://en.wikipedia.org/wiki/BitTorrent">BitTorrent</a>
@@ -1943,7 +1906,6 @@ peer-to-peer file sharing protocol to retrieve media files.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.Aria2DownloadClient.type" class="doc doc-heading">
           <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;aria2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;aria2&#39;</span></code>
   
@@ -1966,7 +1928,6 @@ peer-to-peer file sharing protocol to retrieve media files.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.Aria2DownloadClient.host" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
@@ -1985,7 +1946,6 @@ peer-to-peer file sharing protocol to retrieve media files.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -2011,7 +1971,6 @@ peer-to-peer file sharing protocol to retrieve media files.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.Aria2DownloadClient.use_ssl" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -2034,7 +1993,6 @@ peer-to-peer file sharing protocol to retrieve media files.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.Aria2DownloadClient.rpc_path" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">rpc_path</span><span class="p">:</span> <span class="n">NonEmptyStr</span> <span class="o">=</span> <span class="s1">&#39;/rpc&#39;</span></code>
   
@@ -2054,7 +2012,6 @@ peer-to-peer file sharing protocol to retrieve media files.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -2082,6 +2039,7 @@ peer-to-peer file sharing protocol to retrieve media files.</p>
   </div>
 
   </div>
+
 
 </div><h2 id="deluge">Deluge<a class="headerlink" href="#deluge" title="Permanent link">#</a></h2>
 
@@ -2111,7 +2069,6 @@ peer-to-peer file sharing protocol to retrieve media files.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.DelugeDownloadClient.type" class="doc doc-heading">
           <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;deluge&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;deluge&#39;</span></code>
   
@@ -2134,7 +2091,6 @@ peer-to-peer file sharing protocol to retrieve media files.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.DelugeDownloadClient.host" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
@@ -2153,7 +2109,6 @@ peer-to-peer file sharing protocol to retrieve media files.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -2179,7 +2134,6 @@ peer-to-peer file sharing protocol to retrieve media files.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.DelugeDownloadClient.use_ssl" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -2199,7 +2153,6 @@ peer-to-peer file sharing protocol to retrieve media files.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -2225,7 +2178,6 @@ peer-to-peer file sharing protocol to retrieve media files.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.DelugeDownloadClient.password" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">password</span><span class="p">:</span> <span class="n">Password</span></code>
   
@@ -2244,7 +2196,6 @@ peer-to-peer file sharing protocol to retrieve media files.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -2269,7 +2220,6 @@ Using a category is optional, but strongly recommended.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -2300,7 +2250,6 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.DelugeDownloadClient.category_mappings" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">category_mappings</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">,</span> <span class="n">Set</span><span class="p">[</span><span class="n">LowerCaseNonEmptyStr</span><span class="p">]]</span> <span class="o">=</span> <span class="p">{}</span></code>
   
@@ -2327,6 +2276,7 @@ with the selected Prowlarr categories.</p>
   </div>
 
   </div>
+
 
 </div><h2 id="download-station-torrent">Download Station (Torrent)<a class="headerlink" href="#download-station-torrent" title="Permanent link">#</a></h2>
 
@@ -2356,7 +2306,6 @@ with the selected Prowlarr categories.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.DownloadstationTorrentDownloadClient.type" class="doc doc-heading">
           <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;downloadstation-torrent&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;downloadstation-torrent&#39;</span></code>
   
@@ -2379,7 +2328,6 @@ with the selected Prowlarr categories.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.DownloadstationTorrentDownloadClient.host" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
@@ -2398,7 +2346,6 @@ with the selected Prowlarr categories.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -2424,7 +2371,6 @@ with the selected Prowlarr categories.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.DownloadstationTorrentDownloadClient.use_ssl" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -2444,7 +2390,6 @@ with the selected Prowlarr categories.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -2469,7 +2414,6 @@ with the selected Prowlarr categories.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.DownloadstationTorrentDownloadClient.password" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">password</span><span class="p">:</span> <span class="n">Password</span></code>
   
@@ -2488,7 +2432,6 @@ with the selected Prowlarr categories.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -2514,7 +2457,6 @@ Using a category is optional, but strongly recommended.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -2545,6 +2487,7 @@ Using a category is optional, but strongly recommended.</p>
 
   </div>
 
+
 </div><h2 id="flood">Flood<a class="headerlink" href="#flood" title="Permanent link">#</a></h2>
 
 
@@ -2573,7 +2516,6 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.FloodDownloadClient.type" class="doc doc-heading">
           <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;flood&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;flood&#39;</span></code>
   
@@ -2596,7 +2538,6 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.FloodDownloadClient.host" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
@@ -2615,7 +2556,6 @@ Using a category is optional, but strongly recommended.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -2641,7 +2581,6 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.FloodDownloadClient.use_ssl" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -2661,7 +2600,6 @@ Using a category is optional, but strongly recommended.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -2687,7 +2625,6 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.FloodDownloadClient.username" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
@@ -2706,7 +2643,6 @@ Using a category is optional, but strongly recommended.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -2731,7 +2667,6 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.FloodDownloadClient.destination" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">destination</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
@@ -2751,7 +2686,6 @@ Using a category is optional, but strongly recommended.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -2779,7 +2713,6 @@ This avoids conflicts with unrelated downloads.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.FloodDownloadClient.additional_tags" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">additional_tags</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">FloodMediaTag</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
   
@@ -2802,7 +2735,6 @@ This avoids conflicts with unrelated downloads.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.FloodDownloadClient.add_paused" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">add_paused</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -2822,7 +2754,6 @@ This avoids conflicts with unrelated downloads.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -2853,6 +2784,7 @@ with the selected Prowlarr categories.</p>
 
   </div>
 
+
 </div><h2 id="freebox">Freebox<a class="headerlink" href="#freebox" title="Permanent link">#</a></h2>
 
 
@@ -2881,7 +2813,6 @@ with the selected Prowlarr categories.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.FreeboxDownloadClient.type" class="doc doc-heading">
           <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;freebox&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;freebox&#39;</span></code>
   
@@ -2901,7 +2832,6 @@ with the selected Prowlarr categories.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -2928,7 +2858,6 @@ with the selected Prowlarr categories.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.FreeboxDownloadClient.port" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">443</span></code>
   
@@ -2949,7 +2878,6 @@ with the selected Prowlarr categories.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -2975,7 +2903,6 @@ with the selected Prowlarr categories.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.FreeboxDownloadClient.api_url" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">api_url</span><span class="p">:</span> <span class="n">NonEmptyStr</span> <span class="o">=</span> <span class="s1">&#39;/api/v1&#39;</span></code>
   
@@ -2995,7 +2922,6 @@ with the selected Prowlarr categories.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -3020,7 +2946,6 @@ with the selected Prowlarr categories.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.FreeboxDownloadClient.app_token" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">app_token</span><span class="p">:</span> <span class="n">Password</span></code>
   
@@ -3039,7 +2964,6 @@ with the selected Prowlarr categories.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -3063,7 +2987,6 @@ with the selected Prowlarr categories.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -3091,7 +3014,6 @@ Adding a category specific to Prowlarr avoids conflicts with unrelated non-Prowl
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.FreeboxDownloadClient.client_priority" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">client_priority</span><span class="p">:</span> <span class="n">FreeboxPriority</span> <span class="o">=</span> <span class="n">FreeboxPriority</span><span class="o">.</span><span class="n">last</span></code>
   
@@ -3114,7 +3036,6 @@ Adding a category specific to Prowlarr avoids conflicts with unrelated non-Prowl
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.FreeboxDownloadClient.add_paused" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">add_paused</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -3134,7 +3055,6 @@ Adding a category specific to Prowlarr avoids conflicts with unrelated non-Prowl
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -3165,6 +3085,7 @@ with the selected Prowlarr categories.</p>
 
   </div>
 
+
 </div><h2 id="hadouken">Hadouken<a class="headerlink" href="#hadouken" title="Permanent link">#</a></h2>
 
 
@@ -3193,7 +3114,6 @@ with the selected Prowlarr categories.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.HadoukenDownloadClient.type" class="doc doc-heading">
           <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;hadouken&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;hadouken&#39;</span></code>
   
@@ -3216,7 +3136,6 @@ with the selected Prowlarr categories.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.HadoukenDownloadClient.host" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
@@ -3235,7 +3154,6 @@ with the selected Prowlarr categories.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -3261,7 +3179,6 @@ with the selected Prowlarr categories.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.HadoukenDownloadClient.use_ssl" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -3281,7 +3198,6 @@ with the selected Prowlarr categories.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -3307,7 +3223,6 @@ with the selected Prowlarr categories.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.HadoukenDownloadClient.username" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
@@ -3326,7 +3241,6 @@ with the selected Prowlarr categories.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -3351,7 +3265,6 @@ with the selected Prowlarr categories.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.HadoukenDownloadClient.category" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">category</span><span class="p">:</span> <span class="n">NonEmptyStr</span> <span class="o">=</span> <span class="s1">&#39;prowlarr&#39;</span></code>
   
@@ -3373,7 +3286,6 @@ Using a category is optional, but strongly recommended.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -3404,6 +3316,7 @@ with the selected Prowlarr categories.</p>
 
   </div>
 
+
 </div><h2 id="qbittorrent">qBittorrent<a class="headerlink" href="#qbittorrent" title="Permanent link">#</a></h2>
 
 
@@ -3432,7 +3345,6 @@ with the selected Prowlarr categories.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.QbittorrentDownloadClient.type" class="doc doc-heading">
           <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;qbittorrent&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;qbittorrent&#39;</span></code>
   
@@ -3455,7 +3367,6 @@ with the selected Prowlarr categories.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.QbittorrentDownloadClient.host" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
@@ -3474,7 +3385,6 @@ with the selected Prowlarr categories.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -3500,7 +3410,6 @@ with the selected Prowlarr categories.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.QbittorrentDownloadClient.use_ssl" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -3520,7 +3429,6 @@ with the selected Prowlarr categories.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -3546,7 +3454,6 @@ with the selected Prowlarr categories.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.QbittorrentDownloadClient.username" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
@@ -3565,7 +3472,6 @@ with the selected Prowlarr categories.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -3590,7 +3496,6 @@ with the selected Prowlarr categories.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.QbittorrentDownloadClient.category" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;prowlarr&#39;</span></code>
   
@@ -3612,7 +3517,6 @@ Using a category is optional, but strongly recommended.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -3643,7 +3547,6 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.QbittorrentDownloadClient.initial_state" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">initial_state</span><span class="p">:</span> <span class="n">QbittorrentState</span> <span class="o">=</span> <span class="n">QbittorrentState</span><span class="o">.</span><span class="n">start</span></code>
   
@@ -3664,7 +3567,6 @@ Using a category is optional, but strongly recommended.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -3695,6 +3597,7 @@ with the selected Prowlarr categories.</p>
 
   </div>
 
+
 </div><h2 id="rtorrent-rutorrent">RTorrent (ruTorrent)<a class="headerlink" href="#rtorrent-rutorrent" title="Permanent link">#</a></h2>
 
 
@@ -3723,7 +3626,6 @@ with the selected Prowlarr categories.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.RtorrentDownloadClient.type" class="doc doc-heading">
           <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;rtorrent&#39;</span><span class="p">,</span> <span class="s1">&#39;rutorrent&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;rtorrent&#39;</span></code>
   
@@ -3746,7 +3648,6 @@ with the selected Prowlarr categories.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.RtorrentDownloadClient.host" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
@@ -3765,7 +3666,6 @@ with the selected Prowlarr categories.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -3791,7 +3691,6 @@ with the selected Prowlarr categories.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.RtorrentDownloadClient.use_ssl" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -3811,7 +3710,6 @@ with the selected Prowlarr categories.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -3838,7 +3736,6 @@ with the selected Prowlarr categories.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.RtorrentDownloadClient.username" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
@@ -3857,7 +3754,6 @@ with the selected Prowlarr categories.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -3882,7 +3778,6 @@ with the selected Prowlarr categories.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.RtorrentDownloadClient.category" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;prowlarr&#39;</span></code>
   
@@ -3904,7 +3799,6 @@ Using a category is optional, but strongly recommended.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -3937,7 +3831,6 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.RtorrentDownloadClient.add_stopped" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">add_stopped</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -3958,7 +3851,6 @@ Using a category is optional, but strongly recommended.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -3989,6 +3881,7 @@ with the selected Prowlarr categories.</p>
 
   </div>
 
+
 </div><h2 id="torrent-blackhole">Torrent Blackhole<a class="headerlink" href="#torrent-blackhole" title="Permanent link">#</a></h2>
 
 
@@ -4017,7 +3910,6 @@ with the selected Prowlarr categories.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.TorrentBlackholeDownloadClient.type" class="doc doc-heading">
           <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;torrent-blackhole&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;torrent-blackhole&#39;</span></code>
   
@@ -4037,7 +3929,6 @@ with the selected Prowlarr categories.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -4062,7 +3953,6 @@ with the selected Prowlarr categories.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.TorrentBlackholeDownloadClient.save_magnet_files" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">save_magnet_files</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -4083,7 +3973,6 @@ with the selected Prowlarr categories.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -4112,6 +4001,7 @@ with the selected Prowlarr categories.</p>
   </div>
 
   </div>
+
 
 </div><h2 id="transmissionvuze">Transmission/Vuze<a class="headerlink" href="#transmissionvuze" title="Permanent link">#</a></h2>
 <p>Transmission and Vuze use the same configuration parameters.</p>
@@ -4144,7 +4034,6 @@ with the selected Prowlarr categories.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.TransmissionDownloadClientBase.host" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
@@ -4163,7 +4052,6 @@ with the selected Prowlarr categories.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -4189,7 +4077,6 @@ with the selected Prowlarr categories.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.TransmissionDownloadClientBase.use_ssl" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -4209,7 +4096,6 @@ with the selected Prowlarr categories.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -4236,7 +4122,6 @@ with the selected Prowlarr categories.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.TransmissionDownloadClientBase.username" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
@@ -4259,7 +4144,6 @@ with the selected Prowlarr categories.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.TransmissionDownloadClientBase.password" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">password</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Password</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
@@ -4279,7 +4163,6 @@ with the selected Prowlarr categories.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -4308,7 +4191,6 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.TransmissionDownloadClientBase.directory" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">directory</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
@@ -4329,7 +4211,6 @@ Using a category is optional, but strongly recommended.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -4360,7 +4241,6 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.TransmissionDownloadClientBase.add_paused" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">add_paused</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -4386,6 +4266,7 @@ Using a category is optional, but strongly recommended.</p>
   </div>
 
   </div>
+
 
 </div><h2 id="utorrent">uTorrent<a class="headerlink" href="#utorrent" title="Permanent link">#</a></h2>
 
@@ -4415,7 +4296,6 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.UtorrentDownloadClient.type" class="doc doc-heading">
           <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;utorrent&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;utorrent&#39;</span></code>
   
@@ -4438,7 +4318,6 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.UtorrentDownloadClient.host" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
@@ -4457,7 +4336,6 @@ Using a category is optional, but strongly recommended.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -4483,7 +4361,6 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.UtorrentDownloadClient.use_ssl" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -4503,7 +4380,6 @@ Using a category is optional, but strongly recommended.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -4529,7 +4405,6 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.UtorrentDownloadClient.username" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
@@ -4548,7 +4423,6 @@ Using a category is optional, but strongly recommended.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -4573,7 +4447,6 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.UtorrentDownloadClient.category" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;prowlarr&#39;</span></code>
   
@@ -4595,7 +4468,6 @@ Using a category is optional, but strongly recommended.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -4626,7 +4498,6 @@ Using a category is optional, but strongly recommended.</p>
 
 
 
-
 <h5 id="buildarr_prowlarr.config.settings.download_clients.torrent.UtorrentDownloadClient.initial_state" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">initial_state</span><span class="p">:</span> <span class="n">UtorrentState</span> <span class="o">=</span> <span class="n">UtorrentState</span><span class="o">.</span><span class="n">start</span></code>
   
@@ -4646,7 +4517,6 @@ Using a category is optional, but strongly recommended.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -4676,6 +4546,7 @@ with the selected Prowlarr categories.</p>
   </div>
 
   </div>
+
 
 </div></div>
             </div>

@@ -627,7 +627,6 @@ definitions in Radarr.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.RadarrNotificationsSettings.delete_unmanaged" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">delete_unmanaged</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -652,7 +651,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -682,6 +680,7 @@ configured manually. <strong>Do not enable this option when using such connectio
 
   </div>
 
+
 </div><h2 id="apprise">Apprise<a class="headerlink" href="#apprise" title="Permanent link">#</a></h2>
 <p>Receive media update and health alert push notifications via an Apprise server.</p>
 
@@ -709,7 +708,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.apprise.AppriseNotification.type" class="doc doc-heading">
           <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;apprise&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;apprise&#39;</span></code>
   
@@ -732,7 +730,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.apprise.AppriseNotification.base_url" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">base_url</span><span class="p">:</span> <span class="n">AnyHttpUrl</span></code>
   
@@ -751,7 +748,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -778,7 +774,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.apprise.AppriseNotification.stateless_urls" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">stateless_urls</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">AnyHttpUrl</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
   
@@ -799,7 +794,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -832,7 +826,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.apprise.AppriseNotification.apprise_tags" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">apprise_tags</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
   
@@ -855,7 +848,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.apprise.AppriseNotification.username" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
@@ -875,7 +867,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -905,6 +896,7 @@ configured manually. <strong>Do not enable this option when using such connectio
 
   </div>
 
+
 </div>
 
 <div class="doc doc-object doc-class">
@@ -927,7 +919,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -957,6 +948,7 @@ configured manually. <strong>Do not enable this option when using such connectio
 
   </div>
 
+
 </div><h5 id="supported-notification-triggers">Supported Notification Triggers<a class="headerlink" href="#supported-notification-triggers" title="Permanent link">#</a></h5>
 
 
@@ -983,7 +975,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_grab" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_grab</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -1003,7 +994,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1029,7 +1019,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_upgrade" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_upgrade</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -1049,7 +1038,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1075,7 +1063,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_movie_delete" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_movie_delete</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -1095,7 +1082,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1121,7 +1107,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_movie_file_delete_for_upgrade" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_movie_file_delete_for_upgrade</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -1141,7 +1126,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1167,7 +1151,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.include_health_warnings" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">include_health_warnings</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -1187,7 +1170,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1213,7 +1195,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_manual_interaction_required" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_manual_interaction_required</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -1233,7 +1214,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1262,6 +1242,7 @@ configured manually. <strong>Do not enable this option when using such connectio
   </div>
 
   </div>
+
 
 </div><h2 id="boxcar">Boxcar<a class="headerlink" href="#boxcar" title="Permanent link">#</a></h2>
 
@@ -1291,7 +1272,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.boxcar.BoxcarNotification.type" class="doc doc-heading">
           <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;boxcar&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;boxcar&#39;</span></code>
   
@@ -1311,7 +1291,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1340,6 +1319,7 @@ configured manually. <strong>Do not enable this option when using such connectio
 
   </div>
 
+
 </div>
 
 <div class="doc doc-object doc-class">
@@ -1362,7 +1342,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1392,6 +1371,7 @@ configured manually. <strong>Do not enable this option when using such connectio
 
   </div>
 
+
 </div><h5 id="supported-notification-triggers_1">Supported Notification Triggers<a class="headerlink" href="#supported-notification-triggers_1" title="Permanent link">#</a></h5>
 
 
@@ -1418,7 +1398,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_grab" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_grab</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -1438,7 +1417,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1464,7 +1442,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_upgrade" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_upgrade</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -1484,7 +1461,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1510,7 +1486,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_movie_delete" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_movie_delete</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -1530,7 +1505,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1556,7 +1530,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_movie_file_delete_for_upgrade" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_movie_file_delete_for_upgrade</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -1576,7 +1549,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1602,7 +1574,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.include_health_warnings" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">include_health_warnings</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -1622,7 +1593,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1648,7 +1618,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_manual_interaction_required" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_manual_interaction_required</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -1668,7 +1637,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1697,6 +1665,7 @@ configured manually. <strong>Do not enable this option when using such connectio
   </div>
 
   </div>
+
 
 </div><h2 id="custom-script">Custom Script<a class="headerlink" href="#custom-script" title="Permanent link">#</a></h2>
 
@@ -1726,7 +1695,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.custom_script.CustomScriptNotification.type" class="doc doc-heading">
           <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;custom-script&#39;</span><span class="p">,</span> <span class="s1">&#39;custom_script&#39;</span><span class="p">,</span> <span class="s1">&#39;customscript&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;custom-script&#39;</span></code>
   
@@ -1749,7 +1717,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.custom_script.CustomScriptNotification.path" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">path</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
@@ -1768,7 +1735,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1798,6 +1764,7 @@ configured manually. <strong>Do not enable this option when using such connectio
 
   </div>
 
+
 </div>
 
 <div class="doc doc-object doc-class">
@@ -1820,7 +1787,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1850,6 +1816,7 @@ configured manually. <strong>Do not enable this option when using such connectio
 
   </div>
 
+
 </div><h5 id="supported-notification-triggers_2">Supported Notification Triggers<a class="headerlink" href="#supported-notification-triggers_2" title="Permanent link">#</a></h5>
 
 
@@ -1876,7 +1843,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_grab" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_grab</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -1896,7 +1862,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1922,7 +1887,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_upgrade" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_upgrade</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -1942,7 +1906,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -1968,7 +1931,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_movie_added" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_movie_added</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -1988,7 +1950,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -2014,7 +1975,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_movie_file_delete" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_movie_file_delete</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -2034,7 +1994,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -2060,7 +2019,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_health_issue" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_health_issue</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -2080,7 +2038,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -2106,7 +2063,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_health_restored" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_health_restored</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -2129,7 +2085,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_manual_interaction_required" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_manual_interaction_required</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -2149,7 +2104,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -2179,6 +2133,7 @@ configured manually. <strong>Do not enable this option when using such connectio
 
   </div>
 
+
 </div><h2 id="discord">Discord<a class="headerlink" href="#discord" title="Permanent link">#</a></h2>
 
 
@@ -2207,7 +2162,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.discord.DiscordNotification.type" class="doc doc-heading">
           <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;discord&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;discord&#39;</span></code>
   
@@ -2230,7 +2184,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.discord.DiscordNotification.webhook_url" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">webhook_url</span><span class="p">:</span> <span class="n">AnyHttpUrl</span></code>
   
@@ -2249,7 +2202,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -2276,7 +2228,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.discord.DiscordNotification.avatar" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">avatar</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
@@ -2300,7 +2251,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.discord.DiscordNotification.host" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">host</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
@@ -2321,7 +2271,6 @@ configured manually. <strong>Do not enable this option when using such connectio
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -2376,7 +2325,6 @@ By default, all fields are passed in.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.discord.DiscordNotification.on_import_fields" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_import_fields</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">OnImportField</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">OnImportField</span><span class="o">.</span><span class="n">overview</span><span class="p">,</span> <span class="n">OnImportField</span><span class="o">.</span><span class="n">rating</span><span class="p">,</span> <span class="n">OnImportField</span><span class="o">.</span><span class="n">genres</span><span class="p">,</span> <span class="n">OnImportField</span><span class="o">.</span><span class="n">quality</span><span class="p">,</span> <span class="n">OnImportField</span><span class="o">.</span><span class="n">codecs</span><span class="p">,</span> <span class="n">OnImportField</span><span class="o">.</span><span class="n">group</span><span class="p">,</span> <span class="n">OnImportField</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="n">OnImportField</span><span class="o">.</span><span class="n">languages</span><span class="p">,</span> <span class="n">OnImportField</span><span class="o">.</span><span class="n">subtitles</span><span class="p">,</span> <span class="n">OnImportField</span><span class="o">.</span><span class="n">links</span><span class="p">,</span> <span class="n">OnImportField</span><span class="o">.</span><span class="n">release</span><span class="p">,</span> <span class="n">OnImportField</span><span class="o">.</span><span class="n">poster</span><span class="p">,</span> <span class="n">OnImportField</span><span class="o">.</span><span class="n">fanart</span><span class="p">}</span></code>
   
@@ -2428,7 +2376,6 @@ By default, all fields are passed in.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.discord.DiscordNotification.on_manual_interaction_fields" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_manual_interaction_fields</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">OnManualInteractionField</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">OnManualInteractionField</span><span class="o">.</span><span class="n">overview</span><span class="p">,</span> <span class="n">OnManualInteractionField</span><span class="o">.</span><span class="n">rating</span><span class="p">,</span> <span class="n">OnManualInteractionField</span><span class="o">.</span><span class="n">genres</span><span class="p">,</span> <span class="n">OnManualInteractionField</span><span class="o">.</span><span class="n">quality</span><span class="p">,</span> <span class="n">OnManualInteractionField</span><span class="o">.</span><span class="n">group</span><span class="p">,</span> <span class="n">OnManualInteractionField</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="n">OnManualInteractionField</span><span class="o">.</span><span class="n">links</span><span class="p">,</span> <span class="n">OnManualInteractionField</span><span class="o">.</span><span class="n">download_title</span><span class="p">,</span> <span class="n">OnManualInteractionField</span><span class="o">.</span><span class="n">poster</span><span class="p">,</span> <span class="n">OnManualInteractionField</span><span class="o">.</span><span class="n">fanart</span><span class="p">}</span></code>
   
@@ -2453,6 +2400,7 @@ By default, all fields are passed in.</p>
 
   </div>
 
+
 </div>
 
 <div class="doc doc-object doc-class">
@@ -2475,7 +2423,6 @@ By default, all fields are passed in.</p>
 
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -2505,6 +2452,7 @@ By default, all fields are passed in.</p>
 
   </div>
 
+
 </div><h5 id="supported-notification-triggers_3">Supported Notification Triggers<a class="headerlink" href="#supported-notification-triggers_3" title="Permanent link">#</a></h5>
 
 
@@ -2531,7 +2479,6 @@ By default, all fields are passed in.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_grab" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_grab</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -2551,7 +2498,6 @@ By default, all fields are passed in.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -2577,7 +2523,6 @@ By default, all fields are passed in.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_upgrade" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_upgrade</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -2597,7 +2542,6 @@ By default, all fields are passed in.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -2623,7 +2567,6 @@ By default, all fields are passed in.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_movie_added" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_movie_added</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -2643,7 +2586,6 @@ By default, all fields are passed in.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -2669,7 +2611,6 @@ By default, all fields are passed in.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_movie_file_delete" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_movie_file_delete</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -2689,7 +2630,6 @@ By default, all fields are passed in.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -2715,7 +2655,6 @@ By default, all fields are passed in.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_health_issue" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_health_issue</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -2735,7 +2674,6 @@ By default, all fields are passed in.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -2761,7 +2699,6 @@ By default, all fields are passed in.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_health_restored" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_health_restored</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -2784,7 +2721,6 @@ By default, all fields are passed in.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_manual_interaction_required" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_manual_interaction_required</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -2804,7 +2740,6 @@ By default, all fields are passed in.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -2833,6 +2768,7 @@ By default, all fields are passed in.</p>
   </div>
 
   </div>
+
 
 </div><h2 id="email">Email<a class="headerlink" href="#email" title="Permanent link">#</a></h2>
 
@@ -2862,7 +2798,6 @@ By default, all fields are passed in.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.email.EmailNotification.type" class="doc doc-heading">
           <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;email&#39;</span></code>
   
@@ -2882,7 +2817,6 @@ By default, all fields are passed in.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -2907,7 +2841,6 @@ By default, all fields are passed in.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.email.EmailNotification.port" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">port</span><span class="p">:</span> <span class="n">Port</span> <span class="o">=</span> <span class="mi">587</span></code>
   
@@ -2928,7 +2861,6 @@ By default, all fields are passed in.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -2957,7 +2889,6 @@ Any other port number will result in STARTTLS being used.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.email.EmailNotification.username" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
@@ -2979,7 +2910,6 @@ Any other port number will result in STARTTLS being used.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.email.EmailNotification.password" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">password</span><span class="p">:</span> <span class="n">Password</span></code>
   
@@ -2998,7 +2928,6 @@ Any other port number will result in STARTTLS being used.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -3025,7 +2954,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.email.EmailNotification.recipient_addresses" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">recipient_addresses</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">NameEmail</span><span class="p">],</span> <span class="n">Field</span><span class="p">(</span><span class="n">min_items</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">unique_items</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span></code>
   
@@ -3048,7 +2976,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.email.EmailNotification.cc_addresses" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">cc_addresses</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">NameEmail</span><span class="p">],</span> <span class="n">Field</span><span class="p">(</span><span class="n">unique_items</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span> <span class="o">=</span> <span class="p">[]</span></code>
   
@@ -3068,7 +2995,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -3098,6 +3024,7 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
   </div>
 
+
 </div>
 
 <div class="doc doc-object doc-class">
@@ -3120,7 +3047,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -3150,6 +3076,7 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
   </div>
 
+
 </div><h5 id="supported-notification-triggers_4">Supported Notification Triggers<a class="headerlink" href="#supported-notification-triggers_4" title="Permanent link">#</a></h5>
 
 
@@ -3176,7 +3103,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_grab" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_grab</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -3196,7 +3122,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -3222,7 +3147,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_upgrade" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_upgrade</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -3242,7 +3166,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -3268,7 +3191,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_movie_delete" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_movie_delete</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -3288,7 +3210,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -3314,7 +3235,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_movie_file_delete_for_upgrade" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_movie_file_delete_for_upgrade</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -3334,7 +3254,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -3360,7 +3279,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.include_health_warnings" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">include_health_warnings</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -3380,7 +3298,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -3406,7 +3323,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_manual_interaction_required" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_manual_interaction_required</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -3426,7 +3342,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -3455,6 +3370,7 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
   </div>
 
   </div>
+
 
 </div><h2 id="emby-jellyfin">Emby / Jellyfin<a class="headerlink" href="#emby-jellyfin" title="Permanent link">#</a></h2>
 
@@ -3484,7 +3400,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.emby_jellyfin.EmbyJellyfinNotification.type" class="doc doc-heading">
           <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;emby&#39;</span><span class="p">,</span> <span class="s1">&#39;jellyfin&#39;</span><span class="p">,</span> <span class="s1">&#39;emby-jellyfin&#39;</span><span class="p">,</span> <span class="s1">&#39;emby_jellyfin&#39;</span><span class="p">,</span> <span class="s1">&#39;embyjellyfin&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;emby-jellyfin&#39;</span></code>
   
@@ -3509,7 +3424,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.emby_jellyfin.EmbyJellyfinNotification.hostname" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">hostname</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
@@ -3528,7 +3442,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -3554,7 +3467,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.emby_jellyfin.EmbyJellyfinNotification.use_ssl" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -3574,7 +3486,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -3599,7 +3510,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.emby_jellyfin.EmbyJellyfinNotification.send_notifications" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">send_notifications</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -3619,7 +3529,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -3649,6 +3558,7 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 
   </div>
 
+
 </div>
 
 <div class="doc doc-object doc-class">
@@ -3671,7 +3581,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -3701,6 +3610,7 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 
   </div>
 
+
 </div><h5 id="supported-notification-triggers_5">Supported Notification Triggers<a class="headerlink" href="#supported-notification-triggers_5" title="Permanent link">#</a></h5>
 
 
@@ -3727,7 +3637,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_grab" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_grab</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -3747,7 +3656,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -3773,7 +3681,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_upgrade" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_upgrade</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -3793,7 +3700,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -3819,7 +3725,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_movie_delete" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_movie_delete</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -3839,7 +3744,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -3865,7 +3769,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_movie_file_delete_for_upgrade" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_movie_file_delete_for_upgrade</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -3885,7 +3788,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -3911,7 +3813,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.include_health_warnings" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">include_health_warnings</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -3934,7 +3835,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_health_restored" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_health_restored</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -3954,7 +3854,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -3984,6 +3883,7 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 
   </div>
 
+
 </div><h2 id="gotify">Gotify<a class="headerlink" href="#gotify" title="Permanent link">#</a></h2>
 
 
@@ -4012,7 +3912,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.gotify.GotifyNotification.type" class="doc doc-heading">
           <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;gotify&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;gotify&#39;</span></code>
   
@@ -4035,7 +3934,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.gotify.GotifyNotification.app_token" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">app_token</span><span class="p">:</span> <span class="n">Password</span></code>
   
@@ -4054,7 +3952,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -4087,7 +3984,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.gotify.GotifyNotification.include_movie_poster" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">include_movie_poster</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -4114,6 +4010,7 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 
   </div>
 
+
 </div>
 
 <div class="doc doc-object doc-class">
@@ -4136,7 +4033,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -4166,6 +4062,7 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 
   </div>
 
+
 </div><h5 id="supported-notification-triggers_6">Supported Notification Triggers<a class="headerlink" href="#supported-notification-triggers_6" title="Permanent link">#</a></h5>
 
 
@@ -4192,7 +4089,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_grab" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_grab</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -4212,7 +4108,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -4238,7 +4133,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_upgrade" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_upgrade</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -4258,7 +4152,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -4284,7 +4177,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_movie_delete" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_movie_delete</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -4304,7 +4196,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -4330,7 +4221,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_movie_file_delete_for_upgrade" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_movie_file_delete_for_upgrade</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -4350,7 +4240,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -4376,7 +4265,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.include_health_warnings" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">include_health_warnings</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -4396,7 +4284,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -4422,7 +4309,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_manual_interaction_required" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_manual_interaction_required</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -4442,7 +4328,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -4472,6 +4357,7 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 
   </div>
 
+
 </div><h2 id="join">Join<a class="headerlink" href="#join" title="Permanent link">#</a></h2>
 
 
@@ -4500,7 +4386,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.join.JoinNotification.type" class="doc doc-heading">
           <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;join&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;join&#39;</span></code>
   
@@ -4520,7 +4405,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -4545,7 +4429,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.join.JoinNotification.device_names" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">device_names</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
   
@@ -4566,7 +4449,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -4604,6 +4486,7 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 
   </div>
 
+
 </div>
 
 <div class="doc doc-object doc-class">
@@ -4626,7 +4509,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -4656,6 +4538,7 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 
   </div>
 
+
 </div><h5 id="supported-notification-triggers_7">Supported Notification Triggers<a class="headerlink" href="#supported-notification-triggers_7" title="Permanent link">#</a></h5>
 
 
@@ -4682,7 +4565,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_grab" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_grab</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -4702,7 +4584,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -4728,7 +4609,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_upgrade" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_upgrade</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -4748,7 +4628,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -4774,7 +4653,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_movie_delete" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_movie_delete</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -4794,7 +4672,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -4820,7 +4697,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_movie_file_delete_for_upgrade" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_movie_file_delete_for_upgrade</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -4840,7 +4716,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -4866,7 +4741,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.include_health_warnings" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">include_health_warnings</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -4886,7 +4760,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -4912,7 +4785,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_manual_interaction_required" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_manual_interaction_required</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -4932,7 +4804,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -4961,6 +4832,7 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
   </div>
 
   </div>
+
 
 </div><h2 id="kodi-xbmc">Kodi (XBMC)<a class="headerlink" href="#kodi-xbmc" title="Permanent link">#</a></h2>
 
@@ -4990,7 +4862,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.kodi.KodiNotification.type" class="doc doc-heading">
           <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;kodi&#39;</span><span class="p">,</span> <span class="s1">&#39;xbmc&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;kodi&#39;</span></code>
   
@@ -5013,7 +4884,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.kodi.KodiNotification.hostname" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">hostname</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
@@ -5032,7 +4902,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -5058,7 +4927,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.kodi.KodiNotification.use_ssl" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -5078,7 +4946,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -5103,7 +4970,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.kodi.KodiNotification.password" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">password</span><span class="p">:</span> <span class="n">Password</span></code>
   
@@ -5122,7 +4988,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -5148,7 +5013,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.kodi.KodiNotification.display_time" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">display_time</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5</span></code>
   
@@ -5171,7 +5035,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.kodi.KodiNotification.clean_library" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">clean_library</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -5191,7 +5054,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -5221,6 +5083,7 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 
   </div>
 
+
 </div>
 
 <div class="doc doc-object doc-class">
@@ -5243,7 +5106,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -5273,6 +5135,7 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 
   </div>
 
+
 </div><h5 id="supported-notification-triggers_8">Supported Notification Triggers<a class="headerlink" href="#supported-notification-triggers_8" title="Permanent link">#</a></h5>
 
 
@@ -5299,7 +5162,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_grab" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_grab</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -5319,7 +5181,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -5345,7 +5206,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_upgrade" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_upgrade</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -5365,7 +5225,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -5391,7 +5250,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_movie_delete" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_movie_delete</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -5411,7 +5269,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -5437,7 +5294,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_movie_file_delete_for_upgrade" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_movie_file_delete_for_upgrade</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -5457,7 +5313,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -5483,7 +5338,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.include_health_warnings" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">include_health_warnings</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -5503,7 +5357,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -5529,7 +5382,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_manual_interaction_required" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_manual_interaction_required</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -5549,7 +5401,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -5578,6 +5429,7 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
   </div>
 
   </div>
+
 
 </div><h2 id="mailgun">Mailgun<a class="headerlink" href="#mailgun" title="Permanent link">#</a></h2>
 
@@ -5607,7 +5459,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.mailgun.MailgunNotification.type" class="doc doc-heading">
           <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;mailgun&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;mailgun&#39;</span></code>
   
@@ -5627,7 +5478,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -5652,7 +5502,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.mailgun.MailgunNotification.use_eu_endpoint" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">use_eu_endpoint</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -5672,7 +5521,6 @@ e.g. for Emby use <code>emby</code>, for Jellyfin use <code>jellyfin</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -5699,7 +5547,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.mailgun.MailgunNotification.sender_domain" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">sender_domain</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
@@ -5718,7 +5565,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -5748,6 +5594,7 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
   </div>
 
+
 </div>
 
 <div class="doc doc-object doc-class">
@@ -5770,7 +5617,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -5800,6 +5646,7 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
   </div>
 
+
 </div><h5 id="supported-notification-triggers_9">Supported Notification Triggers<a class="headerlink" href="#supported-notification-triggers_9" title="Permanent link">#</a></h5>
 
 
@@ -5826,7 +5673,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_grab" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_grab</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -5846,7 +5692,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -5872,7 +5717,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_upgrade" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_upgrade</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -5892,7 +5736,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -5918,7 +5761,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_movie_delete" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_movie_delete</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -5938,7 +5780,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -5964,7 +5805,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_movie_file_delete_for_upgrade" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_movie_file_delete_for_upgrade</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -5984,7 +5824,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -6010,7 +5849,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.include_health_warnings" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">include_health_warnings</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -6030,7 +5868,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -6056,7 +5893,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_manual_interaction_required" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_manual_interaction_required</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -6076,7 +5912,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -6105,6 +5940,7 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
   </div>
 
   </div>
+
 
 </div><h2 id="notifiarr">Notifiarr<a class="headerlink" href="#notifiarr" title="Permanent link">#</a></h2>
 
@@ -6134,7 +5970,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.notifiarr.NotifiarrNotification.type" class="doc doc-heading">
           <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;notifiarr&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;notifiarr&#39;</span></code>
   
@@ -6154,7 +5989,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -6183,6 +6017,7 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
   </div>
 
+
 </div>
 
 <div class="doc doc-object doc-class">
@@ -6205,7 +6040,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -6235,6 +6069,7 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
   </div>
 
+
 </div><h5 id="supported-notification-triggers_10">Supported Notification Triggers<a class="headerlink" href="#supported-notification-triggers_10" title="Permanent link">#</a></h5>
 
 
@@ -6261,7 +6096,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_grab" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_grab</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -6281,7 +6115,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -6307,7 +6140,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_upgrade" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_upgrade</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -6327,7 +6159,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -6353,7 +6184,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_movie_added" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_movie_added</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -6373,7 +6203,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -6399,7 +6228,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_movie_file_delete" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_movie_file_delete</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -6419,7 +6247,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -6445,7 +6272,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_health_issue" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_health_issue</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -6465,7 +6291,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -6491,7 +6316,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_health_restored" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_health_restored</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -6514,7 +6338,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_manual_interaction_required" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_manual_interaction_required</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -6534,7 +6357,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -6563,6 +6385,7 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
   </div>
 
   </div>
+
 
 </div><h2 id="ntfy">ntfy<a class="headerlink" href="#ntfy" title="Permanent link">#</a></h2>
 
@@ -6593,7 +6416,6 @@ or a self-hosted server using the same software.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.ntfy.NtfyNotification.type" class="doc doc-heading">
           <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;ntfy&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;ntfy&#39;</span></code>
   
@@ -6613,7 +6435,6 @@ or a self-hosted server using the same software.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -6640,7 +6461,6 @@ or a self-hosted server using the same software.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.ntfy.NtfyNotification.access_token" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">access_token</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">SecretStr</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
@@ -6661,7 +6481,6 @@ or a self-hosted server using the same software.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -6687,7 +6506,6 @@ or a self-hosted server using the same software.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.ntfy.NtfyNotification.password" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">password</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">SecretStr</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
@@ -6707,7 +6525,6 @@ or a self-hosted server using the same software.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -6740,7 +6557,6 @@ or a self-hosted server using the same software.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.ntfy.NtfyNotification.topics" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">topics</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
   
@@ -6763,7 +6579,6 @@ or a self-hosted server using the same software.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.ntfy.NtfyNotification.ntfy_tags" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">ntfy_tags</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
   
@@ -6783,7 +6598,6 @@ or a self-hosted server using the same software.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -6813,6 +6627,7 @@ or a self-hosted server using the same software.</p>
 
   </div>
 
+
 </div>
 
 <div class="doc doc-object doc-class">
@@ -6835,7 +6650,6 @@ or a self-hosted server using the same software.</p>
 
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -6865,6 +6679,7 @@ or a self-hosted server using the same software.</p>
 
   </div>
 
+
 </div><h5 id="supported-notification-triggers_11">Supported Notification Triggers<a class="headerlink" href="#supported-notification-triggers_11" title="Permanent link">#</a></h5>
 
 
@@ -6891,7 +6706,6 @@ or a self-hosted server using the same software.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_grab" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_grab</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -6911,7 +6725,6 @@ or a self-hosted server using the same software.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -6937,7 +6750,6 @@ or a self-hosted server using the same software.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_upgrade" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_upgrade</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -6957,7 +6769,6 @@ or a self-hosted server using the same software.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -6983,7 +6794,6 @@ or a self-hosted server using the same software.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_movie_delete" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_movie_delete</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -7003,7 +6813,6 @@ or a self-hosted server using the same software.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -7029,7 +6838,6 @@ or a self-hosted server using the same software.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_movie_file_delete_for_upgrade" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_movie_file_delete_for_upgrade</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -7049,7 +6857,6 @@ or a self-hosted server using the same software.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -7075,7 +6882,6 @@ or a self-hosted server using the same software.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.include_health_warnings" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">include_health_warnings</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -7095,7 +6901,6 @@ or a self-hosted server using the same software.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -7121,7 +6926,6 @@ or a self-hosted server using the same software.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_manual_interaction_required" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_manual_interaction_required</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -7141,7 +6945,6 @@ or a self-hosted server using the same software.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -7170,6 +6973,7 @@ or a self-hosted server using the same software.</p>
   </div>
 
   </div>
+
 
 </div><h2 id="plex-media-server">Plex Media Server<a class="headerlink" href="#plex-media-server" title="Permanent link">#</a></h2>
 <p>Buildarr is unable to manage Plex Media Server notification connections at this time, due to Plex requiring external authentication using OAuth2.</p>
@@ -7208,7 +7012,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.prowl.ProwlNotification.type" class="doc doc-heading">
           <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;prowl&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;prowl&#39;</span></code>
   
@@ -7231,7 +7034,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.prowl.ProwlNotification.api_key" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">Password</span></code>
   
@@ -7250,7 +7052,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -7288,6 +7089,7 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 
   </div>
 
+
 </div>
 
 <div class="doc doc-object doc-class">
@@ -7310,7 +7112,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -7340,6 +7141,7 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 
   </div>
 
+
 </div><h5 id="supported-notification-triggers_12">Supported Notification Triggers<a class="headerlink" href="#supported-notification-triggers_12" title="Permanent link">#</a></h5>
 
 
@@ -7366,7 +7168,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_grab" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_grab</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -7386,7 +7187,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -7412,7 +7212,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_upgrade" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_upgrade</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -7432,7 +7231,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -7458,7 +7256,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_movie_delete" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_movie_delete</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -7478,7 +7275,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -7504,7 +7300,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_movie_file_delete_for_upgrade" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_movie_file_delete_for_upgrade</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -7524,7 +7319,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -7550,7 +7344,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.include_health_warnings" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">include_health_warnings</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -7570,7 +7363,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -7596,7 +7388,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_manual_interaction_required" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_manual_interaction_required</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -7616,7 +7407,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -7646,6 +7436,7 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 
   </div>
 
+
 </div><h2 id="pushbullet">Pushbullet<a class="headerlink" href="#pushbullet" title="Permanent link">#</a></h2>
 
 
@@ -7674,7 +7465,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.pushbullet.PushbulletNotification.type" class="doc doc-heading">
           <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;pushbullet&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;pushbullet&#39;</span></code>
   
@@ -7697,7 +7487,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.pushbullet.PushbulletNotification.api_key" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">Password</span></code>
   
@@ -7716,7 +7505,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -7743,7 +7531,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.pushbullet.PushbulletNotification.channel_tags" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">channel_tags</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
   
@@ -7763,7 +7550,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -7795,6 +7581,7 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 
   </div>
 
+
 </div>
 
 <div class="doc doc-object doc-class">
@@ -7817,7 +7604,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -7847,6 +7633,7 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 
   </div>
 
+
 </div><h5 id="supported-notification-triggers_13">Supported Notification Triggers<a class="headerlink" href="#supported-notification-triggers_13" title="Permanent link">#</a></h5>
 
 
@@ -7873,7 +7660,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_grab" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_grab</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -7893,7 +7679,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -7919,7 +7704,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_upgrade" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_upgrade</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -7939,7 +7723,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -7965,7 +7748,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_movie_delete" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_movie_delete</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -7985,7 +7767,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -8011,7 +7792,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_movie_file_delete_for_upgrade" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_movie_file_delete_for_upgrade</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -8031,7 +7811,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -8057,7 +7836,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.include_health_warnings" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">include_health_warnings</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -8077,7 +7855,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -8103,7 +7880,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_manual_interaction_required" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_manual_interaction_required</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -8123,7 +7899,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -8153,6 +7928,7 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 
   </div>
 
+
 </div><h2 id="pushover">Pushover<a class="headerlink" href="#pushover" title="Permanent link">#</a></h2>
 
 
@@ -8181,7 +7957,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.pushover.PushoverNotification.type" class="doc doc-heading">
           <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;pushover&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;pushover&#39;</span></code>
   
@@ -8201,7 +7976,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -8226,7 +8000,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.pushover.PushoverNotification.api_key" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">Password</span></code>
   
@@ -8245,7 +8018,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -8269,7 +8041,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -8303,7 +8074,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.pushover.PushoverNotification.retry" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">retry</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Literal</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">PushoverRetry</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span></code>
   
@@ -8324,7 +8094,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -8349,7 +8118,6 @@ If <code>retry</code> is set, this should be set to a higher value.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -8380,6 +8148,7 @@ If <code>retry</code> is set, this should be set to a higher value.</p>
 
   </div>
 
+
 </div>
 
 <div class="doc doc-object doc-class">
@@ -8402,7 +8171,6 @@ If <code>retry</code> is set, this should be set to a higher value.</p>
 
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -8432,6 +8200,7 @@ If <code>retry</code> is set, this should be set to a higher value.</p>
 
   </div>
 
+
 </div><h5 id="supported-notification-triggers_14">Supported Notification Triggers<a class="headerlink" href="#supported-notification-triggers_14" title="Permanent link">#</a></h5>
 
 
@@ -8458,7 +8227,6 @@ If <code>retry</code> is set, this should be set to a higher value.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_grab" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_grab</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -8478,7 +8246,6 @@ If <code>retry</code> is set, this should be set to a higher value.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -8504,7 +8271,6 @@ If <code>retry</code> is set, this should be set to a higher value.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_upgrade" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_upgrade</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -8524,7 +8290,6 @@ If <code>retry</code> is set, this should be set to a higher value.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -8550,7 +8315,6 @@ If <code>retry</code> is set, this should be set to a higher value.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_movie_delete" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_movie_delete</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -8570,7 +8334,6 @@ If <code>retry</code> is set, this should be set to a higher value.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -8596,7 +8359,6 @@ If <code>retry</code> is set, this should be set to a higher value.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_movie_file_delete_for_upgrade" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_movie_file_delete_for_upgrade</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -8616,7 +8378,6 @@ If <code>retry</code> is set, this should be set to a higher value.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -8642,7 +8403,6 @@ If <code>retry</code> is set, this should be set to a higher value.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.include_health_warnings" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">include_health_warnings</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -8662,7 +8422,6 @@ If <code>retry</code> is set, this should be set to a higher value.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -8688,7 +8447,6 @@ If <code>retry</code> is set, this should be set to a higher value.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_manual_interaction_required" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_manual_interaction_required</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -8708,7 +8466,6 @@ If <code>retry</code> is set, this should be set to a higher value.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -8738,6 +8495,7 @@ If <code>retry</code> is set, this should be set to a higher value.</p>
 
   </div>
 
+
 </div><h2 id="pushsafer">Pushsafer<a class="headerlink" href="#pushsafer" title="Permanent link">#</a></h2>
 
 
@@ -8766,7 +8524,6 @@ If <code>retry</code> is set, this should be set to a higher value.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.pushsafer.PushsaferNotification.type" class="doc doc-heading">
           <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;pushsafer&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;pushsafer&#39;</span></code>
   
@@ -8786,7 +8543,6 @@ If <code>retry</code> is set, this should be set to a higher value.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -8811,7 +8567,6 @@ If <code>retry</code> is set, this should be set to a higher value.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.pushsafer.PushsaferNotification.device_ids" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">device_ids</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">NonEmptyStr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></code>
   
@@ -8832,7 +8587,6 @@ If <code>retry</code> is set, this should be set to a higher value.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -8866,7 +8620,6 @@ If <code>retry</code> is set, this should be set to a higher value.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.pushsafer.PushsaferNotification.retry" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">retry</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Literal</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">PushsaferRetry</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span></code>
   
@@ -8887,7 +8640,6 @@ If <code>retry</code> is set, this should be set to a higher value.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -8915,7 +8667,6 @@ If <code>retry</code> is set, this should be set to a higher value.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.pushsafer.PushsaferNotification.sound" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">sound</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
@@ -8936,7 +8687,6 @@ If <code>retry</code> is set, this should be set to a higher value.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -8963,7 +8713,6 @@ If <code>retry</code> is set, this should be set to a higher value.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.pushsafer.PushsaferNotification.icon" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">icon</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
@@ -8984,7 +8733,6 @@ If <code>retry</code> is set, this should be set to a higher value.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -9015,6 +8763,7 @@ If <code>retry</code> is set, this should be set to a higher value.</p>
 
   </div>
 
+
 </div>
 
 <div class="doc doc-object doc-class">
@@ -9037,7 +8786,6 @@ If <code>retry</code> is set, this should be set to a higher value.</p>
 
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -9067,6 +8815,7 @@ If <code>retry</code> is set, this should be set to a higher value.</p>
 
   </div>
 
+
 </div><h5 id="supported-notification-triggers_15">Supported Notification Triggers<a class="headerlink" href="#supported-notification-triggers_15" title="Permanent link">#</a></h5>
 
 
@@ -9093,7 +8842,6 @@ If <code>retry</code> is set, this should be set to a higher value.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_grab" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_grab</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -9113,7 +8861,6 @@ If <code>retry</code> is set, this should be set to a higher value.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -9139,7 +8886,6 @@ If <code>retry</code> is set, this should be set to a higher value.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_upgrade" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_upgrade</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -9159,7 +8905,6 @@ If <code>retry</code> is set, this should be set to a higher value.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -9185,7 +8930,6 @@ If <code>retry</code> is set, this should be set to a higher value.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_movie_delete" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_movie_delete</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -9205,7 +8949,6 @@ If <code>retry</code> is set, this should be set to a higher value.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -9231,7 +8974,6 @@ If <code>retry</code> is set, this should be set to a higher value.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_movie_file_delete_for_upgrade" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_movie_file_delete_for_upgrade</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -9251,7 +8993,6 @@ If <code>retry</code> is set, this should be set to a higher value.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -9277,7 +9018,6 @@ If <code>retry</code> is set, this should be set to a higher value.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.include_health_warnings" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">include_health_warnings</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -9297,7 +9037,6 @@ If <code>retry</code> is set, this should be set to a higher value.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -9323,7 +9062,6 @@ If <code>retry</code> is set, this should be set to a higher value.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_manual_interaction_required" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_manual_interaction_required</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -9343,7 +9081,6 @@ If <code>retry</code> is set, this should be set to a higher value.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -9372,6 +9109,7 @@ If <code>retry</code> is set, this should be set to a higher value.</p>
   </div>
 
   </div>
+
 
 </div><h2 id="sendgrid">SendGrid<a class="headerlink" href="#sendgrid" title="Permanent link">#</a></h2>
 
@@ -9401,7 +9139,6 @@ If <code>retry</code> is set, this should be set to a higher value.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.sendgrid.SendgridNotification.type" class="doc doc-heading">
           <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;sendgrid&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;sendgrid&#39;</span></code>
   
@@ -9421,7 +9158,6 @@ If <code>retry</code> is set, this should be set to a higher value.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -9446,7 +9182,6 @@ If <code>retry</code> is set, this should be set to a higher value.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.sendgrid.SendgridNotification.from_address" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">from_address</span><span class="p">:</span> <span class="n">NameEmail</span></code>
   
@@ -9467,7 +9202,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -9497,6 +9231,7 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
   </div>
 
+
 </div>
 
 <div class="doc doc-object doc-class">
@@ -9519,7 +9254,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -9549,6 +9283,7 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
   </div>
 
+
 </div><h5 id="supported-notification-triggers_16">Supported Notification Triggers<a class="headerlink" href="#supported-notification-triggers_16" title="Permanent link">#</a></h5>
 
 
@@ -9575,7 +9310,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_grab" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_grab</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -9595,7 +9329,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -9621,7 +9354,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_upgrade" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_upgrade</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -9641,7 +9373,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -9667,7 +9398,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_movie_delete" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_movie_delete</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -9687,7 +9417,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -9713,7 +9442,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_movie_file_delete_for_upgrade" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_movie_file_delete_for_upgrade</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -9733,7 +9461,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -9759,7 +9486,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.include_health_warnings" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">include_health_warnings</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -9779,7 +9505,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -9805,7 +9530,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_manual_interaction_required" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_manual_interaction_required</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -9825,7 +9549,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -9854,6 +9577,7 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
   </div>
 
   </div>
+
 
 </div><h2 id="signal">Signal<a class="headerlink" href="#signal" title="Permanent link">#</a></h2>
 
@@ -9883,7 +9607,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.signal.SignalNotification.type" class="doc doc-heading">
           <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;signal&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;signal&#39;</span></code>
   
@@ -9906,7 +9629,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.signal.SignalNotification.hostname" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">hostname</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
@@ -9925,7 +9647,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -9951,7 +9672,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.signal.SignalNotification.use_ssl" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -9971,7 +9691,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -9996,7 +9715,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.signal.SignalNotification.receiver_id" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">receiver_id</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
@@ -10018,7 +9736,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.signal.SignalNotification.username" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
@@ -10037,7 +9754,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -10066,6 +9782,7 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
   </div>
 
+
 </div>
 
 <div class="doc doc-object doc-class">
@@ -10088,7 +9805,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -10118,6 +9834,7 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
   </div>
 
+
 </div><h5 id="supported-notification-triggers_17">Supported Notification Triggers<a class="headerlink" href="#supported-notification-triggers_17" title="Permanent link">#</a></h5>
 
 
@@ -10144,7 +9861,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_grab" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_grab</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -10164,7 +9880,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -10190,7 +9905,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_upgrade" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_upgrade</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -10210,7 +9924,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -10236,7 +9949,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_movie_delete" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_movie_delete</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -10256,7 +9968,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -10282,7 +9993,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_movie_file_delete_for_upgrade" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_movie_file_delete_for_upgrade</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -10302,7 +10012,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -10328,7 +10037,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.include_health_warnings" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">include_health_warnings</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -10348,7 +10056,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -10374,7 +10081,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_manual_interaction_required" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_manual_interaction_required</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -10394,7 +10100,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -10423,6 +10128,7 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
   </div>
 
   </div>
+
 
 </div><h2 id="simplepush">Simplepush<a class="headerlink" href="#simplepush" title="Permanent link">#</a></h2>
 
@@ -10452,7 +10158,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.simplepush.SimplepushNotification.type" class="doc doc-heading">
           <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;simplepush&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;simplepush&#39;</span></code>
   
@@ -10475,7 +10180,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.simplepush.SimplepushNotification.api_key" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">api_key</span><span class="p">:</span> <span class="n">Password</span></code>
   
@@ -10494,7 +10198,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -10524,6 +10227,7 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
   </div>
 
+
 </div>
 
 <div class="doc doc-object doc-class">
@@ -10546,7 +10250,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -10576,6 +10279,7 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
   </div>
 
+
 </div><h5 id="supported-notification-triggers_18">Supported Notification Triggers<a class="headerlink" href="#supported-notification-triggers_18" title="Permanent link">#</a></h5>
 
 
@@ -10602,7 +10306,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_grab" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_grab</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -10622,7 +10325,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -10648,7 +10350,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_upgrade" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_upgrade</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -10668,7 +10369,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -10694,7 +10394,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_movie_delete" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_movie_delete</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -10714,7 +10413,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -10740,7 +10438,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_movie_file_delete_for_upgrade" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_movie_file_delete_for_upgrade</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -10760,7 +10457,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -10786,7 +10482,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.include_health_warnings" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">include_health_warnings</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -10806,7 +10501,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -10832,7 +10526,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_manual_interaction_required" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_manual_interaction_required</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -10852,7 +10545,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -10881,6 +10573,7 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
   </div>
 
   </div>
+
 
 </div><h2 id="slack">Slack<a class="headerlink" href="#slack" title="Permanent link">#</a></h2>
 
@@ -10910,7 +10603,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.slack.SlackNotification.type" class="doc doc-heading">
           <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;slack&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;slack&#39;</span></code>
   
@@ -10930,7 +10622,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -10955,7 +10646,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.slack.SlackNotification.username" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
@@ -10974,7 +10664,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -10998,7 +10687,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -11028,6 +10716,7 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
   </div>
 
+
 </div>
 
 <div class="doc doc-object doc-class">
@@ -11050,7 +10739,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -11080,6 +10768,7 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
   </div>
 
+
 </div><h5 id="supported-notification-triggers_19">Supported Notification Triggers<a class="headerlink" href="#supported-notification-triggers_19" title="Permanent link">#</a></h5>
 
 
@@ -11106,7 +10795,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_grab" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_grab</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -11126,7 +10814,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -11152,7 +10839,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_upgrade" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_upgrade</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -11172,7 +10858,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -11198,7 +10883,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_movie_delete" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_movie_delete</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -11218,7 +10902,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -11244,7 +10927,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_movie_file_delete_for_upgrade" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_movie_file_delete_for_upgrade</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -11264,7 +10946,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -11290,7 +10971,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.include_health_warnings" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">include_health_warnings</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -11310,7 +10990,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -11336,7 +11015,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_manual_interaction_required" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_manual_interaction_required</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -11356,7 +11034,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -11385,6 +11062,7 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
   </div>
 
   </div>
+
 
 </div><h2 id="synology-indexer">Synology Indexer<a class="headerlink" href="#synology-indexer" title="Permanent link">#</a></h2>
 
@@ -11414,7 +11092,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.synology_indexer.SynologyIndexerNotification.type" class="doc doc-heading">
           <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;synology-indexer&#39;</span><span class="p">,</span> <span class="s1">&#39;synology&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;synology-indexer&#39;</span></code>
   
@@ -11434,7 +11111,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -11464,6 +11140,7 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
   </div>
 
+
 </div>
 
 <div class="doc doc-object doc-class">
@@ -11486,7 +11163,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -11516,6 +11192,7 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
   </div>
 
+
 </div><h5 id="supported-notification-triggers_20">Supported Notification Triggers<a class="headerlink" href="#supported-notification-triggers_20" title="Permanent link">#</a></h5>
 
 
@@ -11542,7 +11219,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_import" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_import</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -11562,7 +11238,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -11588,7 +11263,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_rename" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_rename</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -11608,7 +11282,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -11634,7 +11307,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_movie_file_delete" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_movie_file_delete</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -11654,7 +11326,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -11683,6 +11354,7 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
   </div>
 
   </div>
+
 
 </div><h2 id="telegram">Telegram<a class="headerlink" href="#telegram" title="Permanent link">#</a></h2>
 
@@ -11712,7 +11384,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.telegram.TelegramNotification.type" class="doc doc-heading">
           <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;telegram&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;telegram&#39;</span></code>
   
@@ -11732,7 +11403,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -11757,7 +11427,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.telegram.TelegramNotification.chat_id" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">chat_id</span><span class="p">:</span> <span class="n">NonEmptyStr</span></code>
   
@@ -11777,7 +11446,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -11807,6 +11475,7 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
   </div>
 
+
 </div>
 
 <div class="doc doc-object doc-class">
@@ -11829,7 +11498,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -11859,6 +11527,7 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
   </div>
 
+
 </div><h5 id="supported-notification-triggers_21">Supported Notification Triggers<a class="headerlink" href="#supported-notification-triggers_21" title="Permanent link">#</a></h5>
 
 
@@ -11885,7 +11554,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_grab" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_grab</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -11905,7 +11573,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -11931,7 +11598,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_upgrade" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_upgrade</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -11951,7 +11617,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -11977,7 +11642,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_movie_delete" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_movie_delete</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -11997,7 +11661,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -12023,7 +11686,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_movie_file_delete_for_upgrade" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_movie_file_delete_for_upgrade</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -12043,7 +11705,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -12069,7 +11730,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.include_health_warnings" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">include_health_warnings</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -12089,7 +11749,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -12115,7 +11774,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_manual_interaction_required" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_manual_interaction_required</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -12135,7 +11793,6 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -12164,6 +11821,7 @@ e.g. <code>Radarr &lt;radarr@example.com&gt;</code>.</p>
   </div>
 
   </div>
+
 
 </div><h2 id="trakt">Trakt<a class="headerlink" href="#trakt" title="Permanent link">#</a></h2>
 <p>Buildarr is unable to manage Trakt notification connections at this time, due to Plex requiring external authentication using OAuth2.</p>
@@ -12211,7 +11869,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.webhook.WebhookNotification.type" class="doc doc-heading">
           <code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;webhook&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;webhook&#39;</span></code>
   
@@ -12231,7 +11888,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -12262,7 +11918,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.webhook.WebhookNotification.username" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">username</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></code>
   
@@ -12282,7 +11937,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -12312,6 +11966,7 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 
   </div>
 
+
 </div>
 
 <div class="doc doc-object doc-class">
@@ -12334,7 +11989,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -12364,6 +12018,7 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 
   </div>
 
+
 </div><h5 id="supported-notification-triggers_22">Supported Notification Triggers<a class="headerlink" href="#supported-notification-triggers_22" title="Permanent link">#</a></h5>
 
 
@@ -12390,7 +12045,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_grab" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_grab</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -12410,7 +12064,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -12436,7 +12089,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_upgrade" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_upgrade</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -12456,7 +12108,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -12482,7 +12133,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_movie_added" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_movie_added</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -12502,7 +12152,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -12528,7 +12177,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_movie_file_delete" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_movie_file_delete</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -12548,7 +12196,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -12574,7 +12221,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_health_issue" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_health_issue</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -12594,7 +12240,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -12620,7 +12265,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_health_restored" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_health_restored</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -12643,7 +12287,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 
 
 
-
 <h5 id="buildarr_radarr.config.settings.notifications.base.NotificationTriggers.on_manual_interaction_required" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">on_manual_interaction_required</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span></code>
   
@@ -12663,7 +12306,6 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
 </div>
 
 <div class="doc doc-object doc-attribute">
-
 
 
 
@@ -12692,6 +12334,7 @@ Buildarr will log warnings recognising it as an unsupported type.</p>
   </div>
 
   </div>
+
 
 </div></div>
             </div>
